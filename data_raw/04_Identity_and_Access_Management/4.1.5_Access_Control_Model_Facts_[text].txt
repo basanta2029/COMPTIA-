@@ -1,0 +1,121 @@
+Security Pro 8.0
+
+4.1.5 Access Control Model Facts
+
+Authorization is the part of identity and access management that assigns privileges to network users and services. Implementing an access control model helps an organization manage the implications of privilege assignments and accounts for the actions of both regular and privileged administrative users. Account policies help you to protect credentials and to detect and manage risks from compromised accounts.
+
+This lesson covers the following topics:
+
+Discretionary and mandatory access control
+Role- and attribute-based access control
+Rule-based access control
+Least privilege permission assignments
+Account attributes and access policies
+Location-based policies
+Time-Based Restrictions
+Discretionary and Mandatory Access Control
+
+A user account that has been authenticated can be allocated rights and permissions on networks, computers, and data. An access control model describes the principles that govern how users receive rights.
+Discretionary Access Control
+
+Discretionary access control (DAC) is based on the primacy of the resource owner. In a DAC model, every resource has an owner. The owner creates a file or service, although ownership can be assigned to another user. The owner has full control over the resource, and they can modify its access control list (ACL) to grant rights to others.
+
+DAC is the most flexible model and is currently implemented widely in computer and network security. In file system security, it is the model used by default for most UNIX/Linux distributions and Microsoft Windows. As the most flexible model, it is also the weakest because it makes centralized administration of security policies the most difficult to enforce. It is also the easiest to compromise, as it is vulnerable to insider threats and abuse of compromised accounts.
+Mandatory Access Control
+
+The DAC model exposes information to the threat of compromise via the privileged owner accounts. Mandatory access control (MAC) is based on security clearance levels. Rather than defining ACLs on resources, each object is given a classification label, and each subject is granted a clearance level. In a confidentiality-oriented multilevel system, subjects are permitted to read objects classified at their own clearance level or below. For example, a user with Top-Secret clearance could read data with Top-Secret, Secret, and Confidential classification labels. A user with Secret clearance could access Secret and Confidential levels only.
+
+Labeling objects and granting clearance takes place using pre-established rules. The critical point is that these rules are nondiscretionary and cannot be changed by any subject account.
+
+As a simple classification system is inflexible, most MAC models add the concept of compartment-based access. For example, a data file might be at Secret classification and located in the HR compartment. Only subjects with Secret and HR clearance could access the file.
+
+In MAC, users with high clearance are not permitted to write low-clearance documents. This is referred to as write up, read down. This prevents, for example, a user with Top Secret clearance from republishing some Top Secret data that they can access with Secret clearance.
+Role- and Attribute-Based Access Control
+
+Role- and attribute-based access control use nondiscretionary, rules-based permissions assignments with more flexibility than MAC.
+Role-Based Access Control
+
+Role-based access control (RBAC) means that an organization defines its permission requirements in terms of the tasks that an employee or service must be able to perform. Each set of permissions is a role. Each principal (user or service account) is allocated to one or more roles. Under this system, the right to modify the permissions assigned to each role is reserved to a system owner. Therefore, the system is nondiscretionary as each principal cannot modify the ACL of a resource, even though they can change the resource in other ways. Principals gain rights implicitly (through being assigned to a role) rather than explicitly (being assigned the right directly).
+
+The concept of a security group account goes some way toward turning a discretionary system into a role-based one. Rather than assigning rights directly to user accounts, the system owner assigns user accounts to security group accounts. Principals gain rights by being made a member of a security group. A principal can be a member of multiple groups and, therefore, receive rights and permissions from several sources.
+
+Using security groups to assign privileges
+
+Images © 123RF.com
+Description
+RBAC can be partially implemented by mapping security groups onto roles, but they are not identical schemes. Membership in security groups is largely discretionary (assigned by administrators rather than determined by the system). Also, ideally, a principal should only inherit the permissions of a role to complete a particular task rather than retain them permanently. Administrators should be prevented from escalating their own privileges by assigning roles to their own accounts arbitrarily or boosting a role's permissions.
+Attribute-Based Access Control
+
+Attribute-based access control (ABAC) is the most fine-grained type of access control model. As the name suggests, an ABAC system makes access decisions based on a combination of subject and object attributes plus any context-sensitive or system-wide attributes. As well as group/role memberships, these attributes could include information about the OS currently being used, the IP address, or the presence of up-to-date patches and antimalware. An attribute-based system monitors the number of events or alerts associated with a user account or with a resource or tracks access requests to ensure they are consistent in terms of timing or geographic location. It can be programmed to implement policies such as M-of-N control and separation of duties.
+
+The attributes assigned to a resource constitute a policy that uses Boolean logic to determine who can access the resource. An example of a file access policy might include the following attributes: role = manager, department = development, and project = NewApp. Only users who possess all three attributes can access the file.
+Rule-Based Access Control
+
+Rule-based access control refers to any sort of access control model where access control policies are determined by system-enforced rules rather than system users. As such, RBAC, ABAC, and MAC are all examples of rule-based (or nondiscretionary) access control.
+
+Conditional access is an example of rule-based access control. A conditional access system monitors account or device behavior throughout a session. If certain conditions are met, it may suspend the account or require the user to reauthenticate, perhaps using a two-step verification method.
+
+Conditional access is a way to enforce access control while encouraging users to be productive wherever they are. Conditional access isn’t intended to be the first point of security. Instead, it steps in after the first-factor authentication has been granted. Conditional access policies ask a user to complete an action to access a resource. Depending on the level of security of the requested resource, the user may be required to complete more actions. For policy decisions, conditional access can be configured to consider many different factors, including:
+
+Implement control at the user or group level.
+Permit or deny access based on an IP address or an IP range.
+Permit or deny access to users who are using specific applications.
+Permit, restrict, or deny access to users using specific devices or device states.
+The User Account Control (UAC) and sudo restrictions on privileged accounts are examples of conditional access. The user is prompted for confirmation or authentication when making requests that require elevated privileges. Role-based rights management and ABAC systems can apply a number of criteria to conditional access, including location-based policies.
+
+An example of a rule-based access control implementation is a router access control list that allows or denies traffic based on characteristics within the packet, such as IP address or port number. Because rule-based access control does not consider the subject's identity, a system that uses rules can be regarded as mandatory access control.
+Least Privilege Permission Assignments
+
+Least privilege means that a principal is granted the minimum possible sufficient rights to complete a task they are authorized to perform. This mitigates risk if an account should be compromised and fall under the control of a threat actor. Least privilege involves a design phase, where analysis of business workflows determines what roles and permissions are required.
+
+While least privilege is a strong design principle, successfully implementing it  can be challenging. Where many users, groups, roles, and resources are involved, managing permission assignments and implications is complex and time-consuming. Improperly configured accounts can have two different impacts. On the one hand, setting privileges that are too restrictive creates a large volume of support calls and reduces productivity. On the other hand, granting too many privileges to users weakens the system's security and increases the risk of malware infection and a data breach.
+
+Ensuring least privilege also involves continual monitoring to prevent authorization creep. Authorization creep refers to a situation where a user acquires more rights, either directly or by being added to security groups or roles.
+
+For example, a user may be granted elevated privileges temporarily. In this case, a system is needed to ensure that the privileges are revoked at the end of the agreed period. A system of auditing should regularly review privileges, monitor group membership, review access control lists for each resource, and identify and disable unnecessary accounts.
+
+Determining effective permissions for a shared folder
+
+Screenshot used with permission from Microsoft
+Description
+Provisioning is the process of setting up a service according to a standard procedure or best practice checklist. The IT department must keep track of all assets under management, and user accounts are a type of asset. User accounts are provisioned for new employees and temporary access, such as by consultants and contractors. Some businesses may also need to set up customer accounts.
+
+Provisioning a user account involves the following general steps:
+
+Identity proofing — verifies that the person is who they say they are by checking official documents and records. Circumstances might also demand a background check, which verifies current and previous addresses, education, or previous employment and whether the person has a criminal record or credit issues.
+Issuing credentials — allows the user to select a password known only to them and enroll them with biometric or token-based authenticators.
+Issuing hardware and software assets — the user will typically need a computer and smartphone and possibly local copies of licensed software apps. Employees need sufficient resources to do their job. If their resources are inadequate, they might try to obtain hardware and software directly (shadow IT).
+Teaching policy awareness — by scheduling training and providing access to learning resources so that the employee or contractor is aware of security policies and risks. They must also be aware of policies for the personal use of any IT assets issued to them.
+Creating permissions assignment — by identifying the work roles that the account must support and configuring the appropriate rights using a role-based, mandatory, or attribute-based access control model. If the account is granted privileged access, it should be tagged for close monitoring.
+Deprovisioning is the process of removing the access rights and permissions allocated to an employee when they leave the company or from a contractor when a project finishes. This involves removing the account from any roles or security groups. The account might be disabled for a period and then deleted or deleted immediately.
+Account Attributes and Access Policies
+
+A user account is defined by a unique security identifier(SID), a name, and a credential. Each account is associated with a profile. The profile can be defined with custom identity attributes describing the user, such as a full name, email address, contact number, department, etc. The profile may support media such as an account picture.
+
+As well as attributes, the profile will usually provide a location for storing user-generated data files (a home folder). The profile can also store per-account settings for software applications.
+
+Each account can be assigned permissions over files and other network resources and access policies or privileges over the use and configuration of network hosts. These permissions might be assigned directly to the account or inherited through membership in a security group or role. Access policies determine things like the right to log on to a computer locally or via a remote desktop, install software, change the network configuration, etc.
+
+On a Windows Active Directory network, access policies can be configured via group policy objects (GPOs). GPOs can be used to configure access rights for user/group/role accounts. GPOs can be linked to network administrative boundaries in Active Directory, such as sites, domains, and organizational units (OU).
+
+Configuring access policies and rights using Group Policy Objects in Windows Server 2016
+
+Screenshot used with permission from Microsoft
+Description
+Policy-based restrictions can be used to mitigate some risks of account compromise through the theft of credentials.
+Location-Based Policies
+
+A user or device can have a logical network location identified by an IP address, subnet, virtual LAN (VLAN), or organizational unit (OU). This can be used as an account restriction mechanism. For example, a user account may be prevented from logging on locally to servers within a restricted OU.
+
+The geographical location of a user or device can be calculated using a  geolocation mechanism:
+
+IP address — can be associated with a map location to varying degrees of accuracy based on information published by the registrant, including name, country, region, and city. The registrant is usually the Internet service provider (ISP), so the information you receive will provide an approximate location of a host based on the ISP. If the ISP is one that serves a large or diverse geographical area, it is more difficult to pinpoint the location of the host Internet service providers (ISPs). Software libraries, such as GeoIP, facilitate querying this data.
+Location services — are methods used by the OS to calculate the device's geographical position. A device with a global positioning system (GPS) sensor can report a highly accurate location when outdoors. Location services can also triangulate to cell towers, Wi-Fi hotspots, and Bluetooth signals where GPS is not supported.
+Time-Based Restrictions
+
+There are four main types of time-based policies:
+
+A  time-of-day restrictions policy establishes authorized login hours for an account.
+A duration-based login policy establishes the maximum time an account may be logged in for.
+An impossible travel time/risky login policy tracks the location of login events over time. If these do not meet a threshold, the account will be disabled. For example, a user logs in to an account from a device in New York City. A couple of hours later, a login attempt is made from Los Angeles but is refused, and an alert is raised because it is not feasible for the user to be in both locations.
+A temporary permissions policy removes an account from a security role or group after a defined period.

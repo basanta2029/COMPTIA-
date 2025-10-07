@@ -1,0 +1,36 @@
+Click one of the buttons to take you to that part of the video.
+
+
+Encrypting Files with GPG 00:00-00:37
+
+In this demonstration, we're going to review how to encrypt files on a Linux system using GPG. The GPG utility is the open-source equivalent of the PGP utility.
+
+First, we need to verify that GPG's installed on the system, so we're going to type ‘gpg –version'. As you can see here, it'll show us the version information. It wouldn't show this if GPG wasn't installed. Most Linux distributions should have this installed by default. It's currently installed on the system. Let's go ahead and clear our screen.
+
+Key Pair 00:37-01:29
+
+Now we need to generate a key pair. To do that, we're going to type ‘gpg --gen-key'. If you want to have more customization, you can use the full-featured key generation dialog as listed. It wants to know the real name. We're just going to put our username in this field, rmckay. Our email address is rmckay@testout.com. This last menu wants us to verify the information. We'll okay it.
+
+Another dialog box will come up asking us to enter a passphrase. For this demo, I'm just going to use the word ‘TestOut'. This gives us a warning, saying it's an unsecure passphrase. Normally, you would make this password more secure, but for now, we're going to leave it as-is. We'll re-enter the same passphrase. Now our public and secret keys are created.
+
+Encrypt a File 01:29-02:04
+
+We're going to encrypt an example file in our Home directory. It's called example.txt. We can see this by doing an ‘ll' to list the directory.
+
+Now we want to go ahead and encrypt our file using GPG. You don't have to specify the entire directory path of the file if you're in the directory where the file exists.
+
+To encrypt, we're going to type in ‘gpg -e example.txt' and then the name that we created, ‘rmckay'. Then we're going to click Enter twice, as there's no more information we need to add.
+
+Encrypted File Contents 02:04-02:34
+
+Now, if we type ‘ll' and look, we can see the original example.txt, and we can see the encrypted version of example.txt.gpg. If we use the CAT command to view this encrypted version of the file, you can see that it's all scrambled. Clearly, we can't read the file or tell what it says. At this point, obviously, we need to decrypt this file before we can read it. That's what we're going to do next. I'm just going to clear the screen again.
+
+Decrypt a File 02:34-03:17
+
+Now, we're going to type ‘gpg –output'. We're going to follow this with the file name for the new decrypted file that we're going to create, ‘example.txt.decrypted'. Okay. Now we're going to do ‘--decrypt example.txt.gpg'.
+
+In this case, we're decrypting with the same user we created a public and private key with, so it won't prompt us for a password. Okay. Now we can use ‘ll' to list the files. We see our decrypted file right here. If we use the CAT command, we see what's inside example.txt.decrypted. This verifies that the GPG utility successfully decrypted the file.
+
+Summary 03:17-03:24
+
+That's it for this demonstration. We discussed how to encrypt and decrypt files in a Linux system using GPG.

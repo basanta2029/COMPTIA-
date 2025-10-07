@@ -1,0 +1,71 @@
+Security Pro 8.0
+
+3.5.8 Certificate Concepts Facts
+
+Using digital certificates to share public keys and validate organizations is a critical component of doing business over the internet. Certificate authorities (CAs) are the trusted organizations that validate and administer digital certificates.
+
+This lesson covers the following topics:
+
+Certificate revocation
+Root of Trust
+Single CA
+Third-party CAs
+Private key safety
+Certificate Revocation
+
+A certificate may be revoked or suspended:
+
+A revoked certificate is no longer valid and cannot be "un-revoked" or reinstated.
+A suspended certificate can be re-enabled.
+A certificate may be revoked or suspended by the owner or the CA for many reasons. For example, the private key may have been compromised, or the business could have closed, a user could have left the company, a domain name could have been changed, the certificate could have been misused, and so on. These reasons are codified under choices such as Unspecified, Key Compromise, CA Compromise, Superseded, or Cessation of Operation. A suspended key is given the code Certificate Hold.
+
+There must be a mechanism to inform users whether a certificate is valid, revoked, or suspended. A CA must maintain a certificate revocation list (CRL) of all revoked and suspended certificates. The CRL must be accessible to anyone relying on the validity of the CA's certificates. Each certificate should contain information for the browser on how to check the CRL.
+
+The distribution point field in a digital certificate identifies the location of the list of revoked certificates, which are published in a CRL file signed by the CA.
+
+Screenshot used with permission from Microsoft
+Description
+A CRL has the following attributes:
+
+Publish Period - the date and time on which the CRL is published. Most CAs are set up to publish the CRL automatically.
+Distribution Point(s) - the location(s) to which the CRL is published.
+Validity Period - the period during which the CRL is considered authoritative. This is usually a bit longer than the publish period (for example, if the publish period was every 24 hours, the validity period might be 25 hours).
+Signature - the CRL is signed by the CA to verify its authenticity.
+With the CRL system, there is a risk that the certificate might be revoked but still accepted by clients because an up-to-date CRL has not been published. A further problem is that the browser (or other application) may not be configured to perform CRL checking, although this now tends to be the case only with legacy browser software.
+
+Another means of providing up-to-date information is to check the certificate's status on an Online Certificate Status Protocol (OCSP) server. Rather than return a whole CRL, this communicates the requested certificate's status. Details of the OCSP responder service should be published in the certificate.
+
+Most OCSP servers can query the certificate database directly and obtain the real-time status of a certificate. Other OCSP servers depend on the CRLs and are limited by the CRL publishing interval.
+Root of Trust
+
+The root of trust model defines how users and different CAs can trust one another. Each CA issues itself a certificate. This is referred to as the  root certificate. The root certificate is self-signed, meaning the CA server signs a certificate issued to itself. A root certificate uses an RSA key size of 2,048 or 4,096 bits or the ECC equivalent. The subject of the root certificate is set to the organization/CA name, such as "CompTIA Root CA."
+
+The root certificate can be used to sign other certificates issued by the CA. Installing the CA's root certificate means that hosts will automatically trust any certificates signed by that CA.
+Single CA
+
+In this simple model, a single root CA issues certificates directly to users and computers. This single CA model is often used on private networks. The problem with this approach is that the single CA server is very exposed. If it is compromised, the whole PKI collapses.
+Third-party CAs
+
+Most third-party CAs operate a hierarchical model. In the hierarchical model, the root CA issues certificates to one or more intermediate CAs. The intermediate CAs issue certificates to subjects (leaf or end entities). This model has the advantage that different intermediate CAs can be set up with certificate policies, enabling users to perceive clearly what a particular certificate is designed for. Each leaf certificate can be traced to the root CA along the certification path. This is also referred to as certificate chaining or a chain of trust.
+
+The web server for www.example.org is identified by a certificate issued by the DigiCert TLS CA1 intermediate CA. The intermediate CA's certificate is signed by DigiCert's Global Root CA.
+
+Screenshot used with permission from Microsoft
+Description
+In some circumstances, using PKI can be too difficult or expensive to manage. Any machine, web server, or program code can be deployed with a self-signed certificate. For example, the web administrative interfaces of consumer routers are often only protected by a self-signed certificate. Self-signed certificates can also be useful in development and test environments. The operating system or browser will mark self-signed certificates as untrusted, but a user can choose to override this. The nature of self-signed certificates makes them very difficult to validate. They should not be used to protect critical hosts and applications.
+Private Key Safety
+
+To ensure data can always be recovered, you should create a backup of the private keys. It is important to have a backup and, equally important, that the backup is kept safe. The following table shows two main methods to backup private keys:
+
+Key Backup Method
+Description
+Key archival	
+In key archival, the key is backed up by the CA. To do this, the user sends the private key in a secure transmission to the CA to back it up. This method is often used in an organization that manages its own CA.
+
+If keys are lost, they will be readily available and easily accessed. However, if the CA is breached, all private keys will be compromised.
+Key escrow	
+If a private or secret key is lost or damaged, ciphertexts cannot be recovered unless a backup of the key has been made. Making copies of the key is problematic as it becomes more likely that a copy will be compromised and more difficult to detect that a compromise has occurred.
+
+These issues can be mitigated by using escrow and M of N controls. Escrow means that something is held independently. In terms of key management, this refers to archiving a key (or keys) with a third party. M of N means that an operation cannot be performed by a single individual. Instead, a quorum (M) of available persons (N) must agree to authorize the operation.
+
+A key can be split into one or more parts. Each part can be held by separate escrow providers, reducing the risk of compromise. An account with permission to access a key held in escrow is referred to as a key recovery agent (KRA). A recovery policy can require two or more KRAs to authorize the operation. This mitigates the risk of a KRA attempting to impersonate the key owner.

@@ -1,0 +1,24 @@
+Click one of the buttons to take you to that part of the video.
+
+
+Cumulative Access 00:00-00:17
+
+In this video, I'm going to talk about cumulative access. As a security administrator, one of your most important jobs is to control both file system and network resource access. You do this using permissions, privileges, and roles.
+
+Cumulative Access via Roles and Groups 00:17-01:43
+
+Permissions, privileges, and roles are usually cumulative. As such, it's easy to inadvertently give someone access to something that you don't want them to have access to. When you assign rights to users, groups, and other accounts, you need to ask yourself, "Do I really want this person to have this access level?" If your system supports the concept of a role, you can create a role definition. In some systems, it might called be a role object. This role or role object isn't actually a user account, but we use it in a similar way. A role is kind of like a template. You build a role, add the desired access, and then you can use that shell of an account to create new accounts as needed.
+
+For example, let's say that Sally is the payroll assistant. She's worked at the company for ten years and has access to all the files and systems that she needs to be effective at her job. One day, Sally is promoted to payroll manager, and Frank is hired to take over as payroll assistant. If her user account was created from scratch, you'd have to start all over to redesign Frank's account. But if you'd created Sally's account using a role specifically made for payroll employees, you could use that same role to create Frank's new account. This makes things much easier and much more secure. We simply add or remove users from roles instead of having to remember which user needs which privileges added or removed.
+
+Not every system uses the roles concept. For example, Windows Active Directory doesn't have an object called a role object. But Active Directory groups are more or less the same thing.
+
+Limit a User's Roles 01:43-02:48
+
+Whatever system you're using, you need to remember that each user receives all member groups' access privileges in addition to its own specific assignments. Cumulative access can get out of control pretty quickly. Over time, users end up with too much access to the file system. The best way to reduce this problem is to limit a single user's assigned number of roles. If you can help it at all, don't assign multiple roles.
+
+Take Sally and Frank, for example. Currently, they're both in payroll. But now that Sally is a manager, she needs access to additional employee information, like salaries and financial history. You could solve this by leaving Sally in her current payroll employee role and adding her to the HR role. By doing this, though, you're probably giving her access to too much information. She obviously needs access to salary information, but she doesn't need access to employee reviews or disciplinary files. Instead, you should probably create a payroll management role. If you're dealing with a situation where none of the roles provide the access level needed for a given user, it's a much better option to create a completely new role that has the necessary access level instead of assigning that user to multiple roles.
+
+Summary 02:48-02:59
+
+That's it for this lesson. In this lesson, we talked about cumulative access in relation to roles and groups. We also discussed the importance of limiting a single user's number of roles.

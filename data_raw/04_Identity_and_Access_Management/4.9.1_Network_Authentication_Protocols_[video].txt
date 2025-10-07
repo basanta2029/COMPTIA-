@@ -1,0 +1,50 @@
+Click one of the buttons to take you to that part of the video.
+
+
+Network Authentication 00:00-00:27
+
+Network authentication is the process of validating user credentials that prove user identity. Authentication is typically the first step in connecting to a network. Following successful authentication, access controls can be implemented to allow or deny access to network resources. In this lesson, we'll discuss single sign-on authentication, Federation, and OAuth—all methods used for network authentication.
+
+Single Sign-on Authentication 00:27-02:25
+
+Single Sign-on (SSO) is an authentication method that enables users to use the same login credentials to access multiple applications. A user only needs to authenticate once and then receive authorizations on compatible application servers without entering credentials again. Kerberos is a single sign-on network authentication and authorization protocol used on many networks, as implemented by Microsoft's Active Directory (AD) service.
+
+Kerberos was named after the three-headed guard dog of Hades (Cerberus) because it consists of three parts: the client, the network resource, and a key distribution center. The clients request services from application servers, which rely on an intermediary—a key distribution center (KDC)—to vouch for their identity. Two services comprise a KDC: the Authentication Service and the Ticket Granting Service. Kerberos can authenticate human users and application services. These are collectively referred to as principals.
+
+Using authentication to a Windows domain as an example:
+
+The principal sends the authentication service (AS) a request for a Ticket Granting Ticket, or TGT. This is composed by encrypting the date and time on the local computer with the user's password hash as the key. The password hash itself isn't transmitted over the network. Although we refer to passwords for simplicity, the system can use other authenticators, such as smart card login.
+
+The AS checks that the user account is present, that it can decode the request by matching the user's password hash with the one in the Active Directory database, and that the request hasn't expired. If the request is valid, the AS responds with a TGT and a TGS session key. A TGT contains information about the client (name and IP address) plus a time stamp and validity period. This is encrypted using the KDC's secret key. A TGS session key communicates between the client and the Ticket Granting Service (TGS). This is encrypted using a hash of the user's password.
+
+Single Sign-on Authorization 02:25-04:13
+
+The TGT is an example of a logical token. All the TGT does is identify who you are and confirm that you've been authenticated—it doesn't provide you with access to any domain resources. Presuming the user entered the correct password, the client can decrypt the Ticket Granting Service (TGS) session key but not the TGT. This establishes that the client and KDC know the same shared secret and that the client can't interfere with the TGT.
+
+To access resources within the domain, the principal requests a service ticket—a token that grants access to a target application server. This process of granting service tickets is handled by the TGS. The principal sends the TGS a copy of its TGT, the name of the application server it wishes to access, and an authenticator consisting of a time-stamped client ID encrypted using the TGS session key. This confirms that the request is genuine. It also checks that the ticket hasn't expired or been used before.
+
+The TGS service responds with a service session key and a service ticket. The service session key is used between the client and the application server. This is encrypted with the TGS session key. A service ticket contains information about the principal, such as a time stamp, system IP address, SID, the SIDs of groups to which it belongs, and the service session key. This is encrypted using the application server's secret key.
+
+The principal forwards the service ticket, which it can't decrypt, to the application server and adds another time-stamped authenticator, which is encrypted using the service session key. The application server decrypts the service ticket to obtain the service session key using its secret key, confirming that the principal has sent it an untampered message. It then decrypts the authenticator using the service session key.
+
+Federation 04:13-05:42
+
+Now let's look at Federation. Federation is the notion that a network needs to be accessible to more than just a well-defined group of employees. A company might need to open parts of its network to partners, suppliers, and customers. The company can manage its employee accounts easily enough. Managing accounts for each supplier or customer internally may be more difficult. Federation means the company trusts accounts created and managed by a different network. As another example, in the consumer world, a user might want to use both Google Workspace and Twitter. Suppose Google and Twitter establish a federated network for authentication and authorization. In that case, users can log on to Twitter using their Google credentials or vice versa.
+
+These interoperable federation protocols use claims-based identity. While the technical implementation and terminology differ, the overall model is like that of Kerberos SSO: The service provider, SP, and Identity Provider, or IdP, have a pre-established trust relationship. The user starts a session with the service provider.
+
+The service provider redirects the principal to an IdP to authenticate. The user authenticates to the IdP. The IdP issues a claims token to the user. The user then presents the claims token to the SP. The SP validates that the IdP has signed the claim because of its trust relationship with the IdP. The service provider can now connect the authenticated principal to its accounts database to determine its permissions and other attributes.
+
+Open Authorization 05:42-07:33
+
+Lastly, let's talk about Open Authorization. Open Authorization, often called OAuth, allows an application to authorize access without exposing the user's password. In a simplified sense, it's like a valet key for the web. It will enable a user's account information to be used by third-party services, such as Facebook or Twitter, without exposing their password. This means the user's sensitive details are handled only by the service they trust (i.e., their 'identity provider') and not the third-party applications requesting access.
+
+OAuth is designed to facilitate the sharing of information or resources within a user profile between sites. The user creates a password-protected account at an identity provider. The user can link that identity to an OAuth consumer site without giving the password to the consumer site. Users can grant an OAuth client authorization to access some of their accounts. A client in this context is an app or consumer site. OAuth operates through a series of handshakes between three key players: the client—the application wanting access; the server—the application that holds the user's data; and the resource owner—the user.
+
+Here's a simplified step-by-step of the process: The client requests authorization from the resource owner to access their data, which is held on the server. If the resource owner gives permission, the client receives an authorization grant. The client exchanges the authorization grant for an access token by requesting the server.
+
+The server validates the authorization grant, and if it's correct, it issues an access token to the client. The client uses this access token to request the resource owner's data from the server. The server serves the client the requested data if the access token is valid. It's important to note that at no point does the client learn the resource owner's credentials, maintaining security and privacy of sensitive user information.
+
+Summary 07:33-07:49
+
+That's it for this lesson. In this lesson, we discussed network authentication. We talked about single sign-on authentication and authorization, federation, and open authorization. We also reviewed the step-by-step process for each of the network authentication methods.

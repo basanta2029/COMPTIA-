@@ -1,0 +1,6 @@
+You share a computer with other users at work. You want to secure the contents of the Finances folder so that unauthorized users cannot view its contents.
+
+In this lab, your task is to:
+
+Encrypt the D:\Finances folder and all of its contents.
+Give John file access to the encrypted D:\Finances\2023report.xls file by adding the encryption certificate.

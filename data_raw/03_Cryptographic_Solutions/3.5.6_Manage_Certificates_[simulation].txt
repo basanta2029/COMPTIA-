@@ -1,0 +1,11 @@
+Manage Certificates
+
+You are the IT administrator for a growing corporate network. You manage the certification authority for your network. As part of your daily routine, you perform several certificate management tasks. CorpCA, the certification authority, is a guest server on CorpServer2.
+
+In this lab, your task is to complete the following:
+
+Your network uses smart cards to control access to sensitive computers. Currently, the approval process dictates that you manually approve smart card certificate requests.
+Approve pending certificate requests for smart card certificates from tsutton and mmallory.
+Deny the pending web server certificate request for CorpSrv12.
+User bchan lost his smartcard. Revoke the certificate assigned to bchan.CorpNet.com using the Key Compromise reason code.
+Unrevoke the CorpDev3 certificate.

@@ -1,0 +1,50 @@
+Click one of the buttons to take you to that part of the video.
+
+
+Access Control Models 00:00-00:12
+
+Depending on your organization's needs, there are several ways to implement access control. In this lesson, we'll look at some common implementation models.
+
+Discretionary Access Control 00:12-00:49
+
+Let's start with the least restrictive model, Discretionary Access Control, or DAC. With DAC, every resource has an owner. That owner decides who has access to the resource. DAC uses programs like access control lists, or ACLs. A good example is NTFS within a Windows system.
+
+Each NTFS file and folder has an owner. The owner can go into the file or folder's access control list and decide which user or group can access the resource. Because access is resource-specific, a lot of administrative work is required to implement and maintain these policies on each individual resource.
+
+Mandatory Access Control 00:49-01:59
+
+Mandatory access control, or MAC, is a static system with classification labels and levels. When you're using MAC, every computer, every file, and every object is assigned a label. These labels indicate how important the object is. Each user is assigned an access level. MAC compares the object labels with the user's level to grant or deny access to a given resource.
+
+Let's say your organization uses three labels: Confidential, Secret, and Top Secret. Your organization also uses three user access levels. Users with access level 1 can see anything labeled Confidential. They cannot see anything labeled Secret or Top Secret. Users with access level 2 can see anything labeled Confidential or Secret, but cannot see anything labeled Top Secret. Users with access level 3 can see anything labeled Confidential, Secret, or Top Secret.
+
+It's important to note that permissions can't be altered for specific instances. For example, the data owner can't prevent specific people with level 2 clearance from accessing certain documents labeled as level 1. It's an all-or-none deal.
+
+Role-Based Access Control 01:59-02:28
+
+Next, we have role-based access control. This model is a hybrid between MAC and DAC, and it's probably the most commonly used. Role-based access control means that your role within the organization determines whether or not you're able to access certain kinds of data.
+
+For example, Mary is the CFO, so she needs full access to important company financial records, while Aubrey is the receptionist and will only need to see calendar information for everyone in the organization.
+
+Rule-Based Access Control 02:28-03:00
+
+We also have rule-based access control—"don't confuse it with role-based! Rule-based access control is used with routers through router access control lists. With a router access control list, or ACL, you decide which IPs are allowed through the router using rules. Either you match that rule, or you don't. This has nothing to do with your user account, what group you're a member of, or even a classification label. The only thing that matters is whether the condition meets the rules configured on the router.
+
+Attribute-Based Access Control 03:00-04:04
+
+Attribute-Based Access Control, or ABAC, provides more flexibility because it combines object attributes to determine access. These attributes can be a number of different things, such as a user's role, position, or even project association. ABAC rules use an if-then-else format. If the user has the required attribute, they're granted access. If the user doesn't have the required attribute, they're denied access.
+
+For example, let's say we have a user named RBradbury. This user's role is manager. Their department is development, and they're currently working on a project called AmazingApp.
+
+Now, let's say RBradbury wants to access a file on the server. This file has been configured with several attributes: role = manager, department = development, and project = BoringApp.
+
+When RBradbury tries to access the file, the system asks, "Are you a manager?" Yes. "Is your department development?" Yes. "Are you on the BoringApp project?" No. Since it hit a false return, the user is denied access to the file.
+
+Conditional Access 04:04-04:47
+
+Modern security concerns extend beyond a desktop in the office. Conditional Access is a way to enforce access control while also encouraging users to be productive wherever they are. Conditional access isn't intended to be the first point of security. Instead, it steps in after first-factor authentication has been granted. Conditional access can be configured to consider many different factors.
+
+Administrators can maintain specific control at the user or group level. They can permit or deny access based on an IP address or an IP range. Administrators can also use specific applications or devices to permit, restrict, or deny access to users.
+
+Summary 04:47-05:06
+
+That's it for this lesson. In this video, we discussed several access control models: discretionary access control, mandatory access control, role-based access control, rule-based access control, attribute-based access control, and conditional access control.

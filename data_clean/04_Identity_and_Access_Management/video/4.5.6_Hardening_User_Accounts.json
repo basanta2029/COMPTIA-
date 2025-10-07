@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "chapter_num": "4",
+    "section_num": "4.5.6",
+    "title": "Hardening User Accounts",
+    "content_type": "video",
+    "filename": "4.5.6_Hardening_User_Accounts_[video].txt",
+    "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.5.6_Hardening_User_Accounts_[video].txt",
+    "word_count": 897,
+    "has_content": true
+  },
+  "full_content": "In this demonstration, we'll look at things you can do to harden Windows workstation authentication within your network. First, we'll look at restricting local accounts. We want to ensure that only authorized users have administrative rights to the local Windows operating system. If a workstation is joined to a domain, then we typically use a domain user account to authenticate. However, we sometimes forget that there are still local user accounts on each individual Windows workstation. One or more of them may have administrative access to the local systems; this presents a security issue. A better option is to configure these settings in a GPO in the domain. This will allow you to make these configuration settings once and have them automatically enforced on every workstation. To begin, we'll go to Tools > Group Policy Management > Group Policy Objects, and create a new GPO. We'll call this \"Restrict Admin Group Membership\". Go to Edit. As you know, when you install a Windows workstation, several user accounts are created by default. You define administrator, guest, and user accounts during the installation process. We want to harden authentication by renaming the default administrator account to something that makes it less obvious that the account is an administrator. We also want to disable the guest account. It provides a degree of access to the system without a password. We also want to look for any local user account that has the Password never expires option enabled. We'll do this with our group policy. We'll navigate to Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Security Options. We're going to enable the option to rename the Administrator account, we'll rename the administrator account to 'Elvis'. And we'll set the Guest Account Status option so this GPO will disable the Guest account. Next, we need to make sure that administrative rights are only given to the groups we define. We're going to use a group policy feature called Restricted Groups. Use caution when adding entries in Restricted Groups. We're going to create an entry that defines who is in the Administrators group. When you define a group membership with a Restricted Group setting, it will evict any member of the group that isn't defined by your group policy. This is a highly effective way to make sure admin rights do not get assigned outside of group policy. However, there is a risk you will evict an account that needs admin rights. If that happens, you just need to be prepared for it, and define that account with the group policy setting we're about to show you. We'll navigate to Computer Configuration > Policies > Security Settings > Restricted Groups. We'll right click and create a new entry for \"BUILTIN\\Administrators\". We also want to add our domain admins to this group. And we'll add one more entry for the \"Elvis\" account – that we renamed our Administrator account. Let's click OK. Now we can see this is created right here. Next, we want to secure the default accounts on each workstation. All user accounts should have their passwords changed on a regular schedule. We also want to look for any user accounts that have never been used. The default for creating a new local user account on a Windows workstation should have the option User must change password at next logon enabled. Therefore, we're going to assume that any user account that has that option marked has never been used because the user has never logged in. We want to get rid of all accounts that have never been used. To do this, we'll switch over to the Windows 11 workstation. We'll right-click in the window and go to Computer Management. Now we're going to go to Local Users and Groups > Users. This shows the users currently on the system. The next thing we want to look at are accounts that have never been logged in to. If we double-click this account right here, for Mr. Hank Hill, you can see the option to require password change at login is not checked. That's good. This means that this user has logged in before. If we look at this one, now you can see this says User must change password at next login. This means this user has never logged in, which means this account is just sitting here and, possibly, is an account that's not needed. Most likely, that's the case. We'll delete this account because we probably don't need it. The other thing you want to look for is the Password never expires checkmark. We'll check our TestOut account. We'll leave this in for our purposes. But normally, you don't want a normal user to have a password that never expires. If you do have this option enabled on your Windows workstations, you probably want to uncheck it and require that the user has to change the password, just like normal accounts on the domain. For now, we're going to click OK. That's it for this demonstration. In this demo, we hardened Windows authentication for Windows workstations in a network.",
+  "chunks": [
+    {
+      "chunk_id": "4.5.6_chunk_1",
+      "content": "In this demonstration, we'll look at things you can do to harden Windows workstation authentication within your network. First, we'll look at restricting local accounts. We want to ensure that only authorized users have administrative rights to the local Windows operating system. If a workstation is joined to a domain, then we typically use a domain user account to authenticate. However, we sometimes forget that there are still local user accounts on each individual Windows workstation. One or more of them may have administrative access to the local systems; this presents a security issue.",
+      "summary": "Harden User Accounts: In this demonstration, we'll look at things you can do to harden Windows workstation authentication within your network. One or more of them may have administrative access to the local systems; this presents a security issue.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.5.6",
+        "title": "Hardening User Accounts",
+        "content_type": "video",
+        "filename": "4.5.6_Hardening_User_Accounts_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.5.6_Hardening_User_Accounts_[video].txt",
+        "word_count": 897,
+        "has_content": true
+      },
+      "section_header": "Harden User Accounts",
+      "timestamp_range": "00:00-00:39"
+    },
+    {
+      "chunk_id": "4.5.6_chunk_2",
+      "content": "A better option is to configure these settings in a GPO in the domain. This will allow you to make these configuration settings once and have them automatically enforced on every workstation. To begin, we'll go to Tools > Group Policy Management > Group Policy Objects, and create a new GPO. We'll call this \"Restrict Admin Group Membership\". Go to Edit.",
+      "summary": "Use a Group Policy Object (GPO): A better option is to configure these settings in a GPO in the domain. To begin, we'll go to Tools > Group Policy Management > Group Policy Objects, and create a new GPO.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.5.6",
+        "title": "Hardening User Accounts",
+        "content_type": "video",
+        "filename": "4.5.6_Hardening_User_Accounts_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.5.6_Hardening_User_Accounts_[video].txt",
+        "word_count": 897,
+        "has_content": true
+      },
+      "section_header": "Use a Group Policy Object (GPO)",
+      "timestamp_range": "00:39-01:09"
+    },
+    {
+      "chunk_id": "4.5.6_chunk_3",
+      "content": "As you know, when you install a Windows workstation, several user accounts are created by default. You define administrator, guest, and user accounts during the installation process. We want to harden authentication by renaming the default administrator account to something that makes it less obvious that the account is an administrator. We also want to disable the guest account. It provides a degree of access to the system without a password. We also want to look for any local user account that has the Password never expires option enabled. We'll do this with our group policy. We'll navigate to Computer Configuration > Policies > Windows Settings > Security Settings > Local Policies > Security Options. We're going to enable the option to rename the Administrator account, we'll rename the administrator account to 'Elvis'. And we'll set the Guest Account Status option so this GPO will disable the Guest account.",
+      "summary": "Secure Default Accounts: We want to harden authentication by renaming the default administrator account to something that makes it less obvious that the account is an administrator. It provides a degree of access to the system without a password.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.5.6",
+        "title": "Hardening User Accounts",
+        "content_type": "video",
+        "filename": "4.5.6_Hardening_User_Accounts_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.5.6_Hardening_User_Accounts_[video].txt",
+        "word_count": 897,
+        "has_content": true
+      },
+      "section_header": "Secure Default Accounts",
+      "timestamp_range": "01:09-02:25"
+    },
+    {
+      "chunk_id": "4.5.6_chunk_4",
+      "content": "Next, we need to make sure that administrative rights are only given to the groups we define. We're going to use a group policy feature called Restricted Groups. Use caution when adding entries in Restricted Groups. We're going to create an entry that defines who is in the Administrators group. When you define a group membership with a Restricted Group setting, it will evict any member of the group that isn't defined by your group policy. This is a highly effective way to make sure admin rights do not get assigned outside of group policy. However, there is a risk you will evict an account that needs admin rights. If that happens, you just need to be prepared for it, and define that account with the group policy setting we're about to show you. We'll navigate to Computer Configuration > Policies > Security Settings > Restricted Groups. We'll right click and create a new entry for \"BUILTIN\\Administrators\". We also want to add our domain admins to this group. And we'll add one more entry for the \"Elvis\" account – that we renamed our Administrator account. Let's click OK. Now we can see this is created right here. Next, we want to secure the default accounts on each workstation. All user accounts should have their passwords changed on a regular schedule. We also want to look for any user accounts that have never been used. The default for creating a new local user account on a Windows workstation should have the option User must change password at next logon enabled. Therefore, we're going to assume that any user account that has that option marked has never been used because the user has never logged in. We want to get rid of all accounts that have never been used. To do this, we'll switch over to the Windows 11 workstation. We'll right-click in the window and go to Computer Management. Now we're going to go to Local Users and Groups > Users. This shows the users currently on the system.",
+      "summary": "Modify Local Administrators Group: We're going to use a group policy feature called Restricted Groups. When you define a group membership with a Restricted Group setting, it will evict any member of the group that isn't defined by your group policy.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.5.6",
+        "title": "Hardening User Accounts",
+        "content_type": "video",
+        "filename": "4.5.6_Hardening_User_Accounts_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.5.6_Hardening_User_Accounts_[video].txt",
+        "word_count": 897,
+        "has_content": true
+      },
+      "section_header": "Modify Local Administrators Group",
+      "timestamp_range": "02:25-04:33"
+    },
+    {
+      "chunk_id": "4.5.6_chunk_5",
+      "content": "The next thing we want to look at are accounts that have never been logged in to. If we double-click this account right here, for Mr. Hank Hill, you can see the option to require password change at login is not checked. That's good. This means that this user has logged in before. If we look at this one, now you can see this says User must change password at next login. This means this user has never logged in, which means this account is just sitting here and, possibly, is an account that's not needed. Most likely, that's the case. We'll delete this account because we probably don't need it. The other thing you want to look for is the Password never expires checkmark. We'll check our TestOut account.",
+      "summary": "Delete Unused Accounts: The next thing we want to look at are accounts that have never been logged in to. This means that this user has logged in before.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.5.6",
+        "title": "Hardening User Accounts",
+        "content_type": "video",
+        "filename": "4.5.6_Hardening_User_Accounts_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.5.6_Hardening_User_Accounts_[video].txt",
+        "word_count": 897,
+        "has_content": true
+      },
+      "section_header": "Delete Unused Accounts",
+      "timestamp_range": "04:33-05:14"
+    },
+    {
+      "chunk_id": "4.5.6_chunk_6",
+      "content": "We'll leave this in for our purposes. But normally, you don't want a normal user to have a password that never expires. If you do have this option enabled on your Windows workstations, you probably want to uncheck it and require that the user has to change the password, just like normal accounts on the domain. For now, we're going to click OK.",
+      "summary": "[Hardening User Accounts] Password Never Expire: We'll leave this in for our purposes. But normally, you don't want a normal user to have a password that never expires.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.5.6",
+        "title": "Hardening User Accounts",
+        "content_type": "video",
+        "filename": "4.5.6_Hardening_User_Accounts_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.5.6_Hardening_User_Accounts_[video].txt",
+        "word_count": 897,
+        "has_content": true
+      },
+      "section_header": "Password Never Expire",
+      "timestamp_range": "05:14-05:35"
+    },
+    {
+      "chunk_id": "4.5.6_chunk_7",
+      "content": "That's it for this demonstration. In this demo, we hardened Windows authentication for Windows workstations in a network.",
+      "summary": "That's it for this demonstration. In this demo, we hardened Windows authentication for Windows workstations in a network.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.5.6",
+        "title": "Hardening User Accounts",
+        "content_type": "video",
+        "filename": "4.5.6_Hardening_User_Accounts_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.5.6_Hardening_User_Accounts_[video].txt",
+        "word_count": 897,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": "05:35-05:43"
+    }
+  ],
+  "num_chunks": 7,
+  "document_summary": "Hardening User Accounts (video): In this demonstration, we'll look at things you can do to harden Windows workstation authentication within your network. One or more of them may have administrative access to the local systems; this presents a security issue. To begin, we'll go to Tools > Group Policy Management > Group Policy Objects, and create a new GPO."
+}

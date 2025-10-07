@@ -1,0 +1,13 @@
+Security Pro 8.0
+
+2.0 Threats, Vulnerabilities, and Mitigations
+
+In today's connected world, understanding the risks facing digital information is more important than ever. Throughout this course module, you will investigate how attackers exploit common weaknesses in systems, people, and organizations. By learning how malicious activities are carried out and the methods used to deceive individuals, you’ll strengthen your ability to recognize dangers before they become incidents. This knowledge is foundational for anyone seeking to protect themselves, their workplace, or their community from cyber threats.
+
+You will also explore a variety of harmful software types and the ways in which technology can be misused to compromise data. The skills and strategies you learn here will help you not only identify and assess potential vulnerabilities, but also take practical steps to defend against attacks. By the end of the module, you’ll be better equipped to think like an attacker and make informed security decisions—skills needed by all security-minded professionals.
+In this module, you will:
+Identify and explain common types of cyberattacks and the tactics attackers use.
+Recognize various social engineering strategies and understand how to defend against them.
+Describe different categories of malware and the damage they can cause.
+Evaluate weaknesses and vulnerabilities within systems and organizations.
+Apply basic mitigation techniques to reduce risk and enhance security posture.

@@ -1,0 +1,74 @@
+Click one of the buttons to take you to that part of the video.
+
+
+Public Key Infrastructure (PKI) 00:00-00:54
+
+When we encrypt data over the internet, we generally utilize asymmetric encryption methods that involve sending a user's public key to provide confidentiality and trust. Because these keys are public, we need a way to manage and protect them.
+
+Key management covers these keys' whole life cycle. During this cycle, we must keep keys safe because we need to be sure that the public key we're using really does belong to the organization it's associated with. Public key infrastructure, or PKI, handles this for us.
+
+A PKI provides an environment where public encryption keys can be created and managed. At the heart of a PKI are Certificate Authorities, which are responsible for issuing, validating, and revoking certificates. In this lesson, I'll go over the concept of Certificate Authorities, or CAs, and the process they use to verify a certificate with all of its different attributes.
+
+Certificate Authorities 00:54-01:29
+
+A PKI relies on certificates that validate organizations. This creates a web of trust across the internet, allowing us to perform transactions confidently with websites around the globe. A PKI requires several elements to be effective.
+
+The first element is the CA. CAs need to be reputable organizations that are respected enough to issue public certificates to organizations that want to communicate securely over the internet.
+
+To increase security, CAs operate in a hierarchy of multiple CAs. This is done so that if one CA is compromised, only the certificates it issued need to be revalidated.
+
+Root CA 01:29-01:35
+
+The first CA is the Root CA. This is a self-signed certificate that's used to validate additional CAs.
+
+Intermediate CAs 01:35-01:56
+
+These Subordinate CAs are also known as Intermediate CAs. We can have multiple Intermediate CAs based on their policies and regulations. The Intermediate CAs validate the Issuing certificate authorities, and the Issuing CA is the one that hands out the certificates.
+
+Now that we understand the certificate authorities' hierarchy, let's look at how an organization can obtain their very own certificate.
+
+Certificate Process 01:56-02:13
+
+To obtain a certificate, an organization needs to first send in a certificate signing request, or CSR, to a Certificate Authority. The CSR should contain the organization's public key, domain name, and digital signature. Then the CA verifies this information and issues the certificate.
+
+Common Name 02:13-02:27
+
+When filling out the CSR, the organization provides their Common Name, or CN, which is more commonly referred to as the Fully Qualified Domain Name. For example, here you see that TestOut's Common Name would be www.testout.com.
+
+Subject Alternative Name (SAN) 02:27-02:49
+
+The organization can also apply for a Subject Alternative Name, or SAN. This allows one certificate to apply to multiple host names. For example, TestOut could apply for a SAN that would cover site1.testout.com and site2.testout.com.
+
+Once the CA has received the CSR, they verify the information and provide the certificate to the requesting organization.
+
+Registration Authority 02:49-03:08
+
+Sometimes the CA relies on a third party to perform the validation. These third parties are called Registration Authorities. An RA is certified by a Root CA and is authorized to issue certificates for specific uses only. No matter who issues the certificates, each one has specific attributes for specific purposes.
+
+Certificate Attributes 03:08-03:54
+
+Each CA's responsibility is to maintain a database that contains information on each certificate they've issued. This information is mainly their certificates' attributes.
+
+These attributes contain everything from the serial number and signature algorithm to the public key and expiration date. CAs use the X.509 standard to define these attributes.
+
+Each certificate has an expiration date. Before the certificate expires, the organization must revalidate the information and renew their certificate. If they don't, it's no longer valid.
+
+Aside from expiration, there are other reasons a CA might invalidate or revoke a certificate. For example, if the organization is found to no longer exist, if the private key is compromised, or if the certificate was discovered to be fake, the CA should immediately revoke the certificate.
+
+Certificate Revocation List (CRL) 03:54-04:08
+
+When a CA does revoke a certificate, it's added to a Certificate Revocation List, or CRL. This is a type of certificate blacklist. CAs maintain the CRL as part of their databases, and these should be updated quite often.
+
+Online Certificate Status Protocol (OCSP) 04:08-04:53
+
+The X.509 standard also defines an internet protocol that can be used to determine a certificate's current state. This is called the Online Certificate Status Protocol, or OCSP.
+
+The way OCSP works is your browser sends a status request to an OCSP responder and receives a response as to whether a certificate is valid or has been revoked.
+
+Using the OCSP provides a few benefits. These include providing more timely information on a certificate's status, better bandwidth management because the client doesn't need to download the CRL, and a grace period for expired certificates.
+
+If we follow the guidelines set in the X.509 standard, we can be assured that internet certificates are valid and have been checked appropriately by reputable Certificate Authorities.
+
+Summary 04:53-05:12
+
+That's it for this lesson. In this lesson, we covered Certificate Authorities and the hierarchical structure they're set up in. We also looked at the process an organization goes through to request a certificate for themselves. Finally, we looked at some certificate attributes and how CAs use them to validate certificates or put them on a Certificate Revocation List.

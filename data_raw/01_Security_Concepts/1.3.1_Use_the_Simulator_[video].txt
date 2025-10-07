@@ -1,0 +1,97 @@
+Use the Simulator 00:00-00:15
+
+TestOut's lab activities are key to your training. In this demonstration, I'm going to show you the components of the Lab Simulator so that you can successfully complete the activities in this course.
+
+Scenario Window 00:15-00:52
+
+Some labs start out with an overview of the office. We'll talk about that a bit more later, but first, let's click on Hardware here in Office 2. The lab has four main areas. Over here, on the left, is the Scenario window. This window is very important. It describes the tasks that you're required to perform during a given lab activity. Typically, the items in this bullet list provide you with all the tasks that you'll be evaluated on. You'll be expected to perform these tasks correctly as you go through the lab. If you need more space while you're working, you can hide the Scenario window by clicking this button right here, and you can click it a second time to bring it back.
+
+Workspace Area 00:52-01:10
+
+The main area where you'll do most of your work is called the Workspace. It includes all the items you'll work with and configure. For example, in this simulation, we have a computer, and we have wall plates with connectors for cable internet, the network, the telephone, and for AC power.
+
+Shelf Area 01:10-01:26
+
+We also have the Shelf. This holds pieces of equipment organized by category. These are the objects you'll use to complete configuration tasks over in the Workspace. You can think of the Shelf as your inventory of spare parts or an online ordering system where you can order the parts that you need.
+
+Read the Scenario 01:26-01:37
+
+Now, let's go through the process of completing a lab. The first thing you need to do is read the Scenario. Read it very carefully because when you're done, you're evaluated on whether you did everything it asked you to.
+
+Review Objects in the Workspace 01:37-02:43
+
+You'll often need to examine objects within the Workspace more thoroughly. You can use this slider to zoom in and out. You can also use the zoom out and zoom in buttons or the drop-down list here.
+
+Before we go any further, I need to point out that each object within the Workspace occupies a certain amount of space, which is denoted by the outline that's around each object. For example, this is the area for the computer, and this is the area for the wall plates. Within each of these windows, there are buttons that allow you to change the viewing perspective for that object.
+
+I'm currently looking at the front of the computer. But let's that suppose I need to do some work on the back. I can come up here and click the Back button. If I need to see the front of the computer again—say, to power it on—I click the Front button. You'll notice that not all of the objects have multiple views. The computer does, but the wall plates only have one view—the Front view.
+
+Let me sort of jump ahead for the sake of showing you something. I'm going to grab the mouse and keyboard from under Input Devices on the Shelf. You're not stuck with this layout in the Workspace. For example, I could grab the mouse and move it to the other side of the keyboard or move it back.
+
+Find Objects on the Shelf 02:43-04:01
+
+Once you've familiarized yourself with the items in the Workspace, you need to go over here—to the Shelf—and use the categories displayed to find the objects that are required to complete the Scenario.
+
+If you're looking at an item on the Shelf, and you're not sure what it is, click on that object's Details link. For example, I can click the Details link here for the video cable. When I do, an overview of the cable is displayed. Notice that, for this object, we see the cable itself. We can see each connector, and I can look at the front, back, and top of each one. Also, notice that when I click an item on the Shelf, it's displayed down here in the Selected Component window, and we can access the same information using the Details links down here. Being able to view the details of a particular object on the Shelf is very useful because it helps you verify that the object you've selected is the correct one for the scenario's particular requirements.
+
+And I should point out here that, with some objects, when you view their details, you see an additional tab called Specifications, which opens a window that provides even more information. Right now, we don't have an object on the Shelf or Workspace that has a Specification tab, but some do—for example, a motherboard will most likely have one. The information there is similar to what you might find in a user manual for that particular item.
+
+Add Items to the Workspace 04:01-04:54
+
+Before we can work with an object in the Workspace, we have to first add it or connect it to an item that's already there. For example, to add this Monitor to the Workspace, we expand Monitors and then drag it over here. Notice that when I do, you see yellow lines appear, which tell me where I can drop the monitor in relation to the other objects that are already there. In this case, I want to add the monitor to the Workspace right next to the PC system itself, so I'm going to drop it right here. And now, it's there. Pretty simple!
+
+Once the object is in the Workspace, I can manipulate it to accomplish the tasks in the Scenario. In this example, I need to look at the back of the monitor, and I need to use cables to connect this monitor to the computer system and the power outlet. Let's look at the back of the computer as well as the monitor to see all the connectors.
+
+Connect Devices 04:54-07:46
+
+With this done, I now need to use the appropriate cables to connect these two devices together and connect the monitor to the power outlet. Let's go over here and expand Cables, and let's connect the monitor to the computer system using a video cable. I can click on the video cable so that it appears down here, in the Selected Component window. Let's grab each connector and add it to the appropriate port on the back of the computer and monitor. And let's quickly drag this connector to the monitor.
+
+Notice here that there are three different ports available, and as I hover over each one, it's outlined in blue. That blue rectangle tells me that this is a potential place where I could connect this particular device. It doesn't mean it's the right connector, though—it just means that it's an option you could try. In this case, I'm dealing with an HDMI connector, so I need to make sure that I drag and drop it in an HDMI port—right here. I release the mouse, and now, one end of the connector is connected to the monitor. If we look at the connector's status down here, it's got one end connected to the monitor now. The other is still unconnected. And notice that when I did that, the Partial Connections window was displayed. You'll always see this window when one end of a cable is connected, but the other end isn't.
+
+Now we need to connect the other end of the cable to the PC system. I'm going to click and drag. And just like with the other end of the cable, I need to pick the right port to connect it to. And there it is. Once again, the status is updated down here, in the Selected Component window. One end is connected to the computer and the other to the monitor.
+
+Now, you might be wondering, "What happens if I drop this on an incompatible connector?" Well, when you do, an error is displayed down here, saying, "Hey, you can't connect that there." Let's go ahead and put it back on the correct port. And that's one way you can connect devices together using an item from the Shelf.
+
+There's another way to do it as well, and that's to drag the cable directly from the Shelf and then drop it on the appropriate connector. In this case, I'm going to drag the power connector, and I'm going to drop it on the monitor's power socket. Notice that this cable has two different connectors—we have a female connector and a male connector. The simulator doesn't know which end of the cable I want to connect. It brings up a list of possibilities, and I have to tell it specifically which one I want to use. Let's go ahead and use the AC Power Female Connector. And now that the end is connected to the monitor itself, let's plug the other end into the AC wall plate.
+
+Remember, I also moved our mouse and keyboard to the Bench from the Shelf. Let's plug those in really quick. First, I'll select the keyboard, find the USB on the back of the PC, and plug it in. Now let's do the same thing for the mouse.
+
+Turn on the Computer 07:46-08:10
+
+Before we can use the computer or monitor, we obviously need to turn them on. Let's start with the computer. If you hover over the power button, you'll notice that it's highlighted in blue. I'm going to click it to turn it on. It's telling me that the monitor has no display—that's because it's not turned on. Let's go over to the monitor and power it on as well. Now I'll click on the Windows screen.
+
+Operating System View 08:10-09:10
+
+As you can see, we have a fully simulated Windows environment, though it does function in pretty much the same way a real Windows desktop would. For example, I can click on the Start button. When I do, all of the things that you'd expect to see in the Start menu are displayed. I can search for control panel and click on it. When I do, Control Panel pops up, just like it would on a real Windows system. And using the various links in Control Panel, I can go ahead and configure this simulated workstation. For example, I could go down here to Hardware and Sound, and I could use this link right here to add a new printer to the system. The steps that you need to take within the simulation are the same ones you'd need to take on a real Windows system.
+
+I do need to point out that as you go through the lab exercises, you'll see that not everything in the Windows interface is enabled. If a feature isn't necessary for a lab, it's not enabled, but all the components you need to complete the Scenario will be.
+
+Workspace/Other Views 09:10-09:17
+
+Now, while the computer is up and running, we can switch back to the Workspace and view the hardware by clicking up here.
+
+Move Objects to the Shelf 09:17-10:04
+
+In addition to moving objects from the Shelf to the Workspace, you can do just the opposite. You can take an object that's currently in the Workspace and return it back to the Shelf. Let's grab the keyboard and move it to the shelf. When I do, I get a message that says, "Hey, I can't be moved back to the Shelf because I'm still plugged in."
+
+Before we can put this item back, we've got to unplug it. To unplug a cable or device, simply click on it, drag the end off, and drop it somewhere within the Workspace. For example, to unplug the cable for the keyboard, I click it, drag it off, and drop it—then its status changes to unconnected. At this point, the keyboard is unplugged, so I can drop it back over here on the Shelf. And please be aware that there are some items that you can't move to the Shelf, such as the wall plate connectors.
+
+Evaluate the Lab 10:04-11:42
+
+Now, once you've completed all the tasks in the Scenario, you're ready to submit the lab for evaluation. However, I recommend that before you do this, you go back over to your Scenario and quickly review all the tasks that you were expected to complete and double-check to make sure that everything was done as required. Once you've verified that you've done everything, go up here and click Score Lab. When you do, it's going to evaluate whether or not you did everything correctly.
+
+Notice here that we have a list of tasks that I was required to perform for the Scenario—found here, under TASK SUMMARY. Over here, I have an icon that tells me whether or not I did each one. If I didn't do a particular task, I see a red X. If I did complete a task, it's denoted with a green checkmark. Notice that, in this scenario, I didn't do everything that was required. I initially had the keyboard on the Workspace, but I took it off, so it evaluated as incorrect. And because I unplugged the cable for the keyboard, I got it wrong.
+
+Now, this last task is actually a multi-item task, meaning that I had to complete several different sub-tasks in order to get everything correct. To see what those sub-tasks were, I click on Show Details, and it tells me that I needed to turn on the monitor and the computer. I did both, so I got those correct.
+
+And down here, under Task Summary, is the EXPLANATION. This part of the report provides step-by-step instructions for actually completing the tasks in the Scenario. There are, of course, many ways to complete some of these tasks. Okay, now I'm going to pause the recording while I restart the lab.
+
+Restart the Lab 11:42-12:02
+
+Let's go back to Office 2 Hardware. If, at any time, you're in the middle of a lab and think to yourself, "I really messed this up," you can restart the lab without scoring it. This button over here will restart the lab from the beginning without giving you a score. Be aware, though, that if you do, you'll get this message telling you that any work you've done will be lost.
+
+Summary 12:02-12:08
+
+That's it for this demonstration. In this demo, we learned how to use the TestOut Lab Simulator.
+
+

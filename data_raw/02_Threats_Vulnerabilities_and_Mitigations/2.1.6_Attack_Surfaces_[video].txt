@@ -1,0 +1,74 @@
+Click one of the buttons to take you to that part of the video.
+
+
+Attack Surfaces 00:00-00:39
+
+The attack surface is all the points at which a malicious threat actor could try to exploit a vulnerability. To evaluate the attack surface, you need to consider the attributes of threat actors that pose the most risk to your organization.
+
+From a threat actor's perspective, each part of the attack surface represents a potential vector for attempting an intrusion. A threat vector is the path that an attacker uses to execute a data exfiltration, service disruption, or disinformation attack. Sophisticated threat actors will make use of multiple vectors. In this lesson, we'll look at several of those vectors.
+
+Vulnerable Software Vectors 00:39-01:13
+
+Vulnerable software contains a flaw in its code or design that can be exploited to circumvent access control or to crash the process. Typically, vulnerabilities can only be exploited in specific circumstances and are often patched by the vendor. However, because of the complexity of modern software and the speed with which new versions must be released to market, almost no software is free from vulnerabilities. Organizations that might not have an effective patch management system are exposed to this commonly exploited threat vector.
+
+Unsupported Systems and Applications 01:13-01:39
+
+Vulnerable software continues to be an effective threat vector due to the continued use of unsupported systems and applications. An unsupported system is one where its vendor no longer develops updates and patches. Unless the organization is able to patch the faulty code itself, these services and apps will be highly vulnerable to exploits. One of the best ways to mitigate this risk is to isolate these systems.
+
+Client-Based vs. Agentless 01:39-02:06
+
+Scanning software helps organizations automate the discovery and classification of software vulnerabilities. This scanning software can be implemented as a client-based agent, where the agent runs as a scanning process installed on each host and reports to a management server. Alternatively, the vulnerability management product might use agentless techniques to scan a host without requiring any sort of installation.
+
+To execute malicious code on a system, a threat actor must be able to run exploit code on the system or over a network.
+
+Network Vectors 02:06-03:57
+
+Let's look at some specific threat vectors that can expose unsecured networks.
+
+Direct Access — when the threat actor uses physical access to the site or system to perpetrate an attack.
+
+Wired Network — when a threat actor with access to the site attaches an unauthorized device to a physical network port, and the device is permitted to communicate with other hosts.
+
+Remote and Wireless Network—when the attacker obtains credentials for a remote access or wireless connection to the network or cracks the security protocols used for authentication.
+
+Cloud Access—many companies now run part or all of their network services via internet-accessible clouds. The attacker only needs to find one account, service, or host with weak credentials to gain access.
+
+Some additional network vectors include the following:
+
+Bluetooth Network—a threat actor can exploit a vulnerability or misconfiguration to transmit a malicious file to a user's device over the Bluetooth personal area wireless networking protocol.
+
+Default Credentials—the attacker gains control of a network device or app because it has been left configured with a default password. Default credentials are likely to be published in the product's setup documentation or are otherwise easy to discover.
+
+Open Service Port—the threat actor is able to establish an unauthenticated connection to a logical TCP or UDP network port. The server will run an application to process network traffic arriving over the port. The software might be vulnerable to exploit code or to service disruption.
+
+Lure-Based Vectors 03:57-04:54
+
+A lure is something superficially attractive or interesting that causes its target to want it, even though it may be concealing something dangerous, like a hook. In cybersecurity terms, when the target opens the file bait, it delivers a malicious payload hook that'll typically give the threat actor control over the system or perform service disruption.
+
+A common lure attack involves removable devices. An attacker conceals malware on a USB thumb drive or memory card and tries to trick employees into connecting the media to a device. In a drop attack, the threat actor simply leaves infected USB sticks near offices with the expectation that at least one employee will pick one up and plug it into a computer. They can contain executable files concealing malware, word processing documents or PDF files with embedded malicious code, or image files with exploit code concealed in the image.
+
+Message-Based Vectors 04:54-06:29
+
+File-based lures need a mechanism to deliver the file and a message that'll trick a user into opening the file on their computer. Consequently, any features that allow direct messaging to users must be considered as part of the potential attack surface. Message-based threats involve malicious activities carried out through different communication channels, such as email, short message services (SMS), and instant messaging.
+
+A common vector involves sending email messages with malicious file attachments or fake URLs, commonly referred to as phishing. The attacker also uses social engineering techniques to persuade or trick the user into opening the attachment or clicking on the URL.
+
+Another vector utilizes the Short Message Service (SMS) to send a file or a link to a mobile device using the text messaging handler built into smartphone firmware. This practice is called smishing, and it's difficult to monitor because it's operated by the handset or subscriber identity module (SIM) card provider.
+
+Attackers can also exploit instant messaging (IM) platforms to deliver malicious links, files, or messages, attempting to compromise devices or steal sensitive data.
+
+Web and Social Media sites provide yet another vector. Malware may be concealed in files attached to posts or presented as downloads. An attacker may compromise a site so that it automatically infects vulnerable browser software (a drive-by download).
+
+Supply Chain Vectors 06:29-07:50
+
+A supply chain is an end-to-end process of designing, manufacturing, and distributing goods and services to customers. Rather than attack a target organization directly, a threat actor may seek ways to infiltrate it via companies in its supply chain.
+
+Ensuring reliable sources of equipment and software is called procurement management. In procurement management, it's helpful to distinguish several types of relationships, such as suppliers, vendors, and business partners.
+
+Suppliers obtain products directly from a manufacturer to sell to other businesses. Vendors receive products from suppliers to sell to retail businesses or directly to customers. The term business partners implies a closer relationship where two companies share closely aligned goals and marketing opportunities. Each of these companies has its own supply chain.
+
+The supply chain breadth and complexity expose organizations to a huge attack surface. For example, a computer motherboard supply chain can include a chip manufacturer, firmware code developer, OEM reseller, courier delivery company, and administrative staff responsible for provisioning the computing device to the end user. Anyone with the time and resources to modify the computer's firmware could create backdoor access. The same applies to any computer or network hardware, software, or service.
+
+Summary 07:50-08:18
+
+Well, that's it for this lesson. In this lesson, we introduced you to multiple attack surface vectors including Vulnerable software vectors, Network Vectors, Lure-based Vectors, Message-based Vectors, and Supply Chain Vectors. Understanding the methods by which threat actors infiltrate networks and systems is essential for you to assess the attack surface of your networks and deploy controls to block attack vectors.

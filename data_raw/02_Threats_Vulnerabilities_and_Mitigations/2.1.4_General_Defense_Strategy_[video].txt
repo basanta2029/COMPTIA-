@@ -1,0 +1,52 @@
+Click one of the buttons to take you to that part of the video.
+
+
+General Defense Strategy 00:00-00:19
+
+As a security administrator, you're responsible for protecting your information from an almost limitless number of attacks and exploits. To guard your information from attacks, you need to formulate a general defense strategy using several fundamental security principles.
+
+Layered Defenses 00:19-01:55
+
+The first principle we need to look at is layering. Your defenses need to be layered. This means using multiple strategies to protect information.
+
+For example, in order to log in to a computer system, by default, all you have to provide is the user name and password.
+
+Well, that's good--but what if the user name and password get compromised? The attacker who obtained the user name and password now has access to whatever privileges that user account has within the system.
+
+But what if you required a fingerprint that's read via a biometric scanner in addition to a user name and password? With this extra security precaution, we create a layered defense for that particular system. Someone could come along and compromise a particular user's user name and password on that system, but they still can't log in because they don't have that user's fingerprint.
+
+The one thing you need to remember when you're dealing with most attackers is that they're looking for low-hanging fruit; in other words, they're lazy. Let's say you have a choice of three different systems to try to compromise, and they're all worth about the same. Two of them are extremely difficult, with layered defenses that will take a lot of work and risk to compromise. The third system is really lax on their security.
+
+Which one are you going to attack? The third one! So, by using layered defenses, you make sure that your system or network is not a target of opportunity. Is that going to deter a determined attacker, like a disgruntled employee or a cyber terrorist? No. To them, you're still a target of opportunity because they're not focused on anybody else--they are focused on you. But using layered defenses still makes it more difficult to access your system.
+
+Principle of Least Privilege 01:55-04:32
+
+The next part of your overall defensive strategy is minimizing user access. You need to protect your information from the inside and the outside. Basically, each user should have access to the information they need to do their job and no more. This is called the principle of least privilege. One problem with the principle of least privilege is that some operating systems give users access to only what they have been specifically granted privileges to, while other operating systems basically give everybody access to everything unless they are specifically denied access. What you need to do is look at the systems where the information you're protecting is stored and determine whether the operating system is the first type or the second type.
+
+Here's an example: We have three users who use this particular server. It's a Linux server. We have Fred, Mary, and Bob. Fred needs access to his home directory on the server, which is located in the /Home/Fred directory. Therefore, according to the principle of least privilege, Fred should have access to only this directory on that server, and no others.
+
+Mary needs to have access to her home directory right here, /Home/Mary. She is also working on a project that's developing a new widget for the company. She needs access a special directory named Widgets, too. Additionally, she's been granted access to a shared area right here on the server hard drive, where multiple users can share their information. So she is given that level of access. Bob, over here, has access to his home directory, /Home/Bob, and he has also been granted access to the shared directory /Shared.
+
+This is a very common setup in the real world, but there's a problem with it: Individual users have home directories that are protected and inaccessible to anybody else. But then the administrator sets up shared directories, and it becomes much easier for the principle of least privilege to be violated. The problem isn't with the directory itself; the problem is with what people do with that shared directory. From a productivity standpoint, shared directories work well because they allow multiple people to collaborate on documents and work together efficiently. A user can put a file into the shared folder, and anyone who has access to the shared folder can open the file and do whatever work they need to.
+
+A problem that can occur with shared directories, however, is users adding sensitive files to the shared folder. It can happen that users that have access to the shared folder should not have access to certain files that have been added to the shared folder. Shared folders ruin the strict privilege denial system.
+
+Randomness 04:32-06:44
+
+The next component that you need to include in your overall defensive posture is randomness. The problem here is that human beings tend to be creatures of habit. We establish predictable patterns of behavior. For example, you probably take the same route to work at the same time each day. Once you're at work you probably follow the same daily routine checking emails, attending meetings, writing reports, completing tasks and the same weekly routine. This is bad from an information security standpoint because attackers can identify these personal patterns and then use them to their advantage.
+
+As the security administrator for a system, you need to randomize your personal habits as part of your defensive strategy. If someone wants to break into your system and they're using a social exploit combined with a technical exploit, they might observe what time you come to work, what time you go on break, what time you run backups, etc. Whatever information they can glean during the reconnaissance phase of an attack helps them determine where vulnerabilities lie.
+
+Another good thing to do is to randomize password change intervals. Security administrators usually make it so that every user has to change their password after 90 days. Well, what does that tell an attacker? They know that if they manage to compromise a user name and password, they've got a certain amount of days while that password is still valid. But if you set up your password change intervals to be 90 days once, then 30 days the next time, then 60 days, then 15 days, etc., then the attacker does not know how long that password is good for.
+
+You should also try to obscure information. In other words, you want to make the reconnaissance process as unreliable and unpredictable as possible. You don't want an attacker to deduce behavioral trends and gather information about your system. One common recon tactic is to use ping sweeps. One thing you can do to obscure information is to make it so ping sweeps don't work. You do this by configuring a host-based firewall on every system and configuring that firewall not to respond to ICMP Echo requests. Basically, you make the systems un-pingable. If you disable ICMP Echo requests in the host-based firewall, they won't respond. You obscure how many systems are in your network, as well as which IP addresses are assigned.
+
+Simplicity 06:44-07:33
+
+The last principle of a defensive posture is to keep things simple. Many administrators want to implement all the latest and most complex security measures to protect their information. That's good, but it becomes a problem if defenses are so complex that they become unusable. It is better to keep a simple defensive mechanism. Here, simple means easy to understand. If you don't fully understand how to manage a type of defense, don't use it until you are well-trained in how it works. You can't make sure a security system is doing its job if you don't know what it's supposed to do. You need to know how to interpret the output from the system and how to fix problems when they occur.
+
+As a security administrator, you need to implement the concepts that we talked about in your defensive strategy in order to create a system that's much more difficult to breach or exploit.
+
+Summary 07:33-07:47
+
+In this lesson, we covered the various components that comprise an overall defensive strategy. We talked about layered defenses, the principle of least privilege, varied defense mechanisms, randomizing behaviors, and keeping things simple.

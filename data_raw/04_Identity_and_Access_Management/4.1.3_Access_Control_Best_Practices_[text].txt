@@ -1,0 +1,107 @@
+Security Pro 8.0
+
+4.1.3 Access Control Best Practices
+
+Access control refers to regulating and managing the permissions granted to individuals, software, systems, and networks to access resources or information. Access controls ensure that only authorized entities can perform specific actions or access certain data, while unauthorized entities are denied access. Access control concepts apply to networks, physical access, data, applications, and the cloud.
+
+This lesson covers the following topics:
+
+Access control best practices
+Transition best practices
+Access Control Best Practices
+
+Access control best practices take into consideration the following security principles and concepts:
+
+Principle
+Description
+Principle of least privilege	
+Implementing the principle of least privilege (PoLP) is a cornerstone of improving endpoint protection and minimizing the risk of security issues. The principle of least privilege dictates that users, applications, and processes should only be granted the minimum permissions necessary to complete their duties and nothing more.
+
+There are several practical methods for implementing least privilege. An essential first step to effectively implementing least privilege is thoroughly auditing user roles, privileges, and responsibilities. This process allows organizations to understand what access each user needs to perform their job role effectively. Access controls and permissions can be adjusted to adopt a principle of least privilege that best reflects the audit results.
+
+User and account management tools are also essential when implementing the principle of least privilege. Regularly reviewing and removing unused or unnecessary accounts reduces the potential targets for an attacker. Similarly, temporary privileges, which grant additional access rights for a limited time and only when required, can help keep privileges as restrictive as possible.
+
+The principle of least privilege also applies to software applications and operating systems, not just to users. For instance, ensuring that applications run with the minimum necessary permissions can prevent them from being exploited to carry out privileged actions. Common methods of controlling access include:
+
+Implicit deny denies access to users or groups not explicitly given access to a resource. Implicit deny is the weakest form of privilege control.
+Explicit allow specifically identifies users or groups who have access. Explicit allow is a moderate form of access control in which privilege has been granted to a subject.
+Explicit deny identifies users or groups who are not allowed access. Explicit deny is the most robust access control, overruling all other privileges granted.
+Need to know	
+Need to know describes the restriction of highly sensitive data usually referenced in government and military contexts. Essential facts about the need to know include:
+
+Even if an individual is fully cleared, the information will not be divulged unless the person needs to know the information to perform official duties.
+Need to know discourages casual browsing of sensitive materials.
+In a classified environment, a clearance into a top-secret compartment allows access to only specific information. This is a form of mandatory access control (MAC).
+Separation of duties	
+Separation of duties is the concept of having more than one person required to complete a task. This is a preventive principle primarily designed to reduce conflicts of interest. It also prevents insider attacks because no one person has end-to-end control, and no one person is irreplaceable. Essential facts to know about separation of duties include:
+
+A business can use the principle of split knowledge to achieve a separation of duties. This means no single person controls a system's security mechanisms; no single person can completely compromise the system.
+In sensitive or high-risk transactions, a business can use two-man controls. This means that two operators must review and approve each other's work.
+Job rotation	
+Job rotation is a technique where users are cross-trained in multiple positions. Responsibilities are regularly rotated between personnel. Job rotation:
+
+Cross trains staff in different functional areas to detect fraud.
+Exchanges positions of two or more employees to allow for oversight of past transactions.
+Can be used for training purposes.
+Defense-in-depth	Defense-in-depth is an access control principle that implements multiple access control methods instead of relying on a single process. Numerous defenses make it harder to bypass security measures.
+Identification	
+Identification is claiming an identity, such as telling someone your name. Essential facts to know about identification include:
+
+A username is a form of identification.
+Identification is not very secure because anyone could pretend to be the user.
+To substantiate identity, the person must provide some form of identity verification.
+Multi-Factor Authentication	
+Multi-Factor Authentication is using more than one way to verify identity. Multi-Factor Authentication is achieved by requiring two or more methods that only the user can provide. Five categories of computer system authentication include:
+
+Something you are, such as biometric information (e.g., fingerprint or retina scan).
+Something you have, such as smart cards, RSA tokens, or security key fobs.
+Something you know, such as passwords and PINs.
+Somewhere you are, such as a geographical location.
+Something you do, such as how you type a sentence on a keyboard.
+Mutual authentication	Mutual authentication is when two communicating entities authenticate each other before exchanging data. It requires not only the server to authenticate the user but the user to authenticate the server. This makes mutual authentication more secure than traditional, one-way authentication.
+Time of day restrictions	
+Time of day restrictions impose restrictions on incoming and outgoing network traffic based on the time of day. This allows organizations to define when resources can be accessed or specific actions can be performed. This can help to:
+
+Limit access to critical systems after hours.
+Prevent unauthorized activities during particular periods.
+Reduce the attack surface available to potential threats.
+
+
+Play Video
+
+
+Video Control Resume Play
+CC
+1.0x
+
+
+Volume Control
+Interactive Script
+
+
+Theater Mode
+
+
+Full Screen
+Transition Best Practices
+
+Organizations should follow strict guidelines when an employee transitions from or into a new position. Creeping privileges occur when a user's job position changes, and the user is granted a new set of access privileges. Still, the user's current access privileges are not removed or modified, resulting in privilege escalation. As a result, the user accumulates unnecessary privileges for the current work tasks. The principle of least privilege and separation of duties are countermeasures against creeping privileges. To avoid creeping privileges and to best protect the security of information, the following precautions should be taken in each stage of the account's life cycle:
+
+Event	Precautions
+Account creation	When creating an account, apply the appropriate access rights based on the job role implemented in the access control system. Use the principle of least privilege and grant only the minimum privileges required to perform the position's duties.
+Active accounts	
+During the life of an account:
+
+Modify access rights as job roles and circumstances change.
+Monitor password resets and lockouts to ensure account security.
+Re-evaluate access rights periodically.
+Old accounts	
+When an account is no longer needed, take appropriate actions to:
+
+Delete accounts that will no longer be used.
+Rename accounts to give new users in the same job role the same access privileges.
+Lock accounts that will not be used for extended periods to prevent them from being used.
+Remove unnecessary rights from accounts that will be kept on the system.
+Archive important data or files the user owns or assign ownership to another user.
+Prohibit generic user accounts, such as the Guest or Administrator users, on Windows systems.
+End-of-life procedures should include deactivating or deleting unused accounts and destroying data that might remain on storage media. This will prevent sensitive data from being accessible to unauthorized users.

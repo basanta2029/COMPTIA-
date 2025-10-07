@@ -1,0 +1,40 @@
+Security Pro 8.0
+
+4.8.2 Remote Access Facts
+
+Remote access involves the infrastructure, protocols, and software that allow a host to join a local network from a physically remote location or to establish a session on a host over a network.
+
+This lesson covers the following topics:
+
+Remote access architecture
+Remote desktop
+Remote Access Architecture
+
+Remote access networking means that the user's device does not make a direct cable or wireless connection to the network. The connection occurs over or through an intermediate network.
+
+Historically, remote access used analog modems connecting over the telephone system. These days, most remote access is implemented as a virtual private network (VPN), running over Internet Service Provider (ISP) networks.
+
+With a remote access VPN, clients connect to a VPN gateway on the edge of the private network. This client-to-site VPN topology is the "telecommuter" model, allowing homeworkers and employees working in the field to connect to the corporate network. The VPN protocol establishes a secure tunnel to keep the contents private, even when the packets pass over ISPs' routers.
+
+Remote access VPN
+
+Images © 123RF.com
+Description
+A VPN can also be deployed in a site-to-site model to connect two or more private networks. Whereas remote access VPN connections are typically initiated by the client, a site-to-site VPN is configured to operate automatically. The gateways exchange security information using whichever protocol the VPN is based on. This establishes a trust relationship between the gateways and sets up a secure connection through which to tunnel data. Hosts at each site do not need to be configured with any information about the VPN. The routing infrastructure at each site determines whether to deliver traffic locally or send it over the VPN tunnel.
+
+Site-to-site VPN
+
+Images © 123RF.com
+Description
+A third topology is a host-to-host tunnel. This is a means of securing traffic between two computers where the private network is not trusted.
+
+Several VPN protocols have been used over the years. Legacy protocols, such as the Point-to-Point Tunneling Protocol (PPTP), have been deprecated because they do not offer adequate security. Transport Layer Security (TLS) and Internet Protocol Security (IPsec) are now the preferred options for configuring VPN access.
+Remote Desktop
+
+A remote access VPN joins the user's PC or smartphone to a remote private network via a secure tunnel over a public network. Remote access can also be a means of connecting to a specific computer over a network. This type of remote access involves connecting to a terminal server on a host using software that transfers shell data only. The connection could be a client and terminal server on the same local network or across remote networks.
+
+A graphical remote access tool sends screen and audio data from the remote host to the client and transfers mouse and keyboard input from the client to the remote host. Microsoft's Remote Desktop Protocol (RDP) can be used to access a physical machine on a one-to-one basis.
+
+Alternatively, a site can operate a remote desktop gateway that facilitates access to virtual desktops or individual apps running on the network servers. RDP connections are encrypted by default. There are several popular alternatives to Remote Desktops. Most support remote access to platforms other than Windows (macOS and iOS, Linux, Chrome OS, and Android, for instance). Examples include TeamViewer (teamviewer.com/en) and Virtual Network Computing (VNC), which is implemented by several different providers (notably realvnc.com/en).
+
+In the past, these remote desktop products required a dedicated client app. Remote desktop access can now just use a web browser client. The canvas element introduced in HTML5 allows a browser to draw and update a desktop with relatively little lag. It can also handle audio. This is referred to as an HTML5 VPN or as a clientless remote desktop gateway (guacamole.apache.org). This solution uses a protocol called WebSocket, which enables bidirectional messages to be sent between the server and client without requiring the overhead of separate HTTP requests.

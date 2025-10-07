@@ -1,0 +1,346 @@
+{
+  "chapter": "03_Cryptographic_Solutions",
+  "total_documents": 34,
+  "documents": [
+    {
+      "chapter_num": "3",
+      "section_num": "3.1.10",
+      "title": "Use Steganography to Hide a File",
+      "content_type": "video",
+      "filename": "3.1.10_Use_Steganography_to_Hide_a_File_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.1.10_Use_Steganography_to_Hide_a_File_[video].txt",
+      "word_count": 684,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.1.12",
+      "title": "Cryptographic Attacks",
+      "content_type": "video",
+      "filename": "3.1.12_Cryptographic_Attacks_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.1.12_Cryptographic_Attacks_[video].txt",
+      "word_count": 756,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.1.13",
+      "title": "Cryptographic Attack Facts",
+      "content_type": "text",
+      "filename": "3.1.13_Cryptographic_Attack_Facts_[text].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.1.13_Cryptographic_Attack_Facts_[text].txt",
+      "word_count": 623,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.1.1",
+      "title": "Cryptography Concepts",
+      "content_type": "video",
+      "filename": "3.1.1_Cryptography_Concepts_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.1.1_Cryptography_Concepts_[video].txt",
+      "word_count": 1236,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.1.2",
+      "title": "Cryptography Facts",
+      "content_type": "text",
+      "filename": "3.1.2_Cryptography_Facts_[text].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.1.2_Cryptography_Facts_[text].txt",
+      "word_count": 931,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.1.3",
+      "title": "Symmetric vs Asymmetric Encryption",
+      "content_type": "video",
+      "filename": "3.1.3_Symmetric_vs_Asymmetric_Encryption_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.1.3_Symmetric_vs_Asymmetric_Encryption_[video].txt",
+      "word_count": 1531,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.1.4",
+      "title": "Symmetric and Asymmetric Encryption Facts",
+      "content_type": "text",
+      "filename": "3.1.4_Symmetric_and_Asymmetric_Encryption_Facts_[text].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.1.4_Symmetric_and_Asymmetric_Encryption_Facts_[text].txt",
+      "word_count": 1839,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.1.5",
+      "title": "Cryptography Algorithm",
+      "content_type": "video",
+      "filename": "3.1.5_Cryptography_Algorithm_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.1.5_Cryptography_Algorithm_[video].txt",
+      "word_count": 1544,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.1.6",
+      "title": "Cryptography Algorithms Facts",
+      "content_type": "text",
+      "filename": "3.1.6_Cryptography_Algorithms_Facts_[text].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.1.6_Cryptography_Algorithms_Facts_[text].txt",
+      "word_count": 1174,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.1.8",
+      "title": "Blockchain",
+      "content_type": "video",
+      "filename": "3.1.8_Blockchain_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.1.8_Blockchain_[video].txt",
+      "word_count": 615,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.1.9",
+      "title": "Blockchain Facts",
+      "content_type": "text",
+      "filename": "3.1.9_Blockchain_Facts_[text].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.1.9_Blockchain_Facts_[text].txt",
+      "word_count": 697,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.2.1",
+      "title": "Combining Cryptographic Methods",
+      "content_type": "video",
+      "filename": "3.2.1_Combining_Cryptographic_Methods_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.2.1_Combining_Cryptographic_Methods_[video].txt",
+      "word_count": 794,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.2.2",
+      "title": "Hardware-Based Encryption Devices",
+      "content_type": "video",
+      "filename": "3.2.2_Hardware-Based_Encryption_Devices_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.2.2_Hardware-Based_Encryption_Devices_[video].txt",
+      "word_count": 549,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.2.3",
+      "title": "Verify Device for TPM",
+      "content_type": "video",
+      "filename": "3.2.3_Verify_Device_for_TPM_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.2.3_Verify_Device_for_TPM_[video].txt",
+      "word_count": 504,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.2.4",
+      "title": "Cryptographic Implementation Facts",
+      "content_type": "text",
+      "filename": "3.2.4_Cryptographic_Implementation_Facts_[text].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.2.4_Cryptographic_Implementation_Facts_[text].txt",
+      "word_count": 1722,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.3.1",
+      "title": "Hashing",
+      "content_type": "video",
+      "filename": "3.3.1_Hashing_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.3.1_Hashing_[video].txt",
+      "word_count": 981,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.3.2",
+      "title": "Hashing Algorithms",
+      "content_type": "video",
+      "filename": "3.3.2_Hashing_Algorithms_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.3.2_Hashing_Algorithms_[video].txt",
+      "word_count": 527,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.3.3",
+      "title": "Hashing Facts",
+      "content_type": "text",
+      "filename": "3.3.3_Hashing_Facts_[text].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.3.3_Hashing_Facts_[text].txt",
+      "word_count": 2064,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.3.4",
+      "title": "Using Hashes",
+      "content_type": "video",
+      "filename": "3.3.4_Using_Hashes_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.3.4_Using_Hashes_[video].txt",
+      "word_count": 842,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.4.1",
+      "title": "Encrypting File System",
+      "content_type": "video",
+      "filename": "3.4.1_Encrypting_File_System_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.4.1_Encrypting_File_System_[video].txt",
+      "word_count": 677,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.4.2",
+      "title": "Encrypt Files",
+      "content_type": "video",
+      "filename": "3.4.2_Encrypt_Files_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.4.2_Encrypt_Files_[video].txt",
+      "word_count": 1234,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.4.4",
+      "title": "PGP and GPG",
+      "content_type": "video",
+      "filename": "3.4.4_PGP_and_GPG_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.4.4_PGP_and_GPG_[video].txt",
+      "word_count": 406,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.4.5",
+      "title": "Encrypting Files with GPG",
+      "content_type": "video",
+      "filename": "3.4.5_Encrypting_Files_with_GPG_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.4.5_Encrypting_Files_with_GPG_[video].txt",
+      "word_count": 549,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.4.6",
+      "title": "BitLocker and Database Encryption",
+      "content_type": "video",
+      "filename": "3.4.6_BitLocker_and_Database_Encryption_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.4.6_BitLocker_and_Database_Encryption_[video].txt",
+      "word_count": 971,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.4.7",
+      "title": "Configuring BitLocker",
+      "content_type": "video",
+      "filename": "3.4.7_Configuring_BitLocker_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.4.7_Configuring_BitLocker_[video].txt",
+      "word_count": 893,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.4.9",
+      "title": "File Encryption Facts",
+      "content_type": "text",
+      "filename": "3.4.9_File_Encryption_Facts_[text].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.4.9_File_Encryption_Facts_[text].txt",
+      "word_count": 2684,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.5.1",
+      "title": "Public Key Infrastructure",
+      "content_type": "video",
+      "filename": "3.5.1_Public_Key_Infrastructure_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.5.1_Public_Key_Infrastructure_[video].txt",
+      "word_count": 910,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.5.2",
+      "title": "Public Key Infrastructure Facts",
+      "content_type": "text",
+      "filename": "3.5.2_Public_Key_Infrastructure_Facts_[text].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.5.2_Public_Key_Infrastructure_Facts_[text].txt",
+      "word_count": 989,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.5.3",
+      "title": "Certificate Types",
+      "content_type": "video",
+      "filename": "3.5.3_Certificate_Types_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.5.3_Certificate_Types_[video].txt",
+      "word_count": 628,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.5.4",
+      "title": "Certificate Types Facts",
+      "content_type": "text",
+      "filename": "3.5.4_Certificate_Types_Facts_[text].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.5.4_Certificate_Types_Facts_[text].txt",
+      "word_count": 1077,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.5.5",
+      "title": "Manage Certificates",
+      "content_type": "video",
+      "filename": "3.5.5_Manage_Certificates_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.5.5_Manage_Certificates_[video].txt",
+      "word_count": 1890,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.5.7",
+      "title": "Certificate Concepts",
+      "content_type": "video",
+      "filename": "3.5.7_Certificate_Concepts_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.5.7_Certificate_Concepts_[video].txt",
+      "word_count": 1237,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.5.8",
+      "title": "Certificate Concepts Facts",
+      "content_type": "text",
+      "filename": "3.5.8_Certificate_Concepts_Facts_[text].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.5.8_Certificate_Concepts_Facts_[text].txt",
+      "word_count": 1179,
+      "has_content": true
+    },
+    {
+      "chapter_num": "3",
+      "section_num": "3.0",
+      "title": "Introduction",
+      "content_type": "chapter_intro",
+      "filename": "Chapter_3.0_Introduction.txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/Chapter_3.0_Introduction.txt",
+      "word_count": 229,
+      "has_content": true
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+Job Roles Using Security Pro 00:00-05:00
+
+James Stanger
+
+When it comes to the world of cyber security there are a lot of kinda continents available in that world. In other words, there are a lot of different jobs within the realm of cyber security. To tell us more about that we've got Brian Calkin. Brian, how you doin'?
+
+Brian Calkin
+
+I'm doing great, James. How are you?
+
+James Stanger
+
+Doing great, man. Doing great. Brian Calkin is the Chief Technology Officer for CyberWA. And Brian, tell us a bit more about CyberWA yourself. Let's start talking about the world of cyber security jobs that are available to folks.
+
+Brian Calkin
+
+Absolutely, yeah. So I've been in cyber security now for going on 20 years, various roles over the years I've had, to include all the way from a SOC analyst to a person that has built SOCs, run SOCs, led response teams, various management roles,executive roles. And as you mentioned, currently the Chief Technology Officer for a company called CyberWA where we are offering cyber protective services for high-net-worth individuals and celebrities.
+
+James Stanger
+
+So you know when it comes to putting a Security Operations Center together, more importantly you have to have workers at various tiers, various levels. Is a Security Operations Center analyst, a SOC analyst, a good first cyber security job?
+
+Brian Calkin
+
+I'd actually argue it's the best first cyber security job, but I can stand by that pretty strongly having been one, and having hired many and managed many of them over the years. I think that as folks are getting started in cyber security, and they may be not exactly sure where their passions might lie, whether they want to dive into penetration testing, or vulnerability assessments, or incident response, I think that you get enough exposure to each of those various individual sort of work items with being a SOC analyst. You just get this broad experience that you can apply later on in your career.
+
+James Stanger
+
+I've known quite a few beginning SOC analysts. They basically take tickets, as it were, oftentimes, right? And then they determine if they can handle it themselves, if it really is a big thing, and then escalate it. Is that, in general terms, what you're gonna do with that particular job role?
+
+Brian Calkin
+
+Absolutely, yeah. So generally the way it works is we will hire somebody, you know, either straight out of college, or maybe new to cyber security in general, as what we call an entry level or a tier one analyst. So these are the folks that are
+
+getting the broadest experience in handling most of the, if not all of the inbound requests from customers, whether they be internal customers to your organization, or, you know, external customers if you're running an external shop. But yeah, fielding emails, fielding phone calls, and running down things like, you know, requests for analysis or requests for assistance. And then yeah, if they get into a bind or a tough spot where they've sort of hit the limits of what they know and can do, then they would escalate up to the tier two analyst.
+
+James Stanger
+
+You know, there are other job roles out there, you know, a pen tester for example, or security administrator. Let's talk about a couple of those real quick.
+
+Brian Calkin
+
+Yeah, sure. Those are always popular too, and folks, they like the pen testing roles, security admin roles, security engineer roles. So for instance a penetration tester would be somebody that is identifying vulnerabilities in a system, or a network, or a networkperimeter, and then trying to put on the role of the hacker or the black hat, and then try to exploit those vulnerabilities to try to get in, you know. And the purpose, of course, is to let the organization know they found this vulnerability and they were able to exploit it, versus a security engineer would be, so if a pen tester is playing offense, the engineer would be playing defense. The security engineer is preparing those systems to be as secure as possible as they're being deployed. Think, you know, deploying a new server and hardening it for best practice or per recommendations in order to make it as resilient as possible to a cyber attack.
+
+James Stanger
+
+Additional job roles can include things like, you know, a help desk analyst, or a vulnerability manager, things like that. But tell me a bit more about some of those.
+
+Brian Calkin
+
+Yeah, sure. Vulnerability assessment, vulnerability manager is another really popular one that, you know, I've worked with a number of those folks over the years. So these are the folks that are essentially doing things like, or could include running vulnerability scans, looking at various vulnerabilities that an organization might have within their environment, and then assessing, you know, what is the impact should this vulnerability get exploited, making sure the vulnerability can be patched, if it maybe can't be patched, and what else they could do to help mitigate the vulnerability. You know, is there some other mitigating factor in play they could apply to kind of close that hole, you know, if you will.
+
+James Stanger
+
+Brian, thank you so much for talking about just a few of the many job roles that are available within cyber security. Sure appreciate it, man.
+
+Brian Calkin
+
+Yeah, you're welcome. Thanks, James.

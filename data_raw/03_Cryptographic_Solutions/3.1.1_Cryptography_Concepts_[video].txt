@@ -1,0 +1,72 @@
+Click one of the buttons to take you to that part of the video.
+
+
+Cryptography Concepts 00:00-00:32
+
+A security specialist's main goal is to keep data safe and out of the hands of hackers and other threats. To do that, you can lock down a system using multiple methods, but there's always a chance that a hacker will still get through. You can use cryptography to add an additional layer of protection and make it even more difficult for hackers to steal your data, even if they get inside.
+
+In this video, we'll discuss what cryptography is, the basic concepts associated with cryptology, and some common cryptology methods.
+
+Cryptography is defined as the process of writing or solving messages using a secret code.
+
+Cryptography Overview 00:32-01:41
+
+Cryptography isn't new. The earliest known use of cryptography was by the Egyptians in 1900 BC to deliver messages using encryption.
+
+Encryption is the process of converting normal text into text that makes no sense at all, which is called ciphertext. A cipher is the method, or algorithm, used to encrypt the data. I know that might sound a little confusing, since these terms are often used interchangeably, so let's look at an example using a puzzle.
+
+When you're completing a puzzle, you normally look at the completed picture on the box and then put the pieces together to match the picture. If you wanted to disguise the puzzle from prying eyes, you could use cryptography. In this case, you could encrypt the puzzle by flipping all the pieces over and scrambling them up, so no one can see the images printed on the puzzle pieces. Then, to allow you or anyone else to put the puzzle together, you'll need a method that's only given out to certain people. That's the cipher. We'll used a numbered cipher here. Using that cipher, anyone would be able to put the puzzle together.
+
+Caesar Cipher 01:41-02:07
+
+One of the most common encryption ciphers is the Caesar cipher.
+
+This cipher was created by Julius Caesar. When he wanted to sent a secret message, Caesar would shift each letter down the alphabet by three places. Then he could safely send the message to his commanders because anyone who intercepted the message couldn't read it anyway. Since only the commanders knew the cipher was to shift the letters up the alphabet by three, only they could read it.
+
+Cryptography Concepts 02:07-02:19
+
+Today, encryption is much more advanced than the Caesar cipher. You'll hear a lot about encryption keys, hashes, and digital signatures. To understand modern encryption, you need to understand these concepts.
+
+Encryption Keys 02:19-03:05
+
+Let's talk about encryption keys first. We install locks on our doors to keep our homes safe. These locks require a specific key. Encryption works using the same concept. When we want to encrypt data, we use an encryption key. Encryption keys are random strings of bits that are used to lock and unlock data. These keys are generated using ciphers, such as the Advanced Encryption Standard, or AES. They ensure each key is unique and difficult to crack.
+
+There are two types of encryption methods, symmetric and asymmetric. Symmetric encryption uses the same key to encrypt and decrypt data. Asymmetric encryption uses one key to encrypt and then a different key to decrypt. These are referred to as public and private keys.
+
+Hashing 03:05-03:49
+
+When you're working with these encryption methods, different techniques are used to help safeguard your data. One technique is known as hashing.
+
+Hashing is the process of converting one value into another using a mathematical algorithm like MD5 or SHA. Hashes have several characteristics that make them very useful. For example, hashes are deterministic, meaning that the same data being hashed always results in the same hash value. Hashes can also be created very quickly and cannot be decrypted. Likewise, it's infeasible to find two messages with the same hash value. Even a small change to a message will change the hash value so extensively that the new hash value appears uncorrelated with the old hash value.
+
+Hash Applications 03:49-04:11
+
+Because of these features, hashes are used in many applications.
+
+A hash function is often used to verify passwords. Since storing or transmitting passwords in cleartext could result in a massive security breach, most systems only store the hash of the password. When a user needs to be authenticated, the password entered by the user is hashed and compared with the stored hash.
+
+Salting the Hash 04:11-05:31
+
+One of the problems with using hashed passwords is that several online sites have collected massive databases containing a hash for tens of million of possible passwords. Once a hash has been captured, it can be compared with the hashes found in the database, quickly resulting in the password used to create the hash. To keep this from happening, most hashes also incorporate something called a salt.
+
+Salting the hash means adding a random number of characters to the password before the hash is created. For example, if this is the password to be hashed, a salt such as this may be added. This becomes the string to be hashed. Since the salt is randomly generated each time, even if the same password is used and can be varying lengths, it's virtually impossible to create a database containing all the possible salted passwords.
+
+Hashes are also used to verify that a document hasn't been corrupted or tampered with by creating a hash for the document. When the same hash algorithm is calculated at the receiving end, the hashes should match. If not, then the data was either corrupted or tampered with during transmission and should not be trusted. In a similar fashion, hashes are also used to digitally verify a signature, like when you digitally sign an important document using the internet. In this case, only the signature is hashed instead of the entire document.
+
+Cryptology Methods 05:31-06:04
+
+While there are many different cryptography methods that can be used to secure data, one of the most powerful methods used today is Elliptic Curve Cryptology, or ECC. Many websites use this method to secure connections and the data they send back and forth.
+
+To truly understand ECC and how it works would require us to dive into some really complicated math that's beyond the scope of this lesson. For now, you just need to know that this method is the next generation of cryptology, and the algorithm used can generate smaller keys that are more secure than other cryptology methods.
+
+Steganography 06:04-06:39
+
+The last encryption technique we'll discuss is call steganography. Steganography is the technique of hiding or concealing a file, message, image, or video within another file, message, image, or video. If you've ever used invisible ink to write a hidden message, you've used steganography.
+
+One method of steganography is to use a special program to hide a message in another file, such as this image. When the recipient receives the image, they can use the same software to find the hidden message. If the file is intercepted by a hacker, all they'll see is the image.
+
+Summary 06:39-07:00
+
+That's it for this lesson. In this lesson, we discussed what cryptography is and how encryption and ciphers are used. We covered the key concepts of cryptography, including encryption keys, hashes, and digital signatures.
+
+And then we looked at a few cryptology methods, including hashing, elliptical curve cryptology, and steganography.

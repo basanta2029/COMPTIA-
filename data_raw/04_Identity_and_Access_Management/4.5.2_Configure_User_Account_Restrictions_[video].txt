@@ -1,0 +1,56 @@
+Click one of the buttons to take you to that part of the video.
+
+
+Configure User Account Restrictions 00:00-00:29
+
+In this demonstration, we'll look at hardening a Windows workstation by configuring user account restrictions. By setting these restrictions in a domain, they will always be applied, even if the user logs in from a different system, or if a different user logs into system.
+
+Let's begin by opening Active Directory Users and Computers. Let's drill down into the Employees OU so we can see our users.
+
+Harden an Account 00:29-01:04
+
+First, we need to do several things to harden these accounts. Let's choose the temporary employee, Daniel Jackson. There are several things we can do to harden his account, specifically because he's a temporary employee.
+
+This user works Monday through Friday from 8:00 in the morning until 5:00 at night. We need to restrict the user's logon hours and days to the times he is working. Also, because the user is a temporary employee, we should configure the account to expire automatically when the employment term expires.
+
+We want to disable the account automatically in case we forget to manually disable it.
+
+Select Login Hours and Days 01:04-01:58
+
+First, let's go into Account settings > Logon Hours. Everything that is highlighted in blue is a permitted logon block or hour.
+
+You can see the days here, Sunday through Saturday, and anything highlighted in white will be logon denied. In this case, we want to limit logon to Monday through Friday, 8:00 a.m. through 5:00 p.m. If we select Saturday and select Logon Denied, it denies logon for the whole day. It whites it all out. We'll select Sunday, as well.
+
+We'll select all the days from midnight 8:00 a.m and disable those. Then we'll go from here to 5:00 p.m to midnight and disable those hours. Now he only has login permitted from 8 a.m. to 5 p.m. Monday through Friday. We click OK, and that applies the restriction.
+
+Set Account Expiration 01:58-02:32
+
+We also need to set the account expiration. You can see it's set to Never. We want to change this. Let's say this account will expire at the end of the year. We'll click December 31. We'll click Apply. Click OK.
+
+Now Daniel Jackson's account will automatically deny him access unless he's logging in Monday through Friday, 8:00 a.m. to 5:00 p.m. The account will be disabled automatically on December 31, at the end of the day.
+
+Disable / enable account 02:32-03:04
+
+Also, in this OU, we have an employee who's on extended leave.
+
+Samantha Carter has been out on maternity leave, so her account is disabled. We did not delete her account because we are expecting her to come back to work, and we don't want to have to recreate all her permissions when she returns. Samantha is returning tomorrow, so let's re-enable her account.
+
+To do this, come up here and right-click the account, and enable account. Notice that the little black arrow on the user icon disappeared – that means the account is now enabled again.
+
+Restrict to a Computer 03:04-04:00
+
+The last thing we want to do in this demonstration is restrict a user to a particular computer on the network. The user will be allowed to log on only from that system. Let's say the user, Samantha Carter, is allowed to log in only on the lab computer.
+
+Let's go to Properties. We'll go to Account and click Log On To... As you can see here, the user can currently log in to all computers on the domain. We don't want that because the user should only be in the lab.
+
+We'll set it manually. Here, you type in the computer name after selecting the following computers. You type in the computer's net bios, domain name, or DNS name.
+
+Let's type in 'LabComputer' and click Add. Notice this is the only computer listed now for the user. So, this is the only computer the user can log in to.
+
+You can add more than one computer. Let's click OK. Now this user can log in only to that lab computer.
+
+Summary 04:00-04:22
+
+That's it for this demonstration. In this demonstration, we showed you how to configure user account restrictions. We first looked at how to restrict login times for a given user account.
+
+We disabled and enabled user accounts. We set an expiration date for an account. Then we ended the demonstration by configuring a user account to use a specific computer in the network.

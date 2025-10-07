@@ -1,0 +1,196 @@
+{
+  "chapter": "02_Threats_Vulnerabilities_and_Mitigations",
+  "total_documents": 19,
+  "documents": [
+    {
+      "chapter_num": "2",
+      "section_num": "2.1.1",
+      "title": "Threat Actor Types",
+      "content_type": "video",
+      "filename": "2.1.1_Threat_Actor_Types_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/02_Threats_Vulnerabilities_and_Mitigations/2.1.1_Threat_Actor_Types_[video].txt",
+      "word_count": 1115,
+      "has_content": true
+    },
+    {
+      "chapter_num": "2",
+      "section_num": "2.1.2",
+      "title": "Threat Actor Types Facts",
+      "content_type": "text",
+      "filename": "2.1.2_Threat_Actor_Types_Facts_[text].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/02_Threats_Vulnerabilities_and_Mitigations/2.1.2_Threat_Actor_Types_Facts_[text].txt",
+      "word_count": 3381,
+      "has_content": true
+    },
+    {
+      "chapter_num": "2",
+      "section_num": "2.1.3",
+      "title": "General Attack Strategy",
+      "content_type": "video",
+      "filename": "2.1.3_General_Attack_Strategy_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/02_Threats_Vulnerabilities_and_Mitigations/2.1.3_General_Attack_Strategy_[video].txt",
+      "word_count": 1083,
+      "has_content": true
+    },
+    {
+      "chapter_num": "2",
+      "section_num": "2.1.4",
+      "title": "General Defense Strategy",
+      "content_type": "video",
+      "filename": "2.1.4_General_Defense_Strategy_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/02_Threats_Vulnerabilities_and_Mitigations/2.1.4_General_Defense_Strategy_[video].txt",
+      "word_count": 1400,
+      "has_content": true
+    },
+    {
+      "chapter_num": "2",
+      "section_num": "2.1.5",
+      "title": "Attack and Defense Strategy Overview",
+      "content_type": "text",
+      "filename": "2.1.5_Attack_and_Defense_Strategy_Overview_[text].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/02_Threats_Vulnerabilities_and_Mitigations/2.1.5_Attack_and_Defense_Strategy_Overview_[text].txt",
+      "word_count": 446,
+      "has_content": true
+    },
+    {
+      "chapter_num": "2",
+      "section_num": "2.1.6",
+      "title": "Attack Surfaces",
+      "content_type": "video",
+      "filename": "2.1.6_Attack_Surfaces_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/02_Threats_Vulnerabilities_and_Mitigations/2.1.6_Attack_Surfaces_[video].txt",
+      "word_count": 1236,
+      "has_content": true
+    },
+    {
+      "chapter_num": "2",
+      "section_num": "2.1.7",
+      "title": "Attack Surfaces Facts",
+      "content_type": "text",
+      "filename": "2.1.7_Attack_Surfaces_Facts_[text].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/02_Threats_Vulnerabilities_and_Mitigations/2.1.7_Attack_Surfaces_Facts_[text].txt",
+      "word_count": 2849,
+      "has_content": true
+    },
+    {
+      "chapter_num": "2",
+      "section_num": "2.2.1",
+      "title": "Social Engineering Overview",
+      "content_type": "video",
+      "filename": "2.2.1_Social_Engineering_Overview_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/02_Threats_Vulnerabilities_and_Mitigations/2.2.1_Social_Engineering_Overview_[video].txt",
+      "word_count": 746,
+      "has_content": true
+    },
+    {
+      "chapter_num": "2",
+      "section_num": "2.2.2",
+      "title": "Social Engineering Overview Facts",
+      "content_type": "text",
+      "filename": "2.2.2_Social_Engineering_Overview_Facts_[text].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/02_Threats_Vulnerabilities_and_Mitigations/2.2.2_Social_Engineering_Overview_Facts_[text].txt",
+      "word_count": 1281,
+      "has_content": true
+    },
+    {
+      "chapter_num": "2",
+      "section_num": "2.2.3",
+      "title": "Social Engineering Techniques",
+      "content_type": "video",
+      "filename": "2.2.3_Social_Engineering_Techniques_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/02_Threats_Vulnerabilities_and_Mitigations/2.2.3_Social_Engineering_Techniques_[video].txt",
+      "word_count": 956,
+      "has_content": true
+    },
+    {
+      "chapter_num": "2",
+      "section_num": "2.2.4",
+      "title": "Social Engineering Techniques Facts",
+      "content_type": "text",
+      "filename": "2.2.4_Social_Engineering_Techniques_Facts_[text].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/02_Threats_Vulnerabilities_and_Mitigations/2.2.4_Social_Engineering_Techniques_Facts_[text].txt",
+      "word_count": 1558,
+      "has_content": true
+    },
+    {
+      "chapter_num": "2",
+      "section_num": "2.2.5",
+      "title": "Use the Social Engineer Toolkit",
+      "content_type": "video",
+      "filename": "2.2.5_Use_the_Social_Engineer_Toolkit_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/02_Threats_Vulnerabilities_and_Mitigations/2.2.5_Use_the_Social_Engineer_Toolkit_[video].txt",
+      "word_count": 860,
+      "has_content": true
+    },
+    {
+      "chapter_num": "2",
+      "section_num": "2.2.6",
+      "title": "Investigating a Social Engineering Attack",
+      "content_type": "video",
+      "filename": "2.2.6_Investigating_a_Social_Engineering_Attack_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/02_Threats_Vulnerabilities_and_Mitigations/2.2.6_Investigating_a_Social_Engineering_Attack_[video].txt",
+      "word_count": 1194,
+      "has_content": true
+    },
+    {
+      "chapter_num": "2",
+      "section_num": "2.3.1",
+      "title": "Malware",
+      "content_type": "video",
+      "filename": "2.3.1_Malware_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/02_Threats_Vulnerabilities_and_Mitigations/2.3.1_Malware_[video].txt",
+      "word_count": 1014,
+      "has_content": true
+    },
+    {
+      "chapter_num": "2",
+      "section_num": "2.3.2",
+      "title": "Malware Facts",
+      "content_type": "text",
+      "filename": "2.3.2_Malware_Facts_[text].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/02_Threats_Vulnerabilities_and_Mitigations/2.3.2_Malware_Facts_[text].txt",
+      "word_count": 2990,
+      "has_content": true
+    },
+    {
+      "chapter_num": "2",
+      "section_num": "2.3.3",
+      "title": "Malware Protection Facts",
+      "content_type": "text",
+      "filename": "2.3.3_Malware_Protection_Facts_[text].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/02_Threats_Vulnerabilities_and_Mitigations/2.3.3_Malware_Protection_Facts_[text].txt",
+      "word_count": 592,
+      "has_content": true
+    },
+    {
+      "chapter_num": "2",
+      "section_num": "2.3.4",
+      "title": "Implementing Malware Protections",
+      "content_type": "video",
+      "filename": "2.3.4_Implementing_Malware_Protections_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/02_Threats_Vulnerabilities_and_Mitigations/2.3.4_Implementing_Malware_Protections_[video].txt",
+      "word_count": 1064,
+      "has_content": true
+    },
+    {
+      "chapter_num": "2",
+      "section_num": "2.3.5",
+      "title": "Use Windows Security",
+      "content_type": "video",
+      "filename": "2.3.5_Use_Windows_Security_[video].txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/02_Threats_Vulnerabilities_and_Mitigations/2.3.5_Use_Windows_Security_[video].txt",
+      "word_count": 819,
+      "has_content": true
+    },
+    {
+      "chapter_num": "2",
+      "section_num": "2.0",
+      "title": "Introduction",
+      "content_type": "chapter_intro",
+      "filename": "Chapter_2.0_Introduction.txt",
+      "file_path": "/Users/basantabaral/CompTia/data_raw/02_Threats_Vulnerabilities_and_Mitigations/Chapter_2.0_Introduction.txt",
+      "word_count": 216,
+      "has_content": true
+    }
+  ]
+}
