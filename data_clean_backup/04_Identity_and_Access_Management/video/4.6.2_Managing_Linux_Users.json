@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "chapter_num": "4",
+    "section_num": "4.6.2",
+    "title": "Managing Linux Users",
+    "content_type": "video",
+    "filename": "4.6.2_Managing_Linux_Users_[video].txt",
+    "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.6.2_Managing_Linux_Users_[video].txt",
+    "word_count": 1319,
+    "has_content": true
+  },
+  "full_content": "In this demonstration, we're going to talk about managing Linux user accounts. As a Linux administrator, there will be times when you have to add, remove, or modify user accounts. Let's begin by looking at the User Add utility. As a root user, you type ‘useradd' followed by any options you might want and then the username. It's important to note that if you create a user in the shell prompt with useradd, it will automatically use the default values contained and the /etc/default/user add file. Let's look at that file right now with 'less /etc/default/useradd'. Notice that the useradd commands use the default values. First, look at the default home directory, specified as the /home directory. That's where the user's default profile, or default directory, will be created. There's no expiration date set by default for the account. The shell is bin/bash, and the skeleton file is etc/skel. This is useful if you have specific files or folders that you want to be in each new user's home directory. You can simply place them in the skeleton directory, and then they're automatically created in the new user's home directory. We can see here, at the bottom, that a mail spool for the user account will also be created. You can go into this file using the VI editor and change these default values if you need to. For example, if you want the home directory to be in a different location by default, you can set that default by typing ‘useradd -D' at the shell prompt. You need to also be aware that the less /etc/login.defs file is used to configure the values that can be used for the group ID and the user ID. If we hit Enter and scroll down, we can see here that the values for the group ID and the user ID are specified, so you can see the minimum value for the user ID on this Linux version is 1000. Also, for the group ID, the minimum is set to 1000. Let's exit out of that. Now let's talk about useradd. Like I said before, you can override the default values using command line options. We'll take a look at the man page for useradd, ‘man useradd'. This will show you all the available options for the useradd command. A few examples are -c to specify a comment for the user's full name, -g (lowercase) to add a single primary group, and -G (uppercase) to add supplementary groups separated by commas. Let's look at an example. Suppose we want to create a user named ksanders whose full name is Kim Sanders. We want to create a home directory, and we want to specify the user's name as we create the account. Let's go ahead and type in 'sudo useradd'. Now we want to use the -c option to specify the user's full name. We're going to put in ‘\"Kim Sanders\"' in quotes. Then we're going to use the ‘-m' option to create the user's home directory and specify the username as ‘ksanders'. Press Enter. After suppling the sudo password to add the account, we can verify that was created by looking at our etc/passwd file. If we scroll down, we can see a few things here. You can see the group and user ID, 1002, 1002.We can see the full name, Kim Sanders, and we can also see the ksanders folder within the home directory. ksanders doesn't have a password yet. On Linux, if the user account doesn't have a password, then the password is locked. We can verify this by typing in 'sudo passwd -S' followed by the username, 'ksanders'. Now we can see this LK, which tells us that the account is locked. So, before the user can log in, we have to enable the account by adding a password. We need to type 'sudo passwd' followed by the user account, 'ksanders'. Hit Enter. It wants us to create a password. We're going to type '1234' just for now. This is just a test account, so that password is fine. Retype the password, '1234'. We get a warning about the password length, but the password updates successfully. Now we want to verify that, so we're going to retype ‘sudo passwd-S ksanders'. You can see now that this has changed to a PS from an LK. That indicates that a password has been unlocked and is now set up for this account. Now this user can actually log in to this profile. From time to time, you may need to modify an existing user. This is done with the usermod command. usermod's options are pretty much the same as useradd's. For example, let's say we entered the wrong full name for the ksanders account. Her name is actually Kimberly. We can go ahead and change this by typing 'sudo usermod - c' and then putting the correct name, 'Kimberly Sanders', closed single quotations, and then the user account, 'ksanders'. Now we want to verify those changes. We're going to go to 'less /etc/passwd' and scroll to the bottom. We can see that 'Kim Sanders' has actually changed to 'Kimberly Sanders'. You can use other options with the usermod command to change user account information, such as the username itself, the user ID, the default group, and the home directory. The last thing we want to look at is the user delete, or userdel, command. This command is used to remove an account. We're going to remove the ksanders account. There's only one option we can use with userdel, and that's the -r option. By default, if you don't use the -r option, the userdel command won't delete the user's home directory from the file system. This is because there might be intellectual property in that directory that you need to keep, even if you delete the user account. But if you do want to delete the home directory along with the user account, you can use the -r option. Let's go ahead and type this in, 'sudo userdel ksanders -r'. We're not going to hit Enter just yet because I want to show you another way of adding and maintaining user accounts. Sometimes, depending on the distribution, you can actually do this through a GUI or graphical user interface within Linux. Some Linux systems have them, and some don't. Sometimes you can download them. This system already has one. Let's go ahead and click on the dropdown by the power button and click Settings. Scroll down to Details and click Users. Here's our Kim Sanders account. It looks like the name didn't update to Kimberly in the GUI, but we do know it changed because we just saw that in the command line. If I were to unlock this, I could go in and manage this account. Here, I can do things such change the account type or reset the password. It'll show me my login history as well. I'm not actually going to do anything from here, but I did want to show you that because I want to show you how the account is actually removed. If I go ahead and I run this command, now the user is deleted. If we go back and look at the ‘/etc/passwd' file and scroll down, you can see the account is deleted. That's it for this demonstration. In this demo, we talked about managing Linux users using the shell prompt. We looked at the useradd command, the usermod command, the passwd command, and the userdel command. We also looked at the graphic interface that some Linux systems will use, and we looked at other options for each command.",
+  "chunks": [
+    {
+      "chunk_id": "4.6.2_chunk_1",
+      "content": "In this demonstration, we're going to talk about managing Linux user accounts. As a Linux administrator, there will be times when you have to add, remove, or modify user accounts. Let's begin by looking at the User Add utility. As a root user, you type ‘useradd' followed by any options you might want and then the username. It's important to note that if you create a user in the shell prompt with useradd, it will automatically use the default values contained and the /etc/default/user add file.",
+      "summary": "Managing Linux Users: In this demonstration, we're going to talk about managing Linux user accounts. As a Linux administrator, there will be times when you have to add, remove, or modify user accounts.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.6.2",
+        "title": "Managing Linux Users",
+        "content_type": "video",
+        "filename": "4.6.2_Managing_Linux_Users_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.6.2_Managing_Linux_Users_[video].txt",
+        "word_count": 1319,
+        "has_content": true
+      },
+      "section_header": "Managing Linux Users",
+      "timestamp_range": "00:00-00:34"
+    },
+    {
+      "chunk_id": "4.6.2_chunk_2",
+      "content": "Let's look at that file right now with 'less /etc/default/useradd'. Notice that the useradd commands use the default values. First, look at the default home directory, specified as the /home directory. That's where the user's default profile, or default directory, will be created. There's no expiration date set by default for the account. The shell is bin/bash, and the skeleton file is etc/skel. This is useful if you have specific files or folders that you want to be in each new user's home directory. You can simply place them in the skeleton directory, and then they're automatically created in the new user's home directory. We can see here, at the bottom, that a mail spool for the user account will also be created. You can go into this file using the VI editor and change these default values if you need to. For example, if you want the home directory to be in a different location by default, you can set that default by typing ‘useradd -D' at the shell prompt. You need to also be aware that the less /etc/login.defs file is used to configure the values that can be used for the group ID and the user ID. If we hit Enter and scroll down, we can see here that the values for the group ID and the user ID are specified, so you can see the minimum value for the user ID on this Linux version is 1000. Also, for the group ID, the minimum is set to 1000. Let's exit out of that.",
+      "summary": "Create a User Account: Let's look at that file right now with 'less /etc/default/useradd'. First, look at the default home directory, specified as the /home directory.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.6.2",
+        "title": "Managing Linux Users",
+        "content_type": "video",
+        "filename": "4.6.2_Managing_Linux_Users_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.6.2_Managing_Linux_Users_[video].txt",
+        "word_count": 1319,
+        "has_content": true
+      },
+      "section_header": "Create a User Account",
+      "timestamp_range": "00:34-02:02"
+    },
+    {
+      "chunk_id": "4.6.2_chunk_3",
+      "content": "Now let's talk about useradd. Like I said before, you can override the default values using command line options. We'll take a look at the man page for useradd, ‘man useradd'. This will show you all the available options for the useradd command. A few examples are -c to specify a comment for the user's full name, -g (lowercase) to add a single primary group, and -G (uppercase) to add supplementary groups separated by commas. Let's look at an example. Suppose we want to create a user named ksanders whose full name is Kim Sanders. We want to create a home directory, and we want to specify the user's name as we create the account. Let's go ahead and type in 'sudo useradd'. Now we want to use the -c option to specify the user's full name. We're going to put in ‘\"Kim Sanders\"' in quotes. Then we're going to use the ‘-m' option to create the user's home directory and specify the username as ‘ksanders'. Press Enter. After suppling the sudo password to add the account, we can verify that was created by looking at our etc/passwd file. If we scroll down, we can see a few things here. You can see the group and user ID, 1002, 1002.We can see the full name, Kim Sanders, and we can also see the ksanders folder within the home directory.",
+      "summary": "UserAdd Command: Like I said before, you can override the default values using command line options. We'll take a look at the man page for useradd, ‘man useradd'.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.6.2",
+        "title": "Managing Linux Users",
+        "content_type": "video",
+        "filename": "4.6.2_Managing_Linux_Users_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.6.2_Managing_Linux_Users_[video].txt",
+        "word_count": 1319,
+        "has_content": true
+      },
+      "section_header": "UserAdd Command",
+      "timestamp_range": "02:02-03:29"
+    },
+    {
+      "chunk_id": "4.6.2_chunk_4",
+      "content": "ksanders doesn't have a password yet. On Linux, if the user account doesn't have a password, then the password is locked. We can verify this by typing in 'sudo passwd -S' followed by the username, 'ksanders'. Now we can see this LK, which tells us that the account is locked. So, before the user can log in, we have to enable the account by adding a password. We need to type 'sudo passwd' followed by the user account, 'ksanders'. Hit Enter. It wants us to create a password. We're going to type '1234' just for now. This is just a test account, so that password is fine. Retype the password, '1234'. We get a warning about the password length, but the password updates successfully. Now we want to verify that, so we're going to retype ‘sudo passwd-S ksanders'. You can see now that this has changed to a PS from an LK. That indicates that a password has been unlocked and is now set up for this account. Now this user can actually log in to this profile.",
+      "summary": "Add Passwords to User Accounts: On Linux, if the user account doesn't have a password, then the password is locked. We can verify this by typing in 'sudo passwd -S' followed by the username, 'ksanders'.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.6.2",
+        "title": "Managing Linux Users",
+        "content_type": "video",
+        "filename": "4.6.2_Managing_Linux_Users_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.6.2_Managing_Linux_Users_[video].txt",
+        "word_count": 1319,
+        "has_content": true
+      },
+      "section_header": "Add Passwords to User Accounts",
+      "timestamp_range": "03:29-04:40"
+    },
+    {
+      "chunk_id": "4.6.2_chunk_5",
+      "content": "From time to time, you may need to modify an existing user. This is done with the usermod command. usermod's options are pretty much the same as useradd's. For example, let's say we entered the wrong full name for the ksanders account. Her name is actually Kimberly. We can go ahead and change this by typing 'sudo usermod - c' and then putting the correct name, 'Kimberly Sanders', closed single quotations, and then the user account, 'ksanders'. Now we want to verify those changes. We're going to go to 'less /etc/passwd' and scroll to the bottom. We can see that 'Kim Sanders' has actually changed to 'Kimberly Sanders'. You can use other options with the usermod command to change user account information, such as the username itself, the user ID, the default group, and the home directory.",
+      "summary": "Modify User Accounts: From time to time, you may need to modify an existing user. For example, let's say we entered the wrong full name for the ksanders account.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.6.2",
+        "title": "Managing Linux Users",
+        "content_type": "video",
+        "filename": "4.6.2_Managing_Linux_Users_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.6.2_Managing_Linux_Users_[video].txt",
+        "word_count": 1319,
+        "has_content": true
+      },
+      "section_header": "Modify User Accounts",
+      "timestamp_range": "04:40-05:38"
+    },
+    {
+      "chunk_id": "4.6.2_chunk_6",
+      "content": "The last thing we want to look at is the user delete, or userdel, command. This command is used to remove an account. We're going to remove the ksanders account. There's only one option we can use with userdel, and that's the -r option. By default, if you don't use the -r option, the userdel command won't delete the user's home directory from the file system. This is because there might be intellectual property in that directory that you need to keep, even if you delete the user account. But if you do want to delete the home directory along with the user account, you can use the -r option. Let's go ahead and type this in, 'sudo userdel ksanders -r'. We're not going to hit Enter just yet because I want to show you another way of adding and maintaining user accounts. Sometimes, depending on the distribution, you can actually do this through a GUI or graphical user interface within Linux. Some Linux systems have them, and some don't. Sometimes you can download them. This system already has one. Let's go ahead and click on the dropdown by the power button and click Settings. Scroll down to Details and click Users. Here's our Kim Sanders account. It looks like the name didn't update to Kimberly in the GUI, but we do know it changed because we just saw that in the command line. If I were to unlock this, I could go in and manage this account. Here, I can do things such change the account type or reset the password. It'll show me my login history as well. I'm not actually going to do anything from here, but I did want to show you that because I want to show you how the account is actually removed. If I go ahead and I run this command, now the user is deleted. If we go back and look at the ‘/etc/passwd' file and scroll down, you can see the account is deleted.",
+      "summary": "Delete a User Account: The last thing we want to look at is the user delete, or userdel, command. There's only one option we can use with userdel, and that's the -r option.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.6.2",
+        "title": "Managing Linux Users",
+        "content_type": "video",
+        "filename": "4.6.2_Managing_Linux_Users_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.6.2_Managing_Linux_Users_[video].txt",
+        "word_count": 1319,
+        "has_content": true
+      },
+      "section_header": "Delete a User Account",
+      "timestamp_range": "05:38-07:34"
+    },
+    {
+      "chunk_id": "4.6.2_chunk_7",
+      "content": "That's it for this demonstration. In this demo, we talked about managing Linux users using the shell prompt. We looked at the useradd command, the usermod command, the passwd command, and the userdel command. We also looked at the graphic interface that some Linux systems will use, and we looked at other options for each command.",
+      "summary": "In this demo, we talked about managing Linux users using the shell prompt. We looked at the useradd command, the usermod command, the passwd command, and the userdel command.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.6.2",
+        "title": "Managing Linux Users",
+        "content_type": "video",
+        "filename": "4.6.2_Managing_Linux_Users_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.6.2_Managing_Linux_Users_[video].txt",
+        "word_count": 1319,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": "07:34-07:57"
+    }
+  ],
+  "num_chunks": 7,
+  "document_summary": "Managing Linux Users (video): In this demonstration, we're going to talk about managing Linux user accounts. As a Linux administrator, there will be times when you have to add, remove, or modify user accounts. As a root user, you type ‘useradd' followed by any options you might want and then the username."
+}

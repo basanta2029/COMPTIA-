@@ -1,0 +1,45 @@
+{
+  "chapters": {
+    "01_Security_Concepts": {
+      "total_files": 9,
+      "valid_files": 9,
+      "total_chunks": 54,
+      "total_words": 9289,
+      "video_files": 6,
+      "text_files": 3,
+      "issues": []
+    },
+    "02_Threats_Vulnerabilities_and_Mitigations": {
+      "total_files": 19,
+      "valid_files": 19,
+      "total_chunks": 121,
+      "total_words": 24171,
+      "video_files": 11,
+      "text_files": 8,
+      "issues": []
+    },
+    "03_Cryptographic_Solutions": {
+      "total_files": 34,
+      "valid_files": 34,
+      "total_chunks": 229,
+      "total_words": 34048,
+      "video_files": 22,
+      "text_files": 12,
+      "issues": []
+    },
+    "04_Identity_and_Access_Management": {
+      "total_files": 50,
+      "valid_files": 50,
+      "total_chunks": 297,
+      "total_words": 51910,
+      "video_files": 31,
+      "text_files": 19,
+      "issues": []
+    }
+  },
+  "total_documents": 112,
+  "total_chunks": 701,
+  "total_summaries": 0,
+  "issues": [],
+  "statistics": {}
+}

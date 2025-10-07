@@ -14,7 +14,7 @@
     {
       "chunk_id": "4.2.7_chunk_1",
       "content": "In this demo, we're going to look at single sign-on, or SSO. Now, before we begin, I want to point out that you've probably used single sign-on without even knowing it. In fact, if you have a Gmail or Facebook account, then you've definitely used single sign-on. And if you've ever logged into a Windows domain on a computer, you've used single sign-on there too. Single sign-on is an authentication method that requires you to log in only once to have access to a wide range of services. In a domain, these services include things like file servers and print servers. When you log in, you can access the file server without providing authentication credentials again. It's really nice. Now, we aren't going to see single sign-on with a domain in this demo. Instead, we're going to look at single sign-on with Google internet services.",
-      "summary": "Using Single Sign-on: Single sign-on is an authentication method that requires you to log in only once to have access to a wide range of services. When you log in, you can access the file server without providing authentication credentials again.",
+      "summary": "Single Sign-On (SSO) is an authentication method that allows users to access multiple services and resources with a single login credential, eliminating the need to re-authenticate for each system. Common implementations include Windows domain authentication for accessing file and print servers, and web-based SSO services like Google and Facebook that enable access to multiple applications. SSO improves user experience while centralizing authentication management, though it requires careful security consideration since one compromised credential can grant access to all connected services.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.7",
@@ -31,7 +31,7 @@
     {
       "chunk_id": "4.2.7_chunk_2",
       "content": "Let's start by logging in to a google account. You're probably familiar with Google's email service, Gmail. Let's go to gmail.com and enter our login information. We've logged into Gmail. Because we logged into our single Gmail account, now we have access to all of these Googles services without needing to provide authentication credentials again. There are a lot of them. All of these services fall under the single sign-on of Google. For example, let's click the YouTube icon, which will take us to YouTube's page. In the top right here, notice that we're automatically signed in. We didn't need to type our username or password. This is because YouTube is connected with Google, which uses a single sign-on service. The same is true for other Google services. If we go back and click on Google Drive, we have access to that as well. No need to log in.",
-      "summary": "SSO with Google: Because we logged into our single Gmail account, now we have access to all of these Googles services without needing to provide authentication credentials again. If we go back and click on Google Drive, we have access to that as well.",
+      "summary": "Single Sign-On (SSO) allows users to authenticate once and gain access to multiple connected services without re-entering credentials, as demonstrated by Google's ecosystem where logging into Gmail automatically provides access to YouTube, Google Drive, and other Google services. This authentication method improves user experience by eliminating repeated login prompts while maintaining security through centralized credential management across integrated applications.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.7",
@@ -48,7 +48,7 @@
     {
       "chunk_id": "4.2.7_chunk_3",
       "content": "Let's search LinkedIn in Google. Click Join Now. Notice here, instead of creating an account with LinkedIn directly, we can create an account with Google. This creates a single sign-on link of sorts between LinkedIn and Google that makes it so when we're logged in on Google, we're also logged in on LinkedIn.",
-      "summary": "Linkedin and Google Single Sign On: Notice here, instead of creating an account with LinkedIn directly, we can create an account with Google. This creates a single sign-on link of sorts between LinkedIn and Google that makes it so when we're logged in on Google, we're also logged in on LinkedIn.",
+      "summary": "Single Sign-On (SSO) enables users to authenticate once with one service (like Google) and automatically gain access to linked services (like LinkedIn) without separate login credentials. This federated authentication method reduces password fatigue and streamlines user access management across multiple platforms. SSO implementations create trust relationships between identity providers and service providers to facilitate seamless authentication flows.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.7",
@@ -65,7 +65,7 @@
     {
       "chunk_id": "4.2.7_chunk_4",
       "content": "Let's try another. Let's go to wordpress.com. Click Log In and look down here. Instead of creating an account, we can link our Google account by clicking Continue with Google. When we do, we're asked which account to link. We only have one, so I'll click on it. And now, after we wait a minute or two, an account will be created, and we're logged in to the service without needing to provide our password. Again, this is because of the single sign-on functionality that's been implemented between WordPress and Google.",
-      "summary": "Enable SSO on an Account: Instead of creating an account, we can link our Google account by clicking Continue with Google. And now, after we wait a minute or two, an account will be created, and we're logged in to the service without needing to provide our password.",
+      "summary": "Single Sign-On (SSO) enables users to authenticate to multiple services using one set of credentials, as demonstrated by WordPress.com's \"Continue with Google\" feature that creates and accesses accounts without requiring separate passwords. This SSO implementation allows seamless authentication between WordPress and Google services by linking user accounts and eliminating the need for multiple credential sets. SSO reduces password fatigue while centralizing authentication through trusted identity providers like Google.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.7",
@@ -82,7 +82,7 @@
     {
       "chunk_id": "4.2.7_chunk_5",
       "content": "Now, because everything is linked to our Google account, when we log out of it, we're also logged out of those services. Let's do that. We'll log out of Gmail. The page will refresh, and we're asked to log in. So, what happened with Wordpress? Let's go back and look. I'll type ‘wordpress.com' and press Enter. Back on WordPress, we're still logged in. This is probably because of how the session cookies are handled. We know we're logged out of Google, so let's log out of WordPress. I'm taken back to the logon page. Click Sign in. We're taken back to the Log in to your account page. I'll click Sign in with Google. Notice my account info here. My password is automatically populated. I'll click Next. After just a few seconds, I'm logged back into WordPress. Now, guess what else happened? We were actually logging into our Google account again. If I jump back over to my Gmail account, you can see that I was logged back into there, too.",
-      "summary": "Sign Out: Now, because everything is linked to our Google account, when we log out of it, we're also logged out of those services. The page will refresh, and we're asked to log in.",
+      "summary": "Single Sign-On (SSO) logout behavior demonstrates that logging out of one service may not automatically terminate sessions across all connected applications due to session cookie handling differences. When re-authenticating through SSO, users gain access to both the target application and the identity provider simultaneously, creating potential security implications for session management. Organizations must understand that SSO logout processes require careful implementation to ensure complete session termination across all integrated services.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.7",
@@ -99,7 +99,7 @@
     {
       "chunk_id": "4.2.7_chunk_6",
       "content": "As you can see, single sign-on can be extremely useful and convenient. However, as we know all too well, convenience comes with risk. For example, using single sign-on presents the risk that if someone were to compromise a single account, they could potentially have access to any service that has been linked to that account. One thing that can protect against this is multi-factor authentication, such as requiring a one-time key to access different services. That's it for this demonstration. In this demo, we looked at single sign-on. We looked at a few different single sign-on features and how a single account can be used to access multiple services.",
-      "summary": "However, as we know all too well, convenience comes with risk. One thing that can protect against this is multi-factor authentication, such as requiring a one-time key to access different services.",
+      "summary": "Single sign-on (SSO) provides convenient access to multiple services through one account but creates security risk where compromising a single account grants access to all linked services. Multi-factor authentication, such as one-time keys, serves as a critical security control to mitigate SSO account compromise risks. SSO implementations require balancing user convenience with robust authentication mechanisms to protect against unauthorized access across connected systems.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.7",

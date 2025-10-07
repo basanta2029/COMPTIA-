@@ -1,0 +1,19 @@
+{
+  "model": "claude-sonnet-4-20250514",
+  "timestamp": "2025-10-06 23:19:23",
+  "statistics": {
+    "chunks_processed": 672,
+    "documents_processed": 108,
+    "total_input_tokens": 263495,
+    "total_output_tokens": 61698,
+    "total_cost": 1.7159550000000008,
+    "errors": []
+  },
+  "cost_breakdown": {
+    "input_tokens": 263495,
+    "output_tokens": 61698,
+    "input_cost": 0.790485,
+    "output_cost": 0.92547,
+    "total_cost": 1.7159550000000008
+  }
+}

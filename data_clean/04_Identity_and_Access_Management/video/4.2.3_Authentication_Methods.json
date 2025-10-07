@@ -14,7 +14,7 @@
     {
       "chunk_id": "4.2.3_chunk_1",
       "content": "A user must provide the correct credentials to authenticate a system, usually a username and password. After that, the system checks an access service or protocol to ensure a match with existing credentials. The authentication process itself doesn't determine your authorization level. In other words, authentication doesn't determine what you can access; it only defines who you are. The application determines your authorization level and what you can do with the application only after you authenticate to the system. Let's look at a few authentication methods you need to know as a security professional.",
-      "summary": "Authentication Methods: In other words, authentication doesn't determine what you can access; it only defines who you are. Let's look at a few authentication methods you need to know as a security professional.",
+      "summary": "Authentication requires users to provide correct credentials (typically username and password) to verify their identity, but does not determine authorization levels or access permissions. The system validates credentials against existing records to confirm user identity, while applications separately determine what authenticated users can access or perform. Authentication establishes \"who you are\" while authorization controls \"what you can do\" - two distinct security processes that work sequentially.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.3",
@@ -31,7 +31,7 @@
     {
       "chunk_id": "4.2.3_chunk_2",
       "content": "Single sign-on, or SSO, is an authentication process that allows users to access multiple systems, applications, websites, and other resources using only a single set of credentials. With SSO, a user authenticates once using designated credentials and can access different resources seamlessly. Imagine that you need to log into your workstation, log into the company portal, log in to check your emails, and then log in again to access your video conferencing software. Instead of assigning four different credentials, it would be better to implement an SSO. Since this service shares authentication sessions between systems, you automatically receive access to all the sessions if you log into one. While SSO dramatically improves usability, it comes with the risk that breached credentials can be used to gain access to a wide array of resources. Considering SSO provides powerful, seamless access to a wide range of sensitive systems and data using only a single set of credentials, multifactor authentication methods should be coupled with SSO to prevent credentials from being easily abused and stolen.",
-      "summary": "Single Sign-On: Single sign-on, or SSO, is an authentication process that allows users to access multiple systems, applications, websites, and other resources using only a single set of credentials. While SSO dramatically improves usability, it comes with the risk that breached credentials can be used to gain access to a wide array of resources.",
+      "summary": "Single Sign-On (SSO) is an authentication process that allows users to access multiple systems, applications, and resources using one set of credentials, eliminating the need for separate logins to each service. While SSO significantly improves usability and user experience, it creates security risks because compromised credentials can provide attackers access to all connected systems and sensitive data. Organizations should implement multifactor authentication (MFA) with SSO to mitigate credential theft and unauthorized access across multiple resources.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.3",
@@ -48,7 +48,7 @@
     {
       "chunk_id": "4.2.3_chunk_3",
       "content": "Directory services provide a single sign-on location for multiple network resources. Examples include Microsoft's Active Directory and LDAP directory services. Directory services' users sign on with a domain user account to gain access to available domain resources.",
-      "summary": "Directory Services: Directory services provide a single sign-on location for multiple network resources. Directory services' users sign on with a domain user account to gain access to available domain resources.",
+      "summary": "Directory services like Microsoft Active Directory and LDAP provide centralized authentication systems that enable single sign-on (SSO) functionality across multiple network resources. Users authenticate once with their domain credentials to access all authorized resources within the directory domain. This centralized approach streamlines access management while maintaining security controls through unified identity verification.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.3",
@@ -65,7 +65,7 @@
     {
       "chunk_id": "4.2.3_chunk_4",
       "content": "Another authentication method is OAuth. Although OAuth works closely with authentication services, it doesn't provide authentication services itself. Instead, OAuth provides authorization services. In other words, it authorizes an entity to obtain information but doesn't verify the entity itself. OAuth lets a third party access a user's information from another website without a password. It acts as an intermediary between two entities and provides access tokens that manage the exchange of specific information. OAuth has a few main components. It starts with a user wanting to access multiple apps without creating many new accounts. Next, you need the client software app on a computer, mobile phone, or any other smart device. You also need a resource server that the user and client are trying to access and an authorization server that provides a token for the user and client to access the resource server. Let's say that I just installed an app onto my phone. When I open the new app, I'm prompted to log in using my Facebook or Google account. I decide to use my Facebook account, so I'm redirected to Facebook's authorization server to get an access token. The authorization server authenticates you as the user, and the app uses OAuth to grant an access token with precise information from the app. Now, when the app goes to the resource server with that token, you're registered and logged into the app with limited access to your Facebook information. So, where's the authentication? Well, that's where OpenID Connect, or OIDC, comes in. OIDC is built on the OAuth framework and provides the needed authentication service. Remember, OAuth only provides authorization. OIDC takes it a step further and provides identity authentication. OIDC also accesses stored personal information and preferences from an identity layer that the user has previously disclosed. This layer provides the website with the user's information, where, when, and how of the authentication, and which attributes the user wants to share with that specific website and why. Big companies like Google and Microsoft use OIDC, so it's secure and reliable.",
-      "summary": "Oauth: I decide to use my Facebook account, so I'm redirected to Facebook's authorization server to get an access token. The authorization server authenticates you as the user, and the app uses OAuth to grant an access token with precise information from the app.",
+      "summary": "OAuth provides authorization services by acting as an intermediary that grants third-party applications access tokens to retrieve user information from resource servers without requiring passwords, but does not perform authentication itself. OpenID Connect (OIDC) builds on OAuth's framework to add the missing authentication layer, providing identity verification and controlling what user information is shared with specific applications. This token-based system enables secure single sign-on capabilities across multiple applications while maintaining granular control over data access permissions.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.3",
@@ -82,7 +82,7 @@
     {
       "chunk_id": "4.2.3_chunk_5",
       "content": "Another authentication method is a federation. A federation is a group of domains that established enough trust to share authorizations with each other. A federation can be used within a single organization with multiple domains or include several trusted organizations that want to pool their resources. The good thing about this authentication method is that everything's on-site, providing the administration with detailed access control levels.",
-      "summary": "Federation: A federation is a group of domains that established enough trust to share authorizations with each other. The good thing about this authentication method is that everything's on-site, providing the administration with detailed access control levels.",
+      "summary": "Federation is an authentication method where multiple domains establish trust relationships to share authorizations, enabling single sign-on across organizations or internal domains. This approach provides administrators with granular access control while maintaining on-site infrastructure, allowing trusted entities to pool resources securely. Federation supports both intra-organizational authentication across multiple domains and inter-organizational collaboration between trusted partners.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.3",
@@ -99,7 +99,7 @@
     {
       "chunk_id": "4.2.3_chunk_6",
       "content": "Another authentication method is attestation. Attestation is a protocol that proves that software can be trusted. It tells the remote user that the software is legitimate and certified. Attestation usually works in both parties' interest. For example, say I was going to log into my bank account. I'd want to be sure that the site that I'm logging into is trustworthy, and the bank would like to be sure that I am really the one who is trying to log into my account.",
-      "summary": "Attestation: Attestation is a protocol that proves that software can be trusted. It tells the remote user that the software is legitimate and certified.",
+      "summary": "Attestation is an authentication protocol that verifies software legitimacy and trustworthiness through mutual certification between parties. This bidirectional trust mechanism ensures both the client can verify they're connecting to legitimate software (like a real banking website) and the service can authenticate the user's identity. Attestation provides cryptographic proof that software components are certified and have not been tampered with.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.3",
@@ -116,7 +116,7 @@
     {
       "chunk_id": "4.2.3_chunk_7",
       "content": "That's it for this lesson. In this lesson, we talked about several different authentication methods. These include single sign-on, directory services, Oauth, federation, and attestation. As a security professional, knowing and understanding these authentication methods will benefit you immensely in your future endeavors.",
-      "summary": "In this lesson, we talked about several different authentication methods. As a security professional, knowing and understanding these authentication methods will benefit you immensely in your future endeavors.",
+      "summary": "This lesson covered five critical authentication methods essential for security professionals: single sign-on (SSO), directory services, OAuth, federation, and attestation. These authentication mechanisms form the foundation of identity and access management systems, enabling secure user verification and authorization across enterprise environments. Understanding these methods is crucial for implementing robust security architectures and managing user access controls effectively.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.3",

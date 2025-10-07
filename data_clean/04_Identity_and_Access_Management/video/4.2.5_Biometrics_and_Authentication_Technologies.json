@@ -14,7 +14,7 @@
     {
       "chunk_id": "4.2.5_chunk_1",
       "content": "In this lesson, we'll look at biometrics and some of the other technologies used for multifactor authentication. Remember, authentication is the process of verifying a claimed identity. And to verify an identity, we need a unique piece of information that could only come from one person.",
-      "summary": "Biometrics and Advanced Authentication: In this lesson, we'll look at biometrics and some of the other technologies used for multifactor authentication. Remember, authentication is the process of verifying a claimed identity.",
+      "summary": "Biometrics and advanced authentication technologies serve as multifactor authentication methods by leveraging unique biological or behavioral characteristics that can only originate from a single individual. Authentication is the security process of verifying a claimed identity using distinctive information that provides definitive proof of user identity. These technologies enhance security by requiring multiple authentication factors beyond traditional passwords, making unauthorized access significantly more difficult.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.5",
@@ -31,7 +31,7 @@
     {
       "chunk_id": "4.2.5_chunk_2",
       "content": "Biometric authentication has come a long way. You're probably familiar with fingerprint and retina scans, but did you know that people can also be identified by their iris, facial structure, and even by their gait when they walk? Biometric authentication requires capturing and storing a unique physical attribute in a biometric system. The initial capture is called enrollment. Subsequent authentication attempts are then tested against the stored biometric template. A few key parameters can determine whether an attribute is viable. First, the physical attribute should be universal – something that everyone has. Second, the attribute should be unique. It should be measurable and so distinctive that it can be used to tell people apart. Third, the attribute should be permanent – in other words, it should hold up to aging. For example, a person's face might change considerably over time, but their fingerprint or retina will stay the same. Fourth, the attribute must be collectable. In other words, how easy is it to acquire this measurable attribute? If collecting the measurement is difficult or invasive, it probably won't work. Lastly, the attribute must be difficult to duplicate. For example, if the attribute is the person's voice, it might be possible to evade the system using an audio recording. But if the attribute is the person's retina, then it's much more difficult to circumvent. If errors do occur, they can be labeled as a false positive or a false negative. A false positive occurs when the biometric system returns a positive match and identifies an unauthorized user as a legitimate user. A false negative occurs when the biometric system returns a negative match when a legitimate user tries to authenticate.",
-      "summary": "Biometrics: Biometric authentication requires capturing and storing a unique physical attribute in a biometric system. Subsequent authentication attempts are then tested against the stored biometric template.",
+      "summary": "Biometric authentication systems capture and store unique physical attributes (fingerprints, iris, facial structure, gait) during enrollment, then compare subsequent authentication attempts against stored templates. Viable biometric attributes must be universal, unique, permanent, collectable, and difficult to duplicate to ensure security effectiveness. Authentication errors include false positives (unauthorized users incorrectly authenticated) and false negatives (legitimate users incorrectly rejected).",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.5",
@@ -48,7 +48,7 @@
     {
       "chunk_id": "4.2.5_chunk_3",
       "content": "Now let's look at some other technologies that are used for authentication. You've probably already used a lot of these methods.",
-      "summary": "Now let's look at some other technologies that are used for authentication. You've probably already used a lot of these methods.",
+      "summary": "This section covers various authentication technologies beyond biometrics that are commonly implemented in security systems. These authentication methods represent practical technologies that most users have already encountered in real-world applications. The content focuses on identifying and understanding different authentication mechanisms used to verify user identity and control access to systems and resources.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.5",
@@ -65,7 +65,7 @@
     {
       "chunk_id": "4.2.5_chunk_4",
       "content": "To provide an extra layer of security for their employees, some organizations use authenticator applications for their remote employees. An authenticator app, typically installed on a smartphone, provides a 6- to 8-digit code. Every 30 seconds, that code changes. The employee enter their username and password along with the code from the authenticator app, providing additional verification that you are who you say you are.",
-      "summary": "Authenticator Applications: To provide an extra layer of security for their employees, some organizations use authenticator applications for their remote employees. An authenticator app, typically installed on a smartphone, provides a 6- to 8-digit code.",
+      "summary": "Authenticator applications provide multi-factor authentication by generating time-based, rotating 6-8 digit codes that change every 30 seconds on employee smartphones. Organizations deploy these apps as an additional security layer for remote workers, requiring users to enter both traditional credentials (username/password) and the current authenticator code for identity verification. This two-factor authentication method significantly strengthens access control by combining something you know (password) with something you have (smartphone app).",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.5",
@@ -82,7 +82,7 @@
     {
       "chunk_id": "4.2.5_chunk_5",
       "content": "A similar method that you may have used is a one-time password. Some banks use this method to allow ATM withdrawals without using a debit card or to let customers access their accounts from the internet. An application or token creates a one-time password. This password will only work for a single login. After that, the password expires. The password also expires if it isn't used withing a short period of time.",
-      "summary": "One-Time Password: A similar method that you may have used is a one-time password. Some banks use this method to allow ATM withdrawals without using a debit card or to let customers access their accounts from the internet.",
+      "summary": "One-time passwords (OTP) are temporary authentication credentials generated by applications or tokens that expire after a single use or within a short time period, commonly used by banks for secure ATM withdrawals and online account access. This authentication method enhances security by ensuring each password can only be used once, eliminating the risk of credential reuse attacks. OTPs provide time-sensitive access control that automatically invalidates unused passwords to prevent unauthorized access.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.5",
@@ -99,7 +99,7 @@
     {
       "chunk_id": "4.2.5_chunk_6",
       "content": "These one-time passwords can be sent to the users several ways. For example, the one-time password can be sent using the Short Message Service, or SMS. When this option is selected, an SMS message with a one-time code or password is sent to your previously verified phone number. This code can then be used to verify your identify and complete your login.",
-      "summary": "Short message service (SMS): These one-time passwords can be sent to the users several ways. For example, the one-time password can be sent using the Short Message Service, or SMS.",
+      "summary": "SMS-based one-time passwords (OTP) are a multi-factor authentication method where temporary codes are sent via text message to a user's pre-verified phone number. This authentication factor verifies user identity by requiring possession of the registered mobile device to receive and enter the time-sensitive code during login. SMS OTP provides an additional security layer beyond traditional username/password combinations for identity verification.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.5",
@@ -116,7 +116,7 @@
     {
       "chunk_id": "4.2.5_chunk_7",
       "content": "Similarly, if you chose to receive your code through the phone, you'll get a phone call and an automated voice will provide you with a one-time code or password.",
-      "summary": "Similarly, if you chose to receive your code through the phone, you'll get a phone call and an automated voice will provide you with a one-time code or password.",
+      "summary": "Phone-based authentication delivers one-time codes through automated voice calls as a secondary authentication factor. This method provides an alternative to SMS-based two-factor authentication, where users receive temporary passwords verbally during the authentication process. Phone call authentication serves as a backup verification method when other multi-factor authentication options are unavailable.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.5",
@@ -133,7 +133,7 @@
     {
       "chunk_id": "4.2.5_chunk_8",
       "content": "Push notification authentication can also be used to grant access to an account. For example, when you log in to your account, you'll enter your username, but instead of a password, you receive an access request notification on your mobile device. You can then view the authentication details and approve or deny access, typically with a simple press of a button. One advantage of using this authentication method is that you don't have to remember passwords. However, this method only works with the services provided by a specific company. As a result, there are a limited number of applications that integrate with their services. This makes them unavailable to organizations that use enterprise-level and proprietary solutions.",
-      "summary": "Push Notification Authentication: Push notification authentication can also be used to grant access to an account. You can then view the authentication details and approve or deny access, typically with a simple press of a button.",
+      "summary": "Push notification authentication replaces traditional passwords by sending access request notifications to a user's mobile device, allowing them to approve or deny login attempts with a button press. This passwordless authentication method eliminates password memorization requirements but has limited compatibility, working only with specific company services rather than enterprise-level or proprietary solutions. The method provides convenient two-factor authentication through mobile device verification but restricts organizational implementation options.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.5",
@@ -150,7 +150,7 @@
     {
       "chunk_id": "4.2.5_chunk_9",
       "content": "That's it for this lesson. In this lesson, we looked at biometric systems and several other authentication technologies used for multifactor authentication.",
-      "summary": "That's it for this lesson. In this lesson, we looked at biometric systems and several other authentication technologies used for multifactor authentication.",
+      "summary": "This lesson covered biometric authentication systems and various authentication technologies that enable multifactor authentication (MFA) implementations. Biometric systems authenticate users based on unique physical or behavioral characteristics, while additional authentication technologies provide multiple verification factors to strengthen security posture. These authentication methods are essential components for implementing robust identity verification and access control in security frameworks.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.5",

@@ -14,7 +14,7 @@
     {
       "chunk_id": "4.6.13_chunk_1",
       "content": "Security Pro 8.0",
-      "summary": "Security Pro 8.0",
+      "summary": "Linux user security involves implementing proper user account management, access controls, and privilege restrictions to minimize attack surfaces and prevent unauthorized system access. Key security measures include configuring user permissions, implementing sudo restrictions, managing group memberships, and enforcing password policies to maintain system integrity. Effective Linux user restriction strategies focus on the principle of least privilege, ensuring users have only the minimum access rights necessary to perform their designated functions.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.6.13",
@@ -31,7 +31,7 @@
     {
       "chunk_id": "4.6.13_chunk_2",
       "content": "This lesson covers the following topics: User security User security commands User Security",
-      "summary": "This lesson covers the following topics: User security User security commands User Security",
+      "summary": "This lesson covers Linux user security fundamentals including user account management, access controls, and security restrictions to protect system resources. Key topics include essential Linux security commands for user administration, password policies, file permissions, and privilege escalation prevention. The content focuses on implementing proper user authentication, authorization mechanisms, and security hardening techniques specific to Linux environments.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.6.13",
@@ -48,7 +48,7 @@
     {
       "chunk_id": "4.6.13_chunk_3",
       "content": "Users should be trained to use secure passwords. Secure passwords use numbers and letters and are more than seven characters in length. Passwords should expire periodically but not too often. Administrators can limit the resources that the user can access. User Security Commands The following table describes Linux commands used to promote user security and restrictions: Command Description chage",
-      "summary": "When considering user security, keep the following in mind:: Administrators can limit the resources that the user can access. User Security Commands The following table describes Linux commands used to promote user security and restrictions: Command Description chage.",
+      "summary": "Linux user security requires implementing secure password policies with passwords containing numbers and letters, exceeding seven characters in length, and expiring periodically without being too frequent. Administrators must limit user resource access and utilize Linux security commands like chage to manage user account restrictions and password aging policies. These measures form essential components of user access control and system hardening in Linux environments.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.6.13",
@@ -65,7 +65,7 @@
     {
       "chunk_id": "4.6.13_chunk_4",
       "content": "-M sets the maximum number of days before the password expires. -W sets the number of days before the password expires that a warning message displays. -m sets the minimum number of days that must pass after a password has been changed before a user can change the password again. ulimit Limits computer resources used for applications launched from the shell. Limits can be hard or soft limits. Soft limits can be temporarily exceeded up to the hard limit setting. Users can modify soft limits, but only the root user can modify hard limits. Options include: -c limits the size of a core dump file. The value is in blocks. -f limits the file size of files created using the shell session. The value is in blocks. -n limits the maximum number of files that can be open. -t limits the amount of CPU time a process can use. This is set in seconds. -u limits the number of concurrent processes a user can run. -d limits the maximum amount of memory a process can use. The value is in kilobytes. -H sets a hard resource limit. -S sets a soft resource limit. -a displays current limits. The default shows soft limits.",
-      "summary": "Set user passwords to expire. Be aware of the following options:: -M sets the maximum number of days before the password expires. -W sets the number of days before the password expires that a warning message displays.",
+      "summary": "Linux password expiration policies use -M (maximum days), -W (warning days), and -m (minimum days between changes) options to enforce secure password lifecycle management. The ulimit command controls system resource consumption by limiting core dumps (-c), file sizes (-f), open files (-n), CPU time (-t), concurrent processes (-u), and memory usage (-d) with configurable hard and soft limits. These controls prevent resource exhaustion attacks and enforce security boundaries, where users can modify soft limits but only root can set hard limits.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.6.13",

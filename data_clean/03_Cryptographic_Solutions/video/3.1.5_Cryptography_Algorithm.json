@@ -14,7 +14,7 @@
     {
       "chunk_id": "3.1.5_chunk_1",
       "content": "In this lesson, we're going to take a deeper dive into the world of cryptography. The cornerstone of cryptography is the algorithm, or cipher. Cipher is just a fancy word for the series of steps that are taken for data to be encrypted or decrypted. In this video, we're going to look at several types of ciphers and how they work.",
-      "summary": "Cryptography Algorithms: In this lesson, we're going to take a deeper dive into the world of cryptography. Cipher is just a fancy word for the series of steps that are taken for data to be encrypted or decrypted.",
+      "summary": "This lesson explores cryptography algorithms and ciphers, which are the fundamental step-by-step processes used to encrypt and decrypt data in security systems. The content covers various types of cryptographic ciphers and their operational mechanisms, providing essential knowledge for implementing data protection and secure communications.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.1.5",
@@ -31,7 +31,7 @@
     {
       "chunk_id": "3.1.5_chunk_2",
       "content": "One of the first cipher types is the stream cipher. A stream cipher is a symmetric encryption method that encrypts 1 bit of plaintext at a time. This method is based on the one-time pad, or OTP, which was very popular during World War 2. OTP uses a symmetric encryption key that should be as long or even longer than the data being encrypted.",
-      "summary": "Stream Cipher: A stream cipher is a symmetric encryption method that encrypts 1 bit of plaintext at a time. OTP uses a symmetric encryption key that should be as long or even longer than the data being encrypted.",
+      "summary": "A stream cipher is a symmetric encryption method that encrypts plaintext one bit at a time, based on the one-time pad (OTP) technique used during World War 2. The OTP requires a symmetric encryption key that must be equal to or longer than the data being encrypted to ensure security. This bit-by-bit encryption approach differs from block ciphers that process data in fixed-size chunks.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.1.5",
@@ -48,7 +48,7 @@
     {
       "chunk_id": "3.1.5_chunk_3",
       "content": "For example, if you had a small message that was only 15 bits long, a random 15-bit key would need to be generated. That key can then be used to encrypt your message using a process called Exclusive-ORing, or XORing. XORing means that we compare two strings, our message and our random key, to generate an output. We do this by lining them both up. If the bits match, a 0 is generated. If they don't match, a 1 is generated. The output is our ciphertext! What makes this so interesting is that this demonstrates perfect secrecy. This means that, to a hacker, this ciphertext looks completely random. It would be just as difficult to brute-force the key as it would be to brute-force the data itself. OTP only works properly if our secret key is only used once. If we use it more than once, a hacker could then start to decode the secret key. OTP works great if we're dealing with small messages. But what if we needed to encrypt every video in this course? A video can range from 500 megabytes to up to 5 gigs or more. Since every video file would need to generate a key that's the same size or larger than the video, we would quickly end up running out of hard drive space. So with today's data types, the one-time pad just isn't very practical.",
-      "summary": "One-Time Pad: XORing means that we compare two strings, our message and our random key, to generate an output. This means that, to a hacker, this ciphertext looks completely random.",
+      "summary": "One-Time Pad (OTP) is a cryptographic algorithm that achieves perfect secrecy by XORing a message with a random key of equal length, where matching bits produce 0 and non-matching bits produce 1 in the ciphertext. The key must be used only once to maintain security, as reuse allows attackers to decode the secret key. OTP is impractical for large data due to storage requirements, since each encrypted file needs a key equal to or larger than the original file size.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.1.5",
@@ -65,7 +65,7 @@
     {
       "chunk_id": "3.1.5_chunk_4",
       "content": "Stream ciphers offer a solution to this problem. A stream cipher can use a smaller fixed-length key that can be used repeatedly throughout the encryption process. This key is called a seed key, and in our example we'll say that it's 2048 bits. This key is run through a pseudorandom number generator which outputs a new and unique encryption key called a keystream. Notice that this new key matches the size of our data. The keystream is then XORed with the data to give us our ciphertext. While stream ciphers are less secure than the one-time pad, the advantage to this method is that it can be used in real time. One of the most widely used stream ciphers was RC4. But due to multiple vulnerabilities discovered, it's no longer in use.",
-      "summary": "Stream Ciphers: A stream cipher can use a smaller fixed-length key that can be used repeatedly throughout the encryption process. This key is run through a pseudorandom number generator which outputs a new and unique encryption key called a keystream.",
+      "summary": "Stream ciphers use a fixed-length seed key processed through a pseudorandom number generator to create a keystream that matches data size, then XOR the keystream with plaintext to produce ciphertext for real-time encryption. While less secure than one-time pads, stream ciphers enable practical real-time cryptographic operations. RC4 was a widely-used stream cipher but is now deprecated due to discovered vulnerabilities.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.1.5",
@@ -82,7 +82,7 @@
     {
       "chunk_id": "3.1.5_chunk_5",
       "content": "Many symmetric encryption algorithms use the block cipher method. With block ciphers, instead of encrypting our data one bit at a time, the data is encrypted one chunk or block at a time. The common block sizes used are 64, 128, or 256 bits in length. For example, let's say that we want to encrypt a file that's 800 bits in size. Using a 256-bit block size, the data will be encrypted 256 bits, or 32 bytes, at a time until the process is complete. Since the last block ends up being smaller than 256 bits, the algorithm pads the block with some random data to bring it up to 256 bits. As shown here, there are several block cipher operation modes that can be utilized depending on the application or use. Let's talk about a few of them.",
-      "summary": "Block Ciphers: With block ciphers, instead of encrypting our data one bit at a time, the data is encrypted one chunk or block at a time. Using a 256-bit block size, the data will be encrypted 256 bits, or 32 bytes, at a time until the process is complete.",
+      "summary": "Block ciphers are symmetric encryption algorithms that encrypt data in fixed-size chunks (typically 64, 128, or 256 bits) rather than bit-by-bit, with padding applied to incomplete final blocks to meet the required block size. Multiple block cipher operation modes are available for different security applications and use cases.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.1.5",
@@ -99,7 +99,7 @@
     {
       "chunk_id": "3.1.5_chunk_6",
       "content": "Electronic Code Book Mode, or ECB, is the simplest block cipher operation mode. With this mode, each block of plaintext data is encrypted separately. Several blocks can be encrypted at the same time, allowing for faster encryption. The biggest disadvantage is that identical data results in the same ciphertext, meaning that a hacker would be able to decipher some of the data if they intercept multiple blocks.",
-      "summary": "Electronic Code Book (ECB): With this mode, each block of plaintext data is encrypted separately. Several blocks can be encrypted at the same time, allowing for faster encryption.",
+      "summary": "Electronic Code Book (ECB) is the simplest block cipher mode that encrypts each plaintext block separately, enabling parallel processing for faster encryption speeds. ECB's critical security weakness is that identical plaintext blocks produce identical ciphertext blocks, allowing attackers to identify patterns and potentially decrypt intercepted data. This vulnerability makes ECB unsuitable for securing data with repetitive content or structured formats.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.1.5",
@@ -116,7 +116,7 @@
     {
       "chunk_id": "3.1.5_chunk_7",
       "content": "Cipher Block Chaining is like ECB, except that it uses an initialization vector. The initialization vector is a starting variable that's XORed with the current block's plaintext to encrypt the data. The first initialization vector is a random string and each subsequent initialization vector is the ciphertext from the previous block. CBC is more secure than ECB but slower because multiple blocks can't be encrypted at the same time.",
-      "summary": "Cipher Block Chaining (CBC): Cipher Block Chaining is like ECB, except that it uses an initialization vector. The initialization vector is a starting variable that's XORed with the current block's plaintext to encrypt the data.",
+      "summary": "Cipher Block Chaining (CBC) is a block cipher mode that enhances security over ECB by using an initialization vector (IV) that XORs with plaintext before encryption, where the first IV is random and subsequent IVs use the previous block's ciphertext. CBC provides stronger security than ECB mode by eliminating identical plaintext patterns in ciphertext, but operates slower due to sequential processing requirements that prevent parallel block encryption.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.1.5",
@@ -133,7 +133,7 @@
     {
       "chunk_id": "3.1.5_chunk_8",
       "content": "Cipher Feedback Mode, or CFB, also utilizes an initialization vector. But instead of using it on the plaintext, the initialization vector is encrypted and then that result is XORed with the plaintext to create the ciphertext block. This is the equivalent of encrypting the plaintext with a one-time pad.",
-      "summary": "Cipher Feedback Mode (CFB): Cipher Feedback Mode, or CFB, also utilizes an initialization vector. But instead of using it on the plaintext, the initialization vector is encrypted and then that result is XORed with the plaintext to create the ciphertext block.",
+      "summary": "Cipher Feedback Mode (CFB) is a cryptographic block cipher mode that encrypts an initialization vector first, then XORs the encrypted result with plaintext to produce ciphertext blocks. This approach creates a one-time pad equivalent encryption method, providing stream cipher characteristics while using block cipher algorithms. CFB mode enables real-time encryption of data streams without requiring complete blocks before processing.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.1.5",
@@ -150,7 +150,7 @@
     {
       "chunk_id": "3.1.5_chunk_9",
       "content": "Output Feedback Mode, or OFB, is practically identical to Cipher Feedback Mode. The difference is the initialization vector used after the first round of encryption. The CFB's output is XORed with the plaintext and the result is the next block's initialization vector. The process is the same in Output Feedback Mode, except that the encryption's output is the next block's initialization vector before it's XORed with the plaintext.",
-      "summary": "Output Feedback Mode (OFB): The difference is the initialization vector used after the first round of encryption. The process is the same in Output Feedback Mode, except that the encryption's output is the next block's initialization vector before it's XORed with the plaintext.",
+      "summary": "Output Feedback Mode (OFB) is a block cipher encryption mode that differs from Cipher Feedback Mode (CFB) in how it generates initialization vectors for subsequent blocks. In OFB, the encryption algorithm's output becomes the next block's initialization vector before being XORed with plaintext, whereas CFB uses the XOR result as the next initialization vector. This distinction affects the feedback mechanism and error propagation characteristics in cryptographic implementations.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.1.5",
@@ -167,7 +167,7 @@
     {
       "chunk_id": "3.1.5_chunk_10",
       "content": "Next we have Counter Mode. Similar to ECB, every encryption process in Counter Mode is separate. Instead of using an initialization vector, Counter Mode uses a nonce combined with an encrypted counter. Nonce is simply a fancy word for a random string that's used for all blocks. The nonce's encrypted output and counter are then XORed with the plaintext to create the ciphertext. The counter starts at 0 and increments every block. By combining the nonce and counter, each block is using a different value so that even if the data is the same, the output will be different.",
-      "summary": "Counter Mode: Similar to ECB, every encryption process in Counter Mode is separate. By combining the nonce and counter, each block is using a different value so that even if the data is the same, the output will be different.",
+      "summary": "Counter Mode is a cryptographic block cipher mode that encrypts each block independently using a nonce (random string) combined with an incrementing counter, which are XORed with plaintext to produce ciphertext. The counter starts at 0 and increments for each block, ensuring that identical plaintext blocks produce different ciphertext outputs by creating unique encryption values for each block. This approach eliminates patterns in encrypted data while maintaining parallel processing capabilities similar to ECB mode.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.1.5",
@@ -184,7 +184,7 @@
     {
       "chunk_id": "3.1.5_chunk_11",
       "content": "If we want to provide authentication with confidentiality, we can use the Galois Counter Mode, or GCM. This mode works just like Counter Mode. First, we have the counter and nonce encrypted. The output is XOR-ed with the plaintext to give us the ciphertext. Here's where things get different. The ciphertext is combined with a special hash. That output contains the ciphertext along with a message authentication code that gives us assurance that the data hasn't been tampered with. Because this method is efficient and provides authentication, we see it used often with network communications such as wireless networks and web servers that use SSH or TLS. The other block cipher modes are classified as unauthenticated encryption and GCM is classified as authenticated encryption. There are some other encryption methods that authenticate, but the most common one is the Galois Counter Mode.",
-      "summary": "Galois Counter Mode (GCM): That output contains the ciphertext along with a message authentication code that gives us assurance that the data hasn't been tampered with. Because this method is efficient and provides authentication, we see it used often with network communications such as wireless networks and web servers that use SSH or TLS.",
+      "summary": "Galois Counter Mode (GCM) is an authenticated encryption method that combines Counter Mode encryption with a message authentication code to provide both confidentiality and data integrity assurance. GCM encrypts plaintext using XOR operations with encrypted counter/nonce values, then combines the resulting ciphertext with a special hash to detect tampering. This efficient authenticated encryption mode is commonly implemented in network communications including wireless networks, SSH, and TLS connections.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.1.5",
@@ -201,7 +201,7 @@
     {
       "chunk_id": "3.1.5_chunk_12",
       "content": "We're putting more and more Internet of Things, or IoT, devices into our networks; the need to encrypt data has never been more important. In 2018, the National Institute of Standards and Technology, or NIST, began the process of standardizing encryption algorithms called lightweight cryptography for these types of devices. Many IoT devices are small, low-powered devices that don't have the resources to handle the encryption methods we've covered. IoT devices have limitations such as only having a small amount of RAM and CPU power. Some devices even run on batteries. Lightweight cryptography algorithms must take this into account and still provide high levels of security while being efficient.",
-      "summary": "Lightweight Cryptography: We're putting more and more Internet of Things, or IoT, devices into our networks; the need to encrypt data has never been more important. In 2018, the National Institute of Standards and Technology, or NIST, began the process of standardizing encryption algorithms called lightweight cryptography for these types of devices.",
+      "summary": "Lightweight cryptography is a NIST-standardized approach designed specifically for Internet of Things (IoT) devices that have limited computational resources, including constrained RAM, CPU power, and battery life. These specialized encryption algorithms provide high-level security while maintaining efficiency for resource-constrained devices that cannot handle traditional encryption methods. NIST began standardizing lightweight cryptography in 2018 to address the growing security needs of IoT device deployments in network environments.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.1.5",
@@ -218,7 +218,7 @@
     {
       "chunk_id": "3.1.5_chunk_13",
       "content": "One huge risk with all encryption is that the data must first be decrypted before it can be used. Homomorphic encryption addresses this concern by allowing encrypted data to be used without decrypting it first. This is done by performing mathematical operations on the ciphertext instead of on the actual data itself. Homomorphic encryption works like other asymmetric encryption methods by using a public key to encrypt the data and a private key to decrypt it. It helps to look at data as math problems to better understand the differences in the types of homomorphic encryption. There are three types of homomorphic encryption: Partially homomorphic, which allows for only simple mathematical operations like addition and subtraction to be performed; somewhat homomorphic, which allows for more complex math such as multiplication to occur but only for a limited number of times; and fully homomorphic, which can handle any mathematical operation an unlimited number of times. Homomorphic Encryption has the potential to be a game changer, but as of now it's incredibly slow and inefficient.",
-      "summary": "Homomorphic Encryption: One huge risk with all encryption is that the data must first be decrypted before it can be used. Homomorphic encryption addresses this concern by allowing encrypted data to be used without decrypting it first.",
+      "summary": "Homomorphic encryption allows encrypted data to be processed and analyzed without first decrypting it by performing mathematical operations directly on the ciphertext, eliminating the security risk of exposing plaintext during data processing. The three types are partially homomorphic (simple operations like addition), somewhat homomorphic (complex operations like multiplication with limitations), and fully homomorphic (unlimited mathematical operations). While this asymmetric encryption method could revolutionize secure data processing, current implementations remain slow and inefficient for practical deployment.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.1.5",
@@ -235,7 +235,7 @@
     {
       "chunk_id": "3.1.5_chunk_14",
       "content": "That's it for this lesson. In this lesson, we looked at the different ciphers used in cryptography. We first examined the stream cipher which encrypts data one bit at a time. Then we looked at how block ciphers work and the different operation modes. Finally, we looked at two newer forms of cryptography. Lightweight cryptography is being designed for IoT devices and homomorphic encryption allows data to be used without having to decrypt it.",
-      "summary": "We first examined the stream cipher which encrypts data one bit at a time. Lightweight cryptography is being designed for IoT devices and homomorphic encryption allows data to be used without having to decrypt it.",
+      "summary": "This lesson covered cryptographic cipher types including stream ciphers that encrypt data one bit at a time and block ciphers with various operation modes. Two emerging cryptography forms were examined: lightweight cryptography designed for IoT device security constraints and homomorphic encryption that enables data processing without decryption.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.1.5",

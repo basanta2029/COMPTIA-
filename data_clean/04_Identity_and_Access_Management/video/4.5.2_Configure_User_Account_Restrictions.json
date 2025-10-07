@@ -14,7 +14,7 @@
     {
       "chunk_id": "4.5.2_chunk_1",
       "content": "In this demonstration, we'll look at hardening a Windows workstation by configuring user account restrictions. By setting these restrictions in a domain, they will always be applied, even if the user logs in from a different system, or if a different user logs into system. Let's begin by opening Active Directory Users and Computers. Let's drill down into the Employees OU so we can see our users.",
-      "summary": "Configure User Account Restrictions: In this demonstration, we'll look at hardening a Windows workstation by configuring user account restrictions. By setting these restrictions in a domain, they will always be applied, even if the user logs in from a different system, or if a different user logs into system.",
+      "summary": "This demonstration covers hardening Windows workstations through Active Directory user account restrictions configured at the domain level, ensuring consistent security policies regardless of which system users access or which users log into specific systems. The process involves using Active Directory Users and Computers to configure restrictions within organizational units like the Employees OU, providing centralized user account security management across the entire domain infrastructure.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.5.2",
@@ -31,7 +31,7 @@
     {
       "chunk_id": "4.5.2_chunk_2",
       "content": "First, we need to do several things to harden these accounts. Let's choose the temporary employee, Daniel Jackson. There are several things we can do to harden his account, specifically because he's a temporary employee. This user works Monday through Friday from 8:00 in the morning until 5:00 at night. We need to restrict the user's logon hours and days to the times he is working. Also, because the user is a temporary employee, we should configure the account to expire automatically when the employment term expires. We want to disable the account automatically in case we forget to manually disable it.",
-      "summary": "Harden an Account: First, we need to do several things to harden these accounts. There are several things we can do to harden his account, specifically because he's a temporary employee.",
+      "summary": "Account hardening for temporary employees requires implementing time-based access controls by restricting logon hours to match work schedules (8 AM to 5 PM, Monday-Friday) and configuring automatic account expiration dates aligned with employment terms. These restrictions prevent unauthorized access outside business hours and ensure accounts are automatically disabled when temporary employment ends, reducing security risks from forgotten manual account management.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.5.2",
@@ -48,7 +48,7 @@
     {
       "chunk_id": "4.5.2_chunk_3",
       "content": "First, let's go into Account settings > Logon Hours. Everything that is highlighted in blue is a permitted logon block or hour. You can see the days here, Sunday through Saturday, and anything highlighted in white will be logon denied. In this case, we want to limit logon to Monday through Friday, 8:00 a.m. through 5:00 p.m. If we select Saturday and select Logon Denied, it denies logon for the whole day. It whites it all out. We'll select Sunday, as well. We'll select all the days from midnight 8:00 a.m and disable those. Then we'll go from here to 5:00 p.m to midnight and disable those hours. Now he only has login permitted from 8 a.m. to 5 p.m. Monday through Friday. We click OK, and that applies the restriction.",
-      "summary": "Select Login Hours and Days: Everything that is highlighted in blue is a permitted logon block or hour. You can see the days here, Sunday through Saturday, and anything highlighted in white will be logon denied.",
+      "summary": "User account logon hours can be configured to restrict access to specific days and time periods by setting permitted logon blocks (highlighted in blue) and denied periods (highlighted in white) through the Account settings > Logon Hours interface. To implement time-based access controls, administrators can deny logon for entire days (weekends) and specific hour ranges, such as restricting access to Monday-Friday 8 AM to 5 PM business hours only. This temporal access restriction enhances security by preventing unauthorized access outside designated work periods and reduces the attack window for compromised accounts.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.5.2",
@@ -65,7 +65,7 @@
     {
       "chunk_id": "4.5.2_chunk_4",
       "content": "We also need to set the account expiration. You can see it's set to Never. We want to change this. Let's say this account will expire at the end of the year. We'll click December 31. We'll click Apply. Click OK. Now Daniel Jackson's account will automatically deny him access unless he's logging in Monday through Friday, 8:00 a.m. to 5:00 p.m. The account will be disabled automatically on December 31, at the end of the day.",
-      "summary": "Set Account Expiration: Let's say this account will expire at the end of the year. Now Daniel Jackson's account will automatically deny him access unless he's logging in Monday through Friday, 8:00 a.",
+      "summary": "Account expiration settings automatically disable user accounts on specified dates to enforce temporal access controls and reduce security risks from unused or temporary accounts. Setting expiration dates (such as December 31) combined with time-based restrictions (Monday-Friday, 8 AM-5 PM) creates layered access controls that automatically deny authentication outside permitted timeframes. This configuration ensures accounts are automatically disabled when no longer needed, preventing unauthorized access from dormant or forgotten user accounts.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.5.2",
@@ -82,7 +82,7 @@
     {
       "chunk_id": "4.5.2_chunk_5",
       "content": "Also, in this OU, we have an employee who's on extended leave. Samantha Carter has been out on maternity leave, so her account is disabled. We did not delete her account because we are expecting her to come back to work, and we don't want to have to recreate all her permissions when she returns. Samantha is returning tomorrow, so let's re-enable her account. To do this, come up here and right-click the account, and enable account. Notice that the little black arrow on the user icon disappeared – that means the account is now enabled again.",
-      "summary": "Disable / enable account: Also, in this OU, we have an employee who's on extended leave. Samantha Carter has been out on maternity leave, so her account is disabled.",
+      "summary": "Disabling user accounts temporarily suspends access while preserving permissions and configurations, which is preferable to deletion when users are expected to return from extended leave. Account re-enablement is performed through administrative tools by right-clicking the disabled account and selecting \"enable account,\" with visual indicators like arrows showing the account's current status. This approach maintains security by preventing unauthorized access during absence while avoiding the administrative overhead of recreating user permissions upon return.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.5.2",
@@ -99,7 +99,7 @@
     {
       "chunk_id": "4.5.2_chunk_6",
       "content": "The last thing we want to do in this demonstration is restrict a user to a particular computer on the network. The user will be allowed to log on only from that system. Let's say the user, Samantha Carter, is allowed to log in only on the lab computer. Let's go to Properties. We'll go to Account and click Log On To... As you can see here, the user can currently log in to all computers on the domain. We don't want that because the user should only be in the lab. We'll set it manually. Here, you type in the computer name after selecting the following computers. You type in the computer's net bios, domain name, or DNS name. Let's type in 'LabComputer' and click Add. Notice this is the only computer listed now for the user. So, this is the only computer the user can log in to. You can add more than one computer. Let's click OK. Now this user can log in only to that lab computer.",
-      "summary": "Restrict to a Computer: The last thing we want to do in this demonstration is restrict a user to a particular computer on the network. The user will be allowed to log on only from that system.",
+      "summary": "User account restrictions can be configured to limit logon access to specific computers by modifying the \"Log On To\" settings in Active Directory user properties, changing from \"all computers\" to designated systems using NetBIOS, domain, or DNS names. This security control prevents unauthorized access by restricting user authentication to approved workstations only, supporting the principle of least privilege in network environments.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.5.2",
@@ -116,7 +116,7 @@
     {
       "chunk_id": "4.5.2_chunk_7",
       "content": "That's it for this demonstration. In this demonstration, we showed you how to configure user account restrictions. We first looked at how to restrict login times for a given user account. We disabled and enabled user accounts. We set an expiration date for an account. Then we ended the demonstration by configuring a user account to use a specific computer in the network.",
-      "summary": "In this demonstration, we showed you how to configure user account restrictions. Then we ended the demonstration by configuring a user account to use a specific computer in the network.",
+      "summary": "This demonstration covered configuring user account restrictions as security controls, including setting login time restrictions, enabling/disabling accounts, configuring account expiration dates, and restricting user access to specific network computers. These account restriction techniques are essential identity and access management (IAM) controls that limit user privileges and reduce security risks by enforcing temporal, status-based, and location-based access controls.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.5.2",

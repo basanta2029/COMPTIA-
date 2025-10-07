@@ -1,0 +1,28 @@
+# CompTIA Security+ RAG System Dependencies
+
+# AI/LLM Integration
+anthropic>=0.18.0
+
+# Embedding Generation
+requests>=2.31.0
+
+# Vector Database
+qdrant-client>=1.7.0
+
+# Progress Tracking
+tqdm>=4.66.0
+
+# Environment Variables
+python-dotenv>=1.0.0
+
+# API Server (for later)
+fastapi>=0.109.0
+uvicorn>=0.27.0
+
+# UI (for later)
+streamlit>=1.31.0
+
+# Core Dependencies (already in Python)
+# json (built-in)
+# pathlib (built-in)
+# dataclasses (built-in)

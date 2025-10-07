@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "chapter_num": "4",
+    "section_num": "4.6.12",
+    "title": "Configure SELinux",
+    "content_type": "video",
+    "filename": "4.6.12_Configure_SELinux_[video].txt",
+    "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.6.12_Configure_SELinux_[video].txt",
+    "word_count": 735,
+    "has_content": true
+  },
+  "full_content": "In this lesson, we're going to review SELinux, or Secure Linux. SELinux allows for a more granular approach to securing Linux from the outside world. This version is installed on most RHEL- or CentOS-based distributions by default. In order to properly configure SELinux, we need to elevate to the root account. Let's do the sestatus command to see if SELinux is running already. We see the current mode is enforcing. We'll go over that in a little bit. We use the getenforce command to view the current SELinux mode. This lets us know if the system is enforcing the right properties. We can change enforcement modes with this setenforce command. Type setenforce 0 to change the mode to permissive. This will turn off the protections and controls of SELinux. When we run getenforce again, it's configured to permissive. Type setenforce 1 to change the mode back to enforcing. Now, these changes are temporary. Once we reboot, SELinux will load the configurations in the SELinux config file. Let's change directories to /etc/selinux and open the config file. We see that SELinux is enforcing, and the Linux type is targeted. This means SELinux will only monitor certain processes, and those processes will be protected. The minimum is a modification of the targeted policy. Once selected, they're protected. And MLS means multi-level security protection. We're just going to look at the targeted type in this demonstration. Let's exit our text editor. We're going run a program called getsebool. Getsebool is Boolean, meaning that it's either on or off. Now that's add -a for \"show all\". We see that there are many different Boolean settings for different processes. We're going to look only at the samba processes. Let's run getsebool -a | grep samba to filter only samba processes. The process we're looking to manage here is samba_enable_home_dirs. So, samba is the process that allows Linux to share files with Windows devices by appearing like a Windows file server. We don't want to enable home directories to be advertised on samba. Let's run setsebool samba_enable_home_dirs=off. Okay, when we rerun the filtered getsebool command, we see that samba_enable_home_dirs is now off. Again, this is a temporary setting. If we wanted to make the changes permanent, we'd type the same setsebool command but with a dash capital P for \"permanent\" and then samba_enable_home_dirs=off. Now we press Enter, and when the system reboots, samba home directories will be set to off. Let's move on. So, files take on different permissions with SELinux. Let's switch to the home directory and use touch file1 to create a file. Let's also see some additional SELinux components. Run ls -lZ file1. We see that the permissions are standard, with Read/write for the user and Read for the group. And then it's Read for everybody else. It's owned by root, and it's owned by a group called root as well. Now, though, we now have additional information. We have the user type, the role base, and the type of file that it is. We can change this new information if we want. You might do this because you want to alter who can change the file or something like that. It gives us an additional granularity of control. To do this, you'd use the change context command, called chcon. We're going to change the type from admin_home to a user_home type. Let's type chcon -t. Now, the -t is what changes the file type, not the role or user type. Okay, continue typing user_home_t file1. We identify the file type and the file we're making the change to. Let's run ls -lZ for file1, and we see that we've changed the type from admin_home to user_home. Let's say that the changes ended up being a mistake. We could restore the context with a command that changes everything back. We'd run restorecon, specify the file name, and it'd restore the original settings. When we run ls -lZ file1 again, we see the changes. And that's all for now. In this demonstration, we showed you some SELinux commands, including sestatus, getenforce, and setenforce. Then we modified some Boolean values with getsebool and setsebool. And we also used chcon to change and restore context.",
+  "chunks": [
+    {
+      "chunk_id": "4.6.12_chunk_1",
+      "content": "In this lesson, we're going to review SELinux, or Secure Linux. SELinux allows for a more granular approach to securing Linux from the outside world. This version is installed on most RHEL- or CentOS-based distributions by default. In order to properly configure SELinux, we need to elevate to the root account.",
+      "summary": "Manage SELinux: In this lesson, we're going to review SELinux, or Secure Linux. SELinux allows for a more granular approach to securing Linux from the outside world.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.6.12",
+        "title": "Configure SELinux",
+        "content_type": "video",
+        "filename": "4.6.12_Configure_SELinux_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.6.12_Configure_SELinux_[video].txt",
+        "word_count": 735,
+        "has_content": true
+      },
+      "section_header": "Manage SELinux",
+      "timestamp_range": "00:00-00:22"
+    },
+    {
+      "chunk_id": "4.6.12_chunk_2",
+      "content": "Let's do the sestatus command to see if SELinux is running already. We see the current mode is enforcing. We'll go over that in a little bit.",
+      "summary": "Let's do the sestatus command to see if SELinux is running already. We see the current mode is enforcing. We'll go over that in a little bit.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.6.12",
+        "title": "Configure SELinux",
+        "content_type": "video",
+        "filename": "4.6.12_Configure_SELinux_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.6.12_Configure_SELinux_[video].txt",
+        "word_count": 735,
+        "has_content": true
+      },
+      "section_header": "SELinux Status",
+      "timestamp_range": "00:22-00:31"
+    },
+    {
+      "chunk_id": "4.6.12_chunk_3",
+      "content": "We use the getenforce command to view the current SELinux mode. This lets us know if the system is enforcing the right properties. We can change enforcement modes with this setenforce command. Type setenforce 0 to change the mode to permissive. This will turn off the protections and controls of SELinux. When we run getenforce again, it's configured to permissive. Type setenforce 1 to change the mode back to enforcing. Now, these changes are temporary. Once we reboot, SELinux will load the configurations in the SELinux config file.",
+      "summary": "[Configure SELinux] SELinux Mode: We use the getenforce command to view the current SELinux mode. This will turn off the protections and controls of SELinux.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.6.12",
+        "title": "Configure SELinux",
+        "content_type": "video",
+        "filename": "4.6.12_Configure_SELinux_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.6.12_Configure_SELinux_[video].txt",
+        "word_count": 735,
+        "has_content": true
+      },
+      "section_header": "SELinux Mode",
+      "timestamp_range": "00:31-01:06"
+    },
+    {
+      "chunk_id": "4.6.12_chunk_4",
+      "content": "Let's change directories to /etc/selinux and open the config file. We see that SELinux is enforcing, and the Linux type is targeted. This means SELinux will only monitor certain processes, and those processes will be protected. The minimum is a modification of the targeted policy. Once selected, they're protected. And MLS means multi-level security protection. We're just going to look at the targeted type in this demonstration.",
+      "summary": "[Configure SELinux] SELinux Types: Let's change directories to /etc/selinux and open the config file. And MLS means multi-level security protection.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.6.12",
+        "title": "Configure SELinux",
+        "content_type": "video",
+        "filename": "4.6.12_Configure_SELinux_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.6.12_Configure_SELinux_[video].txt",
+        "word_count": 735,
+        "has_content": true
+      },
+      "section_header": "SELinux Types",
+      "timestamp_range": "01:06-01:36"
+    },
+    {
+      "chunk_id": "4.6.12_chunk_5",
+      "content": "Let's exit our text editor. We're going run a program called getsebool. Getsebool is Boolean, meaning that it's either on or off. Now that's add -a for \"show all\". We see that there are many different Boolean settings for different processes. We're going to look only at the samba processes. Let's run getsebool -a | grep samba to filter only samba processes. The process we're looking to manage here is samba_enable_home_dirs. So, samba is the process that allows Linux to share files with Windows devices by appearing like a Windows file server. We don't want to enable home directories to be advertised on samba. Let's run setsebool samba_enable_home_dirs=off. Okay, when we rerun the filtered getsebool command, we see that samba_enable_home_dirs is now off. Again, this is a temporary setting. If we wanted to make the changes permanent, we'd type the same setsebool command but with a dash capital P for \"permanent\" and then samba_enable_home_dirs=off. Now we press Enter, and when the system reboots, samba home directories will be set to off. Let's move on.",
+      "summary": "getsebool: Getsebool is Boolean, meaning that it's either on or off. So, samba is the process that allows Linux to share files with Windows devices by appearing like a Windows file server.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.6.12",
+        "title": "Configure SELinux",
+        "content_type": "video",
+        "filename": "4.6.12_Configure_SELinux_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.6.12_Configure_SELinux_[video].txt",
+        "word_count": 735,
+        "has_content": true
+      },
+      "section_header": "getsebool",
+      "timestamp_range": "01:36-02:59"
+    },
+    {
+      "chunk_id": "4.6.12_chunk_6",
+      "content": "So, files take on different permissions with SELinux. Let's switch to the home directory and use touch file1 to create a file. Let's also see some additional SELinux components. Run ls -lZ file1. We see that the permissions are standard, with Read/write for the user and Read for the group. And then it's Read for everybody else. It's owned by root, and it's owned by a group called root as well. Now, though, we now have additional information. We have the user type, the role base, and the type of file that it is.",
+      "summary": "SELinux Permissions: Let's switch to the home directory and use touch file1 to create a file. We see that the permissions are standard, with Read/write for the user and Read for the group.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.6.12",
+        "title": "Configure SELinux",
+        "content_type": "video",
+        "filename": "4.6.12_Configure_SELinux_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.6.12_Configure_SELinux_[video].txt",
+        "word_count": 735,
+        "has_content": true
+      },
+      "section_header": "SELinux Permissions",
+      "timestamp_range": "02:59-03:34"
+    },
+    {
+      "chunk_id": "4.6.12_chunk_7",
+      "content": "We can change this new information if we want. You might do this because you want to alter who can change the file or something like that. It gives us an additional granularity of control. To do this, you'd use the change context command, called chcon. We're going to change the type from admin_home to a user_home type. Let's type chcon -t. Now, the -t is what changes the file type, not the role or user type. Okay, continue typing user_home_t file1. We identify the file type and the file we're making the change to. Let's run ls -lZ for file1, and we see that we've changed the type from admin_home to user_home. Let's say that the changes ended up being a mistake. We could restore the context with a command that changes everything back. We'd run restorecon, specify the file name, and it'd restore the original settings. When we run ls -lZ file1 again, we see the changes.",
+      "summary": "chcon Command: You might do this because you want to alter who can change the file or something like that. It gives us an additional granularity of control.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.6.12",
+        "title": "Configure SELinux",
+        "content_type": "video",
+        "filename": "4.6.12_Configure_SELinux_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.6.12_Configure_SELinux_[video].txt",
+        "word_count": 735,
+        "has_content": true
+      },
+      "section_header": "chcon Command",
+      "timestamp_range": "03:34-04:37"
+    },
+    {
+      "chunk_id": "4.6.12_chunk_8",
+      "content": "And that's all for now. In this demonstration, we showed you some SELinux commands, including sestatus, getenforce, and setenforce. Then we modified some Boolean values with getsebool and setsebool. And we also used chcon to change and restore context.",
+      "summary": "In this demonstration, we showed you some SELinux commands, including sestatus, getenforce, and setenforce. Then we modified some Boolean values with getsebool and setsebool.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.6.12",
+        "title": "Configure SELinux",
+        "content_type": "video",
+        "filename": "4.6.12_Configure_SELinux_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.6.12_Configure_SELinux_[video].txt",
+        "word_count": 735,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": "04:37-04:55"
+    }
+  ],
+  "num_chunks": 8,
+  "document_summary": "Configure SELinux (video): This will turn off the protections and controls of SELinux. And MLS means multi-level security protection. So, samba is the process that allows Linux to share files with Windows devices by appearing like a Windows file server."
+}

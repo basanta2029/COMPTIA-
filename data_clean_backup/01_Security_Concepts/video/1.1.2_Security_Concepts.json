@@ -1,0 +1,136 @@
+{
+  "metadata": {
+    "chapter_num": "1",
+    "section_num": "1.1.2",
+    "title": "Security Concepts",
+    "content_type": "video",
+    "filename": "1.1.2_Security_Concepts_[video].txt",
+    "file_path": "/Users/basantabaral/CompTia/data_raw/01_Security_Concepts/1.1.2_Security_Concepts_[video].txt",
+    "word_count": 743,
+    "has_content": true
+  },
+  "full_content": "In order to be an effective security professional, you need to be familiar with the concepts and the roles surrounding information security. This will help you understand the industry terms and lingo, and it will also provide a lot of context as you progress through this course. The first information security concept that you need to be familiar with is that of an asset. An asset is simply something that has value to an individual or an organization. This can be a physical device, such as a laptop or iPad, or it can be electronic information, such as a pdf document on a server. However, most of the time we're talking about an asset we mean the latter. For example, let's suppose we have a server in our organization, and on this server there is a database that contains customer information, including credit card numbers and order history. This database has a lot of value to the organization and is therefore considered an asset. The next security concept that you need to be aware of are threats. Threats represent anything that has the potential to cause the loss of an asset. And notice I said has the potential to cause the loss of an asset. A threat isn't the actual loss of an asset. It's merely the potential—\"the risk—\"that an asset could be stolen. A threat can come in many different forms. It can be a virus, a Trojan, an external hacker, an internal employee. Because threats come in all shapes and sizes, sometimes we refer to them as blended threats. To continue with our example, some threats to our customer database include ransomware, data exfiltration—\"which is a fancy way of saying stealing data—\"Trojans, and hackers. Next, we have the threat agent. A threat agent is the actual person or entity that carries out a threat. When it comes to threat agents, there are a few characteristics, or attributes, that can categorize them. For example, threat agents can be internal or external; they can have a little to no resources or funding, or they can be heavily funded with a lot of resources; they can also be opportunistic—\"that is, they are simply attacking a system because it has a vulnerability—\"or they can have a specific intent or motive. Now, within these threat agent categories, there are different types of actors—\"the type of entity carrying out the attack. For example, an actor could be an organized crime syndicate trying to steal credit card information. An actor could also be a nation state trying to steal classified information. Even business competitors can be a type of actor who try to steal company secrets in order to gain an economic edge. One example of a nation state actor you might be familiar with is North Korea. On November 24, 2014, North Korean hackers gained access to Sony Pictures networks and stole confidential information, including employee records, personal emails, and copies of unreleased movies. The information was then released to the public on the internet. In order for threat agents to carry out a threat, they need an opening—\"a weakness in the system. This is known as a vulnerability. For example, a vulnerability could be a disgruntled internal employee who happens to be an information security professional and has an elevated level of access to a server system. Another vulnerability is an enabled USB port. And the last concept we will talk about is an exploit. An exploit is a procedure, a piece of software, or a sequence of commands that takes advantage of a vulnerability to actually carry out an attack. For example, say we have an enabled USB port on our customer database—\"first vulnerability—\"and we also have a disgruntled employee—\"second vulnerability. Let's say that the employee decides to use a USB thumb drive to steal the customer database. This is an exploit. The employee used the vulnerability of the enabled USB port and their elevated permissions in order to steal the customer database. Because security is a constant balancing act between convenience and protection, you will constantly be looking at ways you can mitigate risk and threats while also maintaining an acceptable level of ease of use. However, by understanding the basic concepts of information security, you will have a much easier time assessing the risks to your systems and identifying the ways in which you can protect it.",
+  "chunks": [
+    {
+      "chunk_id": "1.1.2_chunk_1",
+      "content": "In order to be an effective security professional, you need to be familiar with the concepts and the roles surrounding information security. This will help you understand the industry terms and lingo, and it will also provide a lot of context as you progress through this course.",
+      "summary": "Security Concepts: In order to be an effective security professional, you need to be familiar with the concepts and the roles surrounding information security. This will help you understand the industry terms and lingo, and it will also provide a lot of context as you progress through this course.",
+      "metadata": {
+        "chapter_num": "1",
+        "section_num": "1.1.2",
+        "title": "Security Concepts",
+        "content_type": "video",
+        "filename": "1.1.2_Security_Concepts_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/01_Security_Concepts/1.1.2_Security_Concepts_[video].txt",
+        "word_count": 743,
+        "has_content": true
+      },
+      "section_header": "Security Concepts",
+      "timestamp_range": "00:00-00:19"
+    },
+    {
+      "chunk_id": "1.1.2_chunk_2",
+      "content": "The first information security concept that you need to be familiar with is that of an asset. An asset is simply something that has value to an individual or an organization. This can be a physical device, such as a laptop or iPad, or it can be electronic information, such as a pdf document on a server. However, most of the time we're talking about an asset we mean the latter. For example, let's suppose we have a server in our organization, and on this server there is a database that contains customer information, including credit card numbers and order history. This database has a lot of value to the organization and is therefore considered an asset.",
+      "summary": "Assets: The first information security concept that you need to be familiar with is that of an asset. For example, let's suppose we have a server in our organization, and on this server there is a database that contains customer information, including credit card numbers and order history.",
+      "metadata": {
+        "chapter_num": "1",
+        "section_num": "1.1.2",
+        "title": "Security Concepts",
+        "content_type": "video",
+        "filename": "1.1.2_Security_Concepts_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/01_Security_Concepts/1.1.2_Security_Concepts_[video].txt",
+        "word_count": 743,
+        "has_content": true
+      },
+      "section_header": "Assets",
+      "timestamp_range": "00:19-00:56"
+    },
+    {
+      "chunk_id": "1.1.2_chunk_3",
+      "content": "The next security concept that you need to be aware of are threats. Threats represent anything that has the potential to cause the loss of an asset. And notice I said has the potential to cause the loss of an asset. A threat isn't the actual loss of an asset. It's merely the potential—\"the risk—\"that an asset could be stolen. A threat can come in many different forms. It can be a virus, a Trojan, an external hacker, an internal employee. Because threats come in all shapes and sizes, sometimes we refer to them as blended threats. To continue with our example, some threats to our customer database include ransomware, data exfiltration—\"which is a fancy way of saying stealing data—\"Trojans, and hackers.",
+      "summary": "Threats: The next security concept that you need to be aware of are threats. To continue with our example, some threats to our customer database include ransomware, data exfiltration—\"which is a fancy way of saying stealing data—\"Trojans, and hackers.",
+      "metadata": {
+        "chapter_num": "1",
+        "section_num": "1.1.2",
+        "title": "Security Concepts",
+        "content_type": "video",
+        "filename": "1.1.2_Security_Concepts_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/01_Security_Concepts/1.1.2_Security_Concepts_[video].txt",
+        "word_count": 743,
+        "has_content": true
+      },
+      "section_header": "Threats",
+      "timestamp_range": "00:56-01:38"
+    },
+    {
+      "chunk_id": "1.1.2_chunk_4",
+      "content": "Next, we have the threat agent. A threat agent is the actual person or entity that carries out a threat. When it comes to threat agents, there are a few characteristics, or attributes, that can categorize them. For example, threat agents can be internal or external; they can have a little to no resources or funding, or they can be heavily funded with a lot of resources; they can also be opportunistic—\"that is, they are simply attacking a system because it has a vulnerability—\"or they can have a specific intent or motive. Now, within these threat agent categories, there are different types of actors—\"the type of entity carrying out the attack. For example, an actor could be an organized crime syndicate trying to steal credit card information. An actor could also be a nation state trying to steal classified information. Even business competitors can be a type of actor who try to steal company secrets in order to gain an economic edge. One example of a nation state actor you might be familiar with is North Korea. On November 24, 2014, North Korean hackers gained access to Sony Pictures networks and stole confidential information, including employee records, personal emails, and copies of unreleased movies. The information was then released to the public on the internet.",
+      "summary": "Threat Agents: Now, within these threat agent categories, there are different types of actors—\"the type of entity carrying out the attack. On November 24, 2014, North Korean hackers gained access to Sony Pictures networks and stole confidential information, including employee records, personal emails, and copies of unreleased movies.",
+      "metadata": {
+        "chapter_num": "1",
+        "section_num": "1.1.2",
+        "title": "Security Concepts",
+        "content_type": "video",
+        "filename": "1.1.2_Security_Concepts_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/01_Security_Concepts/1.1.2_Security_Concepts_[video].txt",
+        "word_count": 743,
+        "has_content": true
+      },
+      "section_header": "Threat Agents",
+      "timestamp_range": "01:38-02:53"
+    },
+    {
+      "chunk_id": "1.1.2_chunk_5",
+      "content": "In order for threat agents to carry out a threat, they need an opening—\"a weakness in the system. This is known as a vulnerability. For example, a vulnerability could be a disgruntled internal employee who happens to be an information security professional and has an elevated level of access to a server system. Another vulnerability is an enabled USB port.",
+      "summary": "Vulnerability: In order for threat agents to carry out a threat, they need an opening—\"a weakness in the system. For example, a vulnerability could be a disgruntled internal employee who happens to be an information security professional and has an elevated level of access to a server system.",
+      "metadata": {
+        "chapter_num": "1",
+        "section_num": "1.1.2",
+        "title": "Security Concepts",
+        "content_type": "video",
+        "filename": "1.1.2_Security_Concepts_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/01_Security_Concepts/1.1.2_Security_Concepts_[video].txt",
+        "word_count": 743,
+        "has_content": true
+      },
+      "section_header": "Vulnerability",
+      "timestamp_range": "02:53-03:13"
+    },
+    {
+      "chunk_id": "1.1.2_chunk_6",
+      "content": "And the last concept we will talk about is an exploit. An exploit is a procedure, a piece of software, or a sequence of commands that takes advantage of a vulnerability to actually carry out an attack. For example, say we have an enabled USB port on our customer database—\"first vulnerability—\"and we also have a disgruntled employee—\"second vulnerability. Let's say that the employee decides to use a USB thumb drive to steal the customer database. This is an exploit. The employee used the vulnerability of the enabled USB port and their elevated permissions in order to steal the customer database.",
+      "summary": "Exploit: An exploit is a procedure, a piece of software, or a sequence of commands that takes advantage of a vulnerability to actually carry out an attack. For example, say we have an enabled USB port on our customer database—\"first vulnerability—\"and we also have a disgruntled employee—\"second vulnerability.",
+      "metadata": {
+        "chapter_num": "1",
+        "section_num": "1.1.2",
+        "title": "Security Concepts",
+        "content_type": "video",
+        "filename": "1.1.2_Security_Concepts_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/01_Security_Concepts/1.1.2_Security_Concepts_[video].txt",
+        "word_count": 743,
+        "has_content": true
+      },
+      "section_header": "Exploit",
+      "timestamp_range": "03:13-03:49"
+    },
+    {
+      "chunk_id": "1.1.2_chunk_7",
+      "content": "Because security is a constant balancing act between convenience and protection, you will constantly be looking at ways you can mitigate risk and threats while also maintaining an acceptable level of ease of use. However, by understanding the basic concepts of information security, you will have a much easier time assessing the risks to your systems and identifying the ways in which you can protect it.",
+      "summary": "Because security is a constant balancing act between convenience and protection, you will constantly be looking at ways you can mitigate risk and threats while also maintaining an acceptable level of ease of use. However, by understanding the basic concepts of information security, you will have a much easier time assessing the risks to your systems and identifying the ways in which you can protect it.",
+      "metadata": {
+        "chapter_num": "1",
+        "section_num": "1.1.2",
+        "title": "Security Concepts",
+        "content_type": "video",
+        "filename": "1.1.2_Security_Concepts_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/01_Security_Concepts/1.1.2_Security_Concepts_[video].txt",
+        "word_count": 743,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": "03:49-04:12"
+    }
+  ],
+  "num_chunks": 7,
+  "document_summary": "Security Concepts (video): The next security concept that you need to be aware of are threats. For example, a vulnerability could be a disgruntled internal employee who happens to be an information security professional and has an elevated level of access to a server system. Because security is a constant balancing act between convenience and protection, you will constantly be looking at ways you can mitigate risk and threats while also maintaining an acceptable level of ease of use."
+}

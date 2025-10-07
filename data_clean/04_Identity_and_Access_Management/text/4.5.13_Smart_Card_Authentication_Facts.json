@@ -14,7 +14,7 @@
     {
       "chunk_id": "4.5.13_chunk_1",
       "content": "Security Pro 8.0",
-      "summary": "Security Pro 8.0",
+      "summary": "Smart card authentication is a multi-factor security mechanism that combines something you have (the physical smart card) with something you know (PIN or password) to provide strong user verification. Smart cards contain embedded microprocessors or memory chips that store digital certificates and cryptographic keys, enabling secure authentication, digital signatures, and encrypted communications. This technology is commonly implemented in enterprise environments, government systems, and high-security applications to prevent unauthorized access and ensure identity verification through tamper-resistant hardware tokens.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.5.13",
@@ -31,7 +31,7 @@
     {
       "chunk_id": "4.5.13_chunk_2",
       "content": "This lesson covers the following topics: Smart cards Smart card benefits and weaknesses Smart Cards Smart cards are plastic cards similar to credit cards that have an embedded memory chip that contains encrypted authentication information. Be aware that smart cards: Use public key infrastructure (PKI) technology to store digital signatures, cryptography keys, and identification codes. Can authenticate a user when used in conjunction with a smart card reader connected to a computer system. Typically have RAM, ROM, programmable ROM, and a microprocessor integrated within the card itself. Have their own processor, allowing the card to perform its own cryptographic functions. Use a serial interface to connect to the card reader. Are powered externally by the smart card reader. Are generally considered to be tamper-proof.",
-      "summary": "4.5.13 Smart Card Authentication Facts: This lesson covers the following topics: Smart cards Smart card benefits and weaknesses Smart Cards Smart cards are plastic cards similar to credit cards that have an embedded memory chip that contains encrypted authentication information. Be aware that smart cards: Use public key infrastructure (PKI) technology to store digital signatures, cryptography keys, and identification codes.",
+      "summary": "Smart cards are plastic authentication devices with embedded memory chips that store encrypted digital signatures, cryptographic keys, and identification codes using PKI technology. These tamper-proof cards contain their own microprocessor and memory components (RAM, ROM, programmable ROM) to perform independent cryptographic functions when connected to external card readers. Smart cards provide strong multi-factor authentication by combining something you have (the physical card) with something you know (PIN or password) through their integrated processing capabilities.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.5.13",
@@ -48,7 +48,7 @@
     {
       "chunk_id": "4.5.13_chunk_3",
       "content": "Contact smart cards: these cards use a gold-plated contact pad that must physically touch the contact pad on a smart card reader. Contactless smart cards: these cards do not require physical contact with the reader device. Instead, these cards use Radio Frequency Identification (RFID) technology to communicate with the smart card reader. An antenna is wound around the edge of the card and activated when the card is within proximity of the card reader. Smart Card Benefits and Weaknesses",
-      "summary": "Can be divided into two categories:: Contact smart cards: these cards use a gold-plated contact pad that must physically touch the contact pad on a smart card reader. Contactless smart cards: these cards do not require physical contact with the reader device.",
+      "summary": "Smart cards are authentication devices categorized into two types: contact cards that require physical connection with gold-plated contact pads to card readers, and contactless cards that use RFID technology and proximity-based antennas for wireless communication with readers. Both card types provide secure authentication mechanisms but have distinct operational requirements and potential security vulnerabilities based on their communication methods.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.5.13",
@@ -65,7 +65,7 @@
     {
       "chunk_id": "4.5.13_chunk_4",
       "content": "They provide tamper-resistant storage for a user's private key and other personally identifying information (PII). They isolate security-related operations from the rest of the system. They allow security credentials to be portable.",
-      "summary": "Key benefits of smart cards include the following:: They provide tamper-resistant storage for a user's private key and other personally identifying information (PII). They isolate security-related operations from the rest of the system.",
+      "summary": "Smart cards provide tamper-resistant hardware storage for private keys and personally identifying information (PII), ensuring cryptographic credentials remain secure from physical and logical attacks. They isolate security operations from the host system to prevent compromise and enable portable authentication across multiple devices and networks. This combination of secure storage, system isolation, and portability makes smart cards effective for multi-factor authentication and identity management in enterprise environments.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.5.13",
@@ -82,7 +82,7 @@
     {
       "chunk_id": "4.5.13_chunk_5",
       "content": "Microprobing - this is the process of accessing the chip surface directly to observe, manipulate, and interfere with the circuit. Software attacks - these exploit vulnerabilities in the card's protocols or encryption methods. Eavesdropping - this captures transmission data produced by the card as it is used. Fault generation - this deliberately induces malfunctions in the card.",
-      "summary": "Smart cards are subject to the following weaknesses:: Microprobing - this is the process of accessing the chip surface directly to observe, manipulate, and interfere with the circuit. Software attacks - these exploit vulnerabilities in the card's protocols or encryption methods.",
+      "summary": "Smart cards face four primary attack vectors: microprobing involves direct physical access to manipulate chip circuits, software attacks exploit protocol and encryption vulnerabilities, eavesdropping captures transmitted data during card usage, and fault generation deliberately causes card malfunctions. These vulnerabilities require comprehensive security controls including physical tamper protection, secure protocols, encrypted communications, and fault-resistant design. Security professionals must implement layered defenses to mitigate these smart card authentication weaknesses.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.5.13",

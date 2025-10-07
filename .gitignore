@@ -21,4 +21,7 @@ Thumbs.db
 
 # Project specific
 *.log
+
+# Environment variables (contains API keys)
 .env
+.env.local

@@ -14,7 +14,7 @@
     {
       "chunk_id": "1.2.1_chunk_1",
       "content": "In this video, I'll discuss security control categories and types. As a security professional, your job is to protect the company's assets and business. This means that you're there to prevent hazardous events or to minimize their damage.",
-      "summary": "Control Categories and Types: In this video, I'll discuss security control categories and types. As a security professional, your job is to protect the company's assets and business.",
+      "summary": "Security professionals protect organizational assets by implementing security controls designed to prevent hazardous events or minimize their impact when they occur. Security controls are categorized into different types and classifications that help systematically address threats and vulnerabilities across the business environment. Understanding control categories and types is fundamental to developing comprehensive security strategies that safeguard company resources and operations.",
       "metadata": {
         "chapter_num": "1",
         "section_num": "1.2.1",
@@ -31,7 +31,7 @@
     {
       "chunk_id": "1.2.1_chunk_2",
       "content": "Let's get started. Managerial controls consist of management techniques and administrative procedures. These can include security policies, hiring policies, disaster recovery plans, or DPRs, and business continuity plans, or BCPs. You should always include written plans for how and when to escalate events and when you need to consult outside help.",
-      "summary": "Managerial: Managerial controls consist of management techniques and administrative procedures. These can include security policies, hiring policies, disaster recovery plans, or DPRs, and business continuity plans, or BCPs.",
+      "summary": "Managerial controls are administrative security measures that include security policies, hiring policies, disaster recovery plans (DRPs), and business continuity plans (BCPs) used to govern organizational security through management techniques. These controls must incorporate written escalation procedures that define when and how to escalate security events and when to engage external assistance. Managerial controls form the administrative foundation of an organization's security framework by establishing policies and procedures for security governance.",
       "metadata": {
         "chapter_num": "1",
         "section_num": "1.2.1",
@@ -48,7 +48,7 @@
     {
       "chunk_id": "1.2.1_chunk_3",
       "content": "Operational controls are ones that the security team performs everyday. These might include reviewing network monitoring data, ensuring that security cameras are working, and requiring visitors to sign in.",
-      "summary": "Operational controls are ones that the security team performs everyday. These might include reviewing network monitoring data, ensuring that security cameras are working, and requiring visitors to sign in.",
+      "summary": "Operational controls are daily security activities performed by security teams to maintain organizational protection, including network monitoring data review, security camera functionality verification, and visitor access management through sign-in procedures. These hands-on security measures represent routine administrative tasks that ensure continuous security posture maintenance. Operational controls differ from technical and administrative controls by focusing on day-to-day security operations and physical security management activities.",
       "metadata": {
         "chapter_num": "1",
         "section_num": "1.2.1",
@@ -65,7 +65,7 @@
     {
       "chunk_id": "1.2.1_chunk_4",
       "content": "Technical controls are based around software, applications, and security appliances. These controls vary greatly by company. Some examples you might see in your line of work are IDSs, IPSs, access control apps, and ASAs. We use preventative controls for security breaches, but you might see these tools used with other control types as well.",
-      "summary": "Technical: Technical controls are based around software, applications, and security appliances. We use preventative controls for security breaches, but you might see these tools used with other control types as well.",
+      "summary": "Technical controls are software-based security mechanisms including intrusion detection systems (IDS), intrusion prevention systems (IPS), access control applications, and adaptive security appliances (ASA) that vary by organizational implementation. These technical controls primarily function as preventative measures against security breaches but can be integrated with other control types for comprehensive security coverage.",
       "metadata": {
         "chapter_num": "1",
         "section_num": "1.2.1",
@@ -82,7 +82,7 @@
     {
       "chunk_id": "1.2.1_chunk_5",
       "content": "The easiest preventative control is an Advance Network Appliance, which is sometimes also called an Adaptive Security Appliance, or ASA. This is basically a firewall and router combination that's capable of hosting IDSs and IPSs. A less expensive preventative control is a simple updated antivirus, considering that these have improved drastically over the years. Office access control is also an excellent preventative control, especially if you're using biometrics.",
-      "summary": "Preventative: The easiest preventative control is an Advance Network Appliance, which is sometimes also called an Adaptive Security Appliance, or ASA. Office access control is also an excellent preventative control, especially if you're using biometrics.",
+      "summary": "Preventative security controls include Advanced Network Appliances (ASAs) that combine firewall, router, IDS, and IPS capabilities for comprehensive network protection. Cost-effective alternatives include modern updated antivirus solutions and physical office access controls using biometric authentication systems. These controls proactively block threats before they can compromise systems or facilities.",
       "metadata": {
         "chapter_num": "1",
         "section_num": "1.2.1",
@@ -99,7 +99,7 @@
     {
       "chunk_id": "1.2.1_chunk_6",
       "content": "Detective controls inform the security team of an event that's occurring or provide them with logs and artifacts to them help investigate the event further. Examples would be network monitoring applications, log collectors, real-time monitoring alerts, and intrusion detection systems, or IDSs.",
-      "summary": "Detective: Detective controls inform the security team of an event that's occurring or provide them with logs and artifacts to them help investigate the event further. Examples would be network monitoring applications, log collectors, real-time monitoring alerts, and intrusion detection systems, or IDSs.",
+      "summary": "Detective controls are security measures that identify and alert security teams to ongoing events or provide forensic evidence for incident investigation. These controls include network monitoring applications, log collectors, real-time monitoring alerts, and intrusion detection systems (IDSs) that enable threat detection and analysis. Detective controls serve as the eyes and ears of a security infrastructure, providing visibility into potential security incidents through continuous monitoring and data collection.",
       "metadata": {
         "chapter_num": "1",
         "section_num": "1.2.1",
@@ -116,7 +116,7 @@
     {
       "chunk_id": "1.2.1_chunk_7",
       "content": "Corrective controls are those that attempt to fix any damage caused by an event. These tools work during and after the course of the event. Think of this as a form of risk mitigation. For example, an intrusion prevention system, or IPS, is designed to intercept packets that are potentially malicious and either drop or isolate them. Another example is endpoint protection, which works to stop malicious data by looking at its signature or behavior. The deterrent control type discourages malicious actors from trying to breach a network.",
-      "summary": "Corrective: Another example is endpoint protection, which works to stop malicious data by looking at its signature or behavior. The deterrent control type discourages malicious actors from trying to breach a network.",
+      "summary": "Corrective controls are security measures that mitigate damage during and after security incidents by fixing or containing threats. Examples include intrusion prevention systems (IPS) that drop malicious packets and endpoint protection solutions that block threats based on signatures or behavioral analysis. These controls serve as risk mitigation tools that actively respond to security events to minimize impact.",
       "metadata": {
         "chapter_num": "1",
         "section_num": "1.2.1",
@@ -133,7 +133,7 @@
     {
       "chunk_id": "1.2.1_chunk_8",
       "content": "The more deterrents you have, the less likely it is that anyone will try. These could include internal security policies, access-protected doors for a server room, entry-point access restriction, biometric sensors, man traps, security cameras, security training, and security guards. Remember, the stronger the deterrents, the less likely it is that a breach occurs. Physical deterrents keep unauthorized people from physically accessing a company's assets.",
-      "summary": "Deterrent: These could include internal security policies, access-protected doors for a server room, entry-point access restriction, biometric sensors, man traps, security cameras, security training, and security guards. Remember, the stronger the deterrents, the less likely it is that a breach occurs.",
+      "summary": "Deterrent security controls reduce the likelihood of security breaches by discouraging unauthorized access attempts through visible protective measures. Physical deterrents include access-protected doors, biometric sensors, man traps, security cameras, and guards, while administrative deterrents encompass security policies and training programs. The effectiveness of deterrent controls increases with their strength and visibility, making potential attackers less likely to target protected assets.",
       "metadata": {
         "chapter_num": "1",
         "section_num": "1.2.1",
@@ -150,7 +150,7 @@
     {
       "chunk_id": "1.2.1_chunk_9",
       "content": "So locked doors, proximity cards, fences, cameras, and guards are all ways to physically protect your network. Motion detectors for after-hours monitoring is another example. Please note that device management is often overlooked by companies. With the prevalence of mobile devices, your company should be able to remotely wipe any devices that are lost or stolen. Let's look at some scenarios. Let's say that a biometric thumbprint scanner has been installed in the lobby of your building. It requires everyone to scan their thumb to gain access. A malicious actor tries to enter, but their print doesn't match. An access-denied alert is flashed on the screen, and the IT team is fully aware of what's happening. Usually, the imposter doesn't stay around to be questioned! Another common ploy is for an imposter to try and take advantage of a person's kindness. In this case, an imposter tries to gain entrance from a legitimate employee's proximity badge by claiming to have forgotten theirs. Hopefully, the employee remembers their security training and politely tells the imposter, \"No.\" That's it for this lesson.",
-      "summary": "Physical: So locked doors, proximity cards, fences, cameras, and guards are all ways to physically protect your network. Please note that device management is often overlooked by companies.",
+      "summary": "Physical security controls include locked doors, proximity cards, fences, cameras, guards, and motion detectors to protect network infrastructure from unauthorized access. Device management requires remote wipe capabilities for lost or stolen mobile devices, while biometric scanners like thumbprint readers provide access control with real-time alerting for failed authentication attempts. Security awareness training helps employees recognize and resist social engineering tactics such as tailgating attempts where imposters claim to have forgotten their access credentials.",
       "metadata": {
         "chapter_num": "1",
         "section_num": "1.2.1",
@@ -167,7 +167,7 @@
     {
       "chunk_id": "1.2.1_chunk_10",
       "content": "In this lesson, we learned about control categories as well as control types. Categories include managerial, operational, and technical. The security control types we learned about are preventative, corrective, deterrent, and physical. You should use all of these tools together to help you create a secure network.",
-      "summary": "In this lesson, we learned about control categories as well as control types. The security control types we learned about are preventative, corrective, deterrent, and physical.",
+      "summary": "Security controls are organized into three categories (managerial, operational, and technical) and four types (preventative, corrective, deterrent, and physical) that work together to create comprehensive network security. Effective security implementation requires combining all control categories and types rather than relying on individual security measures. This layered approach ensures multiple defensive mechanisms protect against various threat vectors and security incidents.",
       "metadata": {
         "chapter_num": "1",
         "section_num": "1.2.1",

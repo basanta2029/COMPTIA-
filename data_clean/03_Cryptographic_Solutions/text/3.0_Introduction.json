@@ -14,7 +14,7 @@
     {
       "chunk_id": "3.0_chunk_1",
       "content": "Security Pro 8.0",
-      "summary": "Security Pro 8.0",
+      "summary": "Security Pro 8.0 introduces fundamental cybersecurity concepts essential for CompTIA Security+ certification, covering core security principles, threat identification, and risk management frameworks. This foundational chapter establishes critical security terminology and baseline knowledge required for implementing effective security controls across enterprise environments. The content provides actionable security fundamentals that form the basis for advanced topics in cryptography, access management, and network protection.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.0",
@@ -31,7 +31,7 @@
     {
       "chunk_id": "3.0_chunk_2",
       "content": "In our increasingly digital world, protecting valuable information has never been more critical. This module is designed to put you in the shoes of both defender and attacker, helping you develop an understanding of how cyber threats can impact individuals, workplaces, and communities. You'll gain insight into the types of vulnerabilities that exist in systems and people, and learn how attackers work to exploit them. By understanding their tactics, you will become better prepared to spot and stop threats before they can cause harm. Throughout your learning journey, you will encounter scenarios drawn from real-world incidents and explore the technologies and social techniques used by cyber adversaries. The knowledge and skills you acquire in this module will empower you to recognize risks, take proactive steps to defend against attacks, and make more informed decisions about security in your personal and professional life. Whether you're new to cybersecurity or seeking to sharpen your defenses, this course offers essential strategies that every security-minded professional should master.",
-      "summary": "3.0 Cryptographic Solutions: This module is designed to put you in the shoes of both defender and attacker, helping you develop an understanding of how cyber threats can impact individuals, workplaces, and communities. Whether you're new to cybersecurity or seeking to sharpen your defenses, this course offers essential strategies that every security-minded professional should master.",
+      "summary": "This CompTIA Security+ cryptographic solutions module teaches threat identification and vulnerability assessment by examining both attacker and defender perspectives through real-world cyber incident scenarios. Students learn to recognize system and human vulnerabilities, understand adversary tactics including social engineering techniques, and develop proactive defense strategies. The training provides essential skills for spotting threats, implementing security controls, and making informed cybersecurity decisions in personal and professional environments.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.0",
@@ -48,7 +48,7 @@
     {
       "chunk_id": "3.0_chunk_3",
       "content": "Identify and explain common types of cyberattacks and the tactics attackers use. Recognize various social engineering strategies and understand how to defend against them. Describe different categories of malware and the damage they can cause. Evaluate weaknesses and vulnerabilities within systems and organizations. Apply basic mitigation techniques to reduce risk and enhance security posture.",
-      "summary": "In this module, you will:: Identify and explain common types of cyberattacks and the tactics attackers use. Apply basic mitigation techniques to reduce risk and enhance security posture.",
+      "summary": "This module covers identification and defense against common cyberattacks, social engineering tactics, and malware categories that threaten organizational security. Students learn to evaluate system vulnerabilities and weaknesses while applying fundamental mitigation techniques to reduce risk exposure. The content emphasizes practical threat recognition and defensive strategies to strengthen overall security posture against diverse attack vectors.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.0",

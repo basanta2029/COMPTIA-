@@ -14,7 +14,7 @@
     {
       "chunk_id": "3.2.2_chunk_1",
       "content": "Many encryption systems are managed by the operating system or other software, but there are also some hardware options for encryption. In this lesson, we'll look at the two of the most common hardware options, the TPM and HSM.",
-      "summary": "Hardware-Based Encryption: Many encryption systems are managed by the operating system or other software, but there are also some hardware options for encryption. In this lesson, we'll look at the two of the most common hardware options, the TPM and HSM.",
+      "summary": "Hardware-based encryption devices provide dedicated physical components for cryptographic operations, offering enhanced security compared to software-based encryption managed by operating systems. The two primary hardware encryption solutions are Trusted Platform Module (TPM) chips, which provide secure key storage and cryptographic functions at the device level, and Hardware Security Modules (HSMs), which offer enterprise-grade cryptographic processing and key management capabilities.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.2.2",
@@ -31,7 +31,7 @@
     {
       "chunk_id": "3.2.2_chunk_2",
       "content": "The Trusted Platform Module, or TPM, is a physical chip that resides on the motherboard. It's responsible for providing some cryptographic services. Using a hardware chip means that the encryption system itself can't be attacked by malicious software. The latest version, TPM 2.0, was released in 2014. TPM chips can be used for checking key system components at startup and for protecting and generating encryption keys and passwords. One key function of the TPM chip is to check key system components during startup. When the system is turned on, the TPM checks to make sure everything seems normal. If the TPM detects anything out of sorts, it doesn't allow the system to boot, which prevents data from being extracted. The TPM is also used to store and generate encryption keys. In essence, TPM provides an encrypted lockbox where user passwords, encryption keys, and digital certificates can be kept safe. For example, Windows 10 can pull these keys directly from the TPM without loading them into the RAM, where they would be more vulnerable to attack. When encryption keys are generated, they usually need a random number to be generated too. This is a weak spot in encryption since most software number generators contain patterns and are not truly random. The TPM chip can be used to generate completely random numbers for the encryption process, which increases the effectiveness of the encryption keys. A TPM chip can also greatly increase the security of a system. Some popular Windows features such as BitLocker and Credential Guard rely on the TPM chip to perform at their most secure level.",
-      "summary": "TPM: Using a hardware chip means that the encryption system itself can't be attacked by malicious software. TPM chips can be used for checking key system components at startup and for protecting and generating encryption keys and passwords.",
+      "summary": "The Trusted Platform Module (TPM) is a hardware-based security chip on the motherboard that provides cryptographic services including secure boot verification, encryption key generation and storage, and true random number generation for enhanced security. TPM protects against software-based attacks by storing encryption keys, passwords, and certificates in hardware rather than vulnerable RAM, and prevents system boot if tampering is detected. Windows security features like BitLocker and Credential Guard require TPM for maximum security effectiveness.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.2.2",
@@ -48,7 +48,7 @@
     {
       "chunk_id": "3.2.2_chunk_3",
       "content": "A hardware security module, or HSM, is very similar to a TPM. You might also hear these devices referred to as a Personal Computer Security Module or Secure Application Module. One of key differences is that an HSM is a removable device, whereas the TPM is built into the motherboard. One major benefit of HSMs is that they're more powerful than TPM chips. HSMs are designed to be powerful cryptographic devices with better hardware capabilities. This allows HSMs to perform multiple security operations for multiple users. Some HSM devices can even be attached to a server to handle cryptographic functions for an entire network. HSM devices perform many of the same functions as a TPM, such as generating and storing encryption keys, but they can also be used to generate and validate digital signatures and generate keys used in smart cards. Consumer-grade HSM devices have become much more affordable over the past few years, making them more accessible than before.",
-      "summary": "Hardware Security Module (HSM): A hardware security module, or HSM, is very similar to a TPM. You might also hear these devices referred to as a Personal Computer Security Module or Secure Application Module.",
+      "summary": "A Hardware Security Module (HSM) is a removable cryptographic device that provides more powerful security capabilities than built-in TPM chips, enabling multiple security operations for multiple users including encryption key generation/storage, digital signature validation, and smart card key generation. HSMs can be attached to servers to handle cryptographic functions for entire networks, making them scalable solutions for enterprise security. Consumer-grade HSM devices have become increasingly affordable and accessible for broader deployment in security infrastructures.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.2.2",
@@ -65,7 +65,7 @@
     {
       "chunk_id": "3.2.2_chunk_4",
       "content": "And that's it for this lesson. In this video, we've covered two options for hardware-based encryption. The TPM chip is built into the motherboard. It checks key hardware components during startup and generates and stores encryption keys. And HSMs are add-on devices that perform many of the same functions as a TPM chip, but are much more powerful.",
-      "summary": "In this video, we've covered two options for hardware-based encryption. It checks key hardware components during startup and generates and stores encryption keys.",
+      "summary": "Hardware-based encryption utilizes two primary devices: TPM (Trusted Platform Module) chips built into motherboards that verify hardware components during boot and manage encryption keys, and HSMs (Hardware Security Modules) which are external add-on devices providing more powerful cryptographic processing capabilities. Both solutions offer hardware-level security by generating, storing, and managing encryption keys outside of software-based systems.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.2.2",

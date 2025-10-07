@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "chapter_num": "3",
+    "section_num": "3.4.2",
+    "title": "Encrypt Files",
+    "content_type": "video",
+    "filename": "3.4.2_Encrypt_Files_[video].txt",
+    "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.4.2_Encrypt_Files_[video].txt",
+    "word_count": 1234,
+    "has_content": true
+  },
+  "full_content": "In this demonstration, we're going to talk about protecting sensitive files with encryption using the Encrypting File System, or EFS, on Windows. We'll demonstrate with files that are stored on an NTFS file system volume. Let's get started. We begin by going down here to File Explorer. I'm going to go to my C: drive, and you can see that I've created this folder called Confidential. I have two different files in here. The first one is my Org Chart, and the second one is where I keep my performance reviews. Now, the Org Chart file isn't really sensitive at all. Pretty much everybody in the organization knows who reports to who. The Performance Reviews file, on the other hand, is highly confidential. I don't want any of my employees to access it. One thing I can do to prevent this is to encrypt the file so that only my user account can open it. To do this, I right-click the file, go to Properties, and then to Advanced. I can either compress the file's contents or encrypt it. Notice that you can't select both at the same time. We're just going to select Encrypt contents to secure data, click OK, and click Apply. We're prompted to either encrypt the file and its parent folder, which would encrypt the entire Confidential folder and everything in it, or the file alone. In this case, we want to select Encrypt only the file. Select OK and then Ok again. You can see that, right here, there's a little lock on the icon now. That means that the file is now fully encrypted. To clarify, I'm logged in as the TestOut user right now. At this point, only this account is allowed to access this file's contents. If I double-click it, I can easily open it up and see everything. I read that all my employees have met expectations. That means I have some really great employees. Let's move on to testing what we've done by logging on as a different user—Kim Sanders—whose user account is named ksanders. Now, ksanders is a member of my administrative group, and so she's obviously an administrator on this system. Let's go ahead and go back to the file system the same way we did before—File Explorer > C: drive > Confidential. We see the encrypted Performance Reviews file here. Let's try to open it. You can see that access to this file has been denied to this user because, although she's a system administrator, she doesn't have access to this specific file. This file wasn't set up with NTFS permissions that are blocking the access. It's the encryption. Since ksanders is an administrator, she technically has access to all the data that other users have on the system. Let's go ahead and close this window. By default, only the user who encrypted the file is allowed to decrypt it and access its contents, but we can change that. We're going to go ahead and sign out of ksanders and log back in to our TestOut user account again. We'll navigate again to File Explorer > C: drive > Confidential > Performance Reviews. Right-click, go to Properties, and click the Advanced button. Here you can see that the Details option is now available, whereas before we encrypted the file, it wasn't. If we go into Details, we can specify other users that we want to give file access to. Let's click Add. Notice that ksanders isn't listed here. It just shows my TestOut user. The issue is that my TestOut user has a certificate. It was created automatically when I encrypted this file. The ksanders user, however, doesn't have a certificate. That means that before we can add the ksanders user account to the list of users who are allowed to access the Performance Reviews file, we have to create a certificate for her, which we do in the ksanders profile. So let's go back out again and switch our user. Sign out. Now log back in as ksanders and provide the password. With the Start button, search for Control Panel > User Accounts > User Accounts again. Here, we'll go to Manage your file encryption certificates. This wizard easily walks us through creating a file encryption certificate. We just need to hit Next. Then we click Create a new certificate and Next again. We have some options here. The basic one is to create a self-signed certificate. If you had a smart card or if your domain had a certificate authority, you could use either of those as well. Click Next. We're prompted to back up the certificate after it's created. That's a really good idea. Let's say that something were to happen and we needed to re-create the ksanders user account. The new key won't be the same, and ksanders will lose access to all the files that she encrypted on the system. But if you have a backup of the original encryption key, that'll be the one that's used to encrypt the file. Instead of creating a new key, you just restore your old one from backup. You won't lose access to anything. We won't worry about that specifically today, but just know that this is important to think about. I'll just click Back up later and Next to move on. We need to check the I'll update my encrypted files later box and click Next as well before we can keep going. You now see that our certificate is created. Click Close. Now what we need to do is go back in to our TestOut user account and allow Kim Sanders access via that certificate. Let's close this and go back to Sign out. Now we're going to log back in as our TestOut user once again. Let's go back to our file system and to the Confidential folder. We'll return to the Performance Reviews file, click Properties, go to Advanced, and then to Details. We need to click Add, select More choices, and then you can see the ksanders certificate here. Just select it and click OK. We're warned here that the certificate is self-signed, and it's not issued by a trusted root certificate authority. It wants to know if we trust it. Since we created it, we should obviously trust it. I click OK, OK again, and Apply. And now, one last time, we're going to sign out and back in to the ksanders user account. Select Kim Sanders and back through File Explorer > C: drive > Confidential > Performance Reviews and double-click. As you can see, the file opened without a problem. Now ksanders has access to an encrypted file that was encrypted by another user. So that's it for this demonstration. In this demo, we talked about EFS file encryption on Windows. We first talked about how this works with the NTFS file system. Then we encrypted a sensitive file for the TestOut user account. After that, we switched users and created a certificate for the ksanders user account, and we assigned that account access to the encrypted file with the security certificate.",
+  "chunks": [
+    {
+      "chunk_id": "3.4.2_chunk_1",
+      "content": "In this demonstration, we're going to talk about protecting sensitive files with encryption using the Encrypting File System, or EFS, on Windows. We'll demonstrate with files that are stored on an NTFS file system volume. Let's get started.",
+      "summary": "Encrypt Files: In this demonstration, we're going to talk about protecting sensitive files with encryption using the Encrypting File System, or EFS, on Windows. We'll demonstrate with files that are stored on an NTFS file system volume.",
+      "metadata": {
+        "chapter_num": "3",
+        "section_num": "3.4.2",
+        "title": "Encrypt Files",
+        "content_type": "video",
+        "filename": "3.4.2_Encrypt_Files_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.4.2_Encrypt_Files_[video].txt",
+        "word_count": 1234,
+        "has_content": true
+      },
+      "section_header": "Encrypt Files",
+      "timestamp_range": "00:00-00:20"
+    },
+    {
+      "chunk_id": "3.4.2_chunk_2",
+      "content": "We begin by going down here to File Explorer. I'm going to go to my C: drive, and you can see that I've created this folder called Confidential. I have two different files in here. The first one is my Org Chart, and the second one is where I keep my performance reviews. Now, the Org Chart file isn't really sensitive at all. Pretty much everybody in the organization knows who reports to who. The Performance Reviews file, on the other hand, is highly confidential. I don't want any of my employees to access it. One thing I can do to prevent this is to encrypt the file so that only my user account can open it. To do this, I right-click the file, go to Properties, and then to Advanced. I can either compress the file's contents or encrypt it. Notice that you can't select both at the same time. We're just going to select Encrypt contents to secure data, click OK, and click Apply. We're prompted to either encrypt the file and its parent folder, which would encrypt the entire Confidential folder and everything in it, or the file alone. In this case, we want to select Encrypt only the file. Select OK and then Ok again. You can see that, right here, there's a little lock on the icon now. That means that the file is now fully encrypted. To clarify, I'm logged in as the TestOut user right now. At this point, only this account is allowed to access this file's contents. If I double-click it, I can easily open it up and see everything. I read that all my employees have met expectations. That means I have some really great employees.",
+      "summary": "[Encrypt Files] Encrypt a File: I don't want any of my employees to access it. We're just going to select Encrypt contents to secure data, click OK, and click Apply.",
+      "metadata": {
+        "chapter_num": "3",
+        "section_num": "3.4.2",
+        "title": "Encrypt Files",
+        "content_type": "video",
+        "filename": "3.4.2_Encrypt_Files_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.4.2_Encrypt_Files_[video].txt",
+        "word_count": 1234,
+        "has_content": true
+      },
+      "section_header": "Encrypt a File",
+      "timestamp_range": "00:20-01:56"
+    },
+    {
+      "chunk_id": "3.4.2_chunk_3",
+      "content": "Let's move on to testing what we've done by logging on as a different user—Kim Sanders—whose user account is named ksanders. Now, ksanders is a member of my administrative group, and so she's obviously an administrator on this system. Let's go ahead and go back to the file system the same way we did before—File Explorer > C: drive > Confidential. We see the encrypted Performance Reviews file here. Let's try to open it. You can see that access to this file has been denied to this user because, although she's a system administrator, she doesn't have access to this specific file. This file wasn't set up with NTFS permissions that are blocking the access. It's the encryption. Since ksanders is an administrator, she technically has access to all the data that other users have on the system. Let's go ahead and close this window.",
+      "summary": "Test the Encryption: You can see that access to this file has been denied to this user because, although she's a system administrator, she doesn't have access to this specific file. Since ksanders is an administrator, she technically has access to all the data that other users have on the system.",
+      "metadata": {
+        "chapter_num": "3",
+        "section_num": "3.4.2",
+        "title": "Encrypt Files",
+        "content_type": "video",
+        "filename": "3.4.2_Encrypt_Files_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.4.2_Encrypt_Files_[video].txt",
+        "word_count": 1234,
+        "has_content": true
+      },
+      "section_header": "Test the Encryption",
+      "timestamp_range": "01:56-02:54"
+    },
+    {
+      "chunk_id": "3.4.2_chunk_4",
+      "content": "By default, only the user who encrypted the file is allowed to decrypt it and access its contents, but we can change that. We're going to go ahead and sign out of ksanders and log back in to our TestOut user account again. We'll navigate again to File Explorer > C: drive > Confidential > Performance Reviews. Right-click, go to Properties, and click the Advanced button. Here you can see that the Details option is now available, whereas before we encrypted the file, it wasn't. If we go into Details, we can specify other users that we want to give file access to. Let's click Add. Notice that ksanders isn't listed here. It just shows my TestOut user. The issue is that my TestOut user has a certificate. It was created automatically when I encrypted this file. The ksanders user, however, doesn't have a certificate.",
+      "summary": "Grant Access to Another User: By default, only the user who encrypted the file is allowed to decrypt it and access its contents, but we can change that. If we go into Details, we can specify other users that we want to give file access to.",
+      "metadata": {
+        "chapter_num": "3",
+        "section_num": "3.4.2",
+        "title": "Encrypt Files",
+        "content_type": "video",
+        "filename": "3.4.2_Encrypt_Files_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.4.2_Encrypt_Files_[video].txt",
+        "word_count": 1234,
+        "has_content": true
+      },
+      "section_header": "Grant Access to Another User",
+      "timestamp_range": "02:54-03:59"
+    },
+    {
+      "chunk_id": "3.4.2_chunk_5",
+      "content": "That means that before we can add the ksanders user account to the list of users who are allowed to access the Performance Reviews file, we have to create a certificate for her, which we do in the ksanders profile. So let's go back out again and switch our user. Sign out. Now log back in as ksanders and provide the password. With the Start button, search for Control Panel > User Accounts > User Accounts again. Here, we'll go to Manage your file encryption certificates. This wizard easily walks us through creating a file encryption certificate. We just need to hit Next. Then we click Create a new certificate and Next again. We have some options here. The basic one is to create a self-signed certificate. If you had a smart card or if your domain had a certificate authority, you could use either of those as well. Click Next. We're prompted to back up the certificate after it's created. That's a really good idea. Let's say that something were to happen and we needed to re-create the ksanders user account. The new key won't be the same, and ksanders will lose access to all the files that she encrypted on the system.",
+      "summary": "Create a File Encryption Certificate: That means that before we can add the ksanders user account to the list of users who are allowed to access the Performance Reviews file, we have to create a certificate for her, which we do in the ksanders profile. With the Start button, search for Control Panel > User Accounts > User Accounts again.",
+      "metadata": {
+        "chapter_num": "3",
+        "section_num": "3.4.2",
+        "title": "Encrypt Files",
+        "content_type": "video",
+        "filename": "3.4.2_Encrypt_Files_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.4.2_Encrypt_Files_[video].txt",
+        "word_count": 1234,
+        "has_content": true
+      },
+      "section_header": "Create a File Encryption Certificate",
+      "timestamp_range": "03:59-05:20"
+    },
+    {
+      "chunk_id": "3.4.2_chunk_6",
+      "content": "But if you have a backup of the original encryption key, that'll be the one that's used to encrypt the file. Instead of creating a new key, you just restore your old one from backup. You won't lose access to anything. We won't worry about that specifically today, but just know that this is important to think about. I'll just click Back up later and Next to move on. We need to check the I'll update my encrypted files later box and click Next as well before we can keep going. You now see that our certificate is created. Click Close. Now what we need to do is go back in to our TestOut user account and allow Kim Sanders access via that certificate. Let's close this and go back to Sign out. Now we're going to log back in as our TestOut user once again. Let's go back to our file system and to the Confidential folder.",
+      "summary": "Back Up the Encryption Key: But if you have a backup of the original encryption key, that'll be the one that's used to encrypt the file. Now what we need to do is go back in to our TestOut user account and allow Kim Sanders access via that certificate.",
+      "metadata": {
+        "chapter_num": "3",
+        "section_num": "3.4.2",
+        "title": "Encrypt Files",
+        "content_type": "video",
+        "filename": "3.4.2_Encrypt_Files_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.4.2_Encrypt_Files_[video].txt",
+        "word_count": 1234,
+        "has_content": true
+      },
+      "section_header": "Back Up the Encryption Key",
+      "timestamp_range": "05:20-06:16"
+    },
+    {
+      "chunk_id": "3.4.2_chunk_7",
+      "content": "We'll return to the Performance Reviews file, click Properties, go to Advanced, and then to Details. We need to click Add, select More choices, and then you can see the ksanders certificate here. Just select it and click OK. We're warned here that the certificate is self-signed, and it's not issued by a trusted root certificate authority. It wants to know if we trust it. Since we created it, we should obviously trust it. I click OK, OK again, and Apply. And now, one last time, we're going to sign out and back in to the ksanders user account. Select Kim Sanders and back through File Explorer > C: drive > Confidential > Performance Reviews and double-click. As you can see, the file opened without a problem. Now ksanders has access to an encrypted file that was encrypted by another user.",
+      "summary": "Add Another User: We'll return to the Performance Reviews file, click Properties, go to Advanced, and then to Details. Now ksanders has access to an encrypted file that was encrypted by another user.",
+      "metadata": {
+        "chapter_num": "3",
+        "section_num": "3.4.2",
+        "title": "Encrypt Files",
+        "content_type": "video",
+        "filename": "3.4.2_Encrypt_Files_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.4.2_Encrypt_Files_[video].txt",
+        "word_count": 1234,
+        "has_content": true
+      },
+      "section_header": "Add Another User",
+      "timestamp_range": "06:16-07:26"
+    },
+    {
+      "chunk_id": "3.4.2_chunk_8",
+      "content": "So that's it for this demonstration. In this demo, we talked about EFS file encryption on Windows. We first talked about how this works with the NTFS file system. Then we encrypted a sensitive file for the TestOut user account. After that, we switched users and created a certificate for the ksanders user account, and we assigned that account access to the encrypted file with the security certificate.",
+      "summary": "In this demo, we talked about EFS file encryption on Windows. After that, we switched users and created a certificate for the ksanders user account, and we assigned that account access to the encrypted file with the security certificate.",
+      "metadata": {
+        "chapter_num": "3",
+        "section_num": "3.4.2",
+        "title": "Encrypt Files",
+        "content_type": "video",
+        "filename": "3.4.2_Encrypt_Files_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/03_Cryptographic_Solutions/3.4.2_Encrypt_Files_[video].txt",
+        "word_count": 1234,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": "07:26-07:53"
+    }
+  ],
+  "num_chunks": 8,
+  "document_summary": "Encrypt Files (video): In this demonstration, we're going to talk about protecting sensitive files with encryption using the Encrypting File System, or EFS, on Windows. Since ksanders is an administrator, she technically has access to all the data that other users have on the system. After that, we switched users and created a certificate for the ksanders user account, and we assigned that account access to the encrypted file with the security certificate."
+}

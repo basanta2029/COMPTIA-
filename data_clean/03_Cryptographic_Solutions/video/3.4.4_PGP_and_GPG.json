@@ -14,7 +14,7 @@
     {
       "chunk_id": "3.4.4_chunk_1",
       "content": "When you're encrypting files or emails, you need the help of a utility. Windows automates this process with either BitLocker or EFS. In a Unix-based operating system, such as Linux or Apple's OS X, we can use GNU Privacy Guard, or GPG. GPG is based on an older utility, Pretty Good Privacy, or PGP. In this lesson, we'll cover how both utilities work and how to use them.",
-      "summary": "PGP and GPG: When you're encrypting files or emails, you need the help of a utility. In a Unix-based operating system, such as Linux or Apple's OS X, we can use GNU Privacy Guard, or GPG.",
+      "summary": "PGP (Pretty Good Privacy) and GPG (GNU Privacy Guard) are encryption utilities used to secure files and emails, with GPG serving as the modern implementation for Unix-based systems like Linux and macOS. While Windows uses BitLocker or EFS for automated encryption, GPG provides cross-platform encryption capabilities based on the original PGP framework. These tools enable users to implement strong cryptographic protection for sensitive data through file and email encryption processes.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.4.4",
@@ -31,7 +31,7 @@
     {
       "chunk_id": "3.4.4_chunk_2",
       "content": "PGP is an encryption program first developed in 1991 based on the OpenPGP standard. PGP combines the use of symmetric and asymmetric keys and can be used to send encrypted messages and encrypt data. To encrypt data, PGP generates a large, random one-time use session key that's used for encryption. The session key is then encrypted using the receiver's public key, and both are combined to send the encrypted message. When the receiver gets the message, they use their private key to decrypt the session key, which is then used to decrypt the message. Even though PGP is an old utility, it's still considered the standard for encrypting messages, because at the time this video was recorded, it's never been cracked. PGP was purchased a while ago and commercialized. It's owned by NortonLifeLock, formally known as Symantec, and provides products that can protect all sorts of devices, even smartphones.",
-      "summary": "Pretty Good Privacy (PGP): PGP is an encryption program first developed in 1991 based on the OpenPGP standard. To encrypt data, PGP generates a large, random one-time use session key that's used for encryption.",
+      "summary": "PGP (Pretty Good Privacy) is an encryption program developed in 1991 that combines symmetric and asymmetric cryptography by generating a random session key for data encryption, then encrypting that session key with the recipient's public key for secure message transmission. The recipient uses their private key to decrypt the session key, which then decrypts the actual message. PGP remains the gold standard for message encryption due to its unbroken security record and is now commercially available through NortonLifeLock for protecting various devices including smartphones.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.4.4",
@@ -48,7 +48,7 @@
     {
       "chunk_id": "3.4.4_chunk_3",
       "content": "In response to PGP becoming a commercial product, GNU Privacy Guard was created in 1999. GPG is a command line utility that's used to encrypt and decrypt data and messages. GPG functions just like PGP. It uses both symmetric and asymmetric keys to encrypt and secure data and messages. To generate a random session key, the user performs actions on the computer, such as typing on the keyboard or moving the mouse. This helps to ensure that the key is truly random. Because it's an open-sourced utility, GPG can be used on many different systems, including Windows, Linux, Android, and Apple's OS X.",
-      "summary": "GNU Privacy Guard (GPG): GPG is a command line utility that's used to encrypt and decrypt data and messages. It uses both symmetric and asymmetric keys to encrypt and secure data and messages.",
+      "summary": "GNU Privacy Guard (GPG) is an open-source command line utility created in 1999 that functions like PGP, using both symmetric and asymmetric encryption to secure data and messages across multiple operating systems including Windows, Linux, Android, and macOS. GPG generates truly random session keys through user actions like keyboard typing and mouse movements, ensuring strong cryptographic security. As an open-source alternative to commercial PGP, GPG provides cross-platform encryption capabilities for securing sensitive communications and data.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.4.4",
@@ -65,7 +65,7 @@
     {
       "chunk_id": "3.4.4_chunk_4",
       "content": "That wraps up this lesson. In this video, we looked at two popular utilities for encrypting files and messages, Pretty Good Privacy and GNU Privacy Guard. Both utilities use a hybrid cryptographic model and are very secure. The biggest difference between them is that PGP is a commercial product, and GPG is a free open-source utility.",
-      "summary": "In this video, we looked at two popular utilities for encrypting files and messages, Pretty Good Privacy and GNU Privacy Guard. Both utilities use a hybrid cryptographic model and are very secure.",
+      "summary": "Pretty Good Privacy (PGP) and GNU Privacy Guard (GPG) are file and message encryption utilities that implement hybrid cryptographic models combining symmetric and asymmetric encryption for enhanced security. PGP operates as a commercial solution while GPG provides equivalent functionality as a free, open-source alternative. Both tools enable secure communication and data protection through robust encryption mechanisms suitable for enterprise and personal use.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.4.4",

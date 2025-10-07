@@ -1,0 +1,85 @@
+{
+  "metadata": {
+    "chapter_num": "4",
+    "section_num": "4.9.4",
+    "title": "LDAP Authentication Facts",
+    "content_type": "text",
+    "filename": "4.9.4_LDAP_Authentication_Facts_[text].txt",
+    "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.9.4_LDAP_Authentication_Facts_[text].txt",
+    "word_count": 486,
+    "has_content": true
+  },
+  "full_content": "Security Pro 8.0 This lesson covers the following topics: Directory services Securing directory services Directory Services A directory service stores information about users, computers, security groups/roles, and services. Each object in the directory has several attributes. The directory schema describes the types of attributes, what information they contain, and whether they are required or optional. For products from different vendors to be interoperable, most directory services are based on the Lightweight Directory Access Protocol (LDAP), which was developed from a standard called X.500. Is a collection of attributes that define a unique identifier for any given resource. Is made up of attribute-value pairs, separated by commas. The most specific attribute is listed first, and successive attributes become progressively broader. This most specific attribute is the relative distinguished name, as it uniquely identifies the object within the context of successive (parent) attribute values. Some of the attributes commonly used include common name (CN), organizational unit (OU), organization (O), country (C), and domain component (DC). CN=WIDGETWEB, OU=Marketing, O=Widget, C=UK, DC=widget, DC=foo Securing Directory Services A network directory lists the subjects (principally users, computers, and services), objects (such as directories and files) available on the network, and subjects' permissions over objects. A directory facilitates authentication and authorization and must be maintained as a highly secure service. Most directory services are based on the Lightweight Directory Access Protocol (LDAP), running over port 389. The basic protocol provides no security, and all transmissions are plaintext, making it vulnerable to sniffing and on-path attacks. Authentication (referred to as binding to the server) can be implemented in the following ways: No Authentication — means anonymous access is granted to the directory. Simple Bind — means the client must supply its distinguished name (DN) and password, passed as plaintext. Simple Authentication and Security Layer (SASL) — means the client and server negotiate using a supported authentication mechanism, such as Kerberos. The STARTTLS command can require encryption (sealing) and message integrity (signing). This is the preferred mechanism for Microsoft's Active Directory (AD) implementation of LDAP. LDAP Secure (LDAPS) — means the server is installed with a digital certificate, which it uses to set up a secure tunnel for the user credential exchange. LDAPS uses port 636. If secure access is required, anonymous and simple authentication methods should be disabled on the server. Generally, two access levels must be granted on the directory: read-only access (query) and read/write access (update). This is implemented using an access control policy, but the precise mechanism is vendor-specific and not specified by the LDAP standards documentation. Unless hosting a public service, the LDAP directory server should only be accessible from the private network. This means that the LDAP port should be blocked by a firewall from accessing the public interface. If there is integration with other services over the internet, ideally, only authorized IPs should be permitted.",
+  "chunks": [
+    {
+      "chunk_id": "4.9.4_chunk_1",
+      "content": "Security Pro 8.0",
+      "summary": "Security Pro 8.0",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.9.4",
+        "title": "LDAP Authentication Facts",
+        "content_type": "text",
+        "filename": "4.9.4_LDAP_Authentication_Facts_[text].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.9.4_LDAP_Authentication_Facts_[text].txt",
+        "word_count": 486,
+        "has_content": true
+      },
+      "section_header": "Introduction",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "4.9.4_chunk_2",
+      "content": "This lesson covers the following topics: Directory services Securing directory services Directory Services A directory service stores information about users, computers, security groups/roles, and services. Each object in the directory has several attributes. The directory schema describes the types of attributes, what information they contain, and whether they are required or optional. For products from different vendors to be interoperable, most directory services are based on the Lightweight Directory Access Protocol (LDAP), which was developed from a standard called X.500.",
+      "summary": "4.9.4 LDAP Authentication Facts: This lesson covers the following topics: Directory services Securing directory services Directory Services A directory service stores information about users, computers, security groups/roles, and services. For products from different vendors to be interoperable, most directory services are based on the Lightweight Directory Access Protocol (LDAP), which was developed from a standard called X.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.9.4",
+        "title": "LDAP Authentication Facts",
+        "content_type": "text",
+        "filename": "4.9.4_LDAP_Authentication_Facts_[text].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.9.4_LDAP_Authentication_Facts_[text].txt",
+        "word_count": 486,
+        "has_content": true
+      },
+      "section_header": "4.9.4 LDAP Authentication Facts",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "4.9.4_chunk_3",
+      "content": "Is a collection of attributes that define a unique identifier for any given resource. Is made up of attribute-value pairs, separated by commas. The most specific attribute is listed first, and successive attributes become progressively broader. This most specific attribute is the relative distinguished name, as it uniquely identifies the object within the context of successive (parent) attribute values. Some of the attributes commonly used include common name (CN), organizational unit (OU), organization (O), country (C), and domain component (DC).",
+      "summary": "Within an X.500-like directory, a distinguished name (DN):: Is a collection of attributes that define a unique identifier for any given resource. The most specific attribute is listed first, and successive attributes become progressively broader.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.9.4",
+        "title": "LDAP Authentication Facts",
+        "content_type": "text",
+        "filename": "4.9.4_LDAP_Authentication_Facts_[text].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.9.4_LDAP_Authentication_Facts_[text].txt",
+        "word_count": 486,
+        "has_content": true
+      },
+      "section_header": "Within an X.500-like directory, a distinguished name (DN):",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "4.9.4_chunk_4",
+      "content": "CN=WIDGETWEB, OU=Marketing, O=Widget, C=UK, DC=widget, DC=foo Securing Directory Services A network directory lists the subjects (principally users, computers, and services), objects (such as directories and files) available on the network, and subjects' permissions over objects. A directory facilitates authentication and authorization and must be maintained as a highly secure service. Most directory services are based on the Lightweight Directory Access Protocol (LDAP), running over port 389. The basic protocol provides no security, and all transmissions are plaintext, making it vulnerable to sniffing and on-path attacks. Authentication (referred to as binding to the server) can be implemented in the following ways: No Authentication — means anonymous access is granted to the directory. Simple Bind — means the client must supply its distinguished name (DN) and password, passed as plaintext. Simple Authentication and Security Layer (SASL) — means the client and server negotiate using a supported authentication mechanism, such as Kerberos. The STARTTLS command can require encryption (sealing) and message integrity (signing). This is the preferred mechanism for Microsoft's Active Directory (AD) implementation of LDAP. LDAP Secure (LDAPS) — means the server is installed with a digital certificate, which it uses to set up a secure tunnel for the user credential exchange. LDAPS uses port 636. If secure access is required, anonymous and simple authentication methods should be disabled on the server. Generally, two access levels must be granted on the directory: read-only access (query) and read/write access (update). This is implemented using an access control policy, but the precise mechanism is vendor-specific and not specified by the LDAP standards documentation. Unless hosting a public service, the LDAP directory server should only be accessible from the private network. This means that the LDAP port should be blocked by a firewall from accessing the public interface. If there is integration with other services over the internet, ideally, only authorized IPs should be permitted.",
+      "summary": "Note:: This is implemented using an access control policy, but the precise mechanism is vendor-specific and not specified by the LDAP standards documentation. This means that the LDAP port should be blocked by a firewall from accessing the public interface.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.9.4",
+        "title": "LDAP Authentication Facts",
+        "content_type": "text",
+        "filename": "4.9.4_LDAP_Authentication_Facts_[text].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.9.4_LDAP_Authentication_Facts_[text].txt",
+        "word_count": 486,
+        "has_content": true
+      },
+      "section_header": "Note:",
+      "timestamp_range": null
+    }
+  ],
+  "num_chunks": 4,
+  "document_summary": "LDAP Authentication Facts (text): A directory facilitates authentication and authorization and must be maintained as a highly secure service. This is implemented using an access control policy, but the precise mechanism is vendor-specific and not specified by the LDAP standards documentation. This means that the LDAP port should be blocked by a firewall from accessing the public interface."
+}

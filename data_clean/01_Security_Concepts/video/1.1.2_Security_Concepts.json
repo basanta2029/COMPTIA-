@@ -14,7 +14,7 @@
     {
       "chunk_id": "1.1.2_chunk_1",
       "content": "In order to be an effective security professional, you need to be familiar with the concepts and the roles surrounding information security. This will help you understand the industry terms and lingo, and it will also provide a lot of context as you progress through this course.",
-      "summary": "Security Concepts: In order to be an effective security professional, you need to be familiar with the concepts and the roles surrounding information security. This will help you understand the industry terms and lingo, and it will also provide a lot of context as you progress through this course.",
+      "summary": "Security professionals must master fundamental information security concepts, terminology, and role definitions to effectively communicate within the industry and establish contextual understanding for advanced security practices. This foundational knowledge of security concepts and professional roles serves as the critical building block for comprehending threat management, access controls, and compliance frameworks throughout cybersecurity operations.",
       "metadata": {
         "chapter_num": "1",
         "section_num": "1.1.2",
@@ -31,7 +31,7 @@
     {
       "chunk_id": "1.1.2_chunk_2",
       "content": "The first information security concept that you need to be familiar with is that of an asset. An asset is simply something that has value to an individual or an organization. This can be a physical device, such as a laptop or iPad, or it can be electronic information, such as a pdf document on a server. However, most of the time we're talking about an asset we mean the latter. For example, let's suppose we have a server in our organization, and on this server there is a database that contains customer information, including credit card numbers and order history. This database has a lot of value to the organization and is therefore considered an asset.",
-      "summary": "Assets: The first information security concept that you need to be familiar with is that of an asset. For example, let's suppose we have a server in our organization, and on this server there is a database that contains customer information, including credit card numbers and order history.",
+      "summary": "An asset in information security is anything of value to an individual or organization, including physical devices like laptops and electronic information such as databases or documents. Assets typically refer to electronic data with organizational value, such as customer databases containing sensitive information like credit card numbers and transaction history. Identifying and classifying assets is fundamental to establishing proper security controls and risk management strategies.",
       "metadata": {
         "chapter_num": "1",
         "section_num": "1.1.2",
@@ -48,7 +48,7 @@
     {
       "chunk_id": "1.1.2_chunk_3",
       "content": "The next security concept that you need to be aware of are threats. Threats represent anything that has the potential to cause the loss of an asset. And notice I said has the potential to cause the loss of an asset. A threat isn't the actual loss of an asset. It's merely the potential—\"the risk—\"that an asset could be stolen. A threat can come in many different forms. It can be a virus, a Trojan, an external hacker, an internal employee. Because threats come in all shapes and sizes, sometimes we refer to them as blended threats. To continue with our example, some threats to our customer database include ransomware, data exfiltration—\"which is a fancy way of saying stealing data—\"Trojans, and hackers.",
-      "summary": "Threats: The next security concept that you need to be aware of are threats. To continue with our example, some threats to our customer database include ransomware, data exfiltration—\"which is a fancy way of saying stealing data—\"Trojans, and hackers.",
+      "summary": "Threats are potential risks that could cause asset loss, not actual losses themselves, and include viruses, Trojans, external hackers, and internal employees. These diverse threat types are often called blended threats due to their varied forms and attack methods. Common threats to data assets include ransomware attacks, data exfiltration (data theft), Trojans, and unauthorized access by hackers.",
       "metadata": {
         "chapter_num": "1",
         "section_num": "1.1.2",
@@ -65,7 +65,7 @@
     {
       "chunk_id": "1.1.2_chunk_4",
       "content": "Next, we have the threat agent. A threat agent is the actual person or entity that carries out a threat. When it comes to threat agents, there are a few characteristics, or attributes, that can categorize them. For example, threat agents can be internal or external; they can have a little to no resources or funding, or they can be heavily funded with a lot of resources; they can also be opportunistic—\"that is, they are simply attacking a system because it has a vulnerability—\"or they can have a specific intent or motive. Now, within these threat agent categories, there are different types of actors—\"the type of entity carrying out the attack. For example, an actor could be an organized crime syndicate trying to steal credit card information. An actor could also be a nation state trying to steal classified information. Even business competitors can be a type of actor who try to steal company secrets in order to gain an economic edge. One example of a nation state actor you might be familiar with is North Korea. On November 24, 2014, North Korean hackers gained access to Sony Pictures networks and stole confidential information, including employee records, personal emails, and copies of unreleased movies. The information was then released to the public on the internet.",
-      "summary": "Threat Agents: Now, within these threat agent categories, there are different types of actors—\"the type of entity carrying out the attack. On November 24, 2014, North Korean hackers gained access to Sony Pictures networks and stole confidential information, including employee records, personal emails, and copies of unreleased movies.",
+      "summary": "Threat agents are the actual persons or entities that execute security threats, categorized by their origin (internal/external), resource levels (limited to well-funded), and motivation (opportunistic versus targeted intent). Common threat agent types include organized crime syndicates seeking financial data, nation-state actors pursuing classified information, and business competitors attempting to steal trade secrets for economic advantage. Understanding threat agent characteristics enables security professionals to implement appropriate defensive measures based on the specific type and capability of potential attackers.",
       "metadata": {
         "chapter_num": "1",
         "section_num": "1.1.2",
@@ -82,7 +82,7 @@
     {
       "chunk_id": "1.1.2_chunk_5",
       "content": "In order for threat agents to carry out a threat, they need an opening—\"a weakness in the system. This is known as a vulnerability. For example, a vulnerability could be a disgruntled internal employee who happens to be an information security professional and has an elevated level of access to a server system. Another vulnerability is an enabled USB port.",
-      "summary": "Vulnerability: In order for threat agents to carry out a threat, they need an opening—\"a weakness in the system. For example, a vulnerability could be a disgruntled internal employee who happens to be an information security professional and has an elevated level of access to a server system.",
+      "summary": "A vulnerability is a weakness in a system that threat agents exploit to carry out attacks, such as disgruntled employees with elevated access privileges or enabled USB ports that create security openings. Vulnerabilities represent the attack surface that must be identified and mitigated to prevent successful threat execution. Both human factors and technical configurations can create exploitable weaknesses that compromise system security.",
       "metadata": {
         "chapter_num": "1",
         "section_num": "1.1.2",
@@ -99,7 +99,7 @@
     {
       "chunk_id": "1.1.2_chunk_6",
       "content": "And the last concept we will talk about is an exploit. An exploit is a procedure, a piece of software, or a sequence of commands that takes advantage of a vulnerability to actually carry out an attack. For example, say we have an enabled USB port on our customer database—\"first vulnerability—\"and we also have a disgruntled employee—\"second vulnerability. Let's say that the employee decides to use a USB thumb drive to steal the customer database. This is an exploit. The employee used the vulnerability of the enabled USB port and their elevated permissions in order to steal the customer database.",
-      "summary": "Exploit: An exploit is a procedure, a piece of software, or a sequence of commands that takes advantage of a vulnerability to actually carry out an attack. For example, say we have an enabled USB port on our customer database—\"first vulnerability—\"and we also have a disgruntled employee—\"second vulnerability.",
+      "summary": "An exploit is a procedure, software, or sequence of commands that actively takes advantage of existing vulnerabilities to execute an attack against systems or data. Exploits require the presence of vulnerabilities to be successful, such as when a disgruntled employee leverages both an enabled USB port and elevated permissions to steal a customer database. Understanding exploits is critical for security professionals to anticipate how attackers weaponize system weaknesses and implement appropriate countermeasures.",
       "metadata": {
         "chapter_num": "1",
         "section_num": "1.1.2",
@@ -116,7 +116,7 @@
     {
       "chunk_id": "1.1.2_chunk_7",
       "content": "Because security is a constant balancing act between convenience and protection, you will constantly be looking at ways you can mitigate risk and threats while also maintaining an acceptable level of ease of use. However, by understanding the basic concepts of information security, you will have a much easier time assessing the risks to your systems and identifying the ways in which you can protect it.",
-      "summary": "Because security is a constant balancing act between convenience and protection, you will constantly be looking at ways you can mitigate risk and threats while also maintaining an acceptable level of ease of use. However, by understanding the basic concepts of information security, you will have a much easier time assessing the risks to your systems and identifying the ways in which you can protect it.",
+      "summary": "Information security requires balancing convenience with protection by continuously mitigating risks and threats while maintaining system usability. Understanding fundamental security concepts enables effective risk assessment and identification of appropriate protective measures for organizational systems. This foundational knowledge is essential for making informed decisions about security controls and threat management strategies.",
       "metadata": {
         "chapter_num": "1",
         "section_num": "1.1.2",

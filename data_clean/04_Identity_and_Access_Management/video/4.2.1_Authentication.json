@@ -14,7 +14,7 @@
     {
       "chunk_id": "4.2.1_chunk_1",
       "content": "In this video, we'll discuss authentication. Authentication involves verifying a claimed identity. To verify an identity, we need some unique information or data that could only come from that individual.",
-      "summary": "Authentication: In this video, we'll discuss authentication. To verify an identity, we need some unique information or data that could only come from that individual.",
+      "summary": "Authentication is the security process of verifying a claimed identity by requiring unique information or data that only the legitimate individual possesses. This fundamental security control ensures that users are who they claim to be before granting access to systems or resources. Effective authentication relies on distinctive credentials, biometrics, or other identifying factors that cannot be easily replicated or stolen.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.1",
@@ -31,7 +31,7 @@
     {
       "chunk_id": "4.2.1_chunk_2",
       "content": "Three main factors are used in authentication: something you know, something you have, and something you are.",
-      "summary": "Three main factors are used in authentication: something you know, something you have, and something you are.",
+      "summary": "Authentication relies on three fundamental factors to verify user identity: knowledge factors (something you know, like passwords or PINs), possession factors (something you have, such as tokens or smart cards), and inherence factors (something you are, including biometric identifiers like fingerprints or facial recognition). These authentication factors form the foundation of identity verification systems and can be combined to create multi-factor authentication for enhanced security.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.1",
@@ -48,7 +48,7 @@
     {
       "chunk_id": "4.2.1_chunk_3",
       "content": "First, let's look at something you know. This commonly used authentication method is knowledge-based. It requires the user to provide information that only they know. The most familiar example is a password. The password is something that only the user should know for their authentication. A PIN is another example of something you know authentication. Unlike a password, a PIN is limited to numerical digits. Another example is cognitive information. This is when a question is provided that only the user can answer. Often, for account recovery methods, a company will ask users to supply answers to specific questions, such as your mother's maiden name or the name of your first pet.",
-      "summary": "Something You Know: The password is something that only the user should know for their authentication. A PIN is another example of something you know authentication.",
+      "summary": "\"Something you know\" authentication is a knowledge-based method requiring users to provide information only they should possess, including passwords (alphanumeric secrets), PINs (numerical-only codes), and cognitive information (personal questions like mother's maiden name). This authentication factor relies on the secrecy and uniqueness of user knowledge, commonly implemented for primary login credentials and account recovery mechanisms. Knowledge-based authentication forms one of the three fundamental authentication factors used in identity verification systems.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.1",
@@ -65,7 +65,7 @@
     {
       "chunk_id": "4.2.1_chunk_4",
       "content": "The next authentication type, something you have, is sometimes called token-based authentication. Hard tokens require the user to possess a physical factor—an object such as a smart card, key fob, or a USB device—that can be used for authentication. Soft tokens are software that can be installed on a user's smartphone, tablet, or computer. Soft tokens generate one-time passwords (OTPs) that are used for authentication. When users attempt to log in, they must enter their username and password and then generate or receive an OTP from the soft token application. The OTP is time-limited and changes periodically, usually every 30 seconds. This adds an extra layer of security since OTP is unique for each login attempt and cannot be easily replicated or reused by an attacker.",
-      "summary": "Something You Have: The next authentication type, something you have, is sometimes called token-based authentication. This adds an extra layer of security since OTP is unique for each login attempt and cannot be easily replicated or reused by an attacker.",
+      "summary": "Something you have authentication uses physical hard tokens (smart cards, key fobs, USB devices) or software-based soft tokens that generate time-limited one-time passwords (OTPs), typically changing every 30 seconds. This token-based authentication method provides an additional security layer by creating unique, non-reusable authentication codes for each login attempt. Soft tokens are commonly deployed on smartphones, tablets, or computers to generate OTPs that must be entered alongside traditional username and password credentials.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.1",
@@ -82,7 +82,7 @@
     {
       "chunk_id": "4.2.1_chunk_5",
       "content": "The third factor, something you are, refers to physiological attribute biometrics. Your fingerprint, retinal scan, vein scan, face scan, or voice print will prove that you are who you say you are. On their own, some of these authentication methods could be easily compromised. A password can be written down, guessed, or shared. A smart card can be lost or stolen. When two or more of these factors are combined, this is known as multifactor authentication. When the requirement for a password is combined with a token-generated PIN or combined with a fingerprint scan, accessing an account becomes much more complicated. With Multifactor authentication, a username and password can be breached but are unusable without the additional factor!",
-      "summary": "Something You Are: The third factor, something you are, refers to physiological attribute biometrics. With Multifactor authentication, a username and password can be breached but are unusable without the additional factor.",
+      "summary": "The \"something you are\" authentication factor uses physiological biometrics like fingerprints, retinal scans, vein scans, face scans, or voice prints to verify identity. Multifactor authentication combines two or more authentication factors (something you know, have, or are) to significantly strengthen security, making compromised credentials unusable without the additional authentication factor. This layered approach prevents account access even when usernames and passwords are breached.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.1",
@@ -99,7 +99,7 @@
     {
       "chunk_id": "4.2.1_chunk_6",
       "content": "While we've talked about the three main authentication factors, other factors can be used to help validate authentication: somewhere you are, something you do, something you exhibit, and someone you know. While these may not verify a user's identity independently, they help improve security and work well in multifactor authentication settings. Somewhere you are authentication uses a physical location to verify a user's identity. For example, you may have a desktop system configured to allow authentication requests only if the user has passed through the building's entrance using their ID card. If the user tries to log in to the desktop, the system will look to see if the user has entered the building. If not, the user's account is locked. The location could be determined using radio-frequency identification or an RFID proximity reader. If the user is within range, they're authenticated to the system. The user moving out of range automatically locks the system. GPS location data can also be used to unlock mobile devices. For example, your phone can be automatically unlocked within a specific geographical area. If it moves outside that location, it will be locked and require a PIN or password to unlock. Bluetooth can also be used for this type of authentication. If you're in range of a device via Bluetooth, you can configure your mobile device to unlock itself automatically.",
-      "summary": "Other Authentication Factors: While these may not verify a user's identity independently, they help improve security and work well in multifactor authentication settings. Somewhere you are authentication uses a physical location to verify a user's identity.",
+      "summary": "Beyond the three main authentication factors, additional authentication methods include location-based factors (somewhere you are) that use physical proximity or geographical position to verify user identity. These supplementary factors leverage technologies like RFID proximity readers, GPS location data, and Bluetooth connectivity to automatically authenticate users when they're within designated areas or ranges, and lock systems when users move outside authorized locations. While these location-based methods cannot independently verify identity, they significantly enhance security when integrated into multifactor authentication systems.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.1",
@@ -116,7 +116,7 @@
     {
       "chunk_id": "4.2.1_chunk_7",
       "content": "Another authentication type is something you do. This type requires the user to perform a particular action to verify the user's identity. For example, the user might be required to supply a handwriting sample analyzed against a baseline sample. It could also require a typing test, where the user must type some sample text, and their typing behaviors are analyzed against a baseline sample.",
-      "summary": "Something You Do: Another authentication type is something you do. This type requires the user to perform a particular action to verify the user's identity.",
+      "summary": "\"Something you do\" authentication verifies user identity through behavioral biometrics that analyze unique patterns in user actions. This method includes handwriting analysis compared against baseline samples and keystroke dynamics that measure typing patterns and behaviors. These behavioral authentication factors provide security by validating distinctive user actions rather than static credentials or physical characteristics.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.1",
@@ -133,7 +133,7 @@
     {
       "chunk_id": "4.2.1_chunk_8",
       "content": "Another attribute could be something you exhibit, such as a personality trait or a habit. Authentication systems can note the time of day you usually log on, your access method, or the tasks you often perform. When administrators notice unusual activity or risky behavior, they may restrict access to these users. This could mean requiring a password change, another authentication method, or blocking user access.",
-      "summary": "Something You Exhibit: Authentication systems can note the time of day you usually log on, your access method, or the tasks you often perform. When administrators notice unusual activity or risky behavior, they may restrict access to these users.",
+      "summary": "Behavioral authentication analyzes user patterns like login times, access methods, and typical tasks to identify unusual or risky activity that may indicate compromised accounts. When authentication systems detect anomalous behavior, administrators can implement security controls including mandatory password changes, additional authentication factors, or complete access blocking. This \"something you exhibit\" authentication factor provides continuous monitoring beyond initial login verification.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.1",
@@ -150,7 +150,7 @@
     {
       "chunk_id": "4.2.1_chunk_9",
       "content": "Another authentication factor is someone you know. You've probably heard the phrase, \"It's not what you know, it's who you know.\" Having someone who can vouch for you can go a long way to establishing relationships and building trust. The same is true for authentication. An example of this trust is certificates. Certificate authorities issue certificates to organizations that they trust. These organizations are intermediary certificate authorities who then issue certificates to their users. This creates a chain of trust that verifies that the subject named in the certificate can be trusted and has been verified by a certificate authority. Certificates are commonly used for logging into secure sites or signing documents electronically.",
-      "summary": "[Authentication] Someone you know: Another authentication factor is someone you know. You've probably heard the phrase, \"It's not what you know, it's who you know.",
+      "summary": "The \"someone you know\" authentication factor relies on trusted third-party verification, primarily implemented through digital certificates issued by certificate authorities (CAs). Certificate authorities create chains of trust by issuing certificates to intermediary CAs, who then verify and issue certificates to end users, establishing trusted identity verification for secure website access and electronic document signing. This trust-based authentication model enables secure communications by allowing parties to verify each other's identity through mutually trusted certificate authorities.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.1",
@@ -167,7 +167,7 @@
     {
       "chunk_id": "4.2.1_chunk_10",
       "content": "That's it for this lesson. In this lesson, we discussed the three main factors of authentication. These include something you know, something you have, and something you are. We also discussed other authentication factors, such as somewhere you are, something you do, something you exhibit, and someone you know.",
-      "summary": "In this lesson, we discussed the three main factors of authentication. We also discussed other authentication factors, such as somewhere you are, something you do, something you exhibit, and someone you know.",
+      "summary": "Authentication relies on three primary factors: something you know (knowledge-based like passwords), something you have (possession-based like tokens), and something you are (biometric characteristics). Additional authentication factors include location-based (somewhere you are), behavioral patterns (something you do), contextual attributes (something you exhibit), and social verification (someone you know). These multiple authentication factors form the foundation for implementing multi-factor authentication systems to strengthen security controls.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.1",

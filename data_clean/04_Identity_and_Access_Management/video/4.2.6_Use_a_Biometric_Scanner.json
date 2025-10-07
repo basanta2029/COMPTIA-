@@ -14,7 +14,7 @@
     {
       "chunk_id": "4.2.6_chunk_1",
       "content": "In this demonstration, we're going to configure biometric authentication systems for Windows. I'm going to use the biometric scanner that's built into the hardware of this laptop, a fingerprint scanner. In order for a computer to use biometrics to authenticate, software to support the login must be on the system. This system has software to handle our fingerprint reader. Each biometric device will need to be supported on the system you wish to use. Based on the type of device you use, you'll configure the operating system to authenticate using the biometrics it offers—your fingerprint, your face, or something else.",
-      "summary": "Use a Biometric Scanner: In this demonstration, we're going to configure biometric authentication systems for Windows. I'm going to use the biometric scanner that's built into the hardware of this laptop, a fingerprint scanner.",
+      "summary": "Biometric authentication systems require specific software support installed on the operating system to function with hardware devices like fingerprint scanners, facial recognition cameras, or other biometric readers. Each biometric device must be individually supported and configured within the operating system to enable authentication using biological characteristics such as fingerprints or facial features. Proper configuration of biometric authentication provides an additional security layer by leveraging unique physical traits for user verification and system access control.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.6",
@@ -31,7 +31,7 @@
     {
       "chunk_id": "4.2.6_chunk_2",
       "content": "Before authenticating with biometrics, you'll need to register with the device. For example, for a fingerprint reader such as the one I'm using, I'll need to register my fingerprint with the device by having it scan the finger a few times. Once registered, that same fingerprint can then be used to authenticate. Authentication happens when the registered biometric, our fingerprint, is compared to the fingerprint that's being scanned on the device. If they match, authentication is granted. Keep in mind that with fingerprints, if your hands are wet or dirty, it will be harder for your biometric system to authenticate you, and your fingerprint will be less likely to match with your previous scan.",
-      "summary": "Register Biometrics with a Device: Before authenticating with biometrics, you'll need to register with the device. Authentication happens when the registered biometric, our fingerprint, is compared to the fingerprint that's being scanned on the device.",
+      "summary": "Biometric authentication requires initial registration where the device scans and stores your biometric data (such as fingerprints) multiple times to create a reference template. Authentication occurs when the device compares a new biometric scan against the stored template, granting access only when they match. Environmental factors like wet or dirty hands can reduce fingerprint scanner accuracy and cause authentication failures.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.6",
@@ -48,7 +48,7 @@
     {
       "chunk_id": "4.2.6_chunk_3",
       "content": "Let's demonstrate how to register a fingerprint with this system. I'll search for fingerprint, then click on the Set up fingerprint sign-in option. This opens the Sign-in options Settings page. I'll click on Fingerprint recognition (Windows Hello), then click on Set up. We're prompted to enter our PIN, a backup authentication method in case the fingerprint isn't available. I've already set up the PIN. But if the PIN hadn't been defined, I would be prompted to configure it. Now, it's asking me to put my finger on the scanner. Then it'll ask me to pick it up and set it down on the reader multiple times while it takes a detailed capture of the fingerprint. This may take a few moments to complete. Now, our configuration is done, and the fingerprint scanner is ready to be used to log on to the system. You also have the option to Add another finger. I only need the one, so that's all I'll add.",
-      "summary": "Set Up Fingerprint Sign-in: Let's demonstrate how to register a fingerprint with this system. We're prompted to enter our PIN, a backup authentication method in case the fingerprint isn't available.",
+      "summary": "Windows Hello fingerprint authentication setup requires configuring a backup PIN before registering biometric data through multiple finger scans on the reader. The system captures detailed fingerprint patterns during the enrollment process to enable secure biometric login as an alternative to traditional password authentication. Multiple fingerprints can be registered to provide redundant biometric access options for the same user account.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.6",
@@ -65,7 +65,7 @@
     {
       "chunk_id": "4.2.6_chunk_4",
       "content": "And that's all for this demonstration. We talked about how to register your fingerprint with the biometric authentication system.",
-      "summary": "And that's all for this demonstration. We talked about how to register your fingerprint with the biometric authentication system.",
+      "summary": "This demonstration covered the fingerprint registration process for biometric authentication systems, which serve as a form of multifactor authentication using unique physical characteristics for identity verification. Biometric scanners enhance security by requiring users to enroll their fingerprint templates into the authentication database before accessing protected systems. This implementation strengthens access control by replacing or supplementing traditional password-based authentication with something you are (biometric factor).",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.2.6",

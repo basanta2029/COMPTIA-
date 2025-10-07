@@ -1,0 +1,153 @@
+{
+  "metadata": {
+    "chapter_num": "4",
+    "section_num": "4.7.1",
+    "title": "Managing Linux Groups",
+    "content_type": "video",
+    "filename": "4.7.1_Managing_Linux_Groups_[video].txt",
+    "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.7.1_Managing_Linux_Groups_[video].txt",
+    "word_count": 1070,
+    "has_content": true
+  },
+  "full_content": "For this demonstration, we're going to spend some time talking about how to manage groups on a Linux system. We'll talk about how to add a group, modify a group, and remove a group. Let's begin by adding a new group to the system. Let's say we want to add a new group to the system named Development. We do this using the groupadd command. Notice that I'm currently logged in as the rmckay user. Standard users on the system aren't allowed to add other users or groups. You can only do that as a user with sudo privileges or as the root user. For this demo, we're going to use ‘su – root'. You'll be prompted for the root password. Click Enter. Before we add a new group to the system, I need to point out that there are several default parameters that are automatically assigned to a new group when it's created. These defaults are stored in the /etc/login.defs file. Let's type ‘less /etc/login.defs' to take a look. First of all, the group ID number that's automatically assigned when the group is created is defined here. They'll begin at 1000 on this system, so the first group created will have a group ID of 1000. The next one will be 1001, the next one 1002, and so on. Likewise, if we created a system group on the system, the group ID numbering would begin at 201. Every group ID is unique to the group. let's use 'groupadd' and then specify the name of the group, 'Development'. We'll check to see if our group was created by typing ‘tail /etc/group'. The X here tells us that it's using the gshadow password file, but we haven't assigned any passwords. Here's the group ID number that's been assigned to that group. But notice, over here, that there are no members of that group yet. In order to add members to a group, you must modify the group, but the actual command you use will vary based upon what distribution you're using. We used a capital D in the name of our group when it should have been a lowercase d like the rest of the groups. Let's make it match by modifying the group name: 'groupmod -n'. Now we specify the new group name that we want to use, 'development', and then we specify the name of the existing group that we want to modify, 'Development', and click Enter. Let's view the end of the group file with a ‘tail /etc/group' command. We see that the group has been renamed with a lowercase d. We know that's the same group and not a new one because the group ID number, which uniquely identifies that group, is the same number as before. To add users to a group, you can use the usermod command. Instead of modifying the group and adding users to it, we're going to modify a user and tell it that it's now a member of this group. Let's go ahead and view the man page for usermod by typing ‘man usermod'. As we scroll down, we should see the -g options, lowercase g and uppercase G. The lowercase g option is used to modify the user's primary group, the default group. Remember that every user account on the Linux system has one primary group associated with it, and only one. If you want to change the default group for a user account, you use the lowercase g option. Also remember that a Linux user can be a member of many other groups as well; these are our supplementary groups. If we want to add a user as a member of a supplementary group, we can use the uppercase G option instead. Here's a very important thing that you have to remember (and it trips up a lot of new Linux administrators): if you specify the usermod command and use the uppercase G option followed by the name of a group, whatever you specify with the G option will overwrite whatever group memberships that user already has. If I have a user that's a member of three different groups already, and I use the uppercase G option with the usermod command and specify an additional group that I want to make the user a member of, what actually happens is the existing group memberships are removed and replaced with the one group membership that I specify. If you want to add an additional group membership and not replace an existing group membership, you need to use the uppercase G option along with the -a option. The -a option appends the new group to the list of group memberships instead of replacing it. Let's go ahead and add development as a supplementary group to my rmckay user account. To do this, I type 'usermod -G' followed by the name of the group that I want to add, 'development'. Then I specify '-a' to indicate that I don't want to remove any other group memberships already in place--I just want to add this as a new group membership. And then the name of the user account that I want to add the membership to, 'rmckay'. If we type ‘groups rmckay', we can tell that the rmckay user is a part of the development group and hasn't lost any previously added groups. Up to this point, we've talked about how to add a new group, and we've talked about how to modify a group. Let's end this demonstration by discussing how to remove a group from the system. This is done using the groupdel command. All I have to do is type 'groupdel development'. If we tail the group file with a ‘tail /etc/group' command, we see that the development group is gone. That's it for this demonstration. In this demo, we talked about how to manage Linux groups from the command line. We talked about how to add a group with the groupadd command. We talked about how to modify a group with the groupmod and usermod commands. Then we ended this demonstration by talking about how to remove a group with the groupdel command.",
+  "chunks": [
+    {
+      "chunk_id": "4.7.1_chunk_1",
+      "content": "For this demonstration, we're going to spend some time talking about how to manage groups on a Linux system. We'll talk about how to add a group, modify a group, and remove a group.",
+      "summary": "Managing Linux Groups: For this demonstration, we're going to spend some time talking about how to manage groups on a Linux system. We'll talk about how to add a group, modify a group, and remove a group.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.7.1",
+        "title": "Managing Linux Groups",
+        "content_type": "video",
+        "filename": "4.7.1_Managing_Linux_Groups_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.7.1_Managing_Linux_Groups_[video].txt",
+        "word_count": 1070,
+        "has_content": true
+      },
+      "section_header": "Managing Linux Groups",
+      "timestamp_range": "00:00-00:14"
+    },
+    {
+      "chunk_id": "4.7.1_chunk_2",
+      "content": "Let's begin by adding a new group to the system. Let's say we want to add a new group to the system named Development. We do this using the groupadd command. Notice that I'm currently logged in as the rmckay user. Standard users on the system aren't allowed to add other users or groups. You can only do that as a user with sudo privileges or as the root user. For this demo, we're going to use ‘su – root'. You'll be prompted for the root password. Click Enter. Before we add a new group to the system, I need to point out that there are several default parameters that are automatically assigned to a new group when it's created. These defaults are stored in the /etc/login.defs file. Let's type ‘less /etc/login.defs' to take a look. First of all, the group ID number that's automatically assigned when the group is created is defined here. They'll begin at 1000 on this system, so the first group created will have a group ID of 1000. The next one will be 1001, the next one 1002, and so on. Likewise, if we created a system group on the system, the group ID numbering would begin at 201. Every group ID is unique to the group.",
+      "summary": "Use groupadd to Add a Group to the System: Let's begin by adding a new group to the system. Let's say we want to add a new group to the system named Development.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.7.1",
+        "title": "Managing Linux Groups",
+        "content_type": "video",
+        "filename": "4.7.1_Managing_Linux_Groups_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.7.1_Managing_Linux_Groups_[video].txt",
+        "word_count": 1070,
+        "has_content": true
+      },
+      "section_header": "Use groupadd to Add a Group to the System",
+      "timestamp_range": "00:14-01:34"
+    },
+    {
+      "chunk_id": "4.7.1_chunk_3",
+      "content": "let's use 'groupadd' and then specify the name of the group, 'Development'. We'll check to see if our group was created by typing ‘tail /etc/group'. The X here tells us that it's using the gshadow password file, but we haven't assigned any passwords. Here's the group ID number that's been assigned to that group. But notice, over here, that there are no members of that group yet. In order to add members to a group, you must modify the group, but the actual command you use will vary based upon what distribution you're using.",
+      "summary": "Create Group: let's use 'groupadd' and then specify the name of the group, 'Development'. We'll check to see if our group was created by typing ‘tail /etc/group'.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.7.1",
+        "title": "Managing Linux Groups",
+        "content_type": "video",
+        "filename": "4.7.1_Managing_Linux_Groups_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.7.1_Managing_Linux_Groups_[video].txt",
+        "word_count": 1070,
+        "has_content": true
+      },
+      "section_header": "Create Group",
+      "timestamp_range": "01:34-02:09"
+    },
+    {
+      "chunk_id": "4.7.1_chunk_4",
+      "content": "We used a capital D in the name of our group when it should have been a lowercase d like the rest of the groups. Let's make it match by modifying the group name: 'groupmod -n'. Now we specify the new group name that we want to use, 'development', and then we specify the name of the existing group that we want to modify, 'Development', and click Enter. Let's view the end of the group file with a ‘tail /etc/group' command. We see that the group has been renamed with a lowercase d. We know that's the same group and not a new one because the group ID number, which uniquely identifies that group, is the same number as before.",
+      "summary": "groupmod Options: We used a capital D in the name of our group when it should have been a lowercase d like the rest of the groups. Let's make it match by modifying the group name: 'groupmod -n'.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.7.1",
+        "title": "Managing Linux Groups",
+        "content_type": "video",
+        "filename": "4.7.1_Managing_Linux_Groups_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.7.1_Managing_Linux_Groups_[video].txt",
+        "word_count": 1070,
+        "has_content": true
+      },
+      "section_header": "groupmod Options",
+      "timestamp_range": "02:09-02:51"
+    },
+    {
+      "chunk_id": "4.7.1_chunk_5",
+      "content": "To add users to a group, you can use the usermod command. Instead of modifying the group and adding users to it, we're going to modify a user and tell it that it's now a member of this group. Let's go ahead and view the man page for usermod by typing ‘man usermod'. As we scroll down, we should see the -g options, lowercase g and uppercase G. The lowercase g option is used to modify the user's primary group, the default group. Remember that every user account on the Linux system has one primary group associated with it, and only one. If you want to change the default group for a user account, you use the lowercase g option. Also remember that a Linux user can be a member of many other groups as well; these are our supplementary groups. If we want to add a user as a member of a supplementary group, we can use the uppercase G option instead.",
+      "summary": "usermod Command: To add users to a group, you can use the usermod command. Instead of modifying the group and adding users to it, we're going to modify a user and tell it that it's now a member of this group.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.7.1",
+        "title": "Managing Linux Groups",
+        "content_type": "video",
+        "filename": "4.7.1_Managing_Linux_Groups_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.7.1_Managing_Linux_Groups_[video].txt",
+        "word_count": 1070,
+        "has_content": true
+      },
+      "section_header": "usermod Command",
+      "timestamp_range": "02:51-03:49"
+    },
+    {
+      "chunk_id": "4.7.1_chunk_6",
+      "content": "Here's a very important thing that you have to remember (and it trips up a lot of new Linux administrators): if you specify the usermod command and use the uppercase G option followed by the name of a group, whatever you specify with the G option will overwrite whatever group memberships that user already has. If I have a user that's a member of three different groups already, and I use the uppercase G option with the usermod command and specify an additional group that I want to make the user a member of, what actually happens is the existing group memberships are removed and replaced with the one group membership that I specify. If you want to add an additional group membership and not replace an existing group membership, you need to use the uppercase G option along with the -a option. The -a option appends the new group to the list of group memberships instead of replacing it. Let's go ahead and add development as a supplementary group to my rmckay user account. To do this, I type 'usermod -G' followed by the name of the group that I want to add, 'development'. Then I specify '-a' to indicate that I don't want to remove any other group memberships already in place--I just want to add this as a new group membership. And then the name of the user account that I want to add the membership to, 'rmckay'. If we type ‘groups rmckay', we can tell that the rmckay user is a part of the development group and hasn't lost any previously added groups.",
+      "summary": "usermod Options: If you want to add an additional group membership and not replace an existing group membership, you need to use the uppercase G option along with the -a option. The -a option appends the new group to the list of group memberships instead of replacing it.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.7.1",
+        "title": "Managing Linux Groups",
+        "content_type": "video",
+        "filename": "4.7.1_Managing_Linux_Groups_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.7.1_Managing_Linux_Groups_[video].txt",
+        "word_count": 1070,
+        "has_content": true
+      },
+      "section_header": "usermod Options",
+      "timestamp_range": "03:49-05:25"
+    },
+    {
+      "chunk_id": "4.7.1_chunk_7",
+      "content": "Up to this point, we've talked about how to add a new group, and we've talked about how to modify a group. Let's end this demonstration by discussing how to remove a group from the system. This is done using the groupdel command. All I have to do is type 'groupdel development'. If we tail the group file with a ‘tail /etc/group' command, we see that the development group is gone.",
+      "summary": "Delete User Group: Up to this point, we've talked about how to add a new group, and we've talked about how to modify a group. Let's end this demonstration by discussing how to remove a group from the system.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.7.1",
+        "title": "Managing Linux Groups",
+        "content_type": "video",
+        "filename": "4.7.1_Managing_Linux_Groups_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.7.1_Managing_Linux_Groups_[video].txt",
+        "word_count": 1070,
+        "has_content": true
+      },
+      "section_header": "Delete User Group",
+      "timestamp_range": "05:25-05:48"
+    },
+    {
+      "chunk_id": "4.7.1_chunk_8",
+      "content": "That's it for this demonstration. In this demo, we talked about how to manage Linux groups from the command line. We talked about how to add a group with the groupadd command. We talked about how to modify a group with the groupmod and usermod commands. Then we ended this demonstration by talking about how to remove a group with the groupdel command.",
+      "summary": "[Managing Linux Groups] In this demo, we talked about how to manage Linux groups from the command line. We talked about how to add a group with the groupadd command.",
+      "metadata": {
+        "chapter_num": "4",
+        "section_num": "4.7.1",
+        "title": "Managing Linux Groups",
+        "content_type": "video",
+        "filename": "4.7.1_Managing_Linux_Groups_[video].txt",
+        "file_path": "/Users/basantabaral/CompTia/data_raw/04_Identity_and_Access_Management/4.7.1_Managing_Linux_Groups_[video].txt",
+        "word_count": 1070,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": "05:48-06:11"
+    }
+  ],
+  "num_chunks": 8,
+  "document_summary": "Managing Linux Groups (video): For this demonstration, we're going to spend some time talking about how to manage groups on a Linux system. We'll talk about how to add a group, modify a group, and remove a group. Let's begin by adding a new group to the system."
+}
