@@ -152,6 +152,80 @@ class RAGRetriever:
 
         return detailed_results
 
+    def retrieve_for_exam_question(
+        self,
+        scenario: str,
+        question: str,
+        options: dict,
+        k: int = 7,
+        chapter_filter: Optional[str] = None
+    ) -> Tuple[List[SearchResult], str]:
+        """
+        Enhanced retrieval for exam-style scenario questions
+
+        Uses query expansion to retrieve context for:
+        1. The scenario itself
+        2. The specific question
+        3. Each answer option individually
+
+        Then deduplicates and assembles comprehensive context
+
+        Args:
+            scenario: The scenario description
+            question: The question being asked
+            options: Dict of option letters to option text
+            k: Number of documents per query expansion
+            chapter_filter: Optional chapter filter
+
+        Returns:
+            Tuple of (deduplicated_results, formatted_context)
+        """
+        # Collect all unique results by chunk_id
+        results_by_id = {}
+
+        # Query 1: Scenario + Question combined
+        main_query = f"{scenario} {question}"
+        main_results, _ = self.retrieve_level_two(
+            query=main_query,
+            k=k,
+            chapter_filter=chapter_filter
+        )
+        for result in main_results:
+            results_by_id[result.chunk_id] = result
+
+        # Query 2-N: Each answer option
+        for letter, option_text in options.items():
+            # Combine scenario context with option for better relevance
+            option_query = f"{question} {option_text}"
+            option_results, _ = self.retrieve_level_two(
+                query=option_query,
+                k=max(3, k // 2),  # Fewer docs per option
+                chapter_filter=chapter_filter
+            )
+            for result in option_results:
+                if result.chunk_id not in results_by_id:
+                    results_by_id[result.chunk_id] = result
+
+        # Convert to list and sort by best average relevance
+        unique_results = list(results_by_id.values())
+
+        # Sort by score (highest first)
+        unique_results.sort(key=lambda x: x.score, reverse=True)
+
+        # Take top results (limit to avoid context overflow)
+        final_results = unique_results[:min(12, len(unique_results))]
+
+        # Assemble context
+        context = ""
+        for result in final_results:
+            context += "\n<document>\n"
+            context += f"{result.section_header}\n\n"
+            context += f"Text:\n{result.content}\n\n"
+            context += f"Summary:\n{result.summary}\n"
+            context += "</document>\n"
+
+        return final_results, context
+
 
 def main():
     """Test the retriever with sample queries"""

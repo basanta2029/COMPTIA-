@@ -5,6 +5,7 @@ Handles answer generation using Claude with enriched context
 """
 
 import os
+import re
 from anthropic import Anthropic
 from dotenv import load_dotenv
 
@@ -106,6 +107,150 @@ Answer the question now, and avoid providing preamble such as 'Here is the answe
 
         except Exception as e:
             print(f"❌ Error generating answer: {e}")
+            raise
+
+    def answer_exam_question(
+        self,
+        scenario: str,
+        question: str,
+        options: dict,
+        context: str,
+        max_tokens: int = 3000,
+        temperature: float = 0
+    ) -> dict:
+        """
+        Answer CompTIA Security+ exam-style scenario-based questions
+
+        Uses chain-of-thought reasoning to:
+        1. Analyze the scenario and identify key requirements
+        2. Evaluate each option against those requirements
+        3. Select the MOST effective option with justification
+
+        Args:
+            scenario: The scenario description
+            question: The question being asked
+            options: Dict of option letters to option text (e.g., {"A": "...", "B": "..."})
+            context: Retrieved context documents
+            max_tokens: Maximum tokens in response
+            temperature: Sampling temperature
+
+        Returns:
+            Dict with {
+                "answer": selected option letter,
+                "reasoning": full chain-of-thought explanation,
+                "confidence": confidence level
+            }
+        """
+        # Format options for prompt
+        options_text = "\n".join([f"{letter}. {text}" for letter, text in options.items()])
+
+        prompt = f"""You are an expert CompTIA Security+ instructor helping a student answer a scenario-based exam question.
+
+<scenario>
+{scenario}
+</scenario>
+
+<question>
+{question}
+</question>
+
+<options>
+{options_text}
+</options>
+
+<reference_materials>
+{context}
+</reference_materials>
+
+Your task is to determine which option is the MOST effective answer. Follow this analysis framework:
+
+**Step 1: Scenario Analysis**
+- Identify the core problem or requirement in the scenario
+- Note any constraints, priorities, or organizational context
+- Determine what success looks like in this situation
+
+**Step 2: Option Evaluation**
+- For EACH option, explain:
+  * What it does and how it addresses the scenario
+  * Its strengths and benefits
+  * Its limitations or drawbacks
+  * Whether it fully solves the problem or only partially
+
+**Step 3: Comparative Analysis**
+- Compare the options against each other
+- Identify why some options are good but not BEST
+- Consider factors like: effectiveness, scope, timeliness, cost-efficiency, long-term vs short-term impact
+
+**Step 4: Final Selection**
+- Select the MOST effective option
+- Justify why this option is superior to the others
+- Explain what makes it the "best" choice for this specific scenario
+
+Use the reference materials provided, but also apply your security knowledge to reason through trade-offs between options. Remember: multiple options may be technically correct, but only ONE is the MOST effective for the given scenario.
+
+Provide your analysis in this format:
+
+**SCENARIO ANALYSIS:**
+[Your analysis of the core problem and requirements]
+
+**OPTION EVALUATIONS:**
+
+Option A: [Option text]
+[Detailed evaluation]
+
+Option B: [Option text]
+[Detailed evaluation]
+
+[Continue for all options...]
+
+**COMPARATIVE ANALYSIS:**
+[Compare the options and explain trade-offs]
+
+**BEST ANSWER: [Letter]**
+[Final justification for why this is the MOST effective option]"""
+
+        try:
+            response = self.client.messages.create(
+                model=self.model,
+                max_tokens=max_tokens,
+                messages=[
+                    {"role": "user", "content": prompt}
+                ],
+                temperature=temperature
+            )
+
+            # Track usage
+            self.total_input_tokens += response.usage.input_tokens
+            self.total_output_tokens += response.usage.output_tokens
+
+            # Calculate cost
+            if self.model in self.pricing:
+                input_cost = (response.usage.input_tokens / 1_000_000) * self.pricing[self.model]["input"]
+                output_cost = (response.usage.output_tokens / 1_000_000) * self.pricing[self.model]["output"]
+                self.total_cost += input_cost + output_cost
+
+            # Extract answer text
+            full_reasoning = response.content[0].text
+
+            # Parse out the selected answer
+            selected_answer = None
+            for line in full_reasoning.split('\n'):
+                if 'BEST ANSWER:' in line.upper():
+                    # Extract letter (A, B, C, or D) - look for letter immediately after "BEST ANSWER:"
+                    # Match pattern like "BEST ANSWER: A" or "BEST ANSWER: [A]"
+                    match = re.search(r'BEST\s+ANSWER:\s*\[?([A-D])\]?', line, re.IGNORECASE)
+                    if match:
+                        selected_answer = match.group(1).upper()
+                    break
+
+            return {
+                "answer": selected_answer,
+                "reasoning": full_reasoning,
+                "confidence": "high" if selected_answer else "low"
+            }
+
+        except Exception as e:
+            print(f"❌ Error generating exam answer: {e}")
             raise
 
     def get_usage_stats(self) -> dict:
