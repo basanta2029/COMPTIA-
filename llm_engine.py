@@ -113,7 +113,7 @@ Answer the question now, and avoid providing preamble such as 'Here is the answe
         self,
         scenario: str,
         question: str,
-        options: dict,
+        options: list,
         context: str,
         max_tokens: int = 3000,
         temperature: float = 0
@@ -129,20 +129,20 @@ Answer the question now, and avoid providing preamble such as 'Here is the answe
         Args:
             scenario: The scenario description
             question: The question being asked
-            options: Dict of option letters to option text (e.g., {"A": "...", "B": "..."})
+            options: List of option texts (unlabeled)
             context: Retrieved context documents
             max_tokens: Maximum tokens in response
             temperature: Sampling temperature
 
         Returns:
             Dict with {
-                "answer": selected option letter,
+                "answer": selected option text (full text),
                 "reasoning": full chain-of-thought explanation,
                 "confidence": confidence level
             }
         """
-        # Format options for prompt
-        options_text = "\n".join([f"{letter}. {text}" for letter, text in options.items()])
+        # Format options for prompt (number them for clarity)
+        options_text = "\n".join([f"{i+1}. {text}" for i, text in enumerate(options)])
 
         prompt = f"""You are an expert CompTIA Security+ instructor helping a student answer a scenario-based exam question.
 
@@ -195,10 +195,10 @@ Provide your analysis in this format:
 
 **OPTION EVALUATIONS:**
 
-Option A: [Option text]
+Option 1: [Option text]
 [Detailed evaluation]
 
-Option B: [Option text]
+Option 2: [Option text]
 [Detailed evaluation]
 
 [Continue for all options...]
@@ -206,7 +206,9 @@ Option B: [Option text]
 **COMPARATIVE ANALYSIS:**
 [Compare the options and explain trade-offs]
 
-**BEST ANSWER: [Letter]**
+**BEST ANSWER:**
+[Write the COMPLETE text of the best option here, verbatim]
+
 [Final justification for why this is the MOST effective option]"""
 
         try:
@@ -232,16 +234,30 @@ Option B: [Option text]
             # Extract answer text
             full_reasoning = response.content[0].text
 
-            # Parse out the selected answer
+            # Parse out the selected answer (full option text)
             selected_answer = None
-            for line in full_reasoning.split('\n'):
+            lines = full_reasoning.split('\n')
+
+            # Find the line after "BEST ANSWER:"
+            for i, line in enumerate(lines):
                 if 'BEST ANSWER:' in line.upper():
-                    # Extract letter (A, B, C, or D) - look for letter immediately after "BEST ANSWER:"
-                    # Match pattern like "BEST ANSWER: A" or "BEST ANSWER: [A]"
-                    match = re.search(r'BEST\s+ANSWER:\s*\[?([A-D])\]?', line, re.IGNORECASE)
-                    if match:
-                        selected_answer = match.group(1).upper()
+                    # Check if answer is on the same line
+                    answer_on_same_line = line.split('BEST ANSWER:', 1)[-1].strip()
+                    if answer_on_same_line and len(answer_on_same_line) > 10:
+                        selected_answer = answer_on_same_line
+                    # Otherwise, get the next non-empty line
+                    elif i + 1 < len(lines):
+                        next_line = lines[i + 1].strip()
+                        if next_line and not next_line.startswith('**'):
+                            selected_answer = next_line
                     break
+
+            # If still no answer, try to match against provided options
+            if not selected_answer:
+                for option in options:
+                    if option.lower() in full_reasoning.lower():
+                        selected_answer = option
+                        break
 
             return {
                 "answer": selected_answer,

@@ -17,7 +17,7 @@ class ExamQuestion:
     id: str
     scenario: str
     question: str
-    options: Dict[str, str]  # Letter -> text
+    options: List[str]  # List of option texts (unlabeled)
     correct_answer: str
     explanation: Optional[str] = None
     chapter: Optional[str] = None
@@ -31,18 +31,21 @@ class ExamQuestionParser:
         """
         Parse a single exam question from text
 
-        Expected format:
-        [Scenario text...]
+        Supports both labeled and unlabeled formats:
 
-        [Question text...]
+        Labeled format:
+        [Scenario...]
+        [Question?]
+        A. Option A
+        B. Option B
+        Correct answer: A
 
-        A. Option A text
-        B. Option B text
-        C. Option C text
-        D. Option D text
-
-        Correct answer: [Letter]
-        [Optional explanation]
+        Unlabeled format:
+        [Scenario...]
+        [Question?]
+        answer
+        Option 1 text
+        Option 2 text
         """
         # Split into lines
         lines = text.strip().split('\n')
@@ -50,30 +53,38 @@ class ExamQuestionParser:
         # Find sections
         scenario_lines = []
         question_lines = []
-        options = {}
+        options_list = []
         correct_answer = None
         explanation_lines = []
 
         current_section = "scenario"
+        option_mode = None  # Will be "labeled" or "unlabeled"
 
-        for line in lines:
+        for i, line in enumerate(lines):
             line = line.strip()
             if not line:
                 continue
 
-            # Check if it's an option line (starts with A., B., C., D.)
-            option_match = re.match(r'^([A-D])\.\s*(.+)$', line)
-            if option_match:
+            # Check if it's a labeled option (A., B., C., D. or 1., 2., 3., 4.)
+            labeled_option_match = re.match(r'^([A-D]|[1-4])\.\s*(.+)$', line)
+            if labeled_option_match and current_section in ["question", "options"]:
                 current_section = "options"
-                letter, text = option_match.groups()
-                options[letter] = text
+                option_mode = "labeled"
+                _, text = labeled_option_match.groups()
+                options_list.append(text)
                 continue
 
             # Check if it's the correct answer line
-            answer_match = re.match(r'^(?:Correct answer|Answer):\s*([A-D])', line, re.IGNORECASE)
+            answer_match = re.match(r'^(?:Correct answer|Answer):\s*(.+)$', line, re.IGNORECASE)
             if answer_match:
                 current_section = "explanation"
-                correct_answer = answer_match.group(1)
+                correct_answer = answer_match.group(1).strip()
+                continue
+
+            # Check if this line says "answer" alone (marker for unlabeled options)
+            if line.lower() == "answer" and current_section == "question":
+                current_section = "options"
+                option_mode = "unlabeled"
                 continue
 
             # Add to appropriate section
@@ -85,9 +96,11 @@ class ExamQuestionParser:
                 else:
                     scenario_lines.append(line)
             elif current_section == "question":
-                # Keep adding to question until we hit options
-                if not option_match:
-                    question_lines.append(line)
+                question_lines.append(line)
+            elif current_section == "options":
+                # In unlabeled mode, treat each non-empty line as an option
+                if option_mode == "unlabeled" and not answer_match:
+                    options_list.append(line)
             elif current_section == "explanation":
                 explanation_lines.append(line)
 
@@ -100,7 +113,7 @@ class ExamQuestionParser:
             id=question_id or "unknown",
             scenario=scenario,
             question=question,
-            options=options,
+            options=options_list,
             correct_answer=correct_answer,
             explanation=explanation
         )

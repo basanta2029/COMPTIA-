@@ -156,7 +156,7 @@ class RAGRetriever:
         self,
         scenario: str,
         question: str,
-        options: dict,
+        options: list,
         k: int = 7,
         chapter_filter: Optional[str] = None
     ) -> Tuple[List[SearchResult], str]:
@@ -173,7 +173,7 @@ class RAGRetriever:
         Args:
             scenario: The scenario description
             question: The question being asked
-            options: Dict of option letters to option text
+            options: List of option texts (unlabeled)
             k: Number of documents per query expansion
             chapter_filter: Optional chapter filter
 
@@ -194,7 +194,7 @@ class RAGRetriever:
             results_by_id[result.chunk_id] = result
 
         # Query 2-N: Each answer option
-        for letter, option_text in options.items():
+        for option_text in options:
             # Combine scenario context with option for better relevance
             option_query = f"{question} {option_text}"
             option_results, _ = self.retrieve_level_two(
