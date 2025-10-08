@@ -140,6 +140,96 @@ class RAGPipeline:
 
         return response
 
+    def query_with_reranking(
+        self,
+        query: str,
+        k: int = 3,
+        initial_k: int = 20,
+        chapter_filter: Optional[str] = None,
+        content_type_filter: Optional[str] = None,
+        reranker_model: str = "claude-3-haiku-20240307",
+        max_tokens: int = 2500,
+        temperature: float = 0
+    ) -> RAGResponse:
+        """
+        Complete Q&A pipeline with LLM-based reranking
+
+        Two-stage retrieval:
+        1. Retrieve initial_k candidates from vector DB (e.g., 20)
+        2. Use Claude to rerank and select top-k most relevant (e.g., 3)
+        3. Generate answer from reranked documents
+
+        Args:
+            query: User's question
+            k: Number of final documents to use (after reranking)
+            initial_k: Number of initial candidates to retrieve
+            chapter_filter: Optional chapter filter (e.g., "1", "2")
+            content_type_filter: Optional content type filter ("video" or "text")
+            reranker_model: Claude model for reranking (default: Haiku)
+            max_tokens: Max tokens in answer
+            temperature: LLM sampling temperature
+
+        Returns:
+            RAGResponse with answer and reranked source documents
+        """
+        print(f"\n{'='*60}")
+        print(f"QUERY (with reranking): {query}")
+        print(f"{'='*60}")
+
+        # Step 1: Two-stage retrieval with reranking
+        print(f"\n🔍 Stage 1: Retrieving {initial_k} candidates...")
+        if chapter_filter:
+            print(f"   Filter: Chapter {chapter_filter}")
+        if content_type_filter:
+            print(f"   Filter: Content type '{content_type_filter}'")
+
+        results, context = self.retriever.retrieve_with_reranking(
+            query=query,
+            k=k,
+            initial_k=initial_k,
+            chapter_filter=chapter_filter,
+            content_type_filter=content_type_filter,
+            reranker_model=reranker_model
+        )
+
+        print(f"🔄 Stage 2: Reranked to top-{k} documents")
+        print(f"✅ Final context: {len(context):,} characters")
+
+        # Step 2: Generate answer
+        print(f"\n🤖 Generating answer with {self.llm_engine.model}...")
+
+        answer = self.llm_engine.answer_query_level_two(
+            query=query,
+            context=context,
+            max_tokens=max_tokens,
+            temperature=temperature
+        )
+
+        print(f"✅ Answer generated ({len(answer)} characters)")
+
+        # Build response
+        response = RAGResponse(
+            query=query,
+            answer=answer,
+            sources=results,
+            num_sources=len(results),
+            retrieval_metadata={
+                "k": k,
+                "initial_k": initial_k,
+                "reranker_model": reranker_model,
+                "chapter_filter": chapter_filter,
+                "content_type_filter": content_type_filter,
+                "context_length": len(context)
+            },
+            llm_metadata={
+                "model": self.llm_engine.model,
+                "max_tokens": max_tokens,
+                "temperature": temperature
+            }
+        )
+
+        return response
+
     def get_usage_stats(self) -> Dict:
         """Get combined usage statistics"""
         llm_stats = self.llm_engine.get_usage_stats()

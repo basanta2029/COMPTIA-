@@ -15,115 +15,270 @@ st.set_page_config(
     page_title="CompTIA Security+ AI Tutor",
     page_icon="🔒",
     layout="wide",
-    initial_sidebar_state="expanded"
+    initial_sidebar_state="collapsed"
 )
 
-# Custom CSS for beautiful UI
+# Custom CSS inspired by Cluely's clean design
 st.markdown("""
 <style>
-    /* Main container styling */
+    /* Import modern font */
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+    /* Main container styling - light gradient background */
     .main {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        background: linear-gradient(135deg, #E8EEF3 0%, #D4DCE6 50%, #C8D5E3 100%);
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
-    /* Chat container */
+    /* Chat message container - clean white cards with yellow glow */
     .stChatMessage {
-        background-color: rgba(255, 255, 255, 0.95);
-        border-radius: 15px;
-        padding: 15px;
-        margin: 10px 0;
-        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        background-color: white !important;
+        border-radius: 16px;
+        padding: 20px 24px;
+        margin: 16px 0;
+        border: 2px solid rgba(251, 191, 36, 0.2);
+        box-shadow: 0 0 12px rgba(251, 191, 36, 0.25), 0 2px 8px rgba(0, 0, 0, 0.08);
+        transition: all 0.2s ease;
     }
 
-    /* Header styling */
+    .stChatMessage:hover {
+        box-shadow: 0 0 20px rgba(251, 191, 36, 0.35), 0 4px 12px rgba(0, 0, 0, 0.1);
+        transform: translateY(-1px);
+        border-color: rgba(251, 191, 36, 0.4);
+    }
+
+    /* User message styling */
+    .stChatMessage[data-testid*="user"] {
+        background: linear-gradient(135deg, #F0F4F8 0%, #FFFFFF 100%) !important;
+        border: 2px solid rgba(251, 191, 36, 0.3);
+    }
+
+    /* Assistant message styling */
+    .stChatMessage[data-testid*="assistant"] {
+        background-color: white !important;
+        border: 2px solid rgba(251, 191, 36, 0.2);
+    }
+
+    /* Header styling - clean and minimal */
     .header-container {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        padding: 30px;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 48px 32px;
         border-radius: 20px;
         text-align: center;
-        margin-bottom: 30px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        margin-bottom: 32px;
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(200, 213, 227, 0.3);
     }
 
     .header-title {
-        color: white;
-        font-size: 2.5em;
-        font-weight: bold;
-        margin: 0;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        color: #1A202C;
+        font-size: 1.8em;
+        font-weight: 700;
+        margin: 0 0 8px 0;
+        letter-spacing: -0.02em;
+    }
+
+    .header-subtitle-main {
+        color: #1A202C;
+        font-size: 2.2em;
+        font-weight: 700;
+        margin: 8px 0;
+        letter-spacing: -0.03em;
     }
 
     .header-subtitle {
-        color: #f0f0f0;
-        font-size: 1.2em;
-        margin-top: 10px;
-    }
-
-    /* Logo styling */
-    .logo-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-bottom: 20px;
-    }
-
-    .comptia-logo {
-        background: white;
-        padding: 15px 30px;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0,0,0,0.2);
-        font-weight: bold;
-        font-size: 1.8em;
+        color: #4A5568;
+        font-size: 1em;
+        margin-top: 12px;
+        font-weight: 400;
+        letter-spacing: -0.01em;
     }
 
     .comptia-text {
         color: #E4002B;
-        font-family: Arial, sans-serif;
+        font-family: 'Inter', Arial, sans-serif;
     }
 
     .security-text {
         color: #1E3A8A;
-        margin-left: 5px;
     }
 
-    /* Sidebar styling */
-    .css-1d391kg {
-        background-color: #f8f9fa;
+    /* Hide sidebar completely */
+    section[data-testid="stSidebar"] {
+        display: none;
     }
 
-    /* Button styling */
+    /* Button styling - default blue buttons */
     .stButton>button {
-        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        color: white;
+        background: #5B9EFF !important;
+        color: white !important;
         border: none;
         border-radius: 10px;
-        padding: 10px 25px;
-        font-weight: bold;
-        transition: all 0.3s;
+        padding: 12px 24px;
+        font-weight: 600;
+        font-size: 0.95em;
+        transition: all 0.2s ease;
+        letter-spacing: 0;
+        box-shadow: 0 2px 6px rgba(91, 158, 255, 0.25);
     }
 
     .stButton>button:hover {
+        background: #4A8FEF !important;
+        box-shadow: 0 4px 10px rgba(91, 158, 255, 0.35);
         transform: translateY(-2px);
-        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    /* Secondary button variant - white with yellow glow (for sample questions) */
+    .main .stButton>button[kind="secondary"] {
+        background: white !important;
+        color: #1E293B !important;
+        border: 2px solid #E2E8F0 !important;
+        box-shadow: 0 0 15px rgba(251, 191, 36, 0.3), 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+        font-weight: 500 !important;
+    }
+
+    .main .stButton>button[kind="secondary"]:hover {
+        background: white !important;
+        color: #1E293B !important;
+        border-color: #FCD34D !important;
+        box-shadow: 0 0 25px rgba(251, 191, 36, 0.5), 0 4px 10px rgba(0, 0, 0, 0.1) !important;
     }
 
     /* Metric styling */
     .metric-container {
         background: white;
-        padding: 15px;
-        border-radius: 10px;
-        margin: 10px 0;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        padding: 18px;
+        border-radius: 12px;
+        margin: 12px 0;
+        border: 1px solid #E2E8F0;
+        color: #334155;
+        font-size: 0.9em;
+        line-height: 1.8;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
     }
 
     /* Source citation styling */
     .source-box {
-        background: #f0f4f8;
-        padding: 10px;
-        border-left: 4px solid #667eea;
-        border-radius: 5px;
-        margin: 5px 0;
-        font-size: 0.9em;
+        background: #F8FAFC;
+        padding: 16px;
+        border-left: 3px solid #5B9EFF;
+        border-radius: 8px;
+        margin: 10px 0;
+        font-size: 0.88em;
+        line-height: 1.6;
+        color: #475569;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .source-box strong {
+        color: #1E293B;
+    }
+
+    .source-box small {
+        color: #64748B;
+    }
+
+    /* Input styling - thin consistent golden border */
+
+    /* Target the main chat input container */
+    div[data-testid="stChatInput"],
+    div[data-testid="stChatInput"] > div,
+    .stChatInput {
+        border: 2px solid rgba(251, 191, 36, 0.3) !important;
+        border-radius: 20px !important;
+        background: white !important;
+        box-shadow: 0 0 15px rgba(251, 191, 36, 0.25) !important;
+        padding: 0 !important;
+    }
+
+    /* Target all input elements inside chat input */
+    div[data-testid="stChatInput"] textarea,
+    div[data-testid="stChatInput"] input,
+    .stChatInput textarea,
+    .stChatInput input {
+        border: none !important;
+        border-radius: 18px !important;
+        background: white !important;
+        box-shadow: none !important;
+        padding: 14px 20px !important;
+    }
+
+    /* Focus state - slightly brighter */
+    div[data-testid="stChatInput"]:focus-within,
+    .stChatInput:focus-within {
+        border: 2px solid rgba(251, 191, 36, 0.4) !important;
+        box-shadow: 0 0 20px rgba(251, 191, 36, 0.3) !important;
+    }
+
+    /* Override any nested divs - no extra borders */
+    div[data-testid="stChatInput"] > div > div,
+    .stChatInput > div,
+    .stChatInput > div > div {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Target base-web input components - no borders */
+    div[data-baseweb="input"],
+    div[data-baseweb="base-input"] {
+        border: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Text color adjustments for light theme */
+    p, span, div, li {
+        color: #334155;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: #1E293B;
+        font-weight: 600;
+    }
+
+    /* Expander styling */
+    .streamlit-expanderHeader {
+        background: white;
+        border-radius: 10px;
+        border: 1px solid #E2E8F0;
+        color: #334155 !important;
+        font-weight: 500;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    }
+
+    .streamlit-expanderHeader:hover {
+        background: #F8FAFC;
+        border-color: #CBD5E1;
+    }
+
+    /* Sample question buttons - white with yellow glow */
+    .main div[data-testid="column"] .stButton>button {
+        background: white !important;
+        color: #1E293B !important;
+        border: 2px solid #E2E8F0 !important;
+        box-shadow: 0 0 15px rgba(251, 191, 36, 0.3), 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+        font-weight: 500 !important;
+    }
+
+    .main div[data-testid="column"] .stButton>button:hover {
+        background: white !important;
+        border-color: #FCD34D !important;
+        color: #1E293B !important;
+        box-shadow: 0 0 25px rgba(251, 191, 36, 0.5), 0 4px 10px rgba(0, 0, 0, 0.1) !important;
+    }
+
+    /* Override for buttons in main content area */
+    .main .stButton>button:not([kind]) {
+        background: white !important;
+        color: #1E293B !important;
+        border: 2px solid #E2E8F0 !important;
+        box-shadow: 0 0 15px rgba(251, 191, 36, 0.3), 0 2px 6px rgba(0, 0, 0, 0.08) !important;
+    }
+
+    .main .stButton>button:not([kind]):hover {
+        background: white !important;
+        border-color: #FCD34D !important;
+        color: #1E293B !important;
+        box-shadow: 0 0 25px rgba(251, 191, 36, 0.5), 0 4px 10px rgba(0, 0, 0, 0.1) !important;
     }
 </style>
 """, unsafe_allow_html=True)
@@ -139,125 +294,29 @@ def initialize_session_state():
     if 'exam_evaluator' not in st.session_state:
         st.session_state.exam_evaluator = None  # Lazy load when needed
     if 'mode' not in st.session_state:
-        st.session_state.mode = 'chat'  # 'chat' or 'exam'
+        st.session_state.mode = 'exam'  # Always exam mode
 
 
 def render_header():
-    """Render the beautiful header with logo"""
+    """Render the clean header without logo box"""
     st.markdown("""
     <div class="header-container">
-        <div class="logo-container">
-            <div class="comptia-logo">
-                <span class="comptia-text">CompTIA</span>
-                <span class="security-text">Security+</span>
-            </div>
-        </div>
-        <h1 class="header-title">AI Study Companion</h1>
+        <h1 class="header-title">
+            <span class="comptia-text">CompTIA</span>
+            <span class="security-text"> Security+</span>
+        </h1>
+        <h2 class="header-subtitle-main">AI Study Companion</h2>
         <p class="header-subtitle">Your intelligent tutor for Security+ SY0-701 certification</p>
     </div>
     """, unsafe_allow_html=True)
 
 
-def render_sidebar():
-    """Render the sidebar with settings and info"""
-    with st.sidebar:
-        st.markdown("### ⚙️ Settings")
-
-        # Mode selection
-        mode = st.radio(
-            "Mode",
-            options=['chat', 'exam'],
-            format_func=lambda x: '💬 Chat Mode' if x == 'chat' else '📝 Exam Mode',
-            help="Chat Mode: Ask questions naturally. Exam Mode: Practice scenario-based questions."
-        )
-        st.session_state.mode = mode
-
-        st.markdown("---")
-
-        # Retrieval settings
-        st.markdown("### 🔍 Retrieval Settings")
-
-        k = st.slider(
-            "Number of sources (k)",
-            min_value=3,
-            max_value=10,
-            value=7 if mode == 'exam' else 3,
-            help="More sources = more context but slower"
-        )
-
-        chapter_filter = st.selectbox(
-            "Filter by chapter",
-            options=[None, "1", "2", "3", "4"],
-            format_func=lambda x: "All chapters" if x is None else f"Chapter {x}",
-            help="Limit search to specific chapter"
-        )
-
-        content_type_filter = st.selectbox(
-            "Content type",
-            options=[None, "video", "text"],
-            format_func=lambda x: "All types" if x is None else x.title(),
-            help="Filter by video transcripts or text materials"
-        )
-
-        st.markdown("---")
-
-        # LLM settings
-        st.markdown("### 🤖 AI Settings")
-
-        temperature = st.slider(
-            "Temperature",
-            min_value=0.0,
-            max_value=1.0,
-            value=0.0,
-            step=0.1,
-            help="0 = deterministic, 1 = creative"
-        )
-
-        max_tokens = st.slider(
-            "Max response length",
-            min_value=500,
-            max_value=4000,
-            value=3000 if mode == 'exam' else 2500,
-            step=500
-        )
-
-        st.markdown("---")
-
-        # Stats
-        st.markdown("### 📊 Session Stats")
-
-        stats = st.session_state.rag_pipeline.get_usage_stats()
-
-        st.markdown(f"""
-        <div class="metric-container">
-            <strong>Messages:</strong> {len(st.session_state.messages) // 2}<br>
-            <strong>Tokens Used:</strong> {stats['llm']['total_input_tokens'] + stats['llm']['total_output_tokens']:,}<br>
-            <strong>Cost:</strong> ${stats['llm']['total_cost']:.4f}
-        </div>
-        """, unsafe_allow_html=True)
-
-        st.markdown("---")
-
-        # Clear chat button
-        if st.button("🗑️ Clear Chat History", use_container_width=True):
-            st.session_state.messages = []
-            st.rerun()
-
-        st.markdown("---")
-
-        # Info
-        st.markdown("### ℹ️ About")
-        st.info(
-            "This AI tutor uses Retrieval Augmented Generation (RAG) "
-            "to provide accurate answers based on CompTIA Security+ training materials. "
-            "\n\n**Features:**\n"
-            "- 📚 700+ training documents\n"
-            "- 🧠 Chain-of-thought reasoning\n"
-            "- 📝 Exam practice mode\n"
-            "- 🎯 Source citations"
-        )
-
-        return k, chapter_filter, content_type_filter, temperature, max_tokens
+# Hardcoded configuration for simplified interface
+DEFAULT_K = 8
+DEFAULT_CHAPTER_FILTER = None
+DEFAULT_CONTENT_TYPE_FILTER = None
+DEFAULT_TEMPERATURE = 0.0
+DEFAULT_MAX_TOKENS = 3000
 
 
 def render_chat_message(role, content, sources=None):
@@ -287,12 +346,15 @@ def handle_chat_mode(user_input, k, chapter_filter, content_type_filter, tempera
 
     # Generate response
     with st.chat_message("assistant"):
-        with st.spinner("🤔 Thinking..."):
-            response = st.session_state.rag_pipeline.query(
+        with st.spinner("🤔 Retrieving and reranking documents..."):
+            # Use reranking for better relevance
+            response = st.session_state.rag_pipeline.query_with_reranking(
                 query=user_input,
                 k=k,
+                initial_k=20,  # Retrieve 20 candidates, rerank to top k
                 chapter_filter=chapter_filter,
                 content_type_filter=content_type_filter,
+                reranker_model="claude-3-haiku-20240307",
                 max_tokens=max_tokens,
                 temperature=temperature
             )
@@ -302,12 +364,12 @@ def handle_chat_mode(user_input, k, chapter_filter, content_type_filter, tempera
 
         # Display sources
         if len(response.sources) > 0:
-            with st.expander(f"📚 View {len(response.sources)} sources"):
+            with st.expander(f"📚 View {len(response.sources)} sources (reranked)"):
                 for i, source in enumerate(response.sources, 1):
                     st.markdown(f"""
                     <div class="source-box">
                         <strong>Source {i}:</strong> {source.section_header}<br>
-                        <small>Chapter {source.metadata.get('chapter_num')} • Score: {source.score:.3f}</small><br>
+                        <small>Chapter {source.metadata.get('chapter_num')} • Relevance rank: #{i}</small><br>
                         <em>{source.summary[:150]}...</em>
                     </div>
                     """, unsafe_allow_html=True)
@@ -324,9 +386,9 @@ def handle_exam_mode(user_input, k, chapter_filter, temperature, max_tokens):
     """Handle exam mode interaction"""
     st.info("📝 **Exam Mode**: Paste a complete exam question with scenario, question, and options (A, B, C, D).")
 
-    # For now, just use chat mode with exam-style prompt
-    # In future, can add structured exam question parsing
-    handle_chat_mode(user_input, k, chapter_filter, None, temperature, max_tokens)
+    # Use chat mode with reranking for better accuracy on exam questions
+    # Note: For exam mode, we increase k to get more context
+    handle_chat_mode(user_input, min(k * 2, 7), chapter_filter, None, temperature, max_tokens)
 
 
 def render_sample_questions():
@@ -336,29 +398,29 @@ def render_sample_questions():
     col1, col2, col3 = st.columns(3)
 
     with col1:
-        if st.button("What is phishing?", use_container_width=True):
+        if st.button("What is phishing?", use_container_width=True, key="sample_q1", type="secondary"):
             return "What is phishing and what are the different types of phishing attacks?"
 
     with col2:
-        if st.button("Explain CIA Triad", use_container_width=True):
+        if st.button("Explain CIA Triad", use_container_width=True, key="sample_q2", type="secondary"):
             return "Explain the CIA triad in cybersecurity"
 
     with col3:
-        if st.button("What is a CIRT?", use_container_width=True):
+        if st.button("What is a CIRT?", use_container_width=True, key="sample_q3", type="secondary"):
             return "What is a Computer Incident Response Team (CIRT) and what do they do?"
 
     col4, col5, col6 = st.columns(3)
 
     with col4:
-        if st.button("Two-factor auth", use_container_width=True):
+        if st.button("Two-factor auth", use_container_width=True, key="sample_q4", type="secondary"):
             return "How does two-factor authentication work?"
 
     with col5:
-        if st.button("DevSecOps", use_container_width=True):
+        if st.button("DevSecOps", use_container_width=True, key="sample_q5", type="secondary"):
             return "What is DevSecOps and why is it important?"
 
     with col6:
-        if st.button("Malware types", use_container_width=True):
+        if st.button("Malware types", use_container_width=True, key="sample_q6", type="secondary"):
             return "What are the different types of malware?"
 
     return None
@@ -370,9 +432,6 @@ def main():
 
     # Render header
     render_header()
-
-    # Render sidebar and get settings
-    k, chapter_filter, content_type_filter, temperature, max_tokens = render_sidebar()
 
     # Display chat history
     for message in st.session_state.messages:
@@ -388,22 +447,21 @@ def main():
         sample_question = render_sample_questions()
 
     # Chat input
-    user_input = st.chat_input(
-        "Ask me anything about CompTIA Security+..." if st.session_state.mode == 'chat'
-        else "Paste your exam question here..."
-    )
+    user_input = st.chat_input("Ask me anything about CompTIA Security+...")
 
     # Handle sample question click
     if sample_question:
         user_input = sample_question
 
-    # Process user input
+    # Process user input with default settings
     if user_input:
-        if st.session_state.mode == 'chat':
-            handle_chat_mode(user_input, k, chapter_filter, content_type_filter, temperature, max_tokens)
-        else:
-            handle_exam_mode(user_input, k, chapter_filter, temperature, max_tokens)
-
+        handle_exam_mode(
+            user_input,
+            DEFAULT_K,
+            DEFAULT_CHAPTER_FILTER,
+            DEFAULT_TEMPERATURE,
+            DEFAULT_MAX_TOKENS
+        )
         st.rerun()
 
 

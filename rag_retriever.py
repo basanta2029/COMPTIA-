@@ -226,6 +226,65 @@ class RAGRetriever:
 
         return final_results, context
 
+    def retrieve_with_reranking(
+        self,
+        query: str,
+        k: int = 3,
+        initial_k: int = 20,
+        chapter_filter: Optional[str] = None,
+        content_type_filter: Optional[str] = None,
+        reranker_model: str = "claude-3-haiku-20240307"
+    ) -> Tuple[List[SearchResult], str]:
+        """
+        Two-stage retrieval with LLM-based reranking
+
+        Stage 1: Retrieve initial_k candidates from vector DB (e.g., 20)
+        Stage 2: Use Claude LLM to rerank and select top-k most relevant (e.g., 3)
+
+        Args:
+            query: User's question
+            k: Number of final documents to return (after reranking)
+            initial_k: Number of initial candidates to retrieve
+            chapter_filter: Optional chapter number (e.g., "1", "2")
+            content_type_filter: Optional content type ("video" or "text")
+            reranker_model: Claude model for reranking (default: Haiku for cost)
+
+        Returns:
+            Tuple of (reranked_results, formatted_context)
+        """
+        from llm_reranker import LLMReranker
+
+        # Stage 1: Retrieve initial candidates
+        query_vector = self.embed_query(query)
+        initial_results = self.vector_db.search(
+            query_vector=query_vector,
+            top_k=initial_k,
+            chapter_filter=chapter_filter,
+            content_type_filter=content_type_filter
+        )
+
+        if len(initial_results) == 0:
+            return [], ""
+
+        # Stage 2: LLM-based reranking
+        reranker = LLMReranker(model=reranker_model)
+        reranked_results = reranker.rerank(
+            query=query,
+            results=initial_results,
+            k=k
+        )
+
+        # Assemble context from reranked results
+        context = ""
+        for result in reranked_results:
+            context += "\n<document>\n"
+            context += f"{result.section_header}\n\n"
+            context += f"Text:\n{result.content}\n\n"
+            context += f"Summary:\n{result.summary}\n"
+            context += "</document>\n"
+
+        return reranked_results, context
+
 
 def main():
     """Test the retriever with sample queries"""
