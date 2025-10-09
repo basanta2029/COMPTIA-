@@ -256,7 +256,7 @@ class RAGRetriever:
         initial_k: int = 40,  # Increased from 20 for better coverage with 2321 chunks
         chapter_filter: Optional[str] = None,
         content_type_filter: Optional[str] = None,
-        reranker_model: str = "claude-3-haiku-20240307"
+        reranker_model: str = "claude-3-5-sonnet-20241022"  # Upgraded from Haiku for better accuracy
     ) -> Tuple[List[SearchResult], str]:
         """
         Two-stage retrieval with LLM-based reranking

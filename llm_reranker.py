@@ -16,12 +16,12 @@ load_dotenv()
 class LLMReranker:
     """Claude-powered document reranker"""
 
-    def __init__(self, model: str = "claude-3-haiku-20240307"):
+    def __init__(self, model: str = "claude-3-5-sonnet-20241022"):
         """
         Initialize reranker
 
         Args:
-            model: Claude model (haiku recommended for cost/speed)
+            model: Claude model (upgraded to Sonnet 3.5 for better accuracy)
         """
         api_key = os.getenv("ANTHROPIC_API_KEY")
         if not api_key:

@@ -350,13 +350,14 @@ def handle_chat_mode(user_input, k, chapter_filter, content_type_filter, tempera
         with st.spinner("🤔 Retrieving and reranking documents..."):
             # Use reranking for better relevance
             # Optimized for 2321 chunks: retrieve 40 candidates, rerank to top k
+            # Using Sonnet 3.5 for better reranking accuracy (was Haiku)
             response = st.session_state.rag_pipeline.query_with_reranking(
                 query=user_input,
                 k=k,
                 initial_k=40,  # Increased from 20 for better coverage with 2321 chunks
                 chapter_filter=chapter_filter,
                 content_type_filter=content_type_filter,
-                reranker_model="claude-3-haiku-20240307",
+                reranker_model="claude-3-5-sonnet-20241022",  # Upgraded from Haiku for better accuracy
                 max_tokens=max_tokens,
                 temperature=temperature
             )
