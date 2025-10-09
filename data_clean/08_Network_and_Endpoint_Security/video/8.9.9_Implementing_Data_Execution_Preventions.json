@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "chapter_num": "8",
+    "section_num": "8.9.9",
+    "title": "Implementing Data Execution Preventions",
+    "content_type": "video",
+    "filename": "8.9.9_Implementing_Data_Execution_Preventions_[video].txt",
+    "file_path": "data_raw/08_Network_and_Endpoint_Security/8.9.9_Implementing_Data_Execution_Preventions_[video].txt",
+    "word_count": 487,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script In this demonstration, we're going to practice working with Data Execution Prevention, or DEP. DEP is a set of hardware and software technologies designed to prevent malicious code from running on a Windows system. DEP looks for and blocks a malicious program or any other type of attack that has injected a process with malicious code and is trying to run that code. Let's look at how this works. Let's start with a Windows system. If I right-click Start, select System, come over to Advanced system settings, go to Performance Settings on the Advanced tab, and then go to the Data Execution Prevention tab. In Windows Server 2022, DEP is enabled by default for all programs, except those the user selects. It's possible that DEP will trigger a false positive. This means that DEP thinks a legitimate process that's running on the system is malicious and shuts it down. This is particularly relevant in situations where you have in-house programmers who create custom applications for your organization. In-house developed applications sometimes aren't as rigorously tested, so they might kick off an exception where DEP detects them and thinks that they're malicious code. But notice you do have the option to turn off DEP for specific applications. We have a case where we can do that on this system. I'm going to come down here to File Explorer. If I go to my C: drive, then into Program Files, and then to the SalesBuilder folder, there's an application called SalesBuilder. This is an in-house written application. It wasn't extensively tested and will kick off an exception when we try to run it if DEP is monitoring all system processes. Let's hit Add and go to Program Files &gt; SalesBuilder &gt; SalesBuilder.exe. Now DEP is turned on for everything except SalesBuilder. We hit Apply. Verify that DEP is Enforced DEP is now enforced. DEP is now on for all services except SalesBuilder. This means that whenever a process is run on this system, whether it's a service or application, DEP will watch it and look for any instance where it's trying to run code from places that it shouldn't. Except, of course, for the one application that I specified earlier, SalesBuilder, which DEP was told not to worry about because I know that I trust it. That's it for this demonstration. In this demo, we configured Data Execution Prevention, or DEP.",
+  "chunks": [
+    {
+      "chunk_id": "8.9.9_chunk_1",
+      "content": "In this demonstration, we're going to practice working with Data Execution Prevention, or DEP. DEP is a set of hardware and software technologies designed to prevent malicious code from running on a Windows system. DEP looks for and blocks a malicious program or any other type of attack that has injected a process with malicious code and is trying to run that code. Let's look at how this works.",
+      "summary": "Data Execution Prevention (DEP) is a security feature that utilizes both hardware and software technologies to safeguard Windows systems by preventing the execution of malicious code. This demonstration focuses on how DEP identifies and blocks potentially harmful programs attempting to run injected malicious processes. Understanding and implementing DEP is crucial for enhancing system security and mitigating the risk of code injection attacks.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.9.9",
+        "title": "Implementing Data Execution Preventions",
+        "content_type": "video",
+        "filename": "8.9.9_Implementing_Data_Execution_Preventions_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.9.9_Implementing_Data_Execution_Preventions_[video].txt",
+        "word_count": 487,
+        "has_content": true
+      },
+      "section_header": "Implementing Data Execution Prevention (DEP)",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "8.9.9_chunk_2",
+      "content": "Let's start with a Windows system. If I right-click Start, select System, come over to Advanced system settings, go to Performance Settings on the Advanced tab, and then go to the Data Execution Prevention tab. In Windows Server 2022, DEP is enabled by default for all programs, except those the user selects. It's possible that DEP will trigger a false positive. This means that DEP thinks a legitimate process that's running on the system is malicious and shuts it down. This is particularly relevant in situations where you have in-house programmers who create custom applications for your organization. In-house developed applications sometimes aren't as rigorously tested, so they might kick off an exception where DEP detects them and thinks that they're malicious code.",
+      "summary": "Data Execution Prevention (DEP) is a security feature in Windows Server 2022 that helps prevent malicious code execution by enabling protection for all programs by default, except those explicitly allowed by the user. However, DEP can sometimes mistakenly identify legitimate in-house applications as threats, leading to false positives and potential disruptions in custom software functionality. Understanding how to manage DEP settings is crucial for organizations that develop their own applications to ensure both security and operational continuity.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.9.9",
+        "title": "Implementing Data Execution Preventions",
+        "content_type": "video",
+        "filename": "8.9.9_Implementing_Data_Execution_Preventions_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.9.9_Implementing_Data_Execution_Preventions_[video].txt",
+        "word_count": 487,
+        "has_content": true
+      },
+      "section_header": "Enable DEP on a Windows System",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "8.9.9_chunk_3",
+      "content": "But notice you do have the option to turn off DEP for specific applications. We have a case where we can do that on this system. I'm going to come down here to File Explorer. If I go to my C: drive, then into Program Files, and then to the SalesBuilder folder, there's an application called SalesBuilder. This is an in-house written application. It wasn't extensively tested and will kick off an exception when we try to run it if DEP is monitoring all system processes. Let's hit Add and go to Program Files &gt; SalesBuilder &gt; SalesBuilder.exe. Now DEP is turned on for everything except SalesBuilder. We hit Apply. Verify that DEP is Enforced DEP is now enforced. DEP is now on for all services except SalesBuilder. This means that whenever a process is run on this system, whether it's a service or application, DEP will watch it and look for any instance where it's trying to run code from places that it shouldn't. Except, of course, for the one application that I specified earlier, SalesBuilder, which DEP was told not to worry about because I know that I trust it.",
+      "summary": "This section covers the concept of Data Execution Prevention (DEP) and how to configure exceptions for specific applications. It demonstrates how to disable DEP for the in-house application SalesBuilder, allowing it to run without interference while maintaining DEP protection for all other processes. This practical application highlights the balance between security and functionality in managing trusted applications within a system.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.9.9",
+        "title": "Implementing Data Execution Preventions",
+        "content_type": "video",
+        "filename": "8.9.9_Implementing_Data_Execution_Preventions_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.9.9_Implementing_Data_Execution_Preventions_[video].txt",
+        "word_count": 487,
+        "has_content": true
+      },
+      "section_header": "Identify DEP Exceptions",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "8.9.9_chunk_4",
+      "content": "That's it for this demonstration. In this demo, we configured Data Execution Prevention, or DEP.",
+      "summary": "In this demonstration, Data Execution Prevention (DEP) was configured to enhance system security by preventing the execution of code in non-executable memory regions. This key security concept helps mitigate the risk of certain types of attacks, such as buffer overflows. Understanding and implementing DEP is crucial for protecting systems from malicious exploits and ensuring overall cybersecurity resilience.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.9.9",
+        "title": "Implementing Data Execution Preventions",
+        "content_type": "video",
+        "filename": "8.9.9_Implementing_Data_Execution_Preventions_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.9.9_Implementing_Data_Execution_Preventions_[video].txt",
+        "word_count": 487,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 4
+}

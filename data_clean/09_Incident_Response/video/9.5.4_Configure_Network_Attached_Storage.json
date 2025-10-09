@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "chapter_num": "9",
+    "section_num": "9.5.4",
+    "title": "Configure Network Attached Storage",
+    "content_type": "video",
+    "filename": "9.5.4_Configure_Network_Attached_Storage_[video].txt",
+    "file_path": "data_raw/09_Incident_Response/9.5.4_Configure_Network_Attached_Storage_[video].txt",
+    "word_count": 979,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script Network attached storage, or NAS, is a file-level storage device on your network. These devices can be useful when you share data or even back it up. Generally, there'll be several drives in the NAS device for redundancy. But if you want to make sure data isn't lost due to drive failure, a cloud sync is suggested. TrueNAS, which is also known as free NAS, is open-source software. You can install this software on a physical server or a virtual machine. TrueNAS makes it very easy to set up, as all we've done up to this point is install it, set an IP, and set a root password. In order to use any disks for storage, we must configure a storage pool. To do so, go to 'Storage' and then 'Pools'. Then click 'ADD' and 'CREATE POOL'. Next, we're going to give it a name and select the two available disks we have. Most likely, a production NAS will have more storage and more available disks then what we're showing. Since there are only two disks, we're going to set up a 'Mirror' vs. Stripe. Click 'CREATE', 'Confirm', and 'CREATE POOL'. Now that our pool is set up, we must create a Windows share. Go to 'Sharing' and then 'Windows Shares (SMB)'. The drop-down menu at the top of the main folder will be selected since that was the name set on the storage pool. Nothing else is needed, but you could add a description if you'd like for documentation. Click 'SUBMIT'. A box will appear asking you to enable the SMB service since it wasn't on before. Next, a user needs to be set up so some form of authentication can happen to access this newly created share. We'll set up a basic user under 'Accounts' and then 'Users'. Click 'ADD'. Our name here will be 'backup'. The same name will be used for the username as well. Enter a password and confirm it. As we scroll down, we need to give this user permission to our new share directory. Drop down the folder and select 'main'. All of the home directory permissions are fine for now, so we'll leave them. One thing is for certain - this user doesn't require shell login, so we want to disable this for security purposes. If you click over here and select 'nologin', it'll take care of this problem. Click 'SUBMIT' when finished. Our configuration is complete on our NAS, so were going to hop over to our Windows machine to configure the rest. In order to have this NAS easily accessible, we're going to map it as a network drive. To do so, go to 'File Explorer'. As we expand this, we're going to go to 'This PC'. Next, the 'Computer' tab at the top will give us the option to map a network drive. Select a drive letter of your choosing. The path in the folder will be the IP address or DNS name for the NAS. We're going to use the IP as we don't have DNS set up for this right now. Type '\\\\192.168.30.106', as this was the IP of our NAS. Now click 'Browse'. It'll take a second, and you might have to click on the device for the username and password prompt to come up. Enter the username and password we set up for the backup user. The key thing is to check 'Remember my credentials', otherwise this mount will be asking for the password every time your computer reboots. Click 'OK' and then select the 'backup' folder. If you notice, TrueNAS creates a folder with the same username as the user, unless changed. Once we click 'Finish', our new mount will be mounted as the N: drive. Don't worry about the rest of the files in this directory, as this pertains to the username associated with the TrueNAS side. Since we may have multiple computers backing up their data here, we'll just name a folder 'computer_1'. Now we can go set up some backup jobs. You do have the ability to use other backup solutions. However, we're just going to use the built-in File History. When we type 'backup' in the search bar here, it brings us to our backup settings. Notice when we click on 'Add a drive', it says no usable drives found. This doesn't mean it's broken. Typically, this menu looks for secondary or removable drives that are local. If we select 'More options' and 'See advanced settings', we get the option to map file history to a network location. We can then navigate to our mapped drive by going to 'This PC', clicking on the 'N:' drive, and going to the 'computer_1' folder. Click 'OK' and then after that we should be able to turn on our 'File History' now. That's it for this demo. In this demo, we showed you how to configure a NAS, set up an SMB share, and configure a mapped network drive for File History backups.",
+  "chunks": [
+    {
+      "chunk_id": "9.5.4_chunk_1",
+      "content": "Network attached storage, or NAS, is a file-level storage device on your network. These devices can be useful when you share data or even back it up. Generally, there'll be several drives in the NAS device for redundancy. But if you want to make sure data isn't lost due to drive failure, a cloud sync is suggested. TrueNAS, which is also known as free NAS, is open-source software. You can install this software on a physical server or a virtual machine.",
+      "summary": "Network Attached Storage (NAS) is a file-level storage solution that facilitates data sharing and backup within a network, typically featuring multiple drives for redundancy. To enhance data protection against drive failures, integrating cloud sync is recommended. TrueNAS, an open-source software, can be deployed on either physical servers or virtual machines, providing a flexible option for managing NAS configurations.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.5.4",
+        "title": "Configure Network Attached Storage",
+        "content_type": "video",
+        "filename": "9.5.4_Configure_Network_Attached_Storage_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.5.4_Configure_Network_Attached_Storage_[video].txt",
+        "word_count": 979,
+        "has_content": true
+      },
+      "section_header": "Configure a NAS for Data Backups",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.5.4_chunk_2",
+      "content": "TrueNAS makes it very easy to set up, as all we've done up to this point is install it, set an IP, and set a root password. In order to use any disks for storage, we must configure a storage pool. To do so, go to 'Storage' and then 'Pools'. Then click 'ADD' and 'CREATE POOL'. Next, we're going to give it a name and select the two available disks we have. Most likely, a production NAS will have more storage and more available disks then what we're showing. Since there are only two disks, we're going to set up a 'Mirror' vs. Stripe. Click 'CREATE', 'Confirm', and 'CREATE POOL'. Now that our pool is set up, we must create a Windows share. Go to 'Sharing' and then 'Windows Shares (SMB)'. The drop-down menu at the top of the main folder will be selected since that was the name set on the storage pool. Nothing else is needed, but you could add a description if you'd like for documentation. Click 'SUBMIT'. A box will appear asking you to enable the SMB service since it wasn't on before.",
+      "summary": "The CompTIA Security+ course section on setting up a Network Attached Storage (NAS) using TrueNAS guides users through the process of configuring a storage pool by selecting available disks and creating a mirrored setup for data redundancy. After establishing the pool, it instructs on creating a Windows share (SMB) to facilitate file sharing, emphasizing the importance of enabling the SMB service for functionality. This practical application highlights essential concepts of data storage management and security in a networked environment.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.5.4",
+        "title": "Configure Network Attached Storage",
+        "content_type": "video",
+        "filename": "9.5.4_Configure_Network_Attached_Storage_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.5.4_Configure_Network_Attached_Storage_[video].txt",
+        "word_count": 979,
+        "has_content": true
+      },
+      "section_header": "Set Up NAS",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.5.4_chunk_3",
+      "content": "Next, a user needs to be set up so some form of authentication can happen to access this newly created share. We'll set up a basic user under 'Accounts' and then 'Users'. Click 'ADD'. Our name here will be 'backup'. The same name will be used for the username as well. Enter a password and confirm it. As we scroll down, we need to give this user permission to our new share directory. Drop down the folder and select 'main'. All of the home directory permissions are fine for now, so we'll leave them. One thing is for certain - this user doesn't require shell login, so we want to disable this for security purposes. If you click over here and select 'nologin', it'll take care of this problem. Click 'SUBMIT' when finished. Our configuration is complete on our NAS, so were going to hop over to our Windows machine to configure the rest.",
+      "summary": "In this section, users learn how to configure a new user account for accessing a shared directory on a Network Attached Storage (NAS) system. The process involves creating a user named 'backup', setting a password, granting permissions to the designated share folder, and disabling shell login for enhanced security. After completing the NAS configuration, users will proceed to set up the necessary configurations on their Windows machine.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.5.4",
+        "title": "Configure Network Attached Storage",
+        "content_type": "video",
+        "filename": "9.5.4_Configure_Network_Attached_Storage_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.5.4_Configure_Network_Attached_Storage_[video].txt",
+        "word_count": 979,
+        "has_content": true
+      },
+      "section_header": "Configure a User",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.5.4_chunk_4",
+      "content": "In order to have this NAS easily accessible, we're going to map it as a network drive. To do so, go to 'File Explorer'. As we expand this, we're going to go to 'This PC'. Next, the 'Computer' tab at the top will give us the option to map a network drive. Select a drive letter of your choosing. The path in the folder will be the IP address or DNS name for the NAS. We're going to use the IP as we don't have DNS set up for this right now. Type '\\\\192.168.30.106', as this was the IP of our NAS. Now click 'Browse'. It'll take a second, and you might have to click on the device for the username and password prompt to come up. Enter the username and password we set up for the backup user. The key thing is to check 'Remember my credentials', otherwise this mount will be asking for the password every time your computer reboots. Click 'OK' and then select the 'backup' folder. If you notice, TrueNAS creates a folder with the same username as the user, unless changed. Once we click 'Finish', our new mount will be mounted as the N: drive. Don't worry about the rest of the files in this directory, as this pertains to the username associated with the TrueNAS side. Since we may have multiple computers backing up their data here, we'll just name a folder 'computer_1'.",
+      "summary": "To map a Network Attached Storage (NAS) as a network drive, users can utilize File Explorer to select a drive letter and input the NAS's IP address (e.g., '\\\\192.168.30.106'). After entering the appropriate credentials and checking the 'Remember my credentials' option, the NAS will be accessible as a designated drive (e.g., N: drive), allowing for organized data management across multiple computers. This practical application enhances accessibility and efficiency in data backup processes.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.5.4",
+        "title": "Configure Network Attached Storage",
+        "content_type": "video",
+        "filename": "9.5.4_Configure_Network_Attached_Storage_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.5.4_Configure_Network_Attached_Storage_[video].txt",
+        "word_count": 979,
+        "has_content": true
+      },
+      "section_header": "Map Network Drive",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.5.4_chunk_5",
+      "content": "Now we can go set up some backup jobs. You do have the ability to use other backup solutions. However, we're just going to use the built-in File History. When we type 'backup' in the search bar here, it brings us to our backup settings. Notice when we click on 'Add a drive', it says no usable drives found. This doesn't mean it's broken. Typically, this menu looks for secondary or removable drives that are local. If we select 'More options' and 'See advanced settings', we get the option to map file history to a network location. We can then navigate to our mapped drive by going to 'This PC', clicking on the 'N:' drive, and going to the 'computer_1' folder. Click 'OK' and then after that we should be able to turn on our 'File History' now.",
+      "summary": "In this section, users learn to set up backup jobs using the built-in File History feature in Windows. The process involves accessing backup settings, adding a drive, and mapping File History to a network location for efficient data protection. This practical application emphasizes the importance of regular backups in maintaining data integrity and security.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.5.4",
+        "title": "Configure Network Attached Storage",
+        "content_type": "video",
+        "filename": "9.5.4_Configure_Network_Attached_Storage_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.5.4_Configure_Network_Attached_Storage_[video].txt",
+        "word_count": 979,
+        "has_content": true
+      },
+      "section_header": "Set File History",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.5.4_chunk_6",
+      "content": "That's it for this demo. In this demo, we showed you how to configure a NAS, set up an SMB share, and configure a mapped network drive for File History backups.",
+      "summary": "In this demo, participants learned how to configure a Network-Attached Storage (NAS) system, set up a Server Message Block (SMB) share for file sharing, and establish a mapped network drive to facilitate File History backups. These practical applications enhance data management and security by ensuring efficient backup processes and centralized file access. Understanding these configurations is essential for maintaining secure and reliable data storage solutions in a networked environment.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.5.4",
+        "title": "Configure Network Attached Storage",
+        "content_type": "video",
+        "filename": "9.5.4_Configure_Network_Attached_Storage_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.5.4_Configure_Network_Attached_Storage_[video].txt",
+        "word_count": 979,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 6
+}

@@ -1,0 +1,354 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Embedded and Specialized Systems
+00:04
+Today's smart technology is being embedded into
+00:07
+devices like TVs, kitchen appliances, environmental
+00:10
+controls, and even industrial equipment.
+00:12
+And it's becoming increasingly common.
+00:15
+These devices are sometimes referred to as static
+00:18
+environments because they weren't designed to be customized
+00:21
+or modified in any way by you, the network administrator.<br>
+2. SCADA
+00:25
+Smart tech history is connected with supervisory
+00:28
+control and data acquisition systems.
+00:31
+We just call them SCADA.
+00:32
+This infrastructure manages automated factory equipment that
+00:36
+relies on the smart technology embedded in modern devices.<br>
+00:41
+As its name suggests, SCADA systems provide two general
+00:44
+functions: supervisory control and data acquisition.
+00:49
+The first controls remote equipment
+00:50
+over a network connection.
+00:52
+The second gathers information from those remote
+00:55
+devices, allowing you to monitor their status.<br>
+00:58
+Using network connectivity, SCADA
+01:01
+systems can manage industrial equipment a
+01:03
+long distance away from a control center.
+01:06
+This is sometimes called a
+01:07
+distributed control system, or DCS.
+01:11
+To make this work, SCADA systems
+01:13
+have several different components.
+01:15
+First, there's a central supervisory computer
+01:18
+that communicates with and sends control
+01:20
+commands out to connected SCADA devices.
+01:23
+The devices have remote terminal units, or RTUs.
+01:25
+The RTUs connect the equipment to the network, which
+01:30
+enables them to receive commands from the supervisory
+01:32
+system and then send status information back.<br>
+01:36
+Alternatively, SCADA equipment might have
+01:39
+programmable logic controllers, or PLCs, installed.
+01:41
+PLCs connect the SCADA equipment
+01:46
+to the network just like RTUs.
+01:48
+The difference is that they're usually less expensive.<br>
+01:51
+Another important component is the type of network link used
+01:55
+to connect the supervisory computer to the RTUs or PLCs.
+02:00
+Some of the most common options include a standard
+02:02
+internet connection, a satellite link, a private WAN link,
+02:06
+or even a simple modem connection over a telephone line.<br>
+3. IoT
+02:10
+When talking about smart technology and SCADA,
+02:13
+we can't forget the Internet of Things, or IoT.<br>
+02:16
+IoT is a natural extension of SCADA.
+02:19
+Its evolution is such that late-generation SCADA
+02:22
+systems developed into first-generation IoT systems.
+02:26
+An IoT ecosystem is made up of web-enabled smart
+02:30
+devices that use embedded processors, sensors,
+02:33
+and communication hardware to collect, send, and
+02:36
+act on data they gather from their environments.<br>
+02:40
+One important aspect of newer IoT devices is the
+02:43
+operating system they use because these offer
+02:46
+connectivity, usability, and interoperability.<br>
+02:50
+One of these operating systems is called RIOT OS.
+02:54
+It requires few resources and is very energy efficient.
+02:58
+It's used on embedded systems, actuator boards, and sensors.<br>
+4. IoT
+03:02
+Another is ARM Mbed OS.
+03:05
+This OS is primarily used with low-power
+03:08
+technology such as wearable devices.
+03:10
+In other words, any mobile device that's
+03:13
+meant to be worn somewhere on the body.
+03:15
+These<br>
+03:16
+devices can be as simple as a step-tracking
+03:18
+wristband or as complex as a virtual reality headset.
+03:22
+Most wearable devices are designed
+03:24
+to interface with another device.<br>
+03:27
+For example, a smartwatch by itself
+03:29
+has a limited set of functions.
+03:31
+But when you connect it to a smartphone through
+03:34
+Bluetooth, you get added functionality like text
+03:37
+messaging or being able to answer phone calls.<br>
+5. IoT
+03:40
+Back to the operating systems now.
+03:43
+RealSense OS X is used in Intel's depth-sensing
+03:46
+technology for cameras and sensors.
+03:49
+Then there's Nucleus and Integrity RTOS, which are both used
+03:53
+for aerospace, industrial, automotive, and medical devices.
+03:57
+When it comes to drones and robots, Ubuntu
+03:59
+Core or Snappy are usually preferred.<br>
+6. Mobile Devices
+04:02
+Whether it's a tablet, smartphone, or an e-reader,
+04:05
+all mobile devices share some characteristics.
+04:08
+The most common is the power source.
+04:11
+The power source is typically a lithium
+04:13
+ion battery rated in milliamp hours.
+04:16
+The larger the number, the greater the battery capacity.
+04:19
+For example, the average smartphone battery
+04:21
+is about 2,000 milliamp hours while a notebook
+04:24
+battery is about 6,000 milliamp hours.<br>
+04:27
+Another characteristic is a mobile device's storage.<br>
+04:31
+To extend battery life, mobile devices use some sort
+04:34
+of non-volatile flash memory to store information.
+04:37
+Because no moving parts need to be powered, flash
+04:40
+memory is a more energy-efficient storage medium.
+04:43
+In addition, a lot of mobile devices have
+04:45
+expandable storage in the form of micro-SD cards.
+04:49
+This allows mobile devices to increase
+04:51
+their storage to upwards of 200 gigabytes.<br>
+04:54
+Mobile devices need connectivity to the
+04:57
+internet and to other mobile devices.
+04:59
+To do this, they use a variety
+05:01
+of wireless connection mediums.
+05:03
+For example, the typical smartphone utilizes 802.11,
+05:08
+Bluetooth, and cellular wireless technologies.<br>
+05:12
+Mobile devices also have internal sensors that
+05:14
+collect environmental data, usually with a GPS chip.
+05:18
+They use these chips to calculate the device's
+05:20
+location information, which you can use for navigation
+05:24
+and for finding your device if you happen to lose it.<br>
+05:27
+Another internal sensor is called an accelerometer.
+05:30
+This is a sensor that detects movement on a
+05:32
+single plane, typically the horizontal plane.
+05:35
+It detects when a mobile device is turned sideways and
+05:38
+tells the device to change the screen's orientation.<br>
+05:42
+A third sensor is a gyroscope.
+05:43
+It also detects movement, but instead of
+05:46
+detecting movement on a single plane, it
+05:48
+detects horizontal and vertical movements.
+05:51
+If you've ever played a game on a smartphone or tablet that
+05:54
+requires you to tilt the device, you've used a gyroscope.<br>
+7. Smart Devices
+05:58
+A key issue with smart technology is that there's
+06:01
+little to no ability to modify the technology within.
+06:04
+As a result, it's very difficult to manage security.
+06:08
+For example, you can't install anti-malware software on
+06:11
+a smart refrigerator or on an HVAC system even though
+06:14
+there are significant security risks associated with them. <br>
+06:18
+For example, in early 2014 the first
+06:20
+documented IoT attack occurred.
+06:23
+This attack leveraged smart devices to conduct a
+06:26
+rather pervasive, malicious email-phishing exploit.<br>
+06:29
+The trouble is that because smart devices are becoming
+06:32
+more commonplace, we tend to forget about them.
+06:35
+In addition, smart device vendors are slow to protect
+06:38
+their products proactively because of cost constraints.
+06:42
+For this reason, it's even more important for
+06:44
+you as an administrator to secure your network
+06:47
+against any possible smart device attacks.<br>
+8. Raspberry Pi
+06:50
+It's also good to keep physical security in mind.
+06:53
+When an attacker discovers a rogue access
+06:55
+point, they're able to run various types of
+06:57
+vulnerability scanners from outside the company.
+07:01
+But if they gain physical access, they can
+07:03
+hide a physical rogue access point as well.
+07:06
+This is often done by configuring an extremely compact
+07:09
+and powerful hardware device called a Raspberry Pi.<br>
+07:12
+Just like smart device attacks, a rogue access point
+07:15
+attack happens simply because a network administrator
+07:18
+didn't properly configure the legitimate access points.
+07:22
+Maybe he or she didn't implemented proper
+07:24
+security measures in the beginning and
+07:26
+eventually just forgot about them altogether.
+07:29
+This is known as access point misconfiguration.<br>
+9. Defense Against Attacks
+07:33
+To defend against these attacks,
+07:34
+there are a few things you can do.
+07:37
+First, have a solid firewall design in place.
+07:39
+Second, have intrusion detection.
+07:42
+Or better yet, install intrusion-protection devices.
+07:45
+Third, have very strong organizational security
+07:48
+policies in place so that you're not caught off guard.<br>
+10. Summary
+07:51
+That's it for this lesson.
+07:53
+In this video, we looked at security risks
+07:55
+associated with embedded and specialized systems.
+07:58
+We talked about SCADA, IoT, smart
+08:01
+devices, and mobile devices.
+08:03
+We talked about the security risks associated
+08:05
+with these devices as well as with Raspberry Pi.
+08:08
+We ended this lesson by talking about how
+08:10
+you can defend yourself from distributed
+08:13
+attacks leveled against these smart devices.<br>

@@ -1,0 +1,169 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. SIEM
+00:04
+In this video, we'll discuss Security Information and Event
+00:08
+Management, or SIEM, which is a tool used to compile and
+00:11
+examine multiple data points gathered from across a network.
+00:14
+We'll also explore log management.<br>
+2. Vulnerability Scan Output
+00:17
+Monitoring a network requires experience and solid tools.
+00:21
+One common network security tool is a scanner that can
+00:23
+identify vulnerabilities and recommend remediation steps.
+00:27
+The scan delivers output information to the
+00:29
+IT administrators via the SIEM dashboard.
+00:32
+The interval between scans is set by the IT department.
+00:36
+This tool also scans servers, firewalls,
+00:38
+switches, software programs, and even
+00:41
+security cameras and wireless access points.<br>
+3. SIEM Dashboards
+00:43
+There are many versions of SIEMs.
+00:46
+Each one has different features and benefits,
+00:48
+but all SIEMs have several features in common.
+00:50
+One of these is the dashboard.
+00:52
+These are generally customizable information screens
+00:55
+that show real-time security and network information.
+00:59
+This allows the IT security team to monitor
+01:01
+events as they occur on the network.<br>
+01:04
+Sensors play a vital role in
+01:05
+monitoring and securing a network.
+4. Sensors
+01:08
+These sensors are set up at critical endpoints,
+01:10
+services, and other vulnerable locations.
+01:13
+They're programmed to send customized alerts to the
+01:15
+SEIM if certain parameters are reached or exceeded.<br>
+01:19
+Before sensors are deployed, the IT
+01:21
+security team sets their sensitivity.
+5. Sensitivity
+01:23
+The benefit to variable sensitivity settings is the
+01:27
+ability to customize the data that's sent to the SIEM.
+01:30
+Not every company has the same needs, and that's what
+01:32
+makes sensor-sensitivity customization so beneficial.<br>
+01:37
+Trends are patterns of activity
+01:38
+discovered and reported to the SEIM.
+6. Trends
+01:41
+This is how baselines are established.
+01:42
+These trends help security analysts decide if reported
+01:46
+activity is normal or outside of the baseline.
+01:49
+Trends that don't fit previously
+01:50
+recorded ones can be investigated.
+01:53
+As the IT security team investigates and documents
+01:56
+these trends, it becomes easier for them to quickly
+01:59
+spot an anomaly that may signal a security concern.<br>
+02:02
+Alerts are the SIEMs' way of letting the IT team know
+02:05
+that a pre-established parameter has been contravened.
+7. Alerts
+02:08
+The alert is intended to get the attention of
+02:11
+the IT person who's monitoring the network.
+02:14
+A best practice in this area is 24-hour monitoring.
+02:18
+This means that weekends, holidays,
+02:20
+and early hours are all filled.
+02:21
+Hackers don't keep normal hours, and network
+02:24
+equipment can break at the most inconvenient times!<br>
+02:27
+Event correlation is a critical
+02:28
+part of using a SIEM solution.
+8. Correlation
+02:30
+The software gathers data from log files,
+02:33
+system applications, network appliances,
+02:36
+and other endpoints in order to analyze it.
+02:39
+This work is tedious, and people are inefficient at it.
+02:42
+That's why the event-correlation feature is valuable.
+02:45
+Not only does it gather data, but it analyzes
+02:47
+and compares known malicious behavior against
+02:49
+the aggregate data so that events aren't missed.<br>
+02:53
+That's it for this lesson.
+9. Summary
+02:55
+In this lesson, we learned about SIEMs and the
+02:57
+features that make them a critical network component.
+02:59
+These include customizable sensors and their placement.
+03:03
+Trends help IT teams to establish
+03:05
+baselines or norms for their network.
+03:07
+Alerts provide critical information to the network
+03:10
+monitor so that appropriate action can be taken.
+03:13
+Event correlation automates a very laborious
+03:16
+process and analyzes and compares aggregate
+03:19
+data to known security behaviors and events,
+03:22
+ensuring that nothing gets by undetected.
+03:24
+All this is delivered to the IT team via a
+03:27
+customizable dashboard for easy examination.<br>

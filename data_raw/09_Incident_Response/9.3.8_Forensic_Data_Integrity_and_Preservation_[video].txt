@@ -1,0 +1,184 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Forensic Data Integrity and Preservation
+00:04
+Data integrity and preservation are fundamental
+00:06
+aspects of digital forensics, ensuring the
+00:09
+reliability and usefulness of the data.
+00:12
+They serve to maintain and protect the original
+00:14
+state of digital evidence from the moment of
+00:17
+collection to its presentation in court.
+00:19
+Any intentional or unintentional alteration can
+00:22
+compromise the accuracy of the evidence, thereby
+00:25
+undermining the entire forensic investigation.
+00:28
+This means that evidence acquisition, imaging, and
+00:31
+storage all need to be done using well-defined processes.<br>
+2. Order of Volatility
+00:35
+Evidence should be captured in the order of
+00:37
+volatility, from more volatile to less volatile.
+00:42
+The ISOC best practice guide to evidence collection
+00:45
+and archiving recommends the following order: First,
+00:48
+CPU registers and cache memory—including cache on
+00:52
+disk controllers, graphics cards, etc.
+00:55
+The contents of nonpersistent system
+00:56
+memory, or RAM, including routing table, ARP
+01:00
+cache, process table, and kernel statistics.
+01:04
+Then, data is stored on persistent mass storage devices like
+01:07
+HDDs, SSDs, and flash memory devices, followed by partition
+01:12
+and file system blocks, slack space, and free space.<br>
+01:17
+Next would be system memory caches, such as swap
+01:19
+space, virtual memory, and hibernation files.
+01:23
+And finally, user, application,
+01:25
+and OS files and directories.
+01:28
+Other sources could include remote logging and
+01:30
+monitoring data, physical configuration and network
+01:34
+topology, and archival media or printed documents.<br>
+3. Acquisition Integrity
+01:39
+Data acquisition is complicated by the fact that
+01:41
+it's more difficult to capture evidence from a
+01:43
+digital crime scene than it is from a physical one.
+01:47
+For example, some evidence could be lost if a computer
+01:49
+system is powered off; on the other hand, other evidence may
+01:52
+be unobtainable until after the system has been powered off.
+01:56
+Because of this, it's important to know the
+01:58
+three states for persistent storage acquisition.<br>
+02:02
+Live acquisition means copying the
+02:04
+data while the host is still running.
+02:06
+This may capture more evidence or more data for
+02:09
+analysis and reduce the impact on overall services.
+02:12
+Still, the data on the actual disks will have changed, so
+02:16
+this method may not produce legally acceptable evidence.
+02:20
+It may also alert the threat actor and allow
+02:22
+time for them to perform anti-forensics.<br>
+02:25
+With static acquisition, the host is shut down normally.
+02:29
+If malware is a concern, this method runs the risk that
+02:32
+the malware will detect the shutdown process and perform
+02:35
+anti-forensics to try to remove traces of itself.<br>
+02:39
+If this is the case, static acquisition by pulling
+02:42
+the plug instead of powering down may be a solution.
+02:45
+This means disconnecting the power at the wall
+02:47
+socket (not the hardware power-off button).
+02:49
+This is most likely to preserve the storage
+02:52
+devices in a forensically clean state, but
+02:55
+there's the risk of corrupting data.<br>
+4. Proof of Integrity
+02:58
+Once the target disk has been safely attached to the
+03:00
+forensics workstation, data acquisition proceeds as follows:<br>
+03:05
+A cryptographic hash of the source disk media is
+03:07
+made using either the MD5 or SHA hashing function.
+03:13
+A bit-by-bit copy of the source media
+03:14
+is made using an imaging utility.
+03:17
+A second hash is then made of the image, which
+03:19
+should match the original hash of the media.
+03:23
+A copy is made of the reference image,
+03:24
+validated again by the checksum.
+03:27
+All analysis is performed on the copy.<br>
+03:29
+This proof of integrity ensures non-repudiation.
+03:33
+If the provenance of the evidence is certain,
+03:36
+the threat actor identified by analysis of the
+03:38
+evidence can't deny their actions.
+03:41
+The hashes prove that no modification
+03:43
+has been made to the image.<br>
+5. Summary
+03:45
+That's it for this lesson.
+03:47
+In this lesson, we discussed
+03:48
+data integrity and preservation.
+03:50
+We reviewed the order of volatility that
+03:52
+requires that evidence be captured in order of
+03:55
+volatility from more volatile to less volatile.
+03:58
+We also talked about ensuring acquisition integrity by
+04:02
+leveraging the different states of persistent storage
+04:04
+acquisition: live acquisition, static acquisition,
+04:08
+powered down, and static acquisition, unplugged.
+04:12
+Lastly, we discussed how proof of evidence
+04:13
+integrity helps to ensure non-repudiation.<br>

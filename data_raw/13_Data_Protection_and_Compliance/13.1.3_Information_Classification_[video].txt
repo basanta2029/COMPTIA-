@@ -1,0 +1,197 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Information Classification
+00:04
+In this video, we're going to talk
+00:06
+about information classification.
+00:07
+There are several types of data, and
+00:10
+data needs to be classified and secured.
+00:12
+First, let's go over general classifications of data.
+2. Classifications of Data
+00:16
+All data falls into one of five categories.
+00:19
+Public data is available to anyone.
+00:21
+Private data has limited distribution.
+00:23
+Sensitive data is for internal use.
+00:26
+Critical data is covered by laws and compliance regulations.
+00:29
+Proprietary data is exclusive to a particular entity.
+00:33
+Let's look at each of these in detail.
+3. Public Data
+00:36
+The first information classification is Public.
+00:38
+This classification allows anyone
+00:41
+to have a copy of the information.
+00:42
+Examples include a public website that everyone can
+00:45
+access, company brochures, and marketing material.
+00:48
+This data exists to be released.
+4. Private Data
+00:51
+Private data is not for general release to the public.
+00:54
+It includes internal email addresses, company meeting
+00:57
+notes, company presentations, and customer lists.
+01:01
+This is information you don't want released to the
+01:03
+public, but if it were accidentally released, damage
+01:06
+to your organization would be light to moderate.
+5. Sensitive Data
+01:10
+Sensitive data is information that, if exposed,
+01:13
+could cause significant damage to an organization.
+01:16
+Sensitive data is restricted even within
+01:19
+the company that's responsible for it.
+01:21
+It may include strategic information,
+01:23
+customer lists, personally identifiable
+01:25
+information (PII), and company strategies.
+6. Critical Data
+01:29
+Critical data includes personally identifiable
+01:31
+information, credit card data, health records, and
+01:34
+other information covered under compliance regulations.
+01:37
+These include The General Data Protection Regulation,
+01:40
+or GDPR, and The California Consumer Protection Act.
+01:44
+The disclosure of critical data will
+01:46
+cause severe harm and financial penalties.
+7. Proprietary Data
+01:49
+Proprietary information includes information that's
+01:52
+unique and differentiates a company from its competitors.
+01:55
+Examples are Google's search algorithm, the recipe for
+01:58
+Coca-Cola, or patents granted for inventions and processes.
+02:02
+The release of this information would cause
+02:04
+serious damage, maybe even irreparable damage.
+02:08
+Now let's talk about very specific kinds of
+02:11
+data that need to be classified by a company.
+02:13
+This data is covered by laws, government
+02:15
+regulations, and compliance acts.
+8. Data Types
+02:19
+The first is classified data.
+02:21
+Personal Identifiable Information includes almost any
+02:24
+data that can be used to identify a person: their name,
+02:28
+addresses, email, phone number, or even a photograph.
+02:31
+The Health Insurance Portability and Accountability
+02:35
+Act (HIPAA) has many facets, but the one that concerns
+02:38
+you most as a security administrator is their policy
+02:40
+on Electronic Health Information, or eHI.
+02:44
+This classification includes data related to an
+02:47
+individual's health and information collected by doctors,
+02:50
+health clinics, health insurance companies, and employers.
+02:53
+It must be secured in all usage
+02:56
+states– at rest, in use, or in motion.
+02:59
+The exposure, loss, or breach of this data
+03:03
+incures significant fines from the U.S.
+03:05
+government.
+03:06
+Financial data is covered by a
+03:08
+few laws and compliance bodies.
+03:10
+It includes consumer credit card information, bank
+03:12
+account numbers, and corporate financial requirements.
+9. Military and Government Data
+03:16
+There are also government/military classification levels.
+03:20
+The public can view Unclassified information.
+03:23
+The next classification is Sensitive, but Unclassified.
+03:26
+For this classification, the government or
+03:28
+military would prefer the information not be
+03:31
+available to the public, but it is unclassified.
+03:34
+Disclosure could cause harm, but the harm would be minimal.
+03:38
+The next level is Confidential.
+03:40
+It allows restricted information release
+03:42
+under the Freedom of Information Act.
+03:44
+The level above that is Secret, and it includes troop
+03:47
+movements, deployments, and overall capabilities.
+03:50
+The highest classification is Top Secret.
+03:53
+Release of Top-Secret information can pose a
+03:56
+grave threat to the country and national security.
+10. Summary
+03:59
+That's it for this lesson.
+04:01
+In this lesson, we covered the different data
+04:03
+classifications and examples of data in each
+04:05
+classification: public, private, sensitive, and critical.
+04:10
+Then we looked at specific types of data,
+04:12
+including PII, ePHI, credit cards, and
+04:16
+unclassified, confidential, secret, and top-secret.

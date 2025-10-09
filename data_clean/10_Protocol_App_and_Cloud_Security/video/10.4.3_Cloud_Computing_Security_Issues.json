@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "chapter_num": "10",
+    "section_num": "10.4.3",
+    "title": "Cloud Computing Security Issues",
+    "content_type": "video",
+    "filename": "10.4.3_Cloud_Computing_Security_Issues_[video].txt",
+    "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.4.3_Cloud_Computing_Security_Issues_[video].txt",
+    "word_count": 1135,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script Let's talk about cloud computing security issues. The benefits offered by cloud computing—\"the ability to use applications, platforms, and infrastructure as needed, and not use them when you don't—\"is attractive. However, security is a key issue. In a traditional system, you secure data behind layer after layer of security mechanisms—\"firewalls, ACLs, encryption, et cetera. And even after all that, it's still a challenge to keep your network safe. Add in the cloud component, and now all that data is being sent across the internet to a third-party organization who also needs to maintain their own system security. Ultimately, the decision to utilize a cloud provider comes down to a partnership of trust. The cloud computing service provider has to ensure the security and privacy of your information. Security is part of the service they provide. However, you, as a security administrator, are still responsible for protecting your company's data. One of the key things you need to remember is that industry and government regulations created to protect personal and business information still apply. Even though the data is being stored by the cloud computing provider, you're still responsible. Whenever an organization is evaluating a move to the cloud, I always tell them that they need to approach the process of picking a cloud service provider in the same way they would buying a used car from a dealership. A used car may look great on the surface, but what you really need to be concerned with is what's under the hood. Take the same approach when selecting a cloud service provider. Let's go over some of the key security considerations you need to keep in mind if you use a cloud service provider. First, there's an issue of trust. You have to trust that your cloud service provider is good at information security. If your provider hasn't done a good job securing their environment, you could be in trouble. You can insist that the cloud services provider implement specific security measures, but you can't physically make them. In addition, there's a monitoring issue. It's difficult to monitor security issues when your environment is provided by a cloud service provider. You're not on site, so you don't know what security issues they're facing. You don't see the midnight attack that they had to fight off last night. The cloud service provider probably doesn't want to let you know about it because they're afraid you might terminate their services. Likewise, it's difficult to measure a cloud provider's degree of competence with information security because they probably don't want to expose their infrastructure to customers. Therefore, as we talked about with monitoring, it's hard to know how things are really going with your cloud computing environment. All you see really is the user interface. Another thing to consider is authentication. Make sure that the cloud service provider authenticates everyone who's going to use the service. Don't choose the cloud service provider if they allow free access. The next key thing to look for is partitioning. In other words, they make sure that your information and your data is kept completely separate from other customers' information and data. You don't want a fellow cloud computing customer gaining access to your data. Within your organization, make sure that your individual users only have access to the applications that they need. Do not allow them to choose whatever they want to use. One way to do this is to use a Cloud Access Security Broker (CASB). A CASB is a software tool or a service that sits between an organization and a cloud service provider. Its job is to make sure that all communication and access to the cloud service provider complies with the organization's security policies and procedures. For example, it might make sure devices connecting to the cloud meet certain security standards, such as full-device encryption, up-to-date malware protection, et cetera. The next key thing to look for is updating. Make sure that the cloud service provider maintains a rigorous patch management program to ensure that the systems are updated. This will help protect your information from potential exploits. After that, check out their processes. A good cloud computing service provider should have processes, policies, and procedures in place to handle various events. These processes, policies, and procedures should include everything, from something as simple as requesting access to a new application or something as critical as dealing with a major security breach. When you're evaluating a company, ask the company for a copy of these policies and procedures so you can see what they are going to do if a certain event happens. In addition, verify that the cloud service provider has policies and procedures in place for monitoring security logs, monitoring unusual behavior, and performing the various tasks required to keep their system safe. Next, make sure that they use some form of encryption to ensure that the data passing between your organization and their service is encrypted and can't be sniffed. Most likely, the data will pass through the untrusted network connection that is the internet. Secure data transmission is critical. Last, the cloud computing service provider should probe their system on a regular basis. They should contract with a third party whose expertise is breaking into systems. The third party should probe the cloud computing service to see if there are any weaknesses that can be exploited. Cloud services are here to stay. No matter the organization you work for, they are probably going to use some type of cloud service. This is because cloud services are very cost-effective and convenient. However, with convenience comes risk. And it's your job as a security professional to identify those risk, account for them, and minimize them as much as possible.",
+  "chunks": [
+    {
+      "chunk_id": "10.4.3_chunk_1",
+      "content": "Let's talk about cloud computing security issues. The benefits offered by cloud computing—\"the ability to use applications, platforms, and infrastructure as needed, and not use them when you don't—\"is attractive. However, security is a key issue.",
+      "summary": "Cloud computing offers flexibility in utilizing applications and infrastructure, but it also presents significant security challenges. Key issues include data protection, access control, and compliance with regulations, which are critical for safeguarding sensitive information in cloud environments. Understanding these security concerns is essential for effectively managing and mitigating risks associated with cloud computing.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.4.3",
+        "title": "Cloud Computing Security Issues",
+        "content_type": "video",
+        "filename": "10.4.3_Cloud_Computing_Security_Issues_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.4.3_Cloud_Computing_Security_Issues_[video].txt",
+        "word_count": 1135,
+        "has_content": true
+      },
+      "section_header": "Cloud Computing Security Issues",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.4.3_chunk_2",
+      "content": "In a traditional system, you secure data behind layer after layer of security mechanisms—\"firewalls, ACLs, encryption, et cetera. And even after all that, it's still a challenge to keep your network safe. Add in the cloud component, and now all that data is being sent across the internet to a third-party organization who also needs to maintain their own system security. Ultimately, the decision to utilize a cloud provider comes down to a partnership of trust. The cloud computing service provider has to ensure the security and privacy of your information. Security is part of the service they provide. However, you, as a security administrator, are still responsible for protecting your company's data. One of the key things you need to remember is that industry and government regulations created to protect personal and business information still apply. Even though the data is being stored by the cloud computing provider, you're still responsible. Whenever an organization is evaluating a move to the cloud, I always tell them that they need to approach the process of picking a cloud service provider in the same way they would buying a used car from a dealership. A used car may look great on the surface, but what you really need to be concerned with is what's under the hood. Take the same approach when selecting a cloud service provider. Let's go over some of the key security considerations you need to keep in mind if you use a cloud service provider.",
+      "summary": "Cloud security requires a partnership of trust between organizations and cloud service providers, as both parties share responsibility for data protection. Security administrators must ensure compliance with industry and government regulations, even when data is managed by third-party providers. When selecting a cloud service provider, organizations should conduct thorough evaluations, similar to inspecting a used car, to ensure robust security measures are in place.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.4.3",
+        "title": "Cloud Computing Security Issues",
+        "content_type": "video",
+        "filename": "10.4.3_Cloud_Computing_Security_Issues_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.4.3_Cloud_Computing_Security_Issues_[video].txt",
+        "word_count": 1135,
+        "has_content": true
+      },
+      "section_header": "Cloud Security Considerations",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.4.3_chunk_3",
+      "content": "First, there's an issue of trust. You have to trust that your cloud service provider is good at information security. If your provider hasn't done a good job securing their environment, you could be in trouble. You can insist that the cloud services provider implement specific security measures, but you can't physically make them.",
+      "summary": "The \"Trust the Provider\" section emphasizes the critical importance of trusting your cloud service provider's security practices, as inadequate security measures can jeopardize your data. While you can request specific security implementations, the ultimate responsibility lies with the provider, highlighting the need for due diligence in selecting a reliable cloud service partner. Understanding this trust dynamic is essential for effective risk management in cloud computing environments.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.4.3",
+        "title": "Cloud Computing Security Issues",
+        "content_type": "video",
+        "filename": "10.4.3_Cloud_Computing_Security_Issues_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.4.3_Cloud_Computing_Security_Issues_[video].txt",
+        "word_count": 1135,
+        "has_content": true
+      },
+      "section_header": "Trust the Provider",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.4.3_chunk_4",
+      "content": "In addition, there's a monitoring issue. It's difficult to monitor security issues when your environment is provided by a cloud service provider. You're not on site, so you don't know what security issues they're facing. You don't see the midnight attack that they had to fight off last night. The cloud service provider probably doesn't want to let you know about it because they're afraid you might terminate their services. Likewise, it's difficult to measure a cloud provider's degree of competence with information security because they probably don't want to expose their infrastructure to customers. Therefore, as we talked about with monitoring, it's hard to know how things are really going with your cloud computing environment. All you see really is the user interface.",
+      "summary": "The Security Monitoring section highlights the challenges of overseeing security in cloud environments, where organizations lack direct visibility into the provider's security incidents and measures. This opacity complicates the assessment of a cloud service provider's security competence, as they may withhold critical information to maintain client relationships. Consequently, organizations must rely on user interfaces and available metrics, which may not fully reflect the security posture of their cloud services.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.4.3",
+        "title": "Cloud Computing Security Issues",
+        "content_type": "video",
+        "filename": "10.4.3_Cloud_Computing_Security_Issues_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.4.3_Cloud_Computing_Security_Issues_[video].txt",
+        "word_count": 1135,
+        "has_content": true
+      },
+      "section_header": "Security Monitoring",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.4.3_chunk_5",
+      "content": "Another thing to consider is authentication. Make sure that the cloud service provider authenticates everyone who's going to use the service. Don't choose the cloud service provider if they allow free access. The next key thing to look for is partitioning. In other words, they make sure that your information and your data is kept completely separate from other customers' information and data. You don't want a fellow cloud computing customer gaining access to your data. Within your organization, make sure that your individual users only have access to the applications that they need. Do not allow them to choose whatever they want to use. One way to do this is to use a Cloud Access Security Broker (CASB). A CASB is a software tool or a service that sits between an organization and a cloud service provider. Its job is to make sure that all communication and access to the cloud service provider complies with the organization's security policies and procedures. For example, it might make sure devices connecting to the cloud meet certain security standards, such as full-device encryption, up-to-date malware protection, et cetera. The next key thing to look for is updating. Make sure that the cloud service provider maintains a rigorous patch management program to ensure that the systems are updated. This will help protect your information from potential exploits.",
+      "summary": "In the CompTIA Security+ course section on Authentication, Partitioning, and Updates, key security concepts include the importance of robust authentication processes and data partitioning to prevent unauthorized access to sensitive information. Organizations should implement Cloud Access Security Brokers (CASBs) to enforce security policies and ensure that users only access necessary applications. Additionally, maintaining a rigorous patch management program is crucial for cloud service providers to protect against vulnerabilities and exploits.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.4.3",
+        "title": "Cloud Computing Security Issues",
+        "content_type": "video",
+        "filename": "10.4.3_Cloud_Computing_Security_Issues_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.4.3_Cloud_Computing_Security_Issues_[video].txt",
+        "word_count": 1135,
+        "has_content": true
+      },
+      "section_header": "Authentication, Partitioning, and Updates",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.4.3_chunk_6",
+      "content": "After that, check out their processes. A good cloud computing service provider should have processes, policies, and procedures in place to handle various events. These processes, policies, and procedures should include everything, from something as simple as requesting access to a new application or something as critical as dealing with a major security breach. When you're evaluating a company, ask the company for a copy of these policies and procedures so you can see what they are going to do if a certain event happens. In addition, verify that the cloud service provider has policies and procedures in place for monitoring security logs, monitoring unusual behavior, and performing the various tasks required to keep their system safe.",
+      "summary": "In the CompTIA Security+ course, the section on Processes, Policies, and Procedures emphasizes the importance of having comprehensive protocols in place for cloud service providers to manage events ranging from access requests to major security breaches. It highlights the necessity of evaluating these policies to ensure they include monitoring security logs and unusual behavior, which are critical for maintaining system safety. Understanding and verifying these processes is essential for assessing the security posture of a cloud provider.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.4.3",
+        "title": "Cloud Computing Security Issues",
+        "content_type": "video",
+        "filename": "10.4.3_Cloud_Computing_Security_Issues_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.4.3_Cloud_Computing_Security_Issues_[video].txt",
+        "word_count": 1135,
+        "has_content": true
+      },
+      "section_header": "Processes, Policies, and Procedures",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.4.3_chunk_7",
+      "content": "Next, make sure that they use some form of encryption to ensure that the data passing between your organization and their service is encrypted and can't be sniffed. Most likely, the data will pass through the untrusted network connection that is the internet. Secure data transmission is critical. Last, the cloud computing service provider should probe their system on a regular basis. They should contract with a third party whose expertise is breaking into systems. The third party should probe the cloud computing service to see if there are any weaknesses that can be exploited.",
+      "summary": "This section emphasizes the importance of encryption for securing data transmitted over untrusted networks, such as the internet, to prevent unauthorized access. It also highlights the necessity for cloud service providers to regularly assess their security by engaging third-party experts to probe their systems for vulnerabilities. These practices are crucial for maintaining data integrity and protecting sensitive information in cloud computing environments.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.4.3",
+        "title": "Cloud Computing Security Issues",
+        "content_type": "video",
+        "filename": "10.4.3_Cloud_Computing_Security_Issues_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.4.3_Cloud_Computing_Security_Issues_[video].txt",
+        "word_count": 1135,
+        "has_content": true
+      },
+      "section_header": "Encryption and Probing",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.4.3_chunk_8",
+      "content": "Cloud services are here to stay. No matter the organization you work for, they are probably going to use some type of cloud service. This is because cloud services are very cost-effective and convenient. However, with convenience comes risk. And it's your job as a security professional to identify those risk, account for them, and minimize them as much as possible.",
+      "summary": "Cloud services offer cost-effective and convenient solutions for organizations, making them increasingly prevalent in various sectors. However, this convenience introduces significant security risks that security professionals must identify, assess, and mitigate to protect sensitive data and maintain organizational integrity. Understanding these risks and implementing appropriate security measures is crucial for effective cloud service management.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.4.3",
+        "title": "Cloud Computing Security Issues",
+        "content_type": "video",
+        "filename": "10.4.3_Cloud_Computing_Security_Issues_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.4.3_Cloud_Computing_Security_Issues_[video].txt",
+        "word_count": 1135,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 8
+}

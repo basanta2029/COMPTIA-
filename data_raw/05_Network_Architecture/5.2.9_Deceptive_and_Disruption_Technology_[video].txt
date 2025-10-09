@@ -1,0 +1,382 @@
+1. Attack Deception
+00:04
+In this lesson we'll discuss attack deceptions.
+00:06
+By now you should have a clear understanding
+00:09
+of what an attack is and what it looks like.
+00:11
+Threat agents are working hard to
+00:13
+find weaknesses in your defenses.
+00:14
+They will exploit any vulnerability to gather
+00:17
+information from an organization's network system.
+00:20
+Knowing this, organizations can set up data
+00:22
+or add devices to their networks that lures
+00:24
+unsuspecting attackers into attacking devices.
+00:28
+The attacking devices are designed to trap attackers and
+00:31
+prevent them from exfiltrating any useful information.
+2. Honeypots
+00:34
+The first item we'll look at is the honeypot.
+00:37
+As the name implies, if you look inside,
+00:39
+you'll find will find something sweet.
+00:41
+A honeypot is a network set up to fool an attacker
+00:44
+into thinking he's attacking a network device critical
+00:46
+to your company; however, it's simply a ruse.
+00:49
+The attacker can attack the honeypot as long
+00:52
+as he wants and get as deep as he wants;
+00:54
+however, there is no prize or honey in the end.
+00:57
+A honeypot can be a host, a service on a host, a
+01:00
+network device, a virtual entity, or even a single
+01:04
+file set up to attract attackers to a secure area
+01:07
+away from an organization's real network.
+01:10
+Even better, while it's distracting the
+01:11
+attacker, you can monitor the malicious activity
+01:15
+to learn what the attacker is trying to do.
+01:17
+For example, if an attacker attempts an exploit or upload a
+01:21
+rootkit or Trojan to a server, the honeypot environment will
+01:25
+safely store those files for malware collection and analysis.
+01:29
+There are several types of honeypots that are
+01:31
+designed to mimic and trap different types of attacks.
+01:34
+Each honeypot falls into one of two
+01:36
+categories: research or production.
+01:39
+Research honeypots are typically used by research,
+01:41
+military, or government organizations to gather information
+01:44
+about the motives and tactics of the attackers.
+01:47
+They are also used for educational purposes.
+01:50
+Production honeypots are used, primarily
+01:52
+by private and public organizations.
+01:54
+Let's look at a few examples of production honeypots.
+01:57
+First, you have the SSH honeypots.
+01:59
+SSH honeypots are designed to trap brute force attacks
+02:02
+that attempt to guess the password of a targeted device.
+02:05
+Perhaps more importantly, this type of honeypot captures
+02:08
+the complete shell history performed by the attacker.
+02:12
+Next, we have HTTP honeypots.
+02:14
+This type of honeypot is used to trap different
+02:16
+types of web vulnerabilities such as SQL injections,
+02:19
+file insertions, and web application attacks.
+02:22
+We also have WordPress honeypots which are
+02:25
+designed to attract spam and adware attacks.
+02:27
+An email honeypot is used to attract SMTP-based
+02:31
+attacks such as open relay, DDoS, and spam attacks.
+02:35
+And lastly, there are several types of honeypots
+02:37
+designed for TCP/IP-based protocol attacks.
+3. Honeynets and Honeyfiles
+02:41
+To make things more enticing to the attackers,
+02:43
+many companies will create a decoy network and
+02:45
+fill it with one or more honeypots.
+02:47
+This is known as a honeynet.
+02:49
+The information gained from a honeynet attack serves to
+02:52
+strengthen an organization's defense against future attack.
+02:56
+Similar in concept to a honeypot, a honeyfile is
+02:59
+a single file setup to entice and trap attackers
+03:02
+and to figure out what they're trying to do.
+03:04
+These types of files are typically set up on a
+03:06
+file server, and when accessed, an alarm is set
+03:09
+off notifying that administrators of the attack.
+03:12
+These types of alarms are often sent by email
+03:14
+directly to the user, which can also be easily
+03:17
+seen on a phone and almost instantly interpreted.
+03:20
+Honeyfiles are named so the hacker
+03:21
+will try and open or execute them.
+03:24
+For example, files with names such as passwords.txt
+03:27
+or IP Assignments.xls are prized targets for hackers
+03:32
+to gain useful information about a user or system.
+03:35
+When it comes to honeyfiles, attackers are
+03:37
+typically interested in four types of files.
+03:40
+First, are the informational files.
+03:41
+These are the types of files that contain information about
+03:44
+access other systems, like a password.txt file, and security
+03:48
+files like Microsoft word file named vpn_instructions.
+03:52
+The second type are application or program
+03:54
+files that an attacker may run, but the
+03:57
+normal user wouldn't, such as a complier.
+03:59
+Third, hackers love to attack files that
+04:02
+contain evidence of an attack such as log files.
+04:04
+The last type of file commonly targeted by attackers are
+04:08
+files that might contain intellectual property such as a
+04:11
+forecast, credit card numbers, and product roadmaps.
+04:15
+As you can see, honeyfiles protect a wide variety of
+04:17
+files and systems including email and email attachments.
+04:21
+Although we've pointed out the four major
+04:22
+types of file that attack hackers, keep in
+04:25
+mind that any file can be used as a honeyfile.
+04:29
+Honeyfiles also work with network intrusion detection
+04:31
+systems, or NIDS, and help to prevent false positives.
+04:35
+The other nice thing about honeyfiles is that if end
+04:38
+users are properly trained, they can create their own
+04:41
+honeyfiles and set up their own alarms and alerts.
+04:44
+Enabling users makes the detection process
+04:46
+easy and deployment effectiveness is high.
+04:49
+Since users create their own honeyfiles,
+04:51
+they receive the alarm if they accidentally
+04:53
+access one of their own monitored files.
+04:55
+This virtually eliminates false
+04:57
+positives that have be investigated.
+04:59
+This saves time, effort, and energy for system
+05:02
+management charged with keeping the network secure.
+05:05
+Further, this process supports a defense-in-depth strategy.
+4. DNS Sinkhole
+05:08
+Now let's shift gears and discuss DNS sinkholes.
+05:12
+Simply put, a DNS sinkhole is used to
+05:14
+provide false information for DNS queries.
+05:17
+Although this may sound counterintuitive, providing
+05:19
+false information can help to prevent a denial-of-service
+05:22
+or distributed denial-of-service attack.
+05:25
+DNS sinkholes are an effective measure that blocks
+05:28
+malicious traffic and blocks bots from successfully
+05:30
+taking a site down using a DDoS attack.
+05:33
+It's important to understand that
+05:35
+a DNS sinkhole is not a product.
+05:37
+Instead, it's a method used by system management
+05:39
+to fool an attacker by providing bogus information.
+05:43
+For example, suppose a bot attempts
+05:45
+to use DNS to forward information.
+05:47
+The DNS server returns fake information and
+05:49
+the bot can't continue its malicious activity.
+05:52
+As another example, supposed an attacker sends
+05:55
+a malicious email to an unsuspecting user.
+05:57
+Should the user click the link in the email,
+05:59
+the DNS sinkhole would prevent the attack by
+06:01
+resolving the DNS query to a false site.
+06:04
+Creating a DNS sinkhole is not without its limitations.
+06:07
+To work correctly, the malware must
+06:09
+use the organization's DNS server.
+06:11
+If it uses a public DNS server or
+06:13
+its own DNS server, this won't work.
+06:16
+You can mitigate this by configuring firewalls
+06:18
+to block DNS queries going outside the perimeter.
+06:21
+It's also important to understand that a sinkhole
+06:23
+doesn't prevent malware and can't prevent malware
+06:26
+execution or remove malware from the system.
+06:29
+However, the DNS server will be
+06:31
+configured with potential malware sites.
+06:33
+Creating a sinkhole can take time.
+06:35
+Even if obtained from trusted internet sources, its possible
+06:38
+legitimate sites are used to forward malicious content.
+06:41
+This could result in restrictions to legitimate websites.
+06:44
+Therefore, sinkholes should be internal only.
+06:47
+If attackers can access the DNS server externally, they can
+06:50
+change entries in the sinkhole and use it to their benefit.
+5. Fake Telemetry
+06:53
+While many threat agents are looking for open and
+06:56
+available vulnerabilities, others are looking to
+06:59
+infiltrate a network's defenses and either copy
+07:01
+intellectual property or damage internal systems.
+07:04
+It's truly a cat and mouse game played
+07:06
+by attackers and network managers.
+07:08
+Attackers are always trying new techniques to perform their
+07:11
+reconnaissance and discover weakness they can exploit.
+07:14
+One method used by system managers
+07:16
+is the concept of fake telemetry.
+07:18
+Telemetry is defined as the collection of data
+07:20
+at remote points and their automatic transmission
+07:23
+to receiving equipment for monitoring.
+07:25
+As such, organizations provide false
+07:28
+data, meant to deceive the attacker.
+07:30
+This type of fake information might include
+07:32
+fake credentials or fake IP address information.
+07:34
+It might be an internal report detailing vulnerable
+07:37
+systems that require updates when, they are really
+07:39
+honeypots designed to capture attacker information.
+07:43
+The primary reason for providing fake information is
+07:45
+to get the attacker to act on the false information.
+07:48
+Since the information is controlled by system
+07:50
+managers, they can utilize alerts, alarms, and logs to
+07:53
+track the techniques and tools used by an attacker.
+07:56
+The tracked information allows system
+07:58
+management to tune perimeter equipment such as
+08:01
+firewalls, NIDS, NIPS and other protections.
+6. Summary
+08:05
+That's it for this lesson.
+08:06
+In this video, we discussed deception techniques used
+08:09
+by companies to protect themselves from attackers.
+08:12
+We discussed such techniques as using honeypots,
+08:14
+honeyfiles, and honeynets to lure attackers into fake areas.
+08:18
+We also discussed the benefits of using DNS sinkholes.
+08:22
+And we ended this lesson outlining the
+08:23
+benefits of companies using fake telemetry.

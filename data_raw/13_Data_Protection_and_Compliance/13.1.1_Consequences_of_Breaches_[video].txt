@@ -1,0 +1,205 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Consequences of Data Breach
+00:04
+All too frequently, we read about a data breach.
+00:06
+Large companies with security budgets in
+00:08
+the millions of dollars are not exempt.
+00:11
+Most of us have, at onetime or another, been
+00:13
+notified that our information has been compromised.
+00:16
+It could be bank accounts, credit cards,
+00:18
+government records, or even health records.
+00:20
+All these data breaches come with serious consequences.
+00:23
+Let's talk about what they are.
+2. Reputation Damage
+00:25
+A company's reputation determines if people will invest,
+00:28
+if consumers will buy, and if foreign governments will
+00:31
+allow a company to do business internationally.
+00:34
+A company lives or dies by its revenues and investments.
+00:38
+A breach that exposes private client data directly
+00:41
+affects the way consumers and investors spend money.
+00:44
+A data breach can cause stock prices to fall.
+00:46
+Falling stock prices lead to sell offs
+00:48
+and can permanently damage a company.
+00:50
+When trust is broken and consumer confidence is damaged,
+00:54
+revenues drop because consumers stop using the company.
+00:57
+Also, the loss of government contracts because
+00:59
+of breach can prove fatal for a company.
+3. Identity Theft
+01:02
+Twenty years ago, the term identity theft didn't
+01:04
+have any real meaning to the everyday person.
+01:06
+Fast forward to today, and it is difficult to find someone
+01:09
+who hasn't experienced identity theft on some level.
+01:12
+When a breach occurs and personal information is stolen,
+01:15
+the affected person is forced to do hours, days, and even
+01:18
+weeks of work to correct someone else's mistake.
+01:22
+The effects of identity theft can last years and
+01:24
+cause fear and paranoia among those affected.
+01:27
+Lives have been turned upside down leaving
+01:29
+victims frustrated because it is almost
+01:31
+impossible to catch the perpetrator.
+4. Fines
+01:33
+A data breach can also be financially costly.
+01:36
+With the introduction of GDPR and the California
+01:38
+Consumer Privacy Act the number of companies that
+01:41
+can be fined has grown significantly.
+01:43
+In the United States, HIPAA has always carried
+01:46
+fines for companies found in non-compliance.
+01:49
+Companies that profit from the use of consumer
+01:51
+personal information can also have heavy fines
+01:53
+levied by the Federal Trade Commission and
+01:55
+possibly the Security and Exchange Commission.
+01:58
+To give you an idea of the magnitude of these
+02:00
+fines, in 2019 three data breaches at three separate
+02:04
+companies cost the companies over 1 billion dollars.
+02:07
+It is estimated that fines for a single data
+02:10
+breach now averages $6.45 million dollars.
+02:14
+Intellectual Property is the lifeblood of companies.
+02:17
+When IP is stolen ,companies lose competitive advantage.
+02:21
+The internet has made the world smaller.
+02:23
+Companies are now competing with
+02:24
+others from around the globe.
+02:26
+IP stolen through a data breach is
+02:28
+often sold to competing companies.
+02:30
+Many of the overseas companies are not
+02:33
+subject to laws in the United States.
+02:35
+This makes it difficult to enforce IP laws.
+02:38
+The reverse engineering or the direct copy of
+02:40
+IP gives thieves an undeserved revenue source.
+02:43
+IP theft also floods the market with counterfeit goods.
+02:48
+Let's look at an IP theft scenario.
+02:50
+The XYZ company has worked tirelessly
+02:53
+on a new product that's cutting-edge.
+02:55
+As the company is going into production,
+02:57
+they experience a data breach.
+02:58
+They are not sure what data may have been lost.
+03:01
+A few months later, counterfeit versions of their
+03:03
+cutting-edge product start flooding the market.
+03:06
+They now discover that their intellectual
+03:08
+property was stolen during the breach.
+03:10
+The fakes are selling for less
+03:11
+money and destroying XYZ's profits.
+5. Escalation
+03:14
+Escalation can be separated into two categories,
+03:17
+internal escalation and external escalation.
+03:20
+Internal escalation is part of a
+03:22
+company's incident response plan.
+03:24
+This usually means a tiered approach
+03:26
+to informing management of a breach.
+03:28
+As a breach is investigated, the findings and severity
+03:31
+will determine how far the escalation will go.
+03:34
+The external escalation involves experts brought in
+03:36
+from the outside to investigate, provide legal counsel,
+03:39
+or even prosecute, which involves law enforcement.
+03:42
+The key is to know when a situation has
+03:45
+surpassed your abilities to resolve it.
+6. Summary
+04:13
+That's it for this lesson.
+04:14
+In this lesson, we showed you how data breaches
+04:16
+can have serious consequences including loss of
+04:19
+trust, fines, and theft of intellectual property.
+04:23
+Fines are averaging $6.45 million per event.
+04:25
+All 50 states have laws outlining the
+04:28
+data breach notification requirements.
+04:30
+We also looked at a scenario of
+04:32
+IP theft and its consequences.

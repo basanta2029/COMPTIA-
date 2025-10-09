@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "chapter_num": "5",
+    "section_num": "5.2.12",
+    "title": "Configure Load Balancer",
+    "content_type": "video",
+    "filename": "5.2.12_Configure_Load_Balancer_[video].txt",
+    "file_path": "data_raw/05_Network_Architecture/5.2.12_Configure_Load_Balancer_[video].txt",
+    "word_count": 1059,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script A load balancer can be either a software or a hardware appliance that distributes the load across multiple servers using TCP or UDP. Some examples could include websites, web services, email, print servers, and much more. Not only can it serve the purpose of load balancing, but it can also be used for failover. Today, we're going to be using a software load balancer called Kemp. This is an easy-to-install software load balancer deployed to VMware with an .ovf template. One of the first things you must do is configure a Virtual Service. The virtual service will have an IP address associated with it. This is simply the IP address that users will connect to instead of the real server addresses where load balancing occurs. Our Virtual Address will be 192.168.30.31, which is outside our DHCP zone. Port 80 will be used since this is just an HTTP website. We can also add a Service Name so we know what this is for. Templates are useful because they help predefine some settings related to the type of service you're load balancing. These can be obtained from Kemp's website, as you can see here. This example shows Apache and Tomcat templates, but as we scroll up, there are many different types of services that we can load balance with Kemp. Let's go back to our load balancer. We'll select the Apache HTTP template and then click Add this Virtual Service. When this service is added, there are several options available, such as quality of service or limiting. These options can help ensure that the service you're load balancing isn't overloaded. The default is 0, which means off. Advanced settings can also assist with tasks such as redirecting or enabling caching. At the bottom is where we'll add our real servers. These are the actual web servers that we'll be load balancing. When we click Add New, we'll input our first web server, 192.168.30.10, and then click Add This Real Server. Our second one will be 192.168.30.11. Both web servers will use port 80 since they're serving only HTTP websites. The Forwarding method will remain as NAT since that's the only option. The Weight can be adjusted if you want to send more traffic to one server over the other. For now, we've left them both at 1000. One useful feature is that when you hover over these options, it provides a description to help you configure them. Connection Limit and Connection Rate Limit can be set, but we won't be doing that today. Click Add This Real Server. After clicking OK, you can see that we have two real servers now configured for this virtual service. We need to make some more changes for this virtual service to work correctly. If we go to View/Modify Services, we can see the virtual service we've created. Clicking Modify on the right will allow us to go back into the settings. Down at the bottom, we need to set the URL we're looking to load balance. Since our web servers don't have a website at the root directory, we need to add /test.html to the URL area. Next, click Set URL. Now, we're ready to test out load balancing with our websites. If we open a new tab, we can go to http://192.168.30.10/test.html. This will show us our first web server, and if we modify the address and change the 10 to 11, we'll access our second web server. In a real-world scenario, the websites on both servers would be identical; however, we've made them different so you can tell which server you're on during load balancing. Now that we know our web servers work, let's use our virtual IP address. If we go back to our load balancer, it can detect that both web servers are online. Our virtual IP will be 192.168.30.31. Let's go there. When we type it in, you can see that it's directing us to webserver-svp01. A common thing we can do with a virtual IP is associate it with a DNS name. On our Pi-hole DNS server, we can scroll down and go to Local DNS and DNS Records. You can already see that we have records for our web servers, so let's add a record for our virtual IP. The domain will be testwebsite.com, and our virtual IP address is 192.168.30.31. After clicking Add, it will add it to the list of records. Let's test this out. In our web tab, we'll remove the IP address and enter testwebsite.com, then click Enter. Great, it still shows webserver-svp01. To make things more interesting, let's force traffic to go to webserver-svp02 since we have maintenance to attend to on webserver-svp01. If we go back to our load balancer tab and Modify our virtual service, we can go down to our real servers and click Disable on webserver-svp01. Once this is disabled, we can go back and test. Please note that many browsers cache websites, so in order for this change to be visible right away, we must open a new private browsing window. Now, if we enter our web address testwebsite.com/test.html, we can see that it's now showing webserver-svp02. That's it for this demo. In this demo, we showed you how to configure a load balancer, add web servers to the load balancer, and test both IP and DNS with our web servers.",
+  "chunks": [
+    {
+      "chunk_id": "5.2.12_chunk_1",
+      "content": "A load balancer can be either a software or a hardware appliance that distributes the load across multiple servers using TCP or UDP. Some examples could include websites, web services, email, print servers, and much more. Not only can it serve the purpose of load balancing, but it can also be used for failover. Today, we're going to be using a software load balancer called Kemp. This is an easy-to-install software load balancer deployed to VMware with an .ovf template.",
+      "summary": "A load balancer, which can be a software or hardware solution, efficiently distributes network traffic across multiple servers using TCP or UDP protocols, enhancing performance for applications like websites and email services. In this section, the focus is on configuring a software load balancer, specifically Kemp, which is deployed on VMware using an .ovf template, and can also provide failover capabilities to ensure system reliability. Understanding load balancing is crucial for optimizing resource utilization and maintaining service availability in cybersecurity practices.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.2.12",
+        "title": "Configure Load Balancer",
+        "content_type": "video",
+        "filename": "5.2.12_Configure_Load_Balancer_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.2.12_Configure_Load_Balancer_[video].txt",
+        "word_count": 1059,
+        "has_content": true
+      },
+      "section_header": "Configure Load Balancer",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "5.2.12_chunk_2",
+      "content": "One of the first things you must do is configure a Virtual Service. The virtual service will have an IP address associated with it. This is simply the IP address that users will connect to instead of the real server addresses where load balancing occurs. Our Virtual Address will be 192.168.30.31, which is outside our DHCP zone. Port 80 will be used since this is just an HTTP website. We can also add a Service Name so we know what this is for. Templates are useful because they help predefine some settings related to the type of service you're load balancing. These can be obtained from Kemp's website, as you can see here. This example shows Apache and Tomcat templates, but as we scroll up, there are many different types of services that we can load balance with Kemp. Let's go back to our load balancer. We'll select the Apache HTTP template and then click Add this Virtual Service. When this service is added, there are several options available, such as quality of service or limiting. These options can help ensure that the service you're load balancing isn't overloaded. The default is 0, which means off. Advanced settings can also assist with tasks such as redirecting or enabling caching.",
+      "summary": "In the CompTIA Security+ course, configuring a Virtual Service is essential for load balancing, where a designated IP address (e.g., 192.168.30.31) is used for user connections instead of real server addresses. Utilizing templates from Kemp's website, such as those for Apache and Tomcat, simplifies the setup process and allows for customization of settings like quality of service and advanced options for redirecting or caching. This ensures efficient management and performance of the services being load balanced.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.2.12",
+        "title": "Configure Load Balancer",
+        "content_type": "video",
+        "filename": "5.2.12_Configure_Load_Balancer_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.2.12_Configure_Load_Balancer_[video].txt",
+        "word_count": 1059,
+        "has_content": true
+      },
+      "section_header": "Add Virtual Service",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "5.2.12_chunk_3",
+      "content": "At the bottom is where we'll add our real servers. These are the actual web servers that we'll be load balancing. When we click Add New, we'll input our first web server, 192.168.30.10, and then click Add This Real Server. Our second one will be 192.168.30.11. Both web servers will use port 80 since they're serving only HTTP websites. The Forwarding method will remain as NAT since that's the only option. The Weight can be adjusted if you want to send more traffic to one server over the other. For now, we've left them both at 1000. One useful feature is that when you hover over these options, it provides a description to help you configure them. Connection Limit and Connection Rate Limit can be set, but we won't be doing that today. Click Add This Real Server. After clicking OK, you can see that we have two real servers now configured for this virtual service.",
+      "summary": "In this section, we learn how to add real web servers for load balancing, specifically configuring two servers with IP addresses 192.168.30.10 and 192.168.30.11, both using port 80 for HTTP traffic. The NAT forwarding method is utilized, with adjustable weights for traffic distribution, currently set equally at 1000. The interface provides helpful descriptions for configuration options, although advanced settings like Connection Limit are not explored in this session.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.2.12",
+        "title": "Configure Load Balancer",
+        "content_type": "video",
+        "filename": "5.2.12_Configure_Load_Balancer_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.2.12_Configure_Load_Balancer_[video].txt",
+        "word_count": 1059,
+        "has_content": true
+      },
+      "section_header": "Add Real Servers",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "5.2.12_chunk_4",
+      "content": "We need to make some more changes for this virtual service to work correctly. If we go to View/Modify Services, we can see the virtual service we've created. Clicking Modify on the right will allow us to go back into the settings. Down at the bottom, we need to set the URL we're looking to load balance. Since our web servers don't have a website at the root directory, we need to add /test.html to the URL area. Next, click Set URL.",
+      "summary": "In this section, learners are guided on how to modify settings for a virtual service to ensure proper functionality. Key steps include accessing the service settings, specifying the correct URL for load balancing, and adjusting the path to include /test.html to accommodate the web servers' directory structure. This practical application emphasizes the importance of precise configuration in maintaining effective virtual service operations.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.2.12",
+        "title": "Configure Load Balancer",
+        "content_type": "video",
+        "filename": "5.2.12_Configure_Load_Balancer_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.2.12_Configure_Load_Balancer_[video].txt",
+        "word_count": 1059,
+        "has_content": true
+      },
+      "section_header": "Modify Virtual Service Settings",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "5.2.12_chunk_5",
+      "content": "Now, we're ready to test out load balancing with our websites. If we open a new tab, we can go to http://192.168.30.10/test.html. This will show us our first web server, and if we modify the address and change the 10 to 11, we'll access our second web server. In a real-world scenario, the websites on both servers would be identical; however, we've made them different so you can tell which server you're on during load balancing. Now that we know our web servers work, let's use our virtual IP address. If we go back to our load balancer, it can detect that both web servers are online. Our virtual IP will be 192.168.30.31. Let's go there. When we type it in, you can see that it's directing us to webserver-svp01.",
+      "summary": "In the Website Testing section of the CompTIA Security+ course, participants learn to implement load balancing by accessing two distinct web servers through their respective IP addresses. The exercise demonstrates how a load balancer can manage traffic by directing users to a virtual IP address, ensuring both servers are operational and providing a seamless experience. This practical application highlights the importance of load balancing in maintaining website availability and performance in real-world scenarios.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.2.12",
+        "title": "Configure Load Balancer",
+        "content_type": "video",
+        "filename": "5.2.12_Configure_Load_Balancer_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.2.12_Configure_Load_Balancer_[video].txt",
+        "word_count": 1059,
+        "has_content": true
+      },
+      "section_header": "Website Testing",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "5.2.12_chunk_6",
+      "content": "A common thing we can do with a virtual IP is associate it with a DNS name. On our Pi-hole DNS server, we can scroll down and go to Local DNS and DNS Records. You can already see that we have records for our web servers, so let's add a record for our virtual IP. The domain will be testwebsite.com, and our virtual IP address is 192.168.30.31. After clicking Add, it will add it to the list of records. Let's test this out. In our web tab, we'll remove the IP address and enter testwebsite.com, then click Enter. Great, it still shows webserver-svp01.",
+      "summary": "In the DNS Changes section of the CompTIA Security+ course, learners explore how to associate a virtual IP address with a DNS name using a Pi-hole DNS server. By adding a record for a virtual IP (e.g., 192.168.30.31) under a specific domain (testwebsite.com), users can effectively manage local DNS records. This practical application demonstrates the importance of DNS management in network security and accessibility.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.2.12",
+        "title": "Configure Load Balancer",
+        "content_type": "video",
+        "filename": "5.2.12_Configure_Load_Balancer_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.2.12_Configure_Load_Balancer_[video].txt",
+        "word_count": 1059,
+        "has_content": true
+      },
+      "section_header": "DNS Changes",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "5.2.12_chunk_7",
+      "content": "To make things more interesting, let's force traffic to go to webserver-svp02 since we have maintenance to attend to on webserver-svp01. If we go back to our load balancer tab and Modify our virtual service, we can go down to our real servers and click Disable on webserver-svp01. Once this is disabled, we can go back and test. Please note that many browsers cache websites, so in order for this change to be visible right away, we must open a new private browsing window. Now, if we enter our web address testwebsite.com/test.html, we can see that it's now showing webserver-svp02.",
+      "summary": "The Failover Testing section demonstrates how to manage server traffic during maintenance by disabling one server in a load balancer setup, ensuring continuous availability. By using a private browsing window to bypass cached data, users can verify that traffic is successfully redirected to the operational server, webserver-svp02. This practical application highlights the importance of redundancy and failover strategies in maintaining web service reliability.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.2.12",
+        "title": "Configure Load Balancer",
+        "content_type": "video",
+        "filename": "5.2.12_Configure_Load_Balancer_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.2.12_Configure_Load_Balancer_[video].txt",
+        "word_count": 1059,
+        "has_content": true
+      },
+      "section_header": "Failover Testing",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "5.2.12_chunk_8",
+      "content": "That's it for this demo. In this demo, we showed you how to configure a load balancer, add web servers to the load balancer, and test both IP and DNS with our web servers.",
+      "summary": "In this demo, participants learned how to configure a load balancer to distribute traffic efficiently across multiple web servers, enhancing availability and performance. The session included practical steps for adding servers to the load balancer and testing connectivity through both IP and DNS. This hands-on experience is crucial for understanding load balancing as a key component of network security and reliability.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.2.12",
+        "title": "Configure Load Balancer",
+        "content_type": "video",
+        "filename": "5.2.12_Configure_Load_Balancer_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.2.12_Configure_Load_Balancer_[video].txt",
+        "word_count": 1059,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 8
+}

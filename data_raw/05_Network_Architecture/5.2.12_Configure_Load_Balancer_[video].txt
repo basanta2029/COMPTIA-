@@ -1,0 +1,255 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Configure Load Balancer
+00:03
+A load balancer can be either a software or a
+00:06
+hardware appliance that distributes the load
+00:08
+across multiple servers using TCP or UDP.
+00:11
+Some examples could include websites, web
+00:13
+services, email, print servers, and much more.
+00:17
+Not only can it serve the purpose of load
+00:19
+balancing, but it can also be used for failover.
+00:22
+Today, we're going to be using a
+00:23
+software load balancer called Kemp.
+00:25
+This is an easy-to-install software load balancer
+00:28
+deployed to VMware with an .ovf template.<br>
+2. Add Virtual Service
+00:31
+One of the first things you must
+00:32
+do is configure a Virtual Service.
+00:35
+The virtual service will have an
+00:36
+IP address associated with it.
+00:38
+This is simply the IP address that users
+00:40
+will connect to instead of the real server
+00:42
+addresses where load balancing occurs.
+00:45
+Our Virtual Address will be 192.168.30.31,
+00:50
+which is outside our DHCP zone.
+00:53
+Port 80 will be used since this is just an HTTP website.
+00:57
+We can also add a Service Name so we know what this is for.
+01:00
+Templates are useful because they help
+01:02
+predefine some settings related to the
+01:04
+type of service you're load balancing.
+01:06
+These can be obtained from Kemp's
+01:07
+website, as you can see here.
+01:09
+This example shows Apache and Tomcat templates,
+01:12
+but as we scroll up, there are many different types
+01:14
+of services that we can load balance with Kemp.
+01:17
+Let's go back to our load balancer.
+01:20
+We'll select the Apache HTTP template
+01:23
+and then click Add this Virtual Service.
+01:26
+When this service is added, there are several options
+01:28
+available, such as quality of service or limiting.
+01:32
+These options can help ensure that the service
+01:34
+you're load balancing isn't overloaded.
+01:37
+The default is 0, which means off.
+01:40
+Advanced settings can also assist with tasks
+01:43
+such as redirecting or enabling caching.<br>
+3. Add Real Servers
+01:46
+At the bottom is where we'll add our real servers.
+01:49
+These are the actual web servers
+01:50
+that we'll be load balancing.
+01:52
+When we click Add New, we'll input our first web server,
+01:55
+192.168.30.10, and then click Add This Real Server.
+02:03
+Our second one will be 192.168.30.11.
+02:08
+Both web servers will use port 80 since
+02:10
+they're serving only HTTP websites.
+02:13
+The Forwarding method will remain
+02:15
+as NAT since that's the only option.
+02:17
+The Weight can be adjusted if you want to send
+02:19
+more traffic to one server over the other.
+02:22
+For now, we've left them both at 1000.
+02:24
+One useful feature is that when you
+02:26
+hover over these options, it provides a
+02:28
+description to help you configure them.
+02:30
+Connection Limit and Connection Rate Limit
+02:32
+can be set, but we won't be doing that today.
+02:35
+Click Add This Real Server.
+02:37
+After clicking OK, you can see that we have two real
+02:39
+servers now configured for this virtual service.<br>
+4. Modify Virtual Service Settings
+02:43
+We need to make some more changes for
+02:44
+this virtual service to work correctly.
+02:47
+If we go to View/Modify Services, we can
+02:50
+see the virtual service we've created.
+02:52
+Clicking Modify on the right will
+02:54
+allow us to go back into the settings.
+02:56
+Down at the bottom, we need to set
+02:58
+the URL we're looking to load balance.
+03:00
+Since our web servers don't have a website at the root
+03:03
+directory, we need to add /test.html to the URL area.
+03:08
+Next, click Set URL.<br>
+5. Website Testing
+03:10
+Now, we're ready to test out
+03:12
+load balancing with our websites.
+03:14
+If we open a new tab, we can go
+03:15
+to http://192.168.30.10/test.html.
+03:23
+This will show us our first web server, and
+03:24
+if we modify the address and change the 10
+03:27
+to 11, we'll access our second web server.
+03:30
+In a real-world scenario, the websites on both servers
+03:33
+would be identical; however, we've made them different so
+03:36
+you can tell which server you're on during load balancing.
+03:39
+Now that we know our web servers work,
+03:41
+let's use our virtual IP address.
+03:43
+If we go back to our load balancer, it can
+03:45
+detect that both web servers are online.
+03:48
+Our virtual IP will be 192.168.30.31.
+03:53
+Let's go there.
+03:55
+When we type it in, you can see that
+03:56
+it's directing us to webserver-svp01.<br>
+6. DNS Changes
+04:00
+A common thing we can do with a virtual
+04:02
+IP is associate it with a DNS name.
+04:05
+On our Pi-hole DNS server, we can scroll
+04:07
+down and go to Local DNS and DNS Records.
+04:11
+You can already see that we have records for our web
+04:13
+servers, so let's add a record for our virtual IP.
+04:16
+The domain will be testwebsite.com, and
+04:19
+our virtual IP address is 192.168.30.31.
+04:24
+After clicking Add, it will add it to the list of records.
+04:28
+Let's test this out.
+04:29
+In our web tab, we'll remove the IP address
+04:32
+and enter testwebsite.com, then click Enter.
+04:37
+Great, it still shows webserver-svp01.<br>
+7. Failover Testing
+04:42
+To make things more interesting, let's force
+04:44
+traffic to go to webserver-svp02 since we have
+04:47
+maintenance to attend to on webserver-svp01.
+04:51
+If we go back to our load balancer tab and Modify
+04:54
+our virtual service, we can go down to our real
+04:56
+servers and click Disable on webserver-svp01.
+05:00
+Once this is disabled, we can go back and test.
+05:05
+Please note that many browsers cache websites,
+05:08
+so in order for this change to be visible right
+05:10
+away, we must open a new private browsing window.
+05:14
+Now, if we enter our web address testwebsite.com/test.html,
+05:19
+we can see that it's now showing webserver-svp02.<br>
+8. Summary
+05:23
+That's it for this demo.
+05:24
+In this demo, we showed you how to configure a load
+05:26
+balancer, add web servers to the load balancer, and
+05:29
+test both IP and DNS with our web servers.<br>
+
+

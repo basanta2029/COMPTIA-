@@ -1,0 +1,18 @@
+Security Pro 8.0
+
+9.4.4 Clustering Facts
+
+This lesson covers the following topics:
+
+Virtual IP
+Application clustering
+Where load balancing distributes traffic between independent processing nodes, clustering allows multiple redundant processing nodes that share data with one another to accept connections. This provides redundancy. If one of the nodes in the cluster stops working, connections can fail over to a working node. To clients, the cluster appears to be a single server. A load balancer distributes client requests across available server nodes in a farm or pool. It is generally associated with managing web traffic, whereas clusters provide redundancy and high availability for systems such as databases, file servers, etc.
+Virtual IP
+
+For example, an organization might want to provision two load balancer appliances so the other can handle client connections if one fails. Unlike load balancing with a single appliance, the public IP used to access the service is shared between the two instances in the cluster. This arrangement is called a virtual IP or shared or floating address. The instances are configured with a private connection, on which each is identified by its "real" IP address. This connection runs a redundancy protocol, such as Common Address Redundancy Protocol (CARP), enabling the active node to "own" the virtual IP and respond to connections. The redundancy protocol also implements a heartbeat mechanism to allow failover to the passive node if the active one should suffer a fault.
+
+With active/passive clustering, if one node is active, the other is passive. The most significant advantage of active/passive configurations is that performance is not adversely affected during failover. However, there are higher hardware and operating system costs because of the unused capacity.
+An active/active cluster means that both nodes are processing connections concurrently. This allows the administrator to use the maximum capacity from the available hardware while all nodes are functional. In the event of a failover, the workload of the failed node is immediately and transparently shifted onto the remaining node. At this time, the workload on the remaining nodes is higher, and performance is degraded.
+Application Clustering
+
+Clustering is also very commonly used to provision fault-tolerant application services. If an application server suffers a fault in the middle of a session, the session state data will be lost. Application clustering allows servers in the cluster to communicate session information to one another. For example, if a user logs in on one instance, the next session can start on another, and the new server can access the cookies or other information used to establish the login.

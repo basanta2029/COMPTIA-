@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "chapter_num": "6",
+    "section_num": "6.5.7",
+    "title": "Analyzing a SYN Flood",
+    "content_type": "video",
+    "filename": "6.5.7_Analyzing_a_SYN_Flood_[video].txt",
+    "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.7_Analyzing_a_SYN_Flood_[video].txt",
+    "word_count": 1234,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script We've already talked about the three-way handshake, but let's quickly review it again. A three-way handshake starts when a client sends a connection request to a server, saying, \"Let's connect.\" This is called a SYN message. The server acknowledges this request by sending a SYN-ACK message back to the client, saying, \"Okay, I'll talk to you.\" Then the client sends back an ACK message, saying, \"Great, we're talking.\" This is a three-way handshake. When we're doing a SYN Flood, we're doing only part of this process. The attacker, or the client, doesn't respond back to the final ACK message. The server sits and waits with a half-open connection that's never completed, denying others communication with the server in the meantime. Another method is to spoof the IP address so the server responds to the spoofed IP address, never getting any response. I'm going to demonstrate how all this works. First, we need to choose a victim. I've already identified the IP address of my victim on my Kali Linux system, and I've run Zenmap against it. I scanned for all open ports from 0 to 65535. Here, you can see that we have all these ports. We're going to attack port 135. I'll minimize Zenmap for now. To get an idea of what happens during this attack, let's open up the victim machine. It's a Windows 10 machine, and I've installed Wireshark on it. I'm going to go ahead and open Wireshark by clicking on the shark fin. We're doing this to see what happens when this machine is attacked. I'm also going to come open Task Manager. We need the Performance tab. You can see my CPU is relaxed. We had a spike here, probably when we opened Wireshark. Down here, we really have no Ethernet activity. I actually need to go back over to Wireshark and click the shark fin to start sniffing traffic. I'll just leave for now and go back to Kali Linux. I'm in Kali Linux, and we're going to use Metasploit for this attack. First, I'll open a terminal here. After it opens, I want to start the database. The Kali Linux Network Services Policy states that no network services, including database services, will run on boot by default, so we need to get the database going in order to get Metasploit up and running with database support. From the terminal, we'll type 'service postgresql start' and press Enter. This starts the database that we'll need. A lot of times, I'll forget to do this, and you'll get an error letting you know it can't connect to the database. All right. Now, let's start Metasploit. Type in 'msfconsole' and press Enter. This sometimes takes a few minutes to get started, so be patient. I'll adjust the terminal window and clear the screen. Now, with Metasploit up and running, I want to search for SYN flood. I'll type in 'search synflood' and press Enter. And I get a matching module. This is easy because there's only one module listed, so that's the one we're going to use. I'll use that module by copying this part, here. We'll type in 'use', paste in auxiliary/dos/tcp/synflood, and press Enter. Now you can see that it loaded that module here, in red. We want to see the options for using this, so let's type 'show options'. Okay. There are a few things we need to do here. We need to configure the remote host, shown here. I also want to configure the remote port. If you remember from our Zenmap scan, that's going to be port 135. I'm also going to spoof my IP address, down here. Okay. Let's configure these. I'll start with the remote target. I'll type in 'set RHOST 10.10.10.195' and press Enter. Let's set the remote port, 'set RPORT 135', and press Enter. Next, let's set the spoofed IP address by typing 'set SHOST 10.10.10.50'. I just randomly picked that 50, but I do know that this IP isn't used on my network. Now, let's look at our options again by typing 'show options'. We have everything in there, and it's just the way we planned, so it looks like we're ready to attack. I'll type 'clear' to clean up the screen. To run the exploit and start our SYN Flood, we just type in 'exploit' and press Enter. It says, \"Hey, I'm SYN flooding 10.10.10.195 on port 135.\" Well, to be sure, let's jump back over to our Windows 10, the victim, and see what's going on. I'm on the Windows 10 machine. First, let's look at Wireshark. I have a ton of traffic going from 10.50 to 10.195. Over here, you can see that SYN requests are happening. I'm going to stop sniffing here. Now let's highlight one of these. If I look in the lower pane, I can see one thing, the source's MAC address. It ends in 1c. That can help me determine the attacker's real IP address, since the MAC isn't spoofed. Now let's look at Task Manger. As you recall, we looked at the CPU and Ethernet usage here. You can see that my CPU is a little higher than what it was previously; but it's not as high as I would have guessed. Also, if you look at the Ethernet, you can see that it's really busy. Remember, that's an attack from just one machine. Imagine if it were coming from 10 machines or hundreds of machines. It wouldn't take much to overwhelm this system. So, how do you stop SYN floods from happening? There are several methods. Admins used to block the port of the incoming SYN requests, but that didn't work very well. Now, admins can use SYN cookies, RST cookies, filtering, and Microblocks to mitigate SYN flood attacks, as well as other methods. That's it for this demo. In this demo, we started by reviewing the three-way TCP handshake. We discussed how a SYN flood begins with an incomplete handshake, leaving the server sitting and waiting. We performed a SYN flood using Metasploit. We viewed Wireshark and our performance on the victim machine to analyze the attack's effect. We ended by talking about a few of the countermeasures that help prevent SYN flooding.",
+  "chunks": [
+    {
+      "chunk_id": "6.5.7_chunk_1",
+      "content": "We've already talked about the three-way handshake, but let's quickly review it again. A three-way handshake starts when a client sends a connection request to a server, saying, \"Let's connect.\" This is called a SYN message. The server acknowledges this request by sending a SYN-ACK message back to the client, saying, \"Okay, I'll talk to you.\" Then the client sends back an ACK message, saying, \"Great, we're talking.\" This is a three-way handshake. When we're doing a SYN Flood, we're doing only part of this process. The attacker, or the client, doesn't respond back to the final ACK message. The server sits and waits with a half-open connection that's never completed, denying others communication with the server in the meantime. Another method is to spoof the IP address so the server responds to the spoofed IP address, never getting any response. I'm going to demonstrate how all this works.",
+      "summary": "The SYN Flood attack exploits the three-way handshake process in TCP connections by sending numerous SYN requests to a server without completing the handshake, leaving the server with half-open connections that can overwhelm its resources. Attackers may also spoof IP addresses to further complicate the server's ability to respond. This technique effectively denies legitimate users access to the server, illustrating a critical vulnerability in network security.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.5.7",
+        "title": "Analyzing a SYN Flood",
+        "content_type": "video",
+        "filename": "6.5.7_Analyzing_a_SYN_Flood_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.7_Analyzing_a_SYN_Flood_[video].txt",
+        "word_count": 1234,
+        "has_content": true
+      },
+      "section_header": "Perform a SYN Flood",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.5.7_chunk_2",
+      "content": "First, we need to choose a victim. I've already identified the IP address of my victim on my Kali Linux system, and I've run Zenmap against it. I scanned for all open ports from 0 to 65535. Here, you can see that we have all these ports. We're going to attack port 135. I'll minimize Zenmap for now. To get an idea of what happens during this attack, let's open up the victim machine. It's a Windows 10 machine, and I've installed Wireshark on it. I'm going to go ahead and open Wireshark by clicking on the shark fin. We're doing this to see what happens when this machine is attacked. I'm also going to come open Task Manager. We need the Performance tab. You can see my CPU is relaxed. We had a spike here, probably when we opened Wireshark. Down here, we really have no Ethernet activity. I actually need to go back over to Wireshark and click the shark fin to start sniffing traffic. I'll just leave for now and go back to Kali Linux.",
+      "summary": "In this section, the focus is on identifying a target for a cybersecurity attack, specifically selecting a Windows 10 machine with an open port (port 135) after scanning it using Zenmap on a Kali Linux system. The practical application involves using Wireshark to monitor network traffic and Task Manager to observe system performance during the attack. This hands-on approach illustrates the importance of reconnaissance and traffic analysis in understanding the impact of cyber attacks.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.5.7",
+        "title": "Analyzing a SYN Flood",
+        "content_type": "video",
+        "filename": "6.5.7_Analyzing_a_SYN_Flood_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.7_Analyzing_a_SYN_Flood_[video].txt",
+        "word_count": 1234,
+        "has_content": true
+      },
+      "section_header": "Identify the Victim",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.5.7_chunk_3",
+      "content": "I'm in Kali Linux, and we're going to use Metasploit for this attack. First, I'll open a terminal here. After it opens, I want to start the database. The Kali Linux Network Services Policy states that no network services, including database services, will run on boot by default, so we need to get the database going in order to get Metasploit up and running with database support. From the terminal, we'll type 'service postgresql start' and press Enter. This starts the database that we'll need. A lot of times, I'll forget to do this, and you'll get an error letting you know it can't connect to the database.",
+      "summary": "In this section, learners are introduced to the process of starting the PostgreSQL database in Kali Linux to enable Metasploit's database support for penetration testing. The tutorial emphasizes the importance of manually starting the database service, as it does not run automatically on boot, and provides a practical command to initiate the service. Understanding this step is crucial for effectively utilizing Metasploit in security assessments.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.5.7",
+        "title": "Analyzing a SYN Flood",
+        "content_type": "video",
+        "filename": "6.5.7_Analyzing_a_SYN_Flood_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.7_Analyzing_a_SYN_Flood_[video].txt",
+        "word_count": 1234,
+        "has_content": true
+      },
+      "section_header": "Run the Metasploit Database",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.5.7_chunk_4",
+      "content": "All right. Now, let's start Metasploit. Type in 'msfconsole' and press Enter. This sometimes takes a few minutes to get started, so be patient. I'll adjust the terminal window and clear the screen.",
+      "summary": "In this section, learners are introduced to initiating Metasploit by using the command 'msfconsole' to load the SYN Flood module, a tool used for simulating denial-of-service attacks. The practical application focuses on understanding how SYN Flood attacks work and how to utilize Metasploit for security testing and vulnerability assessment. Patience is emphasized as the console may take some time to load, highlighting the importance of familiarity with the tool's interface.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.5.7",
+        "title": "Analyzing a SYN Flood",
+        "content_type": "video",
+        "filename": "6.5.7_Analyzing_a_SYN_Flood_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.7_Analyzing_a_SYN_Flood_[video].txt",
+        "word_count": 1234,
+        "has_content": true
+      },
+      "section_header": "Load the SYN Flood Module in Metasploit",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.5.7_chunk_5",
+      "content": "Now, with Metasploit up and running, I want to search for SYN flood. I'll type in 'search synflood' and press Enter. And I get a matching module. This is easy because there's only one module listed, so that's the one we're going to use. I'll use that module by copying this part, here. We'll type in 'use', paste in auxiliary/dos/tcp/synflood, and press Enter. Now you can see that it loaded that module here, in red. We want to see the options for using this, so let's type 'show options'. Okay. There are a few things we need to do here. We need to configure the remote host, shown here. I also want to configure the remote port. If you remember from our Zenmap scan, that's going to be port 135. I'm also going to spoof my IP address, down here. Okay. Let's configure these. I'll start with the remote target. I'll type in 'set RHOST 10.10.10.195' and press Enter. Let's set the remote port, 'set RPORT 135', and press Enter. Next, let's set the spoofed IP address by typing 'set SHOST 10.10.10.50'. I just randomly picked that 50, but I do know that this IP isn't used on my network. Now, let's look at our options again by typing 'show options'. We have everything in there, and it's just the way we planned, so it looks like we're ready to attack. I'll type 'clear' to clean up the screen. To run the exploit and start our SYN Flood, we just type in 'exploit' and press Enter.",
+      "summary": "In this section, learners are guided through configuring a SYN flood attack using Metasploit, focusing on setting the remote host, port, and spoofed IP address. The process involves searching for the SYN flood module, setting the necessary parameters, and executing the exploit to simulate a denial-of-service attack. This practical application reinforces key concepts of network security and attack methodologies.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.5.7",
+        "title": "Analyzing a SYN Flood",
+        "content_type": "video",
+        "filename": "6.5.7_Analyzing_a_SYN_Flood_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.7_Analyzing_a_SYN_Flood_[video].txt",
+        "word_count": 1234,
+        "has_content": true
+      },
+      "section_header": "Configure SYN Flood Options",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.5.7_chunk_6",
+      "content": "It says, \"Hey, I'm SYN flooding 10.10.10.195 on port 135.\" Well, to be sure, let's jump back over to our Windows 10, the victim, and see what's going on. I'm on the Windows 10 machine. First, let's look at Wireshark. I have a ton of traffic going from 10.50 to 10.195. Over here, you can see that SYN requests are happening. I'm going to stop sniffing here. Now let's highlight one of these. If I look in the lower pane, I can see one thing, the source's MAC address. It ends in 1c. That can help me determine the attacker's real IP address, since the MAC isn't spoofed. Now let's look at Task Manger. As you recall, we looked at the CPU and Ethernet usage here. You can see that my CPU is a little higher than what it was previously; but it's not as high as I would have guessed. Also, if you look at the Ethernet, you can see that it's really busy. Remember, that's an attack from just one machine. Imagine if it were coming from 10 machines or hundreds of machines. It wouldn't take much to overwhelm this system.",
+      "summary": "The SYN Flood exploit demonstrates a type of Denial of Service (DoS) attack where an attacker overwhelms a target system with SYN requests, causing resource exhaustion. Using tools like Wireshark, one can analyze the traffic to identify the attacker's MAC address, which aids in tracing back to their real IP address. The practical implications highlight the vulnerability of systems to such attacks, especially when multiple sources are involved, emphasizing the need for robust security measures.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.5.7",
+        "title": "Analyzing a SYN Flood",
+        "content_type": "video",
+        "filename": "6.5.7_Analyzing_a_SYN_Flood_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.7_Analyzing_a_SYN_Flood_[video].txt",
+        "word_count": 1234,
+        "has_content": true
+      },
+      "section_header": "Run SYN Flood Exploit",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.5.7_chunk_7",
+      "content": "So, how do you stop SYN floods from happening? There are several methods. Admins used to block the port of the incoming SYN requests, but that didn't work very well. Now, admins can use SYN cookies, RST cookies, filtering, and Microblocks to mitigate SYN flood attacks, as well as other methods.",
+      "summary": "To mitigate SYN flood attacks, network administrators can employ several effective countermeasures, including SYN cookies, RST cookies, filtering techniques, and Microblocks. These methods enhance the ability to manage incoming SYN requests without resorting to less effective strategies like blocking ports. Implementing these solutions helps maintain network integrity and availability against such denial-of-service attacks.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.5.7",
+        "title": "Analyzing a SYN Flood",
+        "content_type": "video",
+        "filename": "6.5.7_Analyzing_a_SYN_Flood_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.7_Analyzing_a_SYN_Flood_[video].txt",
+        "word_count": 1234,
+        "has_content": true
+      },
+      "section_header": "Countermeasures for SYN Floods",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.5.7_chunk_8",
+      "content": "That's it for this demo. In this demo, we started by reviewing the three-way TCP handshake. We discussed how a SYN flood begins with an incomplete handshake, leaving the server sitting and waiting. We performed a SYN flood using Metasploit. We viewed Wireshark and our performance on the victim machine to analyze the attack's effect. We ended by talking about a few of the countermeasures that help prevent SYN flooding.",
+      "summary": "In this demo, we explored the three-way TCP handshake and how a SYN flood attack exploits incomplete handshakes to overwhelm a server. Using Metasploit, we executed a SYN flood and analyzed its impact on the victim machine with Wireshark. The session concluded with a discussion of effective countermeasures to mitigate the risk of SYN flooding attacks.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.5.7",
+        "title": "Analyzing a SYN Flood",
+        "content_type": "video",
+        "filename": "6.5.7_Analyzing_a_SYN_Flood_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.7_Analyzing_a_SYN_Flood_[video].txt",
+        "word_count": 1234,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 8
+}

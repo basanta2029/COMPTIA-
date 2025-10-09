@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "chapter_num": "8",
+    "section_num": "8.7.3",
+    "title": "Add TLS to a Website",
+    "content_type": "video",
+    "filename": "8.7.3_Add_TLS_to_a_Website_[video].txt",
+    "file_path": "data_raw/08_Network_and_Endpoint_Security/8.7.3_Add_TLS_to_a_Website_[video].txt",
+    "word_count": 1404,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script In this demonstration, we'll look at using SSL for a website. We're going to use Windows Server 2022 to configure a website. We're on this client machine in Windows 11 with a browser open. As you can see, we're using HTTP for this website, so traffic sent between the client and the website is unsecured. To secure communication between the client and the website, we can add SSL to the website. We do this by editing the bindings. The bindings identify the protocols that are used on the website. Currently, we support the HTTP protocol, which uses port 80. To use SSL, we need to add bindings for HTTPS. Before we get into this demo, we need to talk about the terminology used for SSL and TLS. For the last few years, there's been a large push in the IT industry to deprecate TLS versions 1.0 and 1.1 and require all encrypted internet traffic to use TLS version 1.2 or later. SSL is the predecessor to TLS. The last version of SSL, version 3.0, was found to be insecure. SSL 3.0 was deprecated in 2015 by the IETF in RFC 7568. If SSL was deprecated in 2015, why do we still see the SSL acronym everywhere? You still see websites selling SSL certificates, and many of Microsoft's own tools still reference SSL certificates—including tools you'll see in this demo. The answer is that because the SSL term was so prevalent at the time it was deprecated, people are still adjusting to using TLS. When you hear someone talk about or see documentation referencing SSL, they are usually talking about TLS. The SSL protocol hasn't been used on the internet for years and isn't supported in modern web browsers. Up-to-date versions of Chrome, Edge, and Firefox require TLS connections for encryption and won't allow you to connect to a web server that's trying to use SSL. Please make a note of this as we go through this demo and as you get into your IT career. While the term SSL is still commonly used in both speech and documentation, the protocol SSL has been fully replaced by TLS for many years. We're going to go to the Internet Information Service Manager, so let's switch over to our server. Let's go to Start and Server Manager. In the tools, we'll select IIS Manager. First, we're going to go down to our default website. We can right-click the Default Web Site we've created. Go to edit Bindings. We can see our HTTP port 80 here. We'll click Add. We can switch this to HTTPS. You can see that it automatically switches to port 443. Notice that secure communications with this website use port 443 instead of port 80. When using SSL, you must also have a server certificate, or SSL certificate. The certificate identifies the server and validates its identity. In this case, we don't currently have a certificate set up, so we're going to click Cancel and Close. We'll go to our server and go to Server Certificates. Now, if our website were available on the internet, we'd create a certificate request here and send that request to a well-known public key infrastructure, or PKI, such as DigiCert. When that request was returned, we'd use this complete certificate request option to import the completed certificate onto our server. In this demonstration, we're going to use Create Self-Signed Certificate. The self-signed certificate gives us a certificate that we can use. However, clients won't automatically trust the certificate that we use. We'll see how this works later. We'll enter a name for the certificate. And we'll call it Cert 2022 and click OK. You can see our certificate here. With this certificate created, we'll go back to our Default Web Site, right-click, Edit Bindings &gt; Add &gt; HTTPS. It switches to the 443. HTTP/2 is how semantics flow over TCP connections. Most browsers support HTTP/2, so disabling this may not be needed. OCSP Stapling checks to see if a certificate is revoked and has been an alternative to the Certificate Revocation List (CRL) Protocol. We'll leave both of those unchecked for now. We're going to go down, and we can see our Cert 2022 right here. Select it and click OK and Close. That certificate's created. Now, we can go over to our client machine and test this out. We're back on our Windows 11 client machine. We need to put https:// in front of the address and hit enter. The first message we get is that there's a problem with the website's security certificate. We started to use HTTPS, but our computer recognized that the certificate wasn't issued by a trusted certificate authority. In other words, the server has no proof, other than its own words, to verify its identity. In this case, we know who the server is, so we can continue to the website and accept the certificate. Notice that we're accessing the website. The URL is HTTPS. Let's go ahead and click Continue. The message told us there was a problem with the certificate, but we're still using HTTPS to connect to the website. In this case, we're giving the user the option of using HTTPS or HTTP when communicating with our server. A more likely example is to require SSL for certain communications. In this case, we're going to require SSL for the entire website, so a connection won't be granted unless the client and the server are both using SSL. To do this, we're going to go back to our web server, to Internet Information Services Manager. We're going to click the Default Web Site. Go to SSL Settings. We're going to tell it to Require SSL. We'll check the box and hit Apply to save those changes. Now, we can go back to the client. First, let's try to access the website using just HTTP. We'll just go ahead and take out the S. That's all we have to do. Hit Enter. We get this error that says access is denied. Now, let's go ahead and put the S back. It's basically denying us unless we're using an SSL certificate with a secure connection. You can see it went ahead and let us back in. The website requires SSL. We were trying to use HTTP, but it won't let us. Now that we're using HTTPS, we can access the website because the client and the server are both using SSL. In this example, we've required SSL on the entire website, meaning that any communication to the website must use SSL or be denied. It's unlikely that you may require SSL only for specific parts of the website. Today, it's recommended always to use HTTPS with a public-facing website, regardless of whether it's a basic website or one used for credit card purchases. By only using HTTP, hackers have easy access to view traffic in plain text. That's it for this demo. We've gone over how to configure SSL on a website using Windows Server 2022. We've also clarified that SSL as a protocol is no longer used and has been fully replaced by TLS, even though the term SSL is still widely used in common speech and documentation.",
+  "chunks": [
+    {
+      "chunk_id": "8.7.3_chunk_1",
+      "content": "In this demonstration, we'll look at using SSL for a website. We're going to use Windows Server 2022 to configure a website. We're on this client machine in Windows 11 with a browser open. As you can see, we're using HTTP for this website, so traffic sent between the client and the website is unsecured. To secure communication between the client and the website, we can add SSL to the website. We do this by editing the bindings. The bindings identify the protocols that are used on the website. Currently, we support the HTTP protocol, which uses port 80. To use SSL, we need to add bindings for HTTPS.",
+      "summary": "This section demonstrates how to enhance website security by adding SSL (Secure Sockets Layer) to a website hosted on Windows Server 2022. It involves configuring website bindings to support HTTPS, which secures communication between the client and the server by encrypting data transmitted over the network. The practical application of this process is crucial for protecting sensitive information and ensuring secure online transactions.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.7.3",
+        "title": "Add TLS to a Website",
+        "content_type": "video",
+        "filename": "8.7.3_Add_TLS_to_a_Website_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.7.3_Add_TLS_to_a_Website_[video].txt",
+        "word_count": 1404,
+        "has_content": true
+      },
+      "section_header": "Adding SSL to a Website",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "8.7.3_chunk_2",
+      "content": "Before we get into this demo, we need to talk about the terminology used for SSL and TLS. For the last few years, there's been a large push in the IT industry to deprecate TLS versions 1.0 and 1.1 and require all encrypted internet traffic to use TLS version 1.2 or later. SSL is the predecessor to TLS. The last version of SSL, version 3.0, was found to be insecure. SSL 3.0 was deprecated in 2015 by the IETF in RFC 7568. If SSL was deprecated in 2015, why do we still see the SSL acronym everywhere? You still see websites selling SSL certificates, and many of Microsoft's own tools still reference SSL certificates—including tools you'll see in this demo. The answer is that because the SSL term was so prevalent at the time it was deprecated, people are still adjusting to using TLS. When you hear someone talk about or see documentation referencing SSL, they are usually talking about TLS. The SSL protocol hasn't been used on the internet for years and isn't supported in modern web browsers. Up-to-date versions of Chrome, Edge, and Firefox require TLS connections for encryption and won't allow you to connect to a web server that's trying to use SSL. Please make a note of this as we go through this demo and as you get into your IT career. While the term SSL is still commonly used in both speech and documentation, the protocol SSL has been fully replaced by TLS for many years.",
+      "summary": "This section clarifies the terminology surrounding SSL and TLS, emphasizing that SSL, particularly version 3.0, has been deprecated due to security vulnerabilities and replaced by TLS, specifically version 1.2 and later. Despite the continued use of the term \"SSL\" in discussions and documentation, it typically refers to TLS in modern contexts, as current web browsers no longer support SSL connections. Understanding this distinction is crucial for IT professionals as they navigate encryption protocols in their careers.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.7.3",
+        "title": "Add TLS to a Website",
+        "content_type": "video",
+        "filename": "8.7.3_Add_TLS_to_a_Website_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.7.3_Add_TLS_to_a_Website_[video].txt",
+        "word_count": 1404,
+        "has_content": true
+      },
+      "section_header": "Clarification of Terminology",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "8.7.3_chunk_3",
+      "content": "We're going to go to the Internet Information Service Manager, so let's switch over to our server. Let's go to Start and Server Manager. In the tools, we'll select IIS Manager. First, we're going to go down to our default website. We can right-click the Default Web Site we've created. Go to edit Bindings. We can see our HTTP port 80 here. We'll click Add. We can switch this to HTTPS. You can see that it automatically switches to port 443. Notice that secure communications with this website use port 443 instead of port 80. When using SSL, you must also have a server certificate, or SSL certificate. The certificate identifies the server and validates its identity. In this case, we don't currently have a certificate set up, so we're going to click Cancel and Close. We'll go to our server and go to Server Certificates. Now, if our website were available on the internet, we'd create a certificate request here and send that request to a well-known public key infrastructure, or PKI, such as DigiCert. When that request was returned, we'd use this complete certificate request option to import the completed certificate onto our server. In this demonstration, we're going to use Create Self-Signed Certificate. The self-signed certificate gives us a certificate that we can use. However, clients won't automatically trust the certificate that we use. We'll see how this works later. We'll enter a name for the certificate. And we'll call it Cert 2022 and click OK. You can see our certificate here. With this certificate created, we'll go back to our Default Web Site, right-click, Edit Bindings &gt; Add &gt; HTTPS. It switches to the 443. HTTP/2 is how semantics flow over TCP connections. Most browsers support HTTP/2, so disabling this may not be needed. OCSP Stapling checks to see if a certificate is revoked and has been an alternative to the Certificate Revocation List (CRL) Protocol. We'll leave both of those unchecked for now. We're going to go down, and we can see our Cert 2022 right here. Select it and click OK and Close.",
+      "summary": "This section covers the process of transitioning a website from HTTP to HTTPS using Internet Information Services (IIS) Manager, emphasizing the importance of SSL certificates for secure communications. It details the steps to add HTTPS bindings on port 443, create a self-signed certificate for testing, and highlights the role of public key infrastructures (PKI) for obtaining trusted certificates. Additionally, it briefly mentions HTTP/2 and OCSP Stapling as modern protocols for enhancing web security and performance.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.7.3",
+        "title": "Add TLS to a Website",
+        "content_type": "video",
+        "filename": "8.7.3_Add_TLS_to_a_Website_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.7.3_Add_TLS_to_a_Website_[video].txt",
+        "word_count": 1404,
+        "has_content": true
+      },
+      "section_header": "Changing from HTTP to HTTPS",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "8.7.3_chunk_4",
+      "content": "That certificate's created. Now, we can go over to our client machine and test this out. We're back on our Windows 11 client machine. We need to put https:// in front of the address and hit enter. The first message we get is that there's a problem with the website's security certificate. We started to use HTTPS, but our computer recognized that the certificate wasn't issued by a trusted certificate authority. In other words, the server has no proof, other than its own words, to verify its identity. In this case, we know who the server is, so we can continue to the website and accept the certificate. Notice that we're accessing the website. The URL is HTTPS. Let's go ahead and click Continue. The message told us there was a problem with the certificate, but we're still using HTTPS to connect to the website. In this case, we're giving the user the option of using HTTPS or HTTP when communicating with our server. A more likely example is to require SSL for certain communications. In this case, we're going to require SSL for the entire website, so a connection won't be granted unless the client and the server are both using SSL. To do this, we're going to go back to our web server, to Internet Information Services Manager.",
+      "summary": "In this section, users learn to test HTTPS connections by accessing a website with an untrusted security certificate, highlighting the importance of certificate authority verification. Although the connection is established, it emphasizes the need for SSL to ensure secure communications, suggesting a best practice of requiring SSL for all interactions with the server. This practical application reinforces the significance of secure protocols in safeguarding data transmission.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.7.3",
+        "title": "Add TLS to a Website",
+        "content_type": "video",
+        "filename": "8.7.3_Add_TLS_to_a_Website_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.7.3_Add_TLS_to_a_Website_[video].txt",
+        "word_count": 1404,
+        "has_content": true
+      },
+      "section_header": "Test HTTPS",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "8.7.3_chunk_5",
+      "content": "We're going to click the Default Web Site. Go to SSL Settings. We're going to tell it to Require SSL. We'll check the box and hit Apply to save those changes. Now, we can go back to the client. First, let's try to access the website using just HTTP. We'll just go ahead and take out the S. That's all we have to do. Hit Enter. We get this error that says access is denied. Now, let's go ahead and put the S back. It's basically denying us unless we're using an SSL certificate with a secure connection. You can see it went ahead and let us back in. The website requires SSL. We were trying to use HTTP, but it won't let us. Now that we're using HTTPS, we can access the website because the client and the server are both using SSL. In this example, we've required SSL on the entire website, meaning that any communication to the website must use SSL or be denied. It's unlikely that you may require SSL only for specific parts of the website. Today, it's recommended always to use HTTPS with a public-facing website, regardless of whether it's a basic website or one used for credit card purchases. By only using HTTP, hackers have easy access to view traffic in plain text.",
+      "summary": "This section emphasizes the importance of requiring SSL (Secure Sockets Layer) for an entire website to ensure secure communication between clients and servers. By configuring the web server to deny access via HTTP and only allow HTTPS, it protects sensitive data from being intercepted by attackers. Implementing SSL is now a best practice for all public-facing websites, safeguarding against vulnerabilities associated with unencrypted traffic.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.7.3",
+        "title": "Add TLS to a Website",
+        "content_type": "video",
+        "filename": "8.7.3_Add_TLS_to_a_Website_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.7.3_Add_TLS_to_a_Website_[video].txt",
+        "word_count": 1404,
+        "has_content": true
+      },
+      "section_header": "Require SSL for Entire Website",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "8.7.3_chunk_6",
+      "content": "That's it for this demo. We've gone over how to configure SSL on a website using Windows Server 2022. We've also clarified that SSL as a protocol is no longer used and has been fully replaced by TLS, even though the term SSL is still widely used in common speech and documentation.",
+      "summary": "This section covers the configuration of TLS on a website using Windows Server 2022, emphasizing the transition from the outdated SSL protocol to the more secure TLS. It highlights the importance of understanding this shift, as SSL is often referenced in discussions despite being obsolete. Practical applications include ensuring secure communications for web services through proper protocol implementation.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.7.3",
+        "title": "Add TLS to a Website",
+        "content_type": "video",
+        "filename": "8.7.3_Add_TLS_to_a_Website_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.7.3_Add_TLS_to_a_Website_[video].txt",
+        "word_count": 1404,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 6
+}

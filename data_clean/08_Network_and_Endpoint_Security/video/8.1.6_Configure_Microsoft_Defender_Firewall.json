@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "chapter_num": "8",
+    "section_num": "8.1.6",
+    "title": "Configure Microsoft Defender Firewall",
+    "content_type": "video",
+    "filename": "8.1.6_Configure_Microsoft_Defender_Firewall_[video].txt",
+    "file_path": "data_raw/08_Network_and_Endpoint_Security/8.1.6_Configure_Microsoft_Defender_Firewall_[video].txt",
+    "word_count": 924,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script In this demonstration, we'll practice working with the Windows Defender Firewall. Windows Defender Firewall is a host-based firewall. It's implemented as software and designed to protect an individual system. Be aware that Windows Defender Firewall was previously referred to as Windows Firewall. If you're on an older operating system, it may go by that name. However, it works basically the same. Its job is to prevent someone on the internet or the network from initiating an unwanted connection with a system. It just shuts it down. To manage Windows Defender Firewall, I'll click on Search and type firewall, then select Windows Defender Firewall under Best match. You can see that the Windows Defender Firewall is currently Off. Let's click Turn Windows Defender Firewall on or off on the left. You'll see two network profiles to which the Windows Defender firewall is applied. We have the Private network settings and the Public network settings. The Private network settings can be a little looser because we're assuming the company has a network firewall that's already blocking many connections, increasing the security level. We're trying to protect this individual host. We want to customize the firewall for those times when we connect to a public network. Public networks, such as those defined at a restaurant, a hotel, or an airport, are like the wild, wild West of information technology. You have no idea who's on the network or their intentions. Therefore, you want to configure the Windows Defender Firewall with more stringent settings than when you're on a private network. For both our network profiles, you can see that the Windows Defender Firewall is currently turned off. We need that firewall on. Select on for both. The default settings work well for a private network. We can see that we'll be notified if Windows Defender Firewall blocks an app trying to communicate through the firewall. We'll have a list of apps allowed to communicate through the firewall. That's probably appropriate. We'll run certain applications that need to send data back and forth through the host-based firewall. So that's okay. However, if I'm on a public network at an airport, a hotel, or a similar place, we want to turn this option on and block all incoming connections, including those in the list of allowed apps. We don't want anyone on the public network initiating a connection with this computer, even if it's an allowed application. We'll leave this option checked for public network profiles and click OK. The Windows Defender Firewall state is on for incoming connections. Let's talk about allowing certain apps. There may be times when you install an application that legitimately needs to communicate through the Windows Defender Firewall with other hosts on the network. Still, by default, it's going to be blocked. In that case, you can use the Allow an app or feature through Windows Defender Firewall. Let's select that. You can see a list of applications and features that the Windows system is aware of. You can also see whether they're allowed through the firewall. For example, scroll down to Remote Assistance. Remote Assistance traffic is allowed through the host firewall for private and public profiles. If there's an application that you need to allow through the firewall, you can enable it using the checkbox. For example, we've enabled Remote Desktop for Public and Private profiles. It's an app we frequently use for testing all sorts of networks. There may be situations where you want to allow an application to communicate through the Windows Defender Firewall. Still, you can't find it in the list because Windows hasn't recognized it. If that's the case, you can come down here and click Allow another app. Then, you locate the app. We have an app in the Program Files directory named VNC Viewer. VNC Viewer allows you to connect to desktops remotely for Windows, Linux, and other systems that won't work with a Remote Desktop. We'll go ahead and select vncviewer. Click Add. Now you can see it's added. We can configure it to allow traffic from both the Public and Private network profiles. That's how you add an app to the list of apps that can communicate through the firewall. Click OK. Now, we've configured the Windows Defender Firewall on the system. That's it for this demonstration. In this demo, we talked about managing the Windows Defender Firewall. We first turned on the Windows Defender Firewall and increased the security level of the Windows Defender Firewall for the public profile. We ended this demo by adding an exception to the firewall to allow a specific application to communicate through it.",
+  "chunks": [
+    {
+      "chunk_id": "8.1.6_chunk_1",
+      "content": "In this demonstration, we'll practice working with the Windows Defender Firewall. Windows Defender Firewall is a host-based firewall. It's implemented as software and designed to protect an individual system. Be aware that Windows Defender Firewall was previously referred to as Windows Firewall. If you're on an older operating system, it may go by that name. However, it works basically the same. Its job is to prevent someone on the internet or the network from initiating an unwanted connection with a system. It just shuts it down. To manage Windows Defender Firewall, I'll click on Search and type firewall, then select Windows Defender Firewall under Best match. You can see that the Windows Defender Firewall is currently Off. Let's click Turn Windows Defender Firewall on or off on the left. You'll see two network profiles to which the Windows Defender firewall is applied. We have the Private network settings and the Public network settings. The Private network settings can be a little looser because we're assuming the company has a network firewall that's already blocking many connections, increasing the security level. We're trying to protect this individual host. We want to customize the firewall for those times when we connect to a public network. Public networks, such as those defined at a restaurant, a hotel, or an airport, are like the wild, wild West of information technology. You have no idea who's on the network or their intentions. Therefore, you want to configure the Windows Defender Firewall with more stringent settings than when you're on a private network. For both our network profiles, you can see that the Windows Defender Firewall is currently turned off. We need that firewall on. Select on for both. The default settings work well for a private network. We can see that we'll be notified if Windows Defender Firewall blocks an app trying to communicate through the firewall. We'll have a list of apps allowed to communicate through the firewall. That's probably appropriate. We'll run certain applications that need to send data back and forth through the host-based firewall. So that's okay. However, if I'm on a public network at an airport, a hotel, or a similar place, we want to turn this option on and block all incoming connections, including those in the list of allowed apps. We don't want anyone on the public network initiating a connection with this computer, even if it's an allowed application. We'll leave this option checked for public network profiles and click OK. The Windows Defender Firewall state is on for incoming connections.",
+      "summary": "This section covers the practical use of Windows Defender Firewall, a host-based firewall designed to protect individual systems from unwanted network connections. It highlights the importance of configuring firewall settings differently for private and public networks, emphasizing stricter controls for public networks to enhance security. The demonstration guides users through enabling the firewall and adjusting settings to manage app communications effectively, ensuring robust protection against potential threats.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.1.6",
+        "title": "Configure Microsoft Defender Firewall",
+        "content_type": "video",
+        "filename": "8.1.6_Configure_Microsoft_Defender_Firewall_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.1.6_Configure_Microsoft_Defender_Firewall_[video].txt",
+        "word_count": 924,
+        "has_content": true
+      },
+      "section_header": "Start Windows Defender Firewall",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "8.1.6_chunk_2",
+      "content": "Let's talk about allowing certain apps. There may be times when you install an application that legitimately needs to communicate through the Windows Defender Firewall with other hosts on the network. Still, by default, it's going to be blocked. In that case, you can use the Allow an app or feature through Windows Defender Firewall. Let's select that. You can see a list of applications and features that the Windows system is aware of. You can also see whether they're allowed through the firewall. For example, scroll down to Remote Assistance. Remote Assistance traffic is allowed through the host firewall for private and public profiles. If there's an application that you need to allow through the firewall, you can enable it using the checkbox. For example, we've enabled Remote Desktop for Public and Private profiles. It's an app we frequently use for testing all sorts of networks.",
+      "summary": "This section covers the process of allowing specific applications to communicate through the Windows Defender Firewall, which typically blocks unauthorized traffic by default. Users can access a list of applications and their firewall permissions, enabling them to allow necessary apps like Remote Desktop for both private and public network profiles. This practical application ensures that legitimate applications can function properly while maintaining overall network security.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.1.6",
+        "title": "Configure Microsoft Defender Firewall",
+        "content_type": "video",
+        "filename": "8.1.6_Configure_Microsoft_Defender_Firewall_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.1.6_Configure_Microsoft_Defender_Firewall_[video].txt",
+        "word_count": 924,
+        "has_content": true
+      },
+      "section_header": "Allow Apps Through the Firewall",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "8.1.6_chunk_3",
+      "content": "There may be situations where you want to allow an application to communicate through the Windows Defender Firewall. Still, you can't find it in the list because Windows hasn't recognized it. If that's the case, you can come down here and click Allow another app. Then, you locate the app. We have an app in the Program Files directory named VNC Viewer. VNC Viewer allows you to connect to desktops remotely for Windows, Linux, and other systems that won't work with a Remote Desktop. We'll go ahead and select vncviewer. Click Add. Now you can see it's added. We can configure it to allow traffic from both the Public and Private network profiles. That's how you add an app to the list of apps that can communicate through the firewall. Click OK. Now, we've configured the Windows Defender Firewall on the system.",
+      "summary": "This section covers the process of allowing custom applications, such as VNC Viewer, to communicate through the Windows Defender Firewall when they are not automatically recognized. Users can manually add the application by selecting it from the Program Files directory and configuring its network profile settings for both Public and Private networks. This practical application enhances remote desktop connectivity while maintaining firewall security.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.1.6",
+        "title": "Configure Microsoft Defender Firewall",
+        "content_type": "video",
+        "filename": "8.1.6_Configure_Microsoft_Defender_Firewall_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.1.6_Configure_Microsoft_Defender_Firewall_[video].txt",
+        "word_count": 924,
+        "has_content": true
+      },
+      "section_header": "Allow Custom Apps Through the Firewall",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "8.1.6_chunk_4",
+      "content": "That's it for this demonstration. In this demo, we talked about managing the Windows Defender Firewall. We first turned on the Windows Defender Firewall and increased the security level of the Windows Defender Firewall for the public profile. We ended this demo by adding an exception to the firewall to allow a specific application to communicate through it.",
+      "summary": "This demonstration focused on managing the Windows Defender Firewall by enabling it and enhancing its security settings for the public profile. Additionally, it illustrated how to create a firewall exception to permit specific applications to communicate through the firewall, highlighting practical applications of firewall management in cybersecurity. Understanding these concepts is essential for maintaining network security and ensuring safe application functionality.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.1.6",
+        "title": "Configure Microsoft Defender Firewall",
+        "content_type": "video",
+        "filename": "8.1.6_Configure_Microsoft_Defender_Firewall_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.1.6_Configure_Microsoft_Defender_Firewall_[video].txt",
+        "word_count": 924,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 4
+}

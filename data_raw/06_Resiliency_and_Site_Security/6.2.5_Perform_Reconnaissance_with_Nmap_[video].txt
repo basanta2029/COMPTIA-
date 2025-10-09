@@ -1,0 +1,206 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Perform Reconnaissance with Nmap
+00:04
+One of the very first things you do as a penetration
+00:06
+tester or ethical hacker is gather information.
+00:08
+There are a lot of tools that can help you to do this.
+00:11
+Most ethical hackers start with
+00:12
+some very basic command line tools.
+00:14
+In this demo, we're going to perform some
+00:16
+reconnaissance using some of these basic tools.
+00:19
+Our target is a domain set up by the Nmap
+00:21
+Security Scanner Project and insecure.org.
+00:24
+They've set up scanme.nmap.org to help
+00:27
+people learn about Nmap and other tools.
+00:30
+They authorize students to do scans
+00:32
+as long as they're done within reason.
+00:33
+Let's close the web browser.<br>
+2. Reconnaissance Steps
+00:35
+To get started, we're going to go
+00:36
+through some reconnaissance steps.
+00:38
+First, I just want to make sure that
+00:40
+the site is live, so let's ping it.
+00:42
+I'll just type, 'ping scanme.nmap.org',
+00:45
+press Enter, and I get a response.
+00:47
+I'll hit Ctrl+C to stop the ping, and
+00:50
+I can confirm that the site is live.<br>
+00:51
+Now let's find the path to our
+00:53
+target by performing a traceroute.
+00:55
+On Windows, you do that by typing tracert.
+00:58
+But we're on our Kali Linux system, so we need to
+01:01
+type in 'traceroute scanme.nmap.org' and then Enter.
+01:06
+I get over a dozen hops between me and the target.
+01:09
+These, down here, aren't responding to the
+01:11
+request, but my traceroute still continues.
+01:13
+This is normal behavior.
+01:15
+Let's clear our screen.<br>
+01:17
+Now, I'm interested in finding the
+01:18
+name server information for our target.
+01:21
+I'm going to type in 'nslookup
+01:22
+scanme.nmap.org' and press Enter.
+01:26
+I get the IP addresses for both IP version
+01:28
+4 and version 6 along with the server names.<br>
+01:31
+You can perform a whois search
+01:33
+from the command line in Linux.
+01:35
+To do that, I'll type in 'whois nmap.org' and press Enter.
+01:39
+I'll scroll up, and here, I can see all the
+01:41
+information about nmap that's available from whois.
+01:44
+I'll clear the screen again.<br>
+3. Perform Basic Reconnaissance
+01:47
+Next, let's see what happens if we try
+01:48
+to make a connection with the target.
+01:51
+I know that port 80 is open because
+01:53
+we were just at the website.
+01:54
+Let's use Netcat to see if we can make
+01:57
+a connection to the site on port 80.
+01:59
+For that, I'll type in 'nc -v
+02:01
+scanme.nmap.org 80' and press Enter.
+02:05
+I get a response back, and it looks like I'm connected.
+02:08
+Typically, if you want to make sure you're connected,
+02:10
+you can type 'help', and you'll get a response.
+02:13
+I do get a response.
+02:14
+Not only that, I get some information about what
+02:17
+sort of server they're running and even the version.<br>
+02:20
+Let's try another.
+02:21
+I'll use my up arrow to get back to our last command.
+02:24
+I'll change the 80 to a 22 and press Enter.
+02:27
+I get a connection again and see that
+02:29
+they're running SSH, and I get the version
+02:31
+number along with some other information.
+02:34
+All right, let's move on.
+02:35
+I have to press Ctrl+C to get out of
+02:37
+this, and I'll also clear the screen.<br>
+4. Perform Basic Reconnaissance with Network Mapper
+02:40
+You'll get a lot of use out of Nmap as
+02:42
+a penetration tester and ethical hacker.
+02:44
+We were just using Netcat to make connections to ports.
+02:47
+But with 65,535 possible ports, that would take all day.
+02:52
+We can use Nmap to do a scan to see what ports are open.
+02:56
+To do a port scan, I'll type, 'nmap
+02:58
+-sS scanme.nmap.org' and press Enter.
+03:04
+The -sS parameter scans the 1,000 most common ports.
+03:08
+I get some results back.
+03:09
+I know what ports are open.
+03:11
+I know the state of the port and what service is running.
+03:14
+Now, if I want to continue working with
+03:16
+Netcat, I have a list of ports I know are open.<br>
+03:20
+Earlier, we did a ping to see if the target was alive.
+03:23
+Let's repeat that now to get the IP address.
+03:25
+I'll type 'ping scanme.nmap.org' and press Enter.
+03:29
+I'll press Ctrl+C to stop the ping.
+03:31
+Now, I want to do a ping sweep to see what other
+03:34
+IPs might be associated with scanme.nmap.org.
+03:38
+To do a ping sweep, I'll type in 'nmap
+03:41
+-sn 45.33.32.1-255' and press Enter.
+03:47
+Now I can go through this list and see which other
+03:50
+IPs might be associated with scanme.nmap.org.<br>
+5. Summary
+03:54
+That's it for this demo.
+03:55
+In this demo, we did some basic reconnaissance.
+03:58
+First, we used some command line tools
+04:00
+to find information about our target.
+04:02
+Then we used Netcat to connect to open ports.
+04:05
+Finally, we used nmap to perform a
+04:07
+basic port scan and a ping sweep.<br>

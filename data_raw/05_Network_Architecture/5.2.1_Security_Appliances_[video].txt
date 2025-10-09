@@ -1,0 +1,336 @@
+1. Security Appliances
+00:03
+In network security, many appliances are
+00:05
+available to help secure your network.
+00:08
+The size, needs, and resources of your
+00:10
+organization will be factors in determining
+00:12
+which ones to implement for your network.
+00:15
+In this lesson, we'll look at a few of these options.<br>
+2. Proxy Servers
+00:18
+Let's start with proxy servers.
+00:20
+A proxy is a person who has the authority
+00:22
+to act on behalf of another person.<br>
+00:25
+Similarly, a proxy server acts on behalf of a client or
+00:29
+user when attempting to access resources over the internet.
+00:33
+The proxy server, in this position of an intermediary,
+00:36
+provides a layer of protection to the client.
+00:40
+A proxy server works on a store-and-forward model.
+00:43
+This means the proxy deconstructs each packet, performs
+00:47
+analysis, then rebuilds the packet and forwards it on if
+00:51
+it conforms to the rules it's been configured with.<br>
+00:54
+The main benefit of a proxy is that client computers connect
+00:57
+to a specified point on the perimeter network for web access.
+01:02
+This provides a degree of traffic management and security.
+01:05
+Proxy servers can also provide anonymity
+01:08
+for users by masking their IP addresses.
+01:11
+In addition, most web proxy servers provide caching engines;
+01:15
+the proxy retains frequently requested web pages, eliminating
+01:19
+the need to re-fetch those pages for subsequent requests.<br>
+01:23
+Proxy servers are also often used
+01:25
+for content filtering and monitoring.
+01:28
+They can block certain websites or filter out
+01:30
+malicious content before it reaches the client.
+01:33
+Proxy servers can even distribute incoming network traffic
+01:37
+across multiple servers, helping to balance the load and
+01:40
+improve the overall performance and reliability of a network.<br>
+3. Jump Servers
+01:44
+The next appliance is a jump server.
+01:47
+A jump server is a hardened server
+01:49
+that provides access to other hosts.
+01:51
+Jump servers are often used for administrative tasks, where
+01:55
+administrators connect to the jump server first and then use
+01:58
+it to access other internal systems, like servers or devices.<br>
+02:03
+A jump server is primarily used to enhance security
+02:06
+by controlling access to sensitive resources.
+02:10
+It acts as a gateway to access certain systems
+02:12
+kept isolated from the external network.
+02:15
+The jump server is typically locked down and
+02:18
+secured to a higher degree, ensuring that only
+02:21
+authorized users can access it, reducing the
+02:24
+risk of unauthorized access to critical systems.<br>
+4. Load Balancers
+02:28
+Now, let's talk about load balancers.
+02:29
+While primarily used to distribute network traffic across
+02:33
+multiple servers to optimize performance, a load balancer
+02:37
+can also serve as a security appliance in certain scenarios.
+02:41
+A load balancer distributes client requests
+02:44
+across available server nodes in a farm or pool.
+02:48
+This is used to provision services that can
+02:51
+scale from light to heavy loads and to provide
+02:54
+mitigation against denial-of-service attacks.<br>
+02:57
+A load balancer also provides fault tolerance.
+03:00
+When there are several servers in a farm, all
+03:03
+identified by a single name or IP address via a load
+03:06
+balancer, if one server stops working, client requests
+03:10
+can be sent to another server in the same group.<br>
+03:13
+A load balancer can be deployed in any situation where
+03:17
+there are multiple servers providing the same function.
+03:20
+Examples include web servers, front-end email servers,
+03:24
+web conferencing, and streaming media servers.<br>
+03:27
+There are two main types of load
+03:29
+balancers: layer 4 and layer 7.
+03:32
+A layer 4 load balancer makes forwarding
+03:34
+decisions on IP address and TCP/UPD port values,
+03:39
+working at the transport layer of the OSI model.
+03:42
+A layer 7 load balancer, or content switch, makes forwarding
+03:47
+decisions based on application-level data, such as a request
+03:50
+for a particular URL web address or data types like video or
+03:54
+audio streaming, which requires more complex logic.<br>
+03:58
+Load balancers can also include a Web
+04:00
+Application Firewall that provides protection
+04:03
+against common web application attacks.
+04:06
+Modern load balancers often include features
+04:09
+for traffic inspection and filtering.
+04:11
+They can analyze incoming traffic for suspicious patterns,
+04:15
+such as unusual request rates or malicious payloads.
+04:18
+Traffic from potentially harmful sources can
+04:21
+be dropped or redirected for further analysis.<br>
+5. Sensors
+04:25
+Another network security appliance is a packet
+04:27
+sniffer, which is referred to as a sensor.
+04:30
+Typically, the packet capture sensor is placed behind a
+04:33
+firewall or close to a server of particular importance.
+04:38
+The idea is to identify malicious traffic
+04:40
+that has managed to get past the firewall.
+04:43
+A single sniffer can record a large amount of traffic
+04:45
+data, so don't put multiple sensors all over the network
+04:49
+without provisioning the resources to manage them properly.
+04:52
+Depending on network size and resources, one
+04:55
+or only a few sensors are typically deployed
+04:57
+to monitor key assets or network paths.<br>
+05:01
+The traffic captured by each sensor is transferred
+05:04
+to a host or appliance running an intrusion detection
+05:07
+system, or IDS, such as Snort, Suricata, or Zeek.
+05:12
+When traffic matches a detection signature,
+05:15
+the IDS raises an alert or generates a log
+05:18
+entry but does not block the source host.
+05:21
+This type of passive sensor doesn't slow down
+05:24
+traffic and is undetectable by the attacker.<br>
+05:28
+An IDS is used to identify and log hosts and
+05:31
+applications and to detect password-guessing attempts,
+05:35
+port scans, worms, backdoor applications, malformed
+05:39
+packets or sessions, and other policy violations.<br>
+6. All-In-One Security Appliance: UTM
+05:45
+The last appliance we'll look at in this
+05:46
+lesson is an all-in-one security appliance.
+05:49
+An all-in-one security appliance incorporates multiple
+05:52
+security functions into a single piece of hardware.<br>
+05:56
+Unified Threat Management, or UTM, is
+05:59
+the most common all-in-one appliance.
+06:02
+UTM puts several key security components into a
+06:05
+single device, usually managed using a web interface.<br>
+06:09
+Let's look at some of the functionality commonly
+06:11
+implemented in all-in-one security devices.
+06:14
+One of the first features is URL filtering,
+06:17
+which prevents users from accessing URL
+06:20
+categories restricted by the organization.
+06:23
+These often include pornographic,
+06:25
+shopping, and gambling sites.<br>
+06:28
+Another feature is content inspection.
+06:30
+This helps to ensure that HTTP connections
+06:33
+and content meet certain criteria.
+06:36
+For example, many content filters actively monitor
+06:38
+data streams by inspecting the packets in search of
+06:41
+viruses, Trojans, worms, and other malicious code.<br>
+06:46
+These devices also include a spam filter
+06:48
+to reduce the chance that your users'
+06:50
+mailboxes will fill up with junk email.
+06:53
+The UTM will also probably include a firewall so you can
+06:56
+set up rules and log traffic to and from the network.
+07:00
+Many devices include an integrated intrusion
+07:02
+detection or prevention system that alerts you if
+07:06
+a network attack attempt is detected or prevented.<br>
+7. UTM: Integrated Network Features
+07:08
+An all-in-one device typically contains
+07:11
+networking features as well as UTM features.
+07:15
+These network features include an integrated switch.
+07:18
+For small and remote offices that only have a
+07:20
+handful of systems, a small integrated switch
+07:23
+provides all the connectivity required.
+07:26
+As part of switching, the device may include
+07:28
+a network router that allows you to connect
+07:30
+to a network backbone using an uplink port.<br>
+07:34
+The device may also support traffic shaping to
+07:37
+prioritize one type of traffic over another.
+07:40
+For example, if the organization is using voice-over
+07:42
+IP phones, the all-in-one appliance can give voice
+07:46
+traffic priority over normal data traffic.<br>
+8. Summary
+07:50
+And that's it for this lesson.
+07:52
+In this lesson, we discussed a
+07:53
+few security appliance options.
+07:55
+First, we talked about proxy servers and how they work
+07:58
+as middlemen between clients and internet resources.
+08:01
+Then, we looked at jump servers that are used
+08:04
+to control access to sensitive resources.
+08:07
+Then, we reviewed load balancers and
+08:09
+what role they can play in security.
+08:11
+After that, we looked at sensors and how they record
+08:14
+traffic data and supply that information to an IDS, which
+08:18
+flags anything with a matching detection signature.
+08:21
+We ended this lesson by discussing an all-in-one security
+08:24
+appliance called a Unified Threat Management appliance,
+08:28
+which can combine multiple devices into one appliance.<br>

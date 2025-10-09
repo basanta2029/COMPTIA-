@@ -1,0 +1,130 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Create Backups in Windows
+00:04
+In this demonstration, we're going to look at two ways
+00:06
+to back up files on a Windows system—using File History
+00:09
+and using the legacy Backup and Restore utility.<br>
+2. File History
+00:12
+Let's take a look at setting up File History first.
+00:15
+File History saves copies of your files
+00:17
+so they can be recovered later if needed.
+00:20
+Using the Windows search button, I'll look
+00:22
+for file history and click to start it.
+00:25
+As you can see, it's currently turned off.
+00:27
+There's only one button to choose from.
+00:29
+Once it's turned on, you can select Run now to
+00:32
+start an immediate backup of the listed locations.
+00:35
+As you can see, the H: drive is
+00:37
+currently selected as the storage device.<br>
+00:40
+To the left, additional options are available.
+00:43
+In addition to the Restore personal files
+00:44
+option, which is used for retrieving copies after
+00:47
+they've been backed up, there's Select drive.
+00:50
+When clicked, the available devices are listed.
+00:53
+In this case, only the H: drive is available.
+00:56
+There's also an option to add a network location.<br>
+00:59
+Another important setting is Exclude folders.
+01:02
+Currently, the Pictures library is
+01:04
+excluded from copies being kept.
+01:06
+The Add and Remove buttons can be used to change this list.
+01:10
+In Advanced settings, we can change how often
+01:12
+copies are made and how many versions to keep.
+01:15
+The defaults are Every hour and Forever, respectively.<br>
+3. Backup and Restore (Windows 7)
+01:19
+The legacy Backup and Restore tool is designed to hold
+01:22
+copies of data or an entire system as a disk image.
+01:26
+It's recommended that the device holding
+01:28
+the backups be external, or at least on a
+01:30
+different storage device than the C: drive.
+01:32
+In this case, I have a second device prepared.
+01:35
+I'll browse to the Backup and Restore
+01:37
+utility found under Control Panel.
+01:39
+The tool's full name is Backup and Restore (Windows 7)
+01:42
+since this is a legacy tool from the Windows 7 days.
+01:46
+Once launched, I'll select Set up backup
+01:49
+and then select the appropriate device.
+01:51
+The H: drive is the device I intend to perform
+01:54
+backups to, so I don't need to make any changes.
+01:57
+I could, if necessary, click on the Save on a network
+01:59
+button and browse to a shared location for storage.
+02:03
+I'll leave it as the H: drive and click Next.<br>
+02:06
+At this point, the system wants me to
+02:08
+choose which files and folders to back up.
+02:10
+Since the default settings are good for our purposes in this
+02:13
+demo, I'll leave it on Let Windows choose and click Next.
+02:17
+On the next screen, we see a review of the options
+02:20
+we've selected and a new Change schedule link.
+02:23
+Currently, the backup is run on Sunday
+02:25
+at 7:00 PM, which is good for our needs.
+02:27
+To finish the configuration, we
+02:29
+click Save settings and run backup.<br>
+4. Summary
+02:32
+That's it for this demonstration on backups.
+02:34
+We covered two ways to back up files.
+02:36
+First, we looked at backing up using File History, and then
+02:40
+we looked at the legacy Windows 7 Backup and Restore utility.<br>

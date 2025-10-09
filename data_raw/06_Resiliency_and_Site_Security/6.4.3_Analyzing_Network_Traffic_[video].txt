@@ -1,0 +1,312 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Analyzing Network Traffic
+00:04
+Wireshark is a network packet analyzer that
+00:06
+tries to capture network packets and display the
+00:08
+data they carry in as much detail as possible.<br>
+00:11
+Network professionals use Wireshark to troubleshoot
+00:13
+network problems, examine security problems, verify
+00:16
+network devices, debug network issues, and more.
+00:20
+Wireshark can be installed on Windows,
+00:21
+Linux, and other operating systems.
+00:24
+It's not a firewall or intrusion detection system,
+00:26
+and it doesn't keep bad things from happening.
+00:29
+But it does a great job of monitoring
+00:30
+and measuring activity on a network.<br>
+00:33
+We're going to take a very brief look at Wireshark.
+00:35
+There are entire courses on Wireshark, and as you progress
+00:39
+professionally, you'll want to learn more about the program.<br>
+2. Wireshark Interface
+00:42
+Let's start with Wireshark's user interface.
+00:45
+Throughout this course we'll use Wireshark on Linux and Windows.
+00:48
+I'm currently on Kali Linux machine.
+00:50
+We're going to use Wireshark from there.
+00:52
+Like most programs, Wireshark has a menu at the top.
+00:56
+The File menu is similar to other programs,
+00:58
+as you can see when we click on it.
+01:00
+The same is true for the other menu items across the top.<br>
+01:04
+The main toolbar gives you quick access
+01:06
+to the most common Wireshark tasks.
+01:08
+The two most common items here are the shark fin,
+01:11
+or Start, which starts capturing packets, and this
+01:14
+square, which turns red when Wireshark is capturing.<br>
+01:17
+Below that, there's the Filter toolbar.
+01:20
+We'll come back to this in a few minutes.<br>
+01:21
+Down here, there's the Packet List pane.
+01:24
+This is where all the captured packets are displayed.
+01:27
+It only takes a few minutes to see hundreds or
+01:29
+thousands of packets, depending on your network traffic.
+01:33
+Each line here is a packet that Wireshark has
+01:35
+captured, and it's separated in columns up here.
+01:39
+You can separate packets by source or destination
+01:41
+IP addresses or categorize them in other ways.
+01:44
+Whichever one is selected up here will display more
+01:46
+detailed information down in the Packet Detail pane.<br>
+01:50
+The Packet Detail pane shows all the
+01:52
+details about the selected packet.
+01:54
+I can come down here, expand the
+01:56
+different areas, and see more details.
+01:58
+For those of you who love the OSI model, you'll be very
+02:01
+happy to hear that this is listed in the OSI order.<br>
+02:04
+Farther down, we have the Packet Bytes pane.
+02:07
+This is a hexadecimal dump of the selected packets.
+02:10
+Sometimes, you can see readable
+02:12
+information over here, in ASCII.
+02:13
+If the bytes aren't readable, this
+02:15
+information is replaced with periods.<br>
+02:17
+And finally, at the bottom, we have the status bar.<br>
+02:20
+A lot of the Wireshark interface can be customized, but
+02:23
+this is what it looks like with the default settings.<br>
+3. Display Filters
+02:26
+Okay.
+02:27
+Let's go back to display filters.
+02:29
+When you do some sniffing with Wireshark, you're going to
+02:32
+be overwhelmed with all of the packets it will capture.
+02:35
+We can filter the ones that aren't needed.
+02:37
+I already ran a scan earlier, and my traffic is here.<br>
+02:40
+One way to filter is to use the Expression Builder.
+02:43
+For example, let's say I want to filter dhcp.
+02:47
+If I look, bootp and dhcp are actually the same thing.
+02:52
+If I expand this out, I get lots of things to choose from.
+02:55
+I'm going to just leave it as-is.<br>
+02:57
+Now let's go over to the Relation box.
+03:00
+We have things such as is present.
+03:02
+The double equal sign (==) means equal to.
+03:05
+The exclamation and equal (!=) means not equal to.
+03:08
+The next several should be self-explanatory, but I
+03:12
+want to pick the equal to and then, for the value,
+03:14
+type in '10.10.10.1', which is my DHCP server.
+03:18
+Now, I'll click OK and see what happens.
+03:22
+I'm filtering only my DHCP traffic.<br>
+03:26
+Now, I want to see if there are any
+03:27
+cleartext usernames and passwords here.
+03:30
+I can do that several ways.
+03:31
+I can create a filter by typing in 'http contains admin'.
+03:36
+As I type, notice the salmon color.
+03:38
+As soon as it's a valid filter, it turns green.<br>
+03:42
+Let's come down here and choose this packet.
+03:44
+I'm picking it because it has an external public IP address.
+03:48
+I'm going to right-click and select Follow TCP Stream.
+03:51
+Now it displays the entire stream
+03:54
+related to this conversation.
+03:56
+Some of it is readable; some is not.
+03:58
+I'm looking for the word Admin. Let's
+04:00
+see if we can just do a find for that.
+04:06
+I'll click on Find Next until I
+04:08
+see something worth looking at.
+04:11
+Here, it looks like I found something.
+04:13
+It's the word log with the username Admin listed.
+04:16
+This is followed by pwd and the
+04:18
+password the person typed in.
+04:21
+So, with Wireshark, we were able
+04:24
+to see a cleartext password.
+04:25
+We could also filter other things,
+04:27
+like FTP, to find cleartext passwords.<br>
+04:30
+I'll come up and clear this filter.<br>
+04:34
+Another way we can filter is to come down here.
+04:37
+If I find something that I think is interesting,
+04:39
+I can right-click and apply a filter.<br>
+04:41
+We could spend an hour looking at
+04:43
+filters, but let's keep moving on here.<br>
+4. Follow the Conversation
+04:45
+So, we kind of did this already.
+04:48
+We know we can look at packets.
+04:50
+But what if we wanted to look at the
+04:52
+entire conversation between two devices?
+04:53
+I can come down here, right-click on one
+04:55
+of these, and select Follow TCP Stream.
+04:58
+Now, I get this window that pops up with the entire stream.
+05:02
+This particular stream isn't very
+05:04
+useful, but you get the idea.<br>
+05:06
+So, how many different conversations
+05:08
+have been going on here?
+05:09
+I can figure that out by coming up to
+05:11
+Statistics and selecting Conversations.
+05:13
+When I do, my conversations are combined.
+05:16
+All the packets are organized neatly.
+05:18
+I can choose a few different ways to see my data and then
+05:21
+sort by the total size of the bytes, largest to smallest.
+05:25
+I have some tabs up here, such as IP versions 4 and 6.
+05:29
+I can select TCP to display my TCP conversation.
+05:33
+Okay.
+05:34
+I'll close this and then clear my filter.<br>
+5. Get Files out of Wireshark
+05:37
+So far, when we look at our packets from
+05:39
+Wireshark, we see a bunch of gobbledygook.
+05:41
+The good news is that Wireshark has a way to export objects.
+05:44
+In our case, we want a file.
+05:46
+To do this, we can come up here, to File, go
+05:50
+down to Export Objects, and select a category.
+05:52
+I can pick HTTP, and I'll get a list of things
+05:55
+that downloaded from the web, or we can get objects
+05:58
+from our local Windows network by selecting SMB.
+06:00
+That's the one I'm going to choose.
+06:04
+I only have one file.
+06:06
+It's one that I transferred across the network earlier.
+06:08
+It's a jpg image file.
+06:10
+I'll click on Save and pick a place to save it.
+06:13
+I'll pick Desktop, click Save, and close this window.<br>
+06:20
+Now I'll minimize Wireshark, go over to my folders, go to
+06:24
+Desktop, and here's the picture that I captured in Wireshark.<br>
+6. Summary
+06:32
+That's it for this demo.
+06:33
+In this demo, we took a look at Wireshark.
+06:35
+We started by going over the Wireshark interface.
+06:37
+Then we talked about using filters.
+06:39
+We illustrated how to follow conversations in Wireshark.
+06:43
+Finally, we ended by exporting an object.<br>

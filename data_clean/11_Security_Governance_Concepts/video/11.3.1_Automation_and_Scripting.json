@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "chapter_num": "11",
+    "section_num": "11.3.1",
+    "title": "Automation and Scripting",
+    "content_type": "video",
+    "filename": "11.3.1_Automation_and_Scripting_[video].txt",
+    "file_path": "data_raw/11_Security_Governance_Concepts/11.3.1_Automation_and_Scripting_[video].txt",
+    "word_count": 1059,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script Think about the chores you do every day, like washing your clothes or doing the dishes. You could do these things by hand if you wanted, but it would take longer and probably be less effective than doing them with a machine. The process of having machines assist human labor is called automation, and a similar mindset is used in many kinds of computing. In this lesson, I'm going to cover a variety of facts about automation so you can have a better idea of how this works. The term Development, Security, and Operations is more commonly referred to as DevSecOps. This is the philosophy in which everyone in an organization is responsible for their system's security. This means that everyone should implement security decisions in the same way that development and operation decisions are made. If everyone in a company becomes better at security, the entire organization benefits, and customers have greater software assurance. While this might take a while to set up initially, it eventually streamlines the process for everyone and leads to lower costs and development times. During the software development process, engineers constantly check each other's work and test the software for bugs and vulnerabilities. In this way, fewer vulnerabilities make their way into the final product, which means that we end up investing less time and money into fixing things post-release. In a musical orchestra, there are many different instruments that are brought together to create something wonderful. Members follow what's written on their music sheets and the real-time directions given to them by the conductor. Just like a musical orchestra, workflows can be orchestrated to make them as efficient as possible so that they produce the best results. A workflow refers to a collection of tasks that are performed in a logical sequence. Orchestration means that you plan these tasks in such a way that they're as efficient as possible. For example, you can orchestrate different parts of your workflow, including the development, quality assurance, and security. Orchestration often incorporates the use of tools that automatically complete certain tasks in a sequence. To help with workflow orchestration, many companies are using automated cybersecurity solutions that are able to quickly identify and resolve potential attacks. One of these solutions is Security Orchestration, Automation, and Response, which is known by the acronym SOAR. SOAR refers to a collection of software programs that allow an organization's security team to collect various inputs they can monitor. The point of SOAR is to replace tasks that are repetitive and done manually with automated workflows. These systems automatically flag security incidents and respond to them in a predetermined way. This means that these incidents are caught earlier. This also frees up security analysts to spend their time and attention on only the most advanced security threats. For example, using a firewall application, SOAR can automatically detect a brute-force login attack and block the attacker's IP address. Another orchestration technique we see is known as continuous integration, or CI. When you work on a software development team, you often have multiple people contributing to the same project. The practice of continuous integration means that you automate all integration changes made by these contributors back into a shared mainline. In general, there's a central repository where all code changes are merged into a single file that's used to test the current build's effectiveness. Under this strategy, developers try to merge their changes back to the main branch as often as possible. The new changes are then automatically tested to make sure they don't break the application when they're integrated. This can greatly streamline the development process because developers don't need to manually discuss the changes they make with the rest of the team. This also cuts down on overhead costs and lets developers focus on the code and not on a complex web of communication. Continuous delivery is like an extension of continuous integration. It automatically deploys all the changes coders make into a production environment. You have both an automated testing process and an automated release process that you can set to occur at whichever interval you feel is best. Continuous deployment goes a step further than continuous delivery. Continuous deployment means that any change that goes through all the production pipeline stages is automatically released to customers. There's no human intervention in this process, and only if the change fails one of the tests along the way is it prevented from being pushed out. This has the potential to create an extremely streamlined process and quicker responses to customer feedback. That's it for this lesson. In this lesson, we first discussed DevSecOps and explained how this philosophy adds security measures to every step of the development process. Next, we discussed workflow orchestration and showed how it can help the development process run more smoothly with all the different elements aligned in the most efficient way. A big part of this is automating whichever elements can possibly be automated. We also introduced you to some tools to help in your orchestration, including SOARS, which lets the security team automatically collect data to help them identify security threats. And finally, we discussed how continuous integration lets you automate the integration of changes from multiple developers into a central staging area. Lastly, we showed that you can use continuous deployment to ensure changes are automatically deployed to a production environment and pushed out to end users.",
+  "chunks": [
+    {
+      "chunk_id": "11.3.1_chunk_1",
+      "content": "Think about the chores you do every day, like washing your clothes or doing the dishes. You could do these things by hand if you wanted, but it would take longer and probably be less effective than doing them with a machine. The process of having machines assist human labor is called automation, and a similar mindset is used in many kinds of computing. In this lesson, I'm going to cover a variety of facts about automation so you can have a better idea of how this works.",
+      "summary": "Automation in cybersecurity refers to the use of technology to perform tasks that would otherwise require human intervention, enhancing efficiency and effectiveness. This section explores the principles of automation, its applications in streamlining security processes, and the benefits it brings to managing cybersecurity tasks. Understanding automation is crucial for optimizing workflows and improving overall security posture in organizations.",
+      "metadata": {
+        "chapter_num": "11",
+        "section_num": "11.3.1",
+        "title": "Automation and Scripting",
+        "content_type": "video",
+        "filename": "11.3.1_Automation_and_Scripting_[video].txt",
+        "file_path": "data_raw/11_Security_Governance_Concepts/11.3.1_Automation_and_Scripting_[video].txt",
+        "word_count": 1059,
+        "has_content": true
+      },
+      "section_header": "Automation Overview",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "11.3.1_chunk_2",
+      "content": "The term Development, Security, and Operations is more commonly referred to as DevSecOps. This is the philosophy in which everyone in an organization is responsible for their system's security. This means that everyone should implement security decisions in the same way that development and operation decisions are made. If everyone in a company becomes better at security, the entire organization benefits, and customers have greater software assurance. While this might take a while to set up initially, it eventually streamlines the process for everyone and leads to lower costs and development times. During the software development process, engineers constantly check each other's work and test the software for bugs and vulnerabilities. In this way, fewer vulnerabilities make their way into the final product, which means that we end up investing less time and money into fixing things post-release.",
+      "summary": "DevSecOps integrates security into the software development lifecycle, emphasizing that all team members share responsibility for system security. By fostering a culture of continuous security checks and collaborative testing, organizations can reduce vulnerabilities, streamline development processes, and ultimately lower costs and time spent on post-release fixes. This approach enhances software assurance for customers and promotes a more secure development environment.",
+      "metadata": {
+        "chapter_num": "11",
+        "section_num": "11.3.1",
+        "title": "Automation and Scripting",
+        "content_type": "video",
+        "filename": "11.3.1_Automation_and_Scripting_[video].txt",
+        "file_path": "data_raw/11_Security_Governance_Concepts/11.3.1_Automation_and_Scripting_[video].txt",
+        "word_count": 1059,
+        "has_content": true
+      },
+      "section_header": "DevSecOps",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "11.3.1_chunk_3",
+      "content": "In a musical orchestra, there are many different instruments that are brought together to create something wonderful. Members follow what's written on their music sheets and the real-time directions given to them by the conductor. Just like a musical orchestra, workflows can be orchestrated to make them as efficient as possible so that they produce the best results. A workflow refers to a collection of tasks that are performed in a logical sequence. Orchestration means that you plan these tasks in such a way that they're as efficient as possible. For example, you can orchestrate different parts of your workflow, including the development, quality assurance, and security. Orchestration often incorporates the use of tools that automatically complete certain tasks in a sequence.",
+      "summary": "Workflow orchestration in cybersecurity involves organizing and automating a series of tasks to enhance efficiency and effectiveness, similar to how a conductor leads an orchestra. This process includes coordinating various components such as development, quality assurance, and security, often utilizing tools that automate task execution. By streamlining workflows, organizations can achieve optimal results and improve overall security posture.",
+      "metadata": {
+        "chapter_num": "11",
+        "section_num": "11.3.1",
+        "title": "Automation and Scripting",
+        "content_type": "video",
+        "filename": "11.3.1_Automation_and_Scripting_[video].txt",
+        "file_path": "data_raw/11_Security_Governance_Concepts/11.3.1_Automation_and_Scripting_[video].txt",
+        "word_count": 1059,
+        "has_content": true
+      },
+      "section_header": "Workflow Orchestration",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "11.3.1_chunk_4",
+      "content": "To help with workflow orchestration, many companies are using automated cybersecurity solutions that are able to quickly identify and resolve potential attacks. One of these solutions is Security Orchestration, Automation, and Response, which is known by the acronym SOAR. SOAR refers to a collection of software programs that allow an organization's security team to collect various inputs they can monitor. The point of SOAR is to replace tasks that are repetitive and done manually with automated workflows. These systems automatically flag security incidents and respond to them in a predetermined way. This means that these incidents are caught earlier. This also frees up security analysts to spend their time and attention on only the most advanced security threats. For example, using a firewall application, SOAR can automatically detect a brute-force login attack and block the attacker's IP address.",
+      "summary": "SOAR, or Security Orchestration, Automation, and Response, is a suite of automated cybersecurity solutions designed to streamline workflow orchestration by quickly identifying and resolving potential attacks. By automating repetitive tasks, SOAR enables security teams to monitor various inputs, flag incidents, and respond to threats more efficiently, allowing analysts to focus on more complex security challenges. For instance, SOAR can automatically detect and mitigate brute-force login attacks, enhancing overall security response times.",
+      "metadata": {
+        "chapter_num": "11",
+        "section_num": "11.3.1",
+        "title": "Automation and Scripting",
+        "content_type": "video",
+        "filename": "11.3.1_Automation_and_Scripting_[video].txt",
+        "file_path": "data_raw/11_Security_Governance_Concepts/11.3.1_Automation_and_Scripting_[video].txt",
+        "word_count": 1059,
+        "has_content": true
+      },
+      "section_header": "SOAR",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "11.3.1_chunk_5",
+      "content": "Another orchestration technique we see is known as continuous integration, or CI. When you work on a software development team, you often have multiple people contributing to the same project. The practice of continuous integration means that you automate all integration changes made by these contributors back into a shared mainline. In general, there's a central repository where all code changes are merged into a single file that's used to test the current build's effectiveness. Under this strategy, developers try to merge their changes back to the main branch as often as possible. The new changes are then automatically tested to make sure they don't break the application when they're integrated. This can greatly streamline the development process because developers don't need to manually discuss the changes they make with the rest of the team. This also cuts down on overhead costs and lets developers focus on the code and not on a complex web of communication.",
+      "summary": "Continuous Integration (CI) is a software development practice that automates the merging of code changes from multiple contributors into a central repository, facilitating frequent updates to a shared mainline. This approach enhances collaboration by minimizing the need for extensive communication among team members, while also ensuring that new code is automatically tested to prevent integration issues. By streamlining the development process, CI allows developers to concentrate on coding rather than managing complex interactions.",
+      "metadata": {
+        "chapter_num": "11",
+        "section_num": "11.3.1",
+        "title": "Automation and Scripting",
+        "content_type": "video",
+        "filename": "11.3.1_Automation_and_Scripting_[video].txt",
+        "file_path": "data_raw/11_Security_Governance_Concepts/11.3.1_Automation_and_Scripting_[video].txt",
+        "word_count": 1059,
+        "has_content": true
+      },
+      "section_header": "Continuous Integration",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "11.3.1_chunk_6",
+      "content": "Continuous delivery is like an extension of continuous integration. It automatically deploys all the changes coders make into a production environment. You have both an automated testing process and an automated release process that you can set to occur at whichever interval you feel is best. Continuous deployment goes a step further than continuous delivery. Continuous deployment means that any change that goes through all the production pipeline stages is automatically released to customers. There's no human intervention in this process, and only if the change fails one of the tests along the way is it prevented from being pushed out. This has the potential to create an extremely streamlined process and quicker responses to customer feedback.",
+      "summary": "Continuous Delivery and Deployment are key practices in software development that enhance efficiency and responsiveness. Continuous delivery automates the deployment of code changes to production environments, supported by automated testing and release processes, while continuous deployment takes this further by automatically releasing changes to customers without human intervention, provided they pass all tests. This approach enables rapid iterations and improved customer feedback loops, streamlining the overall development process.",
+      "metadata": {
+        "chapter_num": "11",
+        "section_num": "11.3.1",
+        "title": "Automation and Scripting",
+        "content_type": "video",
+        "filename": "11.3.1_Automation_and_Scripting_[video].txt",
+        "file_path": "data_raw/11_Security_Governance_Concepts/11.3.1_Automation_and_Scripting_[video].txt",
+        "word_count": 1059,
+        "has_content": true
+      },
+      "section_header": "Continuous Delivery and Deployment",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "11.3.1_chunk_7",
+      "content": "That's it for this lesson. In this lesson, we first discussed DevSecOps and explained how this philosophy adds security measures to every step of the development process. Next, we discussed workflow orchestration and showed how it can help the development process run more smoothly with all the different elements aligned in the most efficient way. A big part of this is automating whichever elements can possibly be automated. We also introduced you to some tools to help in your orchestration, including SOARS, which lets the security team automatically collect data to help them identify security threats. And finally, we discussed how continuous integration lets you automate the integration of changes from multiple developers into a central staging area. Lastly, we showed that you can use continuous deployment to ensure changes are automatically deployed to a production environment and pushed out to end users.",
+      "summary": "This lesson covers the integration of security within the development process through DevSecOps, emphasizing the importance of incorporating security measures at every stage. It highlights workflow orchestration to enhance efficiency, the automation of processes, and introduces tools like SOARS for threat identification. Additionally, the concepts of continuous integration and continuous deployment are discussed, showcasing how they facilitate seamless updates and deployment of changes in software development.",
+      "metadata": {
+        "chapter_num": "11",
+        "section_num": "11.3.1",
+        "title": "Automation and Scripting",
+        "content_type": "video",
+        "filename": "11.3.1_Automation_and_Scripting_[video].txt",
+        "file_path": "data_raw/11_Security_Governance_Concepts/11.3.1_Automation_and_Scripting_[video].txt",
+        "word_count": 1059,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 7
+}

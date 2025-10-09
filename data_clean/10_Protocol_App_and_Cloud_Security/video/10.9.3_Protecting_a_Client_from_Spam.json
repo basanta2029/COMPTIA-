@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "chapter_num": "10",
+    "section_num": "10.9.3",
+    "title": "Protecting a Client from Spam",
+    "content_type": "video",
+    "filename": "10.9.3_Protecting_a_Client_from_Spam_[video].txt",
+    "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.9.3_Protecting_a_Client_from_Spam_[video].txt",
+    "word_count": 918,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script In this demo, we're going to talk about protecting a client from spam. We're going to look at spam settings in two email services. One is Gmail, and we're going to access it through a web browser. The other is the Outlook web mail client. Let's start with Gmail. I already have my browser open, and I've logged into Gmail. It has a few functions that are set up automatically to help you organize and sort out types of email, especially spam. When I come down here and select this email, I get some options, including Report Spam. If I select that, it'll be moved to my Spam folder, and all emails coming from this address will be marked as spam. I'll undo that for this email. Another thing I can do is right-click and look at some more options. A better choice for this email might be to label it Promotions rather than Spam. Now let's click on the Promotions tab and see what's in there. I see several emails, many already sorted for me. If I right-click again, I can see, under Label As, that it's labeled Promotions. Let's look at the contents of our Spam Folder. If I click on it, we can see several emails in there. If you find some emails in here that aren't spam, you can select them and then click Not Spam. All emails in this folder are deleted 30 days after they arrive. Now let's look at the settings. Here, you'll find Filters and Blocked Addresses. Down here, you'll find the email addresses you've previously blocked. These emails are marked as spam. If, for some reason you need to change that, this is where you do it. Now let's look at another web-based email client, Outlook. I'm already in Outlook, and here's my inbox. I have one email down here. Let's select it. I have a tab up here called Junk. When I click on it, I get a dropdown, and I have a few choices: Junk, Phishing, and Block. Let's click each of these for more information. First, I'll click on Junk. This will add this email to the list of Spam mail senders. I can change my mind and click Undo. Next, click on Phishing. When we do that, this email is reported as a Phishing email to Microsoft so they can better detect these on their end. This isn't a Phishing email, so I'll click the Don't Report button. The third option is Block. This won't report the email, but maybe it's just one that I don't care to receive any longer, and unsubscribing doesn't help. Once again, I'll cancel and not really block the email. Let's take a look at the Junk Email folder. I have two emails in here that aren't junk, so I'll tell Outlook that, and they'll go back to my inbox. I'll do that for both emails. Now, if I look at my inbox, both emails are there. Let's look at our settings in Outlook. I'll click on the Junk Email option here. Let's look at our options. We can block senders or entire domains from sending you email. I click on Add, and I can put in an email address or a domain that I want to block. Or maybe a sender is getting labeled as spam, but it isn't spam. If that's the case, I can add those emails and domains here, under the Safe senders and domains list. The last one here is Safe mailing lists. For example, I'm a member of several mail lists related to tech, and many spam filters mark them as spam. I can enter them here to make sure that doesn't happen. At the bottom of the page, we have a couple of filters. The first one is to only trust emails from my Safe senders and domains list. This would be pretty restrictive and take a lot of updating. But if you only want to use this email to communicate with coworkers or family members, this might be a great thing, especially for children or the elderly. The next one will block attachments from anyone not in your Safe senders and domains list. This isn't as restrictive, and it's probably a good way to prevent malware from coming to your mailbox. Be aware that these are just client settings, and on the server side of things, you probably have even more settings. In addition, ISPs and mail hosts are filtering emails before they even arrive to your client. In general, processes for catching spam have come a long way, but you still have to do some things manually. That's it for this demo. In this demo, we configured spam filtering in Gmail and Outlook.",
+  "chunks": [
+    {
+      "chunk_id": "10.9.3_chunk_1",
+      "content": "In this demo, we're going to talk about protecting a client from spam. We're going to look at spam settings in two email services. One is Gmail, and we're going to access it through a web browser. The other is the Outlook web mail client.",
+      "summary": "This section focuses on strategies for protecting clients from spam by examining the spam settings in two popular email services: Gmail and Outlook. The demo highlights practical applications of configuring these settings through web browsers to enhance email security and reduce unwanted messages. Understanding these configurations is essential for maintaining effective communication and safeguarding against spam-related threats.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.9.3",
+        "title": "Protecting a Client from Spam",
+        "content_type": "video",
+        "filename": "10.9.3_Protecting_a_Client_from_Spam_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.9.3_Protecting_a_Client_from_Spam_[video].txt",
+        "word_count": 918,
+        "has_content": true
+      },
+      "section_header": "Protecting a Client from Spam",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.9.3_chunk_2",
+      "content": "Let's start with Gmail. I already have my browser open, and I've logged into Gmail. It has a few functions that are set up automatically to help you organize and sort out types of email, especially spam. When I come down here and select this email, I get some options, including Report Spam. If I select that, it'll be moved to my Spam folder, and all emails coming from this address will be marked as spam. I'll undo that for this email. Another thing I can do is right-click and look at some more options. A better choice for this email might be to label it Promotions rather than Spam. Now let's click on the Promotions tab and see what's in there. I see several emails, many already sorted for me. If I right-click again, I can see, under Label As, that it's labeled Promotions. Let's look at the contents of our Spam Folder. If I click on it, we can see several emails in there. If you find some emails in here that aren't spam, you can select them and then click Not Spam. All emails in this folder are deleted 30 days after they arrive. Now let's look at the settings. Here, you'll find Filters and Blocked Addresses. Down here, you'll find the email addresses you've previously blocked. These emails are marked as spam. If, for some reason you need to change that, this is where you do it.",
+      "summary": "The Gmail section covers essential features for managing email effectively, including automatic sorting into categories like Spam and Promotions. Users can report spam, label emails, and manage filters and blocked addresses to enhance their email organization. Practical applications include the ability to recover misclassified emails and customize email handling settings for improved security and efficiency.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.9.3",
+        "title": "Protecting a Client from Spam",
+        "content_type": "video",
+        "filename": "10.9.3_Protecting_a_Client_from_Spam_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.9.3_Protecting_a_Client_from_Spam_[video].txt",
+        "word_count": 918,
+        "has_content": true
+      },
+      "section_header": "Gmail",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.9.3_chunk_3",
+      "content": "Now let's look at another web-based email client, Outlook. I'm already in Outlook, and here's my inbox. I have one email down here. Let's select it. I have a tab up here called Junk. When I click on it, I get a dropdown, and I have a few choices: Junk, Phishing, and Block. Let's click each of these for more information. First, I'll click on Junk. This will add this email to the list of Spam mail senders. I can change my mind and click Undo. Next, click on Phishing. When we do that, this email is reported as a Phishing email to Microsoft so they can better detect these on their end. This isn't a Phishing email, so I'll click the Don't Report button. The third option is Block. This won't report the email, but maybe it's just one that I don't care to receive any longer, and unsubscribing doesn't help. Once again, I'll cancel and not really block the email. Let's take a look at the Junk Email folder. I have two emails in here that aren't junk, so I'll tell Outlook that, and they'll go back to my inbox. I'll do that for both emails. Now, if I look at my inbox, both emails are there. Let's look at our settings in Outlook. I'll click on the Junk Email option here. Let's look at our options. We can block senders or entire domains from sending you email. I click on Add, and I can put in an email address or a domain that I want to block. Or maybe a sender is getting labeled as spam, but it isn't spam. If that's the case, I can add those emails and domains here, under the Safe senders and domains list. The last one here is Safe mailing lists. For example, I'm a member of several mail lists related to tech, and many spam filters mark them as spam. I can enter them here to make sure that doesn't happen. At the bottom of the page, we have a couple of filters. The first one is to only trust emails from my Safe senders and domains list. This would be pretty restrictive and take a lot of updating. But if you only want to use this email to communicate with coworkers or family members, this might be a great thing, especially for children or the elderly. The next one will block attachments from anyone not in your Safe senders and domains list. This isn't as restrictive, and it's probably a good way to prevent malware from coming to your mailbox. Be aware that these are just client settings, and on the server side of things, you probably have even more settings. In addition, ISPs and mail hosts are filtering emails before they even arrive to your client. In general, processes for catching spam have come a long way, but you still have to do some things manually.",
+      "summary": "The Outlook section covers essential features for managing email security, including options to classify emails as Junk, Phishing, or Blocked, which helps users maintain a clean inbox and report potential threats. Users can customize their settings to block specific senders or domains, add safe senders to prevent legitimate emails from being marked as spam, and apply filters to enhance security against malware. Overall, while Outlook provides robust client-side tools for email management, users should also be aware of server-side protections and the importance of manual oversight in email security.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.9.3",
+        "title": "Protecting a Client from Spam",
+        "content_type": "video",
+        "filename": "10.9.3_Protecting_a_Client_from_Spam_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.9.3_Protecting_a_Client_from_Spam_[video].txt",
+        "word_count": 918,
+        "has_content": true
+      },
+      "section_header": "Outlook",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.9.3_chunk_4",
+      "content": "That's it for this demo. In this demo, we configured spam filtering in Gmail and Outlook.",
+      "summary": "In this section, the course demonstrated the configuration of spam filtering in both Gmail and Outlook, highlighting the importance of email security in protecting against phishing and malicious attacks. Key concepts include the identification of spam threats and the implementation of filtering techniques to enhance email safety. Practical applications involve setting up filters to manage unwanted emails effectively, ensuring a more secure communication environment.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.9.3",
+        "title": "Protecting a Client from Spam",
+        "content_type": "video",
+        "filename": "10.9.3_Protecting_a_Client_from_Spam_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.9.3_Protecting_a_Client_from_Spam_[video].txt",
+        "word_count": 918,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 4
+}

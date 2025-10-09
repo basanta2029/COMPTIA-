@@ -1,0 +1,193 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Restart, Retire, or Wipe Devices
+00:04
+There are times when it may be necessary to remove company
+00:07
+data from a device that is assigned to one of your users.
+00:10
+Now, you could jump in a cab and go to the
+00:12
+person's house, knock on the door, and demand to
+00:14
+see the device, or you could use some of the
+00:16
+cool features that Microsoft has created for us.
+00:19
+In this demo, we're going to look at how to restart,
+00:21
+retire, or wipe devices on a device remotely.<br>
+2. Retire a Device
+00:25
+I'm already logged into Endpoint Manager.
+00:27
+I'll come up to Devices and go
+00:29
+over to the All Devices blade.
+00:31
+Then, in my list of devices, select the Windows11-3 device.
+00:35
+There is no particular reason why
+00:37
+I picked this device for this demo.
+00:39
+In your environment, you would obviously
+00:40
+pick the one that you want to work with.<br>
+00:43
+So, now we're seeing some of the
+00:43
+basic properties for this device.
+00:45
+I can do several things from here.
+00:47
+Up here, we have Retire.
+00:49
+I'll click on it.
+00:50
+If you choose this option, it will remove company
+00:52
+data from the device that is managed by Intune.
+00:55
+It won't delete the user's personal data.
+00:58
+There are some exceptions to what is removed,
+01:00
+so make sure you read the documentation and
+01:02
+understand what's happening before proceeding.<br>
+01:04
+I don't want to do this, so I'll click No.<br>
+3. Wipe a Device
+01:06
+Now we'll look at how to wipe a device.
+01:09
+I'll click on Wipe.
+01:11
+Now a wipe is going to set the
+01:12
+device back to a factory reset.
+01:15
+You might do this if the person using the
+01:16
+device has had an awkward dismissal from a
+01:18
+company or the device is lost or stolen.
+01:21
+You have two choices.
+01:22
+You can wipe the device, but keep the
+01:24
+enrollment state and associated account.
+01:26
+The other option is to wipe even if the device loses power.
+01:30
+It also says that the device
+01:32
+might not run Windows 10 or later.
+01:34
+This is the more extreme of the two.
+01:36
+It's probably the right option
+01:38
+if the device is lost or stolen.
+01:40
+In fact, it's making me a little nervous.
+01:42
+I'm going to click Cancel before I
+01:44
+accidentally wipe my demo system!<br>
+4. Delete a Device
+01:47
+Next, we have Delete a device.
+01:49
+This one deletes the device, and you
+01:51
+will no longer see it here in Intune.
+01:53
+The device will no longer be able to reach company
+01:55
+resources, and the company data may be wiped from the device.<br>
+5. Other Options
+01:59
+We're going to look at the Restart feature,
+02:01
+but first, let's talk about a few others.
+02:04
+Here, we have Sync.
+02:06
+Use this when you want to sync your device.
+02:08
+Fresh Start will remove all preloaded Win32 apps.
+02:12
+You can choose whether to retain user data or not.
+02:15
+And finally, there are several
+02:16
+more things you can do remotely.
+02:17
+Now let's go back and look at
+02:19
+how to restart a device remotely.<br>
+6. Restart Device Remotely with Intune
+02:22
+Now I'll click on Restart.
+02:24
+I get a message here that basically asks if
+02:26
+I'm sure about wanting to restart the device.
+02:29
+It goes on to say that the users will not be automatically
+02:31
+notified of the restart, and they might lose work.
+02:34
+To prevent this, make sure your users are
+02:36
+informed before you select this option.
+02:39
+I know that there is no one using this device,
+02:41
+so I'll go ahead and click on Yes here.
+02:44
+You can see a message in the upper right-hand
+02:45
+corner of the screen that says Initializing Restart.
+02:49
+Now I'll jump over this this
+02:50
+other device and see what happens.<br>
+02:53
+Okay.
+02:54
+I'm on the Windows client here, and
+02:55
+I've been waiting for a few minutes.
+02:57
+It did not reboot instantly.
+02:58
+I do have this message that says it's going to sign
+03:01
+me out and Windows will shut down in two minutes.
+03:03
+So, I'll pause the recording, wait for
+03:05
+a few minutes, and see what happens.<br>
+03:07
+Oay., That took about two minutes,
+03:10
+and now my device is restarting.<br>
+7. Summary
+03:13
+That's it for this demo.
+03:14
+In this demonstration, we covered the
+03:15
+steps on how to restart, retire, or wipe
+03:18
+devices on a device remotely in Intune.<br>

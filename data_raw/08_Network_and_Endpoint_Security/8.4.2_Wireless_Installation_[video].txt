@@ -1,0 +1,165 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Wireless Installation
+00:04
+When you set up a wireless network, you can't just put
+00:07
+up a bunch of wireless access points and call it a day.
+00:10
+There are different installation considerations
+00:11
+you'll need to look at before installing your devices.
+00:14
+The first step is to understand and define
+00:16
+the usage needs of your wireless network.
+00:19
+Once you know them, it's time to conduct a site survey.
+00:22
+In this lesson, we're going to
+00:24
+discuss the site survey process.
+2. Site Surveys
+00:26
+A site survey ensures that the wireless
+00:28
+network will perform as desired.
+00:30
+It examines the physical layout and barriers
+00:32
+of the location, which lets you determine
+00:34
+where to install the access points.
+00:37
+Multiple site surveys will be completed
+00:39
+during the installation process.
+00:41
+There are three different types of site surveys
+00:43
+performed at different times in the installation process:
+00:47
+passive surveys, active surveys, and predictive surveys.
+00:50
+If a survey isn't conducted properly, your network
+00:53
+won't perform, and that will cost a lot more time
+00:56
+and money than performing surveys correctly.
+00:59
+To conduct a survey, you'll need to use a Wi-Fi analyzer.
+01:03
+A dedicated Wi-Fi analyzer tool can provide an in-depth
+01:06
+look at the wireless signals in the area being tested.
+01:09
+There are also several Wi-Fi analyzers programs
+01:12
+you can run from a laptop, tablet, or smartphone.
+01:14
+Before you perform a survey, you need
+01:17
+a diagram or map of your location.
+01:20
+It's important to make sure that the map is properly
+01:22
+scaled and labeled so you can get a proper reading.
+01:25
+Many analyzer tools allow you to import the
+01:27
+map so you can overlay the survey results.
+3. Passive Survey
+01:30
+The initial survey is a passive survey.
+01:33
+This survey is performed without the analyzer
+01:35
+connecting to any specific wireless access point.
+01:38
+It's just in a listen-only mode.
+01:41
+Temporary WAPs are placed, and the surveyor
+01:43
+walks around with the analyzer to measure
+01:45
+signal strength and interference levels.
+01:48
+Once the passive survey has been
+01:50
+completed, a heat map is generated.
+01:52
+A heat map shows Wi-Fi signal strength.
+01:55
+They usually show strong signals in green,
+01:57
+medium levels in yellow, and weak spots in red.
+02:01
+You may need to perform multiple passive surveys to
+02:03
+determine the best placement for your access points.
+02:06
+You also need to make sure that the WAPs are installed in
+02:08
+secure locations so people can't physically access them.
+02:12
+Once you've figured out where to install the WAPs and
+02:14
+installed them, you should conduct an active survey.
+4. Active Survey
+02:18
+During an active survey, you'll first connect the
+02:20
+Wi-Fi analyzer to the access points to measure the
+02:23
+network strength and look for any weak spots.
+02:25
+Then you'll walk through the entire location
+02:27
+again to thoroughly test every inch.
+02:29
+You can also generate heat maps again
+02:31
+to visually represent problem areas.
+02:34
+You also need to check for channel overlapping.
+02:36
+If neighboring access points are set to overlapping
+02:39
+channels, you'll end up dealing with performance issues and
+02:41
+network drops as devices move between the different WAPs.
+5. Predictive Survey
+02:46
+The last type of site survey is a predictive survey.
+02:49
+Predictive surveys use software programs to load the
+02:51
+building blueprints and determines where to install the WAPs.
+02:55
+This can be done remotely and doesn't require someone
+02:57
+to walk through the location to test everything.
+03:00
+A predictive survey isn't as precise as a passive or
+03:02
+active survey, but it can cost less and take less time.
+6. Summary
+03:06
+That's it for this lesson.
+03:08
+In this lesson, we talked about the
+03:09
+process of installing a wireless network.
+03:11
+Before we can do anything, we need to
+03:13
+know the usage needs of the network.
+03:15
+Then you can perform passive, active, and predictive
+03:18
+site surveys to determine how to install your WAPs.

@@ -1,0 +1,87 @@
+Security Pro 8.0
+
+5.10.3 Router Security Facts
+
+This lesson covers the following topics:
+
+Securing routers
+Segmentation
+Secure Routers
+
+Take the following general actions to secure routers:
+
+Security Measure
+Description
+Change factory defaults	
+Change default settings on the router to increase security.
+
+Change the default manufacturer's username and password and encrypt the new password. Use a complex password instead of passwords that are easy to guess or crack. Complex passwords are typically over eight characters, contain a mix of character types (numbers and symbols), and are not words, variations of words, or derivatives of the username.
+Change the default network address. Some routers default to 192.168.1.1 or 10.0.0.1.
+Use secure protocols	
+Use encrypted protocols when managing the device. The protocols function as follows:
+
+Secure Shell (SSH) allows for secure interactive control of remote systems.
+SSH uses RSA public key cryptography for both connection and authentication.
+SSH is a protocol that can also be used to provide security services for other protocols.
+Secure Copy Protocol (SCP) is a secure file copy protocol that uses SSH for security.
+HTTP (HyperText Transfer Protocol) over SSL (Secure Sockets Layer), known as (HTTPS), is a secure form of HTTP that uses SSL to encrypt data before it is transmitted.
+Note:
+Do not use HTTP, Telnet, File Transfer Protocol (FTP), or Trivial FTP (TFTP). These protocols send data in clear text. The most secure way to manage a router's configuration is to connect the management station to the router's console port. This creates a dedication transmission path that can't be sniffed by hosts on the network. Also, avoid using UPnP (Universal Plug and Play) unless your routers have the latest firmware updates, and your connected devices are free of malware.
+Implement physical security	
+Ensure physical security by keeping network devices in a locked room. If someone can gain access to the physical device, they can easily bypass any configured passwords. Passwords are useless if physical access is not controlled. Implement the following physical security measures:
+
+Perimeter barriers
+Closed-circuit television (CCTV)
+Doors
+Door locks
+Physical access logs
+Physical access controls
+Secure configuration file	If possible, store the router configuration file in an encrypted form and back up the file to a secure location.
+Update firmware	One of the first things you should do when setting up a new router is update the firmware. The updates to the firmware fix any vulnerabilities that have been resolved by the manufacturer in the past.
+Use anti-spoofing rules	
+Anti-spoofing rules counter spoofing attacks where IP packets have a source address that does not belong to the sender. Anti-spoofing rules analyze the IP packet and match the router interface and direction from which the packet is received. An inbound packet that comes to the external interface must not have a source address that matches the internal network or the router itself.
+
+A typical anti-spoofing rule will be configured as follows:
+
+Source: An IP address belonging to the internal network or the IP address of the router itself
+Destination: Any
+Service: Any
+Interface: Any external interface
+Direction: Inbound
+Action: Deny
+Time: Any
+Access control lists
+
+(ACLs)
+Router access control lists (ACLs) can be configured to increase security and limit traffic, much like a firewall, but on the router level. ACLs filter the traffic and determine if the data should be blocked or forwarded. An access control list (ACL) is a list of permissions associated with a network object, such as a router or a switch, that controls traffic at a network interface level. ACLs typically use packet information like source and destination IP addresses, port numbers, and the protocol to decide whether to permit or deny the traffic. They are usually implemented on network devices to provide traffic control across the network, adding a layer of security and efficiency.
+
+
+
+
+Settings
+
+
+Theater Mode
+
+
+Full Screen
+
+
+Play Video
+
+
+Video Control Resume Play
+
+
+Volume Control
+Play Speed
+
+
+Interactive Script
+Segmentation
+
+Routers play an important role in securing the network. One way they can do this is through segmentation. Segmentation is crucial to securing an enterprise environment because it reduces the potential impact of a cybersecurity incident by isolating systems and limiting the spread of an attack or malware infection. In a segmented network, systems are divided into separate segments or subnets, each with distinct security controls and access permissions. This type of segmentation significantly complicates an attacker's work, giving an organization more time to detect and respond. Furthermore, segmentation allows more granular control over data access to ensure users, devices, and applications only have access to the information necessary for their specific tasks, thus enhancing data protection and privacy.
+
+
+Description
+Device isolation refers to segregating individual devices within a network to limit their interaction with other devices and systems. This aims to enhance endpoint protection by preventing the lateral spread of threats should a device become compromised. In the context of endpoint protection, device isolation creates barriers between devices so that a threat that infiltrates one device cannot easily spread to others. Device isolation restricts network traffic between devices, reducing the potential attack surface. This approach is particularly useful for threats like worms or ransomware, which often aim to propagate through networks quickly. Device isolation also limits breach impacts by ensuring compromised devices cannot access the entire network.

@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "chapter_num": "10",
+    "section_num": "10.1.4",
+    "title": "Use VMWare Player",
+    "content_type": "video",
+    "filename": "10.1.4_Use_VMWare_Player_[video].txt",
+    "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.4_Use_VMWare_Player_[video].txt",
+    "word_count": 903,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script In this demo, we'll be working with VMware Workstation Player, which is software that allows the installation of virtual machines, or VMs. This software is similar to commercially available hypervisors, but on a much smaller scale. VMware Workstation Player is designed to be used on your desktop for either personal or business use. Today, we'll just be looking at the standard edition that you'd use in a home lab or for testing. Let's go ahead and walk through a virtual machine installation. We have several options off to the right. Create a New Virtual Machine will start the wizard to add a virtual machine to our player. Open a Virtual Machine will add a virtual machine that was already created elsewhere or with an open virtual machine format, such as an .ovf file. There's an upgrade option here to get Workstation Pro, which gives you more features than would typically come with VMware's ESXI hypervisor, but this requires a paid license. You can always get help if you're feeling stumped and want to check out more information. We're going to go ahead and create a new VM. Typically, operating systems have an ISO that's downloadable from their website. We have some ISOs already downloaded, so we're just going to click Browse. We'll select our Win11 ISO file and click Open. From here, we just need to click Next. Quickly make sure that the Guest operating system is set appropriately. In our case, it'll be Microsoft Windows and the version will be Windows 10 and later x64. Click Next. Here it gives you an option to name the VM and its location. Just to make things easier, I'll change the name to Windows11 and leave the location alone. Click Next. Okay, this is one feature that's sort of unique. We have the ability to store the VM's disk as a single file or break it up into smaller files. It says that it might be easier to move the smaller files, but in our case, we just want to keep it as one. Also, be mindful of how much disk space you have on your workstation and how much you plan to use in the future on this virtual machine. There are usually bare bone requirements for all operating systems. Of course, you may want to add more if there's another purpose to this VM. Let's click Next. Notice that it didn't give me the option to tweak more VM settings. If you do want to finetune things more, like adding more CPU or memory, tweaking the network, etc., you can customize the hardware here or do it after the fact by right-clicking on the VM and going to Settings. Click Finish. Now we have a newly created VM ready to boot. Let's go over the Settings that we have. Some of this is self-explanatory, like adding or removing Memory, Processors, or even Hard Disk space. The Network Adapter is where it gets interesting. There are many types of network connections to choose from. Bridged connects directly to the physical network card, NAT shares the host's IP address, Host-only puts the VM in an isolated private network, Custom drops it in a virtual network, and LAN segment does something similar. NAT may be your best choice if your VM just needs to reach the internet and isn't going to be used in conjunction with other VMs. If you want to network several VMs together, you can use a custom virtual network or LAN segment. For example, if I wanted to create a firewall VM that all my VMs go through first before they hit the internet, I might have two network adapters in here. One of them would be the NAT, the internet source, while the secondary one would be the LAN or a custom virtual network of my choosing. Then all the other VMs would use the virtual network and not the NAT connection. In our demo, we're just going to leave it on NAT and click OK. Now it's time to power this on. Clicking Play virtual machine makes it come alive. And just like that, we're booting the Windows 11 ISO to start the installation process. Keep in mind that you have to leave the player open to run these VMs. These aren't meant to run what they call \"headless\" and in the background with VMware Workstation player. Once this application is closed out, your VMs close out as well. That's it for this demo on virtual machines. In this demo, we discovered VMware Workstation Player. We also showed you how to install a VM and tweak its settings.",
+  "chunks": [
+    {
+      "chunk_id": "10.1.4_chunk_1",
+      "content": "In this demo, we'll be working with VMware Workstation Player, which is software that allows the installation of virtual machines, or VMs. This software is similar to commercially available hypervisors, but on a much smaller scale. VMware Workstation Player is designed to be used on your desktop for either personal or business use. Today, we'll just be looking at the standard edition that you'd use in a home lab or for testing.",
+      "summary": "In this section, participants will learn to use VMware Workstation Player, a desktop application for creating and managing virtual machines (VMs). The demo focuses on the standard edition suitable for home labs or testing environments, highlighting its practical applications for both personal and business use. This foundational knowledge is essential for understanding virtualization in cybersecurity contexts.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.1.4",
+        "title": "Use VMWare Player",
+        "content_type": "video",
+        "filename": "10.1.4_Use_VMWare_Player_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.4_Use_VMWare_Player_[video].txt",
+        "word_count": 903,
+        "has_content": true
+      },
+      "section_header": "Use VMware Player",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.1.4_chunk_2",
+      "content": "Let's go ahead and walk through a virtual machine installation. We have several options off to the right. Create a New Virtual Machine will start the wizard to add a virtual machine to our player. Open a Virtual Machine will add a virtual machine that was already created elsewhere or with an open virtual machine format, such as an .ovf file. There's an upgrade option here to get Workstation Pro, which gives you more features than would typically come with VMware's ESXI hypervisor, but this requires a paid license. You can always get help if you're feeling stumped and want to check out more information. We're going to go ahead and create a new VM. Typically, operating systems have an ISO that's downloadable from their website. We have some ISOs already downloaded, so we're just going to click Browse. We'll select our Win11 ISO file and click Open. From here, we just need to click Next. Quickly make sure that the Guest operating system is set appropriately. In our case, it'll be Microsoft Windows and the version will be Windows 10 and later x64. Click Next. Here it gives you an option to name the VM and its location. Just to make things easier, I'll change the name to Windows11 and leave the location alone. Click Next. Okay, this is one feature that's sort of unique. We have the ability to store the VM's disk as a single file or break it up into smaller files. It says that it might be easier to move the smaller files, but in our case, we just want to keep it as one. Also, be mindful of how much disk space you have on your workstation and how much you plan to use in the future on this virtual machine. There are usually bare bone requirements for all operating systems. Of course, you may want to add more if there's another purpose to this VM. Let's click Next. Notice that it didn't give me the option to tweak more VM settings. If you do want to finetune things more, like adding more CPU or memory, tweaking the network, etc., you can customize the hardware here or do it after the fact by right-clicking on the VM and going to Settings. Click Finish.",
+      "summary": "This section covers the installation of a virtual machine (VM) using VMware, detailing the steps to create a new VM, select an operating system ISO, and configure basic settings such as naming and disk storage options. It emphasizes the importance of ensuring the correct guest OS is selected and highlights the ability to customize hardware settings post-creation. Practical applications include setting up isolated environments for testing and development, which is crucial in cybersecurity for safe experimentation and training.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.1.4",
+        "title": "Use VMWare Player",
+        "content_type": "video",
+        "filename": "10.1.4_Use_VMWare_Player_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.4_Use_VMWare_Player_[video].txt",
+        "word_count": 903,
+        "has_content": true
+      },
+      "section_header": "Install a VM",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.1.4_chunk_3",
+      "content": "Now we have a newly created VM ready to boot. Let's go over the Settings that we have. Some of this is self-explanatory, like adding or removing Memory, Processors, or even Hard Disk space. The Network Adapter is where it gets interesting. There are many types of network connections to choose from. Bridged connects directly to the physical network card, NAT shares the host's IP address, Host-only puts the VM in an isolated private network, Custom drops it in a virtual network, and LAN segment does something similar. NAT may be your best choice if your VM just needs to reach the internet and isn't going to be used in conjunction with other VMs. If you want to network several VMs together, you can use a custom virtual network or LAN segment. For example, if I wanted to create a firewall VM that all my VMs go through first before they hit the internet, I might have two network adapters in here. One of them would be the NAT, the internet source, while the secondary one would be the LAN or a custom virtual network of my choosing. Then all the other VMs would use the virtual network and not the NAT connection. In our demo, we're just going to leave it on NAT and click OK.",
+      "summary": "In this section, the course covers the customization of virtual machine (VM) settings, focusing on memory, processors, and hard disk space adjustments. It emphasizes the various network connection types available, such as Bridged, NAT, Host-only, Custom, and LAN segment, highlighting their practical applications for internet access and VM networking. The section illustrates how to configure network adapters for specific scenarios, such as using NAT for internet access while setting up a custom network for multiple VMs, enhancing security and connectivity.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.1.4",
+        "title": "Use VMWare Player",
+        "content_type": "video",
+        "filename": "10.1.4_Use_VMWare_Player_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.4_Use_VMWare_Player_[video].txt",
+        "word_count": 903,
+        "has_content": true
+      },
+      "section_header": "Customize VM",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.1.4_chunk_4",
+      "content": "Now it's time to power this on. Clicking Play virtual machine makes it come alive. And just like that, we're booting the Windows 11 ISO to start the installation process. Keep in mind that you have to leave the player open to run these VMs. These aren't meant to run what they call \"headless\" and in the background with VMware Workstation player. Once this application is closed out, your VMs close out as well.",
+      "summary": "In this section, learners are guided through the process of powering on a virtual machine (VM) using VMware Workstation Player to initiate the installation of Windows 11 from an ISO file. It emphasizes the importance of keeping the application open, as VMs cannot operate in a \"headless\" mode and will shut down when the player is closed. This practical application reinforces foundational skills in managing virtual environments, crucial for cybersecurity professionals.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.1.4",
+        "title": "Use VMWare Player",
+        "content_type": "video",
+        "filename": "10.1.4_Use_VMWare_Player_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.4_Use_VMWare_Player_[video].txt",
+        "word_count": 903,
+        "has_content": true
+      },
+      "section_header": "Boot the VM",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.1.4_chunk_5",
+      "content": "That's it for this demo on virtual machines. In this demo, we discovered VMware Workstation Player. We also showed you how to install a VM and tweak its settings.",
+      "summary": "This section introduces VMware Workstation Player as a tool for creating and managing virtual machines (VMs). It covers the installation process of a VM and provides guidance on adjusting its settings to optimize performance and security. Understanding these practical applications is essential for effective virtualization in cybersecurity environments.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.1.4",
+        "title": "Use VMWare Player",
+        "content_type": "video",
+        "filename": "10.1.4_Use_VMWare_Player_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.4_Use_VMWare_Player_[video].txt",
+        "word_count": 903,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 5
+}

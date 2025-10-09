@@ -1,0 +1,110 @@
+Security Pro 8.0
+
+8.6.4 Wireless Authentication and Access Methods Facts
+
+This lesson covers the following topics:
+
+Access methods
+Port security
+MAC filtering and MAC limiting
+Access Methods
+
+Choose an access method for a wireless network based on the use of the network. The following table describes access methods:
+
+Access Method
+Description
+Pre-shared key
+
+(PSK)
+A pre-shared key is a passphrase used to access the wireless network. This is probably the most commonly used access method.
+Wi-Fi Protected Setup
+
+(WPS)
+Wi-Fi Protected Setup works only on a network that uses a PSK and WPA2. WPS allows a device to securely connect to a wireless network without typing in the PSK. To do this, you:
+
+Push a button on the access point that causes the access point to search for devices in range.
+Push the WPS button on the device to automatically join it to the access point. If there is no button, enter the eight-digit pin unique to the access point.
+Note:
+Some devices and access points can also use Near Field Communication (NFC) during the WPS process to connect to each other.
+Open network	An open network has no authentication at all and allows anyone to connect to the network. This access method should be used only in public places that want to offer free wireless access.
+Captive portal	
+Many open networks implement a captive portal. Captive portals force a user to view and interact with them before accessing a network. A hotel network is a good example of captive portal use. When using a captive portal:
+
+The user connects to the wireless network but is redirected to a captive portal page before internet access is granted.
+The user might be prompted to agree to the terms and conditions of using the network or even asked to pay a fee before being granted access.
+To ensure the authentication information being sent is secure, the Extensible Authentication Protocol (EAP) is used. EAP is a framework in which other protocols work. The following table explains EAP and the protocols:
+
+Protocol
+Description
+Extensible Authentication
+
+Protocol
+
+(EAP)
+EAP is a set of interface standards that allows various authentication methods to be used:
+
+EAP supports multiple authentication methods (smart cards, biometrics, and digital certificates).
+Using EAP, the client and server negotiate the characteristics of authentication.
+Protected Extensible Authentication Protocol
+
+(PEAP)
+PEAP provides authentication in an SSL/TLS tunnel with a single certificate on the server. PEAP:
+
+Creates a secure communication channel for transmitting certificate or login credentials.
+Enables mutual authentication by requiring the server to prove its identity to the client.
+Was a collaborative effort between Cisco, Microsoft, and RSA.
+EAP Flexible Authentication via Secure Tunneling
+
+(EAP-FAST)
+EAP-FAST uses a Protected Access Credential (PAC) to authenticate users. EAP-FAST:
+
+Establishes a TLS tunnel in which client authentication credentials are transmitted.
+Is susceptible to attackers who intercept the Protected Access Credential (PAC) and use it to compromise user credentials. This vulnerability is mitigated by manual PAC provisioning or by using server certificates.
+Was created by Cisco.
+EAP Transport Layer Security
+
+(EAP-TLS)
+EAP-TLS uses Transport Layer Security (TLS) and is considered one of the most secure EAP standards available. EAP-TLS:
+
+Is widely supported by almost all manufacturers of wireless LAN hardware and software.
+Requires signed client-side and server-side certificate authority (CA) PKI certificates.
+Is labor-intensive and expensive to implement.
+EAP Tunneled Transport Layer Security
+
+(EAP-TTLS)
+EAP-TTLS also uses a CA signed certificate. EAP-TTLS:
+
+Is an updated version of EAP-TLS.
+Requires only one CA signed certificate on the server, simplifying the implementation process.
+Port Security
+
+Each wall and switch port represents an opportunity for a threat actor to attach a device to the network. A threat actor who can operate a host with physical access to a network segment can launch a variety of attacks.
+
+Access to the physical switch ports and switch hardware should be restricted to authorized staff. To accomplish this, place the switch appliances in secure server rooms and lockable hardware cabinets. To prevent the attachment of unauthorized client devices at unsecured wall ports, the switch port that the wall port cabling connects to can be administratively disabled, or the patch cable can be physically removed from the switch port. Completely disabling ports in this way can introduce a lot of administrative overhead and allow room for error. Also, it doesn't provide complete protection, as an attacker could unplug a device from an enabled port and connect their own machine. Consequently, more sophisticated methods of ensuring  port security have been developed.
+MAC Filtering and MAC Limiting
+
+The network adapter in each host computer is identified by a MAC address. Configuring MAC filtering means a switch port only permits certain MAC addresses to connect. This can be done by creating a list of valid MAC addresses or by specifying a limit to the number of permitted addresses. For example, if port security is enabled with a maximum of two MAC addresses, the switch will record the first two MACs to connect to that port. The switch then drops any traffic from machines with different MAC addresses that try to connect.
+
+Configuring ARP inspection on a Cisco switch
+
+Courtesy of Cisco Systems, Inc. Unauthorized use not permitted.
+Description
+Restricting access by MAC address is difficult to manage and still prone to spoofing. Better security is obtained by forcing computers and users to authenticate before full network access is granted. The IEEE 802.1X Port-based Network Access Control (P NAC) standard allows a switch to require authentication when a host connects to one of its ports. 802.1X uses authentication, authorization, and accounting (AAA) architecture:
+
+Supplicant - is the device requesting access, such as a user's PC or laptop.
+Authenticator - is the switching device (or any type of network access appliance). This does not validate authentication requests directly but acts as a conduit for authentication data.
+Authentication server - the server that holds or can contact a directory of network objects and validate authentication requests, issue authorizations, and perform accounting of security events.
+The 802.1X standard is implemented by two protocols:
+
+Extensible Authentication Protocol (EAP) - provides a framework for deploying multiple types of authentication methods. It is often used with digital certificates to establish a trust relationship and create a secure tunnel to transmit the user credential or to perform smart-card authentication without a password.
+Remote Authentication Dial-In User Service (RADIUS) - allows the authenticator and authentication server to communicate authentication and authorization decisions. The authenticator is a RADIUS client; the authentication server is a RADIUS server.
+When a host connects to an 802.1X-enabled switch port, the switch opens the port for the EAP over LAN (EAPoL) protocol only. The switch port only allows full data access when the host has been authenticated. The switch receives an EAP packet with the supplicant's credentials. These are encrypted and cannot be read by the switch. The switch uses the RADIUS protocol to send the EAP packet to the authentication server. The authentication server can access the directory of user accounts and can validate the credential. If authentication is successful, it informs the switch that full network access can be granted.
+
+IEEE 802.1X Port-based Network Access Control with RADIUS and EAP authentication
+
+Description
+Some hosts are so security-critical that it is unsafe to connect them to any type of network. One example is the root certification authority in PKI. Another example is a host used to analyze malware execution. A host not physically connected to any network is said to be air-gapped.
+
+It is also possible to configure an air-gapped network. This means that hosts within the air-gapped network can communicate, but there is no cabled or wireless connection to any other network. Military bases, government sites, and industrial facilities use air-gapped networks.
+
+Physically isolating a host or group of hosts improves security but also incurs significant management challenges. Device administration has to be performed at a local terminal. Any updates or installs have to be performed using USB or optical media. This media is a potential attack vector and must be scanned before allowing its use on an air-gapped host.

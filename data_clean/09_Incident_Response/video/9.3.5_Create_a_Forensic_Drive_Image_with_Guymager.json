@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "chapter_num": "9",
+    "section_num": "9.3.5",
+    "title": "Create a Forensic Drive Image with Guymager",
+    "content_type": "video",
+    "filename": "9.3.5_Create_a_Forensic_Drive_Image_with_Guymager_[video].txt",
+    "file_path": "data_raw/09_Incident_Response/9.3.5_Create_a_Forensic_Drive_Image_with_Guymager_[video].txt",
+    "word_count": 1131,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script There are several ways to capture a disk image as part of a forensic investigation. In this demo, we're going to do this with a program called Guymager. Guymager has a graphical user interface, making it a bit easier to use than a command line tool. We're on the Guymager home page, and you can read more about it there. One thing I want to point out on the website is that Guymager does come on several live CDs and security operating systems. We're going to use Kali Linux for our demo, so let's close the browser and get started. I want to mention a couple of things before we get started. Normally, you'll want to have a write blocker between the disk you're imaging and the forensic workstation that you're working from. In a virtual environment, such as my test system here, I can't really do that. The write blocker would keep data from being written to the disk we're wanting to image, which is very important. The other thing I want to point out is that Kali has a live CD version that has a lot of forensic tools that my copy doesn't have. Keep that in mind if you're setting up your own lab and be sure to investigate the right copy of Linux that will work best for you. I said that Guymager is a GUI tool, but it does need to be run as a Sudo user. There's a shortcut for it under the Application Launcher, so if I go up here, down to Forensics, and then over to Forensic Imaging Tools, I see Guymager. When it launches, it warns me that it needs to be started with root rights in order to perform acquisitions. That's no fun, and but we can get around it. I'll launch it from the terminal. So let's click No, I don't want to continue here. I'll go up here and launch a terminal window. After it loads, I'll type —˜sudo guymager' and press Enter. It prompts me for a password to continue as an admin, so I'll type that in here. Just a reminder, when you type passwords in Linux, the cursor doesn't move, and you think that you're not really typing. This is normal; it's a security feature. Your keyboard isn't broken. I press Enter, Guymager is launched, and now I can acquire images. I'll make this full screen to take advantage of all the space. Right away, I notice I have three disks, or partitions. This first one is my hard drive for my Kali machine. I know that because it's a 20-gig disk, and that's what I used. This second one is what I'm after. I know this is it because it's a 2-gig disk, which I plugged in. To acquire an image, I simply right-click and choose Acquire Image from the menu. Now we have a few choices for the file format. This one is called Expert Witness Format. When we select it, we have the option to fill out all this additional data that would be needed if this was part of a legal investigation. We're not going to pick that one. We're going to pick the Linux dd raw image. This is the format I'm going to use when it's time to examine the image content. Over here, we can split the file into smaller pieces. I have a smaller drive, so I could uncheck that box, but I'll just leave it as-is. Now I need to put the images somewhere. I have a temp folder for these images, and I'll navigate to /home/dana/temp and click Choose to select that directory. I need to supply a filename, so I'll just enter —˜Image1'. The program puts in the extension, so we don't have to do that. Below here, I'm going to make sure this box is checked so that we have the hash value of the image Calculate MD5. We're also going to verify the image after acquisition. Click Start to get the process going. We have a very small drive, so this shouldn't take long. In fact, if you look at the progress, you can see we're moving along very nicely. It looks like it's finished, and the indicator light is green. We're done with this part, so let's verify that it acquired the images and saved. I'll minimize Guymager for now. Now let's go up to our Application Launcher and open up File Manager. Remember, we saved the image in a temp directory under /home/dana, and here it is. I'll slide the mouse over and double-click on temp to open it and view the contents. I can see three files. It does look like Guymager broke my file into two, since I checked the box to split files over 2 gigs. The third file is a log file. Let's open up that log and take a look. My log file has some info about Guymager itself--the version, timestamp, and so on. I'll scroll down here a little ways. Now I see some information about disk size and other data. I want to go down a little farther, to here. This is more relevant information about the acquisition of the disk. I have the device name, /dev/sda, and the size, format, and so on. Down here, I can see the MD5 hash calculation. Finally, here, we can see when the image was captured, how long it took, and the speed. At the very bottom, we can see the three files that were created when we ran the program. At this point, our disk is captured. The next step is to examine the contents with another forensic software tool designed to do so. That's it for this demo. In this demo, we used Guymager to capture a drive.",
+  "chunks": [
+    {
+      "chunk_id": "9.3.5_chunk_1",
+      "content": "There are several ways to capture a disk image as part of a forensic investigation. In this demo, we're going to do this with a program called Guymager. Guymager has a graphical user interface, making it a bit easier to use than a command line tool. We're on the Guymager home page, and you can read more about it there. One thing I want to point out on the website is that Guymager does come on several live CDs and security operating systems. We're going to use Kali Linux for our demo, so let's close the browser and get started.",
+      "summary": "In this section of the CompTIA Security+ course, students learn how to create a forensic drive image using Guymager, a user-friendly graphical tool. The demonstration utilizes Kali Linux, highlighting Guymager's availability on various live CDs and security operating systems, which simplifies the process of disk imaging in forensic investigations. This practical application emphasizes the importance of proper imaging techniques in preserving digital evidence.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.5",
+        "title": "Create a Forensic Drive Image with Guymager",
+        "content_type": "video",
+        "filename": "9.3.5_Create_a_Forensic_Drive_Image_with_Guymager_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.5_Create_a_Forensic_Drive_Image_with_Guymager_[video].txt",
+        "word_count": 1131,
+        "has_content": true
+      },
+      "section_header": "Create a Forensic Drive Image with Guymager",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.5_chunk_2",
+      "content": "I want to mention a couple of things before we get started. Normally, you'll want to have a write blocker between the disk you're imaging and the forensic workstation that you're working from. In a virtual environment, such as my test system here, I can't really do that. The write blocker would keep data from being written to the disk we're wanting to image, which is very important. The other thing I want to point out is that Kali has a live CD version that has a lot of forensic tools that my copy doesn't have. Keep that in mind if you're setting up your own lab and be sure to investigate the right copy of Linux that will work best for you.",
+      "summary": "In digital forensics, using a write blocker is crucial to prevent any data from being altered on the disk being imaged, ensuring the integrity of the evidence. In a virtual environment, this may not be feasible, so practitioners should be aware of the limitations. Additionally, Kali Linux offers a live CD version equipped with various forensic tools, making it a valuable resource for setting up a forensic lab.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.5",
+        "title": "Create a Forensic Drive Image with Guymager",
+        "content_type": "video",
+        "filename": "9.3.5_Create_a_Forensic_Drive_Image_with_Guymager_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.5_Create_a_Forensic_Drive_Image_with_Guymager_[video].txt",
+        "word_count": 1131,
+        "has_content": true
+      },
+      "section_header": "Write Blocker and Linux Version",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.5_chunk_3",
+      "content": "I said that Guymager is a GUI tool, but it does need to be run as a Sudo user. There's a shortcut for it under the Application Launcher, so if I go up here, down to Forensics, and then over to Forensic Imaging Tools, I see Guymager. When it launches, it warns me that it needs to be started with root rights in order to perform acquisitions. That's no fun, and but we can get around it. I'll launch it from the terminal. So let's click No, I don't want to continue here. I'll go up here and launch a terminal window. After it loads, I'll type —˜sudo guymager' and press Enter. It prompts me for a password to continue as an admin, so I'll type that in here. Just a reminder, when you type passwords in Linux, the cursor doesn't move, and you think that you're not really typing. This is normal; it's a security feature. Your keyboard isn't broken. I press Enter, Guymager is launched, and now I can acquire images.",
+      "summary": "Guymager is a graphical user interface (GUI) tool used for forensic imaging that requires root privileges to operate effectively. Users can launch it either through the Application Launcher or via the terminal using the command `sudo guymager`, which prompts for an admin password—a security feature in Linux that prevents password visibility. Once initiated, Guymager allows users to acquire digital images for forensic analysis.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.5",
+        "title": "Create a Forensic Drive Image with Guymager",
+        "content_type": "video",
+        "filename": "9.3.5_Create_a_Forensic_Drive_Image_with_Guymager_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.5_Create_a_Forensic_Drive_Image_with_Guymager_[video].txt",
+        "word_count": 1131,
+        "has_content": true
+      },
+      "section_header": "Launch Guymager",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.5_chunk_4",
+      "content": "I'll make this full screen to take advantage of all the space. Right away, I notice I have three disks, or partitions. This first one is my hard drive for my Kali machine. I know that because it's a 20-gig disk, and that's what I used. This second one is what I'm after. I know this is it because it's a 2-gig disk, which I plugged in. To acquire an image, I simply right-click and choose Acquire Image from the menu. Now we have a few choices for the file format. This one is called Expert Witness Format. When we select it, we have the option to fill out all this additional data that would be needed if this was part of a legal investigation. We're not going to pick that one. We're going to pick the Linux dd raw image. This is the format I'm going to use when it's time to examine the image content. Over here, we can split the file into smaller pieces. I have a smaller drive, so I could uncheck that box, but I'll just leave it as-is. Now I need to put the images somewhere. I have a temp folder for these images, and I'll navigate to /home/dana/temp and click Choose to select that directory. I need to supply a filename, so I'll just enter —˜Image1'. The program puts in the extension, so we don't have to do that. Below here, I'm going to make sure this box is checked so that we have the hash value of the image Calculate MD5. We're also going to verify the image after acquisition. Click Start to get the process going. We have a very small drive, so this shouldn't take long. In fact, if you look at the progress, you can see we're moving along very nicely. It looks like it's finished, and the indicator light is green. We're done with this part, so let's verify that it acquired the images and saved. I'll minimize Guymager for now.",
+      "summary": "In this section of the CompTIA Security+ course, learners are guided through the process of acquiring a disk image using the Kali Linux tool Guymager. Key concepts include selecting the appropriate disk, choosing the Linux dd raw image format for analysis, and ensuring data integrity by calculating the MD5 hash during the acquisition. Practical applications involve navigating file directories, naming the image, and verifying successful image acquisition, which are essential skills in digital forensics and incident response.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.5",
+        "title": "Create a Forensic Drive Image with Guymager",
+        "content_type": "video",
+        "filename": "9.3.5_Create_a_Forensic_Drive_Image_with_Guymager_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.5_Create_a_Forensic_Drive_Image_with_Guymager_[video].txt",
+        "word_count": 1131,
+        "has_content": true
+      },
+      "section_header": "Acquire an Image",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.5_chunk_5",
+      "content": "Now let's go up to our Application Launcher and open up File Manager. Remember, we saved the image in a temp directory under /home/dana, and here it is. I'll slide the mouse over and double-click on temp to open it and view the contents. I can see three files. It does look like Guymager broke my file into two, since I checked the box to split files over 2 gigs. The third file is a log file. Let's open up that log and take a look.",
+      "summary": "In this section, learners explore the process of verifying image creation using File Manager to access saved files in a designated temp directory. The content highlights the outcome of using Guymager, which splits large files into manageable segments, and emphasizes the importance of reviewing log files for successful image creation. This practical application reinforces key concepts in digital forensics and data integrity verification.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.5",
+        "title": "Create a Forensic Drive Image with Guymager",
+        "content_type": "video",
+        "filename": "9.3.5_Create_a_Forensic_Drive_Image_with_Guymager_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.5_Create_a_Forensic_Drive_Image_with_Guymager_[video].txt",
+        "word_count": 1131,
+        "has_content": true
+      },
+      "section_header": "Verify Image Creation",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.5_chunk_6",
+      "content": "My log file has some info about Guymager itself--the version, timestamp, and so on. I'll scroll down here a little ways. Now I see some information about disk size and other data. I want to go down a little farther, to here. This is more relevant information about the acquisition of the disk. I have the device name, /dev/sda, and the size, format, and so on. Down here, I can see the MD5 hash calculation. Finally, here, we can see when the image was captured, how long it took, and the speed. At the very bottom, we can see the three files that were created when we ran the program. At this point, our disk is captured. The next step is to examine the contents with another forensic software tool designed to do so.",
+      "summary": "The log file provides crucial details about the disk acquisition process, including device name, size, format, and the MD5 hash for integrity verification. It also records the timestamp of the image capture, duration, and speed of the operation, along with the files generated during the process. This information is essential for forensic analysis, as it lays the groundwork for further examination using specialized software tools.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.5",
+        "title": "Create a Forensic Drive Image with Guymager",
+        "content_type": "video",
+        "filename": "9.3.5_Create_a_Forensic_Drive_Image_with_Guymager_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.5_Create_a_Forensic_Drive_Image_with_Guymager_[video].txt",
+        "word_count": 1131,
+        "has_content": true
+      },
+      "section_header": "Log File",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.5_chunk_7",
+      "content": "That's it for this demo. In this demo, we used Guymager to capture a drive.",
+      "summary": "In this demo, Guymager, a forensic imaging tool, was utilized to capture a drive, highlighting its practical application in digital forensics. This process is essential for preserving data integrity during investigations, ensuring that evidence remains unaltered. Understanding such tools is crucial for cybersecurity professionals to effectively manage and analyze digital evidence.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.5",
+        "title": "Create a Forensic Drive Image with Guymager",
+        "content_type": "video",
+        "filename": "9.3.5_Create_a_Forensic_Drive_Image_with_Guymager_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.5_Create_a_Forensic_Drive_Image_with_Guymager_[video].txt",
+        "word_count": 1131,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 7
+}

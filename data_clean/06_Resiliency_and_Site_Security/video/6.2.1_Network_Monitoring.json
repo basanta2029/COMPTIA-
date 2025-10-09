@@ -1,0 +1,254 @@
+{
+  "metadata": {
+    "chapter_num": "6",
+    "section_num": "6.2.1",
+    "title": "Network Monitoring",
+    "content_type": "video",
+    "filename": "6.2.1_Network_Monitoring_[video].txt",
+    "file_path": "data_raw/06_Resiliency_and_Site_Security/6.2.1_Network_Monitoring_[video].txt",
+    "word_count": 1067,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script Keeping an eye on the type of traffic that flows across your network helps you to better understand what's going on in your system. If you know your network and constantly monitor it, you can catch attackers before they do any significant damage. In this lesson, we'll look at some common network monitoring tools and how they can be used. One of the more common network tests is a connection test. The command line utility named ping is the easiest way to do this. The ping utility sends an ICMP packet from our computer to another device on our network and waits for a response. If we get a response, the device is connected and active. If there's no response, it means the device could be offline or something is blocking the reply packets, and we need to figure out why. Ping is used in pretty much all operating systems. Traceroute is a tool that allows us to see the path that a packet takes. Every device the packet travels through to its destination is known as a hop. The traceroute utility helps us determine if there's a specific device in our network that's down and causing problems for us. Traceroute is the command used in Linux and tracert is the command for Windows. The Linux version defaults to sending UDP packets and Windows uses ICMP packets. Other than that, these tools do exactly the same thing. Pathping is a Windows command line tool that essentially combines the ping and tracert tools. The pathping utility sends ICMP packets to check connectivity, but it also gives us information such as latency and packet loss about each and every hop a packet takes. We can also use pathping to see if certain router connections are dropping packets before they reach their desired destination. The netstat command shows us all sorts of network statistics. When we run this command, we receive a snapshot of our TCP connections, which ports they're connected to, the programs that are using those connections, and other statistics. We can use this information to monitor our traffic and make sure that our computer isn't connected to places it shouldn't be. The route command is used in both Linux and Windows to show us our routing table and to allow us to make manual changes to it. Routers use the routing table to determine where to send packets. If there's an issue with the routing table, the route command can help us find it and make the necessary changes. The arp command is another command used in basically all operating systems. ARP stands for Address Resolution Protocol, and its purpose is to match IP addresses to MAC addresses. The arp command allows us to view and modify the ARP table entries on our local computer. We can use this information to discover and correct any duplicate IP addresses or invalid entries that might cause connection issues. One of the biggest reasons for connectivity issues is an improperly configured Domain Name System, or DNS. DNS is what's responsible for matching IP addresses to website or computer names. If we're running a web server, we absolutely need to make sure that our DNS entries are correct or no one will be able to connect. Even in an internal network, an improperly configured DNS can cause devices to be unable to connect to the server. We use the nslookup command in Windows or the dig command in Linux to view and modify our DNS settings. Another big reason for connectivity issues is the IP configuration on the local computer. To view current information about our local system, we use the ipconfig command in Windows and the ifconfig command in Linux. These commands show us the current IP address, subnet mask, default gateway, and more. We can use this information to correct DHCP issues or static IP configurations. Hping is a security tool that can be used to send ICMP packets as well as TCP, UDP, and RAW IP packets. Aside from simply checking connectivity, hping is used to analyze the target system to gather more information on it. The hping command is primarily designed for Linux but can be installed on Windows as well. Netcat is an extremely powerful security tool that can basically do anything with TCP. Netcat is able to open up a TCP connection between two devices and send UDP packets between them, scan for open ports, and even listen in on connections between individual ports. IP scanners are tools that allow us to scan our entire network in order to find all connected devices and their IP addresses. Depending on the program, these tools pull up basic-to-advanced information such as routes, hostnames, operating systems, and more. Nmap is another powerful network monitoring tool. Nmap is a command line utility, but there is a GUI-based version called Zenmap. We can use nmap to scan an entire network or a specific IP address to discover all sorts of information like open ports, running services, operating system information, and beyond. One thing that makes nmap so powerful is that it can scan with different protocols on individual networks. That'll wrap up this lesson. In this video, we covered a variety of tools and commands we can use to monitor and manage our network. It's important that we know each of these tools and how they're used so that we can pick the best tool for our situation.",
+  "chunks": [
+    {
+      "chunk_id": "6.2.1_chunk_1",
+      "content": "Keeping an eye on the type of traffic that flows across your network helps you to better understand what's going on in your system. If you know your network and constantly monitor it, you can catch attackers before they do any significant damage. In this lesson, we'll look at some common network monitoring tools and how they can be used.",
+      "summary": "Network monitoring is essential for understanding traffic patterns and identifying potential security threats in real-time. This section covers various tools that facilitate effective network monitoring, enabling proactive detection of attacks and minimizing potential damage. By consistently observing network activity, organizations can enhance their security posture and respond swiftly to incidents.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.2.1",
+        "title": "Network Monitoring",
+        "content_type": "video",
+        "filename": "6.2.1_Network_Monitoring_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.2.1_Network_Monitoring_[video].txt",
+        "word_count": 1067,
+        "has_content": true
+      },
+      "section_header": "Network Monitoring",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.2.1_chunk_2",
+      "content": "One of the more common network tests is a connection test. The command line utility named ping is the easiest way to do this. The ping utility sends an ICMP packet from our computer to another device on our network and waits for a response. If we get a response, the device is connected and active. If there's no response, it means the device could be offline or something is blocking the reply packets, and we need to figure out why. Ping is used in pretty much all operating systems.",
+      "summary": "The ping utility is a fundamental network testing tool that uses ICMP packets to check the connectivity between devices on a network. By sending a packet and awaiting a response, it helps determine if a device is active or if there are issues such as offline status or blocked replies. This command-line tool is applicable across all operating systems, making it essential for troubleshooting network connections.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.2.1",
+        "title": "Network Monitoring",
+        "content_type": "video",
+        "filename": "6.2.1_Network_Monitoring_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.2.1_Network_Monitoring_[video].txt",
+        "word_count": 1067,
+        "has_content": true
+      },
+      "section_header": "Ping",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.2.1_chunk_3",
+      "content": "Traceroute is a tool that allows us to see the path that a packet takes. Every device the packet travels through to its destination is known as a hop. The traceroute utility helps us determine if there's a specific device in our network that's down and causing problems for us. Traceroute is the command used in Linux and tracert is the command for Windows. The Linux version defaults to sending UDP packets and Windows uses ICMP packets. Other than that, these tools do exactly the same thing.",
+      "summary": "Traceroute (Linux) and tracert (Windows) are diagnostic tools used to trace the path of packets across a network, identifying each device or \"hop\" the packet encounters. They are essential for troubleshooting network issues by pinpointing where failures occur. While the Linux version typically uses UDP packets, the Windows version relies on ICMP packets, but both serve the same fundamental purpose in network analysis.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.2.1",
+        "title": "Network Monitoring",
+        "content_type": "video",
+        "filename": "6.2.1_Network_Monitoring_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.2.1_Network_Monitoring_[video].txt",
+        "word_count": 1067,
+        "has_content": true
+      },
+      "section_header": "Tracert/Traceroute",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.2.1_chunk_4",
+      "content": "Pathping is a Windows command line tool that essentially combines the ping and tracert tools. The pathping utility sends ICMP packets to check connectivity, but it also gives us information such as latency and packet loss about each and every hop a packet takes. We can also use pathping to see if certain router connections are dropping packets before they reach their desired destination.",
+      "summary": "Pathping is a Windows command line tool that merges the functionalities of ping and tracert, allowing users to assess network connectivity by sending ICMP packets. It provides detailed information on latency and packet loss for each hop along the route to a destination, making it useful for diagnosing issues with router connections that may be dropping packets. This tool is essential for network troubleshooting and performance analysis in cybersecurity.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.2.1",
+        "title": "Network Monitoring",
+        "content_type": "video",
+        "filename": "6.2.1_Network_Monitoring_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.2.1_Network_Monitoring_[video].txt",
+        "word_count": 1067,
+        "has_content": true
+      },
+      "section_header": "Pathping",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.2.1_chunk_5",
+      "content": "The netstat command shows us all sorts of network statistics. When we run this command, we receive a snapshot of our TCP connections, which ports they're connected to, the programs that are using those connections, and other statistics. We can use this information to monitor our traffic and make sure that our computer isn't connected to places it shouldn't be.",
+      "summary": "The netstat command is a valuable tool for displaying network statistics, providing a snapshot of active TCP connections, associated ports, and the programs utilizing those connections. This information is crucial for monitoring network traffic and ensuring that a computer is not connected to unauthorized or suspicious locations. By leveraging netstat, users can enhance their network security and troubleshoot connectivity issues effectively.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.2.1",
+        "title": "Network Monitoring",
+        "content_type": "video",
+        "filename": "6.2.1_Network_Monitoring_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.2.1_Network_Monitoring_[video].txt",
+        "word_count": 1067,
+        "has_content": true
+      },
+      "section_header": "Netstat",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.2.1_chunk_6",
+      "content": "The route command is used in both Linux and Windows to show us our routing table and to allow us to make manual changes to it. Routers use the routing table to determine where to send packets. If there's an issue with the routing table, the route command can help us find it and make the necessary changes.",
+      "summary": "The route command is a critical tool in both Linux and Windows for displaying and modifying the routing table, which routers use to direct packet traffic. Understanding and utilizing this command can help identify and resolve routing issues, ensuring efficient network communication. Practical applications include troubleshooting network connectivity and optimizing routing paths.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.2.1",
+        "title": "Network Monitoring",
+        "content_type": "video",
+        "filename": "6.2.1_Network_Monitoring_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.2.1_Network_Monitoring_[video].txt",
+        "word_count": 1067,
+        "has_content": true
+      },
+      "section_header": "Route",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.2.1_chunk_7",
+      "content": "The arp command is another command used in basically all operating systems. ARP stands for Address Resolution Protocol, and its purpose is to match IP addresses to MAC addresses. The arp command allows us to view and modify the ARP table entries on our local computer. We can use this information to discover and correct any duplicate IP addresses or invalid entries that might cause connection issues.",
+      "summary": "The Address Resolution Protocol (ARP) is essential for mapping IP addresses to MAC addresses in network communications. The arp command enables users to view and modify the local ARP table, which is crucial for identifying and resolving issues such as duplicate IP addresses or invalid entries that can disrupt connectivity. Understanding and managing ARP is vital for maintaining network integrity and troubleshooting connectivity problems.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.2.1",
+        "title": "Network Monitoring",
+        "content_type": "video",
+        "filename": "6.2.1_Network_Monitoring_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.2.1_Network_Monitoring_[video].txt",
+        "word_count": 1067,
+        "has_content": true
+      },
+      "section_header": "ARP",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.2.1_chunk_8",
+      "content": "One of the biggest reasons for connectivity issues is an improperly configured Domain Name System, or DNS. DNS is what's responsible for matching IP addresses to website or computer names. If we're running a web server, we absolutely need to make sure that our DNS entries are correct or no one will be able to connect. Even in an internal network, an improperly configured DNS can cause devices to be unable to connect to the server. We use the nslookup command in Windows or the dig command in Linux to view and modify our DNS settings.",
+      "summary": "The Nslookup and Dig commands are essential tools for troubleshooting connectivity issues related to the Domain Name System (DNS), which links IP addresses to domain names. Proper DNS configuration is critical for ensuring that web servers and internal network devices can connect effectively. By using nslookup in Windows or dig in Linux, users can view and modify DNS settings to resolve connectivity problems.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.2.1",
+        "title": "Network Monitoring",
+        "content_type": "video",
+        "filename": "6.2.1_Network_Monitoring_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.2.1_Network_Monitoring_[video].txt",
+        "word_count": 1067,
+        "has_content": true
+      },
+      "section_header": "Nslookup/Dig",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.2.1_chunk_9",
+      "content": "Another big reason for connectivity issues is the IP configuration on the local computer. To view current information about our local system, we use the ipconfig command in Windows and the ifconfig command in Linux. These commands show us the current IP address, subnet mask, default gateway, and more. We can use this information to correct DHCP issues or static IP configurations.",
+      "summary": "The ipconfig (Windows) and ifconfig (Linux) commands are essential tools for diagnosing connectivity issues by displaying critical IP configuration details such as the IP address, subnet mask, and default gateway. Understanding this information helps troubleshoot DHCP problems and manage static IP configurations effectively. Mastery of these commands is vital for network security professionals to ensure proper network connectivity and configuration.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.2.1",
+        "title": "Network Monitoring",
+        "content_type": "video",
+        "filename": "6.2.1_Network_Monitoring_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.2.1_Network_Monitoring_[video].txt",
+        "word_count": 1067,
+        "has_content": true
+      },
+      "section_header": "Ipconfig/Ifconfig",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.2.1_chunk_10",
+      "content": "Hping is a security tool that can be used to send ICMP packets as well as TCP, UDP, and RAW IP packets. Aside from simply checking connectivity, hping is used to analyze the target system to gather more information on it. The hping command is primarily designed for Linux but can be installed on Windows as well.",
+      "summary": "Hping is a versatile security tool that enables users to send various types of packets, including ICMP, TCP, UDP, and RAW IP, primarily for network analysis and connectivity checks. It is commonly used to gather information about target systems, making it valuable for penetration testing and security assessments. While primarily designed for Linux, Hping can also be installed on Windows systems, enhancing its accessibility for security professionals.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.2.1",
+        "title": "Network Monitoring",
+        "content_type": "video",
+        "filename": "6.2.1_Network_Monitoring_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.2.1_Network_Monitoring_[video].txt",
+        "word_count": 1067,
+        "has_content": true
+      },
+      "section_header": "Hping",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.2.1_chunk_11",
+      "content": "Netcat is an extremely powerful security tool that can basically do anything with TCP. Netcat is able to open up a TCP connection between two devices and send UDP packets between them, scan for open ports, and even listen in on connections between individual ports.",
+      "summary": "Netcat is a versatile security tool used for establishing TCP connections and facilitating communication between devices. It enables users to send UDP packets, scan for open ports, and monitor traffic on specific ports, making it invaluable for network diagnostics and security assessments. Its flexibility allows for a wide range of practical applications in cybersecurity, including penetration testing and network troubleshooting.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.2.1",
+        "title": "Network Monitoring",
+        "content_type": "video",
+        "filename": "6.2.1_Network_Monitoring_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.2.1_Network_Monitoring_[video].txt",
+        "word_count": 1067,
+        "has_content": true
+      },
+      "section_header": "Netcat",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.2.1_chunk_12",
+      "content": "IP scanners are tools that allow us to scan our entire network in order to find all connected devices and their IP addresses. Depending on the program, these tools pull up basic-to-advanced information such as routes, hostnames, operating systems, and more.",
+      "summary": "IP scanners are essential tools in cybersecurity that enable the identification of all devices connected to a network by scanning for their IP addresses. These tools can provide a range of information, from basic details like hostnames to more advanced data such as operating systems and network routes, facilitating network management and security assessments. Their practical applications include inventory management, vulnerability assessments, and network troubleshooting.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.2.1",
+        "title": "Network Monitoring",
+        "content_type": "video",
+        "filename": "6.2.1_Network_Monitoring_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.2.1_Network_Monitoring_[video].txt",
+        "word_count": 1067,
+        "has_content": true
+      },
+      "section_header": "IP Scanners",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.2.1_chunk_13",
+      "content": "Nmap is another powerful network monitoring tool. Nmap is a command line utility, but there is a GUI-based version called Zenmap. We can use nmap to scan an entire network or a specific IP address to discover all sorts of information like open ports, running services, operating system information, and beyond. One thing that makes nmap so powerful is that it can scan with different protocols on individual networks.",
+      "summary": "Nmap is a versatile network monitoring tool used for scanning networks or specific IP addresses to gather information such as open ports, running services, and operating system details. While primarily a command line utility, it also offers a graphical interface through Zenmap. Its ability to utilize various protocols for scanning enhances its effectiveness in network security assessments.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.2.1",
+        "title": "Network Monitoring",
+        "content_type": "video",
+        "filename": "6.2.1_Network_Monitoring_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.2.1_Network_Monitoring_[video].txt",
+        "word_count": 1067,
+        "has_content": true
+      },
+      "section_header": "Nmap",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.2.1_chunk_14",
+      "content": "That'll wrap up this lesson. In this video, we covered a variety of tools and commands we can use to monitor and manage our network. It's important that we know each of these tools and how they're used so that we can pick the best tool for our situation.",
+      "summary": "In this lesson, we explored various tools and commands essential for effective network monitoring and management. Understanding the functionalities of these tools enables us to select the most appropriate one for specific security scenarios, enhancing our overall cybersecurity posture. Practical application of these tools is crucial for maintaining network integrity and responding to potential threats.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.2.1",
+        "title": "Network Monitoring",
+        "content_type": "video",
+        "filename": "6.2.1_Network_Monitoring_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.2.1_Network_Monitoring_[video].txt",
+        "word_count": 1067,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 14
+}

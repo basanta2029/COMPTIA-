@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "chapter_num": "8",
+    "section_num": "8.6.2",
+    "title": "Wireless Security Facts",
+    "content_type": "text",
+    "filename": "8.6.2_Wireless_Security_Facts_[text].txt",
+    "file_path": "data_raw/08_Network_and_Endpoint_Security/8.6.2_Wireless_Security_Facts_[text].txt",
+    "word_count": 779,
+    "has_content": true
+  },
+  "full_content": "Security Pro 8.0 Wireless networking uses radio frequencies to transmit data. This means anyone with a wireless receiver can capture data from an improperly secured network. Weak configurations Cryptographic protocols Weak Configurations Proper configuration of a wireless access point (WAP) is the first step in securing the network. The following table explains some important actions to take regarding WAP settings. Security Configuration Action Description Change default login credentials\tWAPs typically come configured with a default administrator username and password. Because the administrator username and password are used to configure WAP settings, it's important to reset the defaults. This prevents outsiders from guessing the default username and password and breaking into the system. Change default service set identification (SSID) and broadcast The SSID can be a maximum of 32 bytes in length. Since many manufacturers use a default SSID, it's important to change the SSID from the default. The SSID should be unique but should not contain identifiable information (address, last name, etc.). The SSID broadcast can also be disabled. This is known as SSID suppression or cloaking. A determined hacker can still easily discover hidden SSIDs. Disabling the SSID broadcast can cause connection issues for devices. Enable MAC address filtering Every network device has a unique media access control (MAC) address. By specifying the MAC addresses allowed to connect to the network, unauthorized MAC addresses can be prevented from connecting to the WAP. Configuring a MAC address filtering system is very time-consuming and demands upkeep. Attackers can still use tools to capture packets and retrieve valid MAC addresses. An attacker can spoof a wireless adapter's MAC address and circumvent the filter. Update the firmware Manufacturers release updates to the firmware on a regular basis to address known issues. It is important to regularly check for updates and apply them to prevent the system from being exposed to known bugs and security vulnerabilities. While it is extremely important to keep devices up-to-date, it's just as important to properly test new updates before pushing them out to the entire network. Proper testing will reduce the number of new bugs or problems on a live network that the update may have introduced. Enable the WAP firewall\tMost wireless APs come with a built-in firewall that connects the wireless network to a wired network. This should be enabled to help prevent unauthorized access to the network. Wi-Fi signal strength Data emanation is a significant security problem. By default, the radio signals used by a wireless network are broadcast omnidirectional and can travel quite a distance from the WAP. An attacker sitting outside the building may be able to connect to the wireless network if the signal is traveling outside. This can be limited by manipulating the WAP antenna placement. Some WAPs also allow the signal strength to be adjusted. These settings reduce the signal strength, so the signal stays inside the building. Cryptographic Protocols Enabling the proper cryptographic protocol is perhaps the most important way to secure a wireless network. For most users, Wi-Fi Protected Access (WPA) versions 2 or 3 will be the best option. The following table explains these two protocols: Cryptographic Protocol Description Wi-Fi Protected Access 2 WPA2 is the implementation name for wireless security that adheres to the 802.11i specifications. It was first introduced in 2004 and is still heavily used in today's networks. There are two versions of WPA2 available: WPA2-Personal is also known as WPA2-PSK (pre-shared key). This version uses a pre-shared key, or passphrase, to protect the network. WPA2-PSK: Uses Advanced Encryption Standard with Counter Mode with Cipher Block Chaining Message Authentication Code Protocol (AES-CCMP)as the encryption algorithm to encrypt all data. AES-CCMP uses a 128-bit key and a 128-bit block size. Performs a 4-way handshake to authenticate the device when it connects to the access point. The pre-shared key and SSID are used to generate a session key during this process. The handshake does have some vulnerabilities that allow a hacker to intercept data and perform offline password attacks. WPA2-Enterprise uses a RADIUS server to authenticate users to the network. Wi-Fi Protected Access 3 To support the vulnerabilities inherent in the WPA2 handshake and to support newer technologies, WPA3 was implemented. First introduced in 2018, WPA3 implements the Simultaneous Authentication of Equals (SAE) standard instead of using the pre-shared key. SAE uses a 128-bit key and Perfect Forward Secrecy (PFS) to authenticate users. Perfect forward secrecy is a cryptography method that generates a new key for every transmission. This makes the handshake much more secure from hackers. If any portion of the handshake is intercepted, the key is still uncrackable.",
+  "chunks": [
+    {
+      "chunk_id": "8.6.2_chunk_1",
+      "content": "Security Pro 8.0",
+      "summary": "The CompTIA Security+ course, Security Pro 8.0, introduces fundamental cybersecurity concepts, including risk management, threat identification, and security architecture. Key topics cover network security, compliance, operational security, and incident response, equipping learners with practical skills to protect organizational assets. The course emphasizes real-world applications, preparing participants for various security challenges in diverse environments.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.6.2",
+        "title": "Wireless Security Facts",
+        "content_type": "text",
+        "filename": "8.6.2_Wireless_Security_Facts_[text].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.6.2_Wireless_Security_Facts_[text].txt",
+        "word_count": 779,
+        "has_content": true
+      },
+      "section_header": "Introduction",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "8.6.2_chunk_2",
+      "content": "Wireless networking uses radio frequencies to transmit data. This means anyone with a wireless receiver can capture data from an improperly secured network.",
+      "summary": "Wireless networking relies on radio frequencies for data transmission, making it vulnerable to interception by anyone with a wireless receiver if not properly secured. Key security concepts include the importance of implementing strong encryption protocols and securing access points to protect sensitive information. Practical applications involve configuring wireless networks with robust security measures, such as WPA3, to mitigate risks associated with unauthorized data access.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.6.2",
+        "title": "Wireless Security Facts",
+        "content_type": "text",
+        "filename": "8.6.2_Wireless_Security_Facts_[text].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.6.2_Wireless_Security_Facts_[text].txt",
+        "word_count": 779,
+        "has_content": true
+      },
+      "section_header": "8.6.2 Wireless Security Facts",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "8.6.2_chunk_3",
+      "content": "Weak configurations Cryptographic protocols Weak Configurations Proper configuration of a wireless access point (WAP) is the first step in securing the network. The following table explains some important actions to take regarding WAP settings. Security Configuration Action Description Change default login credentials\tWAPs typically come configured with a default administrator username and password. Because the administrator username and password are used to configure WAP settings, it's important to reset the defaults. This prevents outsiders from guessing the default username and password and breaking into the system. Change default service set identification (SSID) and broadcast The SSID can be a maximum of 32 bytes in length. Since many manufacturers use a default SSID, it's important to change the SSID from the default. The SSID should be unique but should not contain identifiable information (address, last name, etc.). The SSID broadcast can also be disabled. This is known as SSID suppression or cloaking.",
+      "summary": "This lesson emphasizes the importance of securing wireless access points (WAPs) through proper configurations to mitigate vulnerabilities. Key actions include changing default login credentials and modifying the default service set identification (SSID) to enhance security, as these measures prevent unauthorized access and improve network integrity. Additionally, disabling SSID broadcasting can further obscure the network from potential attackers.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.6.2",
+        "title": "Wireless Security Facts",
+        "content_type": "text",
+        "filename": "8.6.2_Wireless_Security_Facts_[text].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.6.2_Wireless_Security_Facts_[text].txt",
+        "word_count": 779,
+        "has_content": true
+      },
+      "section_header": "This lesson covers the following topics:",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "8.6.2_chunk_4",
+      "content": "A determined hacker can still easily discover hidden SSIDs. Disabling the SSID broadcast can cause connection issues for devices. Enable MAC address filtering Every network device has a unique media access control (MAC) address. By specifying the MAC addresses allowed to connect to the network, unauthorized MAC addresses can be prevented from connecting to the WAP. Configuring a MAC address filtering system is very time-consuming and demands upkeep.",
+      "summary": "Disabling SSID broadcast may enhance security but can lead to connectivity issues for legitimate devices. Implementing MAC address filtering helps restrict network access to specified devices by their unique MAC addresses, though it requires significant time and ongoing maintenance to manage effectively. These practices illustrate the balance between security measures and usability in network management.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.6.2",
+        "title": "Wireless Security Facts",
+        "content_type": "text",
+        "filename": "8.6.2_Wireless_Security_Facts_[text].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.6.2_Wireless_Security_Facts_[text].txt",
+        "word_count": 779,
+        "has_content": true
+      },
+      "section_header": "Note:",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "8.6.2_chunk_5",
+      "content": "Attackers can still use tools to capture packets and retrieve valid MAC addresses. An attacker can spoof a wireless adapter's MAC address and circumvent the filter. Update the firmware Manufacturers release updates to the firmware on a regular basis to address known issues. It is important to regularly check for updates and apply them to prevent the system from being exposed to known bugs and security vulnerabilities.",
+      "summary": "Attackers can exploit vulnerabilities by capturing packets and spoofing MAC addresses, which can bypass security filters. Regularly updating firmware is crucial, as manufacturers release updates to fix known issues and mitigate security risks, helping to protect systems from potential exploits. Staying vigilant with firmware updates is essential for maintaining robust cybersecurity defenses.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.6.2",
+        "title": "Wireless Security Facts",
+        "content_type": "text",
+        "filename": "8.6.2_Wireless_Security_Facts_[text].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.6.2_Wireless_Security_Facts_[text].txt",
+        "word_count": 779,
+        "has_content": true
+      },
+      "section_header": "Note:",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "8.6.2_chunk_6",
+      "content": "While it is extremely important to keep devices up-to-date, it's just as important to properly test new updates before pushing them out to the entire network. Proper testing will reduce the number of new bugs or problems on a live network that the update may have introduced. Enable the WAP firewall\tMost wireless APs come with a built-in firewall that connects the wireless network to a wired network. This should be enabled to help prevent unauthorized access to the network. Wi-Fi signal strength Data emanation is a significant security problem. By default, the radio signals used by a wireless network are broadcast omnidirectional and can travel quite a distance from the WAP. An attacker sitting outside the building may be able to connect to the wireless network if the signal is traveling outside. This can be limited by manipulating the WAP antenna placement. Some WAPs also allow the signal strength to be adjusted. These settings reduce the signal strength, so the signal stays inside the building. Cryptographic Protocols Enabling the proper cryptographic protocol is perhaps the most important way to secure a wireless network. For most users, Wi-Fi Protected Access (WPA) versions 2 or 3 will be the best option. The following table explains these two protocols: Cryptographic Protocol Description Wi-Fi Protected Access 2",
+      "summary": "Keeping devices updated is crucial, but testing updates before deployment is essential to avoid introducing new issues into the network. Enabling the built-in firewall on wireless access points (WAPs) helps prevent unauthorized access, while managing Wi-Fi signal strength can mitigate risks from data emanation. Additionally, utilizing robust cryptographic protocols like Wi-Fi Protected Access (WPA) versions 2 or 3 is vital for securing wireless networks.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.6.2",
+        "title": "Wireless Security Facts",
+        "content_type": "text",
+        "filename": "8.6.2_Wireless_Security_Facts_[text].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.6.2_Wireless_Security_Facts_[text].txt",
+        "word_count": 779,
+        "has_content": true
+      },
+      "section_header": "Note:",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "8.6.2_chunk_7",
+      "content": "WPA2 is the implementation name for wireless security that adheres to the 802.11i specifications. It was first introduced in 2004 and is still heavily used in today's networks. There are two versions of WPA2 available: WPA2-Personal is also known as WPA2-PSK (pre-shared key). This version uses a pre-shared key, or passphrase, to protect the network. WPA2-PSK: Uses Advanced Encryption Standard with Counter Mode with Cipher Block Chaining Message Authentication Code Protocol (AES-CCMP)as the encryption algorithm to encrypt all data. AES-CCMP uses a 128-bit key and a 128-bit block size. Performs a 4-way handshake to authenticate the device when it connects to the access point. The pre-shared key and SSID are used to generate a session key during this process. The handshake does have some vulnerabilities that allow a hacker to intercept data and perform offline password attacks. WPA2-Enterprise uses a RADIUS server to authenticate users to the network. Wi-Fi Protected Access 3",
+      "summary": "WPA2 is a wireless security protocol based on the 802.11i standards, introduced in 2004, and widely used in modern networks. It has two versions: WPA2-Personal (WPA2-PSK), which employs a pre-shared key and AES-CCMP encryption, and WPA2-Enterprise, which utilizes a RADIUS server for user authentication. While WPA2 provides robust security, it is susceptible to certain vulnerabilities during the 4-way handshake process, necessitating awareness of potential offline password attacks.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.6.2",
+        "title": "Wireless Security Facts",
+        "content_type": "text",
+        "filename": "8.6.2_Wireless_Security_Facts_[text].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.6.2_Wireless_Security_Facts_[text].txt",
+        "word_count": 779,
+        "has_content": true
+      },
+      "section_header": "(WPA2)",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "8.6.2_chunk_8",
+      "content": "To support the vulnerabilities inherent in the WPA2 handshake and to support newer technologies, WPA3 was implemented. First introduced in 2018, WPA3 implements the Simultaneous Authentication of Equals (SAE) standard instead of using the pre-shared key. SAE uses a 128-bit key and Perfect Forward Secrecy (PFS) to authenticate users. Perfect forward secrecy is a cryptography method that generates a new key for every transmission. This makes the handshake much more secure from hackers. If any portion of the handshake is intercepted, the key is still uncrackable.",
+      "summary": "WPA3, introduced in 2018, enhances wireless security by replacing the vulnerable WPA2 handshake with the Simultaneous Authentication of Equals (SAE) standard, which utilizes a 128-bit key and Perfect Forward Secrecy (PFS). This approach generates a unique key for each transmission, significantly increasing security against interception and unauthorized access. As a result, WPA3 provides a more robust authentication process for users and supports newer technologies.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.6.2",
+        "title": "Wireless Security Facts",
+        "content_type": "text",
+        "filename": "8.6.2_Wireless_Security_Facts_[text].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.6.2_Wireless_Security_Facts_[text].txt",
+        "word_count": 779,
+        "has_content": true
+      },
+      "section_header": "(WPA3)",
+      "timestamp_range": null
+    }
+  ],
+  "num_chunks": 8
+}

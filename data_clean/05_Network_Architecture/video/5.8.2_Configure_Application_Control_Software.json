@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "chapter_num": "5",
+    "section_num": "5.8.2",
+    "title": "Configure Application Control Software",
+    "content_type": "video",
+    "filename": "5.8.2_Configure_Application_Control_Software_[video].txt",
+    "file_path": "data_raw/05_Network_Architecture/5.8.2_Configure_Application_Control_Software_[video].txt",
+    "word_count": 1400,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script In this demonstration, we're going to look at application control. Application controls focus on controlling the applications a user at a workstation can access over a network. This is similar to what a firewall does. For example, a packet filtering firewall examines traffic going through it. Based on its rule set, a firewall will block traffic using specific ports or protocols, so you should be able to control application access with a firewall. However, if you have a savvy user trying to access a forbidden application on the internet, the user can reconfigure the session to use a protocol or port that is commonly left open on most network firewalls, for example, port 80. A user could reconfigure a game application blocked by the firewall to use port 80. The packet filtering firewall doesn't examine the contents of the packet, only the protocol--TCP, UDP--and the port. So, a firewall wouldn't block the game traffic redirected to a port that's used for legitimate traffic. Application control software, on the other hand, focuses on the application signature. In much the same way that antivirus software uses signatures to detect viruses on your system, application control software uses application signatures to identify traffic associated with a specific application. It disregards the port number used. In this demonstration, we're going to configure application control software to block specific network applications. To do this, we have our network set up similar to what is shown in this picture here, with user computers accessing the network through a shared switch--some wirelessly, some wired--and ultimately passing through the firewall that also has application control software configured on it, to our router, and then out to the internet. In other words, all traffic passes through here; and as such, the application control software can look at those packets before it allows entry or exit from the network. For this demo, we'll be using the untangle software that includes an application control module. Certain aspects of this program are free. You have to pay for the application control, but you can try it out for free for 14 days. You can click up here to see what applications are currently installed. You can see there's a variety of applications or modules that they have. We have captive portal, which requires, for instance, users to accept a use agreement before getting onto our network; there's a firewall; there are some phishing blockers or virus protection. We're interested in this application control. Even though the application control is up and running and turned on, it's actually not filtering much. Before we can use it, we need to tell it which applications we would like to filter. In order to demonstrate this, before I configure that, I want to show you that I have access on a machine that's within my network. I'm going to switch over to my Windows 10 machine now. My Windows 10 machine is one of these computers over here. Let's go look at it now. As you can see, my Windows 10 machine has access to the internet right now. We can go out and do a Google search on application controllers--or, in this case, a Bing search--and you can see it returns results. Perhaps I want to check Facebook and see what's going on in my life, or I could pull up Skype and start to chat my life away on Skype. You can see that these applications are working. Let's go ahead now and switch back to our application control and enable some rules to prohibit access to these services. We'll come here to the Applications tab, and then we need to go down and find those specific services. You can see there's a wide variety of services that are listed here. I wish there was a better way to search for the particular service that you're wanting to block. For now, we'll have to be content with just scrolling down. Look at the thousands, over 2000 different applications, that you can block. So, I find Facebook here and I'm going to go ahead and block that. I could also flag it so that it ends up in one of my reports. This Tarpit option right here, simply allows the connection to be established, but then the application control 'software untangle' drops the information so that both sides think there's a connection, but no data actually gets through. We blocked Facebook. Let's go ahead and scroll down and block Skype now. There's lots of different Skype services. I'm going to just block them all. You can see that it's fairly granular in what you can do, allow or prohibit. Once you're done, then you need to click the Save button. Unfortunately, the application doesn't scale well, so you'll have to scroll down to get to that Save button. There it is right there. Once you've clicked that Save button, now those applications and those rules will be enforced. Let me now switch back over to my Windows 10 environment and see the impact of those rule changes. Let's go ahead and try to refresh Facebook. You'll notice that nothing works. As we refresh Facebook, you see that the page can't be reached. However, other pages are still accessible, and we can still do our search. Let's go investigate Skype now. You can see here that my contacts are no longer online, and it's having trouble connecting over there. Again, you can get pretty granular on what you want to block and what you want to allow. Let's switch back over to the untangle server now. You can see how effective that was in blocking the traffic. We can go look and it monitors how many sessions are there. Looks like it had 2500 scans and allowed 1700 of those. It flagged 70 different applications, kept track of those. You have kind of a dashboard around what it has done. You can easily turn this on and off by simply clicking right here. And then if we switch back over to our Windows 10, you'll see that all of a sudden I can now access Skype and Facebook. Let's do that. No problem. And if we pull up Skype, you can see that it's back online. Switching back over to our untangle server', let's just look at a couple more things. This first column is just the application signature. You can see the name, the category. This is nice because you can ban whole groups of applications based on the type of category, or the presumed productivity associated with that application, risk associated with it, and then a short description of that. There are others. You can go look at the specific roles, or you can view reports behind this. So, once again, very easy to set up, but very useful in helping to control your environment, and what's going on within your enterprise. That's it for this demonstration. In this demo, we introduced you to application control software. We first talked about what application control software does. We then configured the untangle application control software to block specific traffic--in this case, Skype and Facebook. Then we went to the client system on the internal network and we tried to access a forbidden application and it was blocked.",
+  "chunks": [
+    {
+      "chunk_id": "5.8.2_chunk_1",
+      "content": "In this demonstration, we're going to look at application control. Application controls focus on controlling the applications a user at a workstation can access over a network. This is similar to what a firewall does. For example, a packet filtering firewall examines traffic going through it. Based on its rule set, a firewall will block traffic using specific ports or protocols, so you should be able to control application access with a firewall. However, if you have a savvy user trying to access a forbidden application on the internet, the user can reconfigure the session to use a protocol or port that is commonly left open on most network firewalls, for example, port 80. A user could reconfigure a game application blocked by the firewall to use port 80. The packet filtering firewall doesn't examine the contents of the packet, only the protocol--TCP, UDP--and the port. So, a firewall wouldn't block the game traffic redirected to a port that's used for legitimate traffic. Application control software, on the other hand, focuses on the application signature. In much the same way that antivirus software uses signatures to detect viruses on your system, application control software uses application signatures to identify traffic associated with a specific application. It disregards the port number used.",
+      "summary": "Application control is a security measure that regulates the applications accessible to users on a network, similar to how firewalls manage traffic based on ports and protocols. Unlike packet filtering firewalls, which can be bypassed by savvy users reconfiguring applications to use open ports, application control software identifies and restricts traffic based on application signatures, ensuring that unauthorized applications cannot be accessed regardless of the port used. This approach enhances network security by focusing on the specific applications rather than just the protocols.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.8.2",
+        "title": "Configure Application Control Software",
+        "content_type": "video",
+        "filename": "5.8.2_Configure_Application_Control_Software_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.8.2_Configure_Application_Control_Software_[video].txt",
+        "word_count": 1400,
+        "has_content": true
+      },
+      "section_header": "Application Control",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "5.8.2_chunk_2",
+      "content": "In this demonstration, we're going to configure application control software to block specific network applications. To do this, we have our network set up similar to what is shown in this picture here, with user computers accessing the network through a shared switch--some wirelessly, some wired--and ultimately passing through the firewall that also has application control software configured on it, to our router, and then out to the internet. In other words, all traffic passes through here; and as such, the application control software can look at those packets before it allows entry or exit from the network. For this demo, we'll be using the untangle software that includes an application control module. Certain aspects of this program are free. You have to pay for the application control, but you can try it out for free for 14 days. You can click up here to see what applications are currently installed. You can see there's a variety of applications or modules that they have. We have captive portal, which requires, for instance, users to accept a use agreement before getting onto our network; there's a firewall; there are some phishing blockers or virus protection. We're interested in this application control. Even though the application control is up and running and turned on, it's actually not filtering much. Before we can use it, we need to tell it which applications we would like to filter.",
+      "summary": "This section covers the configuration of application control software to manage and block specific network applications, utilizing a network setup that includes user computers, a shared switch, and a firewall with integrated application control. The demonstration features Untangle software, which offers a trial period for its application control module, allowing users to filter network traffic effectively. Key functionalities include managing user access through a captive portal and enhancing security with additional modules like phishing blockers and virus protection.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.8.2",
+        "title": "Configure Application Control Software",
+        "content_type": "video",
+        "filename": "5.8.2_Configure_Application_Control_Software_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.8.2_Configure_Application_Control_Software_[video].txt",
+        "word_count": 1400,
+        "has_content": true
+      },
+      "section_header": "Configuring Application Control",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "5.8.2_chunk_3",
+      "content": "In order to demonstrate this, before I configure that, I want to show you that I have access on a machine that's within my network. I'm going to switch over to my Windows 10 machine now. My Windows 10 machine is one of these computers over here. Let's go look at it now. As you can see, my Windows 10 machine has access to the internet right now. We can go out and do a Google search on application controllers--or, in this case, a Bing search--and you can see it returns results. Perhaps I want to check Facebook and see what's going on in my life, or I could pull up Skype and start to chat my life away on Skype. You can see that these applications are working. Let's go ahead now and switch back to our application control and enable some rules to prohibit access to these services. We'll come here to the Applications tab, and then we need to go down and find those specific services. You can see there's a wide variety of services that are listed here. I wish there was a better way to search for the particular service that you're wanting to block. For now, we'll have to be content with just scrolling down. Look at the thousands, over 2000 different applications, that you can block. So, I find Facebook here and I'm going to go ahead and block that. I could also flag it so that it ends up in one of my reports. This Tarpit option right here, simply allows the connection to be established, but then the application control 'software untangle' drops the information so that both sides think there's a connection, but no data actually gets through. We blocked Facebook. Let's go ahead and scroll down and block Skype now. There's lots of different Skype services. I'm going to just block them all. You can see that it's fairly granular in what you can do, allow or prohibit. Once you're done, then you need to click the Save button. Unfortunately, the application doesn't scale well, so you'll have to scroll down to get to that Save button. There it is right there. Once you've clicked that Save button, now those applications and those rules will be enforced. Let me now switch back over to my Windows 10 environment and see the impact of those rule changes. Let's go ahead and try to refresh Facebook. You'll notice that nothing works. As we refresh Facebook, you see that the page can't be reached. However, other pages are still accessible, and we can still do our search. Let's go investigate Skype now. You can see here that my contacts are no longer online, and it's having trouble connecting over there. Again, you can get pretty granular on what you want to block and what you want to allow. Let's switch back over to the untangle server now. You can see how effective that was in blocking the traffic.",
+      "summary": "This section of the CompTIA Security+ course focuses on application control, demonstrating how to block specific applications like Facebook and Skype on a network. By configuring rules within an application control system, users can selectively prohibit access to certain services while allowing others, showcasing practical applications of network security management. The session emphasizes the importance of granular control in maintaining security while still enabling necessary internet access.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.8.2",
+        "title": "Configure Application Control Software",
+        "content_type": "video",
+        "filename": "5.8.2_Configure_Application_Control_Software_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.8.2_Configure_Application_Control_Software_[video].txt",
+        "word_count": 1400,
+        "has_content": true
+      },
+      "section_header": "Blocking Applications",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "5.8.2_chunk_4",
+      "content": "We can go look and it monitors how many sessions are there. Looks like it had 2500 scans and allowed 1700 of those. It flagged 70 different applications, kept track of those. You have kind of a dashboard around what it has done. You can easily turn this on and off by simply clicking right here. And then if we switch back over to our Windows 10, you'll see that all of a sudden I can now access Skype and Facebook. Let's do that. No problem. And if we pull up Skype, you can see that it's back online. Switching back over to our untangle server', let's just look at a couple more things. This first column is just the application signature. You can see the name, the category. This is nice because you can ban whole groups of applications based on the type of category, or the presumed productivity associated with that application, risk associated with it, and then a short description of that. There are others. You can go look at the specific roles, or you can view reports behind this. So, once again, very easy to set up, but very useful in helping to control your environment, and what's going on within your enterprise.",
+      "summary": "The section on reviewing results highlights the importance of monitoring application usage within a network environment, showcasing a dashboard that tracks scans, allowed sessions, and flagged applications. Users can easily manage application access by enabling or disabling specific applications based on their risk and productivity categories. This practical application aids in maintaining control over the enterprise's security posture by allowing administrators to enforce policies and generate reports on application activity.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.8.2",
+        "title": "Configure Application Control Software",
+        "content_type": "video",
+        "filename": "5.8.2_Configure_Application_Control_Software_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.8.2_Configure_Application_Control_Software_[video].txt",
+        "word_count": 1400,
+        "has_content": true
+      },
+      "section_header": "Reviewing results",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "5.8.2_chunk_5",
+      "content": "That's it for this demonstration. In this demo, we introduced you to application control software. We first talked about what application control software does. We then configured the untangle application control software to block specific traffic--in this case, Skype and Facebook. Then we went to the client system on the internal network and we tried to access a forbidden application and it was blocked.",
+      "summary": "This demonstration covered the functionality of application control software, highlighting its role in managing and restricting access to specific applications. The session included a practical configuration of Untangle application control software to block traffic from Skype and Facebook, followed by a test on a client system that confirmed the successful blocking of these applications. This illustrates the importance of application control in enhancing network security by preventing unauthorized access to potentially harmful or distracting applications.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.8.2",
+        "title": "Configure Application Control Software",
+        "content_type": "video",
+        "filename": "5.8.2_Configure_Application_Control_Software_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.8.2_Configure_Application_Control_Software_[video].txt",
+        "word_count": 1400,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 5
+}

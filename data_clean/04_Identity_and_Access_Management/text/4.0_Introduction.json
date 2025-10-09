@@ -14,7 +14,7 @@
     {
       "chunk_id": "4.0_chunk_1",
       "content": "Security Pro 8.0",
-      "summary": "Security Pro 8.0 introduces fundamental cybersecurity concepts essential for CompTIA Security+ certification, covering core security principles, threat identification, and risk management frameworks. This foundational chapter establishes critical security terminology and methodologies that security professionals use to protect organizational assets and infrastructure. The content provides actionable knowledge for implementing security controls, understanding attack vectors, and maintaining compliance with industry security standards.",
+      "summary": "The CompTIA Security+ course, Security Pro 8.0, introduces fundamental security concepts essential for protecting information systems. Key topics include risk management, network security, cryptography, and incident response, emphasizing practical applications such as implementing security measures and responding to security breaches. This course equips learners with the knowledge and skills needed to secure networks and data effectively in various environments.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.0",
@@ -31,7 +31,7 @@
     {
       "chunk_id": "4.0_chunk_2",
       "content": "In today's interconnected world, effectively managing user identities and regulating access to resources is fundamental to protecting organizational assets and maintaining compliance. As you progress through this module, you'll explore the essential concepts, technologies, and best practices that organizations use to confirm user identities, control access, and safeguard sensitive information. Whether you're supporting everyday users or administering critical systems, understanding these principles is key to enabling secure, efficient business operations. Throughout this journey, you'll engage with real-world scenarios and practical exercises designed to strengthen your ability to implement access controls across various environments. You'll gain insight into both foundational and advanced topics, from traditional models to modern strategies that respond to today's dynamic threat landscape. Regardless of your current experience level, this module will empower you to make informed decisions and contribute confidently to your organization's security posture.",
-      "summary": "Identity and Access Management (IAM) encompasses the security practices and technologies used to verify user identities, control resource access, and protect organizational assets from unauthorized access. This module covers foundational and advanced IAM concepts including authentication methods, access control models, and implementation strategies across various environments to maintain security compliance. Students will learn to implement practical access controls and make informed security decisions that strengthen organizational security posture against modern threats.",
+      "summary": "The Identity and Access Management section of the CompTIA Security+ course emphasizes the importance of managing user identities and access to protect organizational assets and ensure compliance. It covers essential concepts, technologies, and best practices for confirming user identities and implementing access controls, using real-world scenarios and practical exercises to enhance understanding. Participants will learn both foundational and advanced strategies to navigate the evolving threat landscape, empowering them to make informed security decisions within their organizations.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.0",
@@ -48,7 +48,7 @@
     {
       "chunk_id": "4.0_chunk_3",
       "content": "Compare and contrast different access control models and explain their use cases. Identify techniques and technologies for authentication, including methods for strengthening user credential security. Explain authorization practices, including how permissions and policies govern access to resources. Describe how directory services such as Active Directory and Linux-based systems manage users and groups. Assess methods for enabling secure remote access and network authentication in distributed environments.",
-      "summary": "This module covers identity and access management fundamentals, including comparing access control models (MAC, DAC, RBAC), implementing multi-factor authentication and credential security techniques, and configuring authorization through permissions and policies. Students will learn to manage users and groups in directory services like Active Directory and Linux systems, while assessing secure remote access methods and network authentication protocols for distributed environments.",
+      "summary": "This module covers various access control models, highlighting their use cases and differences. It delves into authentication techniques to enhance user credential security, explores authorization practices that dictate resource access through permissions and policies, and discusses the management of users and groups via directory services like Active Directory and Linux systems. Additionally, it assesses secure remote access methods and network authentication in distributed environments, emphasizing practical applications in cybersecurity.",
       "metadata": {
         "chapter_num": "4",
         "section_num": "4.0",
@@ -63,6 +63,5 @@
       "timestamp_range": null
     }
   ],
-  "num_chunks": 3,
-  "document_summary": "Introduction (chapter_intro): 0 In today's interconnected world, effectively managing user identities and regulating access to resources is fundamental to protecting organizational assets and maintaining compliance. As you progress through this module, you'll explore the essential concepts, technologies, and best practices that organizations use to confirm user identities, control access, and safeguard sensitive information. Assess methods for enabling secure remote access and network authentication in distributed environments."
+  "num_chunks": 3
 }

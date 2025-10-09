@@ -1,0 +1,13 @@
+Security Pro 8.0
+
+13.0 Data Protection and Compliance
+
+This module is designed to equip you with a foundational understanding of best practices and regulatory requirements that protect sensitive information in today's digital landscape. As a professional navigating modern workplaces, you will encounter various types of data that require careful management—not only to safeguard privacy and security but also to maintain organizational trust and comply with global legal standards. Throughout this course, you will gain practical knowledge and skills that will empower you to confidently handle these responsibilities, regardless of your specific role or industry.
+
+You will explore key concepts such as how to appropriately classify information and understand the importance of compliance frameworks. In addition, you'll examine the impact of personnel policies and the crucial role that employees play in ensuring that data remains protected. By the end of this module, you will not only recognize the responsibilities associated with data protection, but also be ready to apply practical strategies that contribute to overall organizational resilience and adherence to compliance obligations.
+In this module, you will:
+Identify types of sensitive information and understand their classification.
+Recognize the key requirements of major data protection and compliance regulations.
+Explore best practices for handling, storing, and sharing sensitive data.
+Evaluate how personnel policies can impact an organization's data protection efforts.
+Apply compliance-focused decision-making in scenarios likely to arise in your workplace.

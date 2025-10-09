@@ -14,7 +14,7 @@
     {
       "chunk_id": "2.0_chunk_1",
       "content": "Security Pro 8.0",
-      "summary": "Security Pro 8.0 introduces fundamental cybersecurity concepts essential for CompTIA Security+ certification, covering core security principles, threat identification, and risk management frameworks. This foundational chapter establishes critical security terminology and baseline knowledge required for implementing effective security controls across enterprise environments. The content provides actionable security fundamentals that form the basis for advanced topics in cryptography, access management, and network protection.",
+      "summary": "The CompTIA Security+ course introduces foundational security concepts essential for protecting information systems and networks. Key topics include risk management, threat detection, incident response, and security architecture, emphasizing practical applications such as implementing security controls and compliance measures. This course equips learners with the skills needed to identify vulnerabilities and safeguard organizational assets against cyber threats.",
       "metadata": {
         "chapter_num": "2",
         "section_num": "2.0",
@@ -31,7 +31,7 @@
     {
       "chunk_id": "2.0_chunk_2",
       "content": "In today's connected world, understanding the risks facing digital information is more important than ever. Throughout this course module, you will investigate how attackers exploit common weaknesses in systems, people, and organizations. By learning how malicious activities are carried out and the methods used to deceive individuals, you’ll strengthen your ability to recognize dangers before they become incidents. This knowledge is foundational for anyone seeking to protect themselves, their workplace, or their community from cyber threats. You will also explore a variety of harmful software types and the ways in which technology can be misused to compromise data. The skills and strategies you learn here will help you not only identify and assess potential vulnerabilities, but also take practical steps to defend against attacks. By the end of the module, you’ll be better equipped to think like an attacker and make informed security decisions—skills needed by all security-minded professionals.",
-      "summary": "This CompTIA Security+ module covers threat identification, vulnerability assessment, and mitigation strategies by teaching students to recognize attack methods, malicious software types, and exploitation techniques targeting systems, people, and organizations. Students learn to think like attackers to identify weaknesses and implement practical defensive measures against cyber threats. The training provides foundational skills for recognizing, assessing, and defending against security incidents before they occur.",
+      "summary": "The CompTIA Security+ course module on Threats, Vulnerabilities, and Mitigations emphasizes the importance of recognizing and understanding the various risks to digital information in a connected world. It covers how attackers exploit weaknesses in systems and human behavior, the types of malicious software, and the misuse of technology, equipping learners with the skills to identify vulnerabilities and implement effective defenses. By fostering an attacker’s mindset, participants enhance their ability to make informed security decisions, essential for protecting themselves and their organizations from cyber threats.",
       "metadata": {
         "chapter_num": "2",
         "section_num": "2.0",
@@ -48,7 +48,7 @@
     {
       "chunk_id": "2.0_chunk_3",
       "content": "Identify and explain common types of cyberattacks and the tactics attackers use. Recognize various social engineering strategies and understand how to defend against them. Describe different categories of malware and the damage they can cause. Evaluate weaknesses and vulnerabilities within systems and organizations. Apply basic mitigation techniques to reduce risk and enhance security posture.",
-      "summary": "This module covers identification and defense against common cyberattacks, social engineering tactics, and malware categories that threaten organizational security. Students learn to evaluate system vulnerabilities and weaknesses while applying fundamental mitigation techniques to reduce risk exposure. The content emphasizes practical threat recognition and defensive strategies to strengthen overall security posture against diverse attack vectors.",
+      "summary": "This module covers essential cybersecurity concepts, including common cyberattack types and the tactics employed by attackers. It emphasizes the recognition of social engineering strategies and the importance of defending against them, alongside an overview of malware categories and their potential damage. Additionally, learners will assess system vulnerabilities and apply basic mitigation techniques to bolster security and reduce risk.",
       "metadata": {
         "chapter_num": "2",
         "section_num": "2.0",
@@ -63,6 +63,5 @@
       "timestamp_range": null
     }
   ],
-  "num_chunks": 3,
-  "document_summary": "Introduction (chapter_intro): This knowledge is foundational for anyone seeking to protect themselves, their workplace, or their community from cyber threats. By the end of the module, you’ll be better equipped to think like an attacker and make informed security decisions—skills needed by all security-minded professionals. Identify and explain common types of cyberattacks and the tactics attackers use."
+  "num_chunks": 3
 }

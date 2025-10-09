@@ -1,0 +1,342 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Router Security
+00:04
+We're going to talk about using
+00:06
+a secure router configuration.
+00:08
+If you're responsible for managing routers, it is
+00:10
+critical that you use a secure router configuration.
+00:13
+The way you do this depends on router manufacturer,
+00:16
+model, configuration interface, and other factors.
+00:19
+In this lesson, we're going to look at some
+00:21
+general router security principles that apply
+00:23
+to a wide variety of router makes and models.
+2. Change Default Settings
+00:26
+The most important aspect of securing any router, regardless
+00:29
+of manufacturer, is changing default configuration settings.
+00:33
+By default, routers are configured to use
+00:35
+a predetermined username and password.
+00:38
+Typically, this is something like admin and admin,
+00:40
+or admin and password, or something very similar.
+00:43
+There's actually even lists out on the
+00:44
+internet that have the default username and
+00:46
+password for practically every router model.
+00:49
+Because of this, it's extremely important you immediately
+00:52
+change the default username and password on a router.
+00:55
+In fact, I would recommend you changing this
+00:57
+configuration before you even connect the
+00:59
+router to the rest of the network or internet.
+01:02
+This will ensure that there is zero chance
+01:04
+someone will compromise the router before you
+01:06
+have a chance to change this configuration.
+01:09
+When you're changing the default username, make
+01:11
+sure to name it something other than admin or
+01:13
+administrator or root or something easily guess.
+01:16
+Also make sure you use a very complex password that
+01:19
+includes numbers, symbols, upper- and lower-case
+01:21
+letters, and is at minimum 12 characters long.
+01:25
+Another default setting you might consider
+01:26
+changing is the default network address.
+01:29
+Depending on how your organization is configured, you might
+01:32
+have the ability to select a different IP address range than
+01:35
+the default 192.168.1 network address that most routers use.
+01:40
+This approach is known as security through obscurity, which
+01:43
+by itself isn't actually secure, but if layered with other
+01:46
+security techniques, it can add just one more obstacle an
+01:49
+attacker has to get through, albeit a small one.
+01:53
+Depending on the device or organization you work
+01:55
+for, you might be using a SOHO all-in-one router
+01:58
+that includes switching and Wi-Fi capabilities.
+02:00
+If this is the case, make sure to change the
+02:02
+default SSID name and wireless encryption settings.
+02:05
+Another thing you should do when you first set up
+02:07
+a router is make sure the firmware is up-to-date.
+3. Update Firmware
+02:10
+Oftentimes routers are shipped with older firmware versions.
+02:14
+Firmware updates contain much needed security fixes
+02:17
+and vulnerability fixes, so it's important you are
+02:19
+using the latest firmware version available.
+02:22
+And always make sure you keep the
+02:23
+router updated with the latest firmware.
+02:26
+The next configuration changes you want to make is
+02:28
+that of the protocol used to connect to the router.
+4. Use Secure Protocols
+02:32
+Some routers use connection protocols that
+02:33
+send authentication credentials in cleartext.
+02:37
+This makes it very easy for someone to capture packets
+02:39
+and identify the login information for the device.
+02:43
+While most modern routers will use some type
+02:46
+of secure protocol, such as SSL, it's possible
+02:48
+you might work with an older router that uses
+02:51
+an older, unencrypted protocol by default.
+02:54
+If this is the case, be aware that
+02:55
+you should use a secure protocol.
+02:58
+For example, some routers might have FTP
+03:00
+functionality that allows you to upload configuration
+03:03
+files or firmware updates to the router.
+03:06
+Because FTP is an unencrypted transmission protocol,
+03:09
+the configuration file could be easily captured.
+03:12
+Instead, you might be able to use SFTP,
+03:14
+which is the secure, encrypted form of FTP.
+03:18
+Now, this does all depend on how you are
+03:20
+connecting to the router to configure it.
+03:22
+Some routers have a dedicated serial port
+03:24
+that is used to configure the router.
+03:26
+This is done instead of a remote configuration
+03:28
+portal using a web browser or SSH.
+03:31
+If this is the case, you might not need
+03:32
+to worry about encrypted transmissions.
+03:35
+However, if you are working with the router remotely,
+03:37
+be sure you know which transmission protocol is being
+03:40
+used and whether or not it is secure.
+5. Disable UPnP
+03:43
+Speaking of using secure protocols, there's
+03:44
+one protocol that I want to quickly talk about
+03:47
+that some routers use, especially SOHO routers.
+03:50
+That protocol is universal plug and play (UPnP).
+03:52
+UPnP was designed to make setting up media and IoT
+03:57
+devices, such as smart TVs and gaming consoles, a breeze.
+04:01
+It works by opening up ports for devices inside
+04:03
+the network on the fly, eliminating the need to
+04:06
+manually open up ports for these devices.
+04:08
+In theory, it's a nice idea.
+04:09
+However, in practice?
+04:11
+Not so much.
+04:12
+UPnP has been plagued with exploit
+04:15
+after exploit since it was implemented.
+04:17
+These exploits range from annoying to downright scary.
+04:21
+Because of this, I highly recommend simply
+04:23
+disabling UPnP on any router that has it.
+04:26
+At this time, the convenience isn't worth the risk.
+6. Remote Access
+04:29
+Another area you need to look at with
+04:30
+routers is that of remote access.
+04:33
+Most routers will allow you to configure remote access
+04:35
+options—both remote access from within the network and
+04:38
+remote access from outside the network via the internet.
+04:42
+It might not be possible to disable
+04:43
+remote access from inside the network.
+04:45
+For example, the router might be locked inside of a
+04:48
+networking closet or server rack case and accessing the
+04:51
+router would require you to be inside the frigid server room.
+04:54
+If this is the case, make sure the login
+04:56
+credentials for remote access are configured
+04:58
+properly and the protocol used is secure.
+05:01
+Remote access from outside, on the other
+05:03
+hand, should 99% of the time be disabled.
+05:06
+There are really only a handful of times remote
+05:07
+access from outside the network would be necessary.
+05:10
+And for these occasions, I recommend only enabling
+05:13
+for as long as you need it, and not a moment longer.
+05:16
+Allowing remote access from outside the network opens up
+05:18
+entire attack surface that you shouldn't have to worry about.
+7. Install in a Secure Location
+05:22
+Like I said earlier, you might not be able
+05:24
+to have physical access to the router all
+05:26
+the time, and this is actually a good thing.
+05:28
+As you already know, it's always a good idea to keep
+05:31
+networking devices and critical infrastructure components
+05:33
+under lock and key, and routers are no different.
+05:37
+With physical access, it's possible for an
+05:39
+attacker to access a router even if they
+05:41
+don't have the proper login credentials.
+05:43
+Because of this, make sure routers
+05:45
+are stored in a secure location.
+05:47
+At the very least, keep the router in a locked cabinet.
+05:50
+But keeping it with other networking equipment
+05:52
+in a locked cage or lock server room that has the
+05:55
+appropriate physical security controls is best.
+8. Configuration File
+05:58
+Another important aspect of proper router
+06:00
+security is that of the configuration file.
+06:03
+The configuration file stores all the configure
+06:06
+settings for the router, including open ports,
+06:08
+usernames, firewall settings, et cetera.
+06:11
+And often times these files can be backed
+06:13
+up remotely on a USB drive or workstation.
+06:15
+If you do backup these files, be sure to
+06:17
+properly encrypt them so they can't easily read.
+06:21
+In addition, a lot of routers offer the option to
+06:23
+encrypt the configuration file on the device itself.
+06:27
+If your router happens to have this option, enable it.
+06:30
+This provides an additional layer of security
+06:32
+should someone gain access to this file.
+06:34
+And speaking of backing up the configuration
+06:36
+file, do so on a regular basis.
+06:39
+And as I said earlier, secure
+06:40
+you backups by encrypting them.
+9. Summary
+06:43
+Your network is only as strong as its weakest link.
+06:45
+And if that weak link is the primary entry
+06:48
+point into your network, as the router is, you
+06:50
+might have a lot of problems on your hands.
+06:52
+Keep this in mind when securing your network
+06:54
+and take the extra time and steps we discussed
+06:56
+in this lesson to properly secure your router.

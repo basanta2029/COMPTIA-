@@ -1,0 +1,169 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Zero Day Application Attacks
+00:04
+Let's talk about the Zero-Day Attack.<br>
+00:06
+A zero-day attack is a threat that exploits a
+00:08
+vulnerability in a computer application that is still
+00:10
+unknown, or that has never been exploited before.
+00:13
+There are two primary vehicles used
+00:15
+to conduct these types of attacks.<br>
+2. Attacks
+00:17
+The first one is a web browser.
+00:19
+Browsers are popular targets
+00:21
+because almost every system has one.<br>
+00:22
+The other type is sending zero-day exploits via email.
+00:26
+A zero-day email contains a link that
+00:28
+launches the attack if it's clicked.<br>
+3. Unknown Vulnerability Management Process
+00:30
+A zero-day attack occurs during the window between the
+00:32
+time when the attacker first exploits the vulnerability
+00:35
+and when the software developer creates a fix for it.
+00:37
+This window may vary from a couple of days to many years.<br>
+00:41
+With this in mind, let's look at a process that many
+00:43
+software developers use to prevent zero-day attacks.
+00:46
+It is the Unknown Vulnerability Management Process <br>
+00:49
+The unknown vulnerability management process
+00:52
+is a quality assurance process that finds and
+00:55
+fixes unknown zero-day vulnerabilities.
+00:57
+It is composed of four phases:
+00:58
+analyze, test, report, and mitigate.<br>
+4. Phases
+01:03
+During the Analyze phase, the developers are
+01:06
+trying to find the application's vulnerabilities.
+01:08
+They're looking for weaknesses and attack vectors,
+01:11
+which are ways an attacker can get into the application.
+01:13
+Here, the developers try to
+01:15
+break the application themselves.<br>
+01:17
+Next is the Test phase.
+01:19
+During this phase, what's called fuzz
+01:21
+testing conducted against the attack
+01:23
+vectors identified during the analysis phase.<br>
+01:26
+After testing comes the Report phase.
+01:28
+During the report phase, personnel try to reproduce any
+01:32
+issues found during the testing phase to make sure that the
+01:35
+situation is replicable and represents a real vulnerability.<br>
+01:38
+Next is the Mitigate phase.
+01:40
+This is where a fix is developed for the vulnerability,
+01:43
+based on the results of the testing and reporting phases.<br>
+5. Defending Against Zero-day Attacks
+01:46
+What should Security Administrators
+01:48
+do to defend against zero-day attacks?
+01:50
+First is to configure automatic updates for
+01:53
+the operating system and the application.<br>
+01:55
+By configuring automatic updates to the operating
+01:58
+system, you are patching holes in the operating
+02:00
+system where the application is running.
+02:02
+The zero-day attacker is going to be looking
+02:04
+for an exploit unique to that application.
+02:06
+However, you want to close as
+02:08
+many attack vectors as you can.
+02:09
+Keeping your operating system updated will
+02:12
+make your system safer from attacks in general.<br>
+02:14
+You should also have a network firewall and a host firewall.
+02:17
+By using a host-based firewall, you're hardening
+02:20
+the system where the application is running, making
+02:22
+it more difficult for an exploit to take place.<br>
+6. Use an IDS/IPS
+02:24
+Finally, you should use an IDS or an IPS.
+02:29
+For zero-day attacks, you are looking for anomalies.
+02:31
+Consequently, virus scanners or malware
+02:34
+detection applications probably won't
+02:36
+work because they're based on signatures.
+02:38
+There won't be a signature for an unknown exploit, and
+02:41
+the attack will slip by your malware detection software.<br>
+02:43
+By using an intrusion detection system or an intrusion
+02:47
+prevention system, you look for anomalies against the norm.
+02:50
+The IDS system will alert you that there is
+02:53
+something unusual going on with the system.
+02:55
+You can then begin troubleshooting, and you may
+02:57
+discover a potential zero-day attack occurring.<br>
+7. Summary
+02:59
+In this video, we covered the basics
+03:02
+of zero-day attacks and what they are.
+03:04
+Then we looked at the methodology and procedures that
+03:06
+software developers use to find the unknown vulnerabilities.
+03:09
+Finally, we looked at a few things that you can
+03:11
+do on your end to defend against zero-day attacks.<br>

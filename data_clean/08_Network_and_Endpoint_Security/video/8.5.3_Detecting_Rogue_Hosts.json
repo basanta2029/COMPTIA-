@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "chapter_num": "8",
+    "section_num": "8.5.3",
+    "title": "Detecting Rogue Hosts",
+    "content_type": "video",
+    "filename": "8.5.3_Detecting_Rogue_Hosts_[video].txt",
+    "file_path": "data_raw/08_Network_and_Endpoint_Security/8.5.3_Detecting_Rogue_Hosts_[video].txt",
+    "word_count": 793,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script In this demo, we're going to configure our wireless controller to detect rogue hosts and look at other features wireless controllers have. Some of these features help with rogue host detection. If you remember, a rogue host is an unauthorized access point within your network or a different network in the surrounding area. Let's start by logging in to our controller. On the main page, we have some statistics that can be useful for seeing what's going on with your wireless networks. We're going to check to see if this controller is set up for detecting rogue hosts. Let's go to Insight > Untrusted Rogue APs. Notice there are no APs listed in this section. To populate this list, we're going to have to trigger a scan to look for these them. Under Access Points, we're going to click the one access point we have. This first window shows details related to the access point. Now we're going to go to Configuration and see what kind of settings we have available for this AP. IP Setting allows you to set DHCP or static addresses. If settings are set to DHCP, you can specify a failback IP address, MASK, and gateway. Radio gives you several options to tweak, such as mode, channel width, channel, and TX power. Some controllers have an auto mode for Tx power, but this one doesn't. Load balance provides options for balancing connected clients. Max associated clients can be set so once that threshold is hit, load balancing is triggered. RSSI Threshold is a signal strength setting. If the client's signal is weaker than the set RSSI threshold, it'll disconnect the client from the AP. WLANs show which wireless networks are set up with this access point. You can override each access point if you don't want the same SSIDs on each access point. LED is just the indicator light on the access point. The last setting we're going to look at is Rogue AP Detection. This is the scan button we use to scan for Rogue APs. Let's start a scan. Depending on how many surrounding networks there are, it could take several minutes. Great, the scan has completed. Let's go take a look at the list. We're going to go back to insight and then to the Untrusted Rouge APs. This will show us some details related to information gathered during the scan. Let filter them so we know which APs are the closest by signal strength. You can see we have one AP that's close with -46 signal strength. Sometimes, it's even possible to see the device's location on a map with other solutions. We have two options for rogue APs: we can trust them, or we can delete them from the list. The Tp-link Omada controller already knows that it's an untrusted AP, and it'll remain that way unless we trust it. Let's say we know about this device, so we'll mark it as trusted. The device was removed from the untrusted list, and now it's on the Trusted APs list. There could be a time where you may want to remove a trusted rouge AP and put it back on the untrusted list. To do that, you click the Untrust button. Now the SSID network NotYourWifi is back on the untrusted list. It's important to know that this rogue device detection feature is just one step in protecting your network. If you were to identify a very suspect rogue device here, you would probably want to take additional steps, such as using an RF scanner to pinpoint the device and physically remove it from your organization or find the building where the network is coming from. Not all rogue APs are expected to be on your network, as other users may set up APs for their own use. That's it for this demo. In this demo, we discussed the configuration of various features on a wireless controller. We looked at various settings we can control with an AP. We also looked at how you can manage rogue devices.",
+  "chunks": [
+    {
+      "chunk_id": "8.5.3_chunk_1",
+      "content": "In this demo, we're going to configure our wireless controller to detect rogue hosts and look at other features wireless controllers have. Some of these features help with rogue host detection. If you remember, a rogue host is an unauthorized access point within your network or a different network in the surrounding area. Let's start by logging in to our controller. On the main page, we have some statistics that can be useful for seeing what's going on with your wireless networks. We're going to check to see if this controller is set up for detecting rogue hosts. Let's go to Insight > Untrusted Rogue APs. Notice there are no APs listed in this section. To populate this list, we're going to have to trigger a scan to look for these them.",
+      "summary": "In this section, the course demonstrates how to configure a wireless controller to detect rogue hosts, which are unauthorized access points that can compromise network security. It emphasizes the importance of monitoring wireless networks and utilizing features like Insight > Untrusted Rogue APs to identify potential threats. The practical application involves triggering scans to populate the list of rogue access points, enhancing overall network security management.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.5.3",
+        "title": "Detecting Rogue Hosts",
+        "content_type": "video",
+        "filename": "8.5.3_Detecting_Rogue_Hosts_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.5.3_Detecting_Rogue_Hosts_[video].txt",
+        "word_count": 793,
+        "has_content": true
+      },
+      "section_header": "Detecting Rogue Hosts",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "8.5.3_chunk_2",
+      "content": "Under Access Points, we're going to click the one access point we have. This first window shows details related to the access point. Now we're going to go to Configuration and see what kind of settings we have available for this AP. IP Setting allows you to set DHCP or static addresses. If settings are set to DHCP, you can specify a failback IP address, MASK, and gateway. Radio gives you several options to tweak, such as mode, channel width, channel, and TX power. Some controllers have an auto mode for Tx power, but this one doesn't. Load balance provides options for balancing connected clients. Max associated clients can be set so once that threshold is hit, load balancing is triggered. RSSI Threshold is a signal strength setting. If the client's signal is weaker than the set RSSI threshold, it'll disconnect the client from the AP. WLANs show which wireless networks are set up with this access point. You can override each access point if you don't want the same SSIDs on each access point. LED is just the indicator light on the access point. The last setting we're going to look at is Rogue AP Detection. This is the scan button we use to scan for Rogue APs. Let's start a scan. Depending on how many surrounding networks there are, it could take several minutes. Great, the scan has completed. Let's go take a look at the list.",
+      "summary": "The Access Point Settings section covers essential configurations for managing wireless access points, including IP settings (DHCP or static), radio options (mode, channel width, and transmission power), and load balancing features for connected clients. It also addresses signal strength management through RSSI thresholds and the ability to customize wireless networks (WLANs) for each access point. Additionally, the section highlights the importance of Rogue AP Detection, enabling users to scan for unauthorized access points in the vicinity.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.5.3",
+        "title": "Detecting Rogue Hosts",
+        "content_type": "video",
+        "filename": "8.5.3_Detecting_Rogue_Hosts_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.5.3_Detecting_Rogue_Hosts_[video].txt",
+        "word_count": 793,
+        "has_content": true
+      },
+      "section_header": "Access Point Settings",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "8.5.3_chunk_3",
+      "content": "We're going to go back to insight and then to the Untrusted Rouge APs. This will show us some details related to information gathered during the scan. Let filter them so we know which APs are the closest by signal strength. You can see we have one AP that's close with -46 signal strength. Sometimes, it's even possible to see the device's location on a map with other solutions. We have two options for rogue APs: we can trust them, or we can delete them from the list. The Tp-link Omada controller already knows that it's an untrusted AP, and it'll remain that way unless we trust it. Let's say we know about this device, so we'll mark it as trusted. The device was removed from the untrusted list, and now it's on the Trusted APs list. There could be a time where you may want to remove a trusted rouge AP and put it back on the untrusted list. To do that, you click the Untrust button. Now the SSID network NotYourWifi is back on the untrusted list. It's important to know that this rogue device detection feature is just one step in protecting your network. If you were to identify a very suspect rogue device here, you would probably want to take additional steps, such as using an RF scanner to pinpoint the device and physically remove it from your organization or find the building where the network is coming from. Not all rogue APs are expected to be on your network, as other users may set up APs for their own use.",
+      "summary": "The \"Manage Rogue Devices\" section of the CompTIA Security+ course emphasizes the identification and management of untrusted rogue access points (APs) within a network. It covers the process of scanning for rogue APs, assessing their signal strength, and deciding whether to trust or untrust them based on organizational needs. Additionally, it highlights the importance of taking further action, such as using RF scanners, to ensure network security against unauthorized devices.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.5.3",
+        "title": "Detecting Rogue Hosts",
+        "content_type": "video",
+        "filename": "8.5.3_Detecting_Rogue_Hosts_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.5.3_Detecting_Rogue_Hosts_[video].txt",
+        "word_count": 793,
+        "has_content": true
+      },
+      "section_header": "Manage Rogue Devices",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "8.5.3_chunk_4",
+      "content": "That's it for this demo. In this demo, we discussed the configuration of various features on a wireless controller. We looked at various settings we can control with an AP. We also looked at how you can manage rogue devices.",
+      "summary": "In this demo, we explored the configuration of features on a wireless controller, focusing on settings that can be managed through access points (APs). Additionally, we examined strategies for identifying and managing rogue devices to enhance network security. This practical application underscores the importance of effective wireless management in maintaining a secure environment.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.5.3",
+        "title": "Detecting Rogue Hosts",
+        "content_type": "video",
+        "filename": "8.5.3_Detecting_Rogue_Hosts_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.5.3_Detecting_Rogue_Hosts_[video].txt",
+        "word_count": 793,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 4
+}

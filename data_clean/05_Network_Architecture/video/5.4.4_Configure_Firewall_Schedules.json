@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "chapter_num": "5",
+    "section_num": "5.4.4",
+    "title": "Configure Firewall Schedules",
+    "content_type": "video",
+    "filename": "5.4.4_Configure_Firewall_Schedules_[video].txt",
+    "file_path": "data_raw/05_Network_Architecture/5.4.4_Configure_Firewall_Schedules_[video].txt",
+    "word_count": 1191,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script There may be times when you want to restrict certain groups of users' access to the internet or other services. For example, you might allow SSH through the firewall to a Linux server, but the person who needs access to it only has it during work hours. Another example is a school that doesn't want normal users accessing the web after hours. There are many cases when you'd want to configure restrictions. For our demo, we're going to use a scenario of blocking web traffic, or HTTP traffic, after business hours. This is basically a three-part process. First, we'll create a time-restriction schedule. Then we're going to create a rule and apply that schedule to our users. The last thing we'll do is create a rule to override the restriction for members of our management group. So, under Firewall &gt; Schedules, I go over to Add and click on it. I need to give it a Schedule Name. This can't have any spaces in it, so I'll use underscores and call it Allow_Web_Work _Hours. For our Description we can use anything. I'll call it Allow Web During Work Hours. For the days, I'll click on the workdays of Monday through Friday to add all of them. For Time, I'll pick 7:00 a.m. from the dropdown list and jump over to Stop Hours. Here, I'll pick 17 and leave the minutes at 59. That makes our stop time 5:59 p.m. I'll click on Add Time, and you can see my Configured Range here, which is now Monday through Friday from 7:00 a.m. to 17:59. That looks good, so let's click Save. Now we're done with our schedule. Next, we need to configure our firewall rules. We now need to go up to Firewall &gt; Rules and then click on our LAN tab to get to our LAN firewall rules. We have a few rules. One basically allows IPv4 out to anywhere and the same for IPv6. We want to add our rule to the top of the list. So I'll pick Add with the arrow pointing up. We want to select Block because we're going to block traffic based on the schedule. I'll scroll down. We're going to block everything on our LAN network, so I'll pick LAN net from the dropdown list. I need to click on the Display Advanced button here. Now, for our Source Port Range we want to block HTTP port 80. Let's scroll down a bit. Under Extra Options, click on Display Advance to see additional options. We need to come down and find where it says Schedule. From the list, we have all our schedules. And since we only created one, that's all we have. Let's pick that one. Go down and click on Save. Now we see our new rule. The source is the LAN network on port 80. Over here, you can see that it refers to the schedule that we created. This all looks good, and so we go up and click Apply Changes. We have our schedule and we've created a rule that applies that schedule to our users. But what about users that we want to have access to the internet no matter what time of day it is? We need to create another rule for that. But first we need to create an alias. An alias is a group of IPs that'll be grouped together. That alias will be added to a rule that allows internet access. To do that, we go up to Firewall &gt; Aliases. When the page loads, we go down to the Add button. We need to give it a name that we'll use to identify this group of IP addresses. We'll just say that this group is our management. So, for the Name field that's what I'll put in. I'll do the same for Description. Now I need to enter in the IP addresses of those devices that'll be part of this alias. I'll enter in a few and start with 10.10.10.1. That IP belongs to Dana. Click Add Host. Now let's enter 10.10.10.2; that'll be Jon's. Click Add Host and we'll add one more, which is 10.10.10.3. That'll be for Mary. Click Add Host one final time and then click Save. Apply the changes and we're ready to create our final rule. Now that we have our alias, we need to create our rule to override the rule that blocks web access for all users. These rules will be from the top down. If our firewall reads the first rule that says to block all HTTP traffic during non-work hours, that rule is applied. The rule that says to allow management access will never be seen. So, we need to make sure that we tell our firewall that our management can have access before we tell it to block everyone else. We go to Firewall &gt; Rules &gt; LAN and then click the Add button with the up arrow. All the settings here are fine. But down here, under Source, we need to change this to Single host or alias. Now, watch as I start to type in the address field. As soon as I start to type in Management, it auto-populates with our alias. We'll leave the destination set to Any. For Description, I'll type in Allow Management Web Access Anytime. Click on Save and the rule is created. As a quick side note, this first rule is created automatically by pfSense. It's there to prevent you from creating any rule that might accidently block you from gaining access to the firewall. That's why it's first in this position. You can actually remove that rule, but that's not part of this lesson. Right below that is our rule. The rule we create for management will be applied before the block web access rule. The one right below it is applied. That's it for this demo. In this demo, we created a schedule on our firewall to deny web access to our users. Then we created an alias for a group of users who are allowed to bypass that rule with a second rule.",
+  "chunks": [
+    {
+      "chunk_id": "5.4.4_chunk_1",
+      "content": "There may be times when you want to restrict certain groups of users' access to the internet or other services. For example, you might allow SSH through the firewall to a Linux server, but the person who needs access to it only has it during work hours. Another example is a school that doesn't want normal users accessing the web after hours. There are many cases when you'd want to configure restrictions. For our demo, we're going to use a scenario of blocking web traffic, or HTTP traffic, after business hours.",
+      "summary": "Configuring firewall schedules allows administrators to restrict user access to internet services based on time, enhancing security and resource management. For instance, SSH access to a Linux server can be limited to work hours, or a school can block web access for regular users after hours. This practical application of firewall scheduling helps enforce organizational policies and protect network resources effectively.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.4.4",
+        "title": "Configure Firewall Schedules",
+        "content_type": "video",
+        "filename": "5.4.4_Configure_Firewall_Schedules_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.4.4_Configure_Firewall_Schedules_[video].txt",
+        "word_count": 1191,
+        "has_content": true
+      },
+      "section_header": "Configure Firewall Schedules",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "5.4.4_chunk_2",
+      "content": "This is basically a three-part process. First, we'll create a time-restriction schedule. Then we're going to create a rule and apply that schedule to our users. The last thing we'll do is create a rule to override the restriction for members of our management group. So, under Firewall &gt; Schedules, I go over to Add and click on it. I need to give it a Schedule Name. This can't have any spaces in it, so I'll use underscores and call it Allow_Web_Work _Hours. For our Description we can use anything. I'll call it Allow Web During Work Hours. For the days, I'll click on the workdays of Monday through Friday to add all of them. For Time, I'll pick 7:00 a.m. from the dropdown list and jump over to Stop Hours. Here, I'll pick 17 and leave the minutes at 59. That makes our stop time 5:59 p.m. I'll click on Add Time, and you can see my Configured Range here, which is now Monday through Friday from 7:00 a.m. to 17:59. That looks good, so let's click Save. Now we're done with our schedule. Next, we need to configure our firewall rules.",
+      "summary": "In this section, participants learn to implement a time-restriction schedule for network access, focusing on creating a schedule that allows web access during specified work hours (Monday to Friday, 7:00 a.m. to 5:59 p.m.). The process includes setting up firewall rules that apply this schedule to users while also establishing exceptions for management group members. This practical application enhances security by controlling internet access based on time, ensuring compliance with organizational policies.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.4.4",
+        "title": "Configure Firewall Schedules",
+        "content_type": "video",
+        "filename": "5.4.4_Configure_Firewall_Schedules_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.4.4_Configure_Firewall_Schedules_[video].txt",
+        "word_count": 1191,
+        "has_content": true
+      },
+      "section_header": "Set a Schedule",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "5.4.4_chunk_3",
+      "content": "We now need to go up to Firewall &gt; Rules and then click on our LAN tab to get to our LAN firewall rules. We have a few rules. One basically allows IPv4 out to anywhere and the same for IPv6. We want to add our rule to the top of the list. So I'll pick Add with the arrow pointing up. We want to select Block because we're going to block traffic based on the schedule. I'll scroll down. We're going to block everything on our LAN network, so I'll pick LAN net from the dropdown list. I need to click on the Display Advanced button here. Now, for our Source Port Range we want to block HTTP port 80. Let's scroll down a bit. Under Extra Options, click on Display Advance to see additional options. We need to come down and find where it says Schedule. From the list, we have all our schedules. And since we only created one, that's all we have. Let's pick that one. Go down and click on Save. Now we see our new rule. The source is the LAN network on port 80. Over here, you can see that it refers to the schedule that we created. This all looks good, and so we go up and click Apply Changes.",
+      "summary": "In this section, learners are guided through the process of applying a scheduled rule to a firewall to block HTTP traffic on port 80 for the LAN network. By navigating to the firewall rules, users can add a new rule at the top of the list, select the appropriate schedule, and save the changes to enforce the traffic block. This practical application reinforces key security concepts related to network traffic management and access control.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.4.4",
+        "title": "Configure Firewall Schedules",
+        "content_type": "video",
+        "filename": "5.4.4_Configure_Firewall_Schedules_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.4.4_Configure_Firewall_Schedules_[video].txt",
+        "word_count": 1191,
+        "has_content": true
+      },
+      "section_header": "Apply Schedule to Firewall Rule",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "5.4.4_chunk_4",
+      "content": "We have our schedule and we've created a rule that applies that schedule to our users. But what about users that we want to have access to the internet no matter what time of day it is? We need to create another rule for that. But first we need to create an alias. An alias is a group of IPs that'll be grouped together. That alias will be added to a rule that allows internet access. To do that, we go up to Firewall &gt; Aliases. When the page loads, we go down to the Add button. We need to give it a name that we'll use to identify this group of IP addresses. We'll just say that this group is our management. So, for the Name field that's what I'll put in. I'll do the same for Description. Now I need to enter in the IP addresses of those devices that'll be part of this alias. I'll enter in a few and start with 10.10.10.1. That IP belongs to Dana. Click Add Host. Now let's enter 10.10.10.2; that'll be Jon's. Click Add Host and we'll add one more, which is 10.10.10.3. That'll be for Mary. Click Add Host one final time and then click Save. Apply the changes and we're ready to create our final rule.",
+      "summary": "In this section, learners are introduced to the concept of creating aliases in a firewall configuration, which allows for the grouping of IP addresses for easier management. By defining an alias for specific users who require constant internet access, such as management personnel, students practice adding individual IP addresses to this group. This foundational skill is essential for implementing tailored security rules that enhance network access control.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.4.4",
+        "title": "Configure Firewall Schedules",
+        "content_type": "video",
+        "filename": "5.4.4_Configure_Firewall_Schedules_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.4.4_Configure_Firewall_Schedules_[video].txt",
+        "word_count": 1191,
+        "has_content": true
+      },
+      "section_header": "Create Aliases",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "5.4.4_chunk_5",
+      "content": "Now that we have our alias, we need to create our rule to override the rule that blocks web access for all users. These rules will be from the top down. If our firewall reads the first rule that says to block all HTTP traffic during non-work hours, that rule is applied. The rule that says to allow management access will never be seen. So, we need to make sure that we tell our firewall that our management can have access before we tell it to block everyone else. We go to Firewall &gt; Rules &gt; LAN and then click the Add button with the up arrow. All the settings here are fine. But down here, under Source, we need to change this to Single host or alias. Now, watch as I start to type in the address field. As soon as I start to type in Management, it auto-populates with our alias. We'll leave the destination set to Any. For Description, I'll type in Allow Management Web Access Anytime. Click on Save and the rule is created. As a quick side note, this first rule is created automatically by pfSense. It's there to prevent you from creating any rule that might accidently block you from gaining access to the firewall. That's why it's first in this position. You can actually remove that rule, but that's not part of this lesson. Right below that is our rule. The rule we create for management will be applied before the block web access rule. The one right below it is applied.",
+      "summary": "In this section, learners are guided on creating an override rule in a firewall to allow management access to web resources during non-work hours, ensuring that this rule is prioritized above the default rule that blocks all HTTP traffic. By utilizing an alias for the management group, users can efficiently configure the firewall settings to permit access while maintaining security protocols. This practical application emphasizes the importance of rule order in firewall configurations to prevent accidental lockouts.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.4.4",
+        "title": "Configure Firewall Schedules",
+        "content_type": "video",
+        "filename": "5.4.4_Configure_Firewall_Schedules_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.4.4_Configure_Firewall_Schedules_[video].txt",
+        "word_count": 1191,
+        "has_content": true
+      },
+      "section_header": "Create Override Rule",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "5.4.4_chunk_6",
+      "content": "That's it for this demo. In this demo, we created a schedule on our firewall to deny web access to our users. Then we created an alias for a group of users who are allowed to bypass that rule with a second rule.",
+      "summary": "In this demo, we configured a firewall to restrict web access for users by establishing a schedule-based rule. Additionally, we created an alias for a specific group of users, allowing them to bypass the restriction through a secondary rule. This exercise highlights key concepts of access control and rule management in network security.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.4.4",
+        "title": "Configure Firewall Schedules",
+        "content_type": "video",
+        "filename": "5.4.4_Configure_Firewall_Schedules_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.4.4_Configure_Firewall_Schedules_[video].txt",
+        "word_count": 1191,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 6
+}

@@ -1,0 +1,304 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Poison DNS
+00:04
+DNS Spoofing, sometimes referred to as DNS
+00:06
+cache poisoning, is an attack where a rogue
+00:09
+device directs DNS requests on a network.
+00:11
+This basically means that an attacker
+00:13
+manipulates the DNS to redirect DNS traffic.
+00:17
+This type of attack is very difficult to
+00:18
+detect, which makes it quite dangerous.
+00:21
+In this demo, we're going to redirect DNS to our Kali Linux
+00:24
+machine, spoof the DNS, and point to a web page I've set up.
+00:28
+For this demo, we're going to use Kali Linux with Ettercap.
+00:30
+Ettercap has a GUI interface.
+00:33
+That's what we're going to use.
+00:35
+But we need to do a few other things before we get started.
+2. Modify the etter.conf File
+00:37
+I'm going to open up a terminal here, on Kali Linux.
+00:41
+We need to check the etter.config file.
+00:43
+The easiest way to find this file is to just
+00:45
+type 'locate etter.conf' and press Enter.
+00:48
+The path I'm interested is this one, right up here.
+00:54
+I'm going to use the program Leafpad to open the file.
+00:56
+We'll type in 'leafpad
+00:58
+/etc/ettercap/etter.conf' and press Enter.
+01:04
+And Leafpad opens my file.
+01:06
+Now we need to edit these two lines of code, uid and gid.
+01:10
+I need to change both of these values to zero.
+01:15
+After that, we need to scroll down
+01:16
+a bit, to where it says Linux.
+01:20
+Right under there, we want to find the iptables.
+01:24
+These two lines are commented
+01:25
+out with the pound sign (#).
+01:26
+Just delete the two pound signs from these lines of code.
+01:28
+There's one here and one here.
+01:29
+So, now that we've done that, we'll
+01:30
+save our file and close this window.
+3. Edit the etter.dns Host File
+01:35
+Now that we're done with that, we
+01:36
+need to edit our etter.dns file.
+01:38
+I'm back in the terminal.
+01:39
+Once again, to find this file, I
+01:41
+can just type in 'locate etter.dns'.
+01:42
+And, just like before, I'll use Leafpad
+01:48
+to open it by typing 'leafpad etter.dns'.
+01:53
+The file opens up.
+01:55
+I need to add a line to this host file.
+01:57
+I'll scroll down until I see these
+01:58
+few lines with Microsoft in them.
+02:00
+Right above those lines, I want to add
+02:02
+this line, here: '* A 10.10.10.197'.
+02:10
+By doing this, we're telling all of the DNS traffic
+02:13
+on the network to go to this IP address, which is
+02:15
+actually my Kali Linux system's IP address.
+02:18
+The Microsoft lines are not commented out by default, but
+02:20
+I went ahead and put pound signs (#) in front of them.
+02:22
+We don't want to redirect their DNS.
+02:24
+Before I exit, I want to go up and save the file.
+4. Edit index.html
+02:30
+All right.
+02:32
+We have some more editing to do here.
+02:33
+Now I need to edit my index.html file.
+02:36
+Since we're spoofing the DNS and redirecting
+02:38
+traffic to our Kali system, I need to give the users
+02:41
+something to see, so I'll edit the index page.
+02:44
+To get to that file, I'll come up to
+02:47
+Places and come down here, to Computer.
+02:49
+From there, I need to find the
+02:51
+folder called var and open it.
+02:52
+Within var, I'll go over to the www
+02:55
+folder, then to the html folder.
+02:58
+I've already made some changes in here.
+03:00
+One of the things I did was copy
+03:01
+my index.html file and rename it.
+03:04
+Let's open this old file and
+03:05
+see what the contents look like.
+03:07
+Okay, our file is open.
+03:09
+And, like I said, by default, this is
+03:11
+our index.html file on this Linux system.
+03:13
+I didn't want to modify the original in case I
+03:16
+need to restore it later, so I made this copy.
+03:19
+Now let's close this one and open
+03:20
+up the modified copy that I created.
+03:22
+Once again, I'll use Leafpad to do that.
+03:25
+Here, you can see I made a very
+03:27
+simple landing page for our victims.
+03:28
+It says, "You have been denied access to this site.
+03:31
+Nice try!" I've already saved it, so
+03:34
+I'll go ahead and close this file.
+5. Set up Ettercap
+03:36
+We're done editing files.
+03:38
+Now we can go to Applications >
+03:40
+Sniffing & Spoofing > Ettercap.
+03:44
+Ettercap opens for us.
+03:46
+And the first thing we need to do here is come
+03:48
+up to the Sniff tab and select Unified Sniffing.
+03:51
+A dialog box opens up.
+03:53
+We want to select our network adapter.
+03:55
+In our case, that's eth0.
+03:57
+Click OK.
+03:59
+We actually want to come back up to Start and select
+04:01
+Stop Sniffing because we're not quite ready yet.
+04:04
+We're going to go over to the Hosts tab
+04:05
+and select the Scan for Hosts selection.
+04:08
+Ettercap will do its thing and start scanning.
+04:10
+You can see, down here, that we found three hosts.
+04:14
+Now let's go up to Hosts again.
+04:16
+This time, select the Hosts list.
+04:19
+And down here, you can see the three hosts.
+04:22
+Previously, I ran NMAP and figured out that this top
+04:24
+host is my router, and this bottom host is my victim
+04:27
+machine, the one I want to attack so that anytime
+04:29
+this machine goes to a website, the DNS is going to
+04:32
+point them to my Kali Linux machine's IP address.
+04:35
+So, while my victim IP is selected, I'll
+04:37
+come down here and click Add to Target 1.
+04:39
+Now we'll go to Plugins > Manage the
+04:43
+plugins and select the dns_spoof option.
+04:45
+Now, if we look down here, in the lower pane, you
+04:48
+can see it says, "Activating dns_spoof plugin..."
+04:52
+All right, we're almost done.
+04:54
+I need to come up to the MITM tab and select ARP poisoning.
+04:58
+When the dialog opens up, we need to check the box
+05:00
+for Sniff remote connections and then click OK.
+05:04
+We need to start the Apache web service on the
+05:06
+Kali machine to actually make it into a web server.
+05:08
+I do that by opening up a terminal
+05:10
+and typing in 'service apache2 start'.
+05:14
+Nothing really exciting happens, but this
+05:17
+command starts the Apache service for us.
+05:19
+That wraps up our steps on this Kali system.
+05:22
+Now we need to see what happens when
+05:23
+our victim tries to surf the web.
+05:25
+We'll do that from a Windows machine.
+6. Test on a Windows Machine
+05:28
+All right.
+05:28
+I'm on a Windows machine now.
+05:29
+I'll go to a command prompt to check our IP address.
+05:32
+I'll type in 'ipconfig', and we can confirm that
+05:36
+the IP ends with 195, so this is the right machine.
+05:39
+I'll close this window.
+05:41
+Down here, I'll launch Google Chrome,
+05:43
+and I'll type in 'www.testout.com'.
+05:47
+When the page launches, it takes me to the index.html page
+05:51
+on my Kali Linux system and displays the message we typed.
+05:54
+That confirms that our DNS has been spoofed and redirected.
+7. Summary
+05:58
+That's it for this demo.
+06:00
+In this demo, we configured our Kali Linux
+06:02
+machine to redirect DNS requests and send
+06:04
+the traffic to our modified index.html page.
+06:07
+We discussed how we had to edit the files
+06:09
+to make this happen and how to configure
+06:11
+Ettercap to perform the DNS spoof.

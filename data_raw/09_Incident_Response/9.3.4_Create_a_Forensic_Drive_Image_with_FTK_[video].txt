@@ -1,0 +1,344 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Create a Forensic Drive Image with FTK
+00:04
+In this demonstration, we're going to discuss creating
+00:07
+a forensic disk image with the Forensic Toolkit.
+00:10
+It's better known as the FTK Imager.
+00:12
+In our scenario, we need to examine a hard
+00:15
+drive from a malicious employee's workstation.
+00:18
+Before you try this for real, make sure that your
+00:20
+organization considers you qualified to do this and
+00:23
+that you have the backing of your legal department.
+2. Use a Write Blocker
+00:26
+The first thing we need to do is create
+00:27
+an image of the employee's hard drive.
+00:30
+Like I said, we're going to use the FTK Imager to do this.
+00:33
+Remember, when we're conducting a forensic investigation, we
+00:36
+don't want to modify the evidence in any way, shape, or form.
+00:40
+If this situation were to be litigated for some reason—"say,
+00:44
+the employee gets fired and then sues the company--then the
+00:46
+prosecutor could say that when we conducted our forensic
+00:50
+investigation, we planted the evidence on the hard drive.
+00:53
+That's why it's crucial to make sure that that hard drive
+00:56
+isn't changed in any way during the forensics investigation.
+01:00
+We're going to create an image of that hard drive,
+01:02
+and we're going to do all of our testing, examining,
+01:05
+and investigative work on the imaged copy of the
+01:07
+hard drive, not on the actual hard drive.
+01:10
+Once we've created that image, we'll use a second
+01:13
+tool to analyze the contents of the hard drive to
+01:16
+see if we can find anything that's questionable.
+01:18
+The first thing we need to do is
+01:20
+get an image of the hard drive.
+01:22
+To do this, we have to connect the hard
+01:23
+drive to this forensic workstation.
+01:26
+That's problematic because as soon as you connect a
+01:29
+hard drive to a Windows workstation, Windows immediately
+01:32
+starts writing little bits of data to the drive—"but we
+01:35
+don't want to modify the drive in any way.
+01:38
+So we can't just directly connect the drive
+01:40
+to a SATA connector on this workstation.
+01:43
+Instead, we need to implement a write blocker,
+01:45
+also known as a forensic disk controller.
+01:48
+Its job is to block writing to the hard drive.
+01:51
+It allows us to connect the employee's hard drive
+01:54
+to the write blocker, and then we connect the write
+01:56
+blocker to our machine, usually with a USB cable.
+02:00
+This prevents any write operations coming from
+02:02
+the operating system on the forensic computer from
+02:05
+going through to the device that we're analyzing.
+02:08
+So remember, when you're conducting a forensic
+02:10
+investigation on a hard drive and you're going create
+02:13
+an image, always use a write blocker to prevent any
+02:17
+type of write operation from occurring on that drive.
+02:20
+I've already set this system up with
+02:22
+a write blocker, and it's ready to go.
+3. Create a Forensic Image
+02:24
+Let's go ahead and use the FTK Imager
+02:27
+to create an image that we can analyze.
+02:28
+By the way, FTK Imager is a free tool.
+02:32
+A lot of the forensic software is very, very
+02:34
+expensive, but you don't have to spend a lot of money
+02:37
+to be able to conduct a good forensic investigation.
+02:40
+There are a lot of free, open source, and
+02:43
+legitimate tools for forensic investigations.
+02:46
+Within Access Manager, let's click on Add Evidence Item.
+02:50
+Then we have to specify what we're going to add.
+02:53
+We're adding a physical drive because I've connected
+02:56
+it to a write blocker on this particular system.
+02:59
+Click Next.
+03:00
+We have to specify which drive
+03:02
+we want to create the image from.
+03:04
+You'll notice, when I click the dropdown list,
+03:06
+it picked all of the hard drives on this system.
+03:09
+You need to be very careful that
+03:11
+you don't choose the wrong one.
+03:13
+For example, if I were to choose Physical Drive
+03:15
+0, that's my local workstation hard disk drive.
+03:18
+We'd be creating an image of my local system, not
+03:21
+the actual drive that's being used for evidence.
+03:24
+Physical Drive 1 is the drive that
+03:26
+I've connected to the write blocker.
+03:28
+That's what we want to choose.
+03:30
+I'll click Finish.
+03:32
+We'll come over here, to the Physical
+03:34
+Drive 1, and we'll right-click on it.
+03:36
+We want to Export Disk Image.
+03:39
+Under Image Destination, we'll click Add.
+03:42
+Then we can specify which type of
+03:45
+destination image we want to create.
+03:47
+Raw (dd) is the default selection because it's
+03:51
+probably one of the most widely used imaging format for
+03:54
+forensics, so we'll just leave it set the way it is.
+03:57
+Click Next.
+03:58
+We need to document the evidence.
+04:00
+Remember, whenever you're conducting a forensic
+04:03
+investigation, you need to document everything.
+04:06
+In fact, you should take a picture of the entire setup
+04:09
+that you're using to analyze this hard disk drive.
+04:12
+You should take a picture of the drive, take
+04:13
+a picture of how it's connected to the write
+04:15
+blocker, and take another picture of how the
+04:17
+write blocker is connected to the computer.
+04:20
+You might even want to take a video of the entire process.
+04:24
+Under Evidence Item Information,
+04:26
+you'll want to assign a case number.
+04:27
+Let's do —˜1 2 3 4' and evidence number —˜5 6 7 8'.
+04:32
+Then we'll give it a unique description.
+04:34
+We'll enter —˜HD from Mary Worley.'
+04:37
+I'll put —˜Dana Fellows' down as the examiner.
+04:40
+Click Next.
+04:40
+We have to specify where we want to
+04:43
+store the image file on my computer.
+04:45
+I have a folder for my forensic images.
+04:53
+Let's create a new folder, —˜1 2 3 4 Mary Worley'.
+04:54
+I'll put in the same thing here for
+05:02
+Image Filename, —˜1 2 3 4 Mary Worley'.
+05:05
+If we want to, we can fragment the image--that
+05:08
+is, break the image file into multiple pieces.
+05:11
+This is a small hard drive.
+05:12
+I'm going to set that to zero, which basically means
+05:15
+we'll have one image file for the entire hard disk.
+05:18
+Click Finish.
+05:20
+We want to make sure that Verify the
+05:21
+images after they are created is checked.
+05:24
+It's also a good idea to create a directory
+05:26
+listing of all the files and the image after
+05:29
+they're created, so check that box too.
+05:32
+It can be useful for when you're searching for information.
+05:34
+Click Start.
+05:36
+At this point, the imaging process has started.
+05:39
+It'll take a little bit of time to complete, especially
+05:42
+if you're going to be working with a big hard disk drive.
+05:44
+I'm going to pause the recording
+05:46
+now and come back when it's done.
+05:48
+Okay.
+05:49
+As you can see, it's almost done verifying the image.
+05:52
+In just a few seconds, the process will be complete.
+4. MD5 Hash and SHA1 Hash
+05:53
+Notice that it's created two different
+05:55
+hashes, an MD5 Hash and a SHA1 Hash.
+05:59
+For both of these, the hashes match.
+06:01
+The MD5 Hash matched, and the SHA1 Hash matched as well.
+06:05
+That's good.
+06:05
+That's exactly what we want to see.
+06:06
+I'll go ahead and hit Close.
+5. Verify Image File
+06:09
+Before we end this demo, let's verify
+06:12
+that the image file has been created.
+06:14
+I'll open File Explorer and navigate
+06:16
+to the folder where we saved the image.
+06:22
+Here are the various pieces of information that
+06:24
+were pulled from the hard drive to create it.
+06:27
+We have the image file itself.
+06:28
+There's a CSV document that contains a listing
+06:31
+of all the filenames and directory names.
+06:33
+Last on the list, we have a document that provides
+06:36
+a nice summary of the image creation process.
+06:41
+It gives us the case number, our evidence number,
+06:43
+the description, the examiner, all the information
+06:46
+we filled out earlier, and the information about
+06:49
+the hard drive itself from Mary Worley's computer.
+06:52
+At this point, our image file is created.
+06:55
+The next step of the process is to use another
+06:57
+tool, such as Autopsy, to examine the image.
+6. Summary
+07:01
+That's all for this demo.
+07:02
+We used FTK imager to capture a
+07:05
+forensic image of a hard drive.
+07:06
+We discussed the importance of using a write blocker to
+07:09
+keep data from getting tampered with and the importance of
+07:12
+examining a copy of the disk, not the original disk itself.
+07:16
+Then we made a copy the image and verified
+07:19
+that it was saved to the folder we created.

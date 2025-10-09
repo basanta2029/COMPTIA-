@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "chapter_num": "9",
+    "section_num": "9.2.5",
+    "title": "Saving Captured Files with Wireshark",
+    "content_type": "video",
+    "filename": "9.2.5_Saving_Captured_Files_with_Wireshark_[video].txt",
+    "file_path": "data_raw/09_Incident_Response/9.2.5_Saving_Captured_Files_with_Wireshark_[video].txt",
+    "word_count": 703,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script In this demo, we'll show you how to capture network packets. There are times when you might want to capture packets so you can analyze them later. Captured packets can be used by an analyst to profile an application's network traffic or to examine a protocol in more detail. The two most popular tools to capture packets are Wireshark and TCPDump. Both Wireshark and TCPDump can be used with a variety of operating systems but for this demo we will use Security Onion. Security Onion is usually set up with a monitor port that captures all packets that it sees. The packets are typically used with tools like Zeek and Snort. This interface can also be used by an analyst for ad-hoc captures. There are two capture tools in Security Onion for ad-hoc captures. First, we will look at Wireshark. Wireshark is a graphical tool that allows packet capture, but is also an analysis tool. Because Wireshark requires root permissions to capture the packets, we must run Wireshark with elevated permissions. To do this, go to Applications > Utilities > Terminal. At the command prompt type —˜sudo dpkg-reconfigure wireshark-common'. You are asked you if you want to allow non-superusers to be able to capture packets. Choose Yes. Next, run —˜sudo usermod -a -G wireshark administrator'. This gives the administrative user rights to run Wireshark by adding it to the Wireshark group. If your account on Security Onion has a different name, use that instead of administrator in the command. Once done, go to the power icon. Then, go down to the other power icon. Choose to restart. Now the system has rebooted. After logging back into Security Onion, we can start to use Wireshark. We open it by going to Applications > Internet > Wireshark. To set up a capture, select the interface on Security Onion that is set as the monitor port. In this instance, it is interface enp0s8. After selecting the interface, you can restart the capture by clicking the Shark Fin in the top left of the menu bar. By default, the captured packets will scroll by on the screen. When we are done capturing, we can press the red stop button. At this point, we can analyze the captured packets as we would any other capture that has been given to us. We can then save that file as a PCAP file for later analysis. We're not going to save it here, but you can see we have the option. Another way that we can capture packets with Security Onion is to use the command-line tool tcpdump. Let's open a new Terminal session and enter the command —˜sudo tcpdump -D' to list the possible interfaces that we can capture on. Note that enp0s8 is number 10 on the list. To capture, run the command —˜sudo tcpdump -i 10 -w testout.pcap'. This will capture the packets on enp0s8 and write them to a file called testout.pcap. Press CTRL-C to stop the capture. Now let's print the file to the screen using —˜tcpdump -r testout.pcap'. Here you can see the output of the file. We can open this PCAP file in a tool like Wireshark or NetworkMiner. Let's open it in Wireshark. We type, —˜wireshark testout.pcap' and press Enter. After a second or two the PCAP file is loaded into Wireshark and we can use it to further analyze the packet capture. That's it for this demo. In this demo we used Wireshark and TCPdump to capture packets and saved them to a PCAP file.",
+  "chunks": [
+    {
+      "chunk_id": "9.2.5_chunk_1",
+      "content": "In this demo, we'll show you how to capture network packets. There are times when you might want to capture packets so you can analyze them later. Captured packets can be used by an analyst to profile an application's network traffic or to examine a protocol in more detail. The two most popular tools to capture packets are Wireshark and TCPDump. Both Wireshark and TCPDump can be used with a variety of operating systems but for this demo we will use Security Onion. Security Onion is usually set up with a monitor port that captures all packets that it sees. The packets are typically used with tools like Zeek and Snort. This interface can also be used by an analyst for ad-hoc captures.",
+      "summary": "This section demonstrates how to capture network packets using Wireshark, a key tool for analyzing network traffic and protocols. It emphasizes the practical application of packet capture in profiling applications and highlights the use of Security Onion for monitoring and capturing all network packets. Additionally, it mentions the integration of captured data with tools like Zeek and Snort for further analysis.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.5",
+        "title": "Saving Captured Files with Wireshark",
+        "content_type": "video",
+        "filename": "9.2.5_Saving_Captured_Files_with_Wireshark_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.5_Saving_Captured_Files_with_Wireshark_[video].txt",
+        "word_count": 703,
+        "has_content": true
+      },
+      "section_header": "Save Captured Files with Wireshark",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.2.5_chunk_2",
+      "content": "There are two capture tools in Security Onion for ad-hoc captures. First, we will look at Wireshark. Wireshark is a graphical tool that allows packet capture, but is also an analysis tool. Because Wireshark requires root permissions to capture the packets, we must run Wireshark with elevated permissions. To do this, go to Applications > Utilities > Terminal. At the command prompt type —˜sudo dpkg-reconfigure wireshark-common'. You are asked you if you want to allow non-superusers to be able to capture packets. Choose Yes. Next, run —˜sudo usermod -a -G wireshark administrator'. This gives the administrative user rights to run Wireshark by adding it to the Wireshark group. If your account on Security Onion has a different name, use that instead of administrator in the command. Once done, go to the power icon. Then, go down to the other power icon. Choose to restart. Now the system has rebooted. After logging back into Security Onion, we can start to use Wireshark. We open it by going to Applications > Internet > Wireshark. To set up a capture, select the interface on Security Onion that is set as the monitor port. In this instance, it is interface enp0s8. After selecting the interface, you can restart the capture by clicking the Shark Fin in the top left of the menu bar. By default, the captured packets will scroll by on the screen. When we are done capturing, we can press the red stop button. At this point, we can analyze the captured packets as we would any other capture that has been given to us. We can then save that file as a PCAP file for later analysis. We're not going to save it here, but you can see we have the option.",
+      "summary": "The \"Capture Packets with Wireshark\" section of the CompTIA Security+ course introduces Wireshark as a powerful tool for both packet capture and analysis, requiring elevated permissions for operation. Users learn to configure Wireshark on Security Onion by adjusting user permissions and selecting the appropriate network interface for capturing data. Once packets are captured, they can be analyzed in real-time and saved as PCAP files for future examination, enhancing practical skills in network security monitoring.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.5",
+        "title": "Saving Captured Files with Wireshark",
+        "content_type": "video",
+        "filename": "9.2.5_Saving_Captured_Files_with_Wireshark_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.5_Saving_Captured_Files_with_Wireshark_[video].txt",
+        "word_count": 703,
+        "has_content": true
+      },
+      "section_header": "Capture Packets with Wireshark",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.2.5_chunk_3",
+      "content": "Another way that we can capture packets with Security Onion is to use the command-line tool tcpdump. Let's open a new Terminal session and enter the command —˜sudo tcpdump -D' to list the possible interfaces that we can capture on. Note that enp0s8 is number 10 on the list. To capture, run the command —˜sudo tcpdump -i 10 -w testout.pcap'. This will capture the packets on enp0s8 and write them to a file called testout.pcap. Press CTRL-C to stop the capture. Now let's print the file to the screen using —˜tcpdump -r testout.pcap'. Here you can see the output of the file. We can open this PCAP file in a tool like Wireshark or NetworkMiner. Let's open it in Wireshark. We type, —˜wireshark testout.pcap' and press Enter. After a second or two the PCAP file is loaded into Wireshark and we can use it to further analyze the packet capture.",
+      "summary": "The section on capturing packets with tcpdump teaches users how to utilize the command-line tool to capture network traffic on specific interfaces and save it to a PCAP file for analysis. By executing commands such as `sudo tcpdump -D` to list interfaces and `sudo tcpdump -i 10 -w testout.pcap` to capture packets, users can effectively monitor network activity. The captured data can then be analyzed using tools like Wireshark, enhancing practical skills in network security analysis.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.5",
+        "title": "Saving Captured Files with Wireshark",
+        "content_type": "video",
+        "filename": "9.2.5_Saving_Captured_Files_with_Wireshark_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.5_Saving_Captured_Files_with_Wireshark_[video].txt",
+        "word_count": 703,
+        "has_content": true
+      },
+      "section_header": "Capture Packets with tcpdump",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.2.5_chunk_4",
+      "content": "That's it for this demo. In this demo we used Wireshark and TCPdump to capture packets and saved them to a PCAP file.",
+      "summary": "In this demo, participants utilized Wireshark and TCPdump to capture network packets, demonstrating practical skills in network traffic analysis. The captured data was saved in a PCAP file format, highlighting the importance of packet analysis in identifying security threats and monitoring network performance. This hands-on experience reinforces key concepts in cybersecurity, such as traffic analysis and incident response.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.5",
+        "title": "Saving Captured Files with Wireshark",
+        "content_type": "video",
+        "filename": "9.2.5_Saving_Captured_Files_with_Wireshark_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.5_Saving_Captured_Files_with_Wireshark_[video].txt",
+        "word_count": 703,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 4
+}

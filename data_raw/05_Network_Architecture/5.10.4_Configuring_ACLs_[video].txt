@@ -1,0 +1,333 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Access Control Lists
+00:05
+In this demonstration, we'll show you how
+00:07
+to configure access control lists on a Cisco
+00:09
+router using the command line interface.
+00:11
+Access control lists can give us granular control
+00:14
+over how data flows across our networks, and which
+00:17
+computers can communicate with specific protocols.<br>
+00:20
+An access control list is simply a sequential list of
+00:23
+statements of what can and cannot be done on the network.
+00:26
+Those that can be done use the permit keyword.
+00:26
+Those that can't be done use the deny keyword.<br>
+2. Defining Lists
+00:29
+The ordering of the lines is important.
+00:31
+These lists should go from the most
+00:32
+specific conditions to the most general.<br>
+00:35
+For instance, if we wanted to disallow FTP
+00:37
+on our network, we could create a statement
+00:40
+added to our access list that denied FTP.
+00:43
+We would do that first, and then later we
+00:44
+might allow all other application protocols
+00:47
+that sit on top of the IP protocol.<br>
+00:49
+And so, we might have two rules there.
+00:52
+It's also important to recognize that there's an
+00:53
+implicit deny anything else or any other traffic.
+00:57
+This is located at the end of every access control list.
+01:01
+In other words, anything that isn't
+01:03
+explicitly permitted is implicitly denied.<br>
+3. Configuring ACL's
+01:05
+For our demonstration, we're going to use this Windows
+01:08
+10 virtual machine that you can see over here.
+01:11
+You can see that it currently has access to the Internet.
+01:14
+We could look up access control
+01:16
+lists and find out some information.<br>
+01:19
+We can also see that we can currently
+01:20
+ping, say, Google's DNS servers.
+01:24
+We have access to the Internet.
+01:25
+Let's go ahead and prohibit, or deny
+01:27
+access for this computer to the Internet.<br>
+01:29
+I'm going to attach to my Cisco router using Tera Term here.
+01:33
+I have a cable going to the console port on the router.
+01:36
+You can see that my router is currently,
+01:38
+already configured to allow NAT, and it also has
+01:42
+some specific configuration settings allowing
+01:44
+different networks to connect with each other.<br>
+01:46
+If we wanted to deny access to the Internet for
+01:48
+this device, we need to know what its IP address is.
+01:52
+We can get that by typing IPconfig here.
+01:55
+You can see this is 10.0.0.2.<br>
+02:00
+You can see that it must be connected to this 10.0.0.1
+02:02
+network that's associated with interface FA0/1.
+02:07
+To deny a specific host, it's fairly straightforward.
+02:09
+We need to get into configuration mode.<br>
+4. Types of ACL's
+02:13
+Now, you might have read, or you might know that there are
+02:15
+two different types of access control lists, with Cisco.
+02:18
+There are standard lists, and there are extended ACL.
+02:22
+Standard lists only act on the
+02:24
+source IP address for filtering.<br>
+02:26
+You can only deny or permit specific
+02:28
+hosts based on IP address, not protocols.
+02:30
+Whereas, extended access control lists allow you to
+02:34
+get pretty granular with which ports are allowed and
+02:36
+denied, which protocols are allowed or denied also.<br>
+02:39
+In our case, standard control list
+02:41
+will work fine for this action.
+02:43
+Now that we're in configuration mode, we're going to create
+02:46
+an access list, and we'll just call it access list 10.
+02:49
+Standard lists range typically
+02:52
+from 1 to 99, or from 1300 to 1999.
+02:55
+We'll just choose 10 because that
+02:57
+says this is a standard access list.<br>
+02:59
+And then, we will state that we want to deny
+03:02
+10.0.0.2, and specifically just that host.
+03:06
+This second parameter is a wild card mask.
+03:09
+Essentially, anything that's a zero there, says it
+03:13
+has to match, or the IP address has to match that.<br>
+03:15
+In this case, we're only applying this rule to 10.0.0.2.
+03:18
+Everything has to match that.<br>
+03:21
+We'll do that.
+03:22
+Now, we still have access to the Internet.
+03:26
+We can go ahead and refresh.
+03:27
+You can see that we still get results.
+03:29
+We can't just create the access list.
+03:32
+We now need to apply that access list.<br>
+5. Apply ACL's
+03:34
+And so, in order to apply it, we basically
+03:38
+tell it which interface this applies to.
+03:39
+We're already in configuration mode, so we'll go
+03:43
+to FA0/1, and we'll apply this access list to that.<br>
+03:48
+We're going to apply access list 10 to this
+03:51
+interface, and we're going to examine packets
+03:54
+as they arrive at this interface on the router.
+03:55
+We'll go ahead and say, "Enter there."<br>
+03:58
+And now, if we come over here, we should see
+04:00
+that we no longer have access to the Internet.
+04:03
+It just kind of spins there.
+04:05
+If we come up, and we try to ping, it's unreachable.<br>
+04:09
+Now, one problem with this list
+04:11
+is we explicitly denied this host.
+04:13
+We've achieved what we wanted to.
+04:15
+However, because there's that implicit deny at
+04:19
+the end, we've denied access to everything else
+04:21
+as well, everything that's coming through FA0/1.<br>
+04:24
+If we wanted to keep that there, we'd want to, maybe
+04:28
+create a rule that said access list 10 permit, and then
+04:30
+the range of IP addresses that would be permitted.<br>
+04:33
+In this case, let's just go ahead and
+04:35
+just disable that access control list.
+04:37
+We're still on that, so I'm going to simply
+04:39
+type, no IP access group 10 in, which basically
+04:43
+reverses the command that I had just done.<br>
+04:46
+We should see that now we have
+04:48
+access back out to the Internet.
+04:49
+We can refresh this one, as well.<br>
+6. Deny Ping with ACL's
+04:52
+What if we wanted to deny ping, which uses
+04:54
+ICMP, while still allowing Internet access?
+04:57
+How can we get a little bit more granular?
+04:59
+Well, we're going to need extended
+05:02
+control lists in order to do that.<br>
+05:04
+Let's go ahead and create an extended access control list.
+05:07
+We'll get out of this interface.
+05:09
+Let's go ahead and create access list 100.
+05:13
+For this one, let's first deny ICMP, and we can
+05:16
+specify a single host by just saying, "Host."<br>
+05:19
+We'll say, "Deny this specific host for ICMP."
+05:23
+And, to what network?
+05:25
+We'll say, "To anything that comes through."
+05:27
+The 0.0.0 says, "Anything."
+05:30
+Coupled with this wildcard mask then that denies all ICMP.<br>
+05:35
+Now, we haven't applied this list yet, so
+05:38
+it still will allow us out to the Internet.
+05:41
+We also want to permit access to other types of
+05:43
+protocols, or any other protocol besides ICMP.
+05:46
+Our second rule on our list will allow us to do that.<br>
+05:51
+We're going to permit IP for that host.
+05:56
+We can shorten it and just say, "To any," if we wanted to.
+06:00
+Or, maybe we could be a little broader and say,
+06:02
+"We're actually going to allow anyone on the 10
+06:04
+dot network to have access to any network."<br>
+06:07
+Let's go ahead and try to apply that to FA0/1.
+06:12
+Let's go ahead and try it.
+06:15
+So, we are not able to ping, but we
+06:18
+are able to get out to the Internet.
+06:21
+Let's go ahead and show you that,
+06:23
+and that it's not just cached.
+06:25
+You can do different queries.<br>
+7. Defining ACL's
+06:26
+Access control lists are very
+06:29
+powerful but can become complicated.
+06:30
+It's important that you understand the basics that
+06:33
+essentially these are just a sequential list of
+06:35
+permit-and-deny statements, with an implicit deny at the end.<br>
+06:38
+Standard access control lists allow you
+06:40
+to filter based on a source IP address.
+06:42
+Extended access control lists allow you to filter more
+06:45
+granularly on specific protocols, or even specific ports
+06:48
+for individual hosts, or for whole ranges of addresses.<br>
+06:53
+Okay.
+8. Summary
+06:53
+That's it for this demonstration.
+06:55
+In this demonstration, we showed you how to
+06:57
+configure access control lists on a Cisco
+06:59
+router using the command line interface.<br>
+07:00
+Access control lists are foundational to allow us to
+07:03
+screen the data that comes through our networks that
+07:05
+we either allow out or into our corporate networks.<br>

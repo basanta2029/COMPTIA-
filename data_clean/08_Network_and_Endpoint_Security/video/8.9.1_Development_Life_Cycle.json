@@ -1,0 +1,169 @@
+{
+  "metadata": {
+    "chapter_num": "8",
+    "section_num": "8.9.1",
+    "title": "Development Life Cycle",
+    "content_type": "video",
+    "filename": "8.9.1_Development_Life_Cycle_[video].txt",
+    "file_path": "data_raw/08_Network_and_Endpoint_Security/8.9.1_Development_Life_Cycle_[video].txt",
+    "word_count": 1155,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script In this lesson, we'll look at how to apply security concepts to software development. Even though you may not be a software developer yourself, most security professionals work with software engineers in some capacity. Just like other company resources, the applications they develop need to be properly secured. Today, we'll look at the two most common development lifecycles to understand how you can secure each step throughout the development process. The most widely used development model is the Waterfall model. It's called this because each step is completed before the next step is begun. Each step flows to the next like a waterfall. The first step in a Waterfall model is Requirements. All requirements for the application need to be gathered from the client, user, or stakeholder. The next step is Design. This is when the software is documented, diagrammed, and designed. After that, we have Implementation. This is the actual coding and building of the application. We then have the Testing phase. During this phase, a quality assurance team makes sure that the team met the requirements, that the code works properly across devices, and that security flaws and vulnerabilities were phased out. After Testing comes the Deployment. This is when the application is released to a client or to the public. The final step is Maintenance. The application is in use in this phase, but it's monitored for bugs or problems that are quickly patched. This is an ongoing stage that continues throughout the app's life. Understand that the application will likely go through some of these steps multiple times before moving on. For example, the application might go through the Design step five times before it's ready to move on to the Implementation step. Then the application may move from the Implementation stage back to the Design stage if a new feature needs to be added. This entire development cycle is a slow process and may take months or years to complete. The Waterfall method lacks flexibility since the requirements determined in the beginning carry through to the end product. A more agile approach was introduced in 2001 which approaches software development as a continuous, changing process with never-ending versions, bug fixes, and enhancements. This approach is aptly named Agile. One reason the Agile methodology is pragmatic is because security vulnerabilities are constantly addressed with new updates and fixes. Unlike Waterfall, Agile doesn't work on the entire application at once. Instead, it breaks development into smaller time frames called Sprints. Each Sprint has a specific duration, usually two to three weeks. Within this time frame, developers work on a specific application feature. These features typically go through the same stages that all applications go through, such as Requirements, Design, Development, Testing, and Deployment. At the end of the Sprint, the developers move on to the next feature. With Agile, you perform testing throughout the development cycle to help catch security vulnerabilities early. Waterfall, on the other hand, leaves testing until the end of the cycle. This can cause testing time to be cut short to meet deadlines. Coding errors and design flaws are the main causes of software vulnerabilities. We can categorize these errors into two types: compile errors and runtime errors. A compile error refers to an error that occurs during the building or compilation stage. The error compromises the software implementation, which prevents it from running at all. A runtime refers to an error that occurs while the software is running. The software begins execution, but it fails when it cannot resolve a problem it encounters. During the coding and design phases, you can increase application security by integrating security testing into each step of the process. Let's look at three testing methods: static, dynamic, and interactive application security testing. Static application security testing, or SAST, is also known as white box testing. SAST focuses on analyzing source code, binaries, and byte code early in the development process. SAST tools are good at identifying things like SQL-injection vulnerabilities and buffer overflows. They can identify the exact cause of a coding problem, but only in code not yet deployed. They're language specific, but you can run them continually and apply them widely. Please note that they do have a high percent of false positives and are limited in the types of vulnerabilities they can detect. Dynamic application security testing, or DAST, is also known as black box testing. DAST scans a deployed application once it enters runtime. The results are based on how the application responds to a series of tests from the outside. These tests aren't language specific and have a lower rate of false positives. The downsides to DASTs are that they're hard to automate, can't pinpoint the exact cause of a flaw, and can take up to a week to complete. Finally, we have interactive application security testing, or IAST, which can be broken down into two types: passive and active. In passive IAST, we build interactivity into static application security testing. IAST tools are source code scanners that work during runtime. In active IAST, the testing tools can access interpreters and compliers, allowing precise identification of a problematic line of code during runtime. This speeds up the testing and remediation process. The combination of passive and active IAST can help us in the development stage by catching vulnerabilities early, in the QA stage by adding automated security checkpoints, and in the production stage through continuous monitoring. That's it for this lesson. In this lesson, we reviewed two common software development lifecycles: Waterfall and Agile. Then we looked at two different kinds of coding errors: compile errors and runtime errors. We finished up by looking at static, dynamic, and interactive application security testing and how these tools can help us secure applications throughout the development lifecycle.",
+  "chunks": [
+    {
+      "chunk_id": "8.9.1_chunk_1",
+      "content": "In this lesson, we'll look at how to apply security concepts to software development. Even though you may not be a software developer yourself, most security professionals work with software engineers in some capacity. Just like other company resources, the applications they develop need to be properly secured. Today, we'll look at the two most common development lifecycles to understand how you can secure each step throughout the development process.",
+      "summary": "This lesson emphasizes the importance of integrating security concepts into the software development lifecycle, highlighting the collaborative role of security professionals with software engineers. It covers the two predominant development lifecycles, illustrating how to implement security measures at each stage to ensure that applications are adequately protected throughout their creation and deployment. Understanding these practices is essential for safeguarding company resources and mitigating vulnerabilities in software applications.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.9.1",
+        "title": "Development Life Cycle",
+        "content_type": "video",
+        "filename": "8.9.1_Development_Life_Cycle_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.9.1_Development_Life_Cycle_[video].txt",
+        "word_count": 1155,
+        "has_content": true
+      },
+      "section_header": "Development Lifecycle",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "8.9.1_chunk_2",
+      "content": "The most widely used development model is the Waterfall model. It's called this because each step is completed before the next step is begun. Each step flows to the next like a waterfall. The first step in a Waterfall model is Requirements. All requirements for the application need to be gathered from the client, user, or stakeholder. The next step is Design. This is when the software is documented, diagrammed, and designed. After that, we have Implementation. This is the actual coding and building of the application. We then have the Testing phase. During this phase, a quality assurance team makes sure that the team met the requirements, that the code works properly across devices, and that security flaws and vulnerabilities were phased out. After Testing comes the Deployment. This is when the application is released to a client or to the public. The final step is Maintenance. The application is in use in this phase, but it's monitored for bugs or problems that are quickly patched. This is an ongoing stage that continues throughout the app's life. Understand that the application will likely go through some of these steps multiple times before moving on. For example, the application might go through the Design step five times before it's ready to move on to the Implementation step. Then the application may move from the Implementation stage back to the Design stage if a new feature needs to be added. This entire development cycle is a slow process and may take months or years to complete. The Waterfall method lacks flexibility since the requirements determined in the beginning carry through to the end product.",
+      "summary": "The Waterfall Software Development Cycle Model is a linear approach where each phase—Requirements, Design, Implementation, Testing, Deployment, and Maintenance—must be completed sequentially before moving to the next. This model emphasizes thorough documentation and quality assurance, ensuring that security flaws are addressed during the Testing phase. However, its rigidity can lead to challenges, as changes in requirements may necessitate revisiting earlier stages, making the process time-consuming and less adaptable to evolving needs.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.9.1",
+        "title": "Development Life Cycle",
+        "content_type": "video",
+        "filename": "8.9.1_Development_Life_Cycle_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.9.1_Development_Life_Cycle_[video].txt",
+        "word_count": 1155,
+        "has_content": true
+      },
+      "section_header": "Waterfall Software Development Cycle Model",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "8.9.1_chunk_3",
+      "content": "A more agile approach was introduced in 2001 which approaches software development as a continuous, changing process with never-ending versions, bug fixes, and enhancements. This approach is aptly named Agile. One reason the Agile methodology is pragmatic is because security vulnerabilities are constantly addressed with new updates and fixes.",
+      "summary": "The Agile Model, introduced in 2001, emphasizes a continuous and iterative approach to software development, allowing for ongoing updates, bug fixes, and enhancements. This methodology is particularly effective in addressing security vulnerabilities, as it facilitates the rapid deployment of security patches and improvements in response to emerging threats. By integrating security into the development process, Agile promotes a proactive stance on cybersecurity.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.9.1",
+        "title": "Development Life Cycle",
+        "content_type": "video",
+        "filename": "8.9.1_Development_Life_Cycle_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.9.1_Development_Life_Cycle_[video].txt",
+        "word_count": 1155,
+        "has_content": true
+      },
+      "section_header": "Agile Model",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "8.9.1_chunk_4",
+      "content": "Unlike Waterfall, Agile doesn't work on the entire application at once. Instead, it breaks development into smaller time frames called Sprints. Each Sprint has a specific duration, usually two to three weeks. Within this time frame, developers work on a specific application feature. These features typically go through the same stages that all applications go through, such as Requirements, Design, Development, Testing, and Deployment. At the end of the Sprint, the developers move on to the next feature. With Agile, you perform testing throughout the development cycle to help catch security vulnerabilities early. Waterfall, on the other hand, leaves testing until the end of the cycle. This can cause testing time to be cut short to meet deadlines.",
+      "summary": "The Agile Model in software development emphasizes iterative progress through short cycles called Sprints, typically lasting two to three weeks, where specific application features are developed and tested. This approach allows for continuous testing throughout the development cycle, enabling early detection of security vulnerabilities, unlike the Waterfall model, which postpones testing until the end and may compromise security due to time constraints. Agile promotes adaptability and responsiveness to changes, enhancing overall security in application development.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.9.1",
+        "title": "Development Life Cycle",
+        "content_type": "video",
+        "filename": "8.9.1_Development_Life_Cycle_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.9.1_Development_Life_Cycle_[video].txt",
+        "word_count": 1155,
+        "has_content": true
+      },
+      "section_header": "Agile Model",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "8.9.1_chunk_5",
+      "content": "Coding errors and design flaws are the main causes of software vulnerabilities. We can categorize these errors into two types: compile errors and runtime errors. A compile error refers to an error that occurs during the building or compilation stage. The error compromises the software implementation, which prevents it from running at all. A runtime refers to an error that occurs while the software is running. The software begins execution, but it fails when it cannot resolve a problem it encounters. During the coding and design phases, you can increase application security by integrating security testing into each step of the process. Let's look at three testing methods: static, dynamic, and interactive application security testing.",
+      "summary": "Coding errors and design flaws are primary contributors to software vulnerabilities, categorized into compile errors, which prevent software from running, and runtime errors, which occur during execution. To enhance application security, it is essential to integrate security testing throughout the coding and design phases, utilizing methods such as static, dynamic, and interactive application security testing. These practices help identify and mitigate vulnerabilities early in the development process, ultimately leading to more secure software.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.9.1",
+        "title": "Development Life Cycle",
+        "content_type": "video",
+        "filename": "8.9.1_Development_Life_Cycle_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.9.1_Development_Life_Cycle_[video].txt",
+        "word_count": 1155,
+        "has_content": true
+      },
+      "section_header": "Coding Errors",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "8.9.1_chunk_6",
+      "content": "Static application security testing, or SAST, is also known as white box testing. SAST focuses on analyzing source code, binaries, and byte code early in the development process. SAST tools are good at identifying things like SQL-injection vulnerabilities and buffer overflows. They can identify the exact cause of a coding problem, but only in code not yet deployed. They're language specific, but you can run them continually and apply them widely. Please note that they do have a high percent of false positives and are limited in the types of vulnerabilities they can detect.",
+      "summary": "Static Application Security Testing (SAST), or white box testing, involves analyzing source code and binaries during the early stages of development to identify vulnerabilities such as SQL injection and buffer overflows. While SAST tools can pinpoint the exact causes of coding issues before deployment and can be applied continuously across various programming languages, they often produce a high rate of false positives and are limited in the range of vulnerabilities they can detect. This makes SAST a valuable but not exhaustive component of a comprehensive security strategy.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.9.1",
+        "title": "Development Life Cycle",
+        "content_type": "video",
+        "filename": "8.9.1_Development_Life_Cycle_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.9.1_Development_Life_Cycle_[video].txt",
+        "word_count": 1155,
+        "has_content": true
+      },
+      "section_header": "Static Application Security Testing",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "8.9.1_chunk_7",
+      "content": "Dynamic application security testing, or DAST, is also known as black box testing. DAST scans a deployed application once it enters runtime. The results are based on how the application responds to a series of tests from the outside. These tests aren't language specific and have a lower rate of false positives. The downsides to DASTs are that they're hard to automate, can't pinpoint the exact cause of a flaw, and can take up to a week to complete.",
+      "summary": "Dynamic Application Security Testing (DAST), or black box testing, evaluates a deployed application's security by analyzing its behavior during runtime without access to the source code. While DAST offers a lower rate of false positives and is not language-specific, it faces challenges such as difficulty in automation, inability to identify the root cause of vulnerabilities, and lengthy testing durations that can extend up to a week. This method is crucial for identifying security flaws in applications before they are exploited.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.9.1",
+        "title": "Development Life Cycle",
+        "content_type": "video",
+        "filename": "8.9.1_Development_Life_Cycle_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.9.1_Development_Life_Cycle_[video].txt",
+        "word_count": 1155,
+        "has_content": true
+      },
+      "section_header": "Dynamic Application Security Testing",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "8.9.1_chunk_8",
+      "content": "Finally, we have interactive application security testing, or IAST, which can be broken down into two types: passive and active. In passive IAST, we build interactivity into static application security testing. IAST tools are source code scanners that work during runtime. In active IAST, the testing tools can access interpreters and compliers, allowing precise identification of a problematic line of code during runtime. This speeds up the testing and remediation process. The combination of passive and active IAST can help us in the development stage by catching vulnerabilities early, in the QA stage by adding automated security checkpoints, and in the production stage through continuous monitoring.",
+      "summary": "Interactive Application Security Testing (IAST) encompasses both passive and active testing methods to enhance application security. Passive IAST integrates with static application security testing, while active IAST allows tools to interact with interpreters and compilers for precise vulnerability detection during runtime. This dual approach facilitates early vulnerability identification in development, automated security checks in QA, and ongoing monitoring in production, ultimately streamlining the testing and remediation processes.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.9.1",
+        "title": "Development Life Cycle",
+        "content_type": "video",
+        "filename": "8.9.1_Development_Life_Cycle_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.9.1_Development_Life_Cycle_[video].txt",
+        "word_count": 1155,
+        "has_content": true
+      },
+      "section_header": "Interactive Application Security Testing",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "8.9.1_chunk_9",
+      "content": "That's it for this lesson. In this lesson, we reviewed two common software development lifecycles: Waterfall and Agile. Then we looked at two different kinds of coding errors: compile errors and runtime errors. We finished up by looking at static, dynamic, and interactive application security testing and how these tools can help us secure applications throughout the development lifecycle.",
+      "summary": "This lesson covered two prevalent software development lifecycles—Waterfall and Agile—highlighting their distinct approaches to project management. It also examined coding errors, specifically compile and runtime errors, and introduced static, dynamic, and interactive application security testing methods, emphasizing their role in enhancing application security during the development process. These concepts are crucial for ensuring robust software security from inception to deployment.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.9.1",
+        "title": "Development Life Cycle",
+        "content_type": "video",
+        "filename": "8.9.1_Development_Life_Cycle_[video].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.9.1_Development_Life_Cycle_[video].txt",
+        "word_count": 1155,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 9
+}

@@ -1,0 +1,128 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. SDN Infrastructure and Architecture
+00:04
+In this lesson, we're going to take a deeper
+00:07
+look at software-defined networking, or SDN.
+00:09
+We'll go over how software-defined
+00:11
+networking can enhance your infrastructure
+00:13
+to be more responsive, scalable, and secure.<br>
+00:16
+In a previous lesson, we looked at how the
+00:18
+SDN controller can respond to changing network
+00:20
+conditions and make changes to data flow.
+2. SDN Layer Architecture
+00:23
+Let's take a look at the underlying SDN
+00:25
+architecture to see how this is done.<br>
+00:28
+So, we have our controller right here.
+00:30
+Remember, the controller itself is just a
+00:32
+software platform that contains other
+00:34
+applications it's the network's operating system.<br>
+00:37
+The SDN architecture consists of three layers.
+00:40
+In the middle, there's the control layer.
+00:42
+This is where the controller resides.<br>
+00:44
+Above that is the application layer.
+00:46
+This is where various applications reside.
+00:49
+One of these could be an app that creates a
+00:51
+network map of all the devices in your network.
+00:53
+Another one could be a load balancer that
+00:55
+stops and starts VMs as resource use increases.<br>
+00:59
+The application layer and these various apps
+01:02
+communicate with the control layer through
+01:04
+what's called the northbound interface.
+01:06
+These are sometimes called northbound APIs.<br>
+01:09
+Below the control layer is the physical layer.
+01:12
+This is where the physical networking devices reside.
+01:15
+Even though it's called the physical layer, it's
+01:18
+also where the virtual networking devices reside.
+01:21
+The physical layer communicates to the control
+01:23
+layer through the southbound interface.
+01:26
+The individual networking devices use southbound APIs
+01:30
+to communicate with the control plane, and vice versa.<br>
+01:33
+Understand that this control layer, the
+01:35
+control plane, removes that control plane
+01:37
+from the physical networking devices.
+01:40
+In traditional networks, each of these devices would
+01:42
+have an integrated control plane located on the device.
+01:46
+However, SDN removes this from the devices
+01:49
+and creates a single control plane.<br>
+3. Controller Security
+01:52
+There's one last thing to be aware of
+01:53
+regarding software-defined networks.
+01:55
+As with the implementation of any new feature or technology,
+01:59
+the transition comes with some inherent challenges.<br>
+02:01
+For example, a centralized controller
+02:04
+introduces a new target for attackers.
+02:06
+Imagine a third-party application that uses the northbound
+02:09
+API to gain complete knowledge of your entire network.
+02:12
+That could be very dangerous.
+02:14
+Therefore, it's important to be aware of proper security
+02:17
+techniques and how these interfaces can be compromised.<br>
+4. Summary
+02:21
+That's it for this lesson.
+02:23
+In this lesson, we took a deeper look into
+02:25
+software-defined networking, or networking programmability.
+02:28
+We also talked about some of the security
+02:30
+concerns you need to be aware of with SDN.<br>

@@ -1,0 +1,434 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Enhancing Cloud Performance
+00:04
+In this video, we're going to look at five different ways
+00:06
+the cloud is being enhanced with technologies for
+00:09
+performance: fog computing, edge computing, serverless
+00:13
+architecture, services integration, and resource policies.
+00:17
+Let's get started.<br>
+2. Fog Computing
+00:19
+Fog computing, also known as fogging, is
+00:22
+the cloud plus the Internet of Things.<br>
+00:24
+Fog is a new distributed architecture that extends
+00:27
+services offered in the cloud to edge devices.
+00:30
+Fog nodes are made up of intelligence,
+00:33
+computing power, and storage resources.
+00:35
+This can be in the form of routers or smart
+00:37
+gateways that communicate with the cloud.<br>
+00:40
+These fog nodes might, for example, process signals
+00:43
+coming in from sensors in a certain part of a city
+00:47
+to measure CO2 emissions and then send alerts.<br>
+00:49
+Edge devices are designed to
+00:52
+accomplish specific tasks using apps.
+00:55
+They come in all shapes and sizes, from
+00:57
+smartwatches to autonomous cars to smart buildings.
+01:01
+Edge devices can also be routers, switches, or firewalls.
+01:05
+Fog computing uses decentralized local
+01:07
+network architectures to speed up the analysis
+01:10
+and retrieval of data near the source.<br>
+01:13
+With growing 5G Wireless networking and embedded
+01:16
+artificial intelligence, we're about to have
+01:18
+billions of apps and devices coming online and a
+01:21
+tsunami of data that needs to be processed.
+01:24
+Fog can help with that.<br>
+01:26
+With fog, critical core functions are distributed.
+01:29
+Computing, communications, control, storage, and decision
+01:33
+making are all close to where the data originates locally.
+01:37
+Smart devices and sensors are being developed so the
+01:40
+components can instantly interact via wireless networks.<br>
+3. Benefits of Fog Computing
+01:44
+Fog promises to be a revolutionary new
+01:46
+way of connecting, living, and working.
+01:49
+Its benefits over cloud computing include lower
+01:52
+latency, greater security, and enhanced capacity.
+01:56
+Since fog nodes are physically closer to devices
+01:59
+in the network, users can enjoy much lower latency
+02:02
+with instant responses to their computing needs.<br>
+02:05
+Fog provides greater security mainly because the data
+02:08
+travels a much shorter distance in a distributed network.
+02:12
+With fog, the storage capacity
+02:13
+of the cloud is also enhanced.
+02:16
+For example, a smart vehicle in trial right now is
+02:19
+currently generating 35 gigabytes of data per hour.
+02:23
+Secure fog computing has the power and
+02:25
+reach to process this amount of data.<br>
+02:28
+In addition, fog has the monitoring, detecting, and
+02:31
+reporting capabilities to provide real-time incident response
+02:35
+for security breaches, allowing it to quickly detect and
+02:38
+isolate threats and minimize disruption of services.<br>
+4. Fog Security
+02:42
+While fog computing has many positive aspects, it also
+02:45
+inherits a cornucopia of security issues from cloud
+02:48
+computing: account hijacking, denial of service, access
+02:52
+control issues, unsecure APIs, system and application
+02:56
+vulnerabilities, shared technology issues, and much more.<br>
+5. Edge Computing
+03:00
+Now let's discuss Edge computing.
+03:03
+Edge computing is performed at or near
+03:05
+the source of the data, not in the cloud.
+03:08
+It's a component of fog computing where the architecture
+03:11
+is distributed with decentralized processing power.
+03:14
+We capture, store, process, and analyze the data
+03:17
+near the client, where the data is usually generated.<br>
+03:21
+From the wearable on your wrist to streaming video
+03:23
+optimization, from controlling intersection traffic flow to
+03:27
+smart homes and buildings, edge computing's future is
+03:30
+exponentially expanding with the Internet of Everything,
+03:34
+artificial intelligence, 5G, robotics, machine learning, and
+03:38
+all the other technological developments taking place now.<br>
+03:42
+For edge devices to be smart, they must look
+03:44
+at incoming data, process it effectively,
+03:47
+share it, and take some sort of action.
+03:49
+Edge computing means the edge devices take these actions
+03:52
+without requiring data to be transported elsewhere.
+03:55
+Using a hub and spoke model, the cloud is the hub, and
+03:59
+everything outside the spokes is the edge, like a spiderweb.
+04:02
+Think of it like this: edge computing is about
+04:05
+processing the data locally, where cloud computing
+04:08
+is focused on processing data in a remote data
+04:10
+center that's a public or private cloud.<br>
+6. Benefits of Edge Computing
+04:13
+There are many benefits of edge computing.
+04:16
+And much like fog computing, these include
+04:18
+lower latency, increased bandwidth, greater
+04:21
+resiliency, and data sovereignty.<br>
+04:23
+Data sovereignty is the ability to own and
+04:26
+manage your own data, and companies are very
+04:28
+concerned about making sure their data remains
+04:30
+theirs regardless of the technology they utilize.<br>
+04:34
+Edge also empowers workloads that need
+04:36
+processing in near real time, like autonomous
+04:39
+cars communicating with each other.
+04:41
+This speed and efficiency allows organizations to make more
+04:44
+impactful and timely decisions, which reduces costs, helps
+04:48
+them better engage with customers, and increases privacy.<br>
+7. Security Risks of Edge Computing
+04:52
+Edge computing also suffers from many of the
+04:55
+same security risks as fog and cloud computing.<br>
+8. Serverless Architecture
+04:58
+Another way to enhancing cloud performance is by using
+05:02
+serverless architecture, or serverless computing.
+05:05
+It lets you build and run your apps and services without
+05:08
+having to actually manage the infrastructure they run on.
+05:11
+Yes, your apps are still running on a server, but
+05:14
+you don't have to take care of it or its components.<br>
+05:17
+Instead, your cloud provider takes care of all the server
+05:20
+provisioning management, leaving your developers to focus
+05:23
+on what they do best: creating their core product.
+05:26
+And this saves them precious time and energy.<br>
+05:29
+Basically, a serverless architecture eliminates most of
+05:32
+the infrastructure management tasks of server provisioning,
+05:36
+patching, OS and database maintenance, storage, and more.
+05:39
+The cloud service provider takes care of
+05:42
+fault tolerance and high availability.<br>
+05:45
+Ultimately, serverless architecture reduces costs
+05:48
+and frees the company and its developers to focus
+05:51
+on product innovation and a faster time to market.
+05:54
+This gives them great agility and
+05:56
+responsiveness while they enjoy automatic
+05:59
+application scaling and market competitiveness.<br>
+06:02
+The serverless model is often referred to as Backend
+06:05
+as a Service, or BaaS, meaning that companies simply
+06:09
+pay for the resources consumed on the back end.
+06:12
+Companies can also rent functions and compute
+06:15
+runtimes, known as Function as a Service, or FaaS.
+06:19
+This allows companies to execute application
+06:21
+logic, but none of their data is stored.
+06:24
+Major FaaS vendors are Amazon, Google, IBM, and Microsoft.<br>
+9. Benefits of Services Integration
+06:30
+Benefits of cloud services integration include
+06:33
+synchronized data and apps, increased agility, faster time
+06:36
+to market, improved operational efficiency, reduced
+06:40
+operational costs, increased flexibility, and scalability.
+06:44
+Whether single-cloud or multi-cloud focused,
+06:48
+businesses are enjoying the tremendous, feature-rich
+06:50
+benefits of cloud services integration.<br>
+10. Drawbacks of Serverless
+06:54
+While there are many positive aspects to
+06:56
+serverless, there are a few drawbacks.<br>
+06:59
+The first is performance.
+07:00
+Some code could suffer from latency because
+07:03
+the cloud provider typically spins down the
+07:05
+serverless code while it's not in use.
+07:07
+If the code you need has to take time
+07:09
+to start up, that will cause a delay.
+07:12
+Also, serverless may not be appropriate for some workloads,
+07:16
+like high-performance computing, due to resource limits.<br>
+07:20
+The next drawback is security.<br>
+07:21
+In serverless computing, the total attack
+07:24
+surface is due to each component being an
+07:27
+entry point to the serverless application.
+07:29
+Some of these would include network
+07:31
+sniffing, man-in-the-middle attack, phishing,
+07:34
+SQL injection, DDoS, and code exploit.
+07:38
+Further, because of limitations, companies can't implement
+07:42
+an intrusion detection/prevention system, or IDS/IPS.<br>
+07:47
+The next challenge is privacy.
+07:49
+Many serverless environments use proprietary public
+07:52
+cloud environments, and resources are often shared.
+07:56
+To overcome this, serverless computing can be
+07:59
+done on private clouds or even on-premeses, which
+08:02
+allows companies full control over system privacy.<br>
+11. Services Integration
+08:06
+Integration with the cloud has really grown in popularity
+08:10
+as Software as a Service solutions continue to increase.
+08:14
+More businesses are running a hybrid mix of
+08:16
+on-premises apps and SaaS apps, and this is creating a
+08:21
+much greater need for innovative integration methods.<br>
+12. Integration Types and Methods
+08:24
+There are three major integration types of cloud
+08:26
+technologies: cloud-to-cloud, cloud-to-on-prem,
+08:30
+and a hybrid combination of the two.
+08:32
+Data and app integration needs are the core
+08:35
+concern when you're choosing from these strategies.
+08:38
+Businesses can build their own integration solutions for
+08:41
+their enterprise, or they can employ a third-party provider
+08:44
+with a solution that's reusable, agile, and scalable.
+08:48
+More than likely, integrating with the cloud
+08:50
+could be far more cost-effective as well.<br>
+13. Security issues with Integration
+08:53
+However, data and apps need to be protected
+08:56
+from internal and external threats.
+08:58
+Misconfigurations can open
+09:00
+devastating security vulnerabilities.
+09:03
+A good cloud access security broker, or CASB, can
+09:07
+be a dedicated security solution that monitors and
+09:10
+automates security configuration audits.<br>
+14. Resource Policies
+09:13
+A resource policy is attached to a specific
+09:16
+resource where you can specify who has
+09:18
+access to it and what they can do with it.
+09:21
+This helps to lock down applications and data on
+09:23
+mobile devices and integrate with cloud resources.
+09:27
+You can create policies in something like Microsoft
+09:30
+Intune and then roll them out to all your users.
+09:34
+This includes your users who would
+09:35
+like to bring your own device, or BYOD.<br>
+09:40
+You can keep your corporate apps and data
+09:42
+secure and encrypted on these devices,
+09:44
+regardless of the OS Android, IoS, or Windows.
+09:48
+Policies are usually applied to
+09:50
+groups of users or groups of devices.
+09:53
+If you're using Microsoft Intune for your resource
+09:56
+policies, you'll need to integrate with Azure
+09:59
+Active Directory services in the Azure cloud.<br>
+15. Summary
+10:03
+That's it for this lesson.
+10:04
+In this lesson, we looked at other technologies
+10:07
+that enhance cloud performance like fog computing,
+10:09
+edge computing, and serverless architecture.
+10:12
+We also discussed services integration, and
+10:15
+we ended by exploring resource policies.
+10:18
+The cloud will continue to expand, and more options
+10:21
+will become available to enhance its performance.<br>

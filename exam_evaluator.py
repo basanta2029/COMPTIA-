@@ -152,7 +152,7 @@ class ExamEvaluator:
     def evaluate_question(
         self,
         question: ExamQuestion,
-        k: int = 7,
+        k: int = 10,  # Increased from 7 for better context with 2321 chunks
         chapter_filter: Optional[str] = None,
         verbose: bool = True
     ) -> Dict:
@@ -218,7 +218,7 @@ class ExamEvaluator:
     def evaluate_questions(
         self,
         questions: List[ExamQuestion],
-        k: int = 7,
+        k: int = 10,  # Increased from 7 for better context with 2321 chunks
         chapter_filter: Optional[str] = None,
         verbose: bool = True
     ) -> Dict:

@@ -1,0 +1,50 @@
+Security Pro 8.0
+
+5.8.3 Network Application Facts
+
+This lesson covers the following topics:
+
+Vulnerability scanning
+Application vulnerability scanning
+Package monitoring
+Managing networking software
+Vulnerability Scanning
+
+Vulnerability scanning supports application security, as it helps to locate and identify misconfigurations and missing patches in software. Advanced vulnerability scanning techniques focused on application security include specialized application scanners, pen-testing frameworks, and static and dynamic code testing.
+
+Vulnerability scanning tools like openVAS and Nessus are popular tools offering a broad range of features designed to analyze network equipment, operating systems, databases, patch compliance, configuration, and many other systems. While these tools are very effective, application security analysis warrants much more specialized approaches. Several specialized tools exist to more deeply analyze how applications are designed to operate and can locate vulnerabilities not typically identified using generalized scanning approaches.
+Application Vulnerability Scanning
+
+Application vulnerability scanning describes a specialized vulnerability scanning method for identifying software application weaknesses. This includes static analysis (reviewing application code without executing it) and dynamic analysis (testing running applications), which can identify issues like unvalidated inputs, broken access controls, and SQL injection vulnerabilities. Application vulnerability scanning is typically handled separately from general vulnerability scanning due to the unique nature of software applications and the specific types of vulnerabilities they introduce. General vulnerability scanning is designed to detect system-wide or network-wide weaknesses, such as out-of-date software or misconfigured firewalls.
+
+In contrast, application vulnerability scanning evaluates the coding and behavior of individual software applications. It looks for issues like cross-site scripting (XSS), SQL injection, and insecure direct object references unique to software applications. These application-specific vulnerabilities require specialized tools and techniques to identify and mitigate and are generally different from the scanning tools used in general vulnerability scanning. Applications frequently have their own release and update cycles, separate from the rest of the environment, necessitating a more targeted vulnerability management process.
+Package Monitoring
+
+Another important capability in application vulnerability assessment practices includes package monitoring. Package monitoring is associated with vulnerability identification because it tracks and assesses the security of third-party software packages, libraries, and dependencies used within an organization to ensure that they are up-to-date and free from known vulnerabilities that malicious actors could exploit. Package monitoring is associated with the management of software bill of materials (SBOM) and software supply chain risk management practices.
+
+In an enterprise setting, package monitoring is typically achieved through automated tools and governance policies. Automated software composition analysis (SCA) tools track and monitor the software packages, libraries, and dependencies used in an organization's codebase. These tools can automatically identify outdated packages or packages with known vulnerabilities and suggest updates or replacements. They work by continuously comparing the organization's software inventory against various databases of known vulnerabilities, such as the National Vulnerability Database (NVD) or vendor-specific advisories.
+
+In addition to these tools, organizations often implement governance policies around software usage. These policies may require regular audits of software packages, approval processes for adding new packages or libraries, and procedures for updating or patching software when vulnerabilities are identified.
+Managing Networking Software
+
+Use the following to control the use of networking software:
+
+Have a written policy that identifies the allowed or prohibited usage of all software.
+Use Group Policy or other methods to prevent installation of the software.
+Block firewall ports that are used by the software.
+Consider implementing an application control solution.
+A firewall alone may be insufficient in blocking the use of network applications.
+Knowledgeable users can circumvent firewall ACLs by reconfiguring network applications to use ports commonly left open.
+Packet filtering firewalls do not inspect the contents of a packet. Only the source IP address, destination IP address, protocol, and port are used to determine if a packet should be blocked.
+An application control solution can be used to block unauthorized network applications.
+Application control implementations use application signatures to identify specific applications.
+The contents of packets are inspected and compared against these signatures to identify the associated application.
+An application allow list is defined centrally and applied to all network devices.
+Only applications contained in the allow list are allowed.
+Several actions can be applied to applications that are not on the allow list:
+Flagged applications are allowed, but a violation is logged when they are identified.
+Blocked applications are not allowed and are blocked. The session is dropped if it uses UDP and reset if it uses TCP.
+Tarpitted applications are not allowed. However, the connection between hosts is kept alive while the application data itself is silently dropped. This makes it appear to both hosts that the other host is receiving the data but not responding.
+Note:
+Not all application control solutions support tarpitting application traffic.
+If a user tries to use a disallowed application, they can be prompted to contact the help desk or system administrator to get the application reviewed and approved for use.

@@ -1,0 +1,182 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Virtual Network Devices
+00:05
+Let's talk a little bit about virtual networks.
+00:08
+A virtual network is a computer network
+00:10
+consisting of virtual and physical devices.
+00:13
+Virtual devices save organizations money.
+00:16
+By using less physical storage space, a company is able
+00:19
+to have at least twice as many devices in a network
+00:22
+because they pay for very little space in a data center.<br>
+2. Protocol-Based Virtualization
+00:26
+One form of network virtualization is protocol-based.
+00:30
+You should already be familiar
+00:31
+with this type of virtualization.
+00:32
+VLANs and VPNs are two examples of
+00:36
+protocol-based network virtualization.<br>
+00:39
+Remember, with a VLAN, the network
+00:41
+devices aren't physically segmented.
+00:43
+The only thing that segments these devices
+00:45
+is software defining how communications are
+00:48
+routed by looking at the VLAN IDs of packets.
+00:52
+The same is true with a VPN.
+00:54
+There's no dedicated, physical connection
+00:56
+between two devices using a VPN.
+00:58
+It's a virtualized dedicated connection.<br>
+01:02
+Now, let's go over some virtual networking devices and how
+01:05
+they can be used to create a more secure network design.<br>
+3. vSwitch
+01:09
+The first network device we'll look
+01:11
+at is a virtual switch, or vSwitch.
+01:12
+A vSwitch is a software application that facilitates
+01:17
+the communication between VMs by checking data
+01:20
+packets before moving them to a destination.
+01:22
+vSwitches are often integrated
+01:25
+with virtual machine software.
+01:27
+Sometimes, they're even part of a server's firmware.<br>
+01:30
+The nice thing about a vSwitch is it's much easier
+01:33
+to implement and manage than a traditional switch.
+01:36
+In addition, a vSwitch can actually ensure
+01:38
+the security integrity of virtual hosts,
+01:41
+thereby creating a more secure network.
+01:44
+For example, a vSwitch could make sure that a
+01:46
+VM meets certain security criteria before it is
+01:49
+allowed to communicate on the virtual network.
+01:52
+If it fails the security check,
+01:54
+its communications will be blocked.<br>
+01:57
+Some of the most common vSwitch platforms are Open vSwitch
+02:00
+(OVS), VMware virtual switch, and the Cisco Nexus 1000v.
+02:05
+All three can function within a software-defined
+02:08
+network as an SDN controller, allowing a much
+02:12
+more dynamic network environment.<br>
+4. vRouter
+02:14
+A virtual router, or vRouter, is a software
+02:17
+function that replicates a physical router.<br>
+02:20
+The nice thing about a virtual router is that
+02:22
+it doesn't need to rely on the IP routing
+02:25
+functionality used by physical routers.
+02:28
+This means you can move routing functions around a network
+02:31
+freely, creating a more dynamic network environment.<br>
+02:34
+In addition, when you use a virtual router,
+02:37
+you are free from a specific vendor ecosystem.
+02:40
+This means you aren't locked in to
+02:42
+proprietary applications or protocols and can
+02:45
+more customize your networking environment.
+02:48
+Virtual routers even work well with SDN infrastructure.<br>
+5. Drawbacks of Virtual Networking Devices
+02:52
+Note that, while virtual networking devices can be
+02:56
+very flexible and offer a lot of benefits, they still
+02:59
+aren't a replacement for physical networking devices.<br>
+03:02
+Virtual networking devices use shared hardware resources,
+03:06
+making them a poor choice for resource-intensive tasks,
+03:07
+such as encrypting and decrypting information.
+03:12
+Load balancing can also become an issue as the
+03:15
+resources used to route, switch, and load-balance
+03:19
+communication are shared among the devices.<br>
+03:22
+Another drawback is all of these components rely on software
+03:26
+applications and are susceptible to things like VM escape.
+03:30
+If your entire network is virtualized, there is
+03:33
+no physical boundary between certain systems.
+03:36
+With physically segmented systems, it is impossible for an
+03:40
+attacker to leap between segments without physical access.
+03:43
+With virtual segmentation, an attacker only
+03:46
+needs to know of an exploit that allows the leap.<br>
+6. Summary
+03:50
+That's it for this lesson.
+03:52
+In this lesson, we looked at virtual networking devices.
+03:55
+We looked at protocol-based virtualization,
+03:58
+virtual switches, and virtual routers.
+04:01
+We looked at how these virtual devices
+04:03
+can benefit a networking environment.
+04:06
+And we finished by looking at some of the
+04:08
+drawbacks of virtual networking devices.<br>

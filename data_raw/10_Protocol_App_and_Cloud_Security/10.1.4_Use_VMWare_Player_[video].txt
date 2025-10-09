@@ -1,0 +1,207 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Use VMware Player
+00:04
+In this demo, we'll be working with VMware
+00:06
+Workstation Player, which is software that allows
+00:09
+the installation of virtual machines, or VMs.
+00:13
+This software is similar to commercially available
+00:15
+hypervisors, but on a much smaller scale.
+00:19
+VMware Workstation Player is designed to be used on
+00:22
+your desktop for either personal or business use.
+00:25
+Today, we'll just be looking at the standard
+00:27
+edition that you'd use in a home lab or for testing.<br>
+2. Install a VM
+00:31
+Let's go ahead and walk through
+00:33
+a virtual machine installation.
+00:35
+We have several options off to the right.
+00:37
+Create a New Virtual Machine will start the
+00:39
+wizard to add a virtual machine to our player.
+00:42
+Open a Virtual Machine will add a virtual machine
+00:44
+that was already created elsewhere or with an open
+00:47
+virtual machine format, such as an .ovf file.
+00:51
+There's an upgrade option here to get Workstation Pro,
+00:55
+which gives you more features than would typically come with
+00:57
+VMware's ESXI hypervisor, but this requires a paid license.
+01:03
+You can always get help if you're feeling
+01:05
+stumped and want to check out more information.
+01:07
+We're going to go ahead and create a new VM.<br>
+01:11
+Typically, operating systems have an ISO
+01:13
+that's downloadable from their website.
+01:16
+We have some ISOs already downloaded,
+01:18
+so we're just going to click Browse.
+01:20
+We'll select our Win11 ISO file and click Open.
+01:27
+From here, we just need to click Next.
+01:29
+Quickly make sure that the Guest
+01:30
+operating system is set appropriately.
+01:33
+In our case, it'll be Microsoft Windows and
+01:36
+the version will be Windows 10 and later x64.
+01:39
+Click Next.<br>
+01:42
+Here it gives you an option to name the VM and its location.
+01:46
+Just to make things easier, I'll change the
+01:48
+name to Windows11 and leave the location alone.
+01:51
+Click Next.
+01:53
+Okay, this is one feature that's sort of unique.
+01:56
+We have the ability to store the VM's disk as a
+01:58
+single file or break it up into smaller files.
+02:02
+It says that it might be easier to move the smaller
+02:04
+files, but in our case, we just want to keep it as one.
+02:08
+Also, be mindful of how much disk space you
+02:10
+have on your workstation and how much you plan
+02:12
+to use in the future on this virtual machine.
+02:16
+There are usually bare bone
+02:17
+requirements for all operating systems.
+02:19
+Of course, you may want to add more
+02:21
+if there's another purpose to this VM.
+02:23
+Let's click Next.<br>
+02:25
+Notice that it didn't give me the
+02:26
+option to tweak more VM settings.
+02:29
+If you do want to finetune things more, like adding
+02:31
+more CPU or memory, tweaking the network, etc., you can
+02:35
+customize the hardware here or do it after the fact by
+02:39
+right-clicking on the VM and going to Settings.
+02:42
+Click Finish.<br>
+3. Customize VM
+02:44
+Now we have a newly created VM ready to boot.
+02:47
+Let's go over the Settings that we have.
+02:51
+Some of this is self-explanatory, like adding or
+02:53
+removing Memory, Processors, or even Hard Disk space.
+02:58
+The Network Adapter is where it gets interesting.
+03:01
+There are many types of network connections to choose from.
+03:04
+Bridged connects directly to the physical network card,
+03:07
+NAT shares the host's IP address, Host-only puts the VM
+03:12
+in an isolated private network, Custom drops it in a
+03:16
+virtual network, and LAN segment does something similar.
+03:20
+NAT may be your best choice if your VM just
+03:22
+needs to reach the internet and isn't going
+03:24
+to be used in conjunction with other VMs.
+03:26
+If you want to network several VMs together, you
+03:29
+can use a custom virtual network or LAN segment.<br>
+03:32
+For example, if I wanted to create a firewall VM
+03:35
+that all my VMs go through first before they hit the
+03:38
+internet, I might have two network adapters in here.
+03:42
+One of them would be the NAT, the internet
+03:45
+source, while the secondary one would be the LAN
+03:47
+or a custom virtual network of my choosing.
+03:49
+Then all the other VMs would use the
+03:51
+virtual network and not the NAT connection.<br>
+03:54
+In our demo, we're just going
+03:56
+to leave it on NAT and click OK.<br>
+4. Boot the VM
+04:01
+Now it's time to power this on.
+04:04
+Clicking Play virtual machine makes it come alive.
+04:07
+And just like that, we're booting the Windows
+04:09
+11 ISO to start the installation process.
+04:12
+Keep in mind that you have to leave
+04:14
+the player open to run these VMs.
+04:17
+These aren't meant to run what they call "headless"
+04:18
+and in the background with VMware Workstation player.
+04:23
+Once this application is closed
+04:24
+out, your VMs close out as well.<br>
+5. Summary
+04:27
+That's it for this demo on virtual machines.
+04:30
+In this demo, we discovered VMware Workstation Player.
+04:33
+We also showed you how to install
+04:35
+a VM and tweak its settings.<br>

@@ -1,0 +1,263 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Poison ARP
+00:04
+On-path attacks are very popular
+00:06
+because they're so productive.
+00:08
+When a hacker puts themselves between a victim
+00:10
+and the machine they're connecting to, they can
+00:12
+capture traffic, delete traffic, inject their
+00:14
+own traffic, spoof DNS, and capture passwords.
+00:18
+Imagine the damage that can happen if someone
+00:20
+captures important documents and leaks their
+00:23
+contents or steals the information.
+00:25
+In this demo, we're going to illustrate how to
+00:27
+capture a password with a on-path attack
+00:30
+so that, as a security analyst, you can take
+00:33
+countermeasures to protect your organization.<br>
+2. Scan Subnet with NMAP
+00:35
+So, let's get started.
+00:37
+First, I'm going to scan my subnet to see
+00:39
+what hosts are connect and identify my router.
+00:42
+Inside this terminal on my Kali Linux machine, I
+00:45
+can type in "nmap 10.10.10.0/24' and press Enter.
+00:52
+This is going to scan my 10.10.10.0 subnet.
+00:55
+It finished pretty quickly.<br>
+00:57
+Now let's scroll up and see what we found.
+00:59
+Up there, I found my router, router.CorpNet.xyz
+01:03
+with an IP address of 10.10.10.1.
+01:06
+We need to remember this information for later.<br>
+01:08
+Here, I have another device on the
+01:11
+CorpNet domain with an IP of 10.10.10.169.<br>
+01:13
+I'll scroll down a bit.
+01:16
+This device, here, is the one I'm most
+01:18
+interested in, PC-12 with an IP ending in 195.
+01:22
+This is the machine that's going to be my victim machine
+01:25
+and the one that I'm going to try to capture passwords from.
+01:27
+Let' go ahead and close this terminal.<br>
+3. Finding our Hosts
+01:30
+Now I want to open Ettercap.
+01:31
+Ettercap comes in both a GUI and a command line interface.
+01:35
+It's pre-installed as part of Kali Linux, so
+01:38
+we don't have to install or download anything.
+01:40
+To open Ettercap, I go up here, to
+01:40
+Applications, go down to Sniffing &amp; Spoofing,
+01:44
+and then, over to the right, find Ettercap.
+01:46
+The Ettercap GUI will appear.
+01:50
+And from there, I'll come up to the
+01:51
+Sniff tab and select Unified Sniffing.
+01:54
+That will launch a dialog box, where I'm
+01:56
+prompted to select my Network interface.
+01:58
+I only have two options.
+02:00
+Depending on your system, you may have multiple interfaces
+02:03
+such as a WLAN interface or multiple LAN interfaces.
+02:06
+I'm going to leave it with eth0 and click OK.<br>
+02:09
+Now let's scan our subnet for hosts.
+02:11
+As you'll recall from our NMAP scan, I had three hosts.
+02:14
+I'll come up to the Hosts tab, come
+02:16
+down to Scan for hosts, and select it.
+02:19
+Ettercap starts scanning the subnet for hosts.
+02:21
+Down here, you can see that it
+02:24
+scanned 255 hosts and found three.<br>
+4. Selecting Targets
+02:26
+Now I want to list these hosts,
+02:27
+so I'll go up to the Host tab.
+02:29
+This time, we'll come down to the Hosts list and select it.
+02:32
+Here, we can see our three hosts.
+02:35
+Remember that this 10.10.10.1 was our router, and
+02:38
+our victim machine is the one that ended with 195.<br>
+02:42
+Let's go back up here, to the router, and select it.
+02:44
+Down here, I want to select Add to Target 1.
+02:48
+Now I'll come back up and select the host ending in 195.
+02:52
+And then we'll go back down.
+02:53
+This time, we'll select Add to Target 2.<br>
+02:55
+So, what am I doing here?
+02:58
+This is where I'm going to insert myself
+03:00
+between the router and the victim.
+03:02
+To do that, I'm going to go up to the Mitm
+03:04
+tab, come down a bit, and select ARP poisoning.
+03:08
+In this new dialog box, I want to check the box
+03:11
+that says "Sniff remote connections" and click OK.<br>
+5. Start Sniffing
+03:14
+All right.
+03:15
+Now, I'll come up to Start and select Start sniffing.
+03:18
+I should have stopped sniffing
+03:19
+earlier, but it'll still work fine.
+03:22
+Now Ettercap is sniffing our traffic
+03:23
+between our victim and the router.
+03:25
+We just need to wait for our victim
+03:27
+to try to log into a website.
+03:29
+Let's jump over to our Windows machine,
+03:30
+the one with the IP that ended with 195.<br>
+6. Capturing Credentials
+03:33
+All right.
+03:34
+I'm over on the Windows machine now,
+03:35
+and I've brought up this website.
+03:37
+It's a Moodle site, a popular learning management
+03:39
+platform used by many educational organizations.
+03:42
+I've hidden the web address, but
+03:44
+it's an HTTP site, not HTTPS.
+03:47
+Just to confirm that we're on the correct
+03:49
+machine, I'll quickly open a command prompt
+03:51
+and do an ipconfig to verify the IP address.
+03:54
+It's the correct machine.
+03:56
+It looks good.
+03:57
+I'll close this window.<br>
+03:58
+Let's go ahead and log in with some credentials.
+04:01
+I'll just type in the word 'teacher',
+04:03
+and I'll use 'letmein' for the password.
+04:05
+I'll click Log in.
+04:07
+It tells me that I have an invalid login,
+04:09
+and it wants me to try logging in again.
+04:11
+That's totally okay for what we're demonstrating.
+04:13
+Let's jump back over to our Kali Linux machine
+04:16
+and see what's happening with Ettercap.<br>
+7. Viewing our Results
+04:18
+Okay.
+04:19
+I'm back on Kali, and here's Ettercap.
+04:22
+Down here, at the bottom, you can see that when
+04:24
+I attempted to log in, Ettercap captured the
+04:27
+username "teacher" and the password "letmein".
+04:27
+Of course, this isn't the correct username and
+04:32
+password, but Ettercap would capture whatever
+04:34
+was entered, and we assume that the user would
+04:37
+eventually enter their correct credentials.<br>
+04:39
+The important thing to remember here is
+04:40
+that this method does not work with HTTPS.
+04:42
+But most users have a habit of using
+04:46
+the same credentials for multiple sites.
+04:48
+So, once you get the credentials to one site,
+04:51
+you'll likely have credentials for multiple sites.<br>
+8. Summary
+04:53
+That's it for this demo.
+04:55
+In this demo, we used Ettercap to create a
+04:57
+on-path attack with ARP poisoning to capture
+05:00
+login credentials through a website.<br>

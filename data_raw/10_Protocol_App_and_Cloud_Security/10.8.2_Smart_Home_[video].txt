@@ -1,0 +1,350 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Smart Devices
+00:04
+Everyone seeks convenience and connectivity whether
+00:07
+you are at work, home, in the car or wherever.
+00:10
+Smart devices are showing up nearly everywhere.
+00:12
+It could be your thermostat, light switches,
+00:14
+light bulbs, electrical plugs, security cameras,
+00:17
+door locks, sprinkler systems, and even digital
+00:20
+speakers such as Google Home or Amazon Echo.<br>
+00:22
+There are hundreds of these devices and
+00:24
+more coming on the market all the time.
+00:26
+It would be simply impossible to cover all of them, but
+00:28
+we are going to take a look at a few of them in this demo.<br>
+2. Speaker and Digital Assistants
+00:31
+The first one, and one of the very
+00:33
+popular, is the Amazon Echo.
+00:35
+The Echo is a smart speaker that is controlled by voice.
+00:38
+It responds to voice commands when you use
+00:40
+a "wake word," which is normally Alexa.<br>
+00:42
+The device is capable of doing things such as playing
+00:44
+music, making a to-do list, setting alarms, providing
+00:47
+weather info, along with all sorts of other things.
+00:50
+It can also be used in conjunction with
+00:52
+other smart devices to control devices such
+00:55
+as lights, security cameras, and so on.
+00:57
+One of my favorite things to do at home is to use Bluetooth
+01:00
+to pair Alexa with my surround sound system and stream music.<br>
+01:03
+Most smart devices are managed with
+01:05
+an app and the Echo is no different.
+01:07
+Let's take a look at the Amazon
+01:09
+Echo app on an Android Device.
+01:11
+Here is a Google Pixel phone and
+01:12
+I have my Amazon Alexa app on it.
+01:14
+Let's go ahead and open it.<br>
+01:15
+The first thing I can see are some things to try,
+01:18
+followed by some of the recent things that it has done.
+01:21
+As you can see, we have some music lovers that use the Echo.<br>
+01:24
+Let's go up to our menu and then down at the bottom.
+01:25
+We will tap on our settings.
+01:27
+When we do that, we get a new screen.
+01:29
+The first thing we can look at is the Alexa account.
+01:32
+Here we do things such as train
+01:33
+Alexa to recognize our voice.
+01:35
+Perhaps we have an accent and want to
+01:37
+train Alexa to recognize it better.<br>
+01:39
+Below that, we can tell Alexa that it is
+01:41
+OK to use voice commands to purchase items.
+01:44
+If we go into that, we can see that we can
+01:45
+require a code confirming the purchase of items.
+01:48
+If that was not the case, I could see
+01:50
+some issues with impulse shopping.
+01:52
+Let's go back.<br>
+01:53
+Next is the Alexa Voice Responses.
+01:56
+Alexa is configured to respond in
+01:58
+short replies which is the default.<br>
+02:00
+The Amazon Household is a feature to allow other users
+02:03
+to use this device to do things such as purchase products
+02:06
+and services, using the Voice Purchasing feature.<br>
+02:09
+Below that is History.
+02:11
+Here you can see a list of things
+02:12
+that Alexa has been asked to do.
+02:14
+As you can see it can be quite detailed.
+02:16
+Although you must use the "wake word" first,
+02:19
+some feel that these smart speakers, may be
+02:21
+listening to us a little too much at times.<br>
+02:23
+The last selection will take you to the Amazon website where
+02:26
+you can view more history items, frequently asked questions,
+02:30
+the privacy notice, and the terms of use for the device.<br>
+02:33
+The Echo can work with other smart devices.
+02:35
+Let's tap down here on the lower
+02:36
+right on the Smart Devices Icon.<br>
+02:39
+The first thing we have is the Echo &amp; Alexa group.
+02:41
+If I tap on that, you can see that
+02:44
+I have a couple of Echo's connected.
+02:45
+If I tap on the first one, Dana's Echo, you can
+02:48
+then see some addition information such as connected
+02:51
+devices, the Wi-Fi information, and so on.
+02:54
+Let's go back a couple of screens.<br>
+3. Smart Light
+02:55
+Next, we have Lights.
+02:57
+This is a smart light located on the front door of my home.
+03:00
+If I look at it, I can see that currently that light is on.
+03:03
+If I tap it, it will go off.
+03:05
+If I tap the icon below, Create a Routine, I could configure
+03:09
+this light to come on at night and go off during the day.
+03:12
+Now for this to work with this Echo, I had
+03:14
+to use the Set this up on the app that came
+03:16
+with the light, in order for this to work.<br>
+03:18
+I'm going to go back a few screens and tap on Plugs.
+03:21
+This is for a smart plug that is in
+03:23
+our home and connected to a lamp.
+03:25
+When I tap this here, I can turn this lamp off or on.
+03:28
+This is also configured to work with voice commands.
+03:31
+I can say, "Alexa, light off."
+03:33
+And she would turn that light off.<br>
+03:35
+If I tap on the Lamp, I can once again see that at
+03:37
+the bottom I can tap here to create a routine for
+03:40
+this plug to come off or on, either at certain times
+03:43
+or use specially configured voice commands to do so.<br>
+03:47
+Now, we saw how the smart plug was
+03:49
+connected and we had a lamp plugged into it.
+03:51
+Let's take a look at that app
+03:53
+and see how that is configured.
+03:54
+I'll exit my Amazon Echo app and go into my Smart Plug app.<br>
+4. Smart Plugs
+03:58
+OK, we are in our app and here you can see
+04:02
+that I have one smart plug and I named it Lamp.
+04:04
+From this app, I can turn the plug, which
+04:06
+the lamp is plugged into, off and on.
+04:09
+The button is green letting me know that it is now on.<br>
+04:12
+If I had other smart devices from this
+04:14
+manufacturer, they would be listed here.
+04:16
+To add a device, I would tap the plus icon up here,
+04:20
+and here we can see a list of all the different
+04:22
+types of devices that I would be able to add.
+04:25
+I don't have any additional devices but if I
+04:27
+did, I would tap the type of device and this app
+04:30
+would walk me through the installation and setup.<br>
+04:33
+For example, if I had a smart bulb, I could just tap here.
+04:36
+You can see that it tells me what to do.
+04:38
+I don't have any of these, so I'll back out of here.<br>
+04:41
+Finally, if I tap on the selection, Works
+04:43
+with Kasa, I can see some of the other smart
+04:45
+devices that are compatible with this device.
+04:48
+You can see Amazon Alexa in this list.
+04:50
+As we saw earlier, this smart
+04:52
+plug works with my Amazon Echo.<br>
+5. Smart Security Cameras
+04:54
+The final thing we will look at are some security cameras.
+04:57
+Once again, the manufacture uses a mobile device
+05:00
+app to setup and configure the security cameras.
+05:03
+The app is also used to view the video clips.<br>
+05:06
+Now this system has three cameras set up and configured.
+05:09
+Each one can be configured individually by
+05:11
+tapping these setting next to the main icon.
+05:14
+Here you can name each camera and check it's battery life.
+05:17
+This system uses batteries, so they can be installed
+05:19
+anywhere, as long as it can get my Wi-Fi signal.<br>
+05:22
+It also shows me the temperature where the camera
+05:25
+is mounted and if the camera is enabled or not.
+05:28
+The retrigger time is the amount of time between
+05:31
+the time it first senses motion and when I want it
+05:34
+to start recording again a second or third time.
+05:36
+I have this set to 10 seconds.<br>
+05:38
+Since the street is in view of the camera and we have
+05:41
+cars going by occasionally, I don't want it picking up
+05:44
+every single car, so I have the sensitivity set to 3.
+05:48
+Only large vehicles from the street set off this camera,
+05:50
+but it still picks up anything that comes in the front yard.<br>
+05:53
+The clip length is set to 25 seconds.
+05:56
+If there is more motion after that, the camera
+05:58
+will retrigger and record for another 25 seconds.
+06:02
+However, below that you can see that the
+06:04
+clip will end early if the motion stops.<br>
+06:06
+As I scroll down, you can see other settings, Infrared
+06:09
+Illuminator, video quality, if the camera is enabled, latest
+06:13
+update, the Wi-Fi signal to the camera, and the camera to the
+06:17
+sync module, which is located next to the wireless router.
+06:20
+Let's go back a screen.<br>
+06:21
+With this particular system, this top view is an
+06:24
+image of what I'm looking at, not a live view.
+06:27
+Since these run on battery, they are not always
+06:29
+recording video, only on motion or if I tap the
+06:32
+video camera icon over here on the left.
+06:35
+When I do, it takes me to a live video stream of the camera.
+06:38
+You can see that it's at night and I have
+06:40
+a skeleton riding a bike next to my house.<br>
+6. Summary
+06:42
+OK, that's it for this demo.
+06:44
+In this demonstration, we talked about smart devices.
+06:47
+We looked at few common smart home devices.
+06:49
+First, we looked at the Amazon Echo, then we looked at
+06:52
+a smart plug and how that is able to work with the Echo.
+06:55
+We ended with a quick overview
+06:57
+of a home security camera system.<br>

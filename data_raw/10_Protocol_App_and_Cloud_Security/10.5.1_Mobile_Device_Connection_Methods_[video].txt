@@ -1,0 +1,224 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Mobile Device Considerations
+00:04
+Mobile devices pose a unique threat to modern networks.
+00:06
+The days when you only had to worry about static
+00:09
+workstations that sit in a cubicle are gone.
+00:12
+Instead, security professionals also have to worry about
+00:15
+countless mobile devices that can be brought in and out of
+00:18
+office and are subject to a host of security vulnerabilities.<br>
+00:22
+In this lesson, we're going to take a look at some
+00:24
+considerations you need to keep in mind when it comes to
+00:26
+mobile devices and the threats they pose to a network.<br>
+2. Connection Methods
+00:30
+Let's first take a look at the various
+00:32
+connection methods used by mobile devices.
+00:35
+Mobile devices use a variety of ways to connect to
+00:37
+the internet, the network, and even other devices.<br>
+00:40
+You're probably familiar with
+00:42
+cellular and Wi-Fi connections.
+00:44
+This is something practically all
+00:45
+mobile devices are equipped with.
+00:47
+However, mobile devices can also use Bluetooth,
+00:50
+NFC, ANT, and infrared to communicate wirelessly.
+00:55
+And each of these connection methods have their own
+00:58
+set of security concerns you should be aware of.<br>
+01:01
+For example, Bluetooth is susceptible to Bluejacking
+01:03
+and Bluesnarfing, and NFC is susceptible to relay
+01:08
+attacks, data corruption, and eavesdropping.
+01:11
+So, when implementing mobile devices, be sure
+01:13
+to account for the various vulnerabilities
+01:15
+each of these connection methods have.<br>
+01:17
+One way to protect against these is to simply disable
+01:20
+these connection methods when they aren't being used.
+01:23
+This is probably the best way to protect against
+01:25
+attacks that leverage vulnerabilities in these systems.<br>
+01:28
+Another way to secure mobile device
+01:30
+communications is to employ proper security
+01:33
+settings and ensure the use of security protocols.
+01:36
+For example, make sure to only allow
+01:38
+connections with trusted devices.<br>
+3. Location, Location, Location
+01:41
+Another thing to consider with mobile
+01:42
+devices is that of geolocation settings.<br>
+01:46
+Most mobile devices are equipped with GPS,
+01:48
+allowing them to use geolocation services.
+01:51
+This helps with certain apps, such
+01:53
+as maps and weather applications.
+01:55
+However, you can also use the GPS unit
+01:58
+in mobile devices for security purposes.<br>
+02:00
+For example, using a technique called geofencing, you can
+02:04
+lock mobile devices to a particular geographical area.
+02:07
+You specify a geographic area where the mobile device
+02:10
+is allowed to function a virtual boundary of sorts.
+02:12
+If the mobile device moves outside of that area, it can
+02:16
+either instruct the user to move back into that area, or
+02:18
+even lock the user out from accessing the device altogether.<br>
+02:23
+This functionality can be useful if you issue
+02:25
+mobile devices to employees, but don't want
+02:28
+them to be able to take them home to use.<br>
+02:31
+Geofencing can also be used to
+02:33
+trigger alerts or notifications.
+02:34
+For example, it can be used to remind a user to carry out
+02:39
+a particular task when they reach a geographic location.<br>
+02:42
+Geolocation services can be of great value to mobile
+02:45
+devices, but they also create some security concerns.
+02:48
+One of these concerns is that of
+02:50
+geolocation data embedded in images.<br>
+02:53
+See, when someone takes a photo on their phone or
+02:55
+mobile device, the geographic location where that
+02:59
+photo was taken is embedded in the image's EXIF data.
+03:01
+If the user was to upload this photo to the
+03:04
+internet, a malicious individual could use the EXIF
+03:07
+data to carry out a social engineering attack.<br>
+03:10
+To combat this, be sure to disable
+03:12
+geotagging on mobile devices.<br>
+4. Compromised Devices
+03:14
+Another concern with mobile devices
+03:16
+is the fact that they are mobile.
+03:18
+Because users are able to take them home,
+03:20
+to the coffee shop, to wherever, they have
+03:23
+the added risk of being lost or stolen.
+03:25
+And if that device contains sensitive information or
+03:28
+company documents, you risk compromising that information.<br>
+03:31
+To protect against this threat,
+03:33
+you can do a couple of things.
+03:34
+First, you can employ full device encryption on
+03:37
+all mobile devices and require them to have some
+03:40
+type of screen lock and authentication method,
+03:42
+whether it's a pin, password, biometric, whatever.
+03:46
+Just make sure the device requires
+03:48
+authentication for access.<br>
+03:50
+Another thing you can do is require all mobile
+03:53
+devices to have some type of remote wipe feature.
+03:55
+Most mobile devices have built-in remote wipe
+03:58
+features, but you might also have to install a
+04:01
+third-party remote wipe feature if necessary.<br>
+04:03
+And lastly, mobile devices pose a risk for
+04:06
+organizations in the form of data exfiltration.<br>
+04:09
+For example, a disgruntled employee could use their
+04:12
+phone to take photos of sensitive information or transfer
+04:15
+documents to their phone via Wi-Fi, Bluetooth, or USB.
+04:19
+They could even use the device to
+04:21
+record sensitive conversations.<br>
+04:23
+If this is a concern for your organization, consider having
+04:26
+an extremely strict mobile device policy or only allow the
+04:30
+use of company-owned mobile devices on the premises.<br>
+5. Summary
+04:34
+Mobile devices pose a unique threat to an organization.
+04:37
+And mobile device use is only
+04:39
+going to increase in the future.
+04:40
+Because of this, it's important that you understand the
+04:43
+threats that mobile devices pose to an organization and
+04:46
+the steps you can take to properly protect your network.<br>

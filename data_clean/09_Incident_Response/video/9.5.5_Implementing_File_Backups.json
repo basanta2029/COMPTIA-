@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "chapter_num": "9",
+    "section_num": "9.5.5",
+    "title": "Implementing File Backups",
+    "content_type": "video",
+    "filename": "9.5.5_Implementing_File_Backups_[video].txt",
+    "file_path": "data_raw/09_Incident_Response/9.5.5_Implementing_File_Backups_[video].txt",
+    "word_count": 584,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script In this demonstration, we're going to look at two ways to back up files on a Windows system—using File History and using the legacy Backup and Restore utility. Let's take a look at setting up File History first. File History saves copies of your files so they can be recovered later if needed. Using the Windows search button, I'll look for file history and click to start it. As you can see, it's currently turned off. There's only one button to choose from. Once it's turned on, you can select Run now to start an immediate backup of the listed locations. As you can see, the H: drive is currently selected as the storage device. To the left, additional options are available. In addition to the Restore personal files option, which is used for retrieving copies after they've been backed up, there's Select drive. When clicked, the available devices are listed. In this case, only the H: drive is available. There's also an option to add a network location. Another important setting is Exclude folders. Currently, the Pictures library is excluded from copies being kept. The Add and Remove buttons can be used to change this list. In Advanced settings, we can change how often copies are made and how many versions to keep. The defaults are Every hour and Forever, respectively. The legacy Backup and Restore tool is designed to hold copies of data or an entire system as a disk image. It's recommended that the device holding the backups be external, or at least on a different storage device than the C: drive. In this case, I have a second device prepared. I'll browse to the Backup and Restore utility found under Control Panel. The tool's full name is Backup and Restore (Windows 7) since this is a legacy tool from the Windows 7 days. Once launched, I'll select Set up backup and then select the appropriate device. The H: drive is the device I intend to perform backups to, so I don't need to make any changes. I could, if necessary, click on the Save on a network button and browse to a shared location for storage. I'll leave it as the H: drive and click Next. At this point, the system wants me to choose which files and folders to back up. Since the default settings are good for our purposes in this demo, I'll leave it on Let Windows choose and click Next. On the next screen, we see a review of the options we've selected and a new Change schedule link. Currently, the backup is run on Sunday at 7:00 PM, which is good for our needs. To finish the configuration, we click Save settings and run backup. That's it for this demonstration on backups. We covered two ways to back up files. First, we looked at backing up using File History, and then we looked at the legacy Windows 7 Backup and Restore utility.",
+  "chunks": [
+    {
+      "chunk_id": "9.5.5_chunk_1",
+      "content": "In this demonstration, we're going to look at two ways to back up files on a Windows system—using File History and using the legacy Backup and Restore utility.",
+      "summary": "This section covers two methods for backing up files on a Windows system: File History, which automates the backup process for user files, and the legacy Backup and Restore utility, which offers more manual control over backup settings. Understanding these tools is essential for ensuring data integrity and recovery in the event of data loss or system failure. Practical application of these methods enhances overall security posture by safeguarding critical information.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.5.5",
+        "title": "Implementing File Backups",
+        "content_type": "video",
+        "filename": "9.5.5_Implementing_File_Backups_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.5.5_Implementing_File_Backups_[video].txt",
+        "word_count": 584,
+        "has_content": true
+      },
+      "section_header": "Create Backups in Windows",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.5.5_chunk_2",
+      "content": "Let's take a look at setting up File History first. File History saves copies of your files so they can be recovered later if needed. Using the Windows search button, I'll look for file history and click to start it. As you can see, it's currently turned off. There's only one button to choose from. Once it's turned on, you can select Run now to start an immediate backup of the listed locations. As you can see, the H: drive is currently selected as the storage device. To the left, additional options are available. In addition to the Restore personal files option, which is used for retrieving copies after they've been backed up, there's Select drive. When clicked, the available devices are listed. In this case, only the H: drive is available. There's also an option to add a network location. Another important setting is Exclude folders. Currently, the Pictures library is excluded from copies being kept. The Add and Remove buttons can be used to change this list. In Advanced settings, we can change how often copies are made and how many versions to keep. The defaults are Every hour and Forever, respectively.",
+      "summary": "File History is a Windows feature that enables users to automatically back up copies of their files for easy recovery. Users can activate File History, select storage locations (like the H: drive), and customize settings such as backup frequency and the number of versions retained. Additionally, options to exclude specific folders and add network locations enhance its flexibility for personal data management.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.5.5",
+        "title": "Implementing File Backups",
+        "content_type": "video",
+        "filename": "9.5.5_Implementing_File_Backups_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.5.5_Implementing_File_Backups_[video].txt",
+        "word_count": 584,
+        "has_content": true
+      },
+      "section_header": "File History",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.5.5_chunk_3",
+      "content": "The legacy Backup and Restore tool is designed to hold copies of data or an entire system as a disk image. It's recommended that the device holding the backups be external, or at least on a different storage device than the C: drive. In this case, I have a second device prepared. I'll browse to the Backup and Restore utility found under Control Panel. The tool's full name is Backup and Restore (Windows 7) since this is a legacy tool from the Windows 7 days. Once launched, I'll select Set up backup and then select the appropriate device. The H: drive is the device I intend to perform backups to, so I don't need to make any changes. I could, if necessary, click on the Save on a network button and browse to a shared location for storage. I'll leave it as the H: drive and click Next. At this point, the system wants me to choose which files and folders to back up. Since the default settings are good for our purposes in this demo, I'll leave it on Let Windows choose and click Next. On the next screen, we see a review of the options we've selected and a new Change schedule link. Currently, the backup is run on Sunday at 7:00 PM, which is good for our needs. To finish the configuration, we click Save settings and run backup.",
+      "summary": "The Backup and Restore (Windows 7) tool allows users to create copies of data or entire system images, ideally stored on an external device or separate storage from the primary drive. Users can set up backups by selecting a storage location, choosing which files to back up, and scheduling regular backups, with default settings often being sufficient for most needs. This legacy tool emphasizes the importance of regular data backups in maintaining system integrity and security.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.5.5",
+        "title": "Implementing File Backups",
+        "content_type": "video",
+        "filename": "9.5.5_Implementing_File_Backups_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.5.5_Implementing_File_Backups_[video].txt",
+        "word_count": 584,
+        "has_content": true
+      },
+      "section_header": "Backup and Restore (Windows 7)",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.5.5_chunk_4",
+      "content": "That's it for this demonstration on backups. We covered two ways to back up files. First, we looked at backing up using File History, and then we looked at the legacy Windows 7 Backup and Restore utility.",
+      "summary": "In this demonstration on backups, two methods were explored: File History, which provides continuous backup of files, and the legacy Windows 7 Backup and Restore utility, which offers a more traditional approach to file backup. Understanding these tools is essential for ensuring data integrity and recovery in case of loss or corruption. Practical application of these methods can enhance organizational data security and resilience.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.5.5",
+        "title": "Implementing File Backups",
+        "content_type": "video",
+        "filename": "9.5.5_Implementing_File_Backups_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.5.5_Implementing_File_Backups_[video].txt",
+        "word_count": 584,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 4
+}

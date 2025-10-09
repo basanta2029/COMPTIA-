@@ -1,0 +1,112 @@
+Security Pro 8.0
+
+5.1.2 Enterprise Network Architecture Facts
+
+This lesson covers the following topics:
+
+Network architecture
+Network infrastructure and OSI model
+Architecture considerations
+Device placement and security controls
+Device attributes
+Network Architecture
+
+Network architecture means the selection and placement of media, devices, protocols/services, and data assets:
+
+Network infrastructure is the media, appliances, and addressing/forwarding protocols that support basic connectivity.
+Network applications are the services that run on the infrastructure to support business activities, such as processing invoices or sending email.
+Data assets are the information that is created, stored, and transferred as a result of business activity.
+Secure network infrastructure and application architecture are put there to support secure business workflows. A workflow is a series of tasks that a business needs to perform, such as accepting customer orders from a web store. Remember that security means the attributes of confidentiality, integrity, and availability.
+
+Analyzing the systems involved in provisioning email can illustrate the sorts of architecture decisions that need to be made:
+
+Access—the client device must access the network via a physical channel and obtain a logical address. The user must be authenticated and authorized to use the email application. The corollary is that unauthorized users and devices must be denied access.
+Email mailbox server—the mailbox stores data assets and must only be accessed by authorized clients, and conversely, must be fully available and fault tolerant to support the genuine user. The email service must run with a minimum number of dependencies over network infrastructure that is resilient to faults.
+Mail transfer server—this must connect with untrusted internet hosts, so communications between the untrusted network and trusted LAN must be carefully controlled. Any data or software leaving or entering the network must be subject to policy-based controls.
+This type of business flow will involve systems with different security requirements. Placing the client, the mailbox, and the mail transfer server all within the same segment will introduce many vulnerabilities. Understanding and controlling how data flows between these network segments is a key part of secure and effective network architecture design.
+Network Infrastructure and the OSI Model
+
+It is helpful to use a layer model to analyze network infrastructure and services. The Open Systems Interconnection (OSI) model is a widely quoted example of how to define layers of network functions.
+
+A network is comprised of nodes and links. At the physical (PHY) layer, or layer 1 in the OSI model, links are implemented as twisted-pair cables transmitting electrical signals, fiber optic cables carrying infrared light signals, or as wireless devices transmitting radio waves.
+
+There are two types of nodes. A host node is one that initiates data transfers. Hosts are usually either servers or clients. An intermediary node forwards traffic around the network. This forwarding occurs at different layers and with different scopes. A network scope of a single site is referred to as a local area network (LAN). Networks that span metropolitan, country-wide, or global scopes are called wide area networks (WANs).
+
+Each network node must be identifiable via a unique address. This addressing function also takes place at different layers with different scopes.
+
+Forwarding and addressing functions are handled by the following network appliances and protocols:
+
+A switch forwards frames between nodes in a cabled network. The network adapter in each host is connected to a switch port via a cable. Switches work at layer 2 of the OSI model. Most LANs use networks based on the Ethernet standard. An Ethernet switch makes forwarding decisions based on the hardware or media access control (MAC) address of attached hosts. A MAC address is a 48-bit value written in hexadecimal notation, such as00-15-5D-01-CA-4A. This addressing works within the local network segment only. This is referred to as a broadcast domain.
+
+Description
+Appliances, protocols, and addressing functions within the OSI network layer reference model. (Images © 123RF.com.)
+
+Wireless access points provide a bridge between a cabled network and wireless hosts, or stations. Access points work at layer 2 of the OSI model. Wireless devices also use MAC addressing at layer 2.
+Routers send packets around an internetwork, making forwarding decisions based on Internet Protocol (IP) addresses. Routers work at layer 3 of the OSI model. Each local segment will normally have a router connected to it. The router acts as a default gateway for hosts on the segment to use to send packets to other segments.
+Transport protocols allow clients to exchange data with application servers. The Transmission Control Protocol (TCP) establishes reliable connections, while the User Datagram Protocol (UDP) allows unreliable, connectionless transfers. Each application protocol is identified by a TCP or UDP port. This functionality is defined at layer 4 of the OSI model.
+Application protocols support client/server functionality for user-level services, such as web browsing, email, and file transfer. Application protocols work at layer 7 of the OSI model.
+Domain Name System (DNS) servers host name records and perform name resolution to allow applications and users to address hosts and services using fully qualified domain names (FQDNs) rather than IP addresses. DNS also works at layer 7 of the OSI model, but is an infrastructure service, rather than a user-level service, like web browsing.
+The OSI model has three upper layers. In practical terms, distinguishing the functions of layers 5, 6, and 7 isn't that helpful, so just think of applications working at layer 7.
+Architecture Considerations
+
+When evaluating the use of a particular architecture and selecting effective controls, consider a number of factors:
+
+Costs—architecture changes, the acquisition and upgrade of appliances, and software require an up-front capital outlay, which can depreciate and lose value. There are also ongoing maintenance and support liabilities. The value of the investment in security architecture and controls can be calculated based on how much they reduce losses from incidents.
+Compute and responsiveness—minimize processing time for workloads. A workload is the processing effort required to complete a task, such as a web server responding to a client request. Each network device requires sufficient CPU, system memory, storage, and network bandwidth resources to ensure an acceptable response time for a given workload. Higher compute resources incur greater costs.
+Scalability and ease of deployment —minimize costs when workloads increase or decrease. If workloads decrease it can be difficult to recover capital costs. If workloads increase it can be difficult to deploy new nodes or upgrade existing nodes to maintain responsiveness. A scalable system is one that can quickly or automatically add or remove compute resources without incurring excessive costs.
+Availability—minimizes downtime or maximizes uptime. Downtime represents the loss of opportunity to do work, damaging the business's reputation, revenue, and profitability. Downtime can be due to planned maintenance or unplanned failures and security incidents.
+Resilience and ease of recovery —reduce the time to recover from a failure. For example, a system that recovers from a failure without manual intervention is more resilient than one that requires an administrator to restart it.
+Power—is a feature that ensures the facility can meet the energy demands of its devices and workloads. Power usage through higher compute resources increases costs. Ensuring that the building infrastructure minimizes power failures improves availability.
+Patch availability—ensures that firmware and software code is protected against exploits for known vulnerabilities. Conversely, the network owner cannot manage this process when they rely on a third party to maintain infrastructure or when a device or software product is no longer supported by its vendor.
+Risk transference—is a contract that uses a third party to manage the network infrastructure. A service-level agreement (SLA) can be defined with penalties if metrics for responsiveness, scalability, availability, and resilience are not maintained.
+On-premises networks tend to have high capital costs and low scalability. For example, consider the difficulty of increasing bandwidth from 1 Gbps to 10 Gbps operation across the entire site. This would likely require the installation of new cable throughout the building. Recovery procedures can be complex if the site premises is affected by a large-scale disaster. This means that availability and resilience can be lower than alternative solutions such as cloud networking.
+Device Placement and Security Controls
+
+The selection of effective controls for network infrastructure is the process of choosing the type and placement of security appliances and software. The aim is to enforce segmentation, apply access controls, and monitor traffic for policy violations.
+
+The selection of effective controls is governed by the principle of defense in depth. Defense in depth means that security-critical zones are protected by diverse preventive, detective, and corrective controls operating at each layer of the OSI model. Defense in depth is ensured through careful selection of device placement within the network topology. There are three options:
+
+Preventive controls—are often placed at the border of a network segment or zone. Preventive controls such as firewalls enforce security policies on traffic entering and exiting the segment, ensuring confidentiality and integrity. A load balancer control ensures high availability for access to the zone.
+Detective controls—might be placed within the perimeter to monitor traffic exchanged between hosts within the segment. This provides alerting of malicious traffic that has evaded perimeter controls.
+Preventive, detective, and corrective controls —might be installed on hosts as a layer of endpoint protection in addition to the network infrastructure controls.
+
+Description
+Placement of security controls to ensure diversity and defense in depth.
+
+As an illustration, the diagram shows how different control types can be positioned within the network to ensure defense in depth:
+
+At the network border, a preventive control such as a firewall enforces access rules for ingress and egress traffic.
+A sensor placed inline behind the border firewall relays traffic to an intrusion detection system to implement detective control and identify malicious traffic that has evaded the firewall.
+Access control lists configured on internal routers enforce rules for traffic being forwarded between internal zones and hosts.
+Incoming traffic for public-facing servers can be mediated by a load balancer, providing a corrective control to mitigate denial-of-service attacks.
+Sensors attached to mirrored switch ports enable intrusion detection for the most sensitive privilege level hosts or zones.
+On each host, endpoint protection software applies a range of preventive, detective, and corrective controls to mitigate threats that have evaded network controls. Endpoint software can implement host firewalls, anti-virus, intrusion detection, and data loss prevention.
+Device Attributes
+
+Attributes determine the precise way in which a device can be placed within the network topology.
+Active vs. Passive
+
+A passive security control is one that does not require any sort of client or agent configuration or host data transfer to operate. For example, network traffic can be directed or copied to a sensor and scanned by an analysis engine. This control is completely passive. Hosts on the network would be unaware that it is operating. The control has no addressable interface.
+
+An active security control that performs scanning must be configured with credentials and access permissions and exchange data with target hosts. An active control that performs filtering requires hosts to be explicitly configured to use the control. This might mean installing agent software on the host or configuring network settings to use the control as a gateway.
+Inline vs. Tap/Monitor
+
+A device that is deployed inline becomes part of the cable path. No changes in the IP or routing topology are required. The device's interfaces are not configured with MAC or IP addresses.
+
+As an example of inline versus monitored deployment options, controls that sniff network traffic can be deployed via a sensor attached to a switch or via a tap attached to a network cable:
+
+SPAN (switched port analyzer)/mirror port — this means that the sensor is attached to a specially configured port on a switch that receives copies of frames addressed to nominated access ports (or all the other ports). This method is not completely reliable. Frames with errors will not be mirrored, and frames may be dropped under heavy load.
+Test access point (TAP) — this is a box with ports for incoming and outgoing network cabling and an inductor or optical splitter that physically copies the signal from the cabling to a monitor port. There are types for copper and fiber optic cabling. Unlike a SPAN, no logic decisions are made so the monitor port receives every frame—corrupt or malformed or not—and the copying is unaffected by load.
+
+
+
+Description
+A TAP device is placed inline with the cable path, while a mirror port uses the switch to copy frames to a detection system. The router/firewall is an active control as client devices must be configured to use it for Internet access. The TAP and mirror ports are passive controls. The are completely transparent to the server and client hosts.
+
+A security device could enter a failure state for a number of reasons. There could be a power or hardware fault, an irreconcilable policy violation, or a configuration error. Hardware failure can be caused by power surges, overheating, and physical damage. Software failure can occur because of bugs, security vulnerabilities, and compatibility issues. Configuration issues can be caused by human errors such as inattention, fatigue, or lack of training. Finally, devices or sites might be impacted by natural disasters such as floods, hurricanes, and earthquakes.
+
+When it fails, a device can designed or configured to fail-open or fail-closed:
+
+Fail-open means that network or host access is preserved, if possible. This mode prioritizes availability over confidentiality and integrity. The risk of a fail-open control is that a threat actor could engineer a failure state to defeat the control.
+Fail-closed means that access is blocked or that the system enters the most secure state available, given whatever failure occurred. This mode prioritizes confidentiality and integrity over availability. The risk of a fail-closed control is system downtime.
+It may or may not be possible to configure the fail mode. For example, an inline security appliance that suffers power failure will fail-closed unless there is an alternative network path. Some devices designed to be installed inline have a backup cable path that will allow a fail-open operation.

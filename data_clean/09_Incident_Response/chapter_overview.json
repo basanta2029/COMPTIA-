@@ -1,0 +1,356 @@
+{
+  "chapter": "09_Incident_Response",
+  "total_documents": 35,
+  "documents": [
+    {
+      "chapter_num": "9",
+      "section_num": "9.1.1",
+      "title": "Incident Response Process",
+      "content_type": "video",
+      "filename": "9.1.1_Incident_Response_Process_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.1.1_Incident_Response_Process_[video].txt",
+      "word_count": 631,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.1.2",
+      "title": "Incident Response Process Facts",
+      "content_type": "text",
+      "filename": "9.1.2_Incident_Response_Process_Facts_[text].txt",
+      "file_path": "data_raw/09_Incident_Response/9.1.2_Incident_Response_Process_Facts_[text].txt",
+      "word_count": 593,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.1.3",
+      "title": "Isolate and Contain",
+      "content_type": "video",
+      "filename": "9.1.3_Isolate_and_Contain_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.1.3_Isolate_and_Contain_[video].txt",
+      "word_count": 573,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.1.4",
+      "title": "Isolate and Contain Facts",
+      "content_type": "text",
+      "filename": "9.1.4_Isolate_and_Contain_Facts_[text].txt",
+      "file_path": "data_raw/09_Incident_Response/9.1.4_Isolate_and_Contain_Facts_[text].txt",
+      "word_count": 511,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.2.10",
+      "title": "Monitoring Data and Metadata Facts",
+      "content_type": "text",
+      "filename": "9.2.10_Monitoring_Data_and_Metadata_Facts_[text].txt",
+      "file_path": "data_raw/09_Incident_Response/9.2.10_Monitoring_Data_and_Metadata_Facts_[text].txt",
+      "word_count": 898,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.2.1",
+      "title": "Security Information and Event Management",
+      "content_type": "video",
+      "filename": "9.2.1_Security_Information_and_Event_Management_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.2.1_Security_Information_and_Event_Management_[video].txt",
+      "word_count": 656,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.2.2",
+      "title": "Log Management",
+      "content_type": "video",
+      "filename": "9.2.2_Log_Management_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.2.2_Log_Management_[video].txt",
+      "word_count": 1255,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.2.3",
+      "title": "SIEM and Log Management Facts",
+      "content_type": "text",
+      "filename": "9.2.3_SIEM_and_Log_Management_Facts_[text].txt",
+      "file_path": "data_raw/09_Incident_Response/9.2.3_SIEM_and_Log_Management_Facts_[text].txt",
+      "word_count": 453,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.2.4",
+      "title": "Monitoring Data and Metadata",
+      "content_type": "video",
+      "filename": "9.2.4_Monitoring_Data_and_Metadata_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.2.4_Monitoring_Data_and_Metadata_[video].txt",
+      "word_count": 1083,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.2.5",
+      "title": "Saving Captured Files with Wireshark",
+      "content_type": "video",
+      "filename": "9.2.5_Saving_Captured_Files_with_Wireshark_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.2.5_Saving_Captured_Files_with_Wireshark_[video].txt",
+      "word_count": 703,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.2.6",
+      "title": "Use Elasticsearch Logstash Kibana",
+      "content_type": "video",
+      "filename": "9.2.6_Use_Elasticsearch_Logstash_Kibana_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.2.6_Use_Elasticsearch_Logstash_Kibana_[video].txt",
+      "word_count": 770,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.2.7",
+      "title": "Use NetworkMiner",
+      "content_type": "video",
+      "filename": "9.2.7_Use_NetworkMiner_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.2.7_Use_NetworkMiner_[video].txt",
+      "word_count": 607,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.2.8",
+      "title": "Configuring Remote Logging on Linux",
+      "content_type": "video",
+      "filename": "9.2.8_Configuring_Remote_Logging_on_Linux_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.2.8_Configuring_Remote_Logging_on_Linux_[video].txt",
+      "word_count": 1111,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.2.9",
+      "title": "Logging Events on pfSense",
+      "content_type": "video",
+      "filename": "9.2.9_Logging_Events_on_pfSense_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.2.9_Logging_Events_on_pfSense_[video].txt",
+      "word_count": 1297,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.3.1",
+      "title": "Forensic Documentation and Evidence",
+      "content_type": "video",
+      "filename": "9.3.1_Forensic_Documentation_and_Evidence_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.3.1_Forensic_Documentation_and_Evidence_[video].txt",
+      "word_count": 621,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.3.2",
+      "title": "Forensic Acquisition of Data",
+      "content_type": "video",
+      "filename": "9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+      "word_count": 1101,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.3.3",
+      "title": "Forensic Tools",
+      "content_type": "video",
+      "filename": "9.3.3_Forensic_Tools_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.3.3_Forensic_Tools_[video].txt",
+      "word_count": 442,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.3.4",
+      "title": "Create a Forensic Drive Image with FTK",
+      "content_type": "video",
+      "filename": "9.3.4_Create_a_Forensic_Drive_Image_with_FTK_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.3.4_Create_a_Forensic_Drive_Image_with_FTK_[video].txt",
+      "word_count": 1529,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.3.5",
+      "title": "Create a Forensic Drive Image with Guymager",
+      "content_type": "video",
+      "filename": "9.3.5_Create_a_Forensic_Drive_Image_with_Guymager_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.3.5_Create_a_Forensic_Drive_Image_with_Guymager_[video].txt",
+      "word_count": 1131,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.3.6",
+      "title": "Create a Forensic Drive Image with DC3DD",
+      "content_type": "video",
+      "filename": "9.3.6_Create_a_Forensic_Drive_Image_with_DC3DD_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.3.6_Create_a_Forensic_Drive_Image_with_DC3DD_[video].txt",
+      "word_count": 1230,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.3.7",
+      "title": "Examine a Forensic Drive Image with Autopsy",
+      "content_type": "video",
+      "filename": "9.3.7_Examine_a_Forensic_Drive_Image_with_Autopsy_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.3.7_Examine_a_Forensic_Drive_Image_with_Autopsy_[video].txt",
+      "word_count": 1277,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.3.8",
+      "title": "Forensic Data Integrity and Preservation",
+      "content_type": "video",
+      "filename": "9.3.8_Forensic_Data_Integrity_and_Preservation_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.3.8_Forensic_Data_Integrity_and_Preservation_[video].txt",
+      "word_count": 753,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.3.9",
+      "title": "Forensic Investigation Facts",
+      "content_type": "text",
+      "filename": "9.3.9_Forensic_Investigation_Facts_[text].txt",
+      "file_path": "data_raw/09_Incident_Response/9.3.9_Forensic_Investigation_Facts_[text].txt",
+      "word_count": 2438,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.4.1",
+      "title": "Redundancy",
+      "content_type": "video",
+      "filename": "9.4.1_Redundancy_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.4.1_Redundancy_[video].txt",
+      "word_count": 960,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.4.2",
+      "title": "Redundancy Facts",
+      "content_type": "text",
+      "filename": "9.4.2_Redundancy_Facts_[text].txt",
+      "file_path": "data_raw/09_Incident_Response/9.4.2_Redundancy_Facts_[text].txt",
+      "word_count": 287,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.4.3",
+      "title": "Hardware Clustering",
+      "content_type": "video",
+      "filename": "9.4.3_Hardware_Clustering_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.4.3_Hardware_Clustering_[video].txt",
+      "word_count": 1611,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.4.4",
+      "title": "Clustering Facts",
+      "content_type": "text",
+      "filename": "9.4.4_Clustering_Facts_[text].txt",
+      "file_path": "data_raw/09_Incident_Response/9.4.4_Clustering_Facts_[text].txt",
+      "word_count": 423,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.5.1",
+      "title": "Backup Types",
+      "content_type": "video",
+      "filename": "9.5.1_Backup_Types_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.5.1_Backup_Types_[video].txt",
+      "word_count": 1892,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.5.2",
+      "title": "Backup Storage Options",
+      "content_type": "video",
+      "filename": "9.5.2_Backup_Storage_Options_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.5.2_Backup_Storage_Options_[video].txt",
+      "word_count": 796,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.5.3",
+      "title": "Backup Types and Storage Facts",
+      "content_type": "text",
+      "filename": "9.5.3_Backup_Types_and_Storage_Facts_[text].txt",
+      "file_path": "data_raw/09_Incident_Response/9.5.3_Backup_Types_and_Storage_Facts_[text].txt",
+      "word_count": 1036,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.5.4",
+      "title": "Configure Network Attached Storage",
+      "content_type": "video",
+      "filename": "9.5.4_Configure_Network_Attached_Storage_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.5.4_Configure_Network_Attached_Storage_[video].txt",
+      "word_count": 979,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.5.5",
+      "title": "Implementing File Backups",
+      "content_type": "video",
+      "filename": "9.5.5_Implementing_File_Backups_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.5.5_Implementing_File_Backups_[video].txt",
+      "word_count": 584,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.5.8",
+      "title": "Backup a Domain Controller",
+      "content_type": "video",
+      "filename": "9.5.8_Backup_a_Domain_Controller_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.5.8_Backup_a_Domain_Controller_[video].txt",
+      "word_count": 529,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.5.9",
+      "title": "Restoring Server Data from Backup",
+      "content_type": "video",
+      "filename": "9.5.9_Restoring_Server_Data_from_Backup_[video].txt",
+      "file_path": "data_raw/09_Incident_Response/9.5.9_Restoring_Server_Data_from_Backup_[video].txt",
+      "word_count": 529,
+      "has_content": true
+    },
+    {
+      "chapter_num": "9",
+      "section_num": "9.0",
+      "title": "Introduction",
+      "content_type": "chapter_intro",
+      "filename": "Chapter_9.0_Introduction.txt",
+      "file_path": "data_raw/09_Incident_Response/Chapter_9.0_Introduction.txt",
+      "word_count": 260,
+      "has_content": true
+    }
+  ]
+}

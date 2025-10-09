@@ -1,0 +1,286 @@
+{
+  "chapter": "06_Resiliency_and_Site_Security",
+  "total_documents": 28,
+  "documents": [
+    {
+      "chapter_num": "6",
+      "section_num": "6.1.1",
+      "title": "Physical Security",
+      "content_type": "video",
+      "filename": "6.1.1_Physical_Security_[video].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.1.1_Physical_Security_[video].txt",
+      "word_count": 831,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.1.2",
+      "title": "Physical Security Facts",
+      "content_type": "text",
+      "filename": "6.1.2_Physical_Security_Facts_[text].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.1.2_Physical_Security_Facts_[text].txt",
+      "word_count": 3228,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.2.1",
+      "title": "Network Monitoring",
+      "content_type": "video",
+      "filename": "6.2.1_Network_Monitoring_[video].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.2.1_Network_Monitoring_[video].txt",
+      "word_count": 1067,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.2.2",
+      "title": "Network Monitoring Facts",
+      "content_type": "text",
+      "filename": "6.2.2_Network_Monitoring_Facts_[text].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.2.2_Network_Monitoring_Facts_[text].txt",
+      "word_count": 984,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.2.3",
+      "title": "Performing Port and Ping Scans",
+      "content_type": "video",
+      "filename": "6.2.3_Performing_Port_and_Ping_Scans_[video].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.2.3_Performing_Port_and_Ping_Scans_[video].txt",
+      "word_count": 985,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.2.4",
+      "title": "Reconnaissance",
+      "content_type": "video",
+      "filename": "6.2.4_Reconnaissance_[video].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.2.4_Reconnaissance_[video].txt",
+      "word_count": 1121,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.2.5",
+      "title": "Perform Reconnaissance with Nmap",
+      "content_type": "video",
+      "filename": "6.2.5_Perform_Reconnaissance_with_Nmap_[video].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.2.5_Perform_Reconnaissance_with_Nmap_[video].txt",
+      "word_count": 874,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.2.6",
+      "title": "Reconnaissance Facts",
+      "content_type": "text",
+      "filename": "6.2.6_Reconnaissance_Facts_[text].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.2.6_Reconnaissance_Facts_[text].txt",
+      "word_count": 1055,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.3.1",
+      "title": "Intrusion Detection",
+      "content_type": "video",
+      "filename": "6.3.1_Intrusion_Detection_[video].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.3.1_Intrusion_Detection_[video].txt",
+      "word_count": 937,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.3.2",
+      "title": "IDS Facts",
+      "content_type": "text",
+      "filename": "6.3.2_IDS_Facts_[text].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.3.2_IDS_Facts_[text].txt",
+      "word_count": 1371,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.3.3",
+      "title": "Implement Intrusion Detection and Prevention",
+      "content_type": "video",
+      "filename": "6.3.3_Implement_Intrusion_Detection_and_Prevention_[video].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.3.3_Implement_Intrusion_Detection_and_Prevention_[video].txt",
+      "word_count": 1204,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.4.1",
+      "title": "Protocol Analyzers",
+      "content_type": "video",
+      "filename": "6.4.1_Protocol_Analyzers_[video].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.4.1_Protocol_Analyzers_[video].txt",
+      "word_count": 671,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.4.2",
+      "title": "Protocol Analyzer Facts",
+      "content_type": "text",
+      "filename": "6.4.2_Protocol_Analyzer_Facts_[text].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.4.2_Protocol_Analyzer_Facts_[text].txt",
+      "word_count": 767,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.4.3",
+      "title": "Analyzing Network Traffic",
+      "content_type": "video",
+      "filename": "6.4.3_Analyzing_Network_Traffic_[video].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.4.3_Analyzing_Network_Traffic_[video].txt",
+      "word_count": 1364,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.5.10",
+      "title": "Malicious Code",
+      "content_type": "video",
+      "filename": "6.5.10_Malicious_Code_[video].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.10_Malicious_Code_[video].txt",
+      "word_count": 1215,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.5.11",
+      "title": "Malicious Code Facts",
+      "content_type": "text",
+      "filename": "6.5.11_Malicious_Code_Facts_[text].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.11_Malicious_Code_Facts_[text].txt",
+      "word_count": 1037,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.5.1",
+      "title": "Analyzing Network Attacks",
+      "content_type": "video",
+      "filename": "6.5.1_Analyzing_Network_Attacks_[video].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.1_Analyzing_Network_Attacks_[video].txt",
+      "word_count": 1079,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.5.2",
+      "title": "Analyzing Network Attacks Facts",
+      "content_type": "text",
+      "filename": "6.5.2_Analyzing_Network_Attacks_Facts_[text].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.2_Analyzing_Network_Attacks_Facts_[text].txt",
+      "word_count": 2225,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.5.3",
+      "title": "Analyzing ARP Poisoning",
+      "content_type": "video",
+      "filename": "6.5.3_Analyzing_ARP_Poisoning_[video].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.3_Analyzing_ARP_Poisoning_[video].txt",
+      "word_count": 1076,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.5.5",
+      "title": "Analyzing DNS Poisoning",
+      "content_type": "video",
+      "filename": "6.5.5_Analyzing_DNS_Poisoning_[video].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.5_Analyzing_DNS_Poisoning_[video].txt",
+      "word_count": 1318,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.5.7",
+      "title": "Analyzing a SYN Flood",
+      "content_type": "video",
+      "filename": "6.5.7_Analyzing_a_SYN_Flood_[video].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.7_Analyzing_a_SYN_Flood_[video].txt",
+      "word_count": 1234,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.5.9",
+      "title": "Examining DNS Attacks",
+      "content_type": "video",
+      "filename": "6.5.9_Examining_DNS_Attacks_[video].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.9_Examining_DNS_Attacks_[video].txt",
+      "word_count": 2665,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.6.1",
+      "title": "Password Attacks",
+      "content_type": "video",
+      "filename": "6.6.1_Password_Attacks_[video].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.6.1_Password_Attacks_[video].txt",
+      "word_count": 1382,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.6.2",
+      "title": "Password Attack Facts",
+      "content_type": "text",
+      "filename": "6.6.2_Password_Attack_Facts_[text].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.6.2_Password_Attack_Facts_[text].txt",
+      "word_count": 1918,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.6.3",
+      "title": "Using Rainbow Tables",
+      "content_type": "video",
+      "filename": "6.6.3_Using_Rainbow_Tables_[video].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.6.3_Using_Rainbow_Tables_[video].txt",
+      "word_count": 721,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.6.5",
+      "title": "Crack Passwords",
+      "content_type": "video",
+      "filename": "6.6.5_Crack_Passwords_[video].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.6.5_Crack_Passwords_[video].txt",
+      "word_count": 1727,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.6.6",
+      "title": "Crack Password Protected Files",
+      "content_type": "video",
+      "filename": "6.6.6_Crack_Password_Protected_Files_[video].txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/6.6.6_Crack_Password_Protected_Files_[video].txt",
+      "word_count": 674,
+      "has_content": true
+    },
+    {
+      "chapter_num": "6",
+      "section_num": "6.0",
+      "title": "Introduction",
+      "content_type": "chapter_intro",
+      "filename": "Chapter_6.0_Introduction.txt",
+      "file_path": "data_raw/06_Resiliency_and_Site_Security/Chapter_6.0_Introduction.txt",
+      "word_count": 253,
+      "has_content": true
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+Security Pro 8.0
+
+6.5.2 Analyzing Network Attacks Facts
+
+This lesson covers the following topics:
+
+Network attacks
+Distributed denial-of-service (DDoS) attacks
+On-path attacks
+Domain Name System (DNS) attacks
+Network Attacks
+
+A network attack is a general category for a number of strategies and techniques that threat actors use to either disrupt or gain access to systems via a network vector. Network attack analysis is usually informed by considering the place each attack type might have within an overall cyberattack lifecycle:
+
+Reconnaissance is where a threat actor uses scanning tools to learn about the network. Host discovery identifies which IP addresses are in use. Service discovery identifies which TCP or UDP ports are open on a given host. Fingerprinting identifies the application types and versions of the software operating each port and potentially the operating system running on the host and its device type. Rapid scanning generates a large amount of distinctive network traffic that can be detected and reported as an intrusion event. Still, it is very difficult to differentiate malicious scanning activity from non-malicious scanning activity.
+Credential harvesting is a type of reconnaissance where the threat actor attempts to learn passwords or cryptographic secrets that will allow them to obtain authenticated access to network systems.
+Denial-of-service (DoS) in a network context refers to attacks that cause hosts and services to become unavailable. This type of attack can be detected by monitoring tools that report when a host or service is not responding or is suffering from abnormally high volumes of requests. A DoS attack might be launched as an end in itself or to facilitate the success of other types of attacks.
+Weaponization, delivery, and breach refer to techniques that allow a threat actor to get access without having to authenticate. This typically involves various types of malicious code being directed at a vulnerable application host or service over the network or sending code concealed in file attachments and tricking a user into running it.
+Command and control (C2 or C&C), beaconing, and persistence refer to techniques and malicious code that allow a threat actor to operate a compromised host remotely and maintain access to it over a period of time. The threat actor has to disguise the incoming command and outgoing beaconing activity as part of the network's regular traffic, such as by using encrypted HTTPS connections. Detection of this type of activity usually depends on identifying anomalous connection endpoints, such as connections to IP addresses in countries that do not respect copyright or privacy laws. There can also be indicators on the compromised host, such as the malware itself and unauthorized startup items.
+Lateral movement, pivoting, and privilege escalation refer to techniques that allow the threat actor to move from host to host within a network or from one network segment to another and to obtain wider and higher permissions for systems and services across the network. These types of attacks are detected via anomalous account logins and privilege use. Still, detection usually depends on machine learning-backed software, as it is typically difficult to differentiate anomalous behavior from normal behavior.
+Data exfiltration refers to obtaining an information asset and copying it to the attacker's remote machine. Anomalous large data transfers might be an indicator of exfiltration, but a threat actor could perform the attack stealthily by only moving small amounts of data at any one time.
+Note that stages in the lifecycle are iterative. For example, a threat actor might perform external reconnaissance and credential harvesting or breach to obtain an initial foothold. They might then perform reconnaissance and credential harvesting from the foothold to perform lateral movement and privilege escalation on internal hosts.
+Distributed Denial-Of-Service (DDoS) Attacks
+
+A denial-of-service (DoS) attack is anything that reduces the availability of a resource. DoS attacks can target physical hardware and infrastructure. A malware-based DoS attack might destroy a file system or engineer excessive CPU, memory, storage, or network bandwidth consumption.
+
+A DoS attack can also exploit protocol or configuration weaknesses at different network layers. DoS attacks against network hosts and gateways are typically of a type called distributed DoS (DDoS). DDoS means that the attack is launched from multiple hosts simultaneously. Typically, a threat actor will compromise machines to use as handlers in a command and control network. The handlers are used to compromise thousands or millions of hosts with DDoS bot tools, forming a botnet.
+
+Some types of DDoS attacks simply aim to consume network bandwidth, denying it to legitimate hosts by using overwhelming numbers of bots making ordinary requests. Others cause resource exhaustion on the victim host by bombarding them with requests, which consume CPU cycles and memory. This delays the processing of legitimate traffic and could potentially crash the host system completely. For example, a SYN flood attack works by withholding the client's ACK packet during TCP's three-way handshake. A server, router, or firewall can maintain a queue of pending connections recorded in its state table. When it does not receive an ACK packet from the client, it resends the SYN/ACK packet a set number of times before timing out the connection. The problem is that a server may only be able to manage a limited number of pending connections, which the DDoS attack quickly fills up. This means that the server is unable to respond to genuine traffic.
+Reflected Attacks
+
+Assembling and managing a botnet large enough to overwhelm a network that has effective DDoS mitigation measures can be a costly endeavor. This has prompted threat actors to devise DDoS techniques that increase the effectiveness of each attack. In a distributed reflected DoS (DRDoS) attack, the threat actor spoofs the victim's IP address and attempts to open connections with multiple third-party servers. Those servers direct their SYN/ACK responses to the victim host. This rapidly consumes the victim's available bandwidth.
+
+An asymmetric threat is one where the threat actor is able to perpetrate effective attacks despite having fewer resources than the victim.
+Amplified Attacks
+
+An amplification attack is a type of reflected attack that targets weaknesses in specific application protocols to make the attack more effective at consuming target bandwidth. Amplification attacks exploit protocols that allow the attacker to manipulate the request in such a way that the target is forced to respond with a large amount of data. Protocols commonly targeted include Domain Name System (DNS), N etwork T ime P rotocol (NTP), and C onnectionless L ightweight D irectory A ccess P rotocol (CLDAP). Another example of a particularly effective attack exploits the Memcached database caching system used by web servers.
+DDoS Indicators
+
+DDoS attacks can be diagnosed by traffic spikes that have no legitimate explanation. Still, they can usually only be mitigated by providing high-availability services, such as load balancing and cluster services. In some cases, a stateful firewall can detect a DDoS attack and automatically block the source. However, for many of the techniques used in DDoS attacks, the source addresses will be randomly spoofed or launched by bots, making it difficult to stop the attack at the source.
+
+
+Description
+Dropping traffic from blocklisted IP ranges using Security Onion IDS. (Screenshot used with permission from Security Onion.)
+On-Path Attacks
+
+An on-path attack is where the threat actor gains a position between two hosts and transparently captures, monitors, and relays all communication between them. Because the threat actor relays the intercepted communications, the hosts might not be able to detect the presence of the threat actor. An on-path attack could also be used to covertly modify the traffic. For example, an on-path host could present a workstation with a spoofed website form to try to capture the user credential. This attack is also referred to as an on-path attack or as an adversary-in-the-middle (AitM) attack.
+
+On-path attacks can be launched at any network layer. One infamous example attacks the way layer 2 forwarding works on local segments. The Address Resolution Protocol (ARP) identifies the MAC address of a host on the local segment that owns an IPv4 address. An ARP poisoning attack uses a packet crafter, such as Ettercap, to broadcast unsolicited ARP reply packets. Because ARP has no security mechanism, the receiving devices trust this communication and update their MAC:IP address cache table with the spoofed address.
+
+
+Description
+Packet capture opened in Wireshark showing ARP poisoning. (Screenshot used with permission from wireshark.org.)
+
+This screenshot shows packets captured during a typical ARP poisoning attack:
+
+In frames 6–8, the attacking machine (with MAC address ending :4a) directs gratuitous ARP replies at other hosts (:76 and :77), claiming to have the IP addresses .2 and .102. This pattern of gratuitous ARP traffic is an indicator of the attack.
+In frame 9, the .101/:77 host tries to send a packet to the .2 host, but it is received by the attacking host (with the destination MAC :4a).
+In frame 10, the attacking host re-transmits frame 9 to the actual .2 host. Wireshark colors the frame black and red to highlight the re-transmission.
+In frames 11 and 12, you can see the reply from .2, received by the attacking host in frame 11 and re-transmitted to the legitimate host in frame 12.
+The usual target will be the subnet's default gateway (the router that accesses other networks). If the ARP poisoning attack is successful, all traffic destined for remote networks will be received by the attacker, implementing an on-path attack.
+Domain Name System (DNS) Attacks
+
+The Domain Name System (DNS) resolves requests for named hosts and services to IP addresses. Name resolution is a critical addressing method on the internet and private networks. There are many potential attacks against DNS. On the public internet, attacks might use typosquatting techniques to cause victims to confuse malicious sites with legitimate ones. DNS can be exploited in a DRDoS attack. Threat actors can also directly target public DNS services as a means of performing DoS against a website or cloud resource. Finally, a threat actor might be able to hijack a public DNS server and insert spoofed records, directing victims to rogue websites.
+
+On a private network, a DNS attack is likely to mean some sort of DNS poisoning. DNS poisoning compromises the process by which clients query name servers to locate the IP address for a domain name. There are several ways that a DNS poisoning attack can be perpetrated.
+DNS-Based On-Path Attacks
+
+If the threat actor has access to the same local network as the victim, the attacker can use ARP poisoning to respond to DNS queries from the victim with spoofed replies. This might be combined with a denial-of-service attack on the victim's legitimate DNS server. A rogue DHCP could be used to configure clients with the address of a DNS resolver controlled by the threat actor.
+DNS Client Cache Poisoning
+
+Before DNS was developed in the 1980s, name resolution took place using a text file named HOSTS. Each name:IP address mapping was recorded in this file, and systems administrators had to download the latest copy and install it on each internet client or server manually. Even though most name resolution now functions through DNS, the HOSTS file is still present, and most operating systems check the file before using DNS. Its contents are loaded into a cache of known name:IP mappings and the client only contacts a DNS server if the name is not cached. Therefore, if an attacker is able to place a false name:IP address mapping in the HOSTS file and effectively poison the DNS cache, they will be able to redirect traffic. The HOSTS file requires administrator access to modify. In UNIX and Linux systems, it is stored as /etc/hosts, while in Windows, it is placed in %SystemRoot%\System32\Drivers\etc\hosts. The presence of suspect entries in the HOSTS file indicates that the machine has been compromised.
+DNS Server Cache Poisoning
+
+DNS server cache poisoning aims to corrupt the records held by the DNS server itself. This can be accomplished by performing DoS against the server that holds the authorized records for the domain and then spoofing replies to requests from other name servers. Another attack involves getting the victim name server to respond to a recursive query from the attacking host. A recursive query compels the DNS server to query the authoritative server for the answer on behalf of the client. The attacker's DNS, masquerading as the authoritative name server, responds with the answer to the query but also includes a lot of false domain:IP mappings for other domains that the victim DNS accepts as genuine. The nslookup or dig tool can be used to query the name records and cached records held by a server to discover whether any false records have been inserted.
+DNS Attack Indicators
+
+A DNS server may log an event each time it handles a request to convert between a domain name and an IP address. DNS event logs can hold a variety of information that may supply useful security intelligence and attack indicators, such as:
+The types of queries a host has made to DNS.
+Hosts that are in communication with suspicious IP address ranges or domains.
+Statistical anomalies, such as spikes or consistently large numbers of DNS lookup failures, may point to computers infected with malware, misconfigured, or running obsolete or faulty applications.
+DNS is also a popular choice for implementing command & control (C&C) of remote access Trojans. It can be used as a means of covertly exfiltrating data from a private network.

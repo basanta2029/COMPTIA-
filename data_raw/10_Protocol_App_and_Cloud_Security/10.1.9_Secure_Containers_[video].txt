@@ -1,0 +1,231 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Secure Containers
+00:04
+In this demo, we will explore various ways
+00:06
+to enhance the security of your containers.<br>
+2. Vulnerabilities
+00:09
+In the world of IT, we are always vigilant,
+00:11
+searching for vulnerabilities that hackers
+00:13
+might exploit to compromise our systems.
+00:16
+This concern isn't limited to just bare-bone servers
+00:19
+and virtual machines; it extends to containers as well.
+00:23
+Containers, such as this Apache web server,
+00:25
+are streamlined versions of Linux with only
+00:28
+the essential software required to run Apache.
+00:31
+When we inspect the image we have in our image
+00:33
+store, we can see that it has 32 vulnerabilities
+00:37
+with the current container we are running.
+00:39
+The top one is marked as "high" priority.
+00:42
+The medium and low vulnerabilities are less concerning.
+00:45
+If you wish to learn more about the Common Vulnerabilities
+00:48
+and Exposures (CVE) or Debian Security Advisories (DSA)
+00:54
+associated with these vulnerabilities, you can access that
+00:57
+information through the provided links.
+01:00
+You can also observe the breakdown of the
+01:02
+Docker image, which consists of multiple
+01:04
+layers, each possibly having vulnerabilities.<br>
+01:08
+Now, if you examine the image closely, you'll find it
+01:10
+comprises two parts: a base Debian image and an httpd image.
+01:16
+Keep this in mind as we explore potential fixes.
+01:19
+Notably, the httpd image doesn't have
+01:22
+any updates, whereas the base image does.
+01:26
+While you can review the recommended base
+01:27
+image, remember that the image we downloaded
+01:30
+can only be modified by its owner.
+01:32
+As we are not the owner, our best course of
+01:34
+action is to either pull down a new image or
+01:37
+create our own image to address this issue.
+01:40
+Let's start by attempting to pull a new
+01:42
+image using the option to "pull a new image."
+01:46
+However, as you can see, when we exit and re-enter,
+01:49
+there are no changes to the vulnerabilities.<br>
+01:52
+One potential solution is to update the
+01:54
+running container to patch vulnerabilities.
+01:57
+Keep in mind that if this container were
+01:59
+deleted and rebuilt from the image, the changes
+02:01
+we make inside the container will be lost.
+02:04
+The primary aim is to address vulnerabilities
+02:06
+while waiting for an updated image.
+02:09
+As we have one running container from our
+02:11
+Apache container image, let's proceed.
+02:14
+Within the exec window, we can use the command line
+02:17
+to access the Linux system inside the container.
+02:20
+Running "apt update" will download the latest packages
+02:23
+from the repository, similar to a regular Linux server.
+02:26
+If you are wondering if the high vulnerability fix is
+02:30
+included in these packages, you can check by running
+02:32
+"apt list --upgradable" to see if it's on the list.
+02:37
+It appears it isn't, but there are other fixes we can apply.
+02:42
+Running "apt upgrade" will begin
+02:43
+the process to upgrade the packages.
+02:45
+Let's proceed and confirm.
+02:48
+We'll fast forward a bit.<br>
+02:49
+Now our container is patched.
+02:51
+It's a good practice to restart the
+02:53
+container after applying patches.
+02:55
+As mentioned earlier, this is a workaround until
+02:57
+the image is updated with the latest patches.<br>
+3. Network Segmentation
+03:00
+Each running container will receive an IP address.
+03:03
+The network configuration may vary depending
+03:05
+on where your containers are hosted.
+03:08
+In our specific setting under "resources" and
+03:10
+"network," you can observe a Docker subnet of
+03:12
+192.168.65.0/24, which is the default setting.
+03:20
+However, you may need to adjust
+03:22
+this based on your requirements.
+03:24
+The core concept behind network segmentation
+03:27
+is to grant designated servers and users
+03:29
+access only to specific network resources.
+03:33
+For example, if our accounting department uses an Apache
+03:36
+website container, while the marketing department does
+03:38
+not, we can block the marketing department from using it.
+03:42
+Adding more hurdles within the network may
+03:44
+make it more complex, but it also reduces
+03:47
+the attack surface for potential hackers.<br>
+4. Alternate Ports
+03:50
+Simple adjustments, such as using
+03:51
+alternate ports, can enhance security.
+03:54
+If you examine our currently running container,
+03:57
+you'll see it might be using port 80, but it's
+03:59
+being redirected to port number 32771.
+04:03
+The idea behind using alternate ports is that
+04:06
+hackers often scan for specific port numbers.
+04:09
+Typically, these are the default port
+04:10
+numbers like 80 or 443 for HTTP and HTTPS.
+04:14
+While you can't change port 443 for a regular website
+04:19
+on the internet, you can do so on your private network.
+04:22
+For instance, if we were to set up another Apache
+04:24
+website, we could run it on a different port.
+04:27
+In the optional settings, you can either allow it
+04:29
+to select a random port or choose one yourself.
+04:33
+Let's select "8080" as an alternate port to port 80.
+04:36
+Now, if we try to launch the web page,
+04:38
+you can see it works on port 8080.
+04:41
+It's worth noting that this container now requires
+04:43
+the patches applied to the previous container.<br>
+5. Summary
+04:47
+There are various methods to enhance the security
+04:49
+of your containers, and these are just a few
+04:51
+strategies to consider when securing your network.
+04:55
+That concludes this demonstration.
+04:57
+In this demo, we discussed how to identify
+04:59
+vulnerabilities within a container image.
+05:02
+Additionally, we explored the concepts
+05:04
+of network segmentation and the use of
+05:06
+alternate ports for added security.<br>

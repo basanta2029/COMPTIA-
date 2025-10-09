@@ -21,7 +21,8 @@ class RAGRetriever:
         self,
         collection_name: str = "comptia_security_plus",
         embedding_dim: int = 1536,
-        model: str = "text-embedding-3-small"
+        model: str = "text-embedding-3-small",
+        auto_load_embeddings: bool = True
     ):
         """
         Initialize RAG retriever
@@ -30,6 +31,7 @@ class RAGRetriever:
             collection_name: Qdrant collection name
             embedding_dim: Embedding dimension (1536 for text-embedding-3-small)
             model: OpenAI embedding model
+            auto_load_embeddings: Auto-load embeddings if in-memory mode detected
         """
         # Initialize OpenAI for query embeddings
         api_key = os.getenv("OPENAI_API_KEY")
@@ -44,6 +46,27 @@ class RAGRetriever:
             collection_name=collection_name,
             embedding_dim=embedding_dim
         )
+
+        # Check if collection exists, if not and auto_load is enabled, load embeddings
+        if auto_load_embeddings:
+            try:
+                collections = self.vector_db.client.get_collections().collections
+                collection_exists = any(c.name == collection_name for c in collections)
+
+                if not collection_exists:
+                    embeddings_file = "embeddings.json"
+                    if os.path.exists(embeddings_file):
+                        print(f"📥 Collection not found. Auto-loading embeddings from {embeddings_file}...")
+                        try:
+                            self.vector_db.create_collection(recreate=False)
+                            count = self.vector_db.upload_embeddings(embeddings_file)
+                            print(f"✅ Loaded {count} embeddings into collection")
+                        except Exception as e:
+                            print(f"⚠️  Error loading embeddings: {e}")
+                    else:
+                        print(f"⚠️  Collection not found and {embeddings_file} does not exist")
+            except Exception as e:
+                print(f"⚠️  Error checking collection status: {e}")
 
         print(f"✅ RAG Retriever initialized")
         print(f"   Model: {model}")
@@ -230,7 +253,7 @@ class RAGRetriever:
         self,
         query: str,
         k: int = 3,
-        initial_k: int = 20,
+        initial_k: int = 40,  # Increased from 20 for better coverage with 2321 chunks
         chapter_filter: Optional[str] = None,
         content_type_filter: Optional[str] = None,
         reranker_model: str = "claude-3-haiku-20240307"

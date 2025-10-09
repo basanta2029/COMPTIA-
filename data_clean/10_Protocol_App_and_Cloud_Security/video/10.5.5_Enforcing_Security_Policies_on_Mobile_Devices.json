@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "chapter_num": "10",
+    "section_num": "10.5.5",
+    "title": "Enforcing Security Policies on Mobile Devices",
+    "content_type": "video",
+    "filename": "10.5.5_Enforcing_Security_Policies_on_Mobile_Devices_[video].txt",
+    "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.5.5_Enforcing_Security_Policies_on_Mobile_Devices_[video].txt",
+    "word_count": 585,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script There are a lot of things you can do to secure your infrastructure. This is thanks to Microsoft's Intune. In this demonstration, we'll take some steps to secure our environment with Intune. We're going to take a look at Intune security policies, specifically some nice baselines that we're provided with that can really assist us in this manner. So, what we do is search All Services here and do a search on baselines. This brings us to security baselines. There are these great Microsoft security baselines that we can call on to enact good, secure practices inside of our enterprise. These baselines include some basic security settings that we want to consider. For example, there's a Microsoft Edge baseline here. We can go ahead and incorporate this into the security posture of our environment. Thanks to Profiles, we can link it in. So let's go ahead and take a look at that. Under Profiles, notice there are no profiles set up for this baseline. But we can easily change that. We'll go in and say this is my Edge profile. We could give it a description if we wanted to. It's automatically limited to Windows 10 and later. As of October 2019, that's Edge version 77 and later. So we'll say Next. Edge has a lot of settings. The defaults are to enable the supported authentication schemes and then list which ones those are. We can set those. There's the Adobe Flash settings, extension controls, and the ability to save passwords in the software built into Edge. We have many security settings. Notice they're preset a certain way to give a good baseline of security when it comes to the Edge browser. Once we manipulate those, we can then set our scope tags and indicate where we want to assign them. We could go in and set it up for certain groups of users that we've defined, or we could always say we want to make sure this gets applied to every user and every device. The last step is to create this profile. So now we have this nice Edge profile based on this good Microsoft Edge security baseline that we have, and we can deploy this out to our systems. Notice we've done that by assigning it to all of our devices. After the next sync of our clients, as far as their Edge settings go, they'll be in compliance with the security baseline that we borrowed from Microsoft. That's the one that Microsoft made available to us. And remember, there were other security baselines for you to look at, too. There's the Windows 10 security baseline, the Defender Advanced Threat Protection baseline, and then of course the Microsoft Edge baseline that we took a look at in this demonstration. Notice that these have versions, too; you're going to have situations where you get new additions of them from Microsoft, and the version increments at that point.",
+  "chunks": [
+    {
+      "chunk_id": "10.5.5_chunk_1",
+      "content": "There are a lot of things you can do to secure your infrastructure. This is thanks to Microsoft's Intune. In this demonstration, we'll take some steps to secure our environment with Intune. We're going to take a look at Intune security policies, specifically some nice baselines that we're provided with that can really assist us in this manner.",
+      "summary": "This section covers the use of Microsoft Intune to enhance infrastructure security through the implementation of security policies. It highlights the importance of utilizing Intune's provided baselines to effectively secure environments. Practical applications include configuring these policies to safeguard devices and data within an organization.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.5.5",
+        "title": "Enforcing Security Policies on Mobile Devices",
+        "content_type": "video",
+        "filename": "10.5.5_Enforcing_Security_Policies_on_Mobile_Devices_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.5.5_Enforcing_Security_Policies_on_Mobile_Devices_[video].txt",
+        "word_count": 585,
+        "has_content": true
+      },
+      "section_header": "Configuring Microsoft Intune Security Policies",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.5.5_chunk_2",
+      "content": "So, what we do is search All Services here and do a search on baselines. This brings us to security baselines. There are these great Microsoft security baselines that we can call on to enact good, secure practices inside of our enterprise. These baselines include some basic security settings that we want to consider.",
+      "summary": "The Security Baselines section emphasizes the importance of implementing established security standards to enhance organizational security. It highlights Microsoft security baselines as a valuable resource for defining essential security settings and practices that should be adopted within an enterprise to ensure a robust security posture. By adhering to these baselines, organizations can systematically improve their defenses against potential threats.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.5.5",
+        "title": "Enforcing Security Policies on Mobile Devices",
+        "content_type": "video",
+        "filename": "10.5.5_Enforcing_Security_Policies_on_Mobile_Devices_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.5.5_Enforcing_Security_Policies_on_Mobile_Devices_[video].txt",
+        "word_count": 585,
+        "has_content": true
+      },
+      "section_header": "Security Baselines",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.5.5_chunk_3",
+      "content": "For example, there's a Microsoft Edge baseline here. We can go ahead and incorporate this into the security posture of our environment. Thanks to Profiles, we can link it in. So let's go ahead and take a look at that. Under Profiles, notice there are no profiles set up for this baseline. But we can easily change that. We'll go in and say this is my Edge profile. We could give it a description if we wanted to. It's automatically limited to Windows 10 and later. As of October 2019, that's Edge version 77 and later. So we'll say Next. Edge has a lot of settings. The defaults are to enable the supported authentication schemes and then list which ones those are. We can set those. There's the Adobe Flash settings, extension controls, and the ability to save passwords in the software built into Edge. We have many security settings. Notice they're preset a certain way to give a good baseline of security when it comes to the Edge browser. Once we manipulate those, we can then set our scope tags and indicate where we want to assign them. We could go in and set it up for certain groups of users that we've defined, or we could always say we want to make sure this gets applied to every user and every device. The last step is to create this profile. So now we have this nice Edge profile based on this good Microsoft Edge security baseline that we have, and we can deploy this out to our systems. Notice we've done that by assigning it to all of our devices. After the next sync of our clients, as far as their Edge settings go, they'll be in compliance with the security baseline that we borrowed from Microsoft. That's the one that Microsoft made available to us.",
+      "summary": "The Microsoft Edge example illustrates how to establish a security baseline for the Edge browser within an organization's environment by creating and managing user profiles. It emphasizes configuring various security settings, such as authentication schemes and extension controls, to ensure compliance with Microsoft's recommended security practices. By deploying these profiles to all devices, organizations can enhance their security posture and maintain consistent browser settings across users.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.5.5",
+        "title": "Enforcing Security Policies on Mobile Devices",
+        "content_type": "video",
+        "filename": "10.5.5_Enforcing_Security_Policies_on_Mobile_Devices_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.5.5_Enforcing_Security_Policies_on_Mobile_Devices_[video].txt",
+        "word_count": 585,
+        "has_content": true
+      },
+      "section_header": "Microsoft Edge Example",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.5.5_chunk_4",
+      "content": "And remember, there were other security baselines for you to look at, too. There's the Windows 10 security baseline, the Defender Advanced Threat Protection baseline, and then of course the Microsoft Edge baseline that we took a look at in this demonstration. Notice that these have versions, too; you're going to have situations where you get new additions of them from Microsoft, and the version increments at that point.",
+      "summary": "This section highlights various security baselines, including those for Windows 10, Defender Advanced Threat Protection, and Microsoft Edge, emphasizing the importance of staying updated with their version increments. Understanding these baselines is crucial for implementing effective security measures and ensuring compliance with the latest standards. Regularly reviewing and adapting to new versions helps maintain robust cybersecurity defenses.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.5.5",
+        "title": "Enforcing Security Policies on Mobile Devices",
+        "content_type": "video",
+        "filename": "10.5.5_Enforcing_Security_Policies_on_Mobile_Devices_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.5.5_Enforcing_Security_Policies_on_Mobile_Devices_[video].txt",
+        "word_count": 585,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 4
+}

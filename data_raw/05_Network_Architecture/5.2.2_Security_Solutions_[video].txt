@@ -1,0 +1,261 @@
+1. Security Solutions
+00:03
+Many of us take for granted the clean
+00:05
+water we get from our faucets every day.
+00:07
+Before we take a drink, the dangerous contaminants have
+00:09
+been filtered out, leaving us with only what we want.
+00:12
+One very important security solution for networks
+00:15
+is filtering: content filtering and web filtering.
+00:18
+Just like filtering out dangerous contaminants from our
+00:20
+drinking water, content filters and web filters filter
+00:24
+out dangerous contaminants to our networks and users.
+00:26
+Let's take a closer look.<br>
+2. Content Filtering Server
+00:28
+Let's start with content filtering servers.
+00:31
+Content filtering servers typically
+00:33
+have one or two configurations.
+00:35
+Either you allow all content except for
+00:37
+what you decide to ban, or you block all
+00:39
+content except for what you decide to allow.
+00:42
+These controls are implemented through security
+00:44
+levels, allow lists, deny lists, and category levels.<br>
+00:48
+A content filter is designed to give network
+00:50
+administrators and management the ability to
+00:52
+block unwanted or inappropriate website browsing.
+00:56
+For example, several organizations have
+00:58
+guidelines stating that users can't visit adult
+01:00
+sites, gambling, or shopping sites while at work.
+01:03
+A content filter can be put in place, and the
+01:05
+network administrator can configure the filter to
+01:07
+prevent users from visiting these types of sites.<br>
+01:10
+Most often, the content filter allows everything except
+01:13
+sites and categories that are blocked via a denylist.
+01:16
+For additional flexibility, security groups can be
+01:18
+configured to allow or prevent site access by group.<br>
+01:22
+New websites are created every day, so the filters
+01:24
+must be updated regularly, like virus definitions.
+01:27
+Most content filtering servers have an online
+01:30
+subscription service to update websites and website
+01:32
+categories at certain intervals, usually daily or weekly.<br>
+3. Web Filtering
+01:36
+Now, web filtering plays a pivotal role
+01:39
+in safeguarding an organization's network.
+01:41
+Its primary function is to block users from accessing
+01:44
+malicious or inappropriate websites, thereby
+01:46
+protecting the network from potential threats.<br>
+01:49
+Web filters analyze web traffic, often in real-time, and
+01:53
+can restrict access based on various criteria such as URL,
+01:57
+IP address, content category, or even specific keywords.<br>
+02:01
+Now, let's look at two different approaches
+02:02
+to web filtering: agent-based and centralized.
+02:06
+The first approach is focused on filtering at each endpoint.
+02:09
+The second filters from a centralized proxy
+02:11
+server that endpoints are connected to.<br>
+4. Agent-based Filtering
+02:13
+Agent-based web filtering involves installing a software
+02:17
+agent on desktop computers, laptops, and mobile devices.
+02:21
+The agents enforce compliance with the
+02:22
+organization's web filtering policies.
+02:25
+Agents communicate with a centralized management
+02:27
+server to retrieve filtering policies and rules
+02:30
+and then apply them locally on the device.
+02:33
+Agent-based solutions typically leverage cloud
+02:35
+platforms to ensure they can communicate with devices
+02:37
+regardless of the network they're connected to.
+02:40
+This means filtering policies remain in effect
+02:42
+even when users are off the corporate network,
+02:44
+such as when working from home or traveling.<br>
+02:47
+Because filtering occurs locally on the device,
+02:50
+agent-based methods often provide more granular
+02:52
+control, such as filtering HTTPS traffic or applying
+02:56
+different filtering rules for different applications.
+02:59
+Agent-based filtering can also provide
+03:01
+detailed reporting and analytics.<br>
+5. Centralized Web Filtering
+03:04
+In a centralized approach, a proxy server performs
+03:06
+content filtering by analyzing web requests from
+03:09
+users and determining whether to permit or deny
+03:11
+access based on established policies.
+03:14
+A centralized proxy server acts as an
+03:16
+intermediary between end users and the internet.
+03:19
+Beyond blocking unwanted or harmful content, a
+03:22
+centralized proxy server can also perform
+03:24
+detailed logging and reporting of web activity.<br>
+03:28
+A centralized proxy server employs various
+03:30
+techniques to protect web traffic and ensure
+03:32
+the safety of an organization's network.
+03:35
+A proxy server can perform URL scanning, which
+03:37
+involves blocking URLs known to host malicious content,
+03:41
+are inappropriate, or violate the company's policies.<br>
+03:44
+Proxy servers also allow content categorization.
+03:47
+This means that websites can be classified
+03:49
+into various categories like social networking,
+03:52
+gambling, webmail, and many others.
+03:55
+Organizations can define rules to allow
+03:57
+or deny access based on these categories.<br>
+04:00
+Another technique proxy servers
+04:02
+can implement is block rules.
+04:04
+For example, an organization could block all .exe
+04:07
+downloads or certain domains or content categories.<br>
+04:11
+Proxy servers can even incorporate reputation-based
+04:13
+filtering, which leverages continually updated databases that
+04:17
+score websites based on their observed behavior and history.
+04:21
+Sites known for hosting malware, engaging in phishing
+04:23
+attacks, or distributing spam, for instance, would have a
+04:26
+poor reputation score and could be automatically blocked.<br>
+6. Web Filtering Challenges
+04:30
+Content and web filtering aren't
+04:31
+without potential issues and challenges.
+04:33
+One common problem is overblocking or underblocking.
+04:35
+Overblocking occurs when the filter is too restrictive,
+04:40
+inadvertently blocking access to legitimate and useful
+04:43
+websites and negatively impacting employee productivity.<br>
+04:46
+Underblocking, on the other hand, occurs
+04:48
+when the filter allows access to potentially
+04:51
+harmful or inappropriate websites.<br>
+04:53
+Another issue is the handling
+04:55
+of encrypted traffic like HTTPS.
+04:57
+Without proper configuration, web filters
+05:00
+may be unable to inspect encrypted traffic,
+05:02
+representing most modern web traffic.<br>
+7. Summary
+05:05
+Well, that's it for this lesson.
+05:06
+In this lesson, we discussed security
+05:08
+solutions based on content and web filtering.
+05:11
+We looked at how content filters can either allow
+05:13
+everything except what you specifically ban or they
+05:16
+can ban everything except what's specifically allowed.
+05:19
+We then looked at two approaches to web filtering:
+05:22
+agent-based, which is applied to endpoints, and
+05:24
+centralized, which is provided through a proxy
+05:26
+server that network traffic flows through.
+05:29
+We ended the lesson by looking at the challenge of
+05:31
+not overblocking or underblocking when applying
+05:34
+filters so that the network is protected, and users
+05:36
+can do their work and access their resources.<br>

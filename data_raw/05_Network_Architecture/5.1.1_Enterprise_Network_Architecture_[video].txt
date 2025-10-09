@@ -1,0 +1,241 @@
+1. Enterprise Network Architecture
+00:04
+In this lesson, we'll explore the fundamentals of network
+00:07
+design, from architecture decisions to device placement.
+00:10
+Let's get started!<br>
+2. Network Architecture
+00:14
+Network architecture is like the blueprint of a network.
+00:17
+It involves choosing and arranging components such as
+00:20
+media, devices, protocols or services, and data assets.
+00:24
+Within this framework, we have network
+00:26
+infrastructure, which consists of the physical
+00:28
+elements like cables, appliances, and addressing and
+00:31
+forwarding protocols that enable basic connectivity.<br>
+00:35
+Network applications are the services running on
+00:37
+this infrastructure to support business activities
+00:40
+like processing invoices or sending emails.
+00:43
+Data assets are the information generated
+00:46
+as a result of these activities.<br>
+00:49
+The goal of secure network infrastructure and
+00:51
+application architecture is to support secure
+00:54
+business workflows, where security means ensuring
+00:56
+confidentiality, integrity, and availability.<br>
+01:00
+Let's take the example of provisioning email services
+01:03
+to understand the architecture decisions involved.<br>
+01:07
+Access control ensures that client devices
+01:09
+access the network through a secure channel
+01:12
+with authentication and authorization.
+01:15
+Unauthorized users and devices must be denied access.<br>
+01:19
+The email mailbox server stores data assets securely
+01:22
+and must be accessible only to authorized clients.
+01:26
+It should also be fault-tolerant and highly available.<br>
+01:29
+The mail transfer server, responsible for connecting with
+01:32
+untrusted internet hosts, requires careful control to manage
+01:36
+communications between the untrusted network and trusted LAN.
+01:41
+Any data or software leaving or entering the
+01:43
+network must be subject to policy-based controls.<br>
+01:47
+This type of business flow will involve
+01:48
+systems with different security requirements.
+01:51
+Placing the client, the mailbox, and the
+01:53
+mail transfer server all within the same
+01:56
+segment will introduce many vulnerabilities.
+01:59
+Understanding and controlling how data flows
+02:01
+between these network segments is a key part of
+02:04
+secure and effective network architecture design.<br>
+3. Network Infrastructure and the OSI Model
+02:10
+Now, let's dive into network infrastructure using the
+02:13
+OSI model, a framework for understanding network layers.<br>
+02:17
+At the physical layer (Layer 1), we find various
+02:20
+transmission media, from cables to wireless signals,
+02:23
+which are the links connecting network nodes.
+02:25
+Now, nodes come in two types:<br>
+02:28
+host nodes, which initiate data transfers
+02:30
+(like servers or clients), and intermediary
+02:33
+nodes that forward traffic around the network.<br>
+02:36
+Networks can vary in scope, from local area networks
+02:40
+(LANs) for a single site to wide area networks (WANs)
+02:43
+that span metropolitan, country-wide, or global scopes.<br>
+02:47
+Each network node must have a unique address, and this
+02:51
+addressing function occurs at different layers and scopes.<br>
+02:54
+Various network appliances and protocols handle forwarding
+02:58
+and addressing functions, such as switches, routers,
+03:01
+transport protocols, application protocols, and DNS servers.<br>
+4. Architecture Considerations
+03:09
+When designing a network, several factors come into play.
+03:12
+Costs, including upfront investments and
+03:14
+ongoing maintenance, need to be considered.
+03:17
+Compute resources affect processing
+03:19
+time for various workloads.
+03:21
+Scalability and ease of deployment
+03:24
+help manage changes in workload.
+03:26
+Availability and resilience minimize downtime
+03:29
+and recovery time in case of failures.
+03:31
+Facility power usage capabilities and patch availability
+03:36
+are also vital considerations, along with the option of
+03:39
+risk transference through service-level agreements.
+03:42
+These factors together shape the
+03:44
+architecture of your network.<br>
+5. Device Placement and Security Controls
+03:50
+The selection of effective controls for network
+03:52
+infrastructure is the process of choosing the type
+03:55
+and placement of security appliances and software.
+03:59
+The aim is to enforce segmentation, apply access
+04:02
+controls, and monitor traffic for policy violations.<br>
+04:07
+Guided by the principle of defense in
+04:08
+depth, diverse controls are placed at
+04:11
+different OSI layers to enhance security.<br>
+04:13
+You have three options: preventive controls at
+04:16
+network borders, detective controls within the
+04:18
+perimeter, and a combination of preventive,
+04:22
+detective, and corrective controls on hosts.
+04:25
+For instance, a firewall at the network border enforces
+04:29
+access rules, while a sensor behind it relays traffic to
+04:32
+an intrusion detection system for monitoring.
+04:35
+Access control lists on internal routers enforce
+04:38
+rules for traffic between zones, and load balancers
+04:42
+can help mitigate denial-of-service attacks.<br>
+04:45
+Endpoint protection software on hosts adds another layer
+04:48
+of security, implementing host firewalls, anti-virus,
+04:52
+intrusion detection, and data loss prevention.<br>
+6. Device Attributes
+04:59
+Lastly, attributes determine the precise way in which
+05:02
+a device can be placed within the network topology.<br>
+05:05
+Controls can be active or passive.
+05:08
+Active controls require configuration and data
+05:10
+exchange, while passive controls operate silently.<br>
+05:14
+Deployment can be inline, becoming part of the network path,
+05:18
+or as taps or monitors, capturing traffic transparently.
+05:23
+The router/firewall is an active control as client
+05:26
+devices must be configured to use it for internet access.
+05:30
+The TAP and mirror ports are passive controls.
+05:33
+They're completely transparent
+05:34
+to the server and client hosts.<br>
+7. Summary
+05:40
+That's it for this lesson.
+05:41
+In this lesson, we discussed network architecture
+05:44
+and how it's the blueprint of your network design.
+05:47
+We then talked about how the network infrastructure
+05:49
+fits within the architecture framework.
+05:52
+We used the OSI model to help us understand how
+05:54
+different components of the infrastructure fit together.
+05:58
+Next, we reviewed the many architecture
+06:00
+considerations that factor into your network design.
+06:03
+We also discussed device placement and security controls.
+06:07
+We finished this lesson by looking at device attributes that
+06:10
+determine how a security control affects device placement.<br>

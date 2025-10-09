@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "chapter_num": "9",
+    "section_num": "9.3.7",
+    "title": "Examine a Forensic Drive Image with Autopsy",
+    "content_type": "video",
+    "filename": "9.3.7_Examine_a_Forensic_Drive_Image_with_Autopsy_[video].txt",
+    "file_path": "data_raw/09_Incident_Response/9.3.7_Examine_a_Forensic_Drive_Image_with_Autopsy_[video].txt",
+    "word_count": 1277,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script After a computer forensic investigator captures an image of a drive, they need to examine it. Autospy is a popular examination tool. It's digital forensic software that's free, open source, and said to have most of the features that you'd find in commercial digital forensics tools. Some of the features include, hash matching, registry analysis, and web analytics, and the ability to do a keyword search. For our demo, we're going to use Autopsy to analyze a disk that has been previously captured and saved to my hard drive. Double-click on it to start it. Sometimes it takes a minute or so for it to fully launch. We want to create a new case. Click on that option. We'll give it a case name, —˜1 2 3 4 Mary Worley'. Let's specify the directory where we're going to store the information we're about to create. Let's put it in the same directory as our image file. We'll keep all the data together. I'll actually create a folder for it and name it —˜Autopsy'. I'll select the folder we just created and then click Next. Enter in a case number, —˜1 2 3 4 Mary Worley'. I'll put the examiner's name in here. I'll hit Finish. This next part is going to take a minute or two while it creates the case and gathers all the files. I'll pause the demo while this is running. Okay, that took several minutes, and now I'm presented with the Add Data Source page. We have to specify what we want to analyze. We're going to analyze a disk image or VM file. Click Next. We need to specify what image file we want to look at. It's in a folder called Forensic Images under 1 2 3 4 Mary Worley. There's the image file that we created a minute ago. Hit Open. We need to set our time zone. I'm in Mountain Time, so I'll scroll down until I find that and select it. Click Next. We have to specify exactly what we want to look for. This tool uses what's called Ingest Modules. An ingest module is basically just a piece of software that looks for a particular type of information in the image file. You can come over here and specify what you want to look for. For example, you could go under Keyword Search and specify what type of information you want that particular module to look for. We want to look for all of this information here, so I'll check all the boxes and click Next. Now let's go ahead and click Finish. The process of analyzing the image file has started. It can take quite some time to complete, depending on the size of disk and amount of data. In my test environment, I don't have a very large disk or very much data, so it should happen pretty quickly. But I'll go ahead and pause the demo while it runs. At this point, the image file has been thoroughly examined by the Autopsy tool, and the results are displayed here on the left, organized by the type of data or the view of the data that you want to use. It's very useful. For example, it sorts the data by the file type extension. Let's click on Images. There are 43 of them. Let's see what we have. If I click this one, WACC classroom.jpg, I can see the image down here, in a preview pane. It looks like a picture of a computer lab or classroom. See this one up here, with the red X? This is a file that was deleted on the hard drive. Of course, as you probably know, when you delete something, you don't actually delete it at all--you just delete the pointer, or reference to it. The file won't go away until the drive is formatted or overwritten. Even then, files are sometimes recoverable. Down in the preview, this looks like a screen shot of something. I'll click on Videos. Over in the listing, I have four videos. One's been deleted. When I click on Audio, my list is the same as it was for videos, so Autopsy must recognize that there are audio files as part of the videos. Under Documents, I have some Microsoft Office documents. I could export those out and look at the contents in the supported programs if I wanted to. I have a few PDF documents as well, along with some plain text files. Once again, a few of these have been deleted, as you can see by the red X. I have no executable files to look at, so we'll skip those. Autopsy does give us a list of just the deleted files, all grouped together. That is handy if I was focused just on what Mary may have deleted and might be trying to hide. I have a few more categories. We have Recycle Bin and something called User Content Suspected. I'll make my way down to the email addresses. Out of concern for confidentiality, I'm not going to open this up because I'm not sure exactly what's on this disk. Just to clarify, when we see things like emails addresses, IP addresses, URLs, and so on, it does not mean email accounts configured on the system, but any email that shows up on the disk in a document, spreadsheet, etc. Under IP addresses, I see 0.1.2.3. This might be a simple false positive because the format is somewhat like an IP address. Under phone numbers, I have some phony-looking phone numbers. This looks like something from TV, since they have a 555 prefix. I have a bunch of URLs listed. This is handy for seeing where the person has been spending their time on the web. I have Hashset Hits, but there's nothing there to see. Right under this, I actually have Email Messages, but there aren't any to look at on this disk. I have Credit Cards down here. Once again, I'm not going to click on those and open them because I'm not sure what I might find. And now we're at the bottom of the list. Now, there are entire courses and degree programs on how to use this product and the whole legal process that goes along with it. This demo is a very brief overview of what the software is capable of doing. We didn't even look at things such as geolocation, timeline, report generation, or other features—\"there's a lot more to learn! That's it for this demonstration. In this demo, we used Autopsy to examine a disk image.",
+  "chunks": [
+    {
+      "chunk_id": "9.3.7_chunk_1",
+      "content": "After a computer forensic investigator captures an image of a drive, they need to examine it. Autospy is a popular examination tool. It's digital forensic software that's free, open source, and said to have most of the features that you'd find in commercial digital forensics tools. Some of the features include, hash matching, registry analysis, and web analytics, and the ability to do a keyword search. For our demo, we're going to use Autopsy to analyze a disk that has been previously captured and saved to my hard drive.",
+      "summary": "In this section, learners explore the use of Autopsy, a free and open-source digital forensic tool, for examining drive images captured by forensic investigators. Key features include hash matching, registry analysis, web analytics, and keyword search capabilities, making it comparable to commercial tools. The practical application involves analyzing a previously captured disk image to demonstrate Autopsy's functionalities in digital forensics.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.7",
+        "title": "Examine a Forensic Drive Image with Autopsy",
+        "content_type": "video",
+        "filename": "9.3.7_Examine_a_Forensic_Drive_Image_with_Autopsy_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.7_Examine_a_Forensic_Drive_Image_with_Autopsy_[video].txt",
+        "word_count": 1277,
+        "has_content": true
+      },
+      "section_header": "Examine a Forensic Drive Image with Autopsy",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.7_chunk_2",
+      "content": "Double-click on it to start it. Sometimes it takes a minute or so for it to fully launch. We want to create a new case. Click on that option. We'll give it a case name, —˜1 2 3 4 Mary Worley'. Let's specify the directory where we're going to store the information we're about to create. Let's put it in the same directory as our image file. We'll keep all the data together. I'll actually create a folder for it and name it —˜Autopsy'. I'll select the folder we just created and then click Next. Enter in a case number, —˜1 2 3 4 Mary Worley'. I'll put the examiner's name in here. I'll hit Finish. This next part is going to take a minute or two while it creates the case and gathers all the files. I'll pause the demo while this is running. Okay, that took several minutes, and now I'm presented with the Add Data Source page. We have to specify what we want to analyze. We're going to analyze a disk image or VM file. Click Next. We need to specify what image file we want to look at. It's in a folder called Forensic Images under 1 2 3 4 Mary Worley. There's the image file that we created a minute ago. Hit Open. We need to set our time zone. I'm in Mountain Time, so I'll scroll down until I find that and select it. Click Next. We have to specify exactly what we want to look for. This tool uses what's called Ingest Modules. An ingest module is basically just a piece of software that looks for a particular type of information in the image file. You can come over here and specify what you want to look for. For example, you could go under Keyword Search and specify what type of information you want that particular module to look for. We want to look for all of this information here, so I'll check all the boxes and click Next. Now let's go ahead and click Finish. The process of analyzing the image file has started. It can take quite some time to complete, depending on the size of disk and amount of data. In my test environment, I don't have a very large disk or very much data, so it should happen pretty quickly. But I'll go ahead and pause the demo while it runs.",
+      "summary": "The CompTIA Security+ course covers the process of creating and managing digital forensic cases using tools like Autopsy. Key concepts include setting up a case directory, specifying data sources such as disk images or VM files, and utilizing Ingest Modules to search for specific information within the data. Practical applications involve analyzing digital evidence systematically to support cybersecurity investigations.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.7",
+        "title": "Examine a Forensic Drive Image with Autopsy",
+        "content_type": "video",
+        "filename": "9.3.7_Examine_a_Forensic_Drive_Image_with_Autopsy_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.7_Examine_a_Forensic_Drive_Image_with_Autopsy_[video].txt",
+        "word_count": 1277,
+        "has_content": true
+      },
+      "section_header": "Add Data Source",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.7_chunk_3",
+      "content": "At this point, the image file has been thoroughly examined by the Autopsy tool, and the results are displayed here on the left, organized by the type of data or the view of the data that you want to use. It's very useful. For example, it sorts the data by the file type extension. Let's click on Images. There are 43 of them. Let's see what we have. If I click this one, WACC classroom.jpg, I can see the image down here, in a preview pane. It looks like a picture of a computer lab or classroom. See this one up here, with the red X? This is a file that was deleted on the hard drive. Of course, as you probably know, when you delete something, you don't actually delete it at all--you just delete the pointer, or reference to it. The file won't go away until the drive is formatted or overwritten. Even then, files are sometimes recoverable. Down in the preview, this looks like a screen shot of something. I'll click on Videos. Over in the listing, I have four videos. One's been deleted. When I click on Audio, my list is the same as it was for videos, so Autopsy must recognize that there are audio files as part of the videos. Under Documents, I have some Microsoft Office documents. I could export those out and look at the contents in the supported programs if I wanted to. I have a few PDF documents as well, along with some plain text files. Once again, a few of these have been deleted, as you can see by the red X. I have no executable files to look at, so we'll skip those. Autopsy does give us a list of just the deleted files, all grouped together. That is handy if I was focused just on what Mary may have deleted and might be trying to hide. I have a few more categories. We have Recycle Bin and something called User Content Suspected. I'll make my way down to the email addresses. Out of concern for confidentiality, I'm not going to open this up because I'm not sure exactly what's on this disk. Just to clarify, when we see things like emails addresses, IP addresses, URLs, and so on, it does not mean email accounts configured on the system, but any email that shows up on the disk in a document, spreadsheet, etc. Under IP addresses, I see 0.1.2.3. This might be a simple false positive because the format is somewhat like an IP address. Under phone numbers, I have some phony-looking phone numbers. This looks like something from TV, since they have a 555 prefix. I have a bunch of URLs listed. This is handy for seeing where the person has been spending their time on the web. I have Hashset Hits, but there's nothing there to see. Right under this, I actually have Email Messages, but there aren't any to look at on this disk. I have Credit Cards down here. Once again, I'm not going to click on those and open them because I'm not sure what I might find. And now we're at the bottom of the list.",
+      "summary": "The \"Identify Suspect Content\" section of the CompTIA Security+ course focuses on using the Autopsy forensic tool to analyze digital evidence, specifically examining various file types such as images, videos, documents, and deleted files. It highlights the importance of understanding data recovery, as deleted files can often be retrieved unless the drive is formatted or overwritten. Additionally, the section emphasizes the significance of identifying potentially sensitive information, such as email addresses and URLs, to assess user behavior and ensure data confidentiality.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.7",
+        "title": "Examine a Forensic Drive Image with Autopsy",
+        "content_type": "video",
+        "filename": "9.3.7_Examine_a_Forensic_Drive_Image_with_Autopsy_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.7_Examine_a_Forensic_Drive_Image_with_Autopsy_[video].txt",
+        "word_count": 1277,
+        "has_content": true
+      },
+      "section_header": "Identify Suspect Content",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.7_chunk_4",
+      "content": "Now, there are entire courses and degree programs on how to use this product and the whole legal process that goes along with it. This demo is a very brief overview of what the software is capable of doing. We didn't even look at things such as geolocation, timeline, report generation, or other features—\"there's a lot more to learn!",
+      "summary": "The \"Additional Features\" section highlights the extensive capabilities of a specific software product used in cybersecurity, emphasizing that comprehensive courses and degree programs are available for in-depth learning. Key functionalities include geolocation, timeline analysis, and report generation, indicating the software's versatility in practical applications. This brief overview serves as an introduction to the software's potential, encouraging further exploration of its advanced features.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.7",
+        "title": "Examine a Forensic Drive Image with Autopsy",
+        "content_type": "video",
+        "filename": "9.3.7_Examine_a_Forensic_Drive_Image_with_Autopsy_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.7_Examine_a_Forensic_Drive_Image_with_Autopsy_[video].txt",
+        "word_count": 1277,
+        "has_content": true
+      },
+      "section_header": "Additional Features",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.7_chunk_5",
+      "content": "That's it for this demonstration. In this demo, we used Autopsy to examine a disk image.",
+      "summary": "In this demonstration, Autopsy, a digital forensics tool, was utilized to analyze a disk image, showcasing its capabilities in data recovery and investigation. Key security concepts include the importance of forensic analysis in cybersecurity and the practical application of tools like Autopsy for uncovering evidence in security incidents. This highlights the critical role of digital forensics in maintaining data integrity and supporting incident response efforts.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.7",
+        "title": "Examine a Forensic Drive Image with Autopsy",
+        "content_type": "video",
+        "filename": "9.3.7_Examine_a_Forensic_Drive_Image_with_Autopsy_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.7_Examine_a_Forensic_Drive_Image_with_Autopsy_[video].txt",
+        "word_count": 1277,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 5
+}

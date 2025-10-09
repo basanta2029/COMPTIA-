@@ -1,0 +1,365 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Wireless Attacks
+00:04
+Because wireless networks use an unbounded communication
+00:07
+method, they're especially vulnerable to attacks.
+00:09
+This includes all types of wireless networks,
+00:11
+as in Wi-Fi, Bluetooth, RFID, and even NFC.
+00:15
+In this lesson, I'm going to go over the
+00:17
+various attacks that threaten wireless networks.<br>
+2. Wi-Fi Attacks
+00:19
+Because network security is a top priority, it's
+00:22
+common for network administrators to implement
+00:24
+stringent rules and limit website access.
+00:27
+Some users find this very frustrating.<br>
+3. Rogue Access Point
+00:29
+To try to evade these rules, users sometimes
+00:31
+install an access point on their own computer.
+00:34
+This is known as a soft access point.
+00:36
+A network hacker who has gained access to a network,
+00:39
+perhaps using MAC spoofing, might do the same.
+00:42
+This is called a rogue access point
+00:44
+or an unauthorized association.<br>
+00:46
+Here's the big problem—most employees don't
+00:48
+understand the importance of securing their
+00:50
+soft access point or even how to do it.
+00:53
+So they just leave it open to hackers.
+00:55
+When an attacker discovers an access point, they're
+00:57
+able to run various types of vulnerability scanners
+01:00
+from outside the company, perhaps from a car or
+01:03
+adjacent building or even from several miles away.
+01:06
+Keep in mind that if a hacker can gain some type
+01:08
+of physical access to your company, they can also
+01:10
+hide a physical rogue access point as well.
+01:13
+This is often done by configuring an
+01:14
+extremely compact and powerful hardware device
+01:17
+called a Raspberry Pi as their access point.<br>
+4. Evil Twin Attack
+01:20
+A rogue access point that's placed on the
+01:22
+network by a malicious attacker can be used
+01:24
+to run what's called an evil twin attack.
+01:27
+Here's how this works—say your organization currently
+01:29
+has a wireless network with a SSID of MyCompanyWiFi.
+01:31
+The attacker configures their own access point with the
+01:36
+same SSID and places it near the organization's building.
+01:41
+Then the attacker uses a jamming or disassociation
+01:43
+attack to knock users off the legitimate network.
+01:46
+When users reconnect to the network, they're now
+01:49
+connecting to the attacker's access point instead.<br>
+01:52
+Once a victim is connected to a rogue access point,
+01:54
+the attacker can capture all data flowing through it.
+01:57
+The user shouldn't notice anything different
+01:59
+since their internet is still running like normal.
+02:01
+These attacks are extremely dangerous as the attacker gains
+02:04
+immediate access to all sorts of sensitive information.<br>
+02:08
+To defend against these attacks, you should perform
+02:10
+regular site surveys to locate any rogue access points.
+02:13
+Your wireless networks encrypt data,
+02:15
+which helps protect against sniffing.
+02:18
+But some older standards, like WEP, are vulnerable due
+02:20
+to improperly configured initialization vectors, or IVs.<br>
+5. Initialization Vectors
+02:25
+When we encrypt data, we use a secret key that only we know.
+02:28
+If we use the same key for everything we encrypt,
+02:31
+it won't take long for the key to be compromised.
+02:33
+This is where initialization vectors can help out.
+02:36
+The IV is a random string that's added to the key to
+02:39
+create a different key for each encryption process.
+02:43
+Unfortunately, if we don't configure the
+02:44
+IV properly, it can open us up to attacks.<br>
+02:47
+Wired Equivalent Privacy, or WEP, was one
+02:50
+of the first wireless security protocols
+02:52
+that used IVs to help with encryption.
+02:54
+The problem, though, was the IV was only
+02:56
+24 bits long and the key was 40 bits.
+02:59
+This meant there was only approximately 16
+03:00
+million different IVs that could be generated.
+03:04
+This may sound like a lot, but it actually meant that an
+03:07
+IV would be repeated at least once every 4096 packets.
+03:11
+It doesn't take much time to get 4096 packets, and
+03:14
+attackers were able to develop programs that would
+03:17
+flood the network with packets to find matching IVs.
+03:20
+Once an attacker gets multiple IVs, they
+03:22
+can begin decrypting the encryption key.
+03:25
+After that, all communication is open and no longer secure.<br>
+03:28
+No networks should use WEP anymore.
+03:30
+Newer wireless standards such as WPA-2
+03:33
+don't even use IVs for encryption.
+03:35
+For many of these wireless attacks to work, the
+03:37
+attacker needs to kick everyone off the legitimate
+03:40
+network and prevent them from reconnecting.
+03:42
+They attempt this with jamming
+03:44
+attacks or disassociation attacks.<br>
+6. Jamming Attack
+03:46
+A Wi-Fi jamming attack requires a special device that works
+03:50
+by analyzing the spectrum used by wireless networks and then
+03:52
+transmitting a powerful signal on the same frequencies.
+03:56
+Basically, the jammer tries to be the
+03:57
+loudest voice in the room so nearby devices
+04:00
+can't see the legitimate wireless network.
+04:02
+The hope is that they disconnect
+04:04
+and are unable to reconnect again.
+04:06
+Jamming devices are illegal and
+04:07
+difficult to come by, though.<br>
+7. Disassociation Attack
+04:08
+A disassociation attack, on the other
+04:11
+hand, can be performed with a laptop.
+04:13
+This is also know as a deauthentication attack.
+04:16
+When a device connects to a wireless network, special
+04:19
+unencrypted management packets are sent back and forth.
+04:22
+A deauthentication attack takes advantage of this
+04:24
+unencrypted process by sending fake, malicious
+04:27
+deauthentication packets to kick people off the network.
+04:31
+The attacker can select individual
+04:32
+users or kick everyone off at once.
+04:35
+Jamming and deauthentication attacks have the same
+04:37
+end result, but they use very different methods.<br>
+04:41
+Wi-Fi is used everywhere today and attackers are
+04:43
+always working on methods to exploit weaknesses.
+04:46
+Yet another wireless technology that can
+04:47
+be susceptible to attacks is Bluetooth.<br>
+8. Bluetooth Attacks
+04:50
+From headphones and speakers to watches, fitness
+04:52
+devices, automobiles, and even refrigerators, Bluetooth
+04:56
+devices are heavily integrated into our daily lives.
+04:59
+This makes these devices attractive to malicious attackers.
+05:02
+An attacker can gather all sorts of personal data and even
+05:05
+take over our devices' embedded cameras and microphones.<br>
+9. Bluejacking
+05:09
+One common Bluetooth attack is Bluejacking.
+05:11
+When performing a Bluejacking attack, he or
+05:13
+she looks for another Bluetooth device that's
+05:15
+discoverable and sends unwanted messages to it.
+05:18
+Attackers can't gain control of a device or steal any
+05:21
+data so Bluejacking is more annoying than harmful.<br>
+10. Bluesnarfing
+05:25
+Bluesnarfing, on the other hand, can be harmful.
+05:27
+Bluesnarfing is when an attacker exploits a
+05:29
+vulnerability in the OBject EXchange Protocol,
+05:32
+or OBEX Protocol, to pair to a target device.
+05:35
+Once paired, he or she is able to access all the victim's
+05:38
+device data and then disconnect without leaving a trace.<br>
+05:42
+The best defense against both of these attacks
+05:44
+is to only enable Bluetooth when you need to
+05:46
+and to not leave devices in Discovery Mode.<br>
+11. RFID Attacks
+05:49
+Radio frequency identification, or RFID, uses
+05:52
+radio waves to transmit data from small circuit
+05:55
+boards called RFID tags to special scanners.
+05:58
+Active RFID tags, like those seen in a car's toll pass, have
+06:02
+on-board batteries and can send signals over a long distance.
+06:06
+Passive RFID tags, which are used in ID
+06:08
+badges and credit cards, aren't powered.
+06:11
+These tags instead rely on the
+06:13
+RFID scanner's transferred energy.<br>
+06:15
+A malicious attacker can build their
+06:17
+own scanner to target these RFID tags.
+06:19
+If an attacker can get close enough,
+06:21
+they can scan the RFID chip and clone it.
+06:24
+An attacker might also eavesdrop on the communication
+06:27
+between the chip and reader and steal the data that way.<br>
+06:30
+To protect against these attacks, RFID chips often
+06:33
+operate at different frequencies, making it more
+06:35
+difficult for an attacker to quickly complete a scan.
+06:38
+Also, because most of these chips are passive, an
+06:41
+attacker has to get extremely close for it to work.
+12. NFC Attacks
+06:44
+Near field communication, or NFC, is a
+06:46
+newer technology that's built on RFID.
+06:49
+NFC allows two-way communication between two devices.
+06:52
+But they must be within a few centimeters of each other.<br>
+06:55
+NFC is what allows us to use our
+06:57
+smartphones to pay for items at the store.
+06:59
+We can also use NFC to transfer files between
+07:01
+two phones if they're right next to each other.
+07:04
+NFC is vulnerable to the same types of attacks as RFID,
+07:07
+but it requires the attacker to be incredibly close.<br>
+13. Summary
+07:10
+That'll wrap up this lesson.
+07:12
+In this lesson, we looked at some
+07:13
+different wireless communications attacks.
+07:15
+We first looked at Wi-Fi and rogue access points,
+07:18
+evil twin attacks, how an IV can be exploited, and
+07:21
+also how jamming and disassociation attacks work.
+07:24
+Then we looked at Bluetooth attacks,
+07:25
+including Bluejacking and Bluesnarfing.
+07:28
+Finally, we covered how RFID and NFC work and the
+07:31
+security concerns associated with both of these devices.<br>

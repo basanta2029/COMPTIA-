@@ -1,0 +1,208 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Protecting a Client from Spam
+00:04
+In this demo, we're going to talk
+00:06
+about protecting a client from spam.
+00:07
+We're going to look at spam settings in two email services.
+00:10
+One is Gmail, and we're going to
+00:12
+access it through a web browser.
+00:14
+The other is the Outlook web mail client.
+2. Gmail
+00:17
+Let's start with Gmail.
+00:18
+I already have my browser open, and I've logged into Gmail.
+00:20
+It has a few functions that are set up automatically to help
+00:23
+you organize and sort out types of email, especially spam.
+00:27
+When I come down here and select this email,
+00:29
+I get some options, including Report Spam.
+00:32
+If I select that, it'll be moved to my Spam folder, and
+00:35
+all emails coming from this address will be marked as spam.
+00:38
+I'll undo that for this email.
+00:41
+Another thing I can do is right-click
+00:42
+and look at some more options.
+00:44
+A better choice for this email might be
+00:45
+to label it Promotions rather than Spam.
+00:48
+Now let's click on the Promotions
+00:49
+tab and see what's in there.
+00:51
+I see several emails, many already sorted for me.
+00:54
+If I right-click again, I can see, under
+00:56
+Label As, that it's labeled Promotions.
+00:59
+Let's look at the contents of our Spam Folder.
+01:02
+If I click on it, we can see several emails in there.
+01:05
+If you find some emails in here that aren't spam,
+01:07
+you can select them and then click Not Spam.
+01:10
+All emails in this folder are
+01:11
+deleted 30 days after they arrive.
+01:14
+Now let's look at the settings.
+01:15
+Here, you'll find Filters and Blocked Addresses.
+01:18
+Down here, you'll find the email
+01:19
+addresses you've previously blocked.
+01:22
+These emails are marked as spam.
+01:24
+If, for some reason you need to
+01:25
+change that, this is where you do it.
+3. Outlook
+01:27
+Now let's look at another web-based email client, Outlook.
+01:31
+I'm already in Outlook, and here's my inbox.
+01:33
+I have one email down here.
+01:35
+Let's select it.
+01:36
+I have a tab up here called Junk.
+01:38
+When I click on it, I get a dropdown, and I
+01:40
+have a few choices: Junk, Phishing, and Block.
+01:43
+Let's click each of these for more information.
+01:46
+First, I'll click on Junk.
+01:47
+This will add this email to the list of Spam mail senders.
+01:50
+I can change my mind and click Undo.
+01:54
+Next, click on Phishing.
+01:56
+When we do that, this email is reported as a Phishing email
+01:59
+to Microsoft so they can better detect these on their end.
+02:02
+This isn't a Phishing email, so
+02:03
+I'll click the Don't Report button.
+02:05
+The third option is Block.
+02:07
+This won't report the email, but maybe
+02:09
+it's just one that I don't care to receive
+02:11
+any longer, and unsubscribing doesn't help.
+02:13
+Once again, I'll cancel and not really block the email.
+02:16
+Let's take a look at the Junk Email folder.
+02:19
+I have two emails in here that aren't junk, so I'll
+02:21
+tell Outlook that, and they'll go back to my inbox.
+02:24
+I'll do that for both emails.
+02:26
+Now, if I look at my inbox, both emails are there.
+02:29
+Let's look at our settings in Outlook.
+02:35
+I'll click on the Junk Email option here.
+02:37
+Let's look at our options.
+02:39
+We can block senders or entire
+02:40
+domains from sending you email.
+02:42
+I click on Add, and I can put in an email
+02:45
+address or a domain that I want to block.
+02:47
+Or maybe a sender is getting
+02:48
+labeled as spam, but it isn't spam.
+02:51
+If that's the case, I can add those emails and
+02:53
+domains here, under the Safe senders and domains list.
+02:56
+The last one here is Safe mailing lists.
+02:58
+For example, I'm a member of several mail lists related
+03:01
+to tech, and many spam filters mark them as spam.
+03:04
+I can enter them here to make sure that doesn't happen.
+03:07
+At the bottom of the page, we have a couple of filters.
+03:10
+The first one is to only trust emails
+03:11
+from my Safe senders and domains list.
+03:14
+This would be pretty restrictive and take a lot of updating.
+03:17
+But if you only want to use this email to communicate
+03:19
+with coworkers or family members, this might be a
+03:21
+great thing, especially for children or the elderly.
+03:25
+The next one will block attachments from anyone
+03:27
+not in your Safe senders and domains list.
+03:29
+This isn't as restrictive, and it's probably a good
+03:32
+way to prevent malware from coming to your mailbox.
+03:35
+Be aware that these are just client settings, and on the
+03:37
+server side of things, you probably have even more settings.
+03:40
+In addition, ISPs and mail hosts are filtering
+03:43
+emails before they even arrive to your client.
+03:45
+In general, processes for catching spam have come a
+03:48
+long way, but you still have to do some things manually.
+4. Summary
+03:51
+That's it for this demo.
+03:52
+In this demo, we configured spam
+03:54
+filtering in Gmail and Outlook.

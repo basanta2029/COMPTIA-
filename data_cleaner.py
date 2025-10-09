@@ -96,6 +96,9 @@ class DataCleaner:
     def clean_video_transcript(self, content: str) -> Tuple[List[Dict], str]:
         """
         Clean video transcript: remove timestamps, extract sections
+        Handles two formats:
+        - Format 1 (Ch 1-4): "Section Name 00:00-01:23"
+        - Format 2 (Ch 5-13): "1. Section Name" with timestamps on separate lines
         Returns: (sections_list, full_cleaned_content)
         """
         sections = []
@@ -110,28 +113,61 @@ class DataCleaner:
             if not line:
                 continue
 
-            # Check for section header with timestamp (e.g., "Section Name 00:00-01:23")
-            timestamp_pattern = r'^(.+?)\s+(\d{2}:\d{2}-\d{2}:\d{2})$'
-            match = re.match(timestamp_pattern, line)
+            # Format 1: Check for section header with timestamp (Ch 1-4)
+            # Pattern: "Section Name 00:00-01:23"
+            timestamp_pattern1 = r'^(.+?)\s+(\d{2}:\d{2}-\d{2}:\d{2})$'
+            match1 = re.match(timestamp_pattern1, line)
 
-            if match:
-                # Save previous section
+            # Format 2: Check for numbered section (Ch 5-13)
+            # Pattern: "1. Section Name" or "2. Another Section"
+            section_pattern2 = r'^\d+\.\s+(.+?)$'
+            match2 = re.match(section_pattern2, line)
+
+            # Format 2: Check for standalone timestamp lines
+            # Pattern: "00:04" or "01:23"
+            timestamp_pattern2 = r'^\d{2}:\d{2}$'
+            match_ts = re.match(timestamp_pattern2, line)
+
+            if match1:
+                # Format 1: Section with timestamp on same line
                 if current_section and current_content:
                     sections.append({
                         'header': current_section['header'],
-                        'timestamp': current_section['timestamp'],
+                        'timestamp': current_section.get('timestamp', ''),
                         'content': ' '.join(current_content)
                     })
 
-                # Start new section
                 current_section = {
-                    'header': match.group(1).strip(),
-                    'timestamp': match.group(2)
+                    'header': match1.group(1).strip(),
+                    'timestamp': match1.group(2)
                 }
                 current_content = []
+
+            elif match2:
+                # Format 2: Numbered section header
+                if current_section and current_content:
+                    sections.append({
+                        'header': current_section['header'],
+                        'timestamp': current_section.get('timestamp', ''),
+                        'content': ' '.join(current_content)
+                    })
+
+                current_section = {
+                    'header': match2.group(1).strip(),
+                    'timestamp': ''
+                }
+                current_content = []
+
+            elif match_ts:
+                # Format 2: Standalone timestamp (skip it, don't add to content)
+                # We don't associate timestamps in Format 2 since they're interspersed
+                continue
+
             else:
-                # Regular content line - remove leading arrows/numbers
+                # Regular content line - remove leading arrows/numbers and HTML tags
                 clean_line = re.sub(r'^\d+→', '', line).strip()
+                clean_line = re.sub(r'<br>$', '', clean_line).strip()
+                clean_line = re.sub(r'<br>', ' ', clean_line).strip()
                 if clean_line and not re.match(r'^Click one of the buttons', clean_line):
                     current_content.append(clean_line)
                     full_text.append(clean_line)
@@ -140,7 +176,7 @@ class DataCleaner:
         if current_section and current_content:
             sections.append({
                 'header': current_section['header'],
-                'timestamp': current_section['timestamp'],
+                'timestamp': current_section.get('timestamp', ''),
                 'content': ' '.join(current_content)
             })
 
@@ -321,7 +357,16 @@ class DataCleaner:
                 '01_Security_Concepts',
                 '02_Threats_Vulnerabilities_and_Mitigations',
                 '03_Cryptographic_Solutions',
-                '04_Identity_and_Access_Management'
+                '04_Identity_and_Access_Management',
+                '05_Network_Architecture',
+                '06_Resiliency_and_Site_Security',
+                '07_Vulnerability_Management',
+                '08_Network_and_Endpoint_Security',
+                '09_Incident_Response',
+                '10_Protocol_App_and_Cloud_Security',
+                '11_Security_Governance_Concepts',
+                '12_Risk_Management_Processes',
+                '13_Data_Protection_and_Compliance'
             ]
 
         print("=" * 60)

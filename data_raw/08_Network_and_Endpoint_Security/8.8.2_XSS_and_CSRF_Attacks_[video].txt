@@ -1,0 +1,444 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. XSS and CSRF Attacks
+00:04
+In this lesson we're going to talk about Cross-Site
+00:07
+Scripting (XSS) and Cross-Site Request Forgery (CSRF).<br>
+00:11
+Both of these exploits are web application
+00:13
+exploits and take advantage of a web browser's
+00:15
+ability to execute code on the client.
+00:18
+This allows an attacker to gain access to information on
+00:22
+the user's computer or to trick the user into providing
+00:24
+information that the attacker can get access to.<br>
+2. Cross-Site Scripting (XSS) Attacks
+00:27
+Cross-site Scripting Attacks are a type of injection attack
+00:30
+where malicious code is saved onto an otherwise benign site.<br>
+00:34
+For example, a site that allows a user to provide input
+00:37
+and display that back to users, such as a forum, could be
+00:41
+used by malicious individuals to save and execute a
+00:44
+client-side script if the input isn't properly sanitized.
+00:47
+These scripts can then be used to gather
+00:49
+information from a user's computer.<br>
+00:52
+Sometimes, cross-site scripting attacks take
+00:55
+advantage of how web developers store
+00:56
+information on a user's computer using cookies.
+01:00
+Cookies are commonly used to store
+01:01
+information when a user is logged in.
+01:03
+Typically, this is a unique session key that's
+01:06
+temporarily stored and associated with a particular user.
+01:09
+The browser sends this information to the server as
+01:12
+part of the header for each request that it makes to
+01:14
+the server, and the unique session key identifies that
+01:17
+the user is currently logged in, thus avoiding the need
+01:20
+to send user names and passwords for each request.<br>
+01:23
+This approach isn't necessarily bad.
+01:25
+However, if other vulnerabilities exist, an attacker
+01:29
+can covertly steal this information by executing a
+01:32
+client-side script requesting cookies for that domain.
+01:36
+It then displays those cookies as part
+01:37
+of the HTML page that is returned.
+01:39
+To identify a vulnerable website, attackers will see if
+01:42
+they can pass small snippets of text through an input field.<br>
+01:46
+For example, many websites will
+01:48
+have a form that takes some input.
+01:50
+If the developer doesn't sanitize the inputs,
+01:53
+these input fields can be used to execute code.
+01:56
+Many attackers will use a simple JavaScript
+01:58
+alert to see if vulnerabilities exist.<br>
+02:00
+If not properly sanitized, a script like this pops up
+02:04
+an alert saying, —œvulnerable.— Once a site is found
+02:07
+to be vulnerable, a more complicated script is run that
+02:10
+has the browser send cookies for the current site.
+02:12
+With this information, the attacker can then gain access to
+02:16
+the system and get more sensitive and valuable information
+02:19
+like credit cards or personal identifying information.<br>
+3. Cross-Site Request Forgery (CSRF) Attacks
+02:22
+Another attack to know is the Cross-Site Request Forgery
+02:25
+Attack, which is usually abbreviated as CSRF [/see-SURF/].
+02:28
+A CSRF attack is a malicious exploit where
+02:32
+unwanted commands are executed on a website
+02:34
+where the user has already been authenticated.
+02:36
+For instance, if a user has already logged onto a site, an
+02:40
+attacker could update his or her password by simply sending
+02:43
+the appropriate parameters to the password reset page.<br>
+02:47
+Cross-site request forgery is often called a One-Click
+02:50
+Attack because all that a user needs to do is click a link on
+02:53
+a webpage or in an email that contains the malicious code.
+02:57
+If the website doesn't have anti-forgery
+03:00
+protections, the code can automatically update
+03:02
+information without further intervention.<br>
+03:04
+Now, unlike cross-site scripting, which exploits
+03:08
+the trust the user has for a particular website,
+03:10
+CSRF exploits trust in the other direction.
+03:13
+It exploits the trust that the website
+03:16
+has for the end-user's browser.
+03:17
+Let's look at how it works.<br>
+4. How a CSRF Attack Works
+03:20
+The CSRF attack works by including a link, or even
+03:23
+a script, in either a web page, an email message,
+03:25
+or an instant message that accesses a site to which
+03:28
+the user has already been authenticated.
+03:30
+This is why we say it exploits the
+03:33
+website's trust in the end-user's browser.
+03:35
+Now, several things must happen for this to work.<br>
+03:38
+First, the website must rely on a user's identity.
+03:41
+A good example is your bank's website that
+03:44
+you log into to manage your bank account.
+03:45
+That website has to trust the end-user's
+03:48
+identity via some mechanism in the web browser.
+03:50
+A classic example is a cookie.<br>
+03:53
+After that, this attack uses this information to
+03:56
+trick the web browser into sending an HTTP request to
+03:59
+this targeted site without the end-user's knowledge.
+04:02
+If the targeted website has developed their application
+04:05
+correctly by requiring an authenticated end-user to confirm
+04:09
+specific actions, then this type of attack won't work.
+04:13
+However, many websites perform actions based on user input
+04:16
+without requiring the end-user to confirm those actions.
+04:20
+And this is where we get into trouble.<br>
+04:22
+For example, many websites have a Remember Me�
+04:25
+checkbox that doesn't require users to re-enter
+04:27
+their username and password on subsequent visits
+04:29
+to that site you're automatically logged in.
+04:32
+When you select that checkbox, you are
+04:34
+essentially telling the website to create
+04:36
+and save a session cookie on your computer.
+04:38
+A CSRF attack could then leverage this cookie to send
+04:42
+an HTTP request to the site to perform some type of
+04:45
+unwanted action, such as changing the user's password.<br>
+5. CSRF in Action
+04:48
+Let's walk through an example of a CSRF attack
+04:50
+to help you better understand how it works.<br>
+04:53
+Suppose you get an email message with the subject
+04:55
+line, Check out this funny picture You're in
+04:57
+the mood for a laugh, so you open the email.
+04:59
+When you do, you don't see any image the
+05:02
+image link appears to be broken.
+05:03
+A couple of days later, you realize
+05:05
+that your bank account has been drained.
+05:07
+You've been the victim of a CSRF attack.<br>
+05:10
+What happened is the "funny picture" email contained
+05:12
+underlying HTML code that executed when you opened the email.
+05:16
+Here's what a normal HTML image tag looks like.
+05:20
+Notice the file extension at the end.
+05:22
+However, here's what a CSRF exploit would look like.<br>
+05:25
+Notice the link here.
+05:27
+Instead of downloading the image, this code
+05:29
+automatically executes, which uses the saved cookie
+05:32
+on your computer to authenticate to your bank's
+05:34
+website allowing the attacker to transfer your money.<br>
+05:38
+You may have noticed that almost all email
+05:40
+clients nowadays automatically disable images.
+05:43
+You now must click an option to
+05:44
+view images in these email message.
+05:46
+The reason for this is to prevent CSRF attacks.<br>
+6. CSRF Win Conditions
+05:50
+CSRF attacks can be tricky to pull off.
+05:53
+There are several factors that need to
+05:55
+be in place for these attacks to work.<br>
+05:57
+First, the target website must not check
+05:59
+the referring header of the HTTP request.
+06:02
+And while this is more common than you would think,
+06:04
+a properly secured website will check for this.<br>
+06:07
+Second, the attacker must understand the
+06:10
+form submission syntax at the target site
+06:12
+so they can construct the appropriate URL.
+06:15
+This step is relatively easy.<br>
+06:17
+Third, the attacker must know some key pieces
+06:20
+of personal information required by the form.
+06:23
+In this example, they must know the account number
+06:25
+of the victim and how to plug that into the URL.<br>
+06:28
+And finally, the user authentication to that
+06:30
+website must meet two criteria: it needs to be
+06:33
+possible, and it must be transparent to the user.
+06:36
+In other words, the website can't ask the user to
+06:38
+confirm that they want to authenticate to the site
+06:41
+and that they want to complete the transaction.
+06:43
+This can be accomplished in two ways.
+06:45
+One way is by using a saved session
+06:47
+cookie, such as in this example.
+06:49
+The second way is simply hoping that the
+06:51
+user is currently logged into that website.<br>
+7. A Blind Attack
+06:54
+It's important to note that a CSRF attack is what
+06:56
+we call a Blind Attack, meaning that the attacker
+06:59
+can't see what happens; they can't see the response
+07:01
+that the target website sends back to the victim's
+07:03
+web browser after the forged request is sent.<br>
+07:06
+Also, attackers will have a difficult time if the
+07:09
+website responds with some type of confirmation, a
+07:12
+second form, or other information that must be
+07:14
+submitted after the initial URL is executed.
+07:17
+There are ways around this, however.<br>
+07:20
+For example, the attacker could include multiple images
+07:22
+in the email message which will complete each subsequent
+07:25
+step in the transfer process: the first image would
+07:28
+initiate the transfer from one account to another, the
+07:31
+second image might specify when to execute the transfer,
+07:34
+and the third image might confirm the transfer.<br>
+07:37
+Now as you can see this is a fairly
+07:39
+complex attack, but it's not impossible.<br>
+8. Preventing a CSRF Attack
+07:42
+It's essential to follow these two steps to protect
+07:44
+organizations and end users from CSRF attacks.<br>
+07:47
+The first step is to implement secure web
+07:50
+development and authentication practices.
+07:52
+For example, a lot of web application frameworks
+07:56
+support anti-forgery mechanisms, such as the ability to
+07:58
+create paired tokens that are mathematically related.
+08:02
+One token is saved in a cookie on the client.
+08:04
+A second token is saved in the form
+08:06
+that is used to submit information.
+08:08
+In order for the form to be submitted, these
+08:11
+two tokens must match, or an error will occur.<br>
+08:14
+Another mechanism to implement is an idle
+08:16
+timeout that automatically ends a user's
+08:18
+session if they have been idle for too long.
+08:21
+A lot of banking websites actually have this functionality.<br>
+08:24
+The second step is to train end users
+08:26
+to protect themselves from CSRF attacks.
+08:29
+Teach them that if they log into a website that
+08:30
+requires authentication of some sort a banking
+08:33
+site or eCommerce site they should immediately
+08:36
+log out when they are done using that site.
+08:38
+They should also close the browser tab or browser window.
+08:41
+It's problematic when users stay logged into
+08:43
+services after they are done using them.
+08:45
+This opens them up to CSRF attacks because
+08:47
+they are authenticated to that service.<br>
+08:50
+Another concern is Remember Me check boxes.
+08:53
+While this feature is often convenient, it does
+08:55
+increase the likelihood that a CSRF attack will succeed.
+08:58
+As such, train users never to use this feature.<br>
+09:02
+And finally, train users to never load images
+09:05
+or accept instant messages from unknown sources.
+09:07
+Even though many email clients and IM applications
+09:10
+will automatically hide or block images from
+09:12
+unknown sources, it's still possible for the end
+09:15
+user to choose to download those images.
+09:17
+Therefore, make sure to train users never to download
+09:20
+or load images from unknown or suspicious sources.<br>
+9. Summary
+09:24
+That's it for this demonstration.
+09:26
+In this lesson, we talked about cross-site scripting
+09:28
+(XSS) and cross-site request forgery (CSRF).
+09:32
+We looked at how they work, some example attacks, and what
+09:35
+you can do to protect your organization from these threats.<br>

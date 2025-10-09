@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "chapter_num": "10",
+    "section_num": "10.1.5",
+    "title": "Use Hyper-V",
+    "content_type": "video",
+    "filename": "10.1.5_Use_Hyper-V_[video].txt",
+    "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.5_Use_Hyper-V_[video].txt",
+    "word_count": 1004,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script Hyper-V is virtualization software created by Microsoft in 2016 that lets you run other software like it's on a physical computer. We call this a virtual machine, or VM. With a VM, you're able to have many different operating systems installed on one physical system. Today, we're going to look at how to enable Hyper-V on a desktop. In the Start menu, look for the features keyword, and it'll direct you to the section to add or remove features. Alternately, you could go to Control Panel &gt; Programs &gt; Turn Windows features on or off. This is the area that controls extra features that come with Windows, ones that might not be enabled by default. Also, before we go on, it's important to know that you won't be able to enable Hyper-V unless you have the Pro version of Windows. Now, after clicking OK, it'll process your request when it's done and require a reboot. We're going to do that now, so I'll pause the recording. Okay, our reboot is complete, and we're ready to launch Hyper-V. To do so, we go to Search and type hyper-v. This brings us the Hyper-V Manager. Eventually, when you have VMs, they'll be populated over here. This manager allows you to control all the local Hyper-V instances along with remote ones. We're only worried about our local one, so we're going to right-click here and select Virtual Switch Manager. Here's where we manager the virtual switches that'll be used for the VMs. It's a good idea to configure these first so you know how your network is going to be set up. And there are three options to select from here. External binds to the physical network adapter. This would give a VM access to the internet and the physical network that your PC is connected to. The Internal switch is similar except that it doesn't allow direct access to the internet. This would be a good option if you had several VMs that needed to talk to each other without access to a physical network. Private is completely isolated. Some use cases for this would be restoring a VM for testing purposes that you don't want to communicate with anything. We're going to do something simple and select Internal. Let's give it a name of Internal as well. We'd have the ability to select the Ethernet controller or Wi-Fi adapter if we'd used the external network switch. If there were other network adapters available, they'd be listed here, too. And if you were running VLANs, you could select this and tag the network with a certain VLAN ID. Click Apply when you're done creating your switch. One thing to notice here is the Default Switch. This switch does use the Internal network setting, but the part at the bottom makes it different from the internal network we just created. This has NAT, or Network Address Translation, set up to give your VMs access to the computer's physical network. If the NAT weren't on, you wouldn't have access to the physical network. This default is set this way to make it easy for users to start right out of the box. Anyway, click OK. Now we're ready to create our first VM. Right-click on the host and select Quick Create. In here, we select the ISO of our choosing from some default options, or we could just upload our own from a local source. I happen to have one in my Downloads folder, so I'm going to go search and grab my Windows ISO. After selecting Open, we're able to go through and create our virtual machine. Before booting, we need to check out some settings first. They make it handy by giving us the ability to launch the settings from here. In here are all the settings related to the VM we just created. We're able to tweak quite a few aspects, like Memory, Processor, Hard Drive, and more. Let's adjust some of these. Our memory is a little low, for default specs of Windows, we can up it to 4096. It does have the ability to dynamically change as well. Under Processor, it's set to 8. Let's adjust it to 2. Under Network Adapter, we need to configure this VM to use the network we created. For our case, we need to use the isolated network. However, it's possible to create a firewall VM with two network adapters, one being connected to the physical network and the second one to the internal network we just created. Essentially, that'd give you total control of what comes in and out of your Hyper-V host VM. Lastly, let's give this a name. This could be a convention or something of your choosing. Apply and click OK. Connect allows us to start the process to power on the VM. This is essentially the VM's console, just like you'd see from a computer booting up from a monitor. Click Start. And just like that, we've started the process to install Windows. And that's it for this demo. In this demo, we went over how to install Hyper-V. We also configured a new virtual switch and created a VM.",
+  "chunks": [
+    {
+      "chunk_id": "10.1.5_chunk_1",
+      "content": "Hyper-V is virtualization software created by Microsoft in 2016 that lets you run other software like it's on a physical computer. We call this a virtual machine, or VM. With a VM, you're able to have many different operating systems installed on one physical system.",
+      "summary": "Hyper-V is Microsoft's virtualization software that enables users to run multiple operating systems simultaneously on a single physical machine through virtual machines (VMs). This technology allows for efficient resource management, testing of different environments, and enhanced security by isolating applications. Practical applications include server consolidation, development and testing environments, and disaster recovery solutions.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.1.5",
+        "title": "Use Hyper-V",
+        "content_type": "video",
+        "filename": "10.1.5_Use_Hyper-V_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.5_Use_Hyper-V_[video].txt",
+        "word_count": 1004,
+        "has_content": true
+      },
+      "section_header": "Use Hyper-V",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.1.5_chunk_2",
+      "content": "Today, we're going to look at how to enable Hyper-V on a desktop. In the Start menu, look for the features keyword, and it'll direct you to the section to add or remove features. Alternately, you could go to Control Panel &gt; Programs &gt; Turn Windows features on or off. This is the area that controls extra features that come with Windows, ones that might not be enabled by default. Also, before we go on, it's important to know that you won't be able to enable Hyper-V unless you have the Pro version of Windows. Now, after clicking OK, it'll process your request when it's done and require a reboot.",
+      "summary": "This section covers the steps to enable Hyper-V on a Windows desktop, highlighting that it is only available on the Pro version of Windows. Users can access the feature through the Start menu or Control Panel to add or remove Windows features. After enabling Hyper-V, a system reboot is required to complete the process.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.1.5",
+        "title": "Use Hyper-V",
+        "content_type": "video",
+        "filename": "10.1.5_Use_Hyper-V_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.5_Use_Hyper-V_[video].txt",
+        "word_count": 1004,
+        "has_content": true
+      },
+      "section_header": "Enable Hyper-V",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.1.5_chunk_3",
+      "content": "We're going to do that now, so I'll pause the recording. Okay, our reboot is complete, and we're ready to launch Hyper-V. To do so, we go to Search and type hyper-v. This brings us the Hyper-V Manager. Eventually, when you have VMs, they'll be populated over here. This manager allows you to control all the local Hyper-V instances along with remote ones. We're only worried about our local one, so we're going to right-click here and select Virtual Switch Manager. Here's where we manager the virtual switches that'll be used for the VMs. It's a good idea to configure these first so you know how your network is going to be set up. And there are three options to select from here. External binds to the physical network adapter. This would give a VM access to the internet and the physical network that your PC is connected to. The Internal switch is similar except that it doesn't allow direct access to the internet. This would be a good option if you had several VMs that needed to talk to each other without access to a physical network. Private is completely isolated. Some use cases for this would be restoring a VM for testing purposes that you don't want to communicate with anything. We're going to do something simple and select Internal. Let's give it a name of Internal as well. We'd have the ability to select the Ethernet controller or Wi-Fi adapter if we'd used the external network switch. If there were other network adapters available, they'd be listed here, too. And if you were running VLANs, you could select this and tag the network with a certain VLAN ID. Click Apply when you're done creating your switch. One thing to notice here is the Default Switch. This switch does use the Internal network setting, but the part at the bottom makes it different from the internal network we just created. This has NAT, or Network Address Translation, set up to give your VMs access to the computer's physical network. If the NAT weren't on, you wouldn't have access to the physical network.",
+      "summary": "In this section, learners are guided through the process of creating a virtual switch in Hyper-V, a key component for managing virtual machines (VMs). The course covers three types of virtual switches: External, which connects VMs to the physical network; Internal, allowing VMs to communicate with each other without internet access; and Private, which isolates VMs entirely. Practical applications include configuring these switches based on specific networking needs, such as testing or inter-VM communication.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.1.5",
+        "title": "Use Hyper-V",
+        "content_type": "video",
+        "filename": "10.1.5_Use_Hyper-V_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.5_Use_Hyper-V_[video].txt",
+        "word_count": 1004,
+        "has_content": true
+      },
+      "section_header": "Create a Virtual Switch",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.1.5_chunk_4",
+      "content": "This default is set this way to make it easy for users to start right out of the box. Anyway, click OK. Now we're ready to create our first VM. Right-click on the host and select Quick Create. In here, we select the ISO of our choosing from some default options, or we could just upload our own from a local source. I happen to have one in my Downloads folder, so I'm going to go search and grab my Windows ISO. After selecting Open, we're able to go through and create our virtual machine. Before booting, we need to check out some settings first. They make it handy by giving us the ability to launch the settings from here. In here are all the settings related to the VM we just created. We're able to tweak quite a few aspects, like Memory, Processor, Hard Drive, and more. Let's adjust some of these. Our memory is a little low, for default specs of Windows, we can up it to 4096. It does have the ability to dynamically change as well. Under Processor, it's set to 8. Let's adjust it to 2. Under Network Adapter, we need to configure this VM to use the network we created. For our case, we need to use the isolated network. However, it's possible to create a firewall VM with two network adapters, one being connected to the physical network and the second one to the internal network we just created. Essentially, that'd give you total control of what comes in and out of your Hyper-V host VM. Lastly, let's give this a name. This could be a convention or something of your choosing. Apply and click OK. Connect allows us to start the process to power on the VM. This is essentially the VM's console, just like you'd see from a computer booting up from a monitor.",
+      "summary": "In this section, users learn to create a virtual machine (VM) using an ISO file, adjusting essential settings such as memory, processor, and network configurations. The practical application includes setting up an isolated network for enhanced security, with options to create a firewall VM for better control over network traffic. This foundational knowledge is crucial for implementing secure environments in cybersecurity practices.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.1.5",
+        "title": "Use Hyper-V",
+        "content_type": "video",
+        "filename": "10.1.5_Use_Hyper-V_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.5_Use_Hyper-V_[video].txt",
+        "word_count": 1004,
+        "has_content": true
+      },
+      "section_header": "Create a VM",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.1.5_chunk_5",
+      "content": "Click Start. And just like that, we've started the process to install Windows. And that's it for this demo. In this demo, we went over how to install Hyper-V. We also configured a new virtual switch and created a VM.",
+      "summary": "This section demonstrates the installation of Hyper-V, a virtualization platform in Windows, highlighting the steps to configure a virtual switch and create a virtual machine (VM). Key security concepts include understanding virtualization's role in isolating environments and enhancing security through controlled resource allocation. Practical applications involve setting up secure test environments for software development and cybersecurity training.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.1.5",
+        "title": "Use Hyper-V",
+        "content_type": "video",
+        "filename": "10.1.5_Use_Hyper-V_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.5_Use_Hyper-V_[video].txt",
+        "word_count": 1004,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 5
+}

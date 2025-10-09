@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "chapter_num": "10",
+    "section_num": "10.8.4",
+    "title": "Communication of Embedded Systems",
+    "content_type": "video",
+    "filename": "10.8.4_Communication_of_Embedded_Systems_[video].txt",
+    "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.8.4_Communication_of_Embedded_Systems_[video].txt",
+    "word_count": 1122,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script Now that we have a better understanding of embedded systems, it's time to dive deeper into the technologies and protocols that allow them to communicate. Embedded systems often require new technologies, and their biggest obstacle is the lack of capable support. For this reason, they currently use standard networking protocols. These protocols are divided into four categories: short-range, medium-range, long-range, and wired. There are several short-range protocols and technologies. Near-field communication, or NFC, and radio-frequency identification, or RFID, are two very simple, low-energy, and versatile protocols. RFID uses two-way radio transmitter receivers to identify and track object tags. NFC uses magnetic field induction to communicate between mobile and standard electronic devices. Bluetooth Low Energy, also known as BLE or Bluetooth Smart, is a wireless personal area network. It supports low-power, long-use IoT technology. It's used in the healthcare, security, entertainment, and fitness sectors. Light-Fidelity, or Li-Fi, is very similar to Wi-Fi. The two key differences are speed and mode of communication. Unlike Wi-Fi, Li-Fi is a visible light communications system. It uses light bulbs to transfer data at the high speed of 224 gigabits per second. Quick Response, or QR, codes and barcodes are tags attached to products. They're machine-readable and contain information about the product. A QR code is two-dimensional, and you can scan it using a smartphone, while barcodes come in one-dimensional or two-dimensional code. Thread, Zigbee, and Z-Wave are all radio protocols that create low-rate private area networks. Their advantage is that, although they're low-power, they offer high throughput. Thread uses an IPv6-based networking protocol. Zigbee is a short-range communication protocol based on the IEEE 203.15.4 standard. Z-Wave is a low-power, short-range communication protocol designed mostly for home IoT systems. Wi-Fi is commonly implemented in wireless local area networking. The most common Wi-Fi standard is 802.11n with a maximum speed of 600 Megabits per second and a range of about 50 meters. Wi-Fi Direct uses peer-to-peer communication without a set wireless access point. The devices in Wi-Fi Direct only start communicating after an access point device has been selected within the system. You can also use hotspots to provide wireless network access. Mobile hotspots let you connect a device to the internet through a portable wireless device such as a phone. Hotspots form an on-the-spot Wi-Fi network, allowing you to connect a number of gadgets for simple, fast internet access. Hotspots often use third-, fourth-, and fifth-generation technology to provide this type of connection. 5G is the best of them because it achieves speeds twenty times faster that 4G; its peak speed is 20 gigabytes per second. It uses LTE for wireless connections and includes lower frequencies than previous generations, down to 600 Megahertz. There are two main protocols in the medium-range category, HaLow and LTE-Advanced. HaLow is a branch of Wi-Fi with extended range. It's most useful in rural areas because it uses low data rates, so it reduces power and cost for transmission. LTE-Advanced is a mobile communication. It makes standard LTE better because it has a greater capacity for data rate, extended range, efficiency, and performance. Long-range wireless communication offers a few different protocols and technologies. The first one we'll talk about is LPWAN. LPWAN stands for low-power wide-area networking. It's a wireless telecommunication network. There are three protocols associated with LPWAN: LoRaWAN, Sigfox, and Neul. LoRaWAN stands for long-range wide-area network. It's used with mobile, industrial machine-to-machine, and secure two-way communication for IoT devices, smart cities, and healthcare. Sigfox is good for devices with short battery life that need to transfer low-level data. Neul uses a small part of the TV white space spectrum and delivers high-quality, high-power, high-coverage networks at a low cost. Next, there's Very Small Aperture Terminal, or VSAT. VSAT uses small dish antennas to transfer broadband and narrowband data. And finally, there's cellular. This communication protocol can send and receive high-quality data over very long distances. However, it's very expensive and consumes a lot of power. Next we're going to talk about wired communication. There are three main protocols in this category: Ethernet; Multimedia over Coax Alliance, or MoCA; and Power-line Communication, or PLC. Ethernet is used in LANs. The speed, signaling, media access methods, and cable lengths are defined in the various Ethernet standards published by the IEEE 802.3 committee. There are many Ethernet specifications, but they all use a common naming standard. The word BASE is in the middle. This indicates that the standard uses baseband signaling, not broadband signaling. Baseband updates may improve or diminish battery performance, network signal strength, and roaming capability. Then we have MoCA. As its name suggests, MoCA uses coaxial cables to provide high-definition videos of a home and other content related to it. PLC uses electrical wires to transmit power and data from one point to another. PLC is used in different sectors like automation, industrial, and broadband over power lines, or BLP. One last form of embedded device communication worth mentioning isn't a protocol; it's a card many devices carry inside them called a Subscriber Identity Module card, or SIM card. It encrypts data transmission and stores information about the owner of the device the SIM card is in for identification and authentication. It also stores the International Mobile Subscriber Identity, or IMSI. This is a unique identifier that defines a subscriber in the wireless world, including their country and mobile network. That's it for this lesson. Today, we discussed the communication of embedded systems. We talked about short-range, medium-range, and long-range protocols. We also covered wired communication and SIM cards. Embedded devices are complex. Learning about their protocols, technologies, and communication models will prepare you to incorporate and safeguard them.",
+  "chunks": [
+    {
+      "chunk_id": "10.8.4_chunk_1",
+      "content": "Now that we have a better understanding of embedded systems, it's time to dive deeper into the technologies and protocols that allow them to communicate. Embedded systems often require new technologies, and their biggest obstacle is the lack of capable support. For this reason, they currently use standard networking protocols. These protocols are divided into four categories: short-range, medium-range, long-range, and wired.",
+      "summary": "The Communication of Embedded Systems section explores the technologies and protocols essential for enabling communication in embedded systems, which often face limitations due to inadequate support. It categorizes networking protocols into four types: short-range, medium-range, long-range, and wired, highlighting the importance of these standards in facilitating effective connectivity. Understanding these protocols is crucial for implementing secure and efficient communication in various applications of embedded systems.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.8.4",
+        "title": "Communication of Embedded Systems",
+        "content_type": "video",
+        "filename": "10.8.4_Communication_of_Embedded_Systems_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.8.4_Communication_of_Embedded_Systems_[video].txt",
+        "word_count": 1122,
+        "has_content": true
+      },
+      "section_header": "Communication of Embedded Systems",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.8.4_chunk_2",
+      "content": "There are several short-range protocols and technologies. Near-field communication, or NFC, and radio-frequency identification, or RFID, are two very simple, low-energy, and versatile protocols. RFID uses two-way radio transmitter receivers to identify and track object tags. NFC uses magnetic field induction to communicate between mobile and standard electronic devices. Bluetooth Low Energy, also known as BLE or Bluetooth Smart, is a wireless personal area network. It supports low-power, long-use IoT technology. It's used in the healthcare, security, entertainment, and fitness sectors. Light-Fidelity, or Li-Fi, is very similar to Wi-Fi. The two key differences are speed and mode of communication. Unlike Wi-Fi, Li-Fi is a visible light communications system. It uses light bulbs to transfer data at the high speed of 224 gigabits per second. Quick Response, or QR, codes and barcodes are tags attached to products. They're machine-readable and contain information about the product. A QR code is two-dimensional, and you can scan it using a smartphone, while barcodes come in one-dimensional or two-dimensional code. Thread, Zigbee, and Z-Wave are all radio protocols that create low-rate private area networks. Their advantage is that, although they're low-power, they offer high throughput. Thread uses an IPv6-based networking protocol. Zigbee is a short-range communication protocol based on the IEEE 203.15.4 standard. Z-Wave is a low-power, short-range communication protocol designed mostly for home IoT systems. Wi-Fi is commonly implemented in wireless local area networking. The most common Wi-Fi standard is 802.11n with a maximum speed of 600 Megabits per second and a range of about 50 meters. Wi-Fi Direct uses peer-to-peer communication without a set wireless access point. The devices in Wi-Fi Direct only start communicating after an access point device has been selected within the system. You can also use hotspots to provide wireless network access. Mobile hotspots let you connect a device to the internet through a portable wireless device such as a phone. Hotspots form an on-the-spot Wi-Fi network, allowing you to connect a number of gadgets for simple, fast internet access. Hotspots often use third-, fourth-, and fifth-generation technology to provide this type of connection. 5G is the best of them because it achieves speeds twenty times faster that 4G; its peak speed is 20 gigabytes per second. It uses LTE for wireless connections and includes lower frequencies than previous generations, down to 600 Megahertz.",
+      "summary": "The Short-Range Protocols section of the CompTIA Security+ course covers various low-energy communication technologies, including NFC, RFID, Bluetooth Low Energy, and Li-Fi, each serving distinct applications in sectors like healthcare and IoT. It also discusses the functionality of QR codes and barcodes for product identification, as well as radio protocols like Thread, Zigbee, and Z-Wave for creating low-power networks. Additionally, the section highlights Wi-Fi standards, Wi-Fi Direct, and mobile hotspots, emphasizing the advancements in connectivity with technologies like 5G.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.8.4",
+        "title": "Communication of Embedded Systems",
+        "content_type": "video",
+        "filename": "10.8.4_Communication_of_Embedded_Systems_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.8.4_Communication_of_Embedded_Systems_[video].txt",
+        "word_count": 1122,
+        "has_content": true
+      },
+      "section_header": "Short-Range Protocols",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.8.4_chunk_3",
+      "content": "There are two main protocols in the medium-range category, HaLow and LTE-Advanced. HaLow is a branch of Wi-Fi with extended range. It's most useful in rural areas because it uses low data rates, so it reduces power and cost for transmission. LTE-Advanced is a mobile communication. It makes standard LTE better because it has a greater capacity for data rate, extended range, efficiency, and performance.",
+      "summary": "Medium-range protocols include HaLow and LTE-Advanced, each enhancing connectivity in specific contexts. HaLow extends Wi-Fi range with low data rates, making it ideal for rural areas by minimizing power and transmission costs. LTE-Advanced improves standard LTE by offering higher data rates, greater capacity, and enhanced efficiency, catering to the growing demands of mobile communication.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.8.4",
+        "title": "Communication of Embedded Systems",
+        "content_type": "video",
+        "filename": "10.8.4_Communication_of_Embedded_Systems_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.8.4_Communication_of_Embedded_Systems_[video].txt",
+        "word_count": 1122,
+        "has_content": true
+      },
+      "section_header": "Medium-Range Protocols",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.8.4_chunk_4",
+      "content": "Long-range wireless communication offers a few different protocols and technologies. The first one we'll talk about is LPWAN. LPWAN stands for low-power wide-area networking. It's a wireless telecommunication network. There are three protocols associated with LPWAN: LoRaWAN, Sigfox, and Neul. LoRaWAN stands for long-range wide-area network. It's used with mobile, industrial machine-to-machine, and secure two-way communication for IoT devices, smart cities, and healthcare. Sigfox is good for devices with short battery life that need to transfer low-level data. Neul uses a small part of the TV white space spectrum and delivers high-quality, high-power, high-coverage networks at a low cost. Next, there's Very Small Aperture Terminal, or VSAT. VSAT uses small dish antennas to transfer broadband and narrowband data. And finally, there's cellular. This communication protocol can send and receive high-quality data over very long distances. However, it's very expensive and consumes a lot of power.",
+      "summary": "Long-range wireless communication encompasses several protocols, primarily focusing on Low-Power Wide-Area Networking (LPWAN), which includes LoRaWAN, Sigfox, and Neul, each catering to specific IoT applications with varying power and data transfer needs. Additionally, Very Small Aperture Terminal (VSAT) utilizes small dish antennas for broadband data transmission, while cellular technology offers high-quality data transfer over long distances, albeit at a higher cost and power consumption. Understanding these protocols is crucial for implementing effective communication solutions in smart cities, healthcare, and industrial applications.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.8.4",
+        "title": "Communication of Embedded Systems",
+        "content_type": "video",
+        "filename": "10.8.4_Communication_of_Embedded_Systems_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.8.4_Communication_of_Embedded_Systems_[video].txt",
+        "word_count": 1122,
+        "has_content": true
+      },
+      "section_header": "Long-Range Protocols",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.8.4_chunk_5",
+      "content": "Next we're going to talk about wired communication. There are three main protocols in this category: Ethernet; Multimedia over Coax Alliance, or MoCA; and Power-line Communication, or PLC. Ethernet is used in LANs. The speed, signaling, media access methods, and cable lengths are defined in the various Ethernet standards published by the IEEE 802.3 committee. There are many Ethernet specifications, but they all use a common naming standard. The word BASE is in the middle. This indicates that the standard uses baseband signaling, not broadband signaling. Baseband updates may improve or diminish battery performance, network signal strength, and roaming capability. Then we have MoCA. As its name suggests, MoCA uses coaxial cables to provide high-definition videos of a home and other content related to it. PLC uses electrical wires to transmit power and data from one point to another. PLC is used in different sectors like automation, industrial, and broadband over power lines, or BLP.",
+      "summary": "Wired communication encompasses three primary protocols: Ethernet, Multimedia over Coax Alliance (MoCA), and Power-line Communication (PLC). Ethernet, governed by IEEE 802.3 standards, is essential for local area networks (LANs) and utilizes baseband signaling for efficient data transmission. MoCA leverages coaxial cables for high-definition video delivery, while PLC enables data transmission over electrical wiring, serving various applications in automation and broadband connectivity.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.8.4",
+        "title": "Communication of Embedded Systems",
+        "content_type": "video",
+        "filename": "10.8.4_Communication_of_Embedded_Systems_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.8.4_Communication_of_Embedded_Systems_[video].txt",
+        "word_count": 1122,
+        "has_content": true
+      },
+      "section_header": "Wired Communication",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.8.4_chunk_6",
+      "content": "One last form of embedded device communication worth mentioning isn't a protocol; it's a card many devices carry inside them called a Subscriber Identity Module card, or SIM card. It encrypts data transmission and stores information about the owner of the device the SIM card is in for identification and authentication. It also stores the International Mobile Subscriber Identity, or IMSI. This is a unique identifier that defines a subscriber in the wireless world, including their country and mobile network.",
+      "summary": "SIM cards are embedded devices that facilitate secure communication by encrypting data transmissions and storing essential information for device identification and authentication. They contain the International Mobile Subscriber Identity (IMSI), a unique identifier that specifies the subscriber's country and mobile network, ensuring secure access to wireless services. Understanding SIM card functionality is crucial for implementing effective mobile security measures.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.8.4",
+        "title": "Communication of Embedded Systems",
+        "content_type": "video",
+        "filename": "10.8.4_Communication_of_Embedded_Systems_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.8.4_Communication_of_Embedded_Systems_[video].txt",
+        "word_count": 1122,
+        "has_content": true
+      },
+      "section_header": "SIM Cards",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.8.4_chunk_7",
+      "content": "That's it for this lesson. Today, we discussed the communication of embedded systems. We talked about short-range, medium-range, and long-range protocols. We also covered wired communication and SIM cards. Embedded devices are complex. Learning about their protocols, technologies, and communication models will prepare you to incorporate and safeguard them.",
+      "summary": "In this lesson, we explored the communication methods of embedded systems, focusing on short-range, medium-range, and long-range protocols, as well as wired communication and SIM cards. Understanding these protocols and technologies is essential for effectively integrating and securing embedded devices in various applications. This knowledge equips learners to better protect these complex systems against potential vulnerabilities.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.8.4",
+        "title": "Communication of Embedded Systems",
+        "content_type": "video",
+        "filename": "10.8.4_Communication_of_Embedded_Systems_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.8.4_Communication_of_Embedded_Systems_[video].txt",
+        "word_count": 1122,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 7
+}

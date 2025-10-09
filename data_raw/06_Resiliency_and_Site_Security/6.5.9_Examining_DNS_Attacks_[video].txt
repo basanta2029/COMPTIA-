@@ -1,0 +1,571 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Examining DNS Attacks
+00:04
+In this demo, we're going to look at a few ways an
+00:06
+attacker may use the DNS system to get information
+00:08
+about the computers in an organization, and also to
+00:11
+compromise a machine and get access to information.<br>
+2. Reconnaissance Using DNS Servers
+00:15
+Let's first look at doing reconnaissance using DNS servers.
+00:19
+One way this can be done is with the nslookup command.<br>
+00:22
+You see that I have a PowerShell command
+00:24
+prompt window open here, and if you just type
+00:26
+nslookup, that will put you into this utility.
+00:31
+nslookup is used to troubleshoot DNS server settings.<br>
+00:34
+You can see here that the DNS server
+00:36
+that I'll be using is this one.
+00:37
+It's the default one that I have
+00:38
+configured for my machine here.
+00:41
+When a computer wants to resolve a name, the first thing
+00:43
+it does is look into a special file called a host file.<br>
+00:45
+We'll talk more about that later, but
+00:47
+essentially the host file can contain mappings
+00:50
+between domain names and specific IP addresses.
+00:52
+If it's not in the host file, then an
+00:54
+operating system checks its DNS cache.<br>
+00:57
+If the mapping is in there, then it
+00:59
+uses the IP address that it finds.
+01:01
+If not, it goes out and does the name resolution
+01:03
+with the DNS server that's configured.<br>
+01:06
+In this case, nslookup simply allows us
+01:08
+to do those queries by passing the cache
+01:10
+that might be on a local operating system.<br>
+01:13
+So, if we want to, here, we can simply type in
+01:15
+the name that we want to resolve like
+01:17
+google.com, and it will go out and resolve that.
+01:20
+My DNS server here goes out and says, I don't
+01:22
+know what IP address that is associated with.<br>
+01:26
+And then it issues the query to
+01:27
+the resolver that it's pointing to.
+01:29
+And you see here the IP address of www.google.com.
+01:33
+Of course, we can try other ones like testout.com and others
+01:36
+in you'll see that the resolution occurs appropriately.<br>
+01:39
+For this demo, I've set up a domain that we
+01:41
+can use to see how a few vulnerabilities work.<br>
+3. Domain Information
+01:43
+One vulnerability that exists with DNS servers
+01:46
+is the ability to find out all the domain
+01:48
+information associated with a particular name.
+01:51
+One way we can do that is using the list command.<br>
+01:54
+To do that, we type ls; we specify the domain that we
+01:58
+want using the -d flag; and then we can say ajptech.net.
+02:04
+This will tell us all of the computers that
+02:06
+are associated with the ajptech domain.<br>
+02:09
+If you do that, you see that we have
+02:11
+a full list of all the machines.<br>
+02:13
+Now, this is just a test environment.
+02:15
+I've just listed a few servers, etc.<br>
+4. Zone Transfer
+02:18
+You can imagine in an organization that has
+02:20
+hundreds of computers, this provides very nice
+02:22
+information to know which IP addresses we should
+02:25
+spend time attacking, based on these records.<br>
+02:28
+This is referred to as a zone transfer, and we need
+02:31
+to make sure that our DNS servers in our organization
+02:33
+don't allow zone transfers to just anyone.<br>
+02:36
+They're useful because you don't want just a
+02:38
+single server, and so you want to share those
+02:40
+records with other secondary zones, but you need to
+02:43
+restrict who is allowed to do those zone transfers.<br>
+02:46
+Let's take a look at that, inside of Windows Server 2019.
+02:49
+You see here I have launched the DNS manager on the server.<br>
+02:52
+If you haven't installed that role before,
+02:54
+it's super simple to do, and you do so
+02:56
+before configuring these different zones.
+02:59
+Let's go ahead and look at some of the
+03:00
+properties that you might want to set.<br>
+03:02
+The one that's of most interest to us
+03:04
+right now is this Zone Transfers tab.
+03:07
+This basically specifies who is allowed to
+03:09
+gather all those records at once, and you
+03:11
+can see here that we have 'To any server'.<br>
+03:14
+We could come in and just say,
+03:16
+'No zone transfers are allowed.'
+03:18
+But as I explained a minute ago, that's useful,
+03:20
+because if this is the primary zone for that domain
+03:23
+name, then you want to have a secondary zone.<br>
+03:26
+You don't want a single point of failure here, and
+03:28
+so you want to be able to allow zone transfers.<br>
+03:31
+You can only allow servers in the Name Servers tab,
+03:33
+which is nice because usually you set those up specific
+03:36
+to a domain, and that would be anything that's listed
+03:39
+here, or you can restrict it to a specific IP address.<br>
+03:43
+Let's go ahead and apply those settings.
+03:45
+Let's say that we're going to only allow
+03:47
+the following servers, and I'll just put
+03:49
+in a fake IP address here right now.
+03:52
+It won't resolve right now, but that's okay.
+03:54
+But it will restrict those zone transfers.<br>
+03:58
+Let's go ahead and switch back over to our
+04:00
+PowerShell window, and let's try that same command.
+04:04
+You can see now that it says it has refused transferring
+04:07
+all that information from the zone--perfect.<br>
+04:10
+Now when people are doing reconnaissance, they won't
+04:13
+be able to see everything that we have in that zone.<br>
+04:15
+However, the domain name server continues to
+04:17
+work, so I can say server1, and you can see
+04:21
+that that name resolution continues to work.
+04:23
+So, make sure you secure your zone transfers.<br>
+04:25
+Today, restricting zone transfers is commonplace;
+04:28
+in fact, it's the default of many operating systems,
+04:32
+and it's the best practice everybody should have.
+04:34
+If your DNS server isn't configured that way,
+04:37
+you want to make sure that you take care of that.
+04:39
+Now let's move on to a couple of other concepts.<br>
+5. Distributor Reflection
+04:42
+There are many different DNS attacks, such as
+04:44
+distributor reflection, denial of service attacks,
+04:47
+cache poisoning, TCP send floods, and others.<br>
+04:50
+Let me just briefly explain one
+04:52
+of these to give you a flavor.<br>
+04:54
+A distributor reflection denial of service attack
+04:56
+occurs when several DNS queries are sent to a DNS
+04:59
+server that has an open resolver, and that DNS server
+05:03
+responds to the spoofed address with a large payload.<br>
+05:06
+The key to the attack is that the attacker only has to send
+05:09
+a small packet of information to the DNS server, and then
+05:12
+the DNS server sends a large response, but that response
+05:15
+doesn't go back to the attacker; it sends it to the target
+05:18
+that the attacker listed, using a spoofed source IP address.<br>
+05:22
+In short, the attacker uses the DNS to create a
+05:25
+denial of service attack against the third party.
+05:28
+In this case, you need to make sure
+05:29
+that you don't have any open resolvers.<br>
+05:31
+An open resolver is essentially a DNS server
+05:34
+that's willing to resolve names for third parties.<br>
+05:37
+Usually you protect this in a couple of different
+05:39
+ways--either restricting the DNS requests that come into
+05:42
+your DNS server, that is, you don't allow outside
+05:44
+requests; or simply not having any forwarding
+05:47
+capabilities associated with your DNS server, and making
+05:50
+sure that recursion is disabled on your DNS server.<br>
+05:53
+Let me show you that setting quickly here.
+05:55
+If you come to your server, you'll see
+05:58
+the properties of the server itself.
+06:00
+We are in the zone from before.
+06:01
+We're going to go over here to the Advanced tab.<br>
+06:03
+You want to make sure that this option is
+06:05
+set, so that you disable the recursion.
+06:08
+That, of course, disables the forwarders as indicated there.
+06:12
+I'll say OK there.<br>
+06:15
+Then I'll come over to the Forwarders tab here.
+06:18
+You can see that I'm set up, but
+06:19
+it's not using those anymore.
+06:21
+The downside of this is we need to use a different
+06:23
+DNS server in order to do our name resolution.<br>
+06:26
+This server now can only do name resolution for
+06:28
+the domains that are on it, but that's okay.
+06:30
+That's best practice.
+06:32
+You definitely don't want to be susceptible to
+06:34
+those amplification attacks that I just explained.<br>
+06:36
+Let's come back here to our PowerShell
+06:38
+prompt and get out of the nslookup command.<br>
+6. Clear out the Cache
+06:39
+Let me show you a couple of other things.
+06:43
+I'll go ahead and clear the screen, as well.<br>
+06:45
+A minute ago, I explained that when name resolution
+06:47
+needs to occur on an operating system, it first checks
+06:50
+the set host file, and then it goes to cache, sees
+06:54
+what's in cache and uses that if there is something
+06:57
+that's associated with that name, and then it goes and
+07:00
+does the name resolution using the DNS system.<br>
+07:02
+Let's go ahead and take a look at that cache.<br>
+07:05
+But before we do so, we need to make
+07:06
+sure that we have something in cache.
+07:08
+I'll simply go ahead and try to ping google.com.
+07:12
+You can see that I get a response.<br>
+07:14
+Now, to see what's in cache, you
+07:15
+simply say ipconfig /displaydns.
+07:20
+You can see that I have several different entries in there.<br>
+07:22
+I have some of those entries because I have a browser
+07:25
+running on my system, and it's already resolved some names.
+07:28
+Let's go ahead and try to clear that out.
+07:30
+To clear out your cache, you type ipconfig /flushdns.<br>
+07:36
+Let's ping google.com, and then let's go ahead
+07:39
+and see if we can see just those name resolutions.<br>
+07:45
+You can see here there is only one
+07:47
+record now when we display the dns cache.<br>
+07:50
+So, this cache constantly keeps track of
+07:52
+what's been resolved previously so it doesn't
+07:55
+have to invoke the DNS system for every single
+07:57
+request if it already knows that information.
+07:59
+It saves time.<br>
+08:01
+Each of these records also has a time to live,
+08:03
+as you can see there, and so they're constantly
+08:06
+refreshing as the system is being used.<br>
+08:08
+One mistake that some people come across
+08:10
+when they're trying to resolve DNS issues
+08:12
+is they forget to clear out their cache.<br>
+08:15
+They hit a site that's in cache, they make some
+08:17
+changes, and they don't realize that it's actually
+08:18
+pulling it out of cache instead of going on.
+08:21
+I want to make sure you're aware of how cache works.<br>
+08:24
+Now what if we could poison the cache or insert a record in
+08:27
+there that wasn't legitimate, that came from another source?<br>
+08:30
+This is a little bit harder to architect, but if we
+08:32
+could specify a different IP address for the name
+08:35
+server, the DNS server, we could pull records from it.
+08:39
+It would be saved in the cache or locally,
+08:41
+and then subsequent resolutions would pull
+08:43
+the IP address out of the cache.<br>
+08:45
+Indeed, that's one attack that individuals
+08:47
+use when exploiting the DNS system.
+08:50
+We're not going to show that to you today, but
+08:52
+I want to show you one other concept before we
+08:54
+wrap up this demo, and that has to do with the
+08:57
+host file that I mentioned a few minutes ago.<br>
+7. The Host File
+09:00
+This is the host file I mentioned a minute ago, and you can
+09:02
+see that it's located in Windows System32\drivers\etc\hosts.
+09:10
+In this file, you can include specific mappings
+09:12
+between a domain name and an IP address.<br>
+09:15
+Before there was this DNS system, this file was
+09:17
+distributed to all the computers on the internet, and so
+09:20
+there's just a huge file of these mappings so that you
+09:22
+wouldn't have to remember the specific IP addresses.<br>
+09:25
+Thankfully, the DNS system came along, making
+09:27
+our lives a lot easier and being allowed to
+09:29
+update, but this is still in place.
+09:32
+And as I mentioned, it gets checked before
+09:33
+the OS resolver cache, before going out to
+09:35
+the DNS system to resolve domain names.<br>
+09:38
+You can see an example of how you can use this.
+09:40
+But before I put in an example, let me show you a
+09:43
+legitimate site so that you can see how this works.
+09:45
+Let's go to cat-bounce.com, just a random site.<br>
+09:49
+You can see that there's something out there.
+09:51
+If we want to redirect individuals, instead of them
+09:53
+going to this site to a different site, we can go into
+09:55
+the host file and add a mapping that we're interested in.<br>
+09:59
+You can see that we put the IP address
+10:01
+first, and then the domain name.
+10:02
+So, I know that the duckduckgo server is at
+10:05
+the following address, and then I can simply
+10:07
+put www.cat-bounce.com, and I'll save that.<br>
+10:11
+Recent browsers have incorporated a
+10:13
+DNS cache inside of the browser itself.<br>
+10:15
+They do this because it gives them a competitive
+10:17
+advantage to go ahead and resolve those domain
+10:19
+names ahead of time, the minute that they show up
+10:22
+on a page and that you might potentially click on.<br>
+10:25
+Lets open an incognito window to bypass the cache.<br>
+10:27
+If we go to www.cat-bounce.com, you
+10:31
+see that it forwards on duckduckgo.com.
+10:34
+I hope you can see how dangerous this could be.
+10:36
+This is considered host file manipulation.<br>
+10:39
+However, an attacker could simply
+10:41
+keep that in place and use.
+10:42
+An innocent individual wouldn't have any
+10:44
+idea that you weren't on the legitimate site.<br>
+10:47
+Consider banking sites or corporate sites, anywhere
+10:50
+where sensitive information might be shared.
+10:52
+An attacker can get access to this host file,
+10:54
+present what looks to be a legitimate website,
+10:57
+and then siphon off data as you use it.<br>
+10:58
+It's also good to know that you can use host file to block
+11:02
+malicious information, if you are a systems administrator.<br>
+11:05
+This is a common site.
+11:06
+It looks a little dated, but the
+11:08
+information is pretty good on it.
+11:09
+You can come and download a specific host file
+11:12
+to block out a bunch of bad or malicious sites.<br>
+11:14
+The IP address you see is a null IP address.
+11:17
+In other words, if we added this to our host file
+11:19
+and you went there, it simply wouldn't go anywhere.<br>
+11:22
+One thing to note, you'll need to have
+11:24
+administrator rights to adjust the host file.<br>
+8. Summary
+11:26
+That's it for this demo.
+11:28
+In this demo, we've look at a few ways that an
+11:30
+attacker can use the DNS system to get out information
+11:33
+about computers in the organization and to compromise
+11:36
+a machine and eventually grab sensitive information.<br>
+11:39
+We've looked at the nslookup command.
+11:41
+We've looked at zone transfers.
+11:43
+We've looked at securing the open resolvers.
+11:45
+And we've looked at the host file and clearing cache.<br>
+11:49
+It's really important that you protect your DNS servers and
+11:51
+make sure that you aren't taken advantage of in that way.<br>

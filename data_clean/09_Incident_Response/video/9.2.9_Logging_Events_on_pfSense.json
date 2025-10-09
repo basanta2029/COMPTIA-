@@ -1,0 +1,152 @@
+{
+  "metadata": {
+    "chapter_num": "9",
+    "section_num": "9.2.9",
+    "title": "Logging Events on pfSense",
+    "content_type": "video",
+    "filename": "9.2.9_Logging_Events_on_pfSense_[video].txt",
+    "file_path": "data_raw/09_Incident_Response/9.2.9_Logging_Events_on_pfSense_[video].txt",
+    "word_count": 1297,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script In this demo, we're going to spend a few minutes viewing log files on our pfSense security appliance. A log should act as a red flag that something is happening—potentially something bad. By reviewing your logs on a regular basis, you'll get an idea of the normal traffic on your device. In reality, no one likes to spend hours a day viewing log files. Typically, you would want to configure a syslog server so that all your logs from all devices go to one place to be consolidated for easier analysis. To view logs on pfSense, we first need to go to Status and then down to System logs. Once we're in System logs, we see the General tab. Like I said, viewing logs isn't the most exciting thing to do, but it's necessary. Under the General tab we can see that we have a time stamp, a process, a PID or process ID, and a message about the log. Let's move on to Gateways. Under Gateways, you can see that I only have one Gateway on this test system. Looks like my system is grabbing an IP for the WAN network interface. You might be thinking that if it's grabbing an IP from a WAN, shouldn't this be a public IP? That answer is yes, but I do have a test network set up and that network is connected to my regular LAN. We also have our Routing logs here. Next to that I have my DNS Resolver logs. Finally, we have our Wireless logs. I don't have any Wi-Fi currently configured with this device, so there are no logs for our Wi-Fi. I'll move over to my Firewall logs. This is generally where you might look for malicious attacks directed toward your network. You'll see information down here with more details. As I scroll down, you can see the different source IPs that triggered the log. This one here, 172.16.1.100, is from my DMZ trying to get out to the WAN. Dynamic View shows us a bit less detail. Down here I have some WAN traffic on port 5353. As you first get a system set up, you might want to familiarize yourself with the different ports that your firewall is logging. Some ports might be perfectly normal while others might not be. I wasn't familiar with port 5353, but a quick web search told me it's for multicast DNS and is safe. So now I know what it is. Summary View gives us a bunch of graphs that can be helpful to get a quick visual of things. Here I have my different interfaces. I have three in this device—one for my LAN, one for the DMZ, and one connected for the WAN. I have my protocols and it looks like most of my traffic is UDP. Down here a little further, I can see the source IPs of what's been triggering the logs. All the 192.168 addresses are from the WAN interface and the 172.16 address is my DMZ. I have the destination IPs in this next graph. I have my source ports next. Finally, I have destination ports. Here you can see UDP/53 listed. That is my DNS traffic. So, it's good to get familiar with what your typical traffic looks like. This is called creating a baseline. This isn't covered in this demo, but it should be one of the first things you do when setting up new devices. My next set of logs are DHCP logs. Here you can see who's getting IPs from the DHCP server. Not only can you see who's getting IPs, but you can see the DHCP acknowledgement, the DHCP requests, and down here you can see that DHCP renewed an IP for one of the clients. All of this is useful information if you're troubleshooting DHCP or need to see what devices are connecting to your network. I had this device set up as a captive portal at one time so that we could see all the events that are related to it. As a quick review, a captive portal is a web page you're taken to, such as in a hotel or other public place, before you're given access to the internet. You typically must agree to the terms and conditions before being allowed to proceed. You might have to enter a password as well. The next four tabs—IPSec, PPP, VPN, and Load Balancer—have no log files because I don't have any of those services running on this device. But I do have OpenVPN configured. Down here you can see all of those log files. I do have some NTP logs, or Network Time Protocol logs, here. The last thing I want to look at is log settings. If you noticed as we were viewing logs, there were only fifty shown. Here is where we can change that if needs be. As I scroll down, you can see other settings that you can configure. You can even reset your logs. Here at the bottom is where you can configure pfSense to send these logs to a syslog server. I'll check this box to enable it. When I do, I'm presented with some more settings specific to remote logging. I can be specific about which interface I want to log. I can log all of them, or just one. I could just log my WAN events if that's all I'm concerned about. I can choose to only have IPv4 logs or only have IPv6 logs sent. Here I would put the IP and port of the remote syslog server that's configured to receive those logs. I don't have a server set up for this demo, but if I did, this is where I would tell pfSense to send the logs to. The format would be something like 10.10.10.100, and it would be port 514. Port 514 is the port that pfSense uses by default to send logs to the syslog server. Now I would need to tell pfSense what I want to send. I don't like information overload. I only want to send the logs that I actually need. So I might only want firewall events, DNS events, DHCP events, and VPN. In my case, that's OpenVPN. I would then click on Save and, if my syslog server is configured, it'll start to receive log files from my pfSense security appliance. That's it for this demo. In this demo, we examined the logs on our pfSense security appliance. We viewed many of the different logs that can be collected. We then looked at settings and some things that we can configure. We ended by explaining how to send our logs to a syslog server.",
+  "chunks": [
+    {
+      "chunk_id": "9.2.9_chunk_1",
+      "content": "In this demo, we're going to spend a few minutes viewing log files on our pfSense security appliance. A log should act as a red flag that something is happening—potentially something bad. By reviewing your logs on a regular basis, you'll get an idea of the normal traffic on your device. In reality, no one likes to spend hours a day viewing log files. Typically, you would want to configure a syslog server so that all your logs from all devices go to one place to be consolidated for easier analysis.",
+      "summary": "This section emphasizes the importance of monitoring log files on the pfSense security appliance to identify unusual or potentially malicious activity. Regular log review helps establish a baseline of normal traffic, while configuring a syslog server allows for centralized log management, streamlining analysis and improving security oversight.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.9",
+        "title": "Logging Events on pfSense",
+        "content_type": "video",
+        "filename": "9.2.9_Logging_Events_on_pfSense_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.9_Logging_Events_on_pfSense_[video].txt",
+        "word_count": 1297,
+        "has_content": true
+      },
+      "section_header": "Logging Events on pfSense",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.2.9_chunk_2",
+      "content": "To view logs on pfSense, we first need to go to Status and then down to System logs. Once we're in System logs, we see the General tab. Like I said, viewing logs isn't the most exciting thing to do, but it's necessary. Under the General tab we can see that we have a time stamp, a process, a PID or process ID, and a message about the log. Let's move on to Gateways. Under Gateways, you can see that I only have one Gateway on this test system. Looks like my system is grabbing an IP for the WAN network interface. You might be thinking that if it's grabbing an IP from a WAN, shouldn't this be a public IP? That answer is yes, but I do have a test network set up and that network is connected to my regular LAN. We also have our Routing logs here. Next to that I have my DNS Resolver logs. Finally, we have our Wireless logs. I don't have any Wi-Fi currently configured with this device, so there are no logs for our Wi-Fi.",
+      "summary": "The System Logs section of the CompTIA Security+ course covers how to access and interpret logs in pfSense, emphasizing the importance of log analysis for security monitoring. Key logs include General logs, Gateways, Routing, DNS Resolver, and Wireless logs, each providing critical information such as timestamps, process IDs, and messages related to system activity. Understanding these logs is essential for troubleshooting and maintaining network security.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.9",
+        "title": "Logging Events on pfSense",
+        "content_type": "video",
+        "filename": "9.2.9_Logging_Events_on_pfSense_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.9_Logging_Events_on_pfSense_[video].txt",
+        "word_count": 1297,
+        "has_content": true
+      },
+      "section_header": "System Logs",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.2.9_chunk_3",
+      "content": "I'll move over to my Firewall logs. This is generally where you might look for malicious attacks directed toward your network. You'll see information down here with more details. As I scroll down, you can see the different source IPs that triggered the log. This one here, 172.16.1.100, is from my DMZ trying to get out to the WAN. Dynamic View shows us a bit less detail. Down here I have some WAN traffic on port 5353. As you first get a system set up, you might want to familiarize yourself with the different ports that your firewall is logging. Some ports might be perfectly normal while others might not be. I wasn't familiar with port 5353, but a quick web search told me it's for multicast DNS and is safe. So now I know what it is. Summary View gives us a bunch of graphs that can be helpful to get a quick visual of things. Here I have my different interfaces. I have three in this device—one for my LAN, one for the DMZ, and one connected for the WAN. I have my protocols and it looks like most of my traffic is UDP. Down here a little further, I can see the source IPs of what's been triggering the logs. All the 192.168 addresses are from the WAN interface and the 172.16 address is my DMZ. I have the destination IPs in this next graph. I have my source ports next. Finally, I have destination ports. Here you can see UDP/53 listed. That is my DNS traffic. So, it's good to get familiar with what your typical traffic looks like. This is called creating a baseline. This isn't covered in this demo, but it should be one of the first things you do when setting up new devices.",
+      "summary": "Firewall logs are essential for monitoring and identifying potential malicious attacks on a network, providing detailed information on source IPs, traffic types, and port activity. Familiarizing oneself with typical traffic patterns and creating a baseline is crucial for effective security management, as it helps distinguish between normal and suspicious behavior. Utilizing different views, such as Dynamic and Summary, can aid in visualizing traffic data and understanding the network's operational status.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.9",
+        "title": "Logging Events on pfSense",
+        "content_type": "video",
+        "filename": "9.2.9_Logging_Events_on_pfSense_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.9_Logging_Events_on_pfSense_[video].txt",
+        "word_count": 1297,
+        "has_content": true
+      },
+      "section_header": "Firewall Logs",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.2.9_chunk_4",
+      "content": "My next set of logs are DHCP logs. Here you can see who's getting IPs from the DHCP server. Not only can you see who's getting IPs, but you can see the DHCP acknowledgement, the DHCP requests, and down here you can see that DHCP renewed an IP for one of the clients. All of this is useful information if you're troubleshooting DHCP or need to see what devices are connecting to your network.",
+      "summary": "DHCP logs provide critical insights into the allocation of IP addresses by the DHCP server, detailing which devices are receiving IPs, along with DHCP acknowledgments and requests. This information is essential for troubleshooting DHCP issues and monitoring network connectivity, allowing administrators to track device connections effectively. Understanding these logs enhances network management and security by identifying unauthorized devices or potential misconfigurations.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.9",
+        "title": "Logging Events on pfSense",
+        "content_type": "video",
+        "filename": "9.2.9_Logging_Events_on_pfSense_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.9_Logging_Events_on_pfSense_[video].txt",
+        "word_count": 1297,
+        "has_content": true
+      },
+      "section_header": "DHCP Logs",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.2.9_chunk_5",
+      "content": "I had this device set up as a captive portal at one time so that we could see all the events that are related to it. As a quick review, a captive portal is a web page you're taken to, such as in a hotel or other public place, before you're given access to the internet. You typically must agree to the terms and conditions before being allowed to proceed. You might have to enter a password as well.",
+      "summary": "A captive portal is a web page that users encounter before gaining internet access in public spaces, such as hotels, where they must agree to terms and conditions or enter a password. This mechanism serves as an authorization method to ensure users acknowledge the rules of network usage. Understanding captive portals is crucial for implementing secure access controls and enhancing user experience in public Wi-Fi environments.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.9",
+        "title": "Logging Events on pfSense",
+        "content_type": "video",
+        "filename": "9.2.9_Logging_Events_on_pfSense_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.9_Logging_Events_on_pfSense_[video].txt",
+        "word_count": 1297,
+        "has_content": true
+      },
+      "section_header": "Captive Portal Authorization",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.2.9_chunk_6",
+      "content": "The next four tabs—IPSec, PPP, VPN, and Load Balancer—have no log files because I don't have any of those services running on this device. But I do have OpenVPN configured. Down here you can see all of those log files. I do have some NTP logs, or Network Time Protocol logs, here.",
+      "summary": "The \"Other Logs\" section highlights the absence of log files for IPSec, PPP, VPN, and Load Balancer services, as they are not configured on the device. However, it emphasizes the presence of OpenVPN logs and NTP (Network Time Protocol) logs, which are crucial for monitoring VPN connections and time synchronization, respectively. Understanding these logs is essential for troubleshooting and maintaining network security.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.9",
+        "title": "Logging Events on pfSense",
+        "content_type": "video",
+        "filename": "9.2.9_Logging_Events_on_pfSense_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.9_Logging_Events_on_pfSense_[video].txt",
+        "word_count": 1297,
+        "has_content": true
+      },
+      "section_header": "Other Logs",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.2.9_chunk_7",
+      "content": "The last thing I want to look at is log settings. If you noticed as we were viewing logs, there were only fifty shown. Here is where we can change that if needs be. As I scroll down, you can see other settings that you can configure. You can even reset your logs. Here at the bottom is where you can configure pfSense to send these logs to a syslog server. I'll check this box to enable it. When I do, I'm presented with some more settings specific to remote logging. I can be specific about which interface I want to log. I can log all of them, or just one. I could just log my WAN events if that's all I'm concerned about. I can choose to only have IPv4 logs or only have IPv6 logs sent. Here I would put the IP and port of the remote syslog server that's configured to receive those logs. I don't have a server set up for this demo, but if I did, this is where I would tell pfSense to send the logs to. The format would be something like 10.10.10.100, and it would be port 514. Port 514 is the port that pfSense uses by default to send logs to the syslog server. Now I would need to tell pfSense what I want to send. I don't like information overload. I only want to send the logs that I actually need. So I might only want firewall events, DNS events, DHCP events, and VPN. In my case, that's OpenVPN. I would then click on Save and, if my syslog server is configured, it'll start to receive log files from my pfSense security appliance.",
+      "summary": "In the Log Settings section, users learn how to configure log management in pfSense, including adjusting the number of displayed logs and enabling remote logging to a syslog server. Key settings allow for the selection of specific interfaces and log types, such as firewall, DNS, DHCP, and VPN events, while ensuring that only necessary data is sent to avoid information overload. This practical application enhances security monitoring and incident response by centralizing log data for analysis.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.9",
+        "title": "Logging Events on pfSense",
+        "content_type": "video",
+        "filename": "9.2.9_Logging_Events_on_pfSense_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.9_Logging_Events_on_pfSense_[video].txt",
+        "word_count": 1297,
+        "has_content": true
+      },
+      "section_header": "Log Settings",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.2.9_chunk_8",
+      "content": "That's it for this demo. In this demo, we examined the logs on our pfSense security appliance. We viewed many of the different logs that can be collected. We then looked at settings and some things that we can configure. We ended by explaining how to send our logs to a syslog server.",
+      "summary": "In this demo, we explored the log management capabilities of the pfSense security appliance, highlighting various types of logs that can be collected and analyzed. We also reviewed configuration settings to optimize log collection and concluded with instructions on how to forward logs to a syslog server for centralized monitoring. This practical application enhances security visibility and incident response.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.9",
+        "title": "Logging Events on pfSense",
+        "content_type": "video",
+        "filename": "9.2.9_Logging_Events_on_pfSense_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.9_Logging_Events_on_pfSense_[video].txt",
+        "word_count": 1297,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 8
+}

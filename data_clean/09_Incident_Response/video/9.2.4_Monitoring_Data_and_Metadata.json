@@ -1,0 +1,169 @@
+{
+  "metadata": {
+    "chapter_num": "9",
+    "section_num": "9.2.4",
+    "title": "Monitoring Data and Metadata",
+    "content_type": "video",
+    "filename": "9.2.4_Monitoring_Data_and_Metadata_[video].txt",
+    "file_path": "data_raw/09_Incident_Response/9.2.4_Monitoring_Data_and_Metadata_[video].txt",
+    "word_count": 1083,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script In this lesson, we'll cover the use of bandwidth monitors and metadata from emails, mobile devices, web traffic, and files. We'll also talk about using netflow/sflow echo and Ipfix. Let's get started. Bandwidth monitors are a type of application that help network admins understand bandwidth usage. The first order of business with these applications is to establish a baseline. The longer a monitor runs, the more data points are created. When a substantial number of data points are created, a normal usage becomes apparent. Normal bandwidth usage is relative and varies by hours in the day, days of the week, and even weeks within the year. A baseline provides something concrete to compare against current usage or even suspect bandwidth usage. There are many bandwidth monitoring applications available. There are cloud-based apps, on-premise apps, open source, and paid. Each one looks and functions differently, but each has the same goal, which is to allow easy access to bandwidth monitoring. The key is to learn how to establish a monitoring schedule and how to use the dashboard. Here, we have some screenshots of different pages within a dashboard. As you can see, this graphic is showing bandwidth usage be the hour and below usage per day aggregated over time. This is the baseline that suspect usage is compared against. The second graphic shows the last hour's usage and the usage for a user-specified time frame. This allows for deeper examination of suspect bandwidth usage. Email is a great tool that almost everyone uses to communicate. It's also the avenue for the majority of malicious network breaches. Fortunately, email provides metadata so it can be traced. All emails come with a header that contains information about both the sender and recipient. Parts of the headers can be spoofed to give investigators false information. The good news is that there are security devices that put X-headers throughout an emails' headers. These provide the originating email account and IP address, not the spoofed one. Communications sent via mobile devices are common today. They come from tablets, laptops, smart phones, smart watches, and any other portable device that connects to the internet. These devices send emails and text messages and use apps to allow data and photo sharing. All this data produces metadata that can be used to identify people, places, times, and even deleted data. Pictures can be time stamped and geolocation stamped. Much of this metadata also reveals the origination of the data and the sender. Websites produce many types of metadata. In fact, the metadata on a user's machine versus the server can be very different. The data on the opposite side of the transmission can help fill in gaps and corroborate findings on the opposing machine. Metadata includes IP addresses, user requests, user downloads, time spent on the site, and even attempts to gain unauthorized access. Web metadata also includes cookies, browser history, and even cached pages. Many times, malicious actors will attempt to obfuscate their real metadata. But the good news is that there are ways of finding the real metadata, especially for trained forensic investigators. Files produce many types of metadata. The first kind is File Creation (date/time). The File Creation data is the first time the file was written to the storage media it's currently on. This means that the file can be created in a different place and then moved or copied to a new location. Last written refers to the last time a file was saved for any reason. It could prove that the file was copied from a different location or that the file was altered. Last access is any time a file is touched. When combined with file creation metadata on a user's machine, it can establish the probability that the file was copied from one machine to another. It also introduces the idea that a third device is involved in data copy process. Once the third device is found, it makes obtaining answers much easier. Network admins are always looking for a way to look at what's happening inside their network. Netflow is a session sampling protocol. This protocol works at Layers 2 through 4. It can exam each data flow that comes through or be set to sample sessions at certain intervals. If you want to sample packets in a broader layer range, then sFlow is your answer. This protocol works on Layers 2 through 7. Unlike Netflow, sFlow examines packets and can only be used in sampling mode. This is stateless packet sampling that provides information efficiently. IPFIX integrates data that normally goes to Syslog or SNMP information directly in the IPFIX packet, eliminating thee additional services collecting data from each network device. IPFIX has provisions for fields that are variable-length, meaning no ID number restrictions. It came about because of the need for a standardized protocol for internal protocol flows. This data comes from routers, servers, and other network appliances that are mediation systems. The data is formatted and sent to an exporter and then on to a collector. IPFIX, like NetFlow, looks at flow and the number of packets being sent and received during a given session. That's it for this lesson. In this lesson, we talked about the different ways metadata is produced. We covered some of the pitfalls of metadata as well as some of the ways to overcome them. And we discussed creating a baseline using network bandwidth monitors. These monitors can alert us to abnormal activity on our network.",
+  "chunks": [
+    {
+      "chunk_id": "9.2.4_chunk_1",
+      "content": "In this lesson, we'll cover the use of bandwidth monitors and metadata from emails, mobile devices, web traffic, and files. We'll also talk about using netflow/sflow echo and Ipfix. Let's get started.",
+      "summary": "This lesson focuses on the importance of monitoring data and metadata to enhance cybersecurity. Key topics include the use of bandwidth monitors and the analysis of metadata from various sources such as emails, mobile devices, and web traffic, as well as the application of netflow/sflow echo and Ipfix for effective data management. Practical applications of these tools help in identifying anomalies and improving network security.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.4",
+        "title": "Monitoring Data and Metadata",
+        "content_type": "video",
+        "filename": "9.2.4_Monitoring_Data_and_Metadata_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.4_Monitoring_Data_and_Metadata_[video].txt",
+        "word_count": 1083,
+        "has_content": true
+      },
+      "section_header": "Monitoring Data and Metadata",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.2.4_chunk_2",
+      "content": "Bandwidth monitors are a type of application that help network admins understand bandwidth usage. The first order of business with these applications is to establish a baseline. The longer a monitor runs, the more data points are created. When a substantial number of data points are created, a normal usage becomes apparent. Normal bandwidth usage is relative and varies by hours in the day, days of the week, and even weeks within the year. A baseline provides something concrete to compare against current usage or even suspect bandwidth usage. There are many bandwidth monitoring applications available. There are cloud-based apps, on-premise apps, open source, and paid. Each one looks and functions differently, but each has the same goal, which is to allow easy access to bandwidth monitoring. The key is to learn how to establish a monitoring schedule and how to use the dashboard. Here, we have some screenshots of different pages within a dashboard. As you can see, this graphic is showing bandwidth usage be the hour and below usage per day aggregated over time. This is the baseline that suspect usage is compared against. The second graphic shows the last hour's usage and the usage for a user-specified time frame. This allows for deeper examination of suspect bandwidth usage.",
+      "summary": "Bandwidth monitors are essential tools for network administrators to analyze and understand bandwidth usage by establishing a baseline of normal activity over time. These applications, which can be cloud-based, on-premise, open source, or paid, enable easy access to monitoring data and provide dashboards that visualize usage patterns. By comparing current usage against the baseline, admins can identify and investigate any suspicious bandwidth activity effectively.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.4",
+        "title": "Monitoring Data and Metadata",
+        "content_type": "video",
+        "filename": "9.2.4_Monitoring_Data_and_Metadata_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.4_Monitoring_Data_and_Metadata_[video].txt",
+        "word_count": 1083,
+        "has_content": true
+      },
+      "section_header": "Bandwidth Monitors",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.2.4_chunk_3",
+      "content": "Email is a great tool that almost everyone uses to communicate. It's also the avenue for the majority of malicious network breaches. Fortunately, email provides metadata so it can be traced. All emails come with a header that contains information about both the sender and recipient. Parts of the headers can be spoofed to give investigators false information. The good news is that there are security devices that put X-headers throughout an emails' headers. These provide the originating email account and IP address, not the spoofed one.",
+      "summary": "Email is a widely used communication tool that poses significant security risks, often being a primary vector for network breaches. Each email contains metadata in its header, which includes sender and recipient information, although this can be spoofed to mislead investigators. Security measures, such as X-headers, enhance traceability by revealing the true originating email account and IP address, helping to combat email spoofing and improve overall email security.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.4",
+        "title": "Monitoring Data and Metadata",
+        "content_type": "video",
+        "filename": "9.2.4_Monitoring_Data_and_Metadata_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.4_Monitoring_Data_and_Metadata_[video].txt",
+        "word_count": 1083,
+        "has_content": true
+      },
+      "section_header": "Email Metadata",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.2.4_chunk_4",
+      "content": "Communications sent via mobile devices are common today. They come from tablets, laptops, smart phones, smart watches, and any other portable device that connects to the internet. These devices send emails and text messages and use apps to allow data and photo sharing. All this data produces metadata that can be used to identify people, places, times, and even deleted data. Pictures can be time stamped and geolocation stamped. Much of this metadata also reveals the origination of the data and the sender.",
+      "summary": "Mobile devices generate significant amounts of metadata through communications such as emails, texts, and app usage, which can reveal personal information about users, including their identities, locations, and timestamps. This metadata can be crucial for identifying the source of data and understanding user behavior, even for deleted content. Understanding mobile metadata is essential for cybersecurity professionals to protect sensitive information and ensure privacy.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.4",
+        "title": "Monitoring Data and Metadata",
+        "content_type": "video",
+        "filename": "9.2.4_Monitoring_Data_and_Metadata_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.4_Monitoring_Data_and_Metadata_[video].txt",
+        "word_count": 1083,
+        "has_content": true
+      },
+      "section_header": "Mobile Metadata",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.2.4_chunk_5",
+      "content": "Websites produce many types of metadata. In fact, the metadata on a user's machine versus the server can be very different. The data on the opposite side of the transmission can help fill in gaps and corroborate findings on the opposing machine. Metadata includes IP addresses, user requests, user downloads, time spent on the site, and even attempts to gain unauthorized access. Web metadata also includes cookies, browser history, and even cached pages. Many times, malicious actors will attempt to obfuscate their real metadata. But the good news is that there are ways of finding the real metadata, especially for trained forensic investigators.",
+      "summary": "Web metadata encompasses various data types generated by websites, including IP addresses, user interactions, cookies, and browser history, which can differ between a user's machine and the server. This information is crucial for forensic investigations, as it can help corroborate findings and identify unauthorized access attempts. While malicious actors may try to conceal their metadata, trained investigators have methods to uncover the true data for security analysis.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.4",
+        "title": "Monitoring Data and Metadata",
+        "content_type": "video",
+        "filename": "9.2.4_Monitoring_Data_and_Metadata_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.4_Monitoring_Data_and_Metadata_[video].txt",
+        "word_count": 1083,
+        "has_content": true
+      },
+      "section_header": "Web Metadata",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.2.4_chunk_6",
+      "content": "Files produce many types of metadata. The first kind is File Creation (date/time). The File Creation data is the first time the file was written to the storage media it's currently on. This means that the file can be created in a different place and then moved or copied to a new location. Last written refers to the last time a file was saved for any reason. It could prove that the file was copied from a different location or that the file was altered. Last access is any time a file is touched. When combined with file creation metadata on a user's machine, it can establish the probability that the file was copied from one machine to another. It also introduces the idea that a third device is involved in data copy process. Once the third device is found, it makes obtaining answers much easier.",
+      "summary": "File metadata encompasses crucial timestamps such as File Creation, Last Written, and Last Access, which provide insights into a file's history and movement across devices. By analyzing this metadata, cybersecurity professionals can determine the origins and alterations of files, potentially identifying unauthorized copying or access. This information is vital for forensic investigations, as it can reveal the involvement of third devices in data transfer processes.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.4",
+        "title": "Monitoring Data and Metadata",
+        "content_type": "video",
+        "filename": "9.2.4_Monitoring_Data_and_Metadata_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.4_Monitoring_Data_and_Metadata_[video].txt",
+        "word_count": 1083,
+        "has_content": true
+      },
+      "section_header": "File Metadata",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.2.4_chunk_7",
+      "content": "Network admins are always looking for a way to look at what's happening inside their network. Netflow is a session sampling protocol. This protocol works at Layers 2 through 4. It can exam each data flow that comes through or be set to sample sessions at certain intervals. If you want to sample packets in a broader layer range, then sFlow is your answer. This protocol works on Layers 2 through 7. Unlike Netflow, sFlow examines packets and can only be used in sampling mode. This is stateless packet sampling that provides information efficiently.",
+      "summary": "Netflow and sFlow are essential protocols for network monitoring, enabling administrators to analyze data flows within a network. Netflow operates at Layers 2 through 4, allowing for detailed session sampling, while sFlow extends its capabilities to Layers 2 through 7, focusing on stateless packet sampling for broader insights. Both protocols enhance network visibility and efficiency, aiding in security management and performance optimization.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.4",
+        "title": "Monitoring Data and Metadata",
+        "content_type": "video",
+        "filename": "9.2.4_Monitoring_Data_and_Metadata_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.4_Monitoring_Data_and_Metadata_[video].txt",
+        "word_count": 1083,
+        "has_content": true
+      },
+      "section_header": "Netflow/sFlow",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.2.4_chunk_8",
+      "content": "IPFIX integrates data that normally goes to Syslog or SNMP information directly in the IPFIX packet, eliminating thee additional services collecting data from each network device. IPFIX has provisions for fields that are variable-length, meaning no ID number restrictions. It came about because of the need for a standardized protocol for internal protocol flows. This data comes from routers, servers, and other network appliances that are mediation systems. The data is formatted and sent to an exporter and then on to a collector. IPFIX, like NetFlow, looks at flow and the number of packets being sent and received during a given session.",
+      "summary": "IPFIX (Internet Protocol Flow Information Export) streamlines the collection of network data by embedding Syslog and SNMP information directly into its packets, thus reducing the need for multiple data collection services. It supports variable-length fields, allowing for greater flexibility in data representation, and was developed to standardize the monitoring of internal protocol flows from routers, servers, and other network devices. Similar to NetFlow, IPFIX analyzes network flow and packet counts during sessions, facilitating efficient network traffic management and analysis.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.4",
+        "title": "Monitoring Data and Metadata",
+        "content_type": "video",
+        "filename": "9.2.4_Monitoring_Data_and_Metadata_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.4_Monitoring_Data_and_Metadata_[video].txt",
+        "word_count": 1083,
+        "has_content": true
+      },
+      "section_header": "Ipfix",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.2.4_chunk_9",
+      "content": "That's it for this lesson. In this lesson, we talked about the different ways metadata is produced. We covered some of the pitfalls of metadata as well as some of the ways to overcome them. And we discussed creating a baseline using network bandwidth monitors. These monitors can alert us to abnormal activity on our network.",
+      "summary": "This lesson focused on the generation of metadata and its potential pitfalls, emphasizing the importance of understanding these challenges in cybersecurity. Additionally, it highlighted the creation of a baseline using network bandwidth monitors, which can help detect abnormal network activity and enhance security measures. Practical applications include leveraging these tools to maintain network integrity and respond to potential threats effectively.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.4",
+        "title": "Monitoring Data and Metadata",
+        "content_type": "video",
+        "filename": "9.2.4_Monitoring_Data_and_Metadata_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.4_Monitoring_Data_and_Metadata_[video].txt",
+        "word_count": 1083,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 9
+}

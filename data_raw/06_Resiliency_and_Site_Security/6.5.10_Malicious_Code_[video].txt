@@ -1,0 +1,287 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Malicious Code
+00:04
+Malicious software is perhaps the most
+00:06
+dangerous threat to any computing device.
+00:09
+It's so prevalent that most people combine the
+00:12
+words ‘malicious software' and just call it malware.
+00:15
+It isn't always coded using advanced programming languages.
+00:18
+In fact, Python is one of the common
+00:21
+languages used to design malicious codes.
+00:24
+Sometimes a simple script can exploit
+00:26
+built-in OS features such as shells.
+00:29
+Even application features like macros can be
+00:32
+used to develop and execute malicious codes.
+00:34
+In this lesson, we'll look at how malicious
+00:37
+code and scripts are designed and executed.
+2. Python
+00:41
+Python is one of the most popular programming languages.
+00:44
+It was first released in 1999.
+00:47
+It's designed to be easy to learn and read,
+00:50
+and it works with most operating systems,
+00:52
+including Windows, MacOS, and Linux.
+00:56
+Aside from being easy to read and understand,
+00:59
+Python can take advantage of a massive amount of
+01:01
+open-source Python packages and repositories.
+01:05
+These add-ons make it that much easier to
+01:07
+develop a Python script to do whatever you want.
+01:11
+Python is often used in the development
+01:13
+of Remote Access Trojans, or RATs.
+01:17
+This is because Python makes it very easy to
+01:19
+implement libraries that can take screenshots,
+01:22
+use a webcam, and even make web requests.
+01:26
+It's also easy develop malicious code that can run on many
+01:29
+different systems and devices, including Android devices.
+01:34
+One of the main drawbacks to using Python for malware is
+01:37
+that its file sizes are larger than other common languages.
+01:41
+Python must also be installed on the
+01:43
+system for a Python script to run.
+01:46
+This is fine for MacOS and Linux.
+01:49
+Windows doesn't come with it installed, but it's pretty easy
+01:52
+to convert Python scripts to Windows-compatible executables.
+3. Command Shells
+01:56
+In addition to Python, attackers often use shells.
+02:00
+A shell is a program that provides an interface that gives
+02:03
+users access to operating system functions and services.
+02:08
+We generally associate shells with command line
+02:10
+interfaces, but they can have graphical interfaces too.
+02:15
+These programs can provide access to core operating
+02:17
+system functions, which makes them exploitation targets.
+02:22
+You can type commands directly into the
+02:24
+shell window or run pre-written scripts.
+02:27
+A script is simply a plain text file with the
+02:30
+commands you want to run typed in, just like
+02:33
+you would type them into the shell window.
+02:35
+When the script runs, the commands are executed.
+4. PowerShell
+02:39
+Now let's talk about PowerShell.
+02:40
+PowerShell is a management framework that Microsoft
+02:44
+developed to replace the Command Prompt and give
+02:46
+users more power and control over the Windows system.
+02:51
+PowerShell is built on the .NET frameworks and can run
+02:54
+on multiple operating systems, including MacOS and Linux.
+02:59
+PowerShell uses cmdlets to carry out commands.
+03:02
+Cmdlets are tiny scripts that are
+03:05
+used to perform certain functions.
+03:07
+Some cmdlets replace older commands
+03:09
+and provide more advanced functions.
+03:11
+Users can combine these cmdlets to develop scripts that
+03:15
+automate tasks and configure just about anything in Windows.
+03:19
+Malicious PowerShell scripts pose a major security threat.
+03:23
+For example, let's talk about fileless malware.
+03:26
+PowerShell scripts can run in the memory of the
+03:29
+system--they don't need an actual file executable to run.
+03:33
+An attacker can take advantage of this
+03:35
+function by sending a phishing email.
+03:38
+When the victim clicks the link, a PowerShell
+03:40
+script is loaded in the background that can
+03:43
+download and run other malware programs.
+03:46
+Because these attacks are fileless, anti-virus
+03:49
+programs generally can't detect them.
+5. Bash
+03:52
+Bash is a command shell and scripting language used in
+03:54
+most Linux distros and MacOS versions prior to Catalina.
+03:59
+Bash was released in 1989, and it's still heavily used.
+04:04
+When you use a command in Linux, Bash
+04:06
+works in the background to execute that
+04:08
+command using environment variables.
+04:12
+Since many web servers run on Linux's Apache platform,
+04:15
+Bash malware can be designed to attack these systems.
+04:19
+A well-known malware called Shellshock uses Bash
+04:22
+commands to exploit a flaw within the Bash shell itself,
+04:25
+allowing an attacker to inject malicious commands.
+04:29
+Malware that exploits these shell programs
+04:31
+essentially use the operating system against itself.
+04:35
+This makes these scripts difficult to detect and prevent.
+04:39
+Keeping anti-malware up to date and training users not
+04:42
+to click unknown links or run unknown programs is vital.
+6. Macros
+04:46
+All right.
+04:47
+Next, we're going to talk about
+04:49
+macros, which are similar to scripts.
+04:51
+Macros are little bits of code that can be used
+04:54
+to run a series of steps or functions in an
+04:57
+application, making common tasks more efficient.
+05:00
+Many different programs can make use of macros, but the most
+05:04
+common use of macros is in the Microsoft Office programs.
+05:08
+Microsoft Office programs can use the Visual
+05:10
+Basic for Applications, or VBA, programming
+05:14
+language to create and run macros.
+05:15
+VBA can be a powerful programming language and can even be
+05:20
+used to run commands in Windows using the shell function or
+05:24
+delete files from your hard drive using the Kill function.
+05:27
+An example of a devastating macro
+05:29
+malware is the macro virus Melissa.
+05:32
+In 1999, Melissa was distributed as a Word document,
+05:36
+and when it was opened, a macro ran that pulled the
+05:40
+first 50 users from the user's Outlook address book
+05:43
+and mailed a copy of the infected Word document.
+05:46
+Melissa spread extremely quickly and shut down
+05:49
+more than 300 corporations and government agencies
+05:52
+temporarily as their networks were overloaded.
+05:55
+The total estimated damage of Melissa
+05:57
+was around $80 million dollars.
+06:00
+In newer version of Microsoft Office, macros are disabled
+06:04
+by default, and a user must specifically allow them to run.
+06:08
+This helps to keep our systems safe from malicious code.
+06:12
+But if someone uses macros often and has them
+06:14
+enabled, their system is extremely vulnerable.
+7. Summary
+06:18
+That'll wrap up this lesson.
+06:20
+We've covered some methods for generating
+06:22
+and distributing malicious code.
+06:24
+First, we looked at the popular scripting language Python.
+06:28
+Python is used to create all sorts of great
+06:30
+programs and scripts, but because of its ease of
+06:33
+use, many hackers use it to develop malicious code.
+06:37
+Then we covered command shells like PowerShell and Bash.
+06:41
+These shells generally allow access to all sorts
+06:43
+of critical operating system functions, meaning
+06:46
+malicious code can cause them serious damage.
+06:49
+Finally, we looked at how macros can be
+06:52
+exploited to run malicious code on a computer.
+06:55
+Microsoft Office programs use the VBA programming
+06:58
+language to develop macros to automate tasks, but
+07:01
+it can be exploited to distribute malicious code.

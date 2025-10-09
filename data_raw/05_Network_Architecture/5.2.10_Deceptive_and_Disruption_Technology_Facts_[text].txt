@@ -1,0 +1,59 @@
+Security Pro 8.0
+
+5.2.10 Deceptive and Disruption Technology Facts
+
+Deception and disruption technologies are cybersecurity resilience tools and techniques used to increase the cost of attack planning for the threat actor.
+
+This lesson covers the following topics:
+
+Honeypots
+Honeynets and honeyfiles
+DNS sinkholes
+Fake telemetry
+Honeypots
+
+Honeypots are decoy systems that mimic real systems and applications. They are designed to allow security teams to monitor attacker activity and gather information about their tactics and tools. A honeypot can be a host, a service on a host, a network device, a virtual entity, or even a single file set up to attract attackers to a secure area away from an organization's real network. Even better, while it is distracting the attacker, you can monitor the malicious activity to learn what the attacker is trying to do.
+
+There are several types of honeypots that are designed to mimic and trap different types of attacks. Each honeypot falls into one of two categories: research or production. Research honeypots are typically used by research, military, or government organizations to gather information about the motives and tactics of the attackers. They are also used for educational purposes. Production honeypots are used primarily by private and public organizations. Examples include the following:
+SSH honeypots — SSH honeypots are designed to trap brute force attacks that attempt to guess the password of a targeted device. Perhaps more importantly, this type of honeypot captures the complete shell history performed by the attacker.
+HTTP honeypots — HTTP honeypots are used to trap different types of web vulnerabilities, such as SQL injections, file insertions, and web application attacks.
+WordPress honeypots — WordPress honeypots are designed to attract spam and adware attacks.
+Email honeypots — Email honeypots are used to attract SMTP-based attacks such as open relay, DDoS, and spam attacks.
+Various other honeypots designed for TCP/IP-based protocol attacks.
+Honeynets and Honeyfiles
+
+To make things more enticing to the attackers, many companies will create a decoy network and fill it with one or more honeypots. This is known as a honeynet. The information gained from a honeynet attack serves to strengthen an organization's defense against future attacks.
+
+A honeyfile is a single file setup to entice and trap attackers and to figure out what they are trying to do. These types of files are typically set up on a file server, and when accessed, an alarm is set off, notifying administrators of the attack. These types of alarms are often sent by email directly to the user, which can also be easily seen on a phone and almost instantly interpreted.
+
+Honeyfiles are named so the hacker will try and open or execute them. For example, files with names such as passwords.txt or IP Assignments.xls are prized targets for hackers to gain useful information about a user or system. Four of the most common types of files used to attract an attacker include the following:
+
+Information files — These are the types of files that contain information about accessing other systems, like a password.txt file, and security files, like a Microsoft Word file named vpn_instructions.
+Application or program files — These are files that a normal user would not run but an attacker might, such as a compiler.
+Log files — An attacker may be attracted to log files, thinking they might contain evidence of an attack or other helpful information.
+Intellectual property files containing information such as forecasts, credit card numbers, and product roadmaps.
+Keep in mind the following facts about honeyfiles:
+
+Any file can be used as a honeyfile.
+Honeyfiles work with network intrusion detection systems (NIDs) and can help prevent false positives.
+If end users are properly trained, they can create their own honeyfiles with their own alarms and alerts.
+This makes the detection process easy and deployment effectiveness high.
+Since users create their own honeyfiles, they receive the alarm if they accidentally access one of their own monitored files.
+This virtually eliminates false positives that have to be investigated.
+This saves time, effort, and energy for system management charged with keeping the network secure.
+This process supports a defense-in-depth strategy.
+Honeytokens are false credentials, login credentials, or other data types used to distract attackers, trigger alerts, and provide insight into attacker activity.
+
+By deploying honeypots, honeynets, honeyfiles, or honeytokens, organizations can detect and monitor attacks, gather intelligence about attackers and their methods, and proactively defend against future attacks. These tools can also provide an additional layer of defense by diverting attackers' attention away from real systems and applications, reducing the risk of successful attacks.
+DNS Sinkhole
+
+A DNS sinkhole is a temporary DNS record that redirects malicious traffic to a controlled IP address. Simply put, a DNS sinkhole is used to provide false information for DNS queries. Providing false information can help to prevent a denial-of-service or distributed denial-of-service attack. DNS sinkholes are also an effective measure that blocks malicious traffic and blocks bots from successfully taking a site down using a DDoS attack.
+
+Creating a DNS sinkhole is not without its limitations. To work correctly, the malware must use the organization's DNS server. If it uses a public DNS server or its own DNS server, this will not work. You can mitigate this by configuring firewalls to block DNS queries going outside the perimeter. A sinkhole does not prevent malware and cannot prevent malware execution or remove malware from the system.
+
+Creating a sinkhole can take time. Even if obtained from trusted internet sources, it's possible legitimate sites are used to forward malicious content. This could result in restrictions to legitimate websites. Therefore, sinkholes should be internal only. If attackers can access the DNS server externally, they can change entries in the sinkhole and use it to their benefit.
+Fake Telemetry
+
+Fake telemetry is a deception strategy that returns spoofed data in response to network probes. Telemetry is defined as the collection of data at remote points and their automatic transmission to receiving equipment for monitoring. As such, organizations provide false data meant to deceive the attacker. This type of fake information might include fake credentials or fake IP address information. It might be an internal report detailing vulnerable systems that require updates when they are really honeypots designed to capture attacker information.
+
+The primary reason for providing fake information is to get the attacker to act on the false information. Since the information is controlled by system managers, they can utilize alerts, alarms, and logs to track the techniques and tools used by an attacker. The tracked information allows system management to tune perimeter equipment such as firewalls, NIDS, NIPS, and other protections.

@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "chapter_num": "6",
+    "section_num": "6.5.10",
+    "title": "Malicious Code",
+    "content_type": "video",
+    "filename": "6.5.10_Malicious_Code_[video].txt",
+    "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.10_Malicious_Code_[video].txt",
+    "word_count": 1215,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script Malicious software is perhaps the most dangerous threat to any computing device. It's so prevalent that most people combine the words ‘malicious software' and just call it malware. It isn't always coded using advanced programming languages. In fact, Python is one of the common languages used to design malicious codes. Sometimes a simple script can exploit built-in OS features such as shells. Even application features like macros can be used to develop and execute malicious codes. In this lesson, we'll look at how malicious code and scripts are designed and executed. Python is one of the most popular programming languages. It was first released in 1999. It's designed to be easy to learn and read, and it works with most operating systems, including Windows, MacOS, and Linux. Aside from being easy to read and understand, Python can take advantage of a massive amount of open-source Python packages and repositories. These add-ons make it that much easier to develop a Python script to do whatever you want. Python is often used in the development of Remote Access Trojans, or RATs. This is because Python makes it very easy to implement libraries that can take screenshots, use a webcam, and even make web requests. It's also easy develop malicious code that can run on many different systems and devices, including Android devices. One of the main drawbacks to using Python for malware is that its file sizes are larger than other common languages. Python must also be installed on the system for a Python script to run. This is fine for MacOS and Linux. Windows doesn't come with it installed, but it's pretty easy to convert Python scripts to Windows-compatible executables. In addition to Python, attackers often use shells. A shell is a program that provides an interface that gives users access to operating system functions and services. We generally associate shells with command line interfaces, but they can have graphical interfaces too. These programs can provide access to core operating system functions, which makes them exploitation targets. You can type commands directly into the shell window or run pre-written scripts. A script is simply a plain text file with the commands you want to run typed in, just like you would type them into the shell window. When the script runs, the commands are executed. Now let's talk about PowerShell. PowerShell is a management framework that Microsoft developed to replace the Command Prompt and give users more power and control over the Windows system. PowerShell is built on the .NET frameworks and can run on multiple operating systems, including MacOS and Linux. PowerShell uses cmdlets to carry out commands. Cmdlets are tiny scripts that are used to perform certain functions. Some cmdlets replace older commands and provide more advanced functions. Users can combine these cmdlets to develop scripts that automate tasks and configure just about anything in Windows. Malicious PowerShell scripts pose a major security threat. For example, let's talk about fileless malware. PowerShell scripts can run in the memory of the system--they don't need an actual file executable to run. An attacker can take advantage of this function by sending a phishing email. When the victim clicks the link, a PowerShell script is loaded in the background that can download and run other malware programs. Because these attacks are fileless, anti-virus programs generally can't detect them. Bash is a command shell and scripting language used in most Linux distros and MacOS versions prior to Catalina. Bash was released in 1989, and it's still heavily used. When you use a command in Linux, Bash works in the background to execute that command using environment variables. Since many web servers run on Linux's Apache platform, Bash malware can be designed to attack these systems. A well-known malware called Shellshock uses Bash commands to exploit a flaw within the Bash shell itself, allowing an attacker to inject malicious commands. Malware that exploits these shell programs essentially use the operating system against itself. This makes these scripts difficult to detect and prevent. Keeping anti-malware up to date and training users not to click unknown links or run unknown programs is vital. All right. Next, we're going to talk about macros, which are similar to scripts. Macros are little bits of code that can be used to run a series of steps or functions in an application, making common tasks more efficient. Many different programs can make use of macros, but the most common use of macros is in the Microsoft Office programs. Microsoft Office programs can use the Visual Basic for Applications, or VBA, programming language to create and run macros. VBA can be a powerful programming language and can even be used to run commands in Windows using the shell function or delete files from your hard drive using the Kill function. An example of a devastating macro malware is the macro virus Melissa. In 1999, Melissa was distributed as a Word document, and when it was opened, a macro ran that pulled the first 50 users from the user's Outlook address book and mailed a copy of the infected Word document. Melissa spread extremely quickly and shut down more than 300 corporations and government agencies temporarily as their networks were overloaded. The total estimated damage of Melissa was around $80 million dollars. In newer version of Microsoft Office, macros are disabled by default, and a user must specifically allow them to run. This helps to keep our systems safe from malicious code. But if someone uses macros often and has them enabled, their system is extremely vulnerable. That'll wrap up this lesson. We've covered some methods for generating and distributing malicious code. First, we looked at the popular scripting language Python. Python is used to create all sorts of great programs and scripts, but because of its ease of use, many hackers use it to develop malicious code. Then we covered command shells like PowerShell and Bash. These shells generally allow access to all sorts of critical operating system functions, meaning malicious code can cause them serious damage. Finally, we looked at how macros can be exploited to run malicious code on a computer. Microsoft Office programs use the VBA programming language to develop macros to automate tasks, but it can be exploited to distribute malicious code.",
+  "chunks": [
+    {
+      "chunk_id": "6.5.10_chunk_1",
+      "content": "Malicious software is perhaps the most dangerous threat to any computing device. It's so prevalent that most people combine the words ‘malicious software' and just call it malware. It isn't always coded using advanced programming languages. In fact, Python is one of the common languages used to design malicious codes. Sometimes a simple script can exploit built-in OS features such as shells. Even application features like macros can be used to develop and execute malicious codes. In this lesson, we'll look at how malicious code and scripts are designed and executed.",
+      "summary": "Malicious code, commonly referred to as malware, poses a significant threat to computing devices and can be created using various programming languages, including Python. This section explores how simple scripts and application features, such as macros, can be exploited to design and execute malicious code. Understanding these concepts is crucial for identifying and mitigating malware threats in cybersecurity.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.5.10",
+        "title": "Malicious Code",
+        "content_type": "video",
+        "filename": "6.5.10_Malicious_Code_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.10_Malicious_Code_[video].txt",
+        "word_count": 1215,
+        "has_content": true
+      },
+      "section_header": "Malicious Code",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.5.10_chunk_2",
+      "content": "Python is one of the most popular programming languages. It was first released in 1999. It's designed to be easy to learn and read, and it works with most operating systems, including Windows, MacOS, and Linux. Aside from being easy to read and understand, Python can take advantage of a massive amount of open-source Python packages and repositories. These add-ons make it that much easier to develop a Python script to do whatever you want. Python is often used in the development of Remote Access Trojans, or RATs. This is because Python makes it very easy to implement libraries that can take screenshots, use a webcam, and even make web requests. It's also easy develop malicious code that can run on many different systems and devices, including Android devices. One of the main drawbacks to using Python for malware is that its file sizes are larger than other common languages. Python must also be installed on the system for a Python script to run. This is fine for MacOS and Linux. Windows doesn't come with it installed, but it's pretty easy to convert Python scripts to Windows-compatible executables.",
+      "summary": "Python is a versatile programming language known for its ease of use and compatibility across various operating systems, making it popular for both legitimate and malicious applications. Its extensive libraries facilitate the development of Remote Access Trojans (RATs) that can perform tasks such as taking screenshots and accessing webcams. However, Python's larger file sizes and the requirement for installation on systems like Windows can pose challenges for malware developers.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.5.10",
+        "title": "Malicious Code",
+        "content_type": "video",
+        "filename": "6.5.10_Malicious_Code_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.10_Malicious_Code_[video].txt",
+        "word_count": 1215,
+        "has_content": true
+      },
+      "section_header": "Python",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.5.10_chunk_3",
+      "content": "In addition to Python, attackers often use shells. A shell is a program that provides an interface that gives users access to operating system functions and services. We generally associate shells with command line interfaces, but they can have graphical interfaces too. These programs can provide access to core operating system functions, which makes them exploitation targets. You can type commands directly into the shell window or run pre-written scripts. A script is simply a plain text file with the commands you want to run typed in, just like you would type them into the shell window. When the script runs, the commands are executed.",
+      "summary": "Command shells serve as interfaces for users to access operating system functions, often utilized by attackers for exploitation. While commonly associated with command line interfaces, shells can also feature graphical interfaces, allowing users to execute commands directly or through pre-written scripts. Understanding the functionality and vulnerabilities of shells is crucial for implementing effective security measures.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.5.10",
+        "title": "Malicious Code",
+        "content_type": "video",
+        "filename": "6.5.10_Malicious_Code_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.10_Malicious_Code_[video].txt",
+        "word_count": 1215,
+        "has_content": true
+      },
+      "section_header": "Command Shells",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.5.10_chunk_4",
+      "content": "Now let's talk about PowerShell. PowerShell is a management framework that Microsoft developed to replace the Command Prompt and give users more power and control over the Windows system. PowerShell is built on the .NET frameworks and can run on multiple operating systems, including MacOS and Linux. PowerShell uses cmdlets to carry out commands. Cmdlets are tiny scripts that are used to perform certain functions. Some cmdlets replace older commands and provide more advanced functions. Users can combine these cmdlets to develop scripts that automate tasks and configure just about anything in Windows. Malicious PowerShell scripts pose a major security threat. For example, let's talk about fileless malware. PowerShell scripts can run in the memory of the system--they don't need an actual file executable to run. An attacker can take advantage of this function by sending a phishing email. When the victim clicks the link, a PowerShell script is loaded in the background that can download and run other malware programs. Because these attacks are fileless, anti-virus programs generally can't detect them.",
+      "summary": "PowerShell is a powerful management framework developed by Microsoft that enhances control over Windows systems and operates across multiple platforms, including MacOS and Linux. It utilizes cmdlets—small scripts that automate tasks and configure settings—allowing users to streamline operations. However, PowerShell also presents significant security risks, particularly through fileless malware attacks, where malicious scripts execute directly in memory, evading traditional antivirus detection methods.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.5.10",
+        "title": "Malicious Code",
+        "content_type": "video",
+        "filename": "6.5.10_Malicious_Code_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.10_Malicious_Code_[video].txt",
+        "word_count": 1215,
+        "has_content": true
+      },
+      "section_header": "PowerShell",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.5.10_chunk_5",
+      "content": "Bash is a command shell and scripting language used in most Linux distros and MacOS versions prior to Catalina. Bash was released in 1989, and it's still heavily used. When you use a command in Linux, Bash works in the background to execute that command using environment variables. Since many web servers run on Linux's Apache platform, Bash malware can be designed to attack these systems. A well-known malware called Shellshock uses Bash commands to exploit a flaw within the Bash shell itself, allowing an attacker to inject malicious commands. Malware that exploits these shell programs essentially use the operating system against itself. This makes these scripts difficult to detect and prevent. Keeping anti-malware up to date and training users not to click unknown links or run unknown programs is vital.",
+      "summary": "Bash is a widely used command shell and scripting language in Linux and older MacOS systems, essential for executing commands via environment variables. Its significance in cybersecurity is highlighted by vulnerabilities like Shellshock, which exploits flaws in Bash to inject malicious commands, making detection and prevention challenging. To mitigate risks, it's crucial to maintain updated anti-malware solutions and educate users on safe computing practices.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.5.10",
+        "title": "Malicious Code",
+        "content_type": "video",
+        "filename": "6.5.10_Malicious_Code_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.10_Malicious_Code_[video].txt",
+        "word_count": 1215,
+        "has_content": true
+      },
+      "section_header": "Bash",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.5.10_chunk_6",
+      "content": "All right. Next, we're going to talk about macros, which are similar to scripts. Macros are little bits of code that can be used to run a series of steps or functions in an application, making common tasks more efficient. Many different programs can make use of macros, but the most common use of macros is in the Microsoft Office programs. Microsoft Office programs can use the Visual Basic for Applications, or VBA, programming language to create and run macros. VBA can be a powerful programming language and can even be used to run commands in Windows using the shell function or delete files from your hard drive using the Kill function. An example of a devastating macro malware is the macro virus Melissa. In 1999, Melissa was distributed as a Word document, and when it was opened, a macro ran that pulled the first 50 users from the user's Outlook address book and mailed a copy of the infected Word document. Melissa spread extremely quickly and shut down more than 300 corporations and government agencies temporarily as their networks were overloaded. The total estimated damage of Melissa was around $80 million dollars. In newer version of Microsoft Office, macros are disabled by default, and a user must specifically allow them to run. This helps to keep our systems safe from malicious code. But if someone uses macros often and has them enabled, their system is extremely vulnerable.",
+      "summary": "Macros are small code snippets that automate tasks within applications, primarily used in Microsoft Office through Visual Basic for Applications (VBA). While they enhance efficiency, macros can also pose significant security risks, as demonstrated by the Melissa virus in 1999, which exploited macros to spread rapidly and cause extensive damage. To mitigate these risks, newer versions of Microsoft Office disable macros by default, requiring user permission to run them, thereby protecting systems from potential malware.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.5.10",
+        "title": "Malicious Code",
+        "content_type": "video",
+        "filename": "6.5.10_Malicious_Code_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.10_Malicious_Code_[video].txt",
+        "word_count": 1215,
+        "has_content": true
+      },
+      "section_header": "Macros",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.5.10_chunk_7",
+      "content": "That'll wrap up this lesson. We've covered some methods for generating and distributing malicious code. First, we looked at the popular scripting language Python. Python is used to create all sorts of great programs and scripts, but because of its ease of use, many hackers use it to develop malicious code. Then we covered command shells like PowerShell and Bash. These shells generally allow access to all sorts of critical operating system functions, meaning malicious code can cause them serious damage. Finally, we looked at how macros can be exploited to run malicious code on a computer. Microsoft Office programs use the VBA programming language to develop macros to automate tasks, but it can be exploited to distribute malicious code.",
+      "summary": "This lesson explores various methods of generating and distributing malicious code, highlighting the use of Python for scripting due to its accessibility for hackers. It also examines command shells like PowerShell and Bash, which provide critical access to operating system functions, making them potential targets for malicious activities. Additionally, the lesson discusses the exploitation of macros in Microsoft Office applications, where VBA can be manipulated to execute harmful code.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.5.10",
+        "title": "Malicious Code",
+        "content_type": "video",
+        "filename": "6.5.10_Malicious_Code_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.5.10_Malicious_Code_[video].txt",
+        "word_count": 1215,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 7
+}

@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "chapter_num": "10",
+    "section_num": "10.7.3",
+    "title": "Securing Mobile Devices",
+    "content_type": "video",
+    "filename": "10.7.3_Securing_Mobile_Devices_[video].txt",
+    "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.7.3_Securing_Mobile_Devices_[video].txt",
+    "word_count": 1270,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script In this demonstration, we're going to discuss mobile device security. Specifically, we're going to look at a few things you can do to increase the overall security of an iPad running the iOS operating system. Let's begin with passcode locks. I'm going to go to Settings, then to Touch ID &amp; Passcodes. Now, I need to enter my current passcode. You can use passcodes on your iPad to protect the information stored on the device. If you set a passcode, then every time you either power on the device or wake it up, you will be prompted to enter the passcode before you can run any apps or access any of the information on the device. That's a really good idea in case you forget this device in a taxicab, hotel, train station, or airport. You don't want just anyone to pick up the device and have full access to whatever's on it. So, let's look at how you do this. Notice that, right now, passcodes are currently turned on. Let's go ahead and tap Turn Passcode Off, and then we're prompted to confirm that. I'll tap Cancel. Right below that, I can change the passcode. And when I tap it, the iPad wants to know what my current passcode is before it allows me to change to a new one. So, that is how you work with passcodes. In addition, we can also specify how long this device can be idle before we're going to require the passcode to be re-entered. So, first, we need to go to Display &amp; Brightness. And then to Auto-Lock right here. Notice that currently, Auto-Lock is set to Never. That means that this iPad can sit idle forever and the user will not be required to re-enter the passcode. Let's change that. I'm going to tap on Never. And let's set the auto-lock for 15 minutes. Now, if this iPad sits idle for 15 minutes, meaning I'm not tapping anything, then the screen is automatically going to lock. So, to this point, we've enabled a passcode, and we've set our screen to automatically lock after 15 minutes. So far, we've increased the security a little bit on this device. But there are more things we can do. I'll tap Touch ID &amp; Password again. I'll enter in my passcode. Now scroll to the bottom of this screen. There's an option called Erase Data. If I turn Erase Data on, then all the data on this iPad will be erased if the user tries to enter an incorrect password 10 times in a row. After 10 consecutive failed passcode attempts, all the data on this iPad is going to get erased. Let's turn that option on. And it warns us, \"Hey, if you turn this option on, then everything on this iPad is going to be erased after 10 failed passcode attempts.\" We're going to go ahead and say, \"Nope.\" I'm borrowing this iPad, so the owner might not like that. This is a powerful option, and you need to carefully decide whether you want it on. If you have it turned on and someone enters the wrong passcode 10 times in a row, you'll have to restore all the data on this iPad from backup, either from iTunes on a PC using a USB cable or pulling it down from iCloud. Basically, what we're assuming is that if somebody enters the wrong passcode 10 times in a row, it isn't their iPad. So, at this point, we've really increased the overall security of this device. Another aspect of mobile device security involves being able to track down a lost device because, well, mobile devices do get lost. They get lost all the time. People leave them on airplanes. They get left in hotels, taxicabs, elevators, and train stations. If this happens, you not only want to protect the data on the device, you also probably want to figure out where that device is. Many mobile devices provide functionality that you can use to locate the lost device. The iOS operating system running on this iPad provides a function called Find My iPad, and it's tied to the iCloud backup function. If we enable this function and then we lose this iPad, we can sign into iCloud from any web browser on a PC or a laptop system and then use the Find My iPad option to view the device's approximate location on a map. I tapped iCloud a second ago. Now scroll down a little bit. Notice down here that the Find My iPad option is already turned on. This gives us a lot of options. For example, you could have a message displayed on the iPad that tells whoever finds it how to get in touch with you. You could even use iCloud.com to go in and remotely change the passcode lock assigned to this device. And if you're really concerned about not losing the data on a lost device, then you can use iCloud.com to perform a remote wipe. Essentially, what we're doing with a remote wipe is assuming that the iPad is lost, that the person who found it has no intention of returning it, and that they may want to get at the information that's stored on it. In this case, you can use iCloud.com to send a remote wipe command to the iPad, which will then restore the iPad to its original factory settings. Any personal information on it, as well as any proprietary sensitive information belonging to your organization, gets wiped out. If you have this option turned on, it's not a bad idea to come over here, under Backup, and turn on iCloud Backup as well. The idea here is that if you ever do end up performing a remote wipe, or if you end up losing the iPad altogether and never get it back, then you can restore all the data from your old iPad onto a new iPad. Go ahead and tap Cancel for now. That's it for this demonstration. In this demo, we talked about some things you can do to increase the overall security of a mobile device, in this case, an iPad. We began this demonstration by talking about how to set passcode locks. We talked about how to set the auto-lock feature of the iPad. We talked about wiping the data off the iPad if somebody enters the wrong passcode more than 10 times in a row. Then we ended this demonstration by talking about how to locate a lost device using the Find My iPad option and iCloud.",
+  "chunks": [
+    {
+      "chunk_id": "10.7.3_chunk_1",
+      "content": "In this demonstration, we're going to discuss mobile device security. Specifically, we're going to look at a few things you can do to increase the overall security of an iPad running the iOS operating system.",
+      "summary": "This section focuses on enhancing mobile device security, particularly for iPads operating on iOS. Key concepts include implementing security measures such as enabling device encryption, utilizing strong passwords, and managing app permissions to protect sensitive data. Practical applications emphasize proactive steps users can take to safeguard their devices against potential threats.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.7.3",
+        "title": "Securing Mobile Devices",
+        "content_type": "video",
+        "filename": "10.7.3_Securing_Mobile_Devices_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.7.3_Securing_Mobile_Devices_[video].txt",
+        "word_count": 1270,
+        "has_content": true
+      },
+      "section_header": "Secure Mobile Devices",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.7.3_chunk_2",
+      "content": "Let's begin with passcode locks. I'm going to go to Settings, then to Touch ID &amp; Passcodes. Now, I need to enter my current passcode. You can use passcodes on your iPad to protect the information stored on the device. If you set a passcode, then every time you either power on the device or wake it up, you will be prompted to enter the passcode before you can run any apps or access any of the information on the device. That's a really good idea in case you forget this device in a taxicab, hotel, train station, or airport. You don't want just anyone to pick up the device and have full access to whatever's on it. So, let's look at how you do this. Notice that, right now, passcodes are currently turned on. Let's go ahead and tap Turn Passcode Off, and then we're prompted to confirm that. I'll tap Cancel. Right below that, I can change the passcode. And when I tap it, the iPad wants to know what my current passcode is before it allows me to change to a new one. So, that is how you work with passcodes.",
+      "summary": "Passcode locks are essential for securing personal devices, such as iPads, by requiring a passcode to access information and apps upon powering on or waking the device. This feature protects sensitive data from unauthorized access, especially in situations where the device may be lost or left unattended. Users can manage their passcodes through the device's settings, including changing or disabling them as needed.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.7.3",
+        "title": "Securing Mobile Devices",
+        "content_type": "video",
+        "filename": "10.7.3_Securing_Mobile_Devices_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.7.3_Securing_Mobile_Devices_[video].txt",
+        "word_count": 1270,
+        "has_content": true
+      },
+      "section_header": "Passcode Locks",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.7.3_chunk_3",
+      "content": "In addition, we can also specify how long this device can be idle before we're going to require the passcode to be re-entered. So, first, we need to go to Display &amp; Brightness. And then to Auto-Lock right here. Notice that currently, Auto-Lock is set to Never. That means that this iPad can sit idle forever and the user will not be required to re-enter the passcode. Let's change that. I'm going to tap on Never. And let's set the auto-lock for 15 minutes. Now, if this iPad sits idle for 15 minutes, meaning I'm not tapping anything, then the screen is automatically going to lock. So, to this point, we've enabled a passcode, and we've set our screen to automatically lock after 15 minutes. So far, we've increased the security a little bit on this device.",
+      "summary": "The Auto Lock feature on devices allows users to set a specific idle time before requiring a passcode to re-enter, enhancing security. By navigating to Display & Brightness and adjusting the Auto-Lock setting from \"Never\" to a designated time, such as 15 minutes, users can ensure their device automatically locks after a period of inactivity. This practice helps protect sensitive information by minimizing the risk of unauthorized access.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.7.3",
+        "title": "Securing Mobile Devices",
+        "content_type": "video",
+        "filename": "10.7.3_Securing_Mobile_Devices_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.7.3_Securing_Mobile_Devices_[video].txt",
+        "word_count": 1270,
+        "has_content": true
+      },
+      "section_header": "Auto Lock",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.7.3_chunk_4",
+      "content": "But there are more things we can do. I'll tap Touch ID &amp; Password again. I'll enter in my passcode. Now scroll to the bottom of this screen. There's an option called Erase Data. If I turn Erase Data on, then all the data on this iPad will be erased if the user tries to enter an incorrect password 10 times in a row. After 10 consecutive failed passcode attempts, all the data on this iPad is going to get erased. Let's turn that option on. And it warns us, \"Hey, if you turn this option on, then everything on this iPad is going to be erased after 10 failed passcode attempts.\" We're going to go ahead and say, \"Nope.\" I'm borrowing this iPad, so the owner might not like that. This is a powerful option, and you need to carefully decide whether you want it on. If you have it turned on and someone enters the wrong passcode 10 times in a row, you'll have to restore all the data on this iPad from backup, either from iTunes on a PC using a USB cable or pulling it down from iCloud. Basically, what we're assuming is that if somebody enters the wrong passcode 10 times in a row, it isn't their iPad. So, at this point, we've really increased the overall security of this device.",
+      "summary": "The \"Erase Data\" feature on iPads enhances security by automatically erasing all data after ten consecutive incorrect passcode attempts, ensuring that unauthorized users cannot access sensitive information. This option requires careful consideration, as enabling it means that data recovery will necessitate restoring from a backup, either via iTunes or iCloud. Overall, this functionality significantly bolsters device security by protecting against unauthorized access.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.7.3",
+        "title": "Securing Mobile Devices",
+        "content_type": "video",
+        "filename": "10.7.3_Securing_Mobile_Devices_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.7.3_Securing_Mobile_Devices_[video].txt",
+        "word_count": 1270,
+        "has_content": true
+      },
+      "section_header": "Erase Data",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.7.3_chunk_5",
+      "content": "Another aspect of mobile device security involves being able to track down a lost device because, well, mobile devices do get lost. They get lost all the time. People leave them on airplanes. They get left in hotels, taxicabs, elevators, and train stations. If this happens, you not only want to protect the data on the device, you also probably want to figure out where that device is. Many mobile devices provide functionality that you can use to locate the lost device. The iOS operating system running on this iPad provides a function called Find My iPad, and it's tied to the iCloud backup function. If we enable this function and then we lose this iPad, we can sign into iCloud from any web browser on a PC or a laptop system and then use the Find My iPad option to view the device's approximate location on a map. I tapped iCloud a second ago. Now scroll down a little bit. Notice down here that the Find My iPad option is already turned on. This gives us a lot of options. For example, you could have a message displayed on the iPad that tells whoever finds it how to get in touch with you. You could even use iCloud.com to go in and remotely change the passcode lock assigned to this device. And if you're really concerned about not losing the data on a lost device, then you can use iCloud.com to perform a remote wipe. Essentially, what we're doing with a remote wipe is assuming that the iPad is lost, that the person who found it has no intention of returning it, and that they may want to get at the information that's stored on it. In this case, you can use iCloud.com to send a remote wipe command to the iPad, which will then restore the iPad to its original factory settings. Any personal information on it, as well as any proprietary sensitive information belonging to your organization, gets wiped out. If you have this option turned on, it's not a bad idea to come over here, under Backup, and turn on iCloud Backup as well. The idea here is that if you ever do end up performing a remote wipe, or if you end up losing the iPad altogether and never get it back, then you can restore all the data from your old iPad onto a new iPad. Go ahead and tap Cancel for now.",
+      "summary": "The \"Locate a Lost Device\" section emphasizes the importance of mobile device security, particularly in tracking and protecting lost devices. It highlights features like Apple's \"Find My iPad,\" which allows users to locate their device, display messages, change passcodes, or perform a remote wipe to secure sensitive data. Additionally, enabling iCloud Backup ensures that users can restore their data if the device is permanently lost.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.7.3",
+        "title": "Securing Mobile Devices",
+        "content_type": "video",
+        "filename": "10.7.3_Securing_Mobile_Devices_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.7.3_Securing_Mobile_Devices_[video].txt",
+        "word_count": 1270,
+        "has_content": true
+      },
+      "section_header": "Locate a Lost Device",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.7.3_chunk_6",
+      "content": "That's it for this demonstration. In this demo, we talked about some things you can do to increase the overall security of a mobile device, in this case, an iPad. We began this demonstration by talking about how to set passcode locks. We talked about how to set the auto-lock feature of the iPad. We talked about wiping the data off the iPad if somebody enters the wrong passcode more than 10 times in a row. Then we ended this demonstration by talking about how to locate a lost device using the Find My iPad option and iCloud.",
+      "summary": "This demonstration focused on enhancing mobile device security, specifically for an iPad, by implementing key features such as setting passcode locks and configuring the auto-lock function. It also covered the importance of data protection through automatic wiping after multiple incorrect passcode attempts and utilizing the Find My iPad feature via iCloud to locate lost devices. These practical applications are essential for safeguarding sensitive information on mobile devices.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.7.3",
+        "title": "Securing Mobile Devices",
+        "content_type": "video",
+        "filename": "10.7.3_Securing_Mobile_Devices_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.7.3_Securing_Mobile_Devices_[video].txt",
+        "word_count": 1270,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 6
+}

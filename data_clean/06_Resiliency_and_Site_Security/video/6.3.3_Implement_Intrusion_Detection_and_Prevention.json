@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "chapter_num": "6",
+    "section_num": "6.3.3",
+    "title": "Implement Intrusion Detection and Prevention",
+    "content_type": "video",
+    "filename": "6.3.3_Implement_Intrusion_Detection_and_Prevention_[video].txt",
+    "file_path": "data_raw/06_Resiliency_and_Site_Security/6.3.3_Implement_Intrusion_Detection_and_Prevention_[video].txt",
+    "word_count": 1204,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script Intrusion detection and prevention is an important task that is required to protect todays networks. In this demonstration, we'll configured intrusion detection and prevention using Snort on a pfSense security appliance. There are several products available that can do both intrusion detection and intrusion prevention. Some cost money and some are free. One of the most popular products is Snort. Snort is a free, open source network intrusion detection system (IDS) and intrusion prevention system (IPS). Although Snort is open source and free, it does have some paid plans that you can subscribe to and receive updates to rules faster. In this demo, we'll configure Snort on our pfSense security appliance. Before we configure Snort, let's quickly look at the website. As we scroll down, you see that you can manually download Snort for various operating systems and distributions. Snort is available for Fedora, Centos, FreeBSD and Windows. In the second step, you must get what is called an Oinkcode. We will do that in a minute but let's keep scrolling down this page. Step 3 is to get updates. We'll cover that later in the demo. Now as a review what we just talked about, Snort is an open source intrusion prevention system capable of real-time traffic analysis and packet logging. Snort is the most widely deployed IPS in the world. There have been over 5 million downloads and over 600 thousand registered users. To use Snort, you must first get an Oinkcode. We'll go to our account. Here is a link that says Oinkcode. We already have a code generated, so we can proceed. We will use the Oinkcode later. Now let's go to pfSense and install Snort. We've already logged into pfSense and we're on the Dashboard. Installing Snort on pfSense is quite easy. It is done with the Package Manager that is located under the System tab. Once on the Package Manager page, you click Available Packages. Now let's do a search for ‘Snort'. We have one result, so we'll come down and click the Install link. Now you can make sure you have the right package. We do; so let's click Confirm to start the installation. Now we wait for a few minutes while Snort is installed. When it does, the color changes from red to green and it says that the installation successfully completed. Down here on the bottom, a message says \"Success\". Now that Snort is installed, we need to set it up. Let's do that by going to Services and then down to Snort. Be aware that this menu item for Snort was not there until we installed it. If you don't have this menu, Snort probably is not installed. We will start by going to Global Settings. Under Snort Subscriber Rules, we check the Enable Snort VRT box. VRT is an acronym for Vulnerability Research Team. Below that, next to Snort Oinkmaster Code, we paste in the code. Remember, we got the Oinkcode from the Snort website that we were at in the beginning of the demo. We copied the code to the clipboard and will use a keyboard shortcut to paste it in here. Next, we Enable Snort GPLv2. The Community Snort Rules fall under the GNU General Public License Version 2, which encourages the development and distribution of open source software. This ruleset is 30 days behind the Snort Subscriber Rule Set. It does not contain zero-day threats under the limited provision of the Snort Subscriber Rule Set License. Now let's check Enable ET Open (ET is the acronym for Emerging Threats). This downloads the Emerging Threats Open rules. The ET Open Ruleset is an anti-malware IDS/IPS ruleset that enables users with cost constraints to enhance their existing network-based malware detection. We do not pay for the Emerging Threat Pro rules, so we won't check that box. Let's skip down here under Sourcefire OpenAppID Detectors. Let's check the Enable OpenAppID box. Below that, check the box next to Enable RULES Open AppID. OpenAppID is an application-focused detection language and processing module for Snort. When you use OpenAppID with pfSense, the system can successfully detect (if configured to do so) and block over 2600 different services like Facebook, Netflix, Twitter, and Reddit. For our Rules Update Settings, we set the Update Interval to 1 Day. For our Update time, we set it to 2:00 AM. Let's check the Hide Deprecated Rules Categories box. This removes old and outdated rules. Under General Settings &gt; Remove Blocked hosts Interval, we change that to 1 Hour. Now you might think that we should block hosts forever if they are malicious, but the problem is that often these are coming from spoofed IP addresses or from addresses that may be used by legitimate users very soon. So, we will block only for 1 hour. We'll check the box for Startup/Shutdown Logging. We want to know who and when Snort is being started and stopped by. That wraps up everything for this page. We'll click Save. Now that we have the rules figured out, we need to assign these rules to the WAN interface. We'll go to the Snort Interfaces tab. Then come down here to the right and click the Add link. Under General Settings, we want to make sure that Enable Interface is checked. We see that it is. Make sure you have WAN selected under Interface. This is the traffic we want to inspect. For Description, we enter WAN. We want to keep it obvious and simple here. Under Alert Settings, we check the box to Send Alerts to System Log. This will send alerts to the firewall log. We check the Block Offenders box. If an offender creates a Snort alert, they will be blocked. For the IP to Block, we block the Source IP address. There is nothing more we want to do here. We'll come down and click Save. Now we want to check the box to enable the WAN interface. Under Snort Status, click Runto start Snort. That's it for this demo. In this demo we configured intrusion detection and prevention using Snort on our pfSense security appliance.",
+  "chunks": [
+    {
+      "chunk_id": "6.3.3_chunk_1",
+      "content": "Intrusion detection and prevention is an important task that is required to protect todays networks. In this demonstration, we'll configured intrusion detection and prevention using Snort on a pfSense security appliance.",
+      "summary": "This section covers the implementation of intrusion detection and prevention systems (IDPS) to safeguard networks, emphasizing the configuration of Snort on a pfSense security appliance. Key concepts include identifying and mitigating potential threats in real-time, as well as understanding the practical applications of IDPS in enhancing overall network security. The demonstration illustrates hands-on skills essential for effective threat management.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.3.3",
+        "title": "Implement Intrusion Detection and Prevention",
+        "content_type": "video",
+        "filename": "6.3.3_Implement_Intrusion_Detection_and_Prevention_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.3.3_Implement_Intrusion_Detection_and_Prevention_[video].txt",
+        "word_count": 1204,
+        "has_content": true
+      },
+      "section_header": "Implement Intrusion Detection and Prevention",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.3.3_chunk_2",
+      "content": "There are several products available that can do both intrusion detection and intrusion prevention. Some cost money and some are free. One of the most popular products is Snort. Snort is a free, open source network intrusion detection system (IDS) and intrusion prevention system (IPS). Although Snort is open source and free, it does have some paid plans that you can subscribe to and receive updates to rules faster. In this demo, we'll configure Snort on our pfSense security appliance. Before we configure Snort, let's quickly look at the website. As we scroll down, you see that you can manually download Snort for various operating systems and distributions. Snort is available for Fedora, Centos, FreeBSD and Windows. In the second step, you must get what is called an Oinkcode. We will do that in a minute but let's keep scrolling down this page. Step 3 is to get updates. We'll cover that later in the demo. Now as a review what we just talked about, Snort is an open source intrusion prevention system capable of real-time traffic analysis and packet logging. Snort is the most widely deployed IPS in the world. There have been over 5 million downloads and over 600 thousand registered users.",
+      "summary": "The CompTIA Security+ course highlights the importance of selecting effective intrusion detection and prevention systems (IDPS), with Snort being a prominent example due to its open-source nature and widespread adoption. Snort offers real-time traffic analysis and packet logging capabilities, making it the most deployed IPS globally, with over 5 million downloads. The course also includes practical steps for configuring Snort on pfSense, emphasizing the need for updates and the acquisition of an Oinkcode for enhanced functionality.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.3.3",
+        "title": "Implement Intrusion Detection and Prevention",
+        "content_type": "video",
+        "filename": "6.3.3_Implement_Intrusion_Detection_and_Prevention_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.3.3_Implement_Intrusion_Detection_and_Prevention_[video].txt",
+        "word_count": 1204,
+        "has_content": true
+      },
+      "section_header": "Choose an Intrusion Detection and Prevention Product",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.3.3_chunk_3",
+      "content": "To use Snort, you must first get an Oinkcode. We'll go to our account. Here is a link that says Oinkcode. We already have a code generated, so we can proceed. We will use the Oinkcode later. Now let's go to pfSense and install Snort. We've already logged into pfSense and we're on the Dashboard. Installing Snort on pfSense is quite easy. It is done with the Package Manager that is located under the System tab. Once on the Package Manager page, you click Available Packages. Now let's do a search for ‘Snort'. We have one result, so we'll come down and click the Install link. Now you can make sure you have the right package. We do; so let's click Confirm to start the installation. Now we wait for a few minutes while Snort is installed. When it does, the color changes from red to green and it says that the installation successfully completed. Down here on the bottom, a message says \"Success\".",
+      "summary": "To install Snort on pfSense, users must first obtain an Oinkcode from their account, which will be used later in the setup process. The installation is straightforward, involving the use of the Package Manager to search for and install Snort, after which the status will change to indicate a successful installation. This process highlights key concepts in network intrusion detection and the practical application of configuring security tools within a firewall environment.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.3.3",
+        "title": "Implement Intrusion Detection and Prevention",
+        "content_type": "video",
+        "filename": "6.3.3_Implement_Intrusion_Detection_and_Prevention_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.3.3_Implement_Intrusion_Detection_and_Prevention_[video].txt",
+        "word_count": 1204,
+        "has_content": true
+      },
+      "section_header": "Install Snort",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.3.3_chunk_4",
+      "content": "Now that Snort is installed, we need to set it up. Let's do that by going to Services and then down to Snort. Be aware that this menu item for Snort was not there until we installed it. If you don't have this menu, Snort probably is not installed. We will start by going to Global Settings. Under Snort Subscriber Rules, we check the Enable Snort VRT box. VRT is an acronym for Vulnerability Research Team. Below that, next to Snort Oinkmaster Code, we paste in the code. Remember, we got the Oinkcode from the Snort website that we were at in the beginning of the demo. We copied the code to the clipboard and will use a keyboard shortcut to paste it in here. Next, we Enable Snort GPLv2. The Community Snort Rules fall under the GNU General Public License Version 2, which encourages the development and distribution of open source software. This ruleset is 30 days behind the Snort Subscriber Rule Set. It does not contain zero-day threats under the limited provision of the Snort Subscriber Rule Set License. Now let's check Enable ET Open (ET is the acronym for Emerging Threats). This downloads the Emerging Threats Open rules. The ET Open Ruleset is an anti-malware IDS/IPS ruleset that enables users with cost constraints to enhance their existing network-based malware detection. We do not pay for the Emerging Threat Pro rules, so we won't check that box. Let's skip down here under Sourcefire OpenAppID Detectors. Let's check the Enable OpenAppID box. Below that, check the box next to Enable RULES Open AppID. OpenAppID is an application-focused detection language and processing module for Snort. When you use OpenAppID with pfSense, the system can successfully detect (if configured to do so) and block over 2600 different services like Facebook, Netflix, Twitter, and Reddit. For our Rules Update Settings, we set the Update Interval to 1 Day. For our Update time, we set it to 2:00 AM. Let's check the Hide Deprecated Rules Categories box. This removes old and outdated rules. Under General Settings &gt; Remove Blocked hosts Interval, we change that to 1 Hour. Now you might think that we should block hosts forever if they are malicious, but the problem is that often these are coming from spoofed IP addresses or from addresses that may be used by legitimate users very soon. So, we will block only for 1 hour. We'll check the box for Startup/Shutdown Logging. We want to know who and when Snort is being started and stopped by. That wraps up everything for this page. We'll click Save.",
+      "summary": "In the \"Configure Snort\" section of the CompTIA Security+ course, learners are guided through the setup process of the Snort intrusion detection system, focusing on enabling various rulesets such as Snort VRT, GPLv2, and Emerging Threats Open. Key configurations include setting update intervals, enabling OpenAppID for application detection, and managing blocked hosts to avoid unnecessary long-term blocks. This practical application emphasizes the importance of maintaining an effective and responsive network security posture.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.3.3",
+        "title": "Implement Intrusion Detection and Prevention",
+        "content_type": "video",
+        "filename": "6.3.3_Implement_Intrusion_Detection_and_Prevention_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.3.3_Implement_Intrusion_Detection_and_Prevention_[video].txt",
+        "word_count": 1204,
+        "has_content": true
+      },
+      "section_header": "Configure Snort",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.3.3_chunk_5",
+      "content": "Now that we have the rules figured out, we need to assign these rules to the WAN interface. We'll go to the Snort Interfaces tab. Then come down here to the right and click the Add link. Under General Settings, we want to make sure that Enable Interface is checked. We see that it is. Make sure you have WAN selected under Interface. This is the traffic we want to inspect. For Description, we enter WAN. We want to keep it obvious and simple here. Under Alert Settings, we check the box to Send Alerts to System Log. This will send alerts to the firewall log. We check the Block Offenders box. If an offender creates a Snort alert, they will be blocked. For the IP to Block, we block the Source IP address. There is nothing more we want to do here. We'll come down and click Save. Now we want to check the box to enable the WAN interface. Under Snort Status, click Runto start Snort.",
+      "summary": "In this section, users learn how to assign security rules to a Wide Area Network (WAN) interface using Snort, a network intrusion detection system. Key steps include enabling the interface, selecting the WAN for traffic inspection, configuring alert settings to log alerts and block offenders, and saving the configuration to activate Snort. This practical application enhances network security by actively monitoring and responding to potential threats on the WAN.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.3.3",
+        "title": "Implement Intrusion Detection and Prevention",
+        "content_type": "video",
+        "filename": "6.3.3_Implement_Intrusion_Detection_and_Prevention_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.3.3_Implement_Intrusion_Detection_and_Prevention_[video].txt",
+        "word_count": 1204,
+        "has_content": true
+      },
+      "section_header": "Assign Rules to Wide Area Network (WAN) Interface",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "6.3.3_chunk_6",
+      "content": "That's it for this demo. In this demo we configured intrusion detection and prevention using Snort on our pfSense security appliance.",
+      "summary": "In this demo, we configured intrusion detection and prevention systems (IDPS) using Snort on the pfSense security appliance, highlighting the practical application of network security measures. Key concepts include monitoring network traffic for suspicious activity and implementing proactive defenses to mitigate potential threats. This hands-on experience reinforces the importance of real-time threat detection in maintaining a secure network environment.",
+      "metadata": {
+        "chapter_num": "6",
+        "section_num": "6.3.3",
+        "title": "Implement Intrusion Detection and Prevention",
+        "content_type": "video",
+        "filename": "6.3.3_Implement_Intrusion_Detection_and_Prevention_[video].txt",
+        "file_path": "data_raw/06_Resiliency_and_Site_Security/6.3.3_Implement_Intrusion_Detection_and_Prevention_[video].txt",
+        "word_count": 1204,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 6
+}

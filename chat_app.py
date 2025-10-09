@@ -312,7 +312,8 @@ def render_header():
 
 
 # Hardcoded configuration for simplified interface
-DEFAULT_K = 8
+# Optimized for 2321 chunks (all 13 chapters)
+DEFAULT_K = 10  # Increased from 8 to provide more context
 DEFAULT_CHAPTER_FILTER = None
 DEFAULT_CONTENT_TYPE_FILTER = None
 DEFAULT_TEMPERATURE = 0.0
@@ -348,10 +349,11 @@ def handle_chat_mode(user_input, k, chapter_filter, content_type_filter, tempera
     with st.chat_message("assistant"):
         with st.spinner("🤔 Retrieving and reranking documents..."):
             # Use reranking for better relevance
+            # Optimized for 2321 chunks: retrieve 40 candidates, rerank to top k
             response = st.session_state.rag_pipeline.query_with_reranking(
                 query=user_input,
                 k=k,
-                initial_k=20,  # Retrieve 20 candidates, rerank to top k
+                initial_k=40,  # Increased from 20 for better coverage with 2321 chunks
                 chapter_filter=chapter_filter,
                 content_type_filter=content_type_filter,
                 reranker_model="claude-3-haiku-20240307",

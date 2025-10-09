@@ -1,0 +1,204 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Change Management Overview
+00:04
+Change is inevitable in the IT field.
+00:07
+Whether it's updating to new equipment or changing direction
+00:11
+mid project, you're bound to come across a lot of changes!<br>
+00:14
+In this video, we're going to talk about change management.
+00:18
+This is just the method we use to ensure that changes
+00:20
+are implemented as smoothly and effectively as possible.<br>
+2. Change Request
+00:24
+Most organizations have an official
+00:26
+approval process for change management.
+00:28
+A business commonly uses change order
+00:30
+forms to document these requests.<br>
+00:33
+Change order forms are different for each company,
+00:36
+but they typically ask for the change's purpose,
+00:38
+scope, and extent, along with a risk analysis and
+00:41
+rollback plan in case things don't go as expected.<br>
+3. Approval
+00:44
+So, after filling out your change order form, what's next?
+00:48
+Well, first, it must be approved by the change board.
+00:51
+A change board might consist of one person or
+00:53
+many people who approve changes to the project.
+00:56
+Board members might be managers, project
+00:58
+supervisors, and maybe even the CEO.
+01:01
+If you were developing this project for a
+01:03
+customer instead of for in-house use, the customer
+01:05
+would need to approve the changes as well.<br>
+4. Purpose
+01:08
+The first thing the change board will want to
+01:09
+know is why you want to make this change at all.
+01:12
+You'll want to explain why the change is needed
+01:14
+and whether it'll improve a current process,
+01:16
+save money, or add additional functionality.
+01:19
+You might also be asked to explain how it fits
+01:21
+within the organization's current strategic focus.
+01:24
+The change board will also want to know the scope—what
+01:27
+exactly the proposed change will entail from start to finish.
+01:31
+A scope has many components, but it should always
+01:34
+include outcomes, cost, personnel, and systems.<br>
+01:38
+Some other questions you'll need to have a ready
+01:39
+answer for are: What are your desired outcomes?
+01:43
+What exactly do you want to change?
+01:45
+What are the desired deliverables?
+01:47
+How will you know when the project is complete?
+01:50
+The board will also obviously want to know how much this
+01:53
+is all going to cost, whether in money, time, or resources.<br>
+01:57
+You'll want to consider which personnel
+01:59
+you'll need to implement the change.
+02:01
+Will you need developers,
+02:02
+technicians, or administrative staff?
+02:04
+Be sure to include the contact information for a
+02:08
+point person who can serve as the change board's
+02:10
+primary contact for the project, if it's approved.
+02:13
+It's also important to explain which
+02:16
+existing systems will be impacted.
+02:18
+Most likely, you'll be working alongside live production
+02:22
+systems and any changes should be carefully planned out.
+02:25
+Will there be downtime or potential conflicts?
+02:28
+If so, you probably want to set up a sandbox to
+02:31
+test the proposed changes before you implement them.
+02:34
+As you can see, if there's literally
+02:36
+anything you think you might need for your
+02:38
+project, you want to include it in the scope.<br>
+5. Risk Analysis
+02:41
+Before you propose a change, you also
+02:44
+want to analyze the potential risk.
+02:47
+Yes, even small projects come with some risk.
+02:49
+Be sure to ask yourself, "What could go wrong
+02:52
+if we implement these changes?" After you
+02:55
+think through that, the next obvious questions
+02:57
+are: How are we going to avoid these problems?
+02:59
+How difficult will it be to backtrack
+03:02
+if things turn out worse than expected?
+03:04
+Is the outcome worth the risk?
+03:05
+If it turns out that the risks outweigh the
+03:08
+rewards, you probably want to rethink your approach.<br>
+03:11
+Now, before you start anything, make sure
+03:14
+you get written approval for your changes.
+03:16
+Written acceptance protects you,
+03:18
+the change board, and the customer.
+03:20
+This ensures that all of you have a complete understanding
+03:23
+of the proposed changes and what they could entail.
+03:26
+You want to avoid misunderstandings that could
+03:29
+hurt your own or your organization's reputation
+03:31
+or that might end up causing expensive problems.<br>
+6. Implementation
+03:34
+Documentation is critical to any
+03:37
+project from start to finish!
+03:38
+During the implementation stage, you want to be sure
+03:42
+to document all the changes you've made along the way.
+03:44
+Include the specific approvals you've received.
+03:47
+Once you're done, be sure to follow your
+03:49
+organization's end user acceptance process.
+03:51
+This ensures that someone who's going to be using
+03:54
+the system verifies that it's working as expected.
+03:56
+And be sure to document this as well.<br>
+7. Summary
+03:59
+That's it for this lesson.
+04:00
+In this lesson, we discussed change management.
+04:04
+We reviewed the information that's
+04:05
+commonly needed for a change request.
+04:08
+Then we went over the importance of documentation during
+04:10
+a proposed change's approval and implementation phase.<br>

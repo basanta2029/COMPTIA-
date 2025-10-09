@@ -1,0 +1,436 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Host Virtualization Overview
+00:04
+Let's spend a few minutes talking about
+00:05
+virtualization and virtual network components.
+00:06
+Virtualization is a very important
+00:10
+aspect of modern computing.
+00:13
+But before we talk about what virtualization
+00:15
+is and how it works, we first need to look at
+00:18
+the way things have traditionally been done.
+2. Traditional Computing Model
+00:20
+In the traditional computing model, we have one operating
+00:23
+system, or OS, installed on one hardware device.
+00:28
+In this example, we have hardware that consists
+00:30
+of our CPU, storage, and memory resources.
+00:34
+We need an operating system to run these resources,
+00:36
+which could be Windows, Linux, or even macOS.
+00:40
+Either way, we have one hardware device
+00:42
+being managed by one operating system.
+00:45
+The operating system's role is to provide
+00:47
+services for all the applications that run on
+00:50
+the hardware device so that they can utilize the
+00:52
+memory, storage, and CPU resources efficiently.
+00:56
+Here we have App1, App2, App3, and App4.
+01:00
+Each app makes its own requests for hardware
+01:03
+resources, and then the OS makes that happen.
+01:07
+For example, let's suppose you're going to
+01:08
+install a new server in your data center.
+01:11
+The first thing you'd do is order your server
+01:13
+hardware and then you'd pick an operating system.
+01:16
+When the server comes, you'd install a
+01:19
+server operating system on the hardware.
+01:21
+The operating system has full reign over all the resources
+01:24
+available on the server hardware, including RAM, processor
+01:28
+time, storage devices, network interfaces, and so on.
+01:33
+Finally, you'd install applications on top of that
+01:35
+operating system that would interact with system resources.
+3. Problems with Traditional Computing Model
+01:39
+There's a fundamental problem with doing
+01:41
+things this way—it's terribly inefficient.
+01:44
+Usually, applications that run on the OS don't fully
+01:47
+utilize all the hardware resources all the time.
+01:50
+This is often true on a server system, and you
+01:53
+find out that a lot of times your computing
+01:55
+resources are actually underutilized.
+01:58
+For example, you may see your CPU utilization
+02:00
+hovering around 10% most of the time.
+02:03
+You may also see that your memory utilization
+02:06
+is likewise hovering at around 20%.
+02:08
+This means 80-90% capacity is still available
+02:12
+to perform additional computing tasks.
+02:15
+Servers are expensive, and wasted
+02:16
+capacity means wasted dollars.
+02:19
+Many times, servers are purchased for a specific
+02:21
+purpose such as running web servers for individual apps.
+02:25
+This can lead to server sprawl for the many
+02:27
+underutilized servers This sucks up lots of power, puts
+02:30
+out tons of heat, and costs an immense amount of money.
+02:34
+But there's a way to overcome this and consolidate
+02:36
+all those servers into just a few, compact ones.
+02:40
+That's where virtualization comes in.
+4. Virtualization Roles
+02:40
+Virtualization enables you to run multiple
+02:45
+servers on a single physical server, called
+02:47
+a host, through hardware virtualization.
+02:50
+When you do this, each independent operating system or
+02:54
+virtual machine thinks it has all the hardware resources
+02:57
+it needs and runs in its own little isolated container.
+03:01
+So instead of the many underutilized servers in
+03:04
+traditional networking, with virtualization we can
+03:07
+put many servers together on one hardware chassis to
+03:10
+fully utilize CPU, RAM, disk, and network subsystems.
+03:15
+Virtualization increases IT agility, allows for greater
+03:18
+flexibility, delivers increased performance, and allows you
+03:22
+to scale up quickly while enjoying significant cost savings.
+03:26
+We'll get to some more important benefits in just a minute.
+03:29
+Nowadays, we can virtualize just about anything—operating
+03:33
+systems, storage, apps, networking, desktops, and more.
+03:38
+Virtualization can also be enabled in the cloud where
+03:41
+much of the computing can be done remotely without you
+03:44
+having to build and maintain your own data center.
+03:46
+It also allows companies to build their own private
+03:49
+clouds in their data centers to virtually deliver
+03:51
+their homemade apps to their corporate users.
+03:54
+Now users can use just about any device to securely access
+03:58
+their workloads remotely at any place, anytime, anywhere.
+04:01
+The power of virtualization is driving an immense,
+04:05
+global, and increasingly mobile workforce.
+5. Hypervisors
+04:07
+Virtualization starts with you installing a thin piece of
+04:10
+software called a hypervisor, which decouples the virtual
+04:14
+machines, or VMs, from the hardware and dynamically
+04:18
+allocates resources as the virtual machines request them.
+04:22
+Once the hypervisor is installed, you can then create
+04:24
+virtual machines with their own operating system and apps.
+04:29
+Notice in this diagram we have our
+04:30
+memory, storage, and CPU just like before.
+04:34
+But instead of installing an operating system directly
+04:36
+onto the host, we install a hypervisor to manage it.
+04:40
+On top of the hypervisor, we create virtual
+04:42
+machines by allocating CPU, RAM, and storage.
+04:46
+Generally, the more hardware you have on the
+04:48
+host, the more virtual machines you can build.
+04:51
+These physical servers that host multiple virtual
+04:54
+machines have lots of processors and lots of RAM, and
+04:57
+they're usually connected to an immense storage area
+05:00
+network, or SAN, that's made to be fault tolerant.
+05:05
+Notice that each VM has its own OS and
+05:07
+applications in an isolated container.
+05:10
+Each VM makes calls to use each piece of hardware,
+05:13
+and the hypervisor facilitates those requests.
+05:17
+You can install just about any OS inside of
+05:19
+a VM and then run apps built for that OS.
+6. Hardware Virtualization Types
+05:23
+Before we go on, there are three kinds of hardware
+05:25
+virtualization that you need to be familiar with.
+7. Full Virtualization
+05:28
+The first type is called full virtualization.
+05:30
+In full virtualization, the virtual machine
+05:34
+completely emulates a real, physical host.
+05:37
+This is good because it allows most operating
+05:39
+systems and applications to run within that
+05:42
+virtual machine without being modified in any way.
+05:45
+The hypervisor fully decouples the
+05:48
+operating system from the hardware.
+05:50
+There are two types of full virtualization: bare-metal
+05:52
+hypervisors (type 1) and hosted hypervisors (type 2).
+05:52
+We'll learn more about these in just a minute.
+8. Partial Virtualization
+06:00
+Another form of virtualization
+06:02
+is called partial virtualization.
+06:03
+In partial virtualization, some virtual machine
+06:07
+components are virtualized while others aren't.
+06:10
+In other words, the OS uses some virtual components
+06:13
+and some physical components while it runs.
+06:16
+It's important to note that an operating system can only
+06:19
+run in a partial virtualization environment if that
+06:22
+operating system has been specifically modified to do so.
+9. Paravirtualization
+06:26
+The last type of virtualization
+06:28
+is called paravirtualization.
+06:29
+In paravirtualization, the
+06:32
+hardware isn't virtualized at all.
+06:34
+In other words, all the guest operating systems
+06:37
+running on the hypervisor actually access various
+06:40
+hardware resources in the physical devices directly.
+06:43
+It doesn't virtualize any of the components.
+06:46
+To do this, the guest operating systems run in
+06:48
+isolated domains on the same physical hardware, which
+06:52
+basically simulates running on separate systems.
+06:55
+For an operating system to run on a paravirtualization
+06:58
+environment, it must be specially modified to do so.
+07:02
+As you can see, a hypervisor is a fundamental
+07:05
+component in any virtualization implementation.
+10. Hypervisor Types
+07:08
+There are several different hypervisors that
+07:11
+you can choose from, and they generally fall
+07:13
+within two main categories: type 1 and type 2.
+11. Type 1 Hypervisors
+07:17
+As we mentioned, type 1 hypervisors are installed
+07:19
+directly onto the hardware and allow you to build VMs.
+07:23
+This type is used in data centers to virtualize servers.
+07:27
+Examples of type 1 hypervisors include
+07:29
+VMware vSphere, Microsoft Hyper-V, Linux
+07:34
+KVM, Citrix Hypervisor, Xen, and Oracle VM.
+07:39
+These are enterprise-class hypervisors for serious,
+07:42
+large-scale virtualization deployments that provide an
+07:45
+array of management tools and feature-rich benefits.
+12. Type 2 Hypervisors
+07:48
+Alternatively, we have type 2 hypervisors.
+07:51
+Since type 2 hypervisors are hosted and run on
+07:54
+top of a regular operating system, they allow
+07:56
+you to get a test environment up and running
+07:59
+quickly without having to buy huge systems.
+08:02
+Examples of type 2 hypervisors are VMware
+08:05
+Workstation, Oracle VirtualBox, and Microsoft
+08:08
+Hyper-V which is built into Windows 8.1 and 10.
+08:13
+All these hypervisors perform basically
+08:14
+the same role that we talked about before.
+08:17
+They allow you to install multiple operating
+08:19
+systems on a single physical server.
+13. Virtualization Benefits
+08:22
+There are many benefits to implementing
+08:24
+virtualization in your environment.
+08:26
+The biggest drivers are reduced expenses
+08:28
+and increased return on investment.
+08:30
+Most virtualization platforms provide redundancy
+08:33
+and load balancing, which minimize downtime.
+08:36
+Also, unlike traditional computing where you have
+08:38
+to go out and buy a physical server, you can spin
+08:41
+up a virtual server in a fraction of the time.
+08:44
+You can also take server snapshots in
+08:46
+case you need to make a server rollback.
+08:49
+An entire VM is stored in just a few files, and they
+08:52
+can easily be copied or moved as you would any file.
+08:56
+Finally, virtualization makes IT tasks
+08:58
+much easier to manage and less costly.
+09:01
+With benefits like these, you can see why
+09:03
+nearly all companies are using some form
+09:06
+of virtualization in their business today.
+14. Virtual Machine Escape
+09:08
+Before we finish, we need to discuss
+09:10
+a possible virtualization attack.
+09:12
+Virtual machine escape is one of the security threats an
+09:15
+attacker can take advantage of from within a virtual machine.
+09:19
+Typically after escaping
+09:21
+out of a guest virtual machine, an exploiter can execute
+09:24
+code on the hypervisor or the host operating system.
+09:27
+The threat actor can gain access to the primary hypervisor
+09:31
+and perform administrative tasks like VM deletion, powering
+09:35
+off, resource allocation, and much more.
+09:39
+The best way to prevent virtual machine
+09:41
+escape is to regularly patch your hypervisor.
+09:43
+Keeping your hypervisor current goes
+09:46
+a long way in preventing exploits.
+15. Summary
+09:49
+That's it for this lesson.
+09:50
+In this lesson, you were introduced to
+09:52
+virtualization's common roles and functions.
+09:54
+We discussed how virtualization works,
+09:56
+different virtualization types, the hypervisors
+09:59
+you can use, and virtualization benefits.
+10:02
+We ended this lesson by discussing virtual machine
+10:04
+escape and how you can prevent these attacks.

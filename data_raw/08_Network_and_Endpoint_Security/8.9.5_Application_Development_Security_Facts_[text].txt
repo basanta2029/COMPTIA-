@@ -1,0 +1,112 @@
+Security Pro 8.0
+
+8.9.5 Application Development Security Facts
+
+In our world today, information is exchanged constantly. This means that attackers are working relentlessly to access our data. It is essential that we begin security efforts at the coding level.
+
+This lesson covers the following topics:
+
+Secure coding techniques
+Code signing
+Secure cookies
+Secure Coding Techniques
+
+The security considerations for new programming technologies should be understood and tested before deployment. One of the challenges of application development is that the pressure to release a solution often trumps any requirement to ensure that the application is secure. A legacy software design process might be heavily focused on highly visible elements, such as functionality, performance, and cost. Modern development practices use a security development lifecycle running in parallel or integrated with the focus on software functionality and usability. Examples include Microsoft's SDL (microsoft.com/en-us/securityengineering/sdl) and the OWASP Software Assurance Maturity Model (owasp.org/www-project-samm). OWASP also collates descriptions of specific vulnerabilities, exploits, and mitigation techniques, such as the OWASP Top 10 (owasp.org/www-project-top-ten).
+
+Secure coding concepts include the following:
+
+Concept
+Description
+Normalization	
+Normalization is data reorganized in a relational database with the intent to eliminate redundancy by having all related data stored in one place. Normalization:
+
+Increases performance by reducing disk space.
+Provides quick and efficient access to manipulate the data.
+Lowers the risk of exploitation.
+Stored procedures	
+Stored procedures are one or more database statements stored as a group in a database’s data dictionary. When called, these procedures execute all the statements in the collection. Stored procedures:
+
+Centralize the code and eliminate the need to reproduce it.
+Keep calling program rules consistent across programs.
+Protect the code from users by allowing the user to call a stored procedure without seeing the actual code.
+Limit injection attacks.
+Code obfuscation/code camouflage	
+Obfuscation is the deliberate act of creating source or machine code that is difficult for humans to understand. In other words, the code is camouflaged.
+
+Programmers use roundabout expressions to compose statements that deliberately obfuscate code to conceal its purpose or logic.
+They use implicit values embedded in it to prevent tampering, deter reverse engineering, or as a puzzle or recreational challenge for someone reading the source code.
+This is usually done with an automated tool but can also be done manually.
+There are several methods, but most can be reverse-engineered.
+Code reuse	
+Code reuse is simply using the same code multiple times. Reusing code is a good idea if the programmer writes the same code at least three times. Code reuse:
+
+Can create a shared library for others that use the same code.
+Can be a security problem if:
+The code is not secure before it is shared and used multiple times.
+It has changes made to fit a new use, but the changes are not secure.
+Be sure to comprehensively test code before allowing reuse.
+Dead code	
+Sometimes dead code refers to code that is non-executable at runtime.
+Sometimes, it means source code in a program that is executed but is not used in any other computation, making it obsolete.
+Remove any dead code from your application for security.
+If it does not exist, it cannot be exploited.
+Memory management	
+Memory management is a resource-management process applied to computer memory. It allows your computer system to assign portions of memory called blocks to various running programs that optimize overall system performance. Many arbitrary code attacks depend on the target application having faulty memory management procedures. This allows the attacker to execute their own code in the space marked out by the target application. There are known unsecured practices for memory management that should be avoided, and checks for processing untrusted input, such as strings, to ensure that it cannot overwrite areas of memory.
+
+Memory management resides in the hardware, the operating system, programs, and applications. In the hardware, memory management involves components that physically store data, such as RAM chips, memory caches, and SSDs. In the OS, memory management involves the allocation of specific memory blocks to individual programs as user demands change. At the Application level, memory management ensures the availability of adequate memory for the objects and data structures of each running program at all times.
+
+When the program requests a block of memory, the allocator in the memory manager assigns that block to the program. When a program no longer needs the data in the previously allocated memory blocks, those blocks become available for reassignment. This task can be done automatically by the memory manager or manually by the programmer.
+
+The most common memory vulnerabilities include:
+Size of input in buffer copy not checked
+Buffer size was calculated incorrectly
+Format string not controlled
+To prevent vulnerabilities:
+Limit the amount of characters read into the buffer.
+Define constants for the size argument.
+Do not allow user input in format strings.
+Third-party libraries and software development kits (SDKs)	
+A third-party library is a library where the code is not maintained in-house. A software development kit (SDK) is a set of software development tools that can be installed as one unit. Both can provide code frameworks or code snippets to help development go faster. Though they can be very helpful, there are risks involved. For example:
+
+Anytime code comes from an outside source, there is a risk that it may contain flaws and vulnerabilities
+Sometimes code comes in bundles, giving developers more code than they need
+Extra code can create extra opportunities for exploitation
+SDKs are often open-source and, as such, there may be no urgency to fix bugs
+Be sure to test code from third-party libraries and SDKs for functionality and security issues.
+Sensitive data exposure	
+Sensitive data exposure involves unintended exposure of personal and confidential data. This can come from:
+
+Weak or missing encryption
+Coding flaws
+Misapplied data uploads in a database
+To mitigate sensitive data exposure:
+
+Encrypt data in transit and at rest using cryptographic algorithms and keys.
+Disable caching on forms that collect data.
+Implement hashed and salted passwords.
+Fuzz testing	
+Fuzz testing (also known as fuzzing) is a software testing technique that exposes security problems by providing invalid, unexpected, or random data to the inputs of an application. Fuzzing program types are:
+
+Mutation-based
+Mutate existing data samples to create data
+Generation-based
+Define new test data based on models of the input
+Code Signing
+
+Code signing practices use digital signatures to verify the integrity and authenticity of software code. Code signing serves a dual purpose: ensuring that software has not been tampered with since signing and confirming the software publisher's identity.
+
+When software is digitally signed, the signer uses a private key to encrypt a hash or digest of the code—this encrypted hash and the signer's identity form the digital signature. Code signing requires using a certificate issued by a trusted certificate authority (CA). The certificate contains information about the signer's identity and is critical for verifying the digital signature. If the certificate is valid and issued by a trusted CA, the software publisher's identity can be confidently verified. Code signing helps analysts and administrators block untrusted software and also helps protect software publishers by providing a mechanism to validate the authenticity of their code. Overall, code signing helps build trust in the software distribution process.
+
+While code signing provides assurance about the origin of code and verifies code integrity, it does not inherently assure the safety or security of the code itself. Code signing certifies the source and integrity of the code, but it doesn't evaluate the quality or security of the code. The signed code could still contain bugs, vulnerabilities, or malicious code inserted by the original author. Signing ensures software is from the expected developer and in the state the developer intended. While code signing adds trust and authenticity to software distribution, it should not be relied upon to guarantee secure or bug-free code.
+
+Reviewing the digital signature contained within the Bitwarden Password Management app installer
+
+Description
+Data exposure is a fault that allows privileged information (such as a token, password, or personal data) to be read without being subject to the appropriate access controls. Applications must only transmit such data between authenticated hosts, using cryptography to protect the session. When incorporating encryption in code, it is important to use industry-standard encryption libraries that are proven to be strong, rather than internally developed ones.
+Secure Cookies
+
+Cookies are small pieces of data stored on a computer by a web browser while accessing a website. They maintain session states, remember user preferences, and track user behavior and other settings. Cookies can be exploited if not properly secured, leading to attacks such as session hijacking or cross-site scripting.
+
+To implement secure cookies, developers must follow certain well-documented principles, such as using the 'Secure' attribute for all cookies to ensure they are only sent over HTTPS connections and protected from interception via eavesdropping, using the 'HttpOnly' attribute to prevent client-side scripts from accessing cookies and protect against cross-site scripting attacks, and using the 'SameSite' attribute to limit when cookies are sent to mitigate cross-site request forgery attacks. Additionally, cookies should have expiration time limits to restrict their usable life.
+
+Secure cookie techniques are critical in mitigating several web-based application attacks, particularly those focused on unauthorized access or manipulation of session cookies. Developers can defend against attacks that target them by employing specific attributes within cookies.

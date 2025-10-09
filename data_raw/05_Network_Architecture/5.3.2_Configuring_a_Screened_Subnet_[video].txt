@@ -1,0 +1,135 @@
+1. Configuring a Screened Subnet
+00:04
+In this demonstration, we're going to create a
+00:07
+screened subnet on our pfSense security appliance.
+00:10
+Be aware that screened subnets are also
+00:12
+referred to as demilitarized zones, or DMZs.
+00:15
+Often, you will see them referred to as DMZs
+00:17
+in software settings with various vendors.
+00:20
+So, if we encounter something listed as
+00:22
+DMZ, we are referring to a screened subnet.<br>
+00:25
+For our current configuration, our
+00:27
+device has two connections: LAN and WAN.
+00:32
+As mentioned earlier, we are here
+00:33
+to configure a screened subnet.
+00:35
+I have a few extra optional ports on my pfSense device, and
+00:38
+I'm going to configure one of these for the screened subnet.
+00:41
+I'll also assign it the IP address 172.16.1.1.
+00:47
+Let's get started.<br>
+00:49
+The first thing I'll do from our pfSense
+00:51
+Dashboard is confirm our current situation.
+00:53
+You can see here that I have WAN and LAN interfaces.
+00:57
+To add my screened subnet, I'll
+00:58
+go to Interfaces &gt; Assignments.
+01:01
+On the Interface Assignments
+01:02
+page, I'll click the Add button.<br>
+2. Configure the Screened Subnet Interface
+01:05
+Here, I can see that OPT1 is displayed.
+01:08
+I'll go ahead and click on it.
+01:10
+OPT1 isn't a very descriptive name, so let's call it 'DMZ.'
+01:14
+Before I forget, I'll check the
+01:16
+box here to enable the interface.
+01:19
+For IPv4 Configuration Type, I'll
+01:21
+choose Static IPv4 from the list.
+01:24
+We won't configure IPv6 for this demo.
+01:27
+Now, let's scroll down to our Static IPv4 Configuration.
+01:31
+As per my diagram, I said I was going to assign it the
+01:34
+IP address '172.16.1.1,' so that's what I'll type in.
+01:40
+I want to give it a /24 subnet mask.<br>
+01:46
+That's all we need to do here.
+01:47
+Click Save.<br>
+3. Configuring DHCP
+01:50
+Now we can see the changes in our interface.
+01:52
+It also says, "Don't forget to adjust the
+01:54
+DHCP Server range if needed after applying."
+01:57
+Let's go ahead and click on Apply Changes.<br>
+02:01
+Let's configure our DHCP Server for our screened subnet.
+02:05
+I'll go to Services &gt; DHCP Server.
+02:08
+We land on the page for the LAN DHCP Server.
+02:12
+Let's go to the DHCP Server for the screened subnet.<br>
+02:16
+I'll go ahead and enable DHCP for
+02:18
+our screened subnet interface.
+02:20
+Now we need to configure the range of IP
+02:22
+addresses that our DHCP will hand out.
+02:25
+I always leave IPs at the beginning of
+02:27
+the range open for static addresses.
+02:30
+I can pick something ending in .2 all the way up to .254.
+02:34
+I'll set it to '172.16.1.100' and end at '172.16.1.199'.
+02:44
+This way, I'll know that anything
+02:45
+in the 100s was assigned via DHCP.<br>
+02:48
+I'll scroll down and click Save.<br>
+4. Verify Settings
+02:52
+Now let's go back to our dashboard and verify
+02:54
+that our screened subnet interface is showing up.
+02:57
+I'll scroll down, and right here, you
+02:59
+can see that we have our screened subnet.
+03:02
+This is where we can add devices to our screened
+03:04
+subnet and configure our firewall for handling
+03:07
+traffic going to and from the screened subnet.<br>
+5. Summary
+03:11
+That's it for this demo.
+03:13
+In this demo, we configured a screened subnet.<br>

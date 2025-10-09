@@ -1,0 +1,267 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. IPsec
+00:04
+In this lesson, we'll cover Internet Protocol
+00:06
+Security, or Ipsec, which is a set of security
+00:09
+protocols used to provide authentication and
+00:11
+asymmetric encryption for TCP/IP network traffic.
+00:15
+It's also used in VPNs.<br>
+2. OSI Model
+00:17
+IPsec operates on top of the Network
+00:20
+layer, or Layer 3, of the OSI model.
+00:23
+The OSI model provides standards for communication in a
+00:27
+computing system, which allows interoperability of
+00:30
+various systems regardless of their internal structures.
+00:33
+It's composed of seven layers, each
+00:35
+layer being served by the layer below it.
+00:37
+The bottom three layers are the media layers,
+00:40
+and the top four layers are the host layers.
+00:43
+Layer 3's primary goal is communication, not security.
+00:47
+Applying IPsec on top of Layer 3 provides security
+00:50
+to the communication through mutual authentication,
+00:52
+integrity, non-repudiation, and confidentiality.<br>
+3. Authentication Header (AH)
+00:56
+The first protocol in the IPsec suite
+00:58
+is called Authentication Header, or AH.
+01:00
+It encapsulates all the Host layer
+01:03
+information, which includes Layers 4 through 7,
+01:06
+and replaces it with an authentication header.
+01:08
+AH will detect if the IP address on Layer 3 changes through
+01:13
+a checksum for all the data from Layers 3 through 7.
+01:16
+This provides authenticity and integrity, but
+01:19
+not confidentiality because the encapsulated
+01:21
+data in the packet is not encrypted.
+01:24
+If the packet were intercepted by
+01:25
+a sniffer, the data could be read.<br>
+01:29
+AH provides authentication information in the form of a
+01:31
+keyed hash, which is based on all the bytes in the packet.
+01:35
+AH authenticates packets by digitally signing them, which
+01:38
+prevents replay attacks.
+01:41
+AH's assigned IP protocol number is 51.<br>
+4. Encapsulating Security Payload (ESP)
+01:45
+The second IPsec protocol option is
+01:47
+Encapsulating Security Protocol, or ESP.
+01:51
+It's commonly used with IPsec because it provides
+01:53
+everything that AH provides plus confidentiality.
+01:57
+ESP's assigned IP protocol number is 50.<br>
+02:01
+Like AH, ESP encapsulates the Host layers, 4 through
+02:05
+7, into a new Layer 4 header called an ESP header.
+02:08
+Unlike AH, it encrypts the encapsulated data, preventing
+02:13
+someone from reading the data if it's sniffed.
+02:15
+Also unlike AH, ESP doesn't notice when a lower
+02:19
+level IP address changes because there isn't a
+02:22
+checksum that includes Layer 3 information.
+02:24
+To solve this problem, ESP works best
+02:26
+with Network Address Translation, or NAT.<br>
+5. NAT-T
+02:29
+An important consideration is that
+02:31
+NAT can have problems with IPsec.
+02:33
+Problems can come because IPsec secures the headers of
+02:37
+packets and detects if the packets have been tampered
+02:40
+with, and NAT needs to tamper with packets by changing
+02:43
+source and destination IP addresses and ports.<br>
+02:45
+To fix this, something called NAT
+02:47
+Traversal, or NAT-T, was created.
+02:51
+NAT-T is designed to allow IPsec to
+02:53
+function properly through a NAT device.
+02:56
+It does this by encapsulating ESP packets
+02:58
+inside a UDP packet and uses UDP port 4500.<br>
+6. Security Association (SA)
+03:03
+Another part of IPsec to consider is the set of
+03:05
+specifications that negotiate between nodes to establish the
+03:09
+IPsec relationship called a Security Association, or SA.
+03:13
+These specifications can include cryptographic
+03:15
+keys, authentication preferences, certificates,
+03:18
+and algorithm selections.<br>
+03:20
+For example, both endpoints can agree to use the SHA-1
+03:23
+hashing algorithm instead of MD5, AES for symmetric
+03:27
+encryption, and RSA for asymmetric encryption.
+03:31
+Each tunnel of data uses three
+03:33
+different security associations.<br>
+03:34
+First, a management channel is established so that routers
+03:39
+or network nodes can exchange security information.
+03:41
+Then an outbound security association and an
+03:44
+inbound security association are established,
+03:47
+each with a unique identifier that's included
+03:50
+with each packet sent across the channel.
+03:51
+A security association can be established
+03:54
+manually or automatically through a
+03:56
+protocol called IKE, Internet Key Exchange.<br>
+7. Internet Key Exchange (IKE)
+03:59
+IKE helps establish automatic SAs and a secure
+04:02
+tunnel by providing a protected exchange of
+04:05
+keys before the full IPsec transmission begins.
+04:07
+IKE uses a Diffie-Hellman key exchange
+04:10
+to establish a shared session secret.
+04:12
+Mutual authentication is provided either by pre-shared keys
+04:16
+on both endpoints or through certificates issued by a CA.
+04:20
+IKE can also help automate the selection of the
+04:23
+best security association for each connection.<br>
+04:25
+For example, if both endpoints support Triple DES
+04:28
+and AES for symmetric encryption, then IKE can help
+04:33
+them negotiate the strongest security method, AES.
+04:35
+Once that's agreed on, they're placed into their SAs.
+04:38
+Now their symmetric encryption algorithm is set
+04:41
+to encrypt and decrypt data with the IPsec tunnel.<br>
+8. IPsec Modes
+04:44
+Finally, there are two modes that are available
+04:46
+to use with IPsec circuits, including VPNs.<br>
+04:49
+The first is called tunnel mode.
+04:51
+It's commonly used to provide secure
+04:53
+communication between two network gateways.
+04:56
+For example, it will allow any user at Corporate
+04:59
+Office A to communicate safely with any user at
+05:02
+Corporate Office B because both offices have
+05:05
+secure gateways acting as IPsec proxies.<br>
+9. IPSec Modes
+05:07
+The second is called transport mode.
+05:10
+It's used when two hosts connect directly with each other
+05:13
+and the circuit is broken off after the session ends.<br>
+10. Summary
+05:16
+That's it for this lesson.
+05:17
+In this lesson, we discussed how IPsec
+05:20
+secures IP traffic across the network.
+05:22
+Then we looked at elements of the IPsec suite.
+05:25
+First, we looked at AHs, or Authentication Headers.
+05:28
+Then we looked at ESP, or Encapsulating Security Payload.
+05:33
+Remember to use NAT-T to enable ESP to function properly.
+05:37
+Next, we discussed how Security
+05:40
+Association specifications work.
+05:42
+Then we looked at using Internet Key
+05:44
+Exchange protocol to implement the SAs.
+05:48
+Finally, we covered the two IPsec
+05:50
+modes, tunnel mode and transport mode.
+05:52
+Tunnel mode allows protected communication between
+05:55
+users at both ends of the secure tunnel through
+05:57
+their gateways, and transport mode is for direct
+06:00
+connection between hosts for a specific session.<br>

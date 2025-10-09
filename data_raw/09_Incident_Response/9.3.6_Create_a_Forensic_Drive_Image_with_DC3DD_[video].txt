@@ -1,0 +1,265 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Create Forensic Disk Image with DC3DD
+00:04
+In this demonstration, we're going
+00:06
+to create a forensic drive image.
+00:08
+It's very important that you understand
+00:10
+you can't use standard file copying
+00:12
+utilities to create a forensic drive image.
+00:15
+You can't use, say, Windows Explorer or File Explorer.
+00:19
+Those utilities copy files that have an entry, a
+00:22
+record, in the allocation table of the partition
+00:24
+where it resides, so it only copies data that's
+00:27
+associated with a file or folder in the file system.
+00:31
+When you're conducting a forensic investigation, you
+00:33
+need all the data on that hard drive, especially the data
+00:36
+that's not associated with a particular file or file in
+00:39
+the file system, but is still on the hard disk drive.
+00:41
+Basically, we're looking for stuff that's been
+00:43
+deleted—"stuff that someone may be trying to hide.
+00:46
+We need to use a drive imaging utility to do this.
+00:50
+There are a variety of utilities that you can use.
+00:52
+Some cost a lot of money; some cost practically nothing.
+00:56
+We're going to use the latter
+00:57
+option in this demonstration today.
+00:59
+In this demo, we'll use dc3dd to
+01:02
+obtain a raw image of a hard drive.
+01:05
+dc3dd was developed at the Department of
+01:07
+Defense's Cyber Crime Center, and it's basically
+01:10
+an enhanced version of the open source dd command
+01:13
+with added features for computer forensics.
+01:16
+One of the main characteristics of dc3dd is that it
+01:19
+offers the possibility of hashing on the fly with
+01:22
+multiple algorithms (MD5, SHA-1, SHA-256, or SHA-512).
+01:28
+You'll want to use a write blocker between your
+01:30
+machine and the disk you're obtaining an image from.
+2. Linux Storage Devices
+01:32
+Before we start looking at how to create the
+01:36
+drive image, you need to understand how Linux
+01:38
+storage devices are addressed by the Linux system.
+01:41
+It's kind of difficult to understand when you're new to
+01:44
+Linux, but all storage devices on Linux systems are
+01:47
+addressed using a device file located in the /dev directory.
+01:52
+If a process needs to write information to a hard disk
+01:54
+drive, it writes it to a specific file in the /dev
+01:58
+directory, which then redirects the IO data to the
+02:00
+appropriate hardware device, such as a hard disk drive.
+02:04
+What we need to do is figure out what the device
+02:07
+name is for the drive that we want to image.
+02:09
+There are a variety of command line
+02:11
+utilities you can use to do this.
+02:13
+One way to find the forensic image is to
+02:15
+use fdisk and the sudo fdisk 1 parameter.
+3. Use fdisk to Identify Disks
+02:20
+I think we have enough information to get started.
+02:22
+We could go to a terminal and start dc3dd, but I'm going to
+02:26
+go up to the Application Launcher and start it from there.
+02:29
+I'll come down to Forensics and
+02:30
+then select Forensic Imaging Tools.
+02:34
+I see dc3dd, so let's click on it and launch it.
+02:38
+The only reason I wanted to start it this way
+02:40
+is so that you can see we have a nice manual
+02:42
+here to learn more about how to use it.
+02:45
+I'm not actually going to go over any of this
+02:47
+in this information right here, but I will
+02:49
+when we type some of the commands in a minute.
+02:52
+I'm going to type —˜clear' and
+02:53
+get a clean screen to work with.
+02:55
+I like to see what disks I have to work with by
+02:58
+typing —˜sudo fdisk' with the —˜-l' parameter.
+03:01
+Press Enter.
+03:02
+Now put in the sudo password.
+03:06
+The first disk we'll look at is this one, /dev/sdb.
+03:08
+It's a 20-gig disk, and I know that this
+03:12
+is the one with my Kali Linux installed on.
+03:15
+But this isn't the disk I want to image.
+03:17
+If I go up a little, I see a second disk, /dev/sda.
+03:22
+This one is 2 gigs.
+03:24
+This is the one I want to image.
+03:26
+Make sure you know which disk you're
+03:27
+working with when you do this.
+03:29
+I'll come down here and type —˜clear' to clear the screen.
+4. Using the dc3dd Command to Create a Forensic Drive Image
+03:32
+Now we need to type in the command to create the
+03:35
+image, tell it where to find the disk, where to store
+03:37
+the copy, which hash to use, and name the log file.
+03:41
+I'll go ahead and type that in and then come
+03:43
+back in a second and explain the command.
+03:46
+Okay, I have the command typed in.
+03:48
+The first part is —˜sudo dc3dd'.
+03:51
+This just tells Linux to run our command as
+03:53
+root, or basically like an admin in Windows.
+03:56
+The next part, —˜if=/dev/sda', is my input file.
+04:01
+That's what the letters I-F stand for, input file.
+04:05
+After that, we need to specify where our image will go.
+04:08
+O-F stands for output file, so we've typed
+04:11
+in —˜of=/home/dana/temp/imaged2.img'.
+04:17
+That's the path where I'll save my image
+04:19
+file, and I named it —˜image2.img'.
+04:22
+Next, we'll use —˜hash=sha256' for our hash type.
+04:26
+We could use MD5 or one of the others types we listed
+04:30
+in the intro of this demo, but this will work fine.
+04:33
+The last thing we have is —˜log=/home/dana/temp/image2.log'.
+04:35
+As you can guess, this is just a log file, which is
+04:43
+very important to have along with the disk image.
+04:46
+It's going to be located in the
+04:47
+same directory as our disk image.
+04:49
+We'll look at after we create it.
+04:52
+This all looks really good.
+04:53
+I'll press Enter to start the disk imaging.
+04:56
+Down here, we can see the copy progress.
+04:58
+Keep in mind that this is a very small disk
+05:01
+without a lot of data, so it's going quickly.
+05:09
+It looks like it's done.
+05:10
+Down here, I can see when it completed.
+05:13
+Up here is the location of the image file.
+05:15
+I'll go up and close out of our terminal.
+05:18
+Now let's go look in our temp file, confirm
+05:20
+that it copied over, and look at our log file.
+5. Verify Results
+05:22
+Next, we'll go up to Application
+05:24
+Launcher and over to File Manager.
+05:27
+I'll go over to my temp folder
+05:29
+and double-click on it to open it.
+05:31
+Here are my two files, my image file and my log file.
+05:35
+Let's open that log now.
+05:36
+It shows us things like the time the image started,
+05:39
+the size, where the file was located, our hash value,
+05:43
+the output filename, and the time it completed.
+05:46
+Our next step would be to use another
+05:48
+forensic tool to examine the image itself.
+6. Summary
+05:50
+And that's it for this demo.
+05:52
+We used the command line utility dc3dd
+05:55
+to capture a forensic image from a disk.

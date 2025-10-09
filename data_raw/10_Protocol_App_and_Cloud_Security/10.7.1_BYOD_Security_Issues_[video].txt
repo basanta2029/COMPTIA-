@@ -1,0 +1,659 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Mobile Device Management
+00:04
+Let's spend a few minutes talking
+00:05
+about managing mobile devices.
+00:07
+When managing a modern computer
+00:09
+network, you need to take into account
+00:10
+all of mobile devices that
+00:12
+will be connected to that network from
+00:14
+both a management perspective and from
+00:16
+a security perspective.
+00:17
+Most users today have more than one
+00:19
+mobile device that they will use to
+00:21
+complete their day to day work,
+00:22
+including smart phones and tablets.
+00:24
+These devices may be purchased by
+00:26
+your organization, or they may be
+00:28
+personal devices brought from home.
+00:30
+This practice is sometimes referred
+00:31
+to as bring your own device, or BYOD.
+00:34
+While these devices allow employees
+00:36
+to be more productive, they also
+00:38
+create management issues and open up
+00:40
+security holes in your network.
+00:42
+Because these devices are so well
+00:43
+liked, it really isn't feasible for
+00:45
+you to try to prevent their usage.
+00:48
+Instead, you need to formulate
+00:50
+plans to address them in your
+00:51
+overall management strategy.
+00:52
+A key issue to remember is the fact
+00:55
+that these devices probably contain
+00:56
+some type of sensitive information.
+00:58
+The degree of sensitivity depends
+01:00
+on your organization, the person's
+01:02
+role, and the information
+01:03
+downloaded to these devices.
+01:05
+It is possible that sensitive
+01:06
+information can leak out of
+01:07
+your organization through one
+01:09
+of these mobile devices.
+01:10
+You need to define processes
+01:12
+for managing these devices.
+01:14
+Let's take a look at a few
+01:15
+things you need to consider.
+2. Provisioning Mobile Devices
+01:17
+First, you should define a process for
+01:19
+provisioning users with mobile devices.
+01:21
+Remember, whenever you give an
+01:23
+employee one of these devices,
+01:25
+it can open up a security risk.
+01:27
+You need to carefully
+01:28
+control who gets these devices and
+01:29
+what they put on them.
+01:31
+Begin by defining a procedure for
+01:33
+provisioning users with mobile devices.
+01:35
+This ensures that you know
+01:37
+exactly who has a mobile device
+01:38
+and what they will use it for.
+3. AUP
+01:40
+Next, you should define
+01:42
+acceptable uses for these devices.
+01:44
+There are several key aspects related
+01:46
+to acceptable use; one is personal use,
+01:49
+and the other is after normal hours use.
+01:52
+Employment terms play a factor.
+01:54
+If an hourly employee is issued a
+01:55
+mobile device, and that employee
+01:57
+uses the device after normal work
+01:59
+hours for company purposes, such as
+02:01
+answering emails or responding to
+02:03
+requests, then that individual
+02:05
+could be eligible for overtime pay.
+02:08
+This issue also relates to
+02:09
+personal use of the device.
+02:11
+If an employee uses a company
+02:13
+owned mobile device after hours
+02:14
+for anything that's irresponsible,
+02:16
+illegal, embarrassing, or even
+02:18
+malicious, your organization may
+02:20
+have a degree of liability.
+02:22
+The liability would stem from the fact
+02:24
+that the organization issued the device
+02:26
+to the employee and didn't specify
+02:28
+acceptable personal use guidelines.
+02:31
+Therefore, you should include provisions
+02:32
+in your AUP that explicitly defines what
+02:35
+constitutes acceptable personal use and
+02:37
+which activities are prohibited.
+02:40
+If your organization allows personally
+02:42
+owned devices, then you must address
+02:44
+the question of who owns company data
+02:46
+if it gets copied to a user's device.
+02:48
+Does the organization still own
+02:50
+it, or does the user own it because
+02:52
+it's on their personal device?
+02:54
+To deal with this problem, your AUP
+02:56
+should define the kind of data that is
+02:58
+allowed on mobile devices, especially
+03:00
+if the device is personally owned.
+03:02
+It should also define the kind of
+03:04
+data prohibited on mobile devices.
+03:07
+You can implement information
+03:08
+classification labels to make it
+03:10
+clear to the user into which category
+03:12
+a particular piece of data is sorted.
+03:15
+In addition, your AUP needs to
+03:17
+address the threat of insider attacks.
+03:20
+A malicious internal user
+03:22
+could use a mobile device to
+03:23
+conduct an insider attack.
+03:25
+For example, the user could use the
+03:27
+built-in camera to take pictures of
+03:28
+sensitive internal information.
+03:30
+They could copy sensitive
+03:32
+data to the device's storage.
+03:34
+They could use the built-in
+03:35
+microphone to record conversations.
+03:37
+They could use the built-in
+03:38
+video function to record
+03:39
+proprietary processes, and so on.
+03:42
+They could then transmit this stolen
+03:43
+information outside your organization
+03:45
+without going through your organization's
+03:47
+network security mechanism using the
+03:49
+device's mobile broadband connection.
+03:52
+This would bypass your intrusion
+03:53
+protection systems, your firewall,
+03:55
+and any other network security
+03:57
+mechanisms you may have implemented.
+03:59
+Essentially, data could be stolen
+04:01
+and you will have no idea that it's
+04:03
+been leaked or how it got out.
+04:05
+Because these devices have Wi-Fi
+04:07
+or mobile broadband networking
+04:09
+built-in to them, it is very
+04:11
+difficult to prevent data leakage.
+04:13
+If the user can download or capture
+04:15
+sensitive information to the device,
+04:17
+there is no technological means to
+04:19
+prevent data from being transmitted.
+04:21
+Accordingly, your acceptable use
+04:22
+policy should specify where and
+04:24
+when employees can possess mobile
+04:26
+devices and how they can use them.
+04:28
+For example, you could prohibit
+04:30
+mobile devices in the
+04:31
+high-security areas of your organization.
+04:34
+You could specify in the AUP that any
+04:36
+personally owned devices brought on
+04:38
+site are subject to random searches.
+04:41
+Once your AUP has been defined, you
+04:43
+need to develop a management
+04:45
+plan for managing the mobile devices
+04:47
+in your network, both company owned
+04:49
+and personally owned.
+04:50
+For example, one issue you need to be
+04:52
+concerned with is malware propagation.
+04:55
+If a user's tablet or phone is infected
+04:57
+with malware, the infection can easily
+04:59
+spread to your organization's network
+05:00
+when they connect their device to your
+05:03
+organization's internal network.
+05:05
+One solution is to implement
+05:07
+Network Access Control (NAC) so that
+05:09
+devices can be remediated before
+05:11
+allowing them on your network.
+05:13
+The NAC can install the latest
+05:14
+antimalware software updates to a
+05:16
+device and then run a scan to
+05:18
+ensure the device is clean before
+05:20
+allowing it on your network.
+05:21
+Alternatively, you could
+05:23
+implement a guest wireless network
+05:25
+that's isolated from your
+05:26
+organization's production network.
+05:28
+In this configuration, a BYOD
+05:30
+device connects to the guest network
+05:32
+to gain Internet access, but is
+05:34
+quarantined from the rest of your
+05:36
+organization's production network.
+05:37
+Using a guest wireless network
+05:39
+prevents malware on a BYOD device from
+05:42
+infecting your production systems.
+05:44
+You also need to consider policies and
+05:46
+procedures for protecting data that is
+05:48
+legitimately copied to mobile devices
+05:51
+within the guidelines set in your AUP.
+05:54
+Organizations spend a lot of time,
+05:55
+effort, and money building internal
+05:58
+security controls to protect their data.
+06:00
+However, if a user copies
+06:01
+that information to a mobile
+06:03
+device, that data is at risk.
+06:05
+For example, if the user
+06:06
+loses the device, the data
+06:08
+on that device may be compromised.
+06:10
+All the firewalls, content
+06:12
+filters, and intrusion detection
+06:14
+systems that you setup on your
+06:15
+internal network are completely
+06:17
+ineffective at preventing this.
+06:19
+If that device doesn't have the
+06:21
+appropriate security settings,
+06:22
+anyone who picks up that device will
+06:24
+be able view the sensitive data.
+4. MDM Infrastructure
+06:27
+To circumvent this risk, consider
+06:28
+using a mobile device management
+06:30
+(MDM) infrastructure, such as the
+06:32
+Windows Intune service.
+06:34
+You can require all mobile devices,
+06:36
+even personally owned devices, to be
+06:38
+enrolled in your MDM infrastructure.
+06:41
+You can use this
+06:42
+infrastructure to enforce mobile
+06:44
+device security policies.
+5. Authentication
+06:45
+For example, using an MDM, you can
+06:48
+require enrolled devices to use some
+06:50
+form of authentication, such as a
+06:52
+PIN or (better yet) a password.
+06:55
+You don't want just anyone to be
+06:56
+able to pick up a mobile device
+06:58
+and begin using it without having
+06:59
+to authenticate in some way.
+07:01
+Without a password or a PIN code,
+07:03
+anyone who finds a lost mobile device
+07:05
+could immediately access the
+07:07
+information that has been saved on it.
+6. Lockout
+07:09
+Also consider implementing
+07:10
+some type of device lockout
+07:12
+with your MDM infrastructure.
+07:14
+If a device is left on, but there
+07:17
+has been no activity for a period
+07:18
+time, the lockout feature should
+07:20
+lock the device and require
+07:22
+authentication to re-access it.
+07:24
+For example, suppose I'm at the
+07:25
+airport using my Smartphone.
+07:27
+I set my phone down to get my
+07:28
+luggage and I forget and leave
+07:29
+it in the terminal.
+07:31
+After a few minutes of inactivity,
+07:33
+the lockout feature automatically
+07:34
+locks the device and requires some
+07:37
+type of authentication to get back in.
+7. Encryption
+07:40
+You can also use the MDM infrastructure
+07:42
+to enable device encryption.
+07:44
+Even if I require authentication and
+07:46
+lockouts on enrolled mobile devices,
+07:48
+there is still a risk that someone could
+07:50
+physically open a lost or stolen device,
+07:53
+remove its storage, and try to read its
+07:55
+contents from a different system.
+07:57
+To prevent this, you can
+07:58
+enable device encryption.
+08:00
+Without the correct encryption
+08:02
+key, the contents of the device's
+08:04
+storage are undecipherable.
+08:06
+Again, this can help protect
+08:07
+data on a device if it gets lost.
+8. Remote Wipe
+08:09
+You can also use the MDM infrastructure
+08:12
+to remotely wipe mobile devices.
+08:15
+This feature sends out a command
+08:17
+over the Internet to a lost or
+08:18
+stolen mobile device that causes the
+08:20
+contents of the device to be wiped.
+08:23
+The ability to perform a remote
+08:24
+wipe is essential if you allow
+08:26
+sensitive company information to
+08:28
+be copied to mobile devices.
+08:30
+If the user loses a device, you
+08:32
+need to be able to perform a remote
+08:33
+wipe as quickly as possible.
+08:35
+You can even use the MDM
+08:37
+infrastructure to automatically wipe
+08:38
+data from a device after a certain
+08:40
+number of failed authentication
+08:42
+attempts have occurred.
+08:43
+If someone finds or steals a device
+08:45
+and then repeatedly tries to guess
+08:47
+its pin or password, all the data
+08:49
+will be removed from the device.
+9. Employee Reporting Device Lost/Stolen
+08:52
+Finally, you should implement
+08:54
+some type of reporting process
+08:55
+for your mobile devices.
+08:57
+Identifying a lost or stolen
+08:59
+device as quickly as possible is
+09:01
+probably one of the most important
+09:03
+components in your overall mobile
+09:04
+device management strategy.
+09:06
+If a user loses a device, or
+09:08
+if it's stolen, the loss needs
+09:10
+to be reported immediately.
+09:12
+Remember, users will be either hesitant
+09:14
+or embarrassed to let you know that the
+09:16
+device that the organization paid for
+09:18
+and issued to them is now gone.
+09:20
+They may fear some type of retribution.
+09:23
+In spite of this, you need to make sure
+09:25
+they understand that getting the missing
+09:27
+device wiped clean of sensitive data is
+09:29
+the organization's primary concern.
+09:32
+Make sure users understand
+09:34
+that timing is critical.
+09:36
+The longer a missing device goes
+09:37
+unreported, the more time an attacker
+09:39
+has to defeat its security mechanisms
+09:42
+and the more likely the sensitive
+09:43
+data it contains will be exposed.
+10. Summary
+09:46
+So, in this lesson we talked about
+09:47
+some things you can do to increase
+09:49
+the overall security of the mobile
+09:51
+devices used by your organization.
+09:53
+We talked about implementing a procedure
+09:55
+for provisioning mobile devices, defining
+09:57
+an acceptable use statement, and using an
+09:59
+MDM infrastructure.
+10:01
+Then we looked at some general
+10:02
+provisions you can use to protect the
+10:04
+data on the device, such as using
+10:06
+authentication, implementing a
+10:07
+lockout, using remote wipe after
+10:09
+failed authentication attempts,
+10:11
+encrypting the device, and instructing
+10:12
+users to report immediately if a
+10:14
+device is lost or stolen.

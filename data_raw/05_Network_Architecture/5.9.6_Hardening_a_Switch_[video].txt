@@ -1,0 +1,548 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Hardening a Switch
+00:04
+In this demonstration we'll look
+00:06
+at various methods to harden a managed switch.
+00:08
+In this case we're using a Cisco Small
+00:11
+Business Managed Switch and are logged into
+00:13
+the management interface using Internet Explorer.
+00:16
+We're authenticated as the Admin
+00:17
+User so we can make changes.
+00:20
+In this demonstration we'll look at
+00:21
+port security, management access,
+00:23
+and access control using access control lists, ACLs.
+2. Configure Port Settings
+00:27
+To begin, let's look at port security.
+00:30
+When hardening a switch, one of the first
+00:32
+things we want to do is shut down any unused ports.
+00:35
+Click on Configure Port Settings,
+00:37
+which will take us directly to the Port
+00:38
+Settings page under Port Management.
+00:41
+On this page we can select one of the unused ports.
+00:43
+You'll notice we have several ports here
+00:45
+that are either down and unused, or up and used.
+00:48
+The ones that are unused are currently down.
+00:51
+We want to make sure they're administratively down,
+00:54
+meaning they have to be turned on before they can be used.
+00:57
+Let's take a look at Port Two.
+00:58
+It's down.
+00:59
+Let's scroll to the bottom of the page and click Edit.
+01:02
+On this page you'll notice that the Administrative
+01:04
+Status of this port is actually up,
+01:06
+even though it's operationally down.
+01:09
+This means there's nothing plugged into it.
+01:11
+To make sure that this port remains down
+01:13
+and is not used without permission,
+01:15
+we'll set the Administrative Status as Down.
+01:17
+Click Apply, Close.
+01:22
+To set all other unused ports as Administratively Down,
+01:25
+we'll select Port Two then click Copy Settings.
+01:28
+In the Copy Settings window we can
+01:30
+list all the ports that we want to be down.
+01:32
+In this case, we'll type Three, Six,
+01:35
+and Eight through 28.
+01:36
+Go ahead and click Apply.
+01:38
+All of those ports are now administratively down.
+01:41
+Let's look at Port Three for confirmation.
+01:43
+Select Port Three and click Edit.
+01:46
+You'll notice on this page that
+01:47
+the status Administratively Down.
+01:49
+So, the status that we copied from Port Two
+01:51
+went to the rest of the ports.
+01:53
+Click Close.
+01:54
+By setting the ports that we're not using
+01:56
+to Administratively Down, those ports will
+01:58
+come up at a down state each time
+02:00
+the switch starts up.
+02:02
+At the end we'll make sure that
+02:03
+we save our Configuration File to the Startup Configuration.
+3. Enable Port Security
+02:07
+Next, we also want to enable port security.
+02:10
+To do that, we'll open the Security Tab
+02:12
+and click on Port Security.
+02:14
+Under this tab we can configure locking
+02:16
+mechanism for each of these ports.
+02:18
+We'll click on Port One and select Edit.
+02:21
+On this page you'll notice that we can lock the port,
+02:23
+meaning we're going to only allow certain MAC addresses
+02:26
+to pass traffic through this port.
+02:29
+A Classic Lock means that the first
+02:30
+device you connect to that port
+02:32
+will be remembered and allowed to
+02:33
+pass traffic through this port.
+02:36
+You can also select Limited Dynamic Lock,
+02:38
+which gives you a variable number from one to 256.
+02:42
+Let's change this to four.
+02:44
+Now, if you connect a hub to a specific port
+02:46
+on the switch and connect four devices to that,
+02:49
+you can allow all four of those devices
+02:51
+to talk through that port.
+02:52
+No additional devices would be allowed to pass traffic.
+02:55
+We'll go ahead and select the Classic Lock.
+02:58
+That will give us one device,
+03:00
+and the device will be locked in.
+03:01
+If you try to connect a device that
+03:03
+is not supposed to be on that port,
+03:05
+the Action on Violation determines what happens.
+03:08
+The default is to discard the packet.
+03:10
+If you connect any other device to the port,
+03:13
+the traffic will be ignored.
+03:15
+You can also forward the traffic,
+03:17
+or you can shut down the port.
+03:20
+That's a little drastic for our purposes.
+03:22
+However, if you're extremely cautious
+03:23
+about your security and you don't want
+03:25
+anybody connecting a device you don't know about,
+03:27
+being able to shut down the port is
+03:29
+one of the most secure things that you can do.
+03:31
+We'll go ahead and select Discard
+03:33
+if it's a device that we aren't sure about.
+03:35
+If somebody plugs in a device that's
+03:37
+not locked in you can also trap the MAC addresses
+03:40
+of the offending device.
+03:42
+We've enabled locking for Port One,
+03:44
+as well as the classic lock.
+03:45
+We're going to discard the frames
+03:47
+of any other devices that come onto that port.
+03:49
+We'll go ahead and click Apply, Close.
+03:53
+Once again, we can take the settings that we've created
+03:55
+for Port One and apply them to the rest of the ports.
+03:58
+Scroll down to the bottom and select Copy Settings.
+04:01
+In this case, we'll select all of the ports,
+04:04
+or Two through 28, and click Apply.
+04:07
+You'll see that the settings that we've
+04:08
+created for port security now apply to all 28 ports.
+4. Management Access
+04:13
+The next piece that we would like
+04:14
+to cover is management access.
+04:16
+We'll go to Management Access Method
+04:18
+and click Access Profiles.
+04:20
+In this case, the only profile that's
+04:22
+on the machine is the Console Profile,
+04:24
+which is the default.
+04:25
+We're going to add a new access profile,
+04:27
+so click Add.
+04:29
+We'll call this access profile Management.
+04:31
+In this Management Profile the very first rule,
+04:34
+or Rule One that we want to have
+04:36
+will deny all management.
+04:38
+We'll go ahead and select Deny
+04:40
+and specify all different management methods,
+04:42
+and apply it to all interfaces.
+04:44
+That will be our first and main rule.
+04:46
+We'll go ahead and click Apply, Close.
+04:50
+Now that we've created our Management Profile,
+04:52
+we can select Profile Rules.
+04:54
+It can seem a little confusing that
+04:56
+you create a Management Profile then add a rule to it.
+04:59
+We'll go ahead and select our Management Profile,
+05:01
+and add another rule.
+05:03
+It looks very similar to the page we just used.
+05:06
+For Rule Number Two, we want to allow
+05:08
+HTTP access.
+05:10
+We want to select all interfaces,
+05:12
+but we also only want to allow traffic
+05:14
+from a specific workstation or IP address.
+05:17
+We'll specify that 192.168.1.200
+05:22
+will be the only workstation allowed to access this port.
+05:25
+We'll also input the network mask
+05:27
+by typing 255.255.255.0.
+05:33
+Alternatively, we can use the prefix length
+05:35
+and use the prefix instead.
+05:37
+We'll go ahead and click Apply, Close.
+05:41
+We now have a management access rule
+05:43
+that denies all traffic, and one access rule
+05:46
+which allows us to access the HTTP interface
+05:49
+from one specific workstation.
+05:50
+But, we're not done yet.
+05:52
+We need to go back to Access Profiles
+05:54
+and set the Active Profile.
+05:56
+Right now, we don't have an active management profile.
+05:58
+Go ahead and select Management.
+06:00
+This denies all types of management interfaces
+06:03
+with this switch, except for the HTTP access
+06:06
+from the one workstation that we have selected.
+06:09
+We're not going to click Apply this time.
+06:11
+If we do, we'll probably be locked out of the switch,
+06:14
+and we want to make sure that we have access
+06:15
+to complete this demo.
+5. Firmware Updates
+06:17
+Let's go to the next section,
+06:18
+and look at firmware updates.
+06:20
+Under Administration, File Management
+06:22
+we can select Upgrade, Backup Firmware.
+06:25
+Part of hardening the device or a computer of any kind
+06:28
+is to make sure you have the latest software and patches.
+06:31
+You can use browse to select the latest
+06:33
+firmware and download it.
+06:35
+In this particular switch, you have to
+06:37
+select the Active Image once you've loaded the firmware.
+06:39
+You can select Image One or the new image,
+06:42
+Image Two, and apply it.
+06:44
+Next you'll need to reboot the switch.
+06:47
+Once you do that the switch will come
+06:49
+back with the latest and greatest software
+06:51
+and the best enhancements.
+06:52
+This allows you to have the best
+06:53
+possible security for this switch.
+06:55
+Upgrading firmware for the switch
+06:57
+as well as applying patches to any computer
+06:59
+is a key element to hardening the switch.
+6. Access Control using ACLs
+07:01
+The last aspect of hardening the switch
+07:04
+is access control using the ACLs.
+07:07
+Let's select Access Control.
+07:09
+On this switch, we have various methods
+07:11
+of access control.
+07:12
+We can use a MAC based ACL.
+07:14
+We can use an IPV4 based ACL.
+07:17
+And we can also use an IPV6 based ACL.
+07:21
+We'll set up a MAC based ACL.
+07:23
+In this case, we don't have an access control list,
+07:26
+so we'll go ahead and create one.
+07:28
+We want to make sure that nobody
+07:30
+can attach game consoles or connect any game to our switch.
+07:33
+Type Games as the name of our ACL.
+07:35
+Click Apply, Close.
+07:38
+We have the ACL, but to put access control entries,
+07:41
+ACE, into this access control list,
+07:44
+we need to click the MAC Based ACE Table.
+07:47
+It has a slightly different interface,
+07:49
+but let's click Add to add an entry to this page.
+07:52
+For our first access control entry, Entry One,
+07:56
+we're going to select Deny.
+07:57
+We'll select Any for the Destination MAC address.
+08:00
+Under Source MAC Address, we're going to select
+08:03
+User Defined and put in the address,
+08:05
+one of the game consoles, or the prefix of the MAC address,
+08:08
+which is used for all devices of the same manufacturer.
+08:11
+We'll go ahead and enter 00041F
+08:15
+followed by six ones.
+08:17
+Under Source MAC Wildcard Mask
+08:19
+we'll enter six zeroes followed by six ones.
+08:23
+This says that we only care about
+08:25
+the first six digits of the MAC Address.
+08:27
+This is preventing any device
+08:29
+from the same manufacturer from being connected.
+08:31
+We'll go ahead and click Apply.
+08:33
+That creates our first entry into
+08:35
+the Access Control List Entry Table.
+08:37
+We'll add one more just for demonstration purposes.
+08:40
+We'll go ahead and create Priority Two.
+08:42
+Once again, we're going to select Deny,
+08:45
+and specify the Destination MAC Address as Any.
+08:48
+We're going to specify the Source MAC Address
+08:50
+value as 005042 followed by six ones.
+08:56
+We'll do the same Source MAC Wildcard Mask,
+08:58
+or six zeroes followed by six ones.
+09:01
+Click Apply, Close to create our access control entries.
+09:06
+We could add more for any of the game
+09:08
+console types that are out there,
+09:09
+or any other device that we want
+09:11
+to prohibit from using our network.
+09:13
+We can also add anything we want to allow on the network.
+09:17
+Now that we've created the MAC Based ACL Table,
+09:19
+and have created the entries in that table,
+09:22
+we need to make sure that the ports
+09:23
+have a binding to that table.
+09:25
+We'll go ahead and click on ACL Binding.
+09:27
+Select Port One, scroll down, and click Edit.
+09:31
+We want to apply this MAC based ACL,
+09:33
+so we'll select that and then select Games,
+09:35
+which we just created.
+09:37
+If there were additional ones,
+09:39
+we could choose from them as well.
+09:41
+We'll go ahead and click Apply, Close.
+09:44
+Just as we've done in the previous portions
+09:46
+of this demonstration, we'll select Port One.
+09:48
+The GE One interface, and click on Copy Settings.
+09:52
+We'll enter two through 28 and click Apply.
+09:55
+That gave us a successful binding
+09:57
+of the Games ACL to all of the ports in our interface.
+10:00
+One final thing that you will always
+10:02
+want to do when you've made configuration
+10:04
+changes to your switch is to save
+10:05
+the Running Configuration to the Startup Configuration.
+10:09
+On this switch, simply click Save at the top.
+10:11
+It will blink when there have been changes.
+10:16
+Select Running Configuration as the Source File Name.
+10:19
+And set the Destination File Name
+10:20
+as Startup Configuration, then click Apply.
+7. Summary
+10:23
+In this demonstration we've examined
+10:25
+the idea of port security.
+10:26
+We've looked at management access to our switch.
+10:29
+And we've also looked at restricting
+10:30
+certain traffic to the switch using ACLs.

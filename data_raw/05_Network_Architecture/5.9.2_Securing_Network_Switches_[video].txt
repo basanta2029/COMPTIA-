@@ -1,0 +1,353 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Secure Network Switches
+00:04
+In this lesson, I'll discuss several of the best practices
+00:06
+you can implement to help secure your network switches.
+00:09
+I'll also cover additional topics that further lock
+00:12
+down a switch and add additional controls to make it
+00:14
+more secure and less susceptible to an attack.
+00:17
+These topics include port security, DHCP
+00:20
+snooping, and dynamic ARP inspection.<br>
+2. Best Practices
+00:22
+The first best practice in securing a switch
+00:25
+is to change the switch's default credentials.
+00:28
+When doing so, choose a username that's not too easy to
+00:30
+guess and a complex password using lower and uppercase
+00:33
+characters, numbers, and non-alphanumeric symbols.<br>
+00:37
+You should enable secure shell, or SSH,
+00:40
+for remote access and also disable telnet.
+00:41
+Telnet uses cleartext for usernames
+00:44
+and passwords, which isn't good.
+00:46
+When it comes to securing a switch, Simple
+00:48
+Network Management Protocol, or SNMP, is a
+00:51
+powerful ally when you configure it correctly.
+00:54
+When it's left unconfigured, though, it presents a security
+00:56
+vulnerability that can simply be avoided by disabling it.
+01:00
+In the unlikely event there are switch ports
+01:02
+left open with no connection, ensure those ports
+01:05
+are disabled to prevent unwanted connections.<br>
+01:07
+In addition, you should add a warning banner that states
+01:10
+that unauthorized switch configuration access is prohibited.
+01:14
+The last best practice is to enable logging.
+01:17
+This allows administrators to see any
+01:19
+major or minor events a switch experiences.
+01:22
+You can also use a logging server to store,
+01:24
+archive, and consolidate logging for the enterprise.<br>
+3. Port Security
+01:27
+Now, let's shift gears to port security.
+01:29
+It's up to the switch manufacturer to define how
+01:32
+switch security is implemented and the command
+01:34
+syntax that's used for setup and configuration.
+01:37
+But you can use port security as more
+01:40
+granular approach to switch security.
+01:42
+Port security configurations can limit the number
+01:44
+of devices allowed per port, limit hardware address
+01:47
+connections, and define what happens when the port
+01:50
+experiences a violation of these settings.
+01:52
+For example, you could set it to shut down after a breach.
+01:56
+An important note here is that on many
+01:57
+switches, port security can't be configured on
+02:01
+trunk, EtherChannel, or port analyzer ports.<br>
+4. Limit Devices per Port
+02:04
+Since organizations face constant battles with finding
+02:06
+open switch connections in a growing workforce, one
+02:10
+solution is to add an intermediate switch.
+02:12
+In this case, a small switch is placed in a small
+02:14
+office that allows several connections, and then
+02:17
+that switch is connected to the upstream switch.
+02:19
+If the number of devices is limited on the upstream
+02:22
+switch and set to one, only the first device that
+02:25
+tries to connect is allowed a connection.
+02:26
+When the second device tries to connect,
+02:29
+the switch denies the connection and the
+02:31
+second device won't connect to the network<br>
+5. Secure with MAC address
+02:33
+You can also configure switch ports to only
+02:36
+accept connections from specific MAC addresses.<br>
+02:39
+For example, let's configure port 1 for the MAC address
+02:41
+ending in BA, and port 2 for the MAC address ending in 45.
+02:46
+Assuming the devices connected to those
+02:48
+ports match the required MAC address, they're<br>
+02:51
+allowed to connect.
+02:52
+While this is a good defense, it's difficult
+02:54
+to maintain and very simple to defeat if one
+02:57
+device is swapped out for another.
+02:59
+The port for that device will need to be reconfigured if
+03:01
+a new computer is bought or the network card is changed.
+03:05
+Likewise, it's very easy to spoof a MAC address on a
+03:08
+given system, rendering MAC address security ineffective.<br>
+6. Port Security Violations
+03:12
+When a port security rule violation occurs, the switch
+03:15
+may react differently depending on its configuration.
+03:18
+This might be implemented differently by different switch
+03:21
+manufacturers, but the actions are usually closely related.
+03:24
+For the least restrictive action, the port
+03:26
+simply drops frames from the offending device.
+03:29
+The port or interface remains operational
+03:31
+and nothing is reported in the logs.<br>
+03:34
+Another setting tells the switch to not only drop the
+03:37
+frame but send an alert and log the offending operation.
+03:41
+The third, most restrictive violation disables
+03:43
+the port when a violation is detected.
+03:45
+This requires intervention to re-enable
+03:47
+the port and is the default violation mode.<br>
+7. Additional Security Concerns
+03:49
+There are several additional measures
+03:51
+you can take to protect network switches.
+03:54
+Many are common sense precautions, such as physical security
+03:57
+and the best practices listed earlier in this lesson.
+04:00
+Let's discuss two additional security
+04:02
+configurations you might consider.<br>
+8. DHCP Snooping
+04:04
+First, is DHCP snooping.
+04:05
+DHCP, as a service, dynamically distributes
+04:09
+network parameters, such as IP addresses and
+04:12
+default gateways to network devices.
+04:14
+For example, when you first start a
+04:16
+workstation, it automatically requests and
+04:18
+receives the IP information from a DHCP server.
+04:22
+In this type of environment, the DHCP server is
+04:24
+known as a trusted device, in the same way that
+04:27
+routers, firewalls, and file servers are trusted.
+04:30
+A trusted device simply means that it's
+04:32
+managed by an administrator in your company.<br>
+04:35
+Since most organizations use DHCP for dynamic IP
+04:38
+address allocation, attackers often try to place a
+04:40
+rogue DHCP server on the network in an attempt to
+04:44
+provide end devices with forged IP address information
+04:47
+to introduce vulnerabilities onto the network.
+04:49
+DHCP snooping attempts to prevent this from occurring.
+04:53
+But for DHCP snooping to work, it
+04:55
+must be enabled on your devices.
+04:57
+While the actual configuration for DHCP snooping
+05:00
+is beyond the scope of this lesson, it's important
+05:03
+to learn which process to use to enable and
+05:05
+configure DHCP snooping in your infrastructure.
+05:08
+Know that the configuration
+05:09
+process will vary by manufacturer.
+05:12
+Once configured, the DHCP snooping process
+05:14
+detects, blocks, and drops DHCP packets when the
+05:18
+DHCP information comes from an untrusted source.
+05:21
+This information is also logged so further actions can
+05:24
+be taken to locate and eradicate the rouge DHCP server.<br>
+9. Dynamic ARP Inspection
+05:28
+Another security feature available on many
+05:30
+switches is called dynamic ARP inspection.
+05:33
+This feature rejects invalid or malicious ARP packets,
+05:36
+which can help prevent on-path attacks.<br>
+05:37
+An on-path attack is when an attacker secretly
+05:42
+relays or alters the communication between two parties who
+05:45
+believe they're directly communicating with each other.
+05:48
+So how does an attacker implement
+05:50
+a on-path attack?<br>
+05:51
+In normal operations, ARP tables
+05:53
+are used to identify end devices.
+05:57
+Once identified, communications
+05:59
+can flow between the devices.<br>
+06:01
+So an attacker assumes the identity of both endpoints
+06:04
+and inserts themself in the middle of the communication.
+06:08
+Let's see how that works.
+06:09
+First, they poison the ARP cache of end
+06:11
+device B and tell B that he or she is A.
+06:15
+Then they tell A that he or she is B.
+06:18
+Once completed, the original connection between A
+06:20
+and B is replaced with A sending information to M and
+06:25
+M forwarding the information to B, and vice versa.
+06:28
+At this point, M sees all the
+06:30
+communication traffic between A and B.
+06:32
+He or she can log the information or
+06:35
+change it depending on the intent.
+06:37
+Adding dynamic ARP inspection can
+06:40
+help to prevent this type of attack.<br>
+06:42
+To do this, first configure DHCP snooping
+06:45
+on your switch as we just discussed.
+06:47
+Next, you need to enable dynamic ARP inspection, or DAI.
+06:51
+Once DAI is enabled and configured, only
+06:54
+trusted sources can affect the ARP table.
+06:58
+So now the switch drops the ARP packet
+07:00
+when an untrusted source, in this case the
+07:02
+attacker, tries to poison the ARP table.
+07:06
+That's because the sender's MAC address and sender's IP
+07:09
+address don't match an entry in the DHCP snooping database.<br>
+10. Summary
+07:13
+That's it for this lesson.
+07:14
+In this lesson, we discussed several
+07:17
+best practices to ensure switch security.
+07:19
+Next, we talked about how port security can be
+07:21
+used to prevent unauthorized access to a network.
+07:24
+We also discussed how you can use DHCP snooping in
+07:27
+conjunction with dynamic ARP inspection to thwart
+07:30
+rogue DHCP servers.<br>

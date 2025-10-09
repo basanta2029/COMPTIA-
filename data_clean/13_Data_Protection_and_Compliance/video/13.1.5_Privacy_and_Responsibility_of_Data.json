@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "chapter_num": "13",
+    "section_num": "13.1.5",
+    "title": "Privacy and Responsibility of Data",
+    "content_type": "video",
+    "filename": "13.1.5_Privacy_and_Responsibility_of_Data_[video].txt",
+    "file_path": "data_raw/13_Data_Protection_and_Compliance/13.1.5_Privacy_and_Responsibility_of_Data_[video].txt",
+    "word_count": 1482,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script We're going to spend a few minutes reviewing some of the laws that have been enacted to protect the privacy of electronic data. The United States has passed a significant number of laws regarding information security, especially the privacy of electronic data. Prior to the year 2000, there weren't many laws that addressed this particular area of information security. However, due to a rash of break-ins, exploits, and another abuses, many states and the federal government enacted laws to protect the privacy of electronic data. A key thing to remember is that you need to be very familiar with the requirements of the laws that apply to your organization. To protect your organization and to protect yourself, you need to be aware of how these laws apply to your organization. This lesson addresses some of the higher profile data privacy laws, but it doesn't identify all the laws that apply to your organization, nor does it provide minute details of each law that it does cover. This lesson provides only a simple, high-level overview of these laws. You are responsible to research whether these laws apply to your organization, and if so, how. You are also responsible to be aware of other federal, state, and even local laws that effect your organization. Let's begin with the Health Insurance Portability and Accountability Act of 1996 called HIPAA. HIPAA specifies that all organizations having anything to do with healthcare must protect the health information that they maintain. These organizations must implement policies and procedures to protect this information, regardless of the storage medium, such as paper in a filing cabinet or electronic digital format. HIPAA also establishes national standards for transferring electronic healthcare information. The next act you need to be familiar with is the Sarbanes-Oxley Act of 2002. The Sarbanes-Oxley Act of 2002, sometimes referred to as Sarbox, is the result of a flood of corporate fraud in the late 1990s and the early 2000s. Sarbox requires publically traded companies to adhere to very stringent reporting requirements and implement strong controls on electronic financial reporting systems. A key point in Sarbox is that organizations have to keep information for a certain time. This especially relates to email. In fact, Sarbox created an entire industry of email archiving companies so that organizations can comply with its regulations. Next, we need to look at the Gramm-Leach-Bliley Act, which we refer to as GLBA. GLBA is designed to protect private data much like HIPAA does; however, GLBA applies to private information held at financial institutions. There are two main functions of GLBA. First, it requires all banks and any other financial institutions to alert their customers as to that organization's privacy policies. If you've received a little pamphlet from your financial institution that contained that institution's privacy statement, that pamphlet was in response to the Gramm-Leach-Bliley Act. In addition, all personally identifiable financial information (PII) within a financial institution—either electronic or paper formats—has to be protected. Essentially this act specifies that a policy must be in place to protect private information from foreseeable threats and to maintain data integrity. In order to implement this, GLBA requires financial institutions to put in place three main components. The first one is the Financial Privacy Rule. The second one is the Safeguards Rule. And the third one is called Pretexting Protection. Essentially, the Financial Privacy Rule requires all financial institutions to provide each customer with the privacy notice that we talked about earlier. It must be provided at the time the relationship is established. That is, when you go in to open a new banking account. It also has to be provided every year thereafter. The Safeguards Rule requires financial institutions to develop a written information security plan, which describes in detail how the company plans to protect clients' personal information. Finally, Pretexting Protection encourages financial institutions to train their staff how to recognize social engineering exploits, which they call pretexting. The reason is that social engineering exploits use some type of pretext. You should also be familiar with the Patriot Act of 2001. This act enables law enforcement agencies to detect and suppress terrorism by giving law enforcement the authority to request information from organizations. All organizations, public or private, must provide the requested information to the appropriate law enforcement agencies under the authority of a valid court order or a subpoena. The next law you need to be familiar with is the California Database Security Breach Act of 2003. This law specifies that any agency, person, government entity, or company that does business in the state of California must inform California residents within 48 hours if a database breach or other security breach occurs in which personal information has been stolen or is believed to have been stolen. Most other states have similar state laws modeled on the California Database Security Breach Act of 2003, making it a significant act. Therefore, use your favorite search engine to search for similar acts in the states in which you do business. If you do business in those states and your organization has a breach of personal information, then you are under a regulatory compliance requirement to inform anyone who may be affected. Next, let's look at the Children's Online Privacy Protection Act of 1998, which is referred to as COPPA. COPPA requires organizations that provide online services designed for kids below the age of 13—such as websites and gaming sites—to obtain parental consent prior to collecting a child's personal information and using it, such as displaying it on the website, selling it to a marketing company, and so on. In addition, COPPA also specifies that such online services cannot require kids to provide more information than what they determine as reasonable in order to participate. The General Data Protection Regulation, or GDPR, is a data compliance regulation that started in 2018. GDPR provides sweeping changes to the way customer data is treated in the European Union. The regulation not only applies to countries that are part of the EU, but it also applies to any company that has customers that reside in the EU itself. The regulation requires companies to be prepared to tell costumers what data they have, where they got it, who they've given it to, and how it's being used. It also gives customers the right to be forgotten in some cases. Failure to adhere to the regulations can be costly. The last one we'll look at is the California Consumer Privacy Act, or CCPA, was passed in 2020 and was one of the first data privacy acts in the United States. The act applies to California state residents, but companies that do business in the state and meet other benchmarks must also comply. The consumers' rights include the right to know what data is collected and whether their data was sold and to whom. The consumer is also allowed to access their own data and able to deny the sale of it. Under certain circumstances, they're allowed to have data deleted and cannot be discriminated against for doing so. That's it for this video. This is not an all-inclusive list of laws and acts regarding electronic data privacy with which you need to be familiar. GDPR and CCPA are both relatively new, so make sure you research laws that apply to your organization beyond just these two. It's also probably a good idea to use the services of a lawyer who's familiar with this field just to make sure that your organization stays in compliance. Please note again that non-compliance to these laws and regulations can be very costly.",
+  "chunks": [
+    {
+      "chunk_id": "13.1.5_chunk_1",
+      "content": "We're going to spend a few minutes reviewing some of the laws that have been enacted to protect the privacy of electronic data. The United States has passed a significant number of laws regarding information security, especially the privacy of electronic data. Prior to the year 2000, there weren't many laws that addressed this particular area of information security. However, due to a rash of break-ins, exploits, and another abuses, many states and the federal government enacted laws to protect the privacy of electronic data. A key thing to remember is that you need to be very familiar with the requirements of the laws that apply to your organization. To protect your organization and to protect yourself, you need to be aware of how these laws apply to your organization. This lesson addresses some of the higher profile data privacy laws, but it doesn't identify all the laws that apply to your organization, nor does it provide minute details of each law that it does cover. This lesson provides only a simple, high-level overview of these laws. You are responsible to research whether these laws apply to your organization, and if so, how. You are also responsible to be aware of other federal, state, and even local laws that effect your organization.",
+      "summary": "This section of the CompTIA Security+ course emphasizes the importance of understanding data privacy laws enacted in the U.S. to protect electronic information, particularly in response to increasing security breaches prior to 2000. It highlights the necessity for organizations to be aware of and comply with relevant federal, state, and local regulations regarding data privacy, while also encouraging individuals to conduct further research on specific laws applicable to their organization. Overall, the lesson serves as a high-level overview, underscoring the responsibility of professionals to ensure compliance and safeguard data privacy.",
+      "metadata": {
+        "chapter_num": "13",
+        "section_num": "13.1.5",
+        "title": "Privacy and Responsibility of Data",
+        "content_type": "video",
+        "filename": "13.1.5_Privacy_and_Responsibility_of_Data_[video].txt",
+        "file_path": "data_raw/13_Data_Protection_and_Compliance/13.1.5_Privacy_and_Responsibility_of_Data_[video].txt",
+        "word_count": 1482,
+        "has_content": true
+      },
+      "section_header": "Privacy and Responsibility of Data",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "13.1.5_chunk_2",
+      "content": "Let's begin with the Health Insurance Portability and Accountability Act of 1996 called HIPAA. HIPAA specifies that all organizations having anything to do with healthcare must protect the health information that they maintain. These organizations must implement policies and procedures to protect this information, regardless of the storage medium, such as paper in a filing cabinet or electronic digital format. HIPAA also establishes national standards for transferring electronic healthcare information.",
+      "summary": "The Health Insurance Portability and Accountability Act (HIPAA) mandates that all healthcare-related organizations safeguard patient health information, regardless of its format, whether physical or digital. It requires the implementation of specific policies and procedures to ensure the confidentiality and security of this data. Additionally, HIPAA sets national standards for the electronic transfer of healthcare information, promoting secure communication within the industry.",
+      "metadata": {
+        "chapter_num": "13",
+        "section_num": "13.1.5",
+        "title": "Privacy and Responsibility of Data",
+        "content_type": "video",
+        "filename": "13.1.5_Privacy_and_Responsibility_of_Data_[video].txt",
+        "file_path": "data_raw/13_Data_Protection_and_Compliance/13.1.5_Privacy_and_Responsibility_of_Data_[video].txt",
+        "word_count": 1482,
+        "has_content": true
+      },
+      "section_header": "HIPAA",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "13.1.5_chunk_3",
+      "content": "The next act you need to be familiar with is the Sarbanes-Oxley Act of 2002. The Sarbanes-Oxley Act of 2002, sometimes referred to as Sarbox, is the result of a flood of corporate fraud in the late 1990s and the early 2000s. Sarbox requires publically traded companies to adhere to very stringent reporting requirements and implement strong controls on electronic financial reporting systems. A key point in Sarbox is that organizations have to keep information for a certain time. This especially relates to email. In fact, Sarbox created an entire industry of email archiving companies so that organizations can comply with its regulations.",
+      "summary": "The Sarbanes-Oxley Act of 2002, known as Sarbox, was enacted in response to widespread corporate fraud and mandates stringent reporting requirements for publicly traded companies. It emphasizes the need for robust controls over electronic financial reporting systems and mandates the retention of certain information, particularly emails, leading to the emergence of a dedicated email archiving industry to ensure compliance. Understanding Sarbox is crucial for cybersecurity professionals as it highlights the intersection of financial integrity and information security.",
+      "metadata": {
+        "chapter_num": "13",
+        "section_num": "13.1.5",
+        "title": "Privacy and Responsibility of Data",
+        "content_type": "video",
+        "filename": "13.1.5_Privacy_and_Responsibility_of_Data_[video].txt",
+        "file_path": "data_raw/13_Data_Protection_and_Compliance/13.1.5_Privacy_and_Responsibility_of_Data_[video].txt",
+        "word_count": 1482,
+        "has_content": true
+      },
+      "section_header": "Sarbanes-Oxley Act",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "13.1.5_chunk_4",
+      "content": "Next, we need to look at the Gramm-Leach-Bliley Act, which we refer to as GLBA. GLBA is designed to protect private data much like HIPAA does; however, GLBA applies to private information held at financial institutions. There are two main functions of GLBA. First, it requires all banks and any other financial institutions to alert their customers as to that organization's privacy policies. If you've received a little pamphlet from your financial institution that contained that institution's privacy statement, that pamphlet was in response to the Gramm-Leach-Bliley Act. In addition, all personally identifiable financial information (PII) within a financial institution—either electronic or paper formats—has to be protected. Essentially this act specifies that a policy must be in place to protect private information from foreseeable threats and to maintain data integrity. In order to implement this, GLBA requires financial institutions to put in place three main components. The first one is the Financial Privacy Rule. The second one is the Safeguards Rule. And the third one is called Pretexting Protection. Essentially, the Financial Privacy Rule requires all financial institutions to provide each customer with the privacy notice that we talked about earlier. It must be provided at the time the relationship is established. That is, when you go in to open a new banking account. It also has to be provided every year thereafter. The Safeguards Rule requires financial institutions to develop a written information security plan, which describes in detail how the company plans to protect clients' personal information. Finally, Pretexting Protection encourages financial institutions to train their staff how to recognize social engineering exploits, which they call pretexting. The reason is that social engineering exploits use some type of pretext.",
+      "summary": "The Gramm-Leach-Bliley Act (GLBA) mandates that financial institutions protect private customer data and inform clients of their privacy policies. It encompasses three key components: the Financial Privacy Rule, which requires annual privacy notices; the Safeguards Rule, which necessitates a comprehensive information security plan; and Pretexting Protection, aimed at training staff to recognize social engineering threats. Overall, GLBA emphasizes the importance of safeguarding personally identifiable financial information from potential risks.",
+      "metadata": {
+        "chapter_num": "13",
+        "section_num": "13.1.5",
+        "title": "Privacy and Responsibility of Data",
+        "content_type": "video",
+        "filename": "13.1.5_Privacy_and_Responsibility_of_Data_[video].txt",
+        "file_path": "data_raw/13_Data_Protection_and_Compliance/13.1.5_Privacy_and_Responsibility_of_Data_[video].txt",
+        "word_count": 1482,
+        "has_content": true
+      },
+      "section_header": "Gramm-Leach-Bliley Act",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "13.1.5_chunk_5",
+      "content": "You should also be familiar with the Patriot Act of 2001. This act enables law enforcement agencies to detect and suppress terrorism by giving law enforcement the authority to request information from organizations. All organizations, public or private, must provide the requested information to the appropriate law enforcement agencies under the authority of a valid court order or a subpoena.",
+      "summary": "The Patriot Act of 2001 enhances law enforcement's ability to combat terrorism by allowing them to request information from both public and private organizations. Under this act, organizations are required to comply with valid court orders or subpoenas to provide the requested data. Understanding the implications of the Patriot Act is crucial for cybersecurity professionals, as it affects data privacy and compliance practices.",
+      "metadata": {
+        "chapter_num": "13",
+        "section_num": "13.1.5",
+        "title": "Privacy and Responsibility of Data",
+        "content_type": "video",
+        "filename": "13.1.5_Privacy_and_Responsibility_of_Data_[video].txt",
+        "file_path": "data_raw/13_Data_Protection_and_Compliance/13.1.5_Privacy_and_Responsibility_of_Data_[video].txt",
+        "word_count": 1482,
+        "has_content": true
+      },
+      "section_header": "Patriot Act",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "13.1.5_chunk_6",
+      "content": "The next law you need to be familiar with is the California Database Security Breach Act of 2003. This law specifies that any agency, person, government entity, or company that does business in the state of California must inform California residents within 48 hours if a database breach or other security breach occurs in which personal information has been stolen or is believed to have been stolen. Most other states have similar state laws modeled on the California Database Security Breach Act of 2003, making it a significant act. Therefore, use your favorite search engine to search for similar acts in the states in which you do business. If you do business in those states and your organization has a breach of personal information, then you are under a regulatory compliance requirement to inform anyone who may be affected.",
+      "summary": "The California Database Security Breach Act of 2003 mandates that any entity conducting business in California must notify residents within 48 hours of a security breach involving personal information. This law serves as a model for similar regulations in other states, emphasizing the importance of compliance in the event of a data breach. Organizations must be aware of their obligations to inform affected individuals to mitigate legal and reputational risks.",
+      "metadata": {
+        "chapter_num": "13",
+        "section_num": "13.1.5",
+        "title": "Privacy and Responsibility of Data",
+        "content_type": "video",
+        "filename": "13.1.5_Privacy_and_Responsibility_of_Data_[video].txt",
+        "file_path": "data_raw/13_Data_Protection_and_Compliance/13.1.5_Privacy_and_Responsibility_of_Data_[video].txt",
+        "word_count": 1482,
+        "has_content": true
+      },
+      "section_header": "California Database Security Breach Act",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "13.1.5_chunk_7",
+      "content": "Next, let's look at the Children's Online Privacy Protection Act of 1998, which is referred to as COPPA. COPPA requires organizations that provide online services designed for kids below the age of 13—such as websites and gaming sites—to obtain parental consent prior to collecting a child's personal information and using it, such as displaying it on the website, selling it to a marketing company, and so on. In addition, COPPA also specifies that such online services cannot require kids to provide more information than what they determine as reasonable in order to participate.",
+      "summary": "The Children's Online Privacy Protection Act (COPPA) of 1998 mandates that online services targeting children under 13 must obtain parental consent before collecting personal information. It also restricts these services from requesting more information than is necessary for participation. This legislation aims to protect children's privacy and ensure responsible data handling by online platforms.",
+      "metadata": {
+        "chapter_num": "13",
+        "section_num": "13.1.5",
+        "title": "Privacy and Responsibility of Data",
+        "content_type": "video",
+        "filename": "13.1.5_Privacy_and_Responsibility_of_Data_[video].txt",
+        "file_path": "data_raw/13_Data_Protection_and_Compliance/13.1.5_Privacy_and_Responsibility_of_Data_[video].txt",
+        "word_count": 1482,
+        "has_content": true
+      },
+      "section_header": "COPPA",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "13.1.5_chunk_8",
+      "content": "The General Data Protection Regulation, or GDPR, is a data compliance regulation that started in 2018. GDPR provides sweeping changes to the way customer data is treated in the European Union. The regulation not only applies to countries that are part of the EU, but it also applies to any company that has customers that reside in the EU itself. The regulation requires companies to be prepared to tell costumers what data they have, where they got it, who they've given it to, and how it's being used. It also gives customers the right to be forgotten in some cases. Failure to adhere to the regulations can be costly.",
+      "summary": "The General Data Protection Regulation (GDPR) is a comprehensive data compliance law enacted in 2018 that governs the handling of customer data within the European Union and for any companies serving EU residents. It mandates transparency regarding data collection, usage, and sharing, while granting individuals the right to request the deletion of their personal data. Non-compliance can result in significant financial penalties, emphasizing the importance of data protection practices for businesses.",
+      "metadata": {
+        "chapter_num": "13",
+        "section_num": "13.1.5",
+        "title": "Privacy and Responsibility of Data",
+        "content_type": "video",
+        "filename": "13.1.5_Privacy_and_Responsibility_of_Data_[video].txt",
+        "file_path": "data_raw/13_Data_Protection_and_Compliance/13.1.5_Privacy_and_Responsibility_of_Data_[video].txt",
+        "word_count": 1482,
+        "has_content": true
+      },
+      "section_header": "GDPR",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "13.1.5_chunk_9",
+      "content": "The last one we'll look at is the California Consumer Privacy Act, or CCPA, was passed in 2020 and was one of the first data privacy acts in the United States. The act applies to California state residents, but companies that do business in the state and meet other benchmarks must also comply. The consumers' rights include the right to know what data is collected and whether their data was sold and to whom. The consumer is also allowed to access their own data and able to deny the sale of it. Under certain circumstances, they're allowed to have data deleted and cannot be discriminated against for doing so.",
+      "summary": "The California Consumer Privacy Act (CCPA), enacted in 2020, is a landmark data privacy law that grants California residents specific rights regarding their personal information. Key provisions include the right to know what data is collected, the ability to access and delete their data, and the option to opt-out of data sales without facing discrimination. The CCPA applies to businesses operating in California that meet certain criteria, emphasizing the importance of consumer privacy in the digital age.",
+      "metadata": {
+        "chapter_num": "13",
+        "section_num": "13.1.5",
+        "title": "Privacy and Responsibility of Data",
+        "content_type": "video",
+        "filename": "13.1.5_Privacy_and_Responsibility_of_Data_[video].txt",
+        "file_path": "data_raw/13_Data_Protection_and_Compliance/13.1.5_Privacy_and_Responsibility_of_Data_[video].txt",
+        "word_count": 1482,
+        "has_content": true
+      },
+      "section_header": "California Consumer Privacy Act",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "13.1.5_chunk_10",
+      "content": "That's it for this video. This is not an all-inclusive list of laws and acts regarding electronic data privacy with which you need to be familiar. GDPR and CCPA are both relatively new, so make sure you research laws that apply to your organization beyond just these two. It's also probably a good idea to use the services of a lawyer who's familiar with this field just to make sure that your organization stays in compliance. Please note again that non-compliance to these laws and regulations can be very costly.",
+      "summary": "This section emphasizes the importance of understanding various laws and regulations related to electronic data privacy, highlighting GDPR and CCPA as key examples. It advises organizations to conduct thorough research on applicable laws and consider consulting legal experts to ensure compliance, as non-compliance can result in significant financial penalties. Overall, staying informed about data privacy regulations is crucial for effective cybersecurity management.",
+      "metadata": {
+        "chapter_num": "13",
+        "section_num": "13.1.5",
+        "title": "Privacy and Responsibility of Data",
+        "content_type": "video",
+        "filename": "13.1.5_Privacy_and_Responsibility_of_Data_[video].txt",
+        "file_path": "data_raw/13_Data_Protection_and_Compliance/13.1.5_Privacy_and_Responsibility_of_Data_[video].txt",
+        "word_count": 1482,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 10
+}

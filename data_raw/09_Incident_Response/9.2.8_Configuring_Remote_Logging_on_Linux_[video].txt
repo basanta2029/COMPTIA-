@@ -1,0 +1,251 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Configuring Remote Logging
+00:04
+There are many aspects of the syslog daemon that you can
+00:07
+modify to customize how your log files are configured.
+00:11
+You could have warning messages going into
+00:12
+one file, error messages going into
+00:15
+another, or separate them based on program.
+00:18
+But one of the cool things I think the
+00:20
+syslog daemon can do is log to a remote host.
+00:24
+This basically allows us to write our logs not only to
+00:27
+our local system but also to a log host somewhere else.
+00:30
+This is a great benefit for the administrator.
+00:33
+You can set up a log host in your network
+00:35
+somewhere and all the logs from all the
+00:37
+systems you support go into that log host.
+00:40
+If somebody's having a problem, instead of having to
+00:43
+use SSH in their system to look at their log files,
+00:46
+you can have one central location to view them.
+00:49
+This can be very helpful in keeping
+00:51
+history and tracking your log files.
+00:53
+Syslog servers are also very helpful when
+00:55
+there has been an attack on your network.
+00:57
+That's what we're going to do here.
+01:00
+We're going to configure the syslog
+01:02
+daemon to log to a remote host.
+01:05
+I have two different Linux systems running.
+01:07
+I have a RedHat system running here that will
+01:09
+serve as my log host and I have a CentOS system
+01:13
+running here that will serve as my log client.
+01:16
+The log messages from the CentOS system
+01:18
+are going to be saved on our syslog server
+01:21
+which happens to be our Redhat system.
+01:24
+Keep in mind that different Linux
+01:25
+distributions may be slightly different.
+01:28
+But the same concepts apply.
+2. Configure Log Host
+01:30
+Let's configure the log host first.
+01:33
+The first thing we need to do is check
+01:34
+to see if the rsyslog daemon is running.
+01:38
+Type ‘systemctl status rsyslog'.
+01:42
+As you can see everything appear to be in order.
+01:46
+We need to change to our root user account, so I'll
+01:49
+do a 'su- root' command and enter the password.
+01:54
+We're going to edit the configuration file
+01:57
+with the ‘vi /etc/rsyslog.conf' command.
+02:02
+As we scroll down, we're going to uncomment some modules.
+02:06
+These are the imudp module and the imtcp module.
+02:11
+These modules enable the syslog daemon
+02:13
+to listen for incoming syslog messages.
+02:16
+Down at the bottom in the rules area we have a
+02:18
+template we're going to use for our remote logging.
+02:21
+This template isn't here by default so it has to be added.
+02:25
+This allows the remote logs to be placed in
+02:28
+their own folder by host name and program name.
+02:31
+If you don't set up a template, all syslog
+02:33
+messages from remote hosts will go in the
+02:37
+/var/log/messages of the syslog server.
+02:41
+We're going to uncomment this by removing the pound symbols.
+02:45
+Let's save it by typing ‘:wq!'.
+02:49
+For these changes to take effect, we must restart the
+02:53
+rsyslog daemon by typing ‘systemctl restart rsyslog'.
+02:58
+Since there will be incoming traffic, we need to modify
+03:01
+the firewall to accept incoming messages on port 514.
+03:05
+To do so, type ‘firewall-cmd
+03:08
+--permanent --add-port=514/udp'.
+03:15
+When you press Enter you see that it was a success.
+03:19
+Now we do the same thing with the TCP protocol
+03:21
+with "arrow up" and remove UDP for TCP.
+03:25
+The changes won't be active until we reload the
+03:28
+firewall with the ‘firewall-cmd --reload' command.
+03:33
+I'm going to do a netstat to make sure the
+03:36
+syslog daemon is listening on port 514.
+03:38
+Type ‘netstat -tulnp | grep "rsyslo"' and press Enter.
+03:46
+This shows us that rsyslogd has
+03:48
+port 514 open for UPD and TCP.
+3. Configure Log Client
+03:52
+We're going to venture over to our CentOS
+03:54
+client server that's going to be sending
+03:56
+syslog messages to our RedHat server.
+03:59
+First, we check to make sure the rsyslog daemon
+04:02
+is running by typing "systemctl status rsyslog".
+04:06
+We're good to go.
+04:07
+Just like our syslog server, we're going to
+04:10
+modify the configuration file for rsyslog.
+04:12
+Let's type ‘sudo vi /etc/rsyslog.conf'.
+04:19
+Enter the password and press Enter.
+04:22
+We're going to scroll all the way to
+04:24
+the bottom to this configuration file.
+04:27
+Just so that I know what this is, I'm going
+04:29
+to put a comment in there which is "#syslog
+04:32
+server" and type ‘*.* @@192.168.0.55:514'.
+04:42
+The *.* is a wildcard that sends all
+04:45
+syslog messages to the syslog server.
+04:48
+The IP address listed is the IP of the syslog
+04:51
+server and 514 is the port specified to use.
+04:54
+We save this with ‘:wq!' and Enter.
+04:59
+‘sudo systemctl restart rsyslog' allows the rsyslog
+05:04
+daemon to grab the new settings we just edited.
+4. Test Syslog Messages
+05:06
+Now this is the fun part.
+05:08
+We will actually get to see a message go over to
+05:11
+our syslog server from our CentOS client server.
+05:14
+To write a test message, we type ‘logger
+05:17
+this is a test message' and press Enter.
+05:20
+Let's use ‘sudo tail -f /var/log/messages'
+05:26
+to see the message locally.
+05:28
+Now that we see the local message, let's go over to
+05:31
+our syslog server with ‘cd /var/log/centos-server1/'.
+05:39
+I'm going to do a quick ‘ll' to list
+05:41
+what log files have already been written.
+05:44
+Since we did a logger command under the TestOut user,
+05:47
+we're going to tail that log file to look for our
+05:49
+newly created test message with ‘tail -f testout.log'.
+05:56
+As you can see, it's the exact same message
+05:58
+that was on our CentOS client server.
+5. Summary
+06:01
+That's it for this demo.
+06:03
+In this demonstration, we talked about how to
+06:05
+configure a log host with Linux on a network.
+06:08
+We first looked at the steps you need to complete in order
+06:11
+to configure the system that's going to function as the log
+06:14
+host to receive logging messages from another system.
+06:17
+Then we looked at the log client and configured it
+06:20
+to send its log messages not only to its own log
+06:23
+files, but also to send a copy to our log host.

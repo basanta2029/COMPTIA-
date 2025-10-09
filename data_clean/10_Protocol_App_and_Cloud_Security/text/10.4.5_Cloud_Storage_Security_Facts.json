@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "chapter_num": "10",
+    "section_num": "10.4.5",
+    "title": "Cloud Storage Security Facts",
+    "content_type": "text",
+    "filename": "10.4.5_Cloud_Storage_Security_Facts_[text].txt",
+    "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.4.5_Cloud_Storage_Security_Facts_[text].txt",
+    "word_count": 477,
+    "has_content": true
+  },
+  "full_content": "Security Pro 8.0 This lesson covers the following topics: Cloud storage Advantages of cloud storage Cloud Storage Cloud storage is a data storage model. It is usually provided by a third party as a service. Some of the most widely used cloud storage for enterprise providers are Google Cloud, Amazon Web Services, and Microsoft Azure. Many companies take advantage of cloud services to decrease costs and meet ever-increasing storage needs. Cloud storage services may be accessed through a co-located cloud computer service, a web service application programming interface (API), or applications that utilize the API. Cloud desktop storage that uses a cloud storage gateway or web-based content management system is an example of an application that uses the API. A cloud access security broker (CASB) may act as a gatekeeper, extending an organization's security policies into the cloud storage infrastructure. A CASB focuses on the visibility of the company data, regulation compliance, user access to prevent threats, and data security through encryption and loss prevention. Made up of many distributed resources but still acts as one in a federated or cooperative storage cloud architecture. Highly fault tolerant through redundancy and distribution of data. Highly durable through the creation of versioned copies. Cloud Storage is a virtual service; the infrastructure is the responsibility of the storage provider. Access controls should be set in the same way as a local file system would be set. There is no need for the provider to have access to the stored data. Measures for securing cloud storage include: Implement security controls in the same way as in a physical datacenter. Use data classification policies. Assign information into categories that determine storage, handling, and access requirements. Assign security classification based on information sensitivity and criticality. Use specialized tools to dispose of data securely when it is no longer needed. Advantages of Cloud Storage Companies pay only for the storage used. This does not necessarily mean that cloud storage is less expensive, but it incurs only operating expenses. Cloud storage can cut energy consumption by up to 70%, making an organization more green. Organizations can choose between off-premises and on-premises cloud storage options or a mixture of the two options. Storage availability and data protection are intrinsic to object storage architecture. Depending on the application, you can eliminate the costs, effort, and additional technology to add availability and protection. Storage maintenance tasks, such as purchasing additional storage capacity, are the responsibility of the service provider. Cloud storage can be used to copy virtual machine images from the cloud to on-premises locations or import a virtual machine image from an on-premises location to the cloud image library. Cloud storage can be used as natural disaster backup since cloud storage providers' backup servers are typically located in different places around the globe.",
+  "chunks": [
+    {
+      "chunk_id": "10.4.5_chunk_1",
+      "content": "Security Pro 8.0",
+      "summary": "The CompTIA Security+ course, specifically Security Pro 8.0, introduces foundational cybersecurity concepts, emphasizing the importance of protecting networks and data from threats. Key topics include risk management, cryptography, identity and access management, and incident response, providing learners with practical skills to implement security measures effectively. The course prepares individuals for real-world security challenges and enhances their ability to safeguard organizational assets.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.4.5",
+        "title": "Cloud Storage Security Facts",
+        "content_type": "text",
+        "filename": "10.4.5_Cloud_Storage_Security_Facts_[text].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.4.5_Cloud_Storage_Security_Facts_[text].txt",
+        "word_count": 477,
+        "has_content": true
+      },
+      "section_header": "Introduction",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "10.4.5_chunk_2",
+      "content": "This lesson covers the following topics: Cloud storage Advantages of cloud storage Cloud Storage Cloud storage is a data storage model. It is usually provided by a third party as a service. Some of the most widely used cloud storage for enterprise providers are Google Cloud, Amazon Web Services, and Microsoft Azure. Many companies take advantage of cloud services to decrease costs and meet ever-increasing storage needs. Cloud storage services may be accessed through a co-located cloud computer service, a web service application programming interface (API), or applications that utilize the API. Cloud desktop storage that uses a cloud storage gateway or web-based content management system is an example of an application that uses the API. A cloud access security broker (CASB) may act as a gatekeeper, extending an organization's security policies into the cloud storage infrastructure. A CASB focuses on the visibility of the company data, regulation compliance, user access to prevent threats, and data security through encryption and loss prevention.",
+      "summary": "This lesson explores cloud storage as a third-party data storage model, highlighting its advantages for enterprises, such as cost reduction and scalability. Key providers include Google Cloud, Amazon Web Services, and Microsoft Azure, with access facilitated through APIs and applications. The role of a Cloud Access Security Broker (CASB) is emphasized, as it enhances security by enforcing organizational policies, ensuring compliance, and protecting data through encryption and loss prevention strategies.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.4.5",
+        "title": "Cloud Storage Security Facts",
+        "content_type": "text",
+        "filename": "10.4.5_Cloud_Storage_Security_Facts_[text].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.4.5_Cloud_Storage_Security_Facts_[text].txt",
+        "word_count": 477,
+        "has_content": true
+      },
+      "section_header": "10.4.5 Cloud Storage Security Facts",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "10.4.5_chunk_3",
+      "content": "Made up of many distributed resources but still acts as one in a federated or cooperative storage cloud architecture. Highly fault tolerant through redundancy and distribution of data. Highly durable through the creation of versioned copies. Cloud Storage is a virtual service; the infrastructure is the responsibility of the storage provider. Access controls should be set in the same way as a local file system would be set. There is no need for the provider to have access to the stored data. Measures for securing cloud storage include: Implement security controls in the same way as in a physical datacenter. Use data classification policies. Assign information into categories that determine storage, handling, and access requirements. Assign security classification based on information sensitivity and criticality. Use specialized tools to dispose of data securely when it is no longer needed. Advantages of Cloud Storage",
+      "summary": "Cloud storage utilizes a federated architecture, combining distributed resources to ensure high fault tolerance and durability through redundancy and versioning. Security measures should mirror those of physical data centers, including access controls, data classification policies, and secure data disposal practices. This approach allows organizations to effectively manage sensitive information while leveraging the benefits of virtual storage services without compromising data privacy.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.4.5",
+        "title": "Cloud Storage Security Facts",
+        "content_type": "text",
+        "filename": "10.4.5_Cloud_Storage_Security_Facts_[text].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.4.5_Cloud_Storage_Security_Facts_[text].txt",
+        "word_count": 477,
+        "has_content": true
+      },
+      "section_header": "Cloud storage is:",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "10.4.5_chunk_4",
+      "content": "Companies pay only for the storage used. This does not necessarily mean that cloud storage is less expensive, but it incurs only operating expenses. Cloud storage can cut energy consumption by up to 70%, making an organization more green. Organizations can choose between off-premises and on-premises cloud storage options or a mixture of the two options. Storage availability and data protection are intrinsic to object storage architecture. Depending on the application, you can eliminate the costs, effort, and additional technology to add availability and protection. Storage maintenance tasks, such as purchasing additional storage capacity, are the responsibility of the service provider. Cloud storage can be used to copy virtual machine images from the cloud to on-premises locations or import a virtual machine image from an on-premises location to the cloud image library. Cloud storage can be used as natural disaster backup since cloud storage providers' backup servers are typically located in different places around the globe.",
+      "summary": "Cloud storage offers organizations cost-effective solutions by charging only for the storage used, which can lead to significant energy savings and reduced operational expenses. It provides flexibility with off-premises, on-premises, or hybrid storage options, while ensuring data protection and availability through its architecture. Additionally, cloud storage serves as a reliable backup solution for disaster recovery, leveraging geographically dispersed servers for enhanced data security.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.4.5",
+        "title": "Cloud Storage Security Facts",
+        "content_type": "text",
+        "filename": "10.4.5_Cloud_Storage_Security_Facts_[text].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.4.5_Cloud_Storage_Security_Facts_[text].txt",
+        "word_count": 477,
+        "has_content": true
+      },
+      "section_header": "The advantages of Cloud Storage are:",
+      "timestamp_range": null
+    }
+  ],
+  "num_chunks": 4
+}

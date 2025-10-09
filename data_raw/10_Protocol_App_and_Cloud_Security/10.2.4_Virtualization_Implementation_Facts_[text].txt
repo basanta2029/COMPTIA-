@@ -1,0 +1,46 @@
+Security Pro 8.0
+
+10.2.4 Virtualization Implementation Facts
+
+This lesson covers the following topics:
+
+Virtual networking
+Networking virtualization providers
+Virtual Networking
+
+A virtual network is made up of one or more virtual machines configured to access local or external network resources. Important facts about virtual networks include the following:
+
+Virtual machines support an unlimited number of virtual networks. Also, be aware that an unlimited number of virtual machines can be connected to a virtual network.
+Multiple virtual networks can be associated with a single physical network adapter.
+When a virtual network is created, its configuration is dependent on the configuration and physical hardware (such as the type and number of network adapters) of the host operating system.
+The physical devices are partitioned into one or more virtual devices, depending on the network necessity and the device's capability.
+When setting up a new virtual device, the system administrator will define how much of the physical device capability each partition will have. This means that one physical server could act as two or three virtual machines that work separately from one another and have their own specifications.
+The available resources in a network are split up so the available bandwidth is turned into channels. Each channel can be assigned to a particular server or device in real-time. Each channel is independently secured.
+A virtual network includes a virtual Dynamic Host Configuration Protocol (DHCP) server that can provide IP address leases only to virtual machines. Even though the DHCP server is isolated, it assigns unique IP addresses from the range specified.
+Accessing a network and network resources requires that the operating system on the virtual machine be configured as a part of the network.
+Internal network virtualization configures a single system with software containers, or pseudo-interfaces, to emulate a physical network with software. This can improve a single system's efficiency by isolating applications to separate containers or pseudo-interfaces.
+External network virtualization combines one or more LANs into virtual networks to improve a large network's efficiency. Using this technology, systems physically attached to the same local network can be configured to be separate virtual networks. Systems from separate LANs can also be combined into a single VLAN that spans segments of a large network.
+Network virtualization should allow a virtual network, including all of its IP addresses, routes, network appliances, and so on, to appear to be running directly on the physical network. This allows the servers connected to that virtual network to continue to operate as if they were running directly on the physical network, even though multiple virtual networks share the physical network.
+Network Virtualization Providers
+
+Some of the main network virtualization service providers are:
+
+Provider
+Description
+VMware	
+Be aware of the following regarding VMware solutions.
+
+VMware introduced the first x86 server virtualization products in 2001, making it a virtualization pioneer.
+VMware desktop software runs on Microsoft Windows, Linux, and macOS. In contrast, its enterprise software hypervisor for servers, VMware ESXi, is a bare-metal hypervisor that runs directly on server hardware without requiring an additional underlying operating system.
+ESXi is primarily used for data center virtualization.
+Microsoft	
+Microsoft solutions include:
+
+Hyper-V Network Virtualization that provides virtual networks to virtual machines. This is similar to how server virtualization (hypervisor) provides virtual machines to the operating system. Hyper-V Network Virtualization has high scalability, with a capacity for over 1,000 virtual machines per host.
+Microsoft Azure that provides network virtualization in the cloud.
+Citrix	
+Citrix virtualization solutions:
+
+Provide a virtualization solution called XenServer, also referred to as Citrix Hypervisor.
+Support the widest range of graphics applications.
+Support Intel GVT-g GPU virtualization, a CPU-embedded GPU requiring no additional hardware.

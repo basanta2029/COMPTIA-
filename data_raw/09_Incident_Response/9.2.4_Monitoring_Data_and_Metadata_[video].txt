@@ -1,0 +1,266 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Monitoring Data and Metadata
+00:04
+In this lesson, we'll cover the use of
+00:06
+bandwidth monitors and metadata from emails,
+00:09
+mobile devices, web traffic, and files.
+00:12
+We'll also talk about using netflow/sflow echo and Ipfix.
+00:18
+Let's get started.
+2. Bandwidth Monitors
+00:20
+Bandwidth monitors are a type of application that
+00:22
+help network admins understand bandwidth usage.
+00:26
+The first order of business with these
+00:27
+applications is to establish a baseline.
+00:31
+The longer a monitor runs, the more data points are created.
+00:34
+When a substantial number of data points are
+00:36
+created, a normal usage becomes apparent.
+00:40
+Normal bandwidth usage is relative and varies by hours in
+00:43
+the day, days of the week, and even weeks within the year.
+00:47
+A baseline provides something concrete to compare
+00:50
+against current usage or even suspect bandwidth usage.
+00:54
+There are many bandwidth monitoring applications available.
+00:57
+There are cloud-based apps, on-premise
+01:00
+apps, open source, and paid.
+01:03
+Each one looks and functions differently,
+01:05
+but each has the same goal, which is to
+01:07
+allow easy access to bandwidth monitoring.
+01:10
+The key is to learn how to establish a
+01:12
+monitoring schedule and how to use the dashboard.
+01:16
+Here, we have some screenshots of
+01:18
+different pages within a dashboard.
+01:20
+As you can see, this graphic is showing bandwidth usage
+01:24
+be the hour and below usage per day aggregated over time.
+01:28
+This is the baseline that suspect usage is compared against.
+01:33
+The second graphic shows the last hour's usage
+01:36
+and the usage for a user-specified time frame.
+01:39
+This allows for deeper examination
+01:41
+of suspect bandwidth usage.
+3. Email Metadata
+01:44
+Email is a great tool that almost
+01:46
+everyone uses to communicate.
+01:48
+It's also the avenue for the majority
+01:50
+of malicious network breaches.
+01:52
+Fortunately, email provides metadata so it can be traced.
+01:56
+All emails come with a header that contains
+01:59
+information about both the sender and recipient.
+02:02
+Parts of the headers can be spoofed to
+02:04
+give investigators false information.
+02:06
+The good news is that there are security devices
+02:09
+that put X-headers throughout an emails' headers.
+02:12
+These provide the originating email account
+02:15
+and IP address, not the spoofed one.
+4. Mobile Metadata
+02:18
+Communications sent via mobile devices are common today.
+02:22
+They come from tablets, laptops, smart
+02:24
+phones, smart watches, and any other portable
+02:27
+device that connects to the internet.
+02:29
+These devices send emails and text messages
+02:32
+and use apps to allow data and photo sharing.
+02:35
+All this data produces metadata that can be used to
+02:38
+identify people, places, times, and even deleted data.
+02:43
+Pictures can be time stamped and geolocation stamped.
+02:47
+Much of this metadata also reveals the
+02:49
+origination of the data and the sender.
+5. Web Metadata
+02:52
+Websites produce many types of metadata.
+02:55
+In fact, the metadata on a user's machine
+02:57
+versus the server can be very different.
+03:00
+The data on the opposite side of the
+03:02
+transmission can help fill in gaps and
+03:04
+corroborate findings on the opposing machine.
+03:08
+Metadata includes IP addresses, user requests,
+03:11
+user downloads, time spent on the site, and
+03:14
+even attempts to gain unauthorized access.
+03:18
+Web metadata also includes cookies,
+03:20
+browser history, and even cached pages.
+03:23
+Many times, malicious actors will
+03:25
+attempt to obfuscate their real metadata.
+03:28
+But the good news is that there are ways of finding the real
+03:31
+metadata, especially for trained forensic investigators.
+6. File Metadata
+03:35
+Files produce many types of metadata.
+03:37
+The first kind is File Creation (date/time).
+03:42
+The File Creation data is the first time the file
+03:44
+was written to the storage media it's currently on.
+03:47
+This means that the file can be created in a different
+03:50
+place and then moved or copied to a new location.
+03:54
+Last written refers to the last time
+03:56
+a file was saved for any reason.
+03:58
+It could prove that the file was copied from a
+04:00
+different location or that the file was altered.
+04:03
+Last access is any time a file is touched.
+04:06
+When combined with file creation metadata on a
+04:09
+user's machine, it can establish the probability that
+04:12
+the file was copied from one machine to another.
+04:14
+It also introduces the idea that a third
+04:17
+device is involved in data copy process.
+04:20
+Once the third device is found, it
+04:22
+makes obtaining answers much easier.
+7. Netflow/sFlow
+04:25
+Network admins are always looking for a way to
+04:28
+look at what's happening inside their network.
+04:31
+Netflow is a session sampling protocol.
+04:33
+This protocol works at Layers 2 through 4.
+04:36
+It can exam each data flow that comes through or
+04:39
+be set to sample sessions at certain intervals.
+04:43
+If you want to sample packets in a broader
+04:45
+layer range, then sFlow is your answer.
+04:48
+This protocol works on Layers 2 through 7.
+04:50
+Unlike Netflow, sFlow examines packets
+04:54
+and can only be used in sampling mode.
+04:57
+This is stateless packet sampling
+04:59
+that provides information efficiently.
+8. Ipfix
+05:01
+IPFIX integrates data that normally goes to Syslog or SNMP
+05:06
+information directly in the IPFIX packet, eliminating thee
+05:11
+additional services collecting data from each network device.
+05:14
+IPFIX has provisions for fields that are
+05:17
+variable-length, meaning no ID number restrictions.
+05:21
+It came about because of the need for a
+05:23
+standardized protocol for internal protocol flows.
+05:26
+This data comes from routers, servers, and other
+05:29
+network appliances that are mediation systems.
+05:32
+The data is formatted and sent to an
+05:35
+exporter and then on to a collector.
+05:37
+IPFIX, like NetFlow, looks at flow and the number of
+05:41
+packets being sent and received during a given session.
+9. Summary
+05:44
+That's it for this lesson.
+05:46
+In this lesson, we talked about the
+05:48
+different ways metadata is produced.
+05:50
+We covered some of the pitfalls of metadata
+05:52
+as well as some of the ways to overcome them.
+05:55
+And we discussed creating a baseline
+05:57
+using network bandwidth monitors.
+06:00
+These monitors can alert us to
+06:01
+abnormal activity on our network.

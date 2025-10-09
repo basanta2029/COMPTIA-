@@ -1,0 +1,202 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Mobile Device Management
+00:04
+Today, mobile devices are used in
+00:06
+more workplaces than ever before.
+00:08
+They create all kinds of new
+00:10
+possibilities—and all kinds of new problems.
+00:14
+So managing mobile devices is a
+00:16
+major focus for most organizations.
+00:19
+Most employees bring a personal mobile device to
+00:21
+work, usually a cell phone, tablet, or laptop.
+00:25
+When these personal electronics are used for
+00:26
+business activity, they're called BYOD devices,
+00:30
+which stands for bring your own device.
+00:33
+Before mobile devices were common, every device
+00:36
+that connected to a network was stationary, such
+00:38
+as a desktop or printer, so you could add it to a
+00:41
+domain and manage it with Group Policy settings.
+00:45
+But it's not that simple anymore.
+00:47
+Organizations need to manage mobile devices
+00:49
+and enforce policies to secure their data.
+00:52
+If an employee copies sensitive data to a device,
+00:55
+the organization needs to be sure that the data will
+00:57
+be kept safe outside the organizational network.
+01:01
+This is where Mobile Device Management policies come in.
+01:05
+We're going to cover the four main types of mobile
+01:07
+device management: Mobile Device Management, Mobile
+01:11
+Application Management, Enterprise Mobility
+01:13
+Management, and Unified Endpoint Management.
+2. Mobile Device Management
+01:17
+Let's start with Mobile Device Management, or MDM.
+01:20
+MDM allows IT administrators to remotely manage a mobile
+01:25
+device, even if it's a personally owned device used for work.
+01:28
+MDM lets you track the device, push apps and updates,
+01:32
+manage security, and even remotely wipe the device.
+01:36
+This solution works well for company-owned devices,
+01:39
+but the release of the iPhone in 2007 caused a huge
+01:42
+increase in the number personal devices brought to work
+01:45
+and used for work-related purposes, such as email.
+01:49
+Employees didn't want their employers to have
+01:51
+too much control over their personal devices.
+01:54
+This is when Mobile Application
+01:55
+Management solutions were created.
+3. Mobile Application Management
+01:58
+Mobile Application Management, or MAM,
+02:00
+solutions focus on managing the applications
+02:03
+on a mobile device, not the device itself.
+02:07
+Applications that the organization has developed
+02:09
+or any application that the organization provides
+02:12
+licenses for falls under MAM policies.
+02:16
+The organization can put limitations on these
+02:18
+apps, such as disabling copy and paste functions.
+02:22
+IT administration can uninstall the app and the data
+02:25
+related to it in case the device is lost or stolen.
+02:30
+As more devices were release and their use
+02:32
+spread, MDM and MAM solutions evolved to keep up
+02:36
+with changing demands and eventually merged into
+02:39
+a solution called Enterprise Mobility Management.
+4. Enterprise Mobility Management
+02:42
+One of the main drawbacks of MDM and MAM
+02:45
+solutions is that there are so many different
+02:47
+types of devices and operating systems.
+02:50
+Each device type requires separate
+02:52
+management tools and systems.
+02:54
+Enterprise Mobility Management, or
+02:56
+EMM, solutions solve this problem.
+03:00
+EMM is a combination of MDM and MAM
+03:02
+methods into one package solution.
+03:05
+EMM is hardware-agnostic and can remotely manage
+03:09
+a mobile device's hardware and applications.
+5. Intune
+03:12
+One of the more popular solutions for Enterprise
+03:14
+Mobility Management is Microsoft's Intune.
+03:17
+Intune is a part of the Microsoft Enterprise
+03:21
+Mobility and Security Suite that's accessed
+03:24
+through an organization's Azure portal.
+03:26
+Intune allows IT administrators to manage mobile
+03:30
+devices and apps, control access to data, and
+03:33
+ensure that devices comply with security policies.
+03:37
+Microsoft Intune is included with any
+03:39
+Enterprise agreement of at least 500 users,
+03:42
+and it supports all mobile device types.
+03:45
+I probably don't have to tell you that integrating
+03:47
+device security with Azure's Active Directory make
+03:50
+managing mobile devices much, much simpler.
+6. Unified Endpoint Management
+03:53
+Of course, IT administrators need to worry
+03:56
+about managing everything else that's on their
+03:58
+network, too: desktop computers, printers,
+04:01
+Internet of Things devices, and wearables.
+04:04
+This need was met by the creation of another
+04:07
+solution called Unified Endpoint Management, or UEM.
+04:10
+UEM tools provide a single point of
+04:14
+management for all network devices.
+04:16
+Essentially, they are a marriage of traditional device
+04:19
+management and Enterprise Mobile Device Management solutions.
+7. Summary
+04:23
+All right, that's all for this video.
+04:25
+In this lesson, we looked at mobile device
+04:27
+management solutions, including Mobile Device
+04:30
+Management, Mobile Application Management, Enterprise
+04:33
+Mobility Management, and Unified Endpoint Management.
+04:37
+We also talked about Microsoft's EMM solution, Intune.

@@ -1,0 +1,237 @@
+{
+  "metadata": {
+    "chapter_num": "9",
+    "section_num": "9.3.2",
+    "title": "Forensic Acquisition of Data",
+    "content_type": "video",
+    "filename": "9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+    "file_path": "data_raw/09_Incident_Response/9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+    "word_count": 1101,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script A forensic investigator gathers evidence from many sources. In this lesson, we will discuss software and hardware sources of potential evidence. We will also discuss the order in which the evidence needs to be gathered. The process of capturing volatile data follows the order of volatility. We need to preserve the most volatile data first and work our way down to data that is more persistent. If an attack is underway, your computer forensics response team is probably going to capture volatile data before trying to gather data from the hard disk or turning the system off. The order of volatility is: RAM, Swap Files/PageFiles, Hard Drive, Remote Logs, Archived Data. These items must be investigated in this order so that potential evidence is not lost. Each one of these items has its own challenges and potential dangers when acquiring forensic data. Let's look at tools and approaches to acquire and retain data from these items. In a computer forensics investigation, the data on the hard disk drive is a key piece of evidence. A lot of the things that we do on a computer system are saved in some way on the hard disk drive, including virtual memory. A wealth of data is there. In addition, information attached to deleted files may still be on the disk. Therefore, the hard drive itself is a goldmine of evidence for a prosecutor. Caution must be exercised when making a copy of the hard drive. A regular file-for-file copy is not good enough. It needs to be a sector-by-sector copy that includes data formerly deleted but still accessible. RAM is the most volatile of all computer data storage. RAM is cleared when a computer is shutdown. Once gone, it cannot be recovered. Data in RAM can be copied as long as the system is running, but should be done only by someone with proper training. The data stored in RAM can have valuable information. Many times malware like worms, viruses and trojan horses are created as memory-resident only. This makes catching them difficult. Swap files, or page files, are a virtual extension of RAM. An OS is designed so that if you are running low on RAM it can place not-in-use information into the swap or page file on the hard drive to be used later. An admin can determine how much space to allocate to page files. For the forensic investigator, this is another potential source of evidence. The page file data does not automatically delete at shutdown unless you change the default settings. The OS is a virtual treasure trove of evidence. File systems like NTFS and Ext4 are the roadmap to where data is stored. There is also a registry which is a database that stores information about all the applications installed on a computer. Registry keys are folder-like objects that store application-specific information for each application stored in the registry. The recycle bin is where deleted files are placed. Also the print spooler can be examined to see the print history from a computer. In the last 30 years technology devices have changed dramatically. With the increase of digital devices there is an equal increase in devices that may require forensic examination. These devices contain all the evidence a forensic investigator needs. Each device, such as smart phone, tablet, laptop and smart watch all share common elements, namely RAM, CPU, logs and storage space. A trained investigator must be familiar with all platforms. Firmware is the basic level of software that controls some hardware. Firmware is stored in read-only, persistent memory. This non-volatile memory does not self-delete and in many cases is not updated. Firmware has become vulnerable to different attacks like rootkits and even steganography. The hard drive has firmware that can be manipulated by malicious actors. Extracting this data is difficult and requires specialized training and expensive tools. A snapshot can be a useful tool in capturing the exact state of running systems. Snapshots capture volatile data in an ever-changing environment. This tool is not a substitute for the sector-by-sector copy of a disk. The snapshots can be saved for future examination. Snapshots are valuable only if taken of a running system that is currently experiencing an attack. A cache is stored data that is used to improve the speed of the computing process. There are different caches in a computer system. Address resolution protocol, or ARP, matches IP with MAC addresses. This protocol has a built-in caching component that saves CPU time and network bandwidth by referring to the cache. Internet browser history is also cached and can provide valuable evidence regarding search history. Network forensic data plays an important role in an investigation. Network appliances that are important in an investigation are firewall, router, switches, domain controllers, DHCP servers, application servers and web proxy servers. There are also applications on the network including intrusion detection and intrusion protection systems. In computer forensics an artifact is an object that contains forensic value. Forensic value is evidence found on hardware or in areas like registry hives that show indicators of compromise. These indicators are a digital sign of a breach. It is important to preserve these artifacts and understand their value to a forensic investigation. That's it for this lesson. In this lesson, we learned the procedure used to prioritize evidence gathering called the order of volatility. We discussed different areas within a network that contain potential evidence such as cache, network appliance, OS, disks and RAM. We also covered artifacts and how they are defined and identified.",
+  "chunks": [
+    {
+      "chunk_id": "9.3.2_chunk_1",
+      "content": "A forensic investigator gathers evidence from many sources. In this lesson, we will discuss software and hardware sources of potential evidence. We will also discuss the order in which the evidence needs to be gathered.",
+      "summary": "In the Forensic Acquisition of Data section, learners explore the various software and hardware sources that can provide critical evidence in cybersecurity investigations. The lesson emphasizes the importance of following a systematic order for evidence collection to ensure its integrity and admissibility in legal contexts. Practical applications include understanding the tools and techniques used in forensic data acquisition.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.2",
+        "title": "Forensic Acquisition of Data",
+        "content_type": "video",
+        "filename": "9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "word_count": 1101,
+        "has_content": true
+      },
+      "section_header": "Forensic Acquisition of Data",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.2_chunk_2",
+      "content": "The process of capturing volatile data follows the order of volatility. We need to preserve the most volatile data first and work our way down to data that is more persistent. If an attack is underway, your computer forensics response team is probably going to capture volatile data before trying to gather data from the hard disk or turning the system off. The order of volatility is: RAM, Swap Files/PageFiles, Hard Drive, Remote Logs, Archived Data. These items must be investigated in this order so that potential evidence is not lost. Each one of these items has its own challenges and potential dangers when acquiring forensic data. Let's look at tools and approaches to acquire and retain data from these items.",
+      "summary": "The Order of Volatility is a critical principle in digital forensics that dictates the sequence in which data should be captured during an incident response, prioritizing the most ephemeral data first, such as RAM and swap files, before moving to more persistent data like hard drives and archived logs. This approach is essential to preserve potential evidence, as volatile data can be lost quickly during an attack. Understanding the challenges and appropriate tools for acquiring each type of data is vital for effective forensic investigations.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.2",
+        "title": "Forensic Acquisition of Data",
+        "content_type": "video",
+        "filename": "9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "word_count": 1101,
+        "has_content": true
+      },
+      "section_header": "Order of Volatility",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.2_chunk_3",
+      "content": "In a computer forensics investigation, the data on the hard disk drive is a key piece of evidence. A lot of the things that we do on a computer system are saved in some way on the hard disk drive, including virtual memory. A wealth of data is there. In addition, information attached to deleted files may still be on the disk. Therefore, the hard drive itself is a goldmine of evidence for a prosecutor. Caution must be exercised when making a copy of the hard drive. A regular file-for-file copy is not good enough. It needs to be a sector-by-sector copy that includes data formerly deleted but still accessible.",
+      "summary": "In computer forensics, hard disk drives are critical sources of evidence, containing not only current data but also remnants of deleted files. To preserve this information accurately, a sector-by-sector copy of the hard drive is essential, as standard file-for-file copies fail to capture all relevant data. This meticulous approach ensures that investigators can access a comprehensive range of evidence for legal proceedings.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.2",
+        "title": "Forensic Acquisition of Data",
+        "content_type": "video",
+        "filename": "9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "word_count": 1101,
+        "has_content": true
+      },
+      "section_header": "Disk",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.2_chunk_4",
+      "content": "RAM is the most volatile of all computer data storage. RAM is cleared when a computer is shutdown. Once gone, it cannot be recovered. Data in RAM can be copied as long as the system is running, but should be done only by someone with proper training. The data stored in RAM can have valuable information. Many times malware like worms, viruses and trojan horses are created as memory-resident only. This makes catching them difficult.",
+      "summary": "Random Access Memory (RAM) is a volatile storage medium that loses its data when a computer is powered down, making recovery impossible. While RAM can contain valuable information and is susceptible to malware such as worms and viruses that operate in memory, accessing this data requires specialized training. Understanding the characteristics and risks associated with RAM is crucial for effective cybersecurity practices.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.2",
+        "title": "Forensic Acquisition of Data",
+        "content_type": "video",
+        "filename": "9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "word_count": 1101,
+        "has_content": true
+      },
+      "section_header": "Random Access Memory",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.2_chunk_5",
+      "content": "Swap files, or page files, are a virtual extension of RAM. An OS is designed so that if you are running low on RAM it can place not-in-use information into the swap or page file on the hard drive to be used later. An admin can determine how much space to allocate to page files. For the forensic investigator, this is another potential source of evidence. The page file data does not automatically delete at shutdown unless you change the default settings.",
+      "summary": "Swap files, or page files, serve as a virtual extension of RAM, allowing an operating system to store inactive data on the hard drive when RAM is low. System administrators can allocate space for these files, which can be valuable for forensic investigators as they may contain residual data that isn't erased upon shutdown unless settings are adjusted. Understanding page files is crucial for both optimizing system performance and conducting digital forensics.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.2",
+        "title": "Forensic Acquisition of Data",
+        "content_type": "video",
+        "filename": "9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "word_count": 1101,
+        "has_content": true
+      },
+      "section_header": "Swap/Page File",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.2_chunk_6",
+      "content": "The OS is a virtual treasure trove of evidence. File systems like NTFS and Ext4 are the roadmap to where data is stored. There is also a registry which is a database that stores information about all the applications installed on a computer. Registry keys are folder-like objects that store application-specific information for each application stored in the registry. The recycle bin is where deleted files are placed. Also the print spooler can be examined to see the print history from a computer.",
+      "summary": "The operating system (OS) serves as a critical source of digital evidence, with file systems such as NTFS and Ext4 indicating data storage locations. Key components include the registry, which maintains application information through registry keys, and the recycle bin, which temporarily holds deleted files. Additionally, analyzing the print spooler can reveal a history of print jobs, providing further insights into user activity.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.2",
+        "title": "Forensic Acquisition of Data",
+        "content_type": "video",
+        "filename": "9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "word_count": 1101,
+        "has_content": true
+      },
+      "section_header": "OS",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.2_chunk_7",
+      "content": "In the last 30 years technology devices have changed dramatically. With the increase of digital devices there is an equal increase in devices that may require forensic examination. These devices contain all the evidence a forensic investigator needs. Each device, such as smart phone, tablet, laptop and smart watch all share common elements, namely RAM, CPU, logs and storage space. A trained investigator must be familiar with all platforms.",
+      "summary": "The CompTIA Security+ course emphasizes the evolution of technology devices over the past 30 years, highlighting the need for forensic examination of various digital devices, including smartphones, tablets, laptops, and smartwatches. Each device contains critical components such as RAM, CPU, logs, and storage, which are essential for forensic investigations. A thorough understanding of these platforms is crucial for investigators to effectively gather and analyze evidence.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.2",
+        "title": "Forensic Acquisition of Data",
+        "content_type": "video",
+        "filename": "9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "word_count": 1101,
+        "has_content": true
+      },
+      "section_header": "Device",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.2_chunk_8",
+      "content": "Firmware is the basic level of software that controls some hardware. Firmware is stored in read-only, persistent memory. This non-volatile memory does not self-delete and in many cases is not updated. Firmware has become vulnerable to different attacks like rootkits and even steganography. The hard drive has firmware that can be manipulated by malicious actors. Extracting this data is difficult and requires specialized training and expensive tools.",
+      "summary": "Firmware is essential software that operates hardware and is typically stored in non-volatile memory, making it resistant to deletion and often unupdated. However, it is increasingly targeted by cyber threats such as rootkits and steganography, which can compromise devices like hard drives. Protecting firmware requires specialized knowledge and tools, highlighting the importance of securing this foundational layer of technology in cybersecurity practices.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.2",
+        "title": "Forensic Acquisition of Data",
+        "content_type": "video",
+        "filename": "9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "word_count": 1101,
+        "has_content": true
+      },
+      "section_header": "Firmware",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.2_chunk_9",
+      "content": "A snapshot can be a useful tool in capturing the exact state of running systems. Snapshots capture volatile data in an ever-changing environment. This tool is not a substitute for the sector-by-sector copy of a disk. The snapshots can be saved for future examination. Snapshots are valuable only if taken of a running system that is currently experiencing an attack.",
+      "summary": "Snapshots are essential for capturing the precise state of running systems, particularly during security incidents, as they record volatile data in dynamic environments. While they provide a quick reference for future analysis, they should not replace comprehensive disk imaging methods. Their effectiveness is maximized when taken from systems under active attack, allowing for detailed post-incident examination.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.2",
+        "title": "Forensic Acquisition of Data",
+        "content_type": "video",
+        "filename": "9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "word_count": 1101,
+        "has_content": true
+      },
+      "section_header": "Snapshot",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.2_chunk_10",
+      "content": "A cache is stored data that is used to improve the speed of the computing process. There are different caches in a computer system. Address resolution protocol, or ARP, matches IP with MAC addresses. This protocol has a built-in caching component that saves CPU time and network bandwidth by referring to the cache. Internet browser history is also cached and can provide valuable evidence regarding search history.",
+      "summary": "A cache is a storage mechanism that enhances computing speed by temporarily holding frequently accessed data. Key concepts include the Address Resolution Protocol (ARP), which links IP addresses to MAC addresses and utilizes caching to optimize CPU and network efficiency. Additionally, internet browser history serves as a cached resource that can be crucial for forensic investigations into user activity.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.2",
+        "title": "Forensic Acquisition of Data",
+        "content_type": "video",
+        "filename": "9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "word_count": 1101,
+        "has_content": true
+      },
+      "section_header": "Cache",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.2_chunk_11",
+      "content": "Network forensic data plays an important role in an investigation. Network appliances that are important in an investigation are firewall, router, switches, domain controllers, DHCP servers, application servers and web proxy servers. There are also applications on the network including intrusion detection and intrusion protection systems.",
+      "summary": "Network forensic data is crucial for investigations, utilizing various network appliances such as firewalls, routers, switches, and servers (domain, DHCP, application, and web proxy) to gather evidence. Additionally, applications like intrusion detection and protection systems enhance security by monitoring and responding to potential threats. Understanding these components is essential for effective network security management and incident response.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.2",
+        "title": "Forensic Acquisition of Data",
+        "content_type": "video",
+        "filename": "9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "word_count": 1101,
+        "has_content": true
+      },
+      "section_header": "Network",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.2_chunk_12",
+      "content": "In computer forensics an artifact is an object that contains forensic value. Forensic value is evidence found on hardware or in areas like registry hives that show indicators of compromise. These indicators are a digital sign of a breach. It is important to preserve these artifacts and understand their value to a forensic investigation.",
+      "summary": "In computer forensics, artifacts are objects with forensic value, such as evidence found on hardware or in registry hives, that indicate potential compromises or breaches. Preserving these artifacts is crucial for effective forensic investigations, as they provide essential insights into security incidents. Understanding the significance of these indicators is key for cybersecurity professionals in identifying and responding to threats.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.2",
+        "title": "Forensic Acquisition of Data",
+        "content_type": "video",
+        "filename": "9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "word_count": 1101,
+        "has_content": true
+      },
+      "section_header": "Artifacts",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.2_chunk_13",
+      "content": "That's it for this lesson. In this lesson, we learned the procedure used to prioritize evidence gathering called the order of volatility. We discussed different areas within a network that contain potential evidence such as cache, network appliance, OS, disks and RAM. We also covered artifacts and how they are defined and identified.",
+      "summary": "In this lesson, we explored the order of volatility, a critical procedure for prioritizing evidence collection in cybersecurity investigations. Key areas for potential evidence include cache, network appliances, operating systems, disks, and RAM, with a focus on identifying and defining digital artifacts. Understanding these concepts is essential for effective incident response and forensic analysis.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.2",
+        "title": "Forensic Acquisition of Data",
+        "content_type": "video",
+        "filename": "9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.2_Forensic_Acquisition_of_Data_[video].txt",
+        "word_count": 1101,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 13
+}

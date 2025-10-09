@@ -1,0 +1,115 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Configuring a VPN Client
+00:02
+In this demonstration, we're going to create a
+00:05
+client VPN connection on a Windows 10 system.<br>
+2. Configure VPN
+00:08
+There's VPN software built into
+00:10
+Windows 10 that works really well.
+00:12
+We're going to go down to the Start
+00:14
+button and choose the Settings option.
+00:17
+Inside the Settings option, notice that there's
+00:19
+a category for Network and Internet, and inside
+00:23
+of this category, there's a node for VPN.
+00:26
+We can create a VPN connection, and we can choose
+00:29
+to allow this VPN connection over metered networks.<br>
+00:32
+This means if we're connecting, maybe via
+00:34
+cellular, and this is going to be a charge per
+00:37
+gigabyte of data that we transfer, we're going
+00:40
+to permit the VPN over this type of connection.
+00:42
+We'll also permit the VPN while we're roaming with the
+00:46
+system by default, so we'll choose the add a VPN connection
+00:50
+button, and then we can choose the VPN provider.<br>
+00:54
+Let's say that we're using the built-in functionality
+00:57
+of VPNs with Windows as our VPN provider, and we're
+01:00
+going to say this is 'CorpNetVPN'.
+01:03
+Then we'll provide the IP address or the fully
+01:06
+qualified domain name as long as it's registered
+01:09
+in your DNS system for the VPN server.
+01:12
+This is typically information that you're
+01:13
+going to provide your end users so that they
+01:15
+can successfully make the VPN connection.<br>
+01:18
+For the VPN type, often, we'll configure it to
+01:22
+be automatic, and we'll have given the
+01:24
+instructions to this client for how to connect.
+01:27
+But notice you can also configure it
+01:29
+so that it's preset for the VPN type.
+01:32
+A popular option here is IKE version 2.
+01:35
+This would be used with IPSec VPN connections, for example.<br>
+01:39
+You can easily use a smart card, a one-time password, a
+01:42
+certificate, or a username and password for verification.
+01:45
+We'll do a dfellows username and
+01:48
+a password that's extra strong.
+01:53
+Once the correct information is entered, we'll
+01:55
+save it, and now have a CorpNet VPN connection.
+02:00
+We can connect at any time we'd like, or we
+02:03
+could go in the advanced options and edit the
+02:05
+properties of this connection, clear the sign-in
+02:08
+info, or specify that we need to use a VPN proxy.
+02:13
+This is a device we'd go to for
+02:15
+establishing the VPN on our behalf.<br>
+3. Remove VPN
+02:17
+We can easily remove any VPN connection that we've
+02:21
+created inside of this settings area, provided that we
+02:24
+have the appropriate permissions inside of Windows 10.<br>
+4. Summary
+02:27
+That's it for this demo.
+02:29
+We discussed how easy it is to establish
+02:31
+a VPN connection inside of Windows 10.<br>

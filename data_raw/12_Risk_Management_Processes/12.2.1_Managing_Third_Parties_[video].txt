@@ -1,0 +1,253 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Manage Third Parties
+00:04
+It's common for one organization to work
+00:06
+directly with a third party in a vendor, supply
+00:09
+chain, or business partner relationship.
+00:11
+These relationships often require the both parties'
+00:14
+information systems to connect and integrate.
+00:17
+Doing this exposes both network to risks.
+00:20
+You'll want to pay careful attention to the onboarding
+00:22
+phase, the ongoing operations phase, and the
+00:25
+offboarding phase of this third-party relationship.
+2. Onboarding Phase
+00:27
+Let's take a look at the onboarding phase first.
+00:31
+During this phase of the relationship, you'll want to sit
+00:34
+down with individuals from the third-party organization.
+00:37
+Compare each of your organization's
+00:39
+security policies and infrastructure.
+00:41
+Are the security policies for each organization similar?
+00:45
+If there are substantial
+00:46
+differences, you should discuss them.
+00:48
+Do both organizations have similar
+00:50
+incident response procedures?
+00:52
+If there are differences, how will
+00:53
+each party handle incident response?
+00:55
+Are the security controls similar?
+00:58
+Are the audit policies similar?
+01:00
+Is the security posture of each organization compatible
+01:03
+enough to work together, or will the integration expose
+01:07
+vulnerabilities in one or both organizations?
+01:10
+Finding answers to these questions helps you to identify
+01:13
+and evaluate differences and potential risks up front.
+01:17
+There will always be risks, so you'll need to work with
+01:19
+your organization's leadership to determine if the risks
+01:22
+of this potential relationship outweigh the benefits.
+01:25
+If so, it's okay to walk away.
+01:28
+But if the benefits outweigh the risks, you'll
+01:30
+want to move forward with the relationship.
+01:33
+After that decision is made, you need
+01:34
+to create an interoperability agreement.
+01:38
+This agreement is a collection of documents that
+01:39
+identifies the key responsibilities in the relationship.
+01:43
+The documents will specify who is going to perform
+01:46
+key tasks, how those tasks will be measured, and how
+01:49
+decisions will be handled, and other such information.
+3. Service Level Agreement
+01:53
+The first interoperability agreement document
+01:55
+you need is a Service Level Agreement, or SLA.
+01:58
+An SLA states what each organization in
+02:02
+the relationship will do and at what level.
+02:05
+It may also define how disputes will be managed, provide
+02:08
+warranties, specify disaster recovery procedures, and
+02:12
+specify when the agreement will be terminated.
+4. Memorandum of Understanding
+02:15
+Second, we need a Memorandum of Understanding, or MOU.
+02:17
+An MOU provides a brief summary of the relationship.
+02:22
+It describes which party is responsible
+02:24
+for performing specific tasks .
+02:27
+Basically, it says who is going to
+02:28
+do what, and when they'll do it.
+5. Business Partnership Agreement
+02:30
+Next, we'll need a Business Partnership Agreement, or BPA.
+02:33
+A BPA explains the rules surrounding
+02:36
+the finances of the partnership.
+02:38
+This could include details on how to handle
+02:41
+contributions, withdrawals, financial reporting,
+02:44
+and the profit and loss distribution.
+6. Interconnection Security Agreement
+02:47
+Another important document is the
+02:48
+Interconnection Security Agreement, or ISA.
+02:51
+The ISA documents how the information
+02:54
+systems of both organizations will connect
+02:56
+and how they're going to share data.
+02:57
+The ISA is more technical in nature.
+03:01
+The SLA and the MOU define the relationship,
+03:04
+whereas the BPA and the ISA specify how the
+03:08
+project work is going to take place.
+7. Ongoing Operations Phase
+03:09
+When onboarding is complete, you can start conducting
+03:12
+business according to the terms of the agreement.
+03:15
+During the ongoing operations phase, you'll
+03:18
+want to keep any eye on several things.
+03:20
+First, regularly verify compliance with
+03:23
+the interoperability agreement documents.
+03:26
+Make sure that each organization
+03:28
+is doing what it said it would do.
+03:30
+In addition, conduct periodic vulnerability assessments
+03:33
+to verify that the shared network connections have not
+03:36
+exposed or created some type of security weakness.
+03:40
+You should also conduct regular security audits to
+03:42
+ensure that organizations are following the security
+03:45
+requirements contained in the interoperability agreement.
+03:49
+Communication between the organizations is critical.
+03:52
+Share the vulnerability assessment and security
+03:54
+audit findings with everyone involved in the
+03:56
+relationship in order to maintain risk awareness.
+8. Offboarding Phase
+04:00
+When the operations phase is complete and you've reached the
+04:03
+end of your agreement, you're ready to end the relationship.
+04:06
+This process is called offboarding.
+04:09
+Although this is an important phase,
+04:10
+it's probably the most neglected.
+04:13
+During offboarding, you want to ensure that all the security
+04:15
+doors you opened to facilitate the relationship are closed.
+9. Offboarding Phase
+04:19
+From a technical standpoint, you'll want to
+04:21
+reset or disable any open or shared connections
+04:24
+that you may have with the third party.
+04:27
+This could include VPNs, firewalls, or routers and switches
+04:30
+that were set up to share information from your network.
+04:34
+In addition, disable any domain trust relationships
+04:37
+established between the organizations.
+04:39
+Disable any user or group accounts used by third
+04:42
+parties to access your organization's data.
+04:45
+Finally, reset passwords used by the third
+04:47
+party to access applications on your network.
+04:50
+Leaving any of these doors open could potentially
+04:53
+expose the information on your network.
+04:55
+During the offboarding process, you'll also want to
+04:56
+revisit the NDA, and you'll want to put all of your
+05:00
+end-of-business agreements into a written format.
+10. Summary
+05:04
+That's it for this lesson.
+05:05
+In this video, we talked about managing third parties.
+05:08
+We looked at the onboarding phase and
+05:10
+the various documents commonly used.
+05:12
+We talked about the ongoing operations phase of
+05:14
+the relationship, and we discussed considerations
+05:17
+for the offboarding phase to ensure that access
+05:19
+to your system ends with the relationship.

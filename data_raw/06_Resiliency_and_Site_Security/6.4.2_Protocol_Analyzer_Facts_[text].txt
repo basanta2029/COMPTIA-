@@ -1,0 +1,93 @@
+Security Pro 8.0
+
+6.4.2 Protocol Analyzer Facts
+
+A protocol analyzer is hardware or software for monitoring and analyzing digital traffic over a network. Protocol analyzers go by other names, such as packet sniffers, packet analyzers, network analyzers, network sniffers, or network scanners.
+
+This lesson covers the following topics:
+
+How protocol analyzers work
+Uses of protocol analyzers
+How Protocol Analyzers Work
+
+Typically, a protocol analyzer is run on a single device with the intent of capturing frames for all other devices on the network or subnet. Using a packet sniffer this way requires the following configuration changes:
+
+A network interface card, or NIC, accepts frames addressed only to that NIC by default. To enable the packet sniffer to capture frames sent to other devices, configure the NIC in promiscuous mode (sometimes called p-mode). In p-mode, the NIC processes every frame it sees.
+When using a switch, the switch only forwards packets to the switch port that holds a destination device. This means that when your packet sniffer is connected to a switch port, it does not see traffic sent to other switch ports. To configure the switch to send all frames to the packet sniffing device, configure port mirroring on the switch. With port mirroring, all frames sent to all other switch ports are forwarded on the mirrored port.
+Note:
+A malicious user that is connected to the switch can accomplish the same thing by running a MAC flooding attack. This attack essentially turns the switch into a hub, and traffic is sent to all ports.
+By default, a protocol analyzer is a passive device. It copies frames and allows viewing of frame contents, but it does not allow the capture, modification, or re-transmission of frames. This is referred to as passive interception.
+
+When using a protocol analyzer, the user can filter the frames so they see only the frames with information of interest. You can save the results of a capture to analyze frames at a later time or on a different device.
+
+Filters show only those frames or packets to or from specific addresses or frames that include specific protocol types.
+A capture filter captures (records) only the frames identified by the filter. Frames not matching the filter criteria are not captured.
+A display filter shows only the frames that match the filter criteria. Frames not matching the filter criteria are still captured but not shown.
+Uses of Protocol Analyzers
+
+Depending on the role of the user, a protocol analyzer may have different uses. The following table shows some common roles and how they may use a protocol analyzer:
+
+Role
+Protocol Analyzer Usage
+Network administrator	
+A network administrator can use the protocol analyzer to assist in the management of the network and employee usage. The protocol analyzer can help to:
+
+Monitor and log network traffic as it is transmitted over the network.
+Check for specific protocols on the network, such as SMTP, DNS, POP3, and ICMP. Identifying the specific protocols helps to:
+Identify devices that might be using unallowed protocols, such as ICMP, or legacy protocols, such as IPX/SPX or NetBIOS.
+Identify traffic that might be sent by attackers.
+Examine the data contained within a packet. For example, by looking at the packet data, the network administrator can identify users connecting to unauthorized websites.
+Analyze network performance
+Troubleshoot communication problems or investigate the source of heavy network traffic
+Security operations	
+The network SecOps team can use the protocol analyzer during a vulnerability assessment. The protocol analyzer can help the SecOps team to:
+
+Identify frames that might cause errors. For example, the network administrator can:
+Determine which flags are set in a TCP handshake
+Detect any malformed or fragmented packets. This would indicate that someone is trying to get around the firewall.
+Discover passwords and other sensitive data being sent in cleartext.
+Find any open network ports that should not be open.
+Malicious user/hacker	
+A malicious user can use the protocol analyzer to find the same information as the network administrator and SecOps teams.
+
+By themselves, protocol analyzers cannot be used to perform an attack. However, protocol tools can be used with protocol analyzers for active interception of network traffic to perform attacks, such as:
+
+Spoofing
+Man-in-the-middle attacks
+Replay attacks
+TCP/IP session hijacking
+MAC flooding
+A hacker can also use the analyzer to perform system fingerprinting. System fingerprinting identifies which operating system the system is running based on how it responds to different types of network traffic.
+Common protocol analyzers include:
+
+Wireshark
+Ethereal
+Dsniff
+Ettercap
+Tcpdump
+Windump
+Cain and Abel
+
+
+
+
+Settings
+
+
+Theater Mode
+
+
+Full Screen
+
+
+Play Video
+
+
+Video Control Resume Play
+
+
+Volume Control
+Play Speed
+
+
+Interactive Script

@@ -1,0 +1,306 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Sideload an App in Windows 10
+00:04
+In this demonstration, we'll walk through the process
+00:07
+of sideloading an app on a Windows 10 workstation system.
+00:10
+Sideloading is the act of installing apps that we create or
+00:13
+own on a Windows system without going through the Microsoft
+00:16
+Store. This is a significant change from earlier versions of
+00:20
+Windows, such as Windows 8 and Windows 8.1.
+00:23
+In Windows 8 and 8.1, sideloading an app was discouraged,
+00:27
+and was therefore very difficult to implement. On Windows
+00:29
+10 that has all changed. Sideloading is relatively easy
+00:33
+now. With that in mind, let's walk through the process
+00:36
+that you need to follow in order to sideload an app.
+2. Configure Windows to Allow Sideloading in Windows Settings
+00:39
+The first thing we must do is configure Windows
+00:42
+to allow sideloading because sideloading is
+00:44
+typically not allowed by default. To do this,
+00:47
+you right-click Start and select Settings app.
+00:52
+Then go to Update and Security > For
+00:53
+Developers. Here you have three options.
+00:57
+First, there is Microsoft Store apps, then
+01:00
+Sideload apps, and finally Developer mode.
+01:03
+This is already set to allow Sideloading
+01:05
+apps, so we don't have to change anything.
+01:07
+On some versions of Windows, the top option,
+01:10
+Microsoft Store, is set as the default.
+01:12
+When you change to Sideload apps, you get a message
+01:15
+warning of the danger of installing an app by sideloading
+01:18
+rather than going through the Microsoft Store.
+01:21
+You can also go into Developer mode.
+01:23
+It is similar to the sideloading option, but it
+01:25
+also includes advanced development features, which
+01:28
+we're not going to work with today. We're just going
+01:30
+to use the Sideload apps option. Close this window.
+3. Configure Windows to Allow Sideloading in Group Policy
+01:34
+There is another way you can enable sideloading an
+01:36
+app and that is through the Group Policy Editor.
+01:39
+The great thing about Group Policy is that if you do this
+01:41
+on the domain, all systems on the domain that are assigned
+01:44
+this Group Policy will be able to sideload an app.
+01:47
+Deciding if you want to do that or not
+01:49
+depends on the number of systems involved.
+01:51
+To show you how to do that, we'll go into
+01:53
+the Local Group Policy and configure this.
+01:56
+Remember, you typically would do this on
+01:58
+the server, but the settings are the same.
+02:00
+Go down to Search, type ‘gpedit', and then
+02:03
+select Edit Group Policy from the list.
+02:06
+The Local Group Policy Editor opens.
+02:08
+We'll adjust the size so we can see things better.
+02:11
+Under Computer Configuration, expand
+02:13
+Administrative Templates, Windows Components
+02:16
+and select App Package Deployment.
+02:20
+Next, double-click this setting right
+02:22
+here, Allow all trusted apps to install.
+02:25
+When the dialog box opens you will see
+02:27
+that by default it's set to Not Configured.
+02:30
+We can enable it here, if we want.
+02:31
+We're not going to enable it because
+02:33
+we already did in the Settings App.
+02:35
+This is just another way of doing it,
+02:37
+especially if your system is part of a domain.
+02:40
+As always, down here under Help, you can read more
+02:43
+about what this setting does if you are not sure.
+02:45
+Let's exit out of these windows now.
+02:47
+With sideloading enabled, now we can practice
+02:50
+sideloading an app. First, you must have an app to
+02:53
+sideload. We've already done that on this system. You
+02:56
+could create your own app, but who has time for that?
+02:59
+For this demo, we downloaded one
+03:00
+and saved it to the hard disk.
+03:02
+Key thing here is that we did not use the Microsoft Store.
+03:06
+We determined where this app was
+03:07
+hosted on the web and downloaded it.
+03:10
+Note that this app has an APPX file extension.
+03:13
+This file is the app that we're going to sideload.
+4. View the Security Certificate
+03:16
+Before continuing, we want to check
+03:18
+the security certificate for this app.
+03:20
+We downloaded the app from the internet, so, you want to
+03:23
+make sure the digital signature is OK before you install it.
+03:26
+Also keep in mind, if this was an app that we created, we'd
+03:30
+have to create a certificate and install that certificate.
+03:33
+Without a certificate, Windows
+03:35
+will not allow that app to install.
+03:37
+We know this because we tried to do it and guess what?
+03:39
+It doesn't work.
+03:41
+There are probably work arounds to make it
+03:43
+work but that is beyond the scope of this demo.
+03:45
+So, let's check the digital signature of this app.
+03:48
+We'll right-click and go to Properties
+03:50
+and click the Digital Signatures tab.
+03:54
+Next, we'll select the certificate
+03:56
+in the Signature list box.
+03:57
+Click Details.
+04:00
+Under Digital Signature Information,
+04:02
+it says, "Hey, this signature is OK."
+04:04
+That's a positive thing and we should
+04:06
+not have any problems with our app.
+04:09
+Click Cancel to close the dialog box.
+5. Sideload the App
+04:13
+So, now we have enabled sideloading on the system.
+04:15
+We've checked the certificate that was used
+04:17
+to sign the app and we've verified that the
+04:20
+signature on the app file is valid.
+04:22
+The next thing we must do is to sideload the app.
+04:24
+Starting with the Windows 10 Anniversary Edition, you
+04:28
+can double click the APPX file and install the app.
+04:31
+When we do that, the app installer launches.
+04:33
+Here, you can see the name of the app,
+04:35
+publisher info, version, and some other info.
+04:38
+If we click Install, the app installs.
+04:41
+Let's do things the hard way.
+04:43
+We'll install this app using a PowerShell cmdlet.
+04:46
+The first thing we must do is run PowerShell.
+04:49
+Close the installer here.
+04:51
+We'll right-click the Start and then
+04:52
+click Windows PowerShell (Admin).
+04:55
+We'll elevate privileges and PowerShell opens.
+04:58
+To make things easier, we put the app into
+05:01
+a folder on the C: drive named Install.
+05:03
+Let's change directories and go to that folder.
+05:06
+To do that type ‘cd c:/Install' and press Enter.
+05:12
+Let's do a ‘dir' command to see the contents of the folder.
+05:15
+The APPX file is there.
+05:17
+This makes things easier as you will see in a minute.
+05:20
+Now that we're in the right directory, all we
+05:22
+do is type 'Add-AppPackage' followed by the name
+05:25
+of the package file that we want to install.
+05:27
+We type ‘./' and instead of typing out this long
+05:31
+filename, we'll highlight it, select Edit, right-click,
+05:36
+choose Copy, come down here and right-click.
+05:39
+When we do, it gets pasted in. Hit Enter and wait
+05:42
+a minute while the app is installed on the system.
+05:50
+Something happened, but are we sure?
+05:52
+Well, let's see if the app is installed.
+05:55
+We'll close these windows, click Start, and
+05:59
+scroll down to find the app we just installed.
+06:01
+Click it and it opens.
+06:05
+If for some reason we don't want this app any longer,
+06:07
+we can uninstall it like we do any Microsoft Store app.
+06:13
+You find it in the list, right-click, select
+06:16
+Uninstall, select it from the list again,
+06:18
+click Uninstall again, and the app is gone.
+6. Summary
+06:22
+That's it for this demo.
+06:24
+In this demonstration we walked through the process
+06:26
+for sideloading an app on Windows 10. First, you
+06:29
+must have the app that you want to install.
+06:31
+Then you must enable sideloading.
+06:33
+You verify that the digital signature on the app
+06:36
+is valid, and then use the add appx
+06:38
+package PowerShell command to install the app file.

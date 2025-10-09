@@ -1,0 +1,297 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Communication of Embedded Systems
+00:04
+Now that we have a better understanding of embedded
+00:06
+systems, it's time to dive deeper into the technologies
+00:09
+and protocols that allow them to communicate.<br>
+00:12
+Embedded systems often require new technologies, and
+00:15
+their biggest obstacle is the lack of capable support.
+00:19
+For this reason, they currently
+00:20
+use standard networking protocols.
+00:22
+These protocols are divided into four categories:
+00:25
+short-range, medium-range, long-range, and wired.<br>
+2. Short-Range Protocols
+00:28
+There are several short-range protocols and technologies.
+00:32
+Near-field communication, or NFC, and
+00:35
+radio-frequency identification, or RFID, are two
+00:38
+very simple, low-energy, and versatile protocols.
+00:41
+RFID uses two-way radio transmitter
+00:44
+receivers to identify and track object tags.
+00:47
+NFC uses magnetic field induction to communicate
+00:51
+between mobile and standard electronic devices.<br>
+00:54
+Bluetooth Low Energy, also known as BLE or Bluetooth
+00:57
+Smart, is a wireless personal area network.
+01:01
+It supports low-power, long-use IoT technology.
+01:04
+It's used in the healthcare, security,
+01:06
+entertainment, and fitness sectors.<br>
+01:08
+Light-Fidelity, or Li-Fi, is very similar to Wi-Fi.
+01:12
+The two key differences are speed and mode of communication.
+01:16
+Unlike Wi-Fi, Li-Fi is a visible
+01:18
+light communications system.
+01:20
+It uses light bulbs to transfer data at
+01:22
+the high speed of 224 gigabits per second.<br>
+01:26
+Quick Response, or QR, codes and
+01:28
+barcodes are tags attached to products.
+01:30
+They're machine-readable and contain
+01:32
+information about the product.
+01:34
+A QR code is two-dimensional, and you can scan
+01:36
+it using a smartphone, while barcodes come in
+01:38
+one-dimensional or two-dimensional code.<br>
+01:40
+Thread, Zigbee, and Z-Wave are all radio protocols
+01:44
+that create low-rate private area networks.
+01:47
+Their advantage is that, although they're
+01:48
+low-power, they offer high throughput.
+01:51
+Thread uses an IPv6-based networking protocol.
+01:55
+Zigbee is a short-range communication
+01:57
+protocol based on the IEEE 203.15.4 standard.
+02:02
+Z-Wave is a low-power, short-range communication
+02:05
+protocol designed mostly for home IoT systems.<br>
+02:09
+Wi-Fi is commonly implemented in
+02:11
+wireless local area networking.
+02:13
+The most common Wi-Fi standard is 802.11n
+02:17
+with a maximum speed of 600 Megabits per
+02:19
+second and a range of about 50 meters.<br>
+02:22
+Wi-Fi Direct uses peer-to-peer communication
+02:25
+without a set wireless access point.
+02:27
+The devices in Wi-Fi Direct only start communicating after
+02:30
+an access point device has been selected within the system.<br>
+02:34
+You can also use hotspots to
+02:36
+provide wireless network access.<br>
+02:38
+Mobile hotspots let you connect a device to the internet
+02:40
+through a portable wireless device such as a phone.<br>
+02:44
+Hotspots form an on-the-spot Wi-Fi network, allowing you to
+02:47
+connect a number of gadgets for simple, fast internet access.
+02:50
+Hotspots often use third-, fourth-, and fifth-generation
+02:54
+technology to provide this type of connection.
+02:56
+5G is the best of them because it achieves
+02:59
+speeds twenty times faster that 4G; its
+03:01
+peak speed is 20 gigabytes per second.
+03:04
+It uses LTE for wireless connections and includes lower
+03:07
+frequencies than previous generations, down to 600 Megahertz.<br>
+3. Medium-Range Protocols
+03:11
+There are two main protocols in the
+03:13
+medium-range category, HaLow and LTE-Advanced.
+03:13
+HaLow is a branch of Wi-Fi with extended range.
+03:19
+It's most useful in rural areas because it uses low data
+03:22
+rates, so it reduces power and cost for transmission.
+03:25
+LTE-Advanced is a mobile communication.
+03:29
+It makes standard LTE better because it has
+03:31
+a greater capacity for data rate, extended
+03:33
+range, efficiency, and performance.<br>
+4. Long-Range Protocols
+03:36
+Long-range wireless communication offers a
+03:38
+few different protocols and technologies.
+03:40
+The first one we'll talk about is LPWAN.
+03:43
+LPWAN stands for low-power wide-area networking.
+03:47
+It's a wireless telecommunication network.
+03:49
+There are three protocols associated
+03:51
+with LPWAN: LoRaWAN, Sigfox, and Neul.<br>
+03:54
+LoRaWAN stands for long-range wide-area network.
+03:58
+It's used with mobile, industrial
+04:00
+machine-to-machine, and secure two-way communication
+04:02
+for IoT devices, smart cities, and healthcare.
+04:05
+Sigfox is good for devices with short battery
+04:08
+life that need to transfer low-level data.
+04:11
+Neul uses a small part of the TV white space
+04:14
+spectrum and delivers high-quality, high-power,
+04:16
+high-coverage networks at a low cost.
+04:19
+Next, there's Very Small Aperture Terminal, or VSAT.
+04:22
+VSAT uses small dish antennas to
+04:25
+transfer broadband and narrowband data.<br>
+04:28
+And finally, there's cellular.
+04:30
+This communication protocol can send and receive
+04:32
+high-quality data over very long distances.
+04:35
+However, it's very expensive and consumes a lot of power.<br>
+5. Wired Communication
+04:39
+Next we're going to talk about wired communication.
+04:41
+There are three main protocols in this category:
+04:44
+Ethernet; Multimedia over Coax Alliance, or MoCA;
+04:48
+and Power-line Communication, or PLC.<br>
+04:51
+Ethernet is used in LANs.
+04:53
+The speed, signaling, media access methods, and
+04:55
+cable lengths are defined in the various Ethernet
+04:58
+standards published by the IEEE 802.3 committee.
+05:02
+There are many Ethernet specifications,
+05:04
+but they all use a common naming standard.
+05:06
+The word BASE is in the middle.
+05:08
+This indicates that the standard uses
+05:10
+baseband signaling, not broadband signaling.
+05:13
+Baseband updates may improve or diminish battery
+05:16
+performance, network signal strength, and roaming capability.<br>
+05:19
+Then we have MoCA.
+05:21
+As its name suggests, MoCA uses coaxial
+05:23
+cables to provide high-definition videos
+05:26
+of a home and other content related to it.<br>
+05:29
+PLC uses electrical wires to transmit
+05:31
+power and data from one point to another.
+05:33
+PLC is used in different sectors like automation,
+05:36
+industrial, and broadband over power lines, or BLP.<br>
+6. SIM Cards
+05:41
+One last form of embedded device communication
+05:43
+worth mentioning isn't a protocol; it's a card
+05:45
+many devices carry inside them called a
+05:48
+Subscriber Identity Module card, or SIM card.
+05:51
+It encrypts data transmission and stores
+05:52
+information about the owner of the device the SIM
+05:55
+card is in for identification and authentication.
+05:59
+It also stores the International
+06:00
+Mobile Subscriber Identity, or IMSI.
+06:03
+This is a unique identifier that defines a subscriber in the
+06:06
+wireless world, including their country and mobile network.<br>
+7. Summary
+06:10
+That's it for this lesson.
+06:11
+Today, we discussed the communication of embedded systems.
+06:14
+We talked about short-range,
+06:15
+medium-range, and long-range protocols.
+06:18
+We also covered wired communication and SIM cards.
+06:21
+Embedded devices are complex.
+06:23
+Learning about their protocols, technologies,
+06:25
+and communication models will prepare you to
+06:27
+incorporate and safeguard them.<br>

@@ -1,0 +1,54 @@
+Security Pro 8.0
+
+13.1.2 Consequences of Breaches Facts
+
+Breaches affect all companies. This includes even large companies with security budgets in the millions of dollars. Most of us have, at one time or another, been notified that our information has been compromised. It could be bank accounts, credit cards, government records, or even health records. All these data breaches come with serious consequences.
+
+This lesson covers the following topics:
+
+Impacts of non-compliance
+Privacy breaches and data breaches
+Software licensing non-compliance
+Impacts of contractual non-compliance
+Impacts of Non-compliance
+
+Security compliance refers to organizations' adherence to applicable security standards, regulations, and best practices to protect sensitive information, mitigate risks, and ensure data confidentiality, integrity, and availability. Effective compliance necessitates establishing and implementing policies, procedures, controls, and technical measures to meet the requirements set forth by regulatory bodies, industry standards, and legal obligations.
+
+Non-compliance with data protection laws and regulations can have severe consequences for organizations. The consequences vary depending on jurisdiction and the specific regulations violated. Common ramifications for non-compliance include legal sanctions such as financial penalties, legal liabilities, reputational damage, and loss of customer trust. Sanctions refer to penalties, disciplinary actions, or measures imposed due to non-compliance with laws, regulations, or rules. Sanctions are enforced by governing bodies, regulatory authorities, or organizations overseeing the specific domain in which the non-compliance occurred. Regulatory agencies may impose substantial fines, which can amount to millions or even billions of dollars, depending on the severity of the violation. Legal action from affected individuals or data subjects may lead to costly lawsuits and settlements. Non-compliance can harm an organization's reputation, eroding customer trust, decreasing business opportunities, and potentially losing contracts or partnerships. Organizations may also face additional regulatory scrutiny, including increased audits, investigations, or mandated remediation measures. Organizations must prioritize data protection compliance, implement appropriate security measures, conduct regular risk assessments, and stay informed about evolving data protection laws and regulations to avoid these consequences.
+Privacy Breaches and Data Breaches
+
+A  data breach occurs when information is read, modified, or deleted without authorization. "Read" in this sense can mean either seen by a person or transferred to a network or storage media. A data breach is the loss of any type of data (but notably corporate information and intellectual property). In contrast, a privacy breach refers specifically to the loss or disclosure of personal and sensitive data.
+Organizational Consequences
+
+A data or privacy breach can have severe organizational consequences:
+
+Consequences
+Description
+Reputation damage	Data breaches cause widespread negative publicity, and customers are less likely to trust a company that cannot secure its information assets. Consumers stop using the company, revenues drop, and possibly lost investments.
+Identity theft	If the breached data is exploited to perform identity theft, the data subject may be able to sue for damages. The effects of identity theft can last for years and cause fear and paranoia among the victims. Lives have been turned upside down, leaving victims frustrated to deal with the ramifications.
+Fines	Legislation might empower a regulator to levy fines. These can be a fixed sum or, in the most serious cases, a percentage of turnover. Regulations like the General Data Protection Regulation (GDPR), California Consumer Privacy Act (CCPA), Health Insurance Portability and Accountability Act (HIPAA), and many more do impose fines for non-compliance.
+IP theft	Loss of company data can lead to loss of revenue. This typically occurs when copyright material—unreleased movies and music tracks—is breached. The loss of patents, designs, trade secrets, and so on to competitors or state actors can also cause commercial losses, especially in overseas markets where IP theft may be difficult to remedy through legal action.
+Escalation
+
+A breach may be detected by technical staff, and if the event is considered minor, there may be a temptation to remediate the system and take no further notification action. This could place the company in legal jeopardy. Any breach of personal data and most breaches of IP should be escalated to senior decision-makers, and any impacts from legislation and regulation properly considered.
+Notifications of Breaches
+
+The requirements for different types of breaches are set out in law and in regulations. The requirements indicate who must be notified. A data breach can mean the loss or theft of information, the accidental disclosure of information, or the loss or damage of information. Note that there are substantial risks from accidental breaches if effective procedures are not in place. If a database administrator can run a query that shows unredacted credit card numbers, that is a data breach, regardless of whether the query ever leaves the database server.
+
+Depending on the regulations, a breach may be considered to have occurred if there is just the potential for unauthorized access. For example, if a personal data file is configured with permissions that mistakenly allow any authenticated user to read it, this could be classified as a notifiable data breach, even if audit logs show that no improper access attempts were made.
+Public Notification and Disclosure
+
+Other than the regulator, notification might need to be made to law enforcement, individuals, and third-party companies affected by the breach and the public through press or social media channels. For example, the  Health Insurance Portability and Accountability Act (HIPAA) sets out reporting requirements in legislation, requiring breach notification to the affected individuals, the Secretary of the US Department of Health and Human Services, and, if more than 500 individuals are affected, to the media. The requirements also set out timescales for when these parties should be notified. For example, under GDPR, the notification must be made within 72 hours of becoming aware of a breach of personal data. Regulations will also set out disclosing requirements or the information that must be provided to each of the affected parties. Disclosure is likely to include a description of what information was breached, details for the main point of contact, likely consequences arising from the breach, and measures taken to mitigate the breach.
+
+GDPR offers stronger protections than most federal and state laws in the United States, which tend to focus on industry-specific regulations, narrower definitions of personal data, and fewer rights and protections for data subjects. However, the passage of the California Consumer Privacy Act (CCPA) has changed the picture for domestic US legislation.
+Software Licensing
+
+Non-compliance with software licensing requirements can result in the revocation of usage rights and other consequences, such as fines. Violations of license agreements, such as exceeding permitted installations, unauthorized sharing, or other unauthorized usage, constitute contractual non-compliance. Other forms of non-compliance include breaching license terms, such as modifying code or distributing software without authorization. In response, software vendors or licensing authorities may revoke or suspend licenses and take other legal actions. The loss of software licenses can disrupt business operations, causing inefficiencies and workflow interruptions as well as cause significant reputational damage. To ensure compliance, organizations can rectify non-compliance through license remediation, proper license management, and audits.
+Impacts of Contractual Non-compliance
+
+Category
+Description
+Breach of contract	Non-compliance can result in a breach of contract. Contracts between parties often include provisions related to data protection, cybersecurity measures, and the safeguarding of sensitive information. Failure to meet these contractual obligations can lead to legal consequences, including potential liability for damages or loss the non-compliant party suffers.
+Termination of contracts	Non-compliance may give the non-compliant party grounds for contract termination. Contractual agreements may contain clauses allowing termination if the other party fails to adequately protect data or implement sufficient cybersecurity measures. The non-compliant party may face termination penalties, loss of business relationships, and the need to seek new contractual arrangements, which will be complicated by poor past performance.
+Indemnification and liability	Non-compliance may result in the non-compliant party assuming liability for damages caused by a security breach or data loss. Contractual agreements may include indemnification clauses, shifting responsibility for losses or legal expenses resulting from cybersecurity incidents onto the non-compliant party, leading to financial burdens and reputational damage.
+Non-compliance penalties	Contracts may stipulate penalties or financial consequences for non-compliance with cybersecurity requirements, such as monetary fines or contractual damages that the n on-compliant party must pay to the aggrieved party. Non-compliance penalties aim to incentivize adherence to cybersecurity measures outlined in the contractual agreement.

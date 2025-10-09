@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "chapter_num": "10",
+    "section_num": "10.1.8",
+    "title": "Create Containers",
+    "content_type": "video",
+    "filename": "10.1.8_Create_Containers_[video].txt",
+    "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.8_Create_Containers_[video].txt",
+    "word_count": 661,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script Were going to give you an overview on how you can create a container. If your not familiar with a container it is similar to a virtual machine however instead of having the overhead of several operating systems for each software you can just run the software from an image a container engine. Today were going to be using a container engine called docker desktop. This is widely used by developers and for the use of learning containers. We already have this installed so lets go ahead and launch it from the start menu. Typically to start you will have an image in which you would build a container from. If you were a developer you would of course make your own image with the required software in it to run as a container. If you don't have an image and want to start from a basic one you could go up to the search bar and type apache for example. If you don't know what apache is it is a web server. In order to grab an image we need to pull it. Once we click pull it will download the image and put it in our Image repository. If there are any updates to an image you would have to pull again to obtain your update. Now that we have our image downloaded we can now create a container from the image. By clicking on the run option from the image it starts the process to create the container. It does give some optional settings like changing the ports or the volumes it may use. Were going to assign it a random port so we will just type zero here and click run. To check our running containers we can venture to the other menu called containers. All running containers will be displayed here. You can see we have one running which is our web server. Locally on the container it is using port 80 however its redirecting it to port \"\" . clicking the port reference will allow us to launch the web page from our browser. Since we actually see a page and its presenting a text means our container is working properly. Not all containers will have a web page like this one, for example if its a database container you will have connecting ports available but no website to test. Along with the gui you can still utilize command line tools to manage your docker images and containers. Were just going to check the status of our running container by launching our terminal. Once launched we can type the command \"docker ps\" this will show us all our running containers. Once we have the container we want we can run a command like \"docker stop c764f54a8429\" to stop a container. You can see from the docker ps the container isnt running anymore. Each container has a unique container ID. This ID has to be used when using these commands to manage a container. Just like we can run \"docker start c764f54a8429\" to start the container we just stopped. Running a docker ps will show the container is running again. That is it for this demo. In this demo we showed you how to create a container on docker desktop. We also showed you docker containers can be managed by command line tools.",
+  "chunks": [
+    {
+      "chunk_id": "10.1.8_chunk_1",
+      "content": "Were going to give you an overview on how you can create a container. If your not familiar with a container it is similar to a virtual machine however instead of having the overhead of several operating systems for each software you can just run the software from an image a container engine. Today were going to be using a container engine called docker desktop. This is widely used by developers and for the use of learning containers. We already have this installed so lets go ahead and launch it from the start menu.",
+      "summary": "This section introduces the concept of containers, which are lightweight alternatives to virtual machines, allowing software to run from an image using a container engine. The practical application focuses on using Docker Desktop, a popular tool among developers for creating and managing containers. The lesson emphasizes the efficiency of containers in reducing overhead compared to traditional virtual machines.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.1.8",
+        "title": "Create Containers",
+        "content_type": "video",
+        "filename": "10.1.8_Create_Containers_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.8_Create_Containers_[video].txt",
+        "word_count": 661,
+        "has_content": true
+      },
+      "section_header": "Create Containers",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.1.8_chunk_2",
+      "content": "Typically to start you will have an image in which you would build a container from. If you were a developer you would of course make your own image with the required software in it to run as a container. If you don't have an image and want to start from a basic one you could go up to the search bar and type apache for example. If you don't know what apache is it is a web server. In order to grab an image we need to pull it. Once we click pull it will download the image and put it in our Image repository. If there are any updates to an image you would have to pull again to obtain your update.",
+      "summary": "In this section, learners are introduced to the process of downloading container images, which serve as the foundational software environment for running applications. Users can either create their own images or search for existing ones, such as the Apache web server, and pull them into their image repository for deployment. Additionally, the importance of regularly updating images by pulling the latest versions is emphasized to maintain security and functionality.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.1.8",
+        "title": "Create Containers",
+        "content_type": "video",
+        "filename": "10.1.8_Create_Containers_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.8_Create_Containers_[video].txt",
+        "word_count": 661,
+        "has_content": true
+      },
+      "section_header": "Downloading an Image",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.1.8_chunk_3",
+      "content": "Now that we have our image downloaded we can now create a container from the image. By clicking on the run option from the image it starts the process to create the container. It does give some optional settings like changing the ports or the volumes it may use. Were going to assign it a random port so we will just type zero here and click run. To check our running containers we can venture to the other menu called containers. All running containers will be displayed here. You can see we have one running which is our web server. Locally on the container it is using port 80 however its redirecting it to port \"\" . clicking the port reference will allow us to launch the web page from our browser. Since we actually see a page and its presenting a text means our container is working properly. Not all containers will have a web page like this one, for example if its a database container you will have connecting ports available but no website to test.",
+      "summary": "In this section, learners create a container from a downloaded image by utilizing the run option, where they can customize settings such as ports and volumes. After launching the container, users can verify its operation by checking the containers menu and accessing the web page through the assigned port. This practical application highlights the functionality of web server containers, while also noting that other types of containers, like databases, may not have a web interface.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.1.8",
+        "title": "Create Containers",
+        "content_type": "video",
+        "filename": "10.1.8_Create_Containers_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.8_Create_Containers_[video].txt",
+        "word_count": 661,
+        "has_content": true
+      },
+      "section_header": "Create a Container",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.1.8_chunk_4",
+      "content": "Along with the gui you can still utilize command line tools to manage your docker images and containers. Were just going to check the status of our running container by launching our terminal. Once launched we can type the command \"docker ps\" this will show us all our running containers. Once we have the container we want we can run a command like \"docker stop c764f54a8429\" to stop a container. You can see from the docker ps the container isnt running anymore. Each container has a unique container ID. This ID has to be used when using these commands to manage a container. Just like we can run \"docker start c764f54a8429\" to start the container we just stopped. Running a docker ps will show the container is running again.",
+      "summary": "The Command Line Tools section of the CompTIA Security+ course emphasizes the use of command line commands to manage Docker images and containers effectively. Key commands include \"docker ps\" to list running containers, and \"docker stop\" and \"docker start\" to control container states using their unique IDs. This practical application enhances users' ability to manage containerized environments efficiently.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.1.8",
+        "title": "Create Containers",
+        "content_type": "video",
+        "filename": "10.1.8_Create_Containers_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.8_Create_Containers_[video].txt",
+        "word_count": 661,
+        "has_content": true
+      },
+      "section_header": "Command Line Tools",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.1.8_chunk_5",
+      "content": "That is it for this demo. In this demo we showed you how to create a container on docker desktop. We also showed you docker containers can be managed by command line tools.",
+      "summary": "This demo illustrates the process of creating and managing Docker containers using Docker Desktop and command line tools. Key security concepts include container isolation and resource management, which are essential for maintaining secure application environments. Practical applications involve deploying applications in a controlled, scalable manner while ensuring security best practices are followed.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.1.8",
+        "title": "Create Containers",
+        "content_type": "video",
+        "filename": "10.1.8_Create_Containers_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.8_Create_Containers_[video].txt",
+        "word_count": 661,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 5
+}

@@ -1,0 +1,109 @@
+Security Pro 8.0
+
+9.3.9 Forensic Investigation Facts
+
+Digital forensic analysis involves examining evidence gathered from computer systems and networks to uncover relevant information, such as deleted files, timestamps, user activity, and unauthorized traffic. There are many processes and tools for acquiring different kinds of digital evidence from computer hosts and networks. These processes must demonstrate exactly how the evidence was acquired and that it is a true copy of the system state at the time of the event.
+
+This lesson covers the following topics:
+
+Due process and legal hold
+Chain of custody
+Reporting
+Data sources
+System memory acquisition
+Data image acquisition
+Due Process and Legal Hold
+
+Digital forensics is the practice of collecting evidence from computer systems to a standard that will be accepted in a court of law. Forensics investigations are most likely to be launched to prosecute crimes arising from insider threats, notably fraud or misuse of equipment. Prosecuting external threat sources is often difficult, as the threat actor may well be in a different country or have taken effective steps to disguise their location and identity. Such prosecutions are normally initiated by law enforcement agencies, where the threat is directed against military or governmental agencies or is linked to organized crime.
+
+Due process is a term used in US and UK common law to require that people only be convicted of crimes following the fair application of the laws of the land. More generally, due process can be understood to mean having a set of procedural safeguards to ensure fairness. This principle is central to forensic investigation. If a forensic investigation is launched (or if one is a possibility), it is important that technicians and managers are aware of the processes that the investigation will use. It is vital that they can assist the investigator and that they do not do anything to compromise the investigation. In a trial, defense counsel will try to exploit any uncertainty or mistake regarding the integrity of evidence or the process of collecting it.
+
+Legal hold refers to the fact that information that may be relevant to a court case must be preserved. Information subject to legal hold might be defined by regulators or industry best practice, or there may be a litigation notice from law enforcement or lawyers pursuing a civil action. This means that computer systems may be taken as evidence, with all the obvious disruption to a network that entails. A company subject to legal hold will usually have to suspend any routine deletion/destruction of electronic or paper records and logs.
+Chain of Custody
+
+The host devices and media taken from the crime scene should be labeled, bagged, and sealed, using tamper-evident bags. It is also appropriate to ensure that the bags have antistatic shielding to reduce the possibility that data will be damaged or corrupted on the electronic media by electrostatic discharge (ESD). Each piece of evidence should be documented by a chain of custody form. The chain of custody documentation records where, when, and who collected the evidence, who subsequently handled it, and where it was stored. This establishes integrity and proper handling of evidence. When security breaches go to trial, the chain of custody protects an organization against accusations that evidence has either been tampered with or is different than it was when it was collected. Every person in the chain who handles evidence must log the methods and tools they used.
+
+The evidence should be stored in a secure facility; this not only means access control, but also environmental control, so that the electronic systems are not damaged by condensation, ESD, fire, and other hazards.
+Reporting
+
+Digital forensics reporting summarizes the significant contents of the digital data and the conclusions from the investigator's analysis. It is important to note that strong ethical principles must guide forensics analysis:
+
+Analysis must be performed without bias. Conclusions and opinions should be formed only from the direct evidence under analysis.
+Analysis methods must be repeatable by third parties with access to the same evidence.
+Ideally, the evidence must not be changed or manipulated. If a device used as evidence must be manipulated to facilitate analysis (disabling the lock feature of a mobile phone or preventing a remote wipe, for example), the reasons for doing so must be sound and the process of doing so must be recorded.
+Defense counsel may try to use any deviation of good ethical and professional behavior to have the forensics investigator's findings dismissed.
+
+A forensic examination of a device that contains electronically stored information (ESI) entails a search of the whole drive, including both allocated and unallocated sectors, for instance. E-discovery is a means of filtering the relevant evidence produced from all the data gathered by a forensic examination and storing it in a database in a format such that it can be used as evidence in a trial. E-discovery software tools have been produced to assist this process. Some of the functions of e-discovery suites are as follows:
+
+Identify and de-duplicate files and metadata —many files on a computer system are "standard" installed files or copies of the same file. E-discovery filters these types of files, reducing the volume of data that must be analyzed.
+Search —allow investigators to locate files of interest to the case. As well as keyword search, software might support semantic search. Semantic search matches keywords if they correspond to a particular context.
+Tags —apply standardized keywords or labels to files and metadata to help organize the evidence. Tags might be used to indicate relevancy to the case or part of the case or to show confidentiality, for instance.
+Security —at all points, evidence must be shown to have been stored, transmitted, and analyzed without tampering.
+Disclosure —an important part of trial procedure is that the same evidence be made available to both plaintiff and defendant. E-discovery can fulfill this requirement. Recent court cases have required parties to a court case to provide searchable ESI rather than paper records.
+Data Sources
+
+The following table outlines several data sources for forensic investigations along with their descriptions.
+
+Source	Description
+Dashboards	An event dashboard provides a console to work from for day-to-day incident response. It provides a summary of information drawn from the underlying data sources to support some work tasks. Separate dashboards can be created to suit many different purposes. An incident handler's dashboard will contain uncategorized events that have been assigned to their account, plus visualizations (graphs and tables) showing key status metrics. A manager's dashboard would show overall status indicators, such as number of unclassified events for all event handlers.
+Log data	Log data is a critical resource for investigating security incidents. As well as the log format, you must also consider the range of sources for log files, and know how to determine what type of log file will best support any given investigation scenario.
+Host operating system logs	An operating system (OS) keeps a variety of logs to record events as users and software interact with the system. Different log files represent different aspects of system functionality. These files are intended to hold events of the same general nature. Some files hold events from different process sources; others are utilized by a single source only.
+Linux logs	Linux logging can be implemented differently for each distribution. Some distibutions use syslog to direct messages relating to a particular subsystem to a flat text file. Other distributions use Journald as a unified logging system with a binary, rather than plaintext, file format. Journald messages are read using the journalctl command, but it can be configured to export some messages to text files via syslog.
+Windows logs	
+The three main Windows event log files are the following:
+
+Application—events generated by application processes, such as when there is a crash, or when an app is installed or removed.
+Security—audit events, such as a failed login or access to a file being denied.
+System—events generated by the operating system's kernel processes and services, such as when a service or driver cannot start, when a service's startup type is changed, or when the computer shuts down.
+Application logs	
+An application log file is simply one that is managed by an application rather than the OS. The application may use Event Viewer or syslog to write event data using a standard format, or it might write log files to its own application directories in whatever format the developer has selected.
+
+In Windows Event Viewer, there is a specific application log, which can be written to by any authenticated account. There are also separate custom application and service logs, which are managed by specific processes. The app developer chooses which log to use, or whether to implement a logging system without using Event Viewer. Check the product documentation to find out where events for a particular software app are logged.
+Endpoint logs	An endpoint log is likely to refer to events monitored by security software running on the host, rather than by the OS itself. This can include host-based firewalls and intrusion detection, vulnerability scanners, and antivirus/antimalware protection suites. Suites that integrate these functions into a single product are often referred to as an endpoint protection platform (EPP), enhanced detection and response (EDR), or extended detection and response (XDR). These security tools can be directly integrated with a SIEM using agent-based software.
+Network logs	Network logs are generated by appliances such as routers, firewalls, switches, and access points. Log files will record the operation and status of the appliance itself—the system log for the appliance—plus traffic and access logs recording network behavior.
+IPS/IDS logs	An IPS/IDS log is an event when a traffic pattern is matched to a rule. As this can generate a very high volume of events, it might be appropriate to only log high sensitivity/impact rules. As with firewall logging, a single packet might trigger multiple rules.
+File	File metadata is stored as attributes. The file system tracks when a file was created, accessed, and modified. A file might be assigned a security attribute, such as marking it as read-only or as a hidden or system file. The ACL attached to a file showing its permissions represents another type of attribute. Finally, the file may have extended attributes recording an author, copyright information, or tags for indexing/searching.
+Web	When a client requests a resource from a web server, the server returns the resource plus headers setting or describing its properties. Also, the client can include headers in its request. One key use of headers is to transmit authorization information, in the form of cookies. Headers describing the type of data returned (text or binary, for instance) can also be of interest. The contents of headers can be inspected using the standard tools built into web browsers. Header information may also be logged by a web server.
+Email	
+An email's Internet header contains address information for the recipient and sender, plus details of the servers handling transmission of the message between them. When an email is created, the mail user agent (MUA) creates an initial header and forwards the message to a mail delivery agent (MDA). The MDA should perform checks that the sender is authorized to issue messages from the domain. Assuming the email isn't being delivered locally at the same domain, the MDA adds or amends its own header and then transmits the message to a message transfer agent (MTA). The MTA routes the message to the recipient, with the message passing via one or more additional MTAs, such as SMTP servers operated by ISPs or mail security gateways. Each MTA adds information to the header.
+
+Headers aren't exposed to the user by most email applications. You can view and copy headers from a mail client via a message properties/options/source command. MTAs can add a lot of information in each received header, such as the results of spam checking. If you use a plaintext editor to view the header, it can be difficult to identify where each part begins and ends. Fortunately, there are plenty of tools available to parse headers and display them in a more structured format. One example is the Message Analyzer tool, available as part of the Microsoft Remote Connectivity Analyzer (https://learn.microsoft.com/en-us/connectivity-analyzer/exchange-remote-connectivity-analyzer-tool). This will lay out the hops that the message took more clearly and break out the headers added by each MTA.
+System Memory Acquisition
+
+System memory is volatile data held in Random Access Memory (RAM) modules. Volatile means that the data is lost when power is removed. A system memory dump creates an image file that can be analyzed to identify the processes that are running, the contents of temporary file systems, registry data, network connections, cryptographic keys, and more. It can also be a means of accessing data that is encrypted when stored on a mass storage device.
+
+A specialist hardware or software tool can capture the contents of memory while the host is running. Unfortunately, this type of tool needs to be preinstalled as it requires a kernel mode driver to dump any data of interest. Various commercial tools are available to perform system memory acquisition on Windows.
+Data Image Acquisition
+
+Disk image acquisition refers to acquiring data from nonvolatile storage. Nonvolatile storage includes hard disk drives (HDDs), solid state drives (SSDs), firmware, other types of flash memory (USB thumb drives and memory cards), and optical media (CD, DVD, and Blu-ray). This can also be referred to as device acquisition, meaning the SSD storage in a smartphone or media player. Disk acquisition will also capture the OS installation if the boot volume is included.
+
+Given sufficient time at the scene, an investigator might decide to perform both a live and static acquisition. Whichever method is used, it is imperative to document the steps taken and supply a timeline and video-recorded evidence of actions taken to acquire the evidence.
+
+It is vital that the evidence collected at the crime scene conforms to a valid timeline. Digital information is susceptible to tampering, so access to the evidence must be tightly controlled. Video recording the whole process of evidence acquisition establishes the provenance of the evidence as deriving directly from the crime scene.
+
+To obtain a forensically sound image from nonvolatile storage, the capture tool must not alter data or metadata (properties) on the source disk or file system. Data acquisition would normally proceed by attaching the target device to a forensics workstation or field capture device equipped with a write blocker. A write blocker prevents any data on the disk or volume from being changed by filtering write commands at the driver and OS level.
+
+
+
+
+
+Settings
+
+
+Theater Mode
+
+
+Full Screen
+
+
+Play Video
+
+
+Video Control Resume Play
+
+
+Volume Control
+Play Speed
+
+
+Interactive Script

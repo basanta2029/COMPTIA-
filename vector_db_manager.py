@@ -39,7 +39,8 @@ class VectorDBManager:
         collection_name: str = "comptia_security_plus",
         host: str = "localhost",
         port: int = 6333,
-        embedding_dim: int = 512
+        embedding_dim: int = 1536,
+        use_memory: bool = False
     ):
         """
         Initialize vector database manager
@@ -49,13 +50,26 @@ class VectorDBManager:
             host: Qdrant server host
             port: Qdrant server port
             embedding_dim: Dimension of embedding vectors
+            use_memory: If True, use in-memory mode (no Docker required)
         """
         self.collection_name = collection_name
         self.embedding_dim = embedding_dim
 
         # Connect to Qdrant
-        print(f"🔌 Connecting to Qdrant at {host}:{port}...")
-        self.client = QdrantClient(host=host, port=port)
+        if use_memory:
+            print(f"🧠 Using Qdrant in-memory mode (no Docker required)...")
+            self.client = QdrantClient(":memory:")
+        else:
+            try:
+                print(f"🔌 Connecting to Qdrant at {host}:{port}...")
+                self.client = QdrantClient(host=host, port=port, timeout=5)
+                # Test connection
+                self.client.get_collections()
+                print(f"✅ Connected to Qdrant server")
+            except Exception as e:
+                print(f"⚠️  Cannot connect to Qdrant server: {e}")
+                print(f"🧠 Falling back to in-memory mode...")
+                self.client = QdrantClient(":memory:")
 
     def create_collection(self, recreate: bool = False) -> None:
         """
@@ -309,8 +323,8 @@ def main():
     parser.add_argument(
         "--embedding-dim",
         type=int,
-        default=512,
-        help="Embedding dimension (512 for voyage-3-lite, 1024 for voyage-3)"
+        default=1536,
+        help="Embedding dimension (1536 for text-embedding-3-small)"
     )
     parser.add_argument(
         "--recreate",

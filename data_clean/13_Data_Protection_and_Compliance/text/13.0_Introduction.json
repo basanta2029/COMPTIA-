@@ -1,0 +1,67 @@
+{
+  "metadata": {
+    "chapter_num": "13",
+    "section_num": "13.0",
+    "title": "Introduction",
+    "content_type": "chapter_intro",
+    "filename": "Chapter_13.0_Introduction.txt",
+    "file_path": "data_raw/13_Data_Protection_and_Compliance/Chapter_13.0_Introduction.txt",
+    "word_count": 228,
+    "has_content": true
+  },
+  "full_content": "Security Pro 8.0 This module is designed to equip you with a foundational understanding of best practices and regulatory requirements that protect sensitive information in today's digital landscape. As a professional navigating modern workplaces, you will encounter various types of data that require careful management—not only to safeguard privacy and security but also to maintain organizational trust and comply with global legal standards. Throughout this course, you will gain practical knowledge and skills that will empower you to confidently handle these responsibilities, regardless of your specific role or industry. You will explore key concepts such as how to appropriately classify information and understand the importance of compliance frameworks. In addition, you'll examine the impact of personnel policies and the crucial role that employees play in ensuring that data remains protected. By the end of this module, you will not only recognize the responsibilities associated with data protection, but also be ready to apply practical strategies that contribute to overall organizational resilience and adherence to compliance obligations. Identify types of sensitive information and understand their classification. Recognize the key requirements of major data protection and compliance regulations. Explore best practices for handling, storing, and sharing sensitive data. Evaluate how personnel policies can impact an organization's data protection efforts. Apply compliance-focused decision-making in scenarios likely to arise in your workplace.",
+  "chunks": [
+    {
+      "chunk_id": "13.0_chunk_1",
+      "content": "Security Pro 8.0",
+      "summary": "The CompTIA Security+ course, Security Pro 8.0, introduces foundational security concepts essential for protecting information systems. Key topics include risk management, network security, cryptography, and identity management, emphasizing practical applications through real-world scenarios. The course prepares learners to identify vulnerabilities and implement effective security measures to safeguard organizational assets.",
+      "metadata": {
+        "chapter_num": "13",
+        "section_num": "13.0",
+        "title": "Introduction",
+        "content_type": "chapter_intro",
+        "filename": "Chapter_13.0_Introduction.txt",
+        "file_path": "data_raw/13_Data_Protection_and_Compliance/Chapter_13.0_Introduction.txt",
+        "word_count": 228,
+        "has_content": true
+      },
+      "section_header": "Introduction",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "13.0_chunk_2",
+      "content": "This module is designed to equip you with a foundational understanding of best practices and regulatory requirements that protect sensitive information in today's digital landscape. As a professional navigating modern workplaces, you will encounter various types of data that require careful management—not only to safeguard privacy and security but also to maintain organizational trust and comply with global legal standards. Throughout this course, you will gain practical knowledge and skills that will empower you to confidently handle these responsibilities, regardless of your specific role or industry. You will explore key concepts such as how to appropriately classify information and understand the importance of compliance frameworks. In addition, you'll examine the impact of personnel policies and the crucial role that employees play in ensuring that data remains protected. By the end of this module, you will not only recognize the responsibilities associated with data protection, but also be ready to apply practical strategies that contribute to overall organizational resilience and adherence to compliance obligations.",
+      "summary": "The Data Protection and Compliance module of the CompTIA Security+ course focuses on best practices and regulatory requirements for safeguarding sensitive information in the digital landscape. It covers key concepts such as data classification, compliance frameworks, and the critical role of personnel policies in maintaining data security. By the end of the module, participants will be equipped with practical strategies to enhance organizational resilience and ensure compliance with legal standards.",
+      "metadata": {
+        "chapter_num": "13",
+        "section_num": "13.0",
+        "title": "Introduction",
+        "content_type": "chapter_intro",
+        "filename": "Chapter_13.0_Introduction.txt",
+        "file_path": "data_raw/13_Data_Protection_and_Compliance/Chapter_13.0_Introduction.txt",
+        "word_count": 228,
+        "has_content": true
+      },
+      "section_header": "13.0 Data Protection and Compliance",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "13.0_chunk_3",
+      "content": "Identify types of sensitive information and understand their classification. Recognize the key requirements of major data protection and compliance regulations. Explore best practices for handling, storing, and sharing sensitive data. Evaluate how personnel policies can impact an organization's data protection efforts. Apply compliance-focused decision-making in scenarios likely to arise in your workplace.",
+      "summary": "This module covers the identification and classification of sensitive information, emphasizing the importance of compliance with major data protection regulations. It highlights best practices for handling, storing, and sharing sensitive data while examining the influence of personnel policies on data protection efforts. Participants will also engage in compliance-focused decision-making through practical workplace scenarios.",
+      "metadata": {
+        "chapter_num": "13",
+        "section_num": "13.0",
+        "title": "Introduction",
+        "content_type": "chapter_intro",
+        "filename": "Chapter_13.0_Introduction.txt",
+        "file_path": "data_raw/13_Data_Protection_and_Compliance/Chapter_13.0_Introduction.txt",
+        "word_count": 228,
+        "has_content": true
+      },
+      "section_header": "In this module, you will:",
+      "timestamp_range": null
+    }
+  ],
+  "num_chunks": 3
+}

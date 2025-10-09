@@ -1,0 +1,171 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Save Captured Files with Wireshark
+00:04
+In this demo, we'll show you how to capture network packets.
+00:07
+There are times when you might want to
+00:09
+capture packets so you can analyze them later.
+00:11
+Captured packets can be used by an analyst
+00:14
+to profile an application's network traffic
+00:17
+or to examine a protocol in more detail.
+00:20
+The two most popular tools to capture
+00:21
+packets are Wireshark and TCPDump.
+00:24
+Both Wireshark and TCPDump can be used
+00:27
+with a variety of operating systems but
+00:30
+for this demo we will use Security Onion.
+00:33
+Security Onion is usually set up with a monitor
+00:35
+port that captures all packets that it sees.
+00:38
+The packets are typically used
+00:39
+with tools like Zeek and Snort.
+00:41
+This interface can also be used
+00:43
+by an analyst for ad-hoc captures.
+2. Capture Packets with Wireshark
+00:46
+There are two capture tools in
+00:48
+Security Onion for ad-hoc captures.
+00:50
+First, we will look at Wireshark.
+00:52
+Wireshark is a graphical tool that allows
+00:54
+packet capture, but is also an analysis tool.
+00:57
+Because Wireshark requires root permissions to capture the
+01:00
+packets, we must run Wireshark with elevated permissions.
+01:04
+To do this, go to Applications > Utilities > Terminal.
+01:10
+At the command prompt type —˜sudo
+01:11
+dpkg-reconfigure wireshark-common'.
+01:18
+You are asked you if you want to allow
+01:20
+non-superusers to be able to capture packets.
+01:22
+Choose Yes.
+01:24
+Next, run —˜sudo usermod -a -G wireshark administrator'.
+01:30
+This gives the administrative user rights to run
+01:33
+Wireshark by adding it to the Wireshark group.
+01:36
+If your account on Security Onion has a different
+01:38
+name, use that instead of administrator in the command.
+01:42
+Once done, go to the power icon.
+01:44
+Then, go down to the other power icon.
+01:47
+Choose to restart.
+01:49
+Now the system has rebooted.
+01:50
+After logging back into Security
+01:52
+Onion, we can start to use Wireshark.
+01:55
+We open it by going to Applications > Internet > Wireshark.
+02:01
+To set up a capture, select the interface on
+02:03
+Security Onion that is set as the monitor port.
+02:06
+In this instance, it is interface enp0s8.
+02:10
+After selecting the interface, you can restart the capture
+02:13
+by clicking the Shark Fin in the top left of the menu bar.
+02:16
+By default, the captured packets
+02:18
+will scroll by on the screen.
+02:20
+When we are done capturing, we
+02:22
+can press the red stop button.
+02:24
+At this point, we can analyze the captured packets as
+02:26
+we would any other capture that has been given to us.
+02:29
+We can then save that file as
+02:31
+a PCAP file for later analysis.
+02:33
+We're not going to save it here,
+02:34
+but you can see we have the option.
+3. Capture Packets with tcpdump
+02:37
+Another way that we can capture packets with Security
+02:39
+Onion is to use the command-line tool tcpdump.
+02:43
+Let's open a new Terminal session and enter
+02:45
+the command —˜sudo tcpdump -D' to list the
+02:49
+possible interfaces that we can capture on.
+02:52
+Note that enp0s8 is number 10 on the list.
+02:56
+To capture, run the command —˜sudo
+02:58
+tcpdump -i 10 -w testout.pcap'.
+03:03
+This will capture the packets on enp0s8 and
+03:07
+write them to a file called testout.pcap.
+03:09
+Press CTRL-C to stop the capture.
+03:13
+Now let's print the file to the screen
+03:15
+using —˜tcpdump -r testout.pcap'.
+03:20
+Here you can see the output of the file.
+03:23
+We can open this PCAP file in a
+03:25
+tool like Wireshark or NetworkMiner.
+03:27
+Let's open it in Wireshark.
+03:29
+We type, —˜wireshark testout.pcap' and press Enter.
+03:34
+After a second or two the PCAP file is loaded into Wireshark
+03:38
+and we can use it to further analyze the packet capture.
+4. Summary
+03:41
+That's it for this demo.
+03:42
+In this demo we used Wireshark and TCPdump to
+03:45
+capture packets and saved them to a PCAP file.

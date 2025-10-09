@@ -1,0 +1,236 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Automation and Scripting
+00:04
+Automation is a powerful tool
+00:05
+for managing security operations.
+00:07
+Automation allows us to perform repetitive, rule-based
+00:10
+tasks to improve efficiency and reduce user errors.
+00:14
+Combining automation systems with orchestration
+00:16
+and scripting can make a huge difference in the
+00:18
+efficiency of security operations.
+00:20
+In this lesson, we'll go over these systems and
+00:22
+then look at the benefits and considerations of
+00:24
+automation, orchestration, and scripting.<br>
+2. Automation Overview
+00:28
+Automation uses software to perform repetitive, rule-based
+00:31
+tasks, such as monitoring for threats, applying patches,
+00:34
+maintaining baselines, or responding to incidents, to
+00:37
+improve efficiency and reduce the likelihood of human error.<br>
+00:41
+We can develop scripts to automate
+00:42
+many of the common repetitive tasks.
+00:45
+Scripts tell the system what steps
+00:46
+to take to automate the task.
+00:48
+Orchestration enhances automation by
+00:51
+coordinating and streamlining the interactions
+00:53
+between automated processes and systems.
+00:56
+Orchestration supports seamless and integrated
+00:58
+workflows, especially in large, complex environments
+01:01
+with many different security tools and systems.<br>
+01:04
+Scripting uses a specific language, such as
+01:07
+Python, JavaScript, or PowerShell, to perform
+01:09
+tasks on a computer or network system.
+01:12
+A script is typically a text file with commands
+01:14
+written that tell the system what to do step by step.<br>
+01:17
+Typical programs must be compiled before running, which
+01:21
+means the code's text must be converted into binary code.
+01:25
+Scripts, on the other hand, are
+01:26
+read and executed line by line.
+01:29
+Scripting languages are usually something
+01:30
+a human can look at and interpret, whereas
+01:33
+binary code is much more difficult to read.
+01:35
+When combined, scripting and automation
+01:38
+are critical tools in modern IT operations.<br>
+01:41
+For all of these different platforms and tools to
+01:43
+communicate with each other, we need to implement the
+01:45
+appropriate Application Programming Interface, or API.
+01:49
+An API simply serves as an interpreter between multiple
+01:52
+systems so they can all speak the same language.
+01:55
+Automation and orchestration systems
+01:57
+will need an appropriate API so they can
+01:59
+be integrated into the network systems.<br>
+3. Benefits
+02:02
+Automation can help an organization to streamline
+02:05
+processes, enhance security, and improve efficiency.
+02:08
+For example, we can develop scripts to apply security
+02:11
+policies on network devices and use automation
+02:13
+software to help enforce the security policies.
+02:16
+Another example is using scripts to apply patches and
+02:19
+updates across the organization and automation tools to
+02:22
+track the changes and notify us if anything goes wrong.<br>
+02:26
+Using automation not only enhances the efficiency of
+02:29
+security operations but also reduces the burden on the
+02:32
+security team and reduces the likelihood of human error.
+02:35
+Security analysts must monitor numerous systems
+02:38
+for potential threats, manage high volumes of
+02:40
+alerts, including many false positives, and respond
+02:43
+to confirmed threats as quickly as possible.
+02:45
+These working conditions often lead to long hours, anxiety,
+02:49
+and elevated stress levels, resulting in operator fatigue.
+02:53
+This fatigue is a significant concern in cybersecurity
+02:56
+because it can lead to decreased alertness and cognitive
+02:58
+function and impair the ability of security personnel to
+03:01
+identify and respond to threats effectively.
+03:04
+Fatigue results in missed critical alerts,
+03:06
+slower response times, and a greater likelihood
+03:09
+of errors, any of which can compromise security.<br>
+03:12
+Having to perform common repetitive tasks, such as user
+03:15
+and resource provisioning, assigning security groups,
+03:18
+creating tickets, and other common tasks, can be minimized
+03:21
+by creating scripts and monitoring with automation tools.
+03:25
+This will greatly help reduce operator fatigue,
+03:27
+leading to fewer errors and better security operations.<br>
+4. Considerations
+03:31
+While implementing automation can make the
+03:33
+job easier and more efficient, there are
+03:35
+some challenges we need to be aware of.
+03:37
+Appropriate automation and orchestration solutions
+03:40
+can be extremely complex and require a deep
+03:43
+knowledge and understanding of the organization's
+03:45
+systems, processes, and interdependencies.
+03:48
+A poorly planned or executed strategy will make
+03:51
+systems more difficult to manage and maintain.<br>
+03:54
+When implementing automation solutions,
+03:56
+the initial cost can be quite high.
+03:58
+Even though the organization will save
+04:00
+money in the long term, the high initial
+04:02
+cost can make it difficult to implement.
+04:05
+If a critical automated system or process fails,
+04:07
+this can impact multiple areas of the organization.
+04:11
+Having this single point of failure is
+04:12
+something that should be considered, and
+04:14
+proper mitigation steps should be implemented.<br>
+04:17
+If automation and orchestration systems are poorly
+04:19
+designed and implemented, this can lead to system
+04:22
+instability, complexity, and increased cost.
+04:25
+This is known as technical debt.
+04:27
+Lastly, automation systems require ongoing
+04:30
+support and updates to stay effective and secure.
+04:33
+Without proper support, these
+04:34
+systems will be quickly outdated.<br>
+5. Summary
+04:37
+That'll wrap up this lesson on automation and scripting.
+04:39
+In this lesson, we first went over what
+04:41
+automation, orchestration, and scripting are.
+04:44
+We then looked at the benefits of using these
+04:45
+technologies, including reducing operator fatigue and
+04:49
+increasing the efficiency of our security operations.
+04:51
+We wrapped up by going over some concerns
+04:53
+that should be considered when implementing
+04:55
+automation orchestration solutions.<br>

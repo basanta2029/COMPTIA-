@@ -1,0 +1,290 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Logging Events on pfSense
+00:04
+In this demo, we're going to spend a few minutes
+00:06
+viewing log files on our pfSense security appliance.
+00:09
+A log should act as a red flag that something
+00:12
+is happening—potentially something bad.
+00:14
+By reviewing your logs on a regular basis, you'll
+00:16
+get an idea of the normal traffic on your device.
+00:19
+In reality, no one likes to spend
+00:21
+hours a day viewing log files.
+00:22
+Typically, you would want to configure a syslog
+00:24
+server so that all your logs from all devices go to
+00:28
+one place to be consolidated for easier analysis.
+2. System Logs
+00:31
+To view logs on pfSense, we first need to
+00:34
+go to Status and then down to System logs.
+00:36
+Once we're in System logs, we see the General tab.
+00:39
+Like I said, viewing logs isn't the most
+00:41
+exciting thing to do, but it's necessary.
+00:44
+Under the General tab we can see that we have a time stamp,
+00:46
+a process, a PID or process ID, and a message about the log.
+00:51
+Let's move on to Gateways.
+00:53
+Under Gateways, you can see that I only
+00:54
+have one Gateway on this test system.
+00:57
+Looks like my system is grabbing an
+00:59
+IP for the WAN network interface.
+01:01
+You might be thinking that if it's grabbing an
+01:03
+IP from a WAN, shouldn't this be a public IP?
+01:06
+That answer is yes, but I do have a test network set
+01:09
+up and that network is connected to my regular LAN.
+01:12
+We also have our Routing logs here.
+01:14
+Next to that I have my DNS Resolver logs.
+01:17
+Finally, we have our Wireless logs.
+01:19
+I don't have any Wi-Fi currently configured with
+01:21
+this device, so there are no logs for our Wi-Fi.
+3. Firewall Logs
+01:24
+I'll move over to my Firewall logs.
+01:26
+This is generally where you might look for
+01:28
+malicious attacks directed toward your network.
+01:31
+You'll see information down here with more details.
+01:33
+As I scroll down, you can see the different
+01:35
+source IPs that triggered the log.
+01:38
+This one here, 172.16.1.100, is from
+01:42
+my DMZ trying to get out to the WAN.
+01:45
+Dynamic View shows us a bit less detail.
+01:48
+Down here I have some WAN traffic on port 5353.
+01:53
+As you first get a system set up, you might
+01:55
+want to familiarize yourself with the
+01:57
+different ports that your firewall is logging.
+01:59
+Some ports might be perfectly
+02:01
+normal while others might not be.
+02:02
+I wasn't familiar with port 5353, but a quick web
+02:06
+search told me it's for multicast DNS and is safe.
+02:09
+So now I know what it is.
+02:11
+Summary View gives us a bunch of graphs that
+02:13
+can be helpful to get a quick visual of things.
+02:16
+Here I have my different interfaces.
+02:18
+I have three in this device—one for my LAN,
+02:20
+one for the DMZ, and one connected for the WAN.
+02:24
+I have my protocols and it looks
+02:25
+like most of my traffic is UDP.
+02:27
+Down here a little further, I can see the
+02:30
+source IPs of what's been triggering the logs.
+02:33
+All the 192.168 addresses are from the WAN
+02:36
+interface and the 172.16 address is my DMZ.
+02:40
+I have the destination IPs in this next graph.
+02:45
+I have my source ports next.
+02:48
+Finally, I have destination ports.
+02:50
+Here you can see UDP/53 listed.
+02:53
+That is my DNS traffic.
+02:55
+So, it's good to get familiar with
+02:57
+what your typical traffic looks like.
+02:59
+This is called creating a baseline.
+03:01
+This isn't covered in this demo, but it should be one
+03:03
+of the first things you do when setting up new devices.
+4. DHCP Logs
+03:06
+My next set of logs are DHCP logs.
+03:09
+Here you can see who's getting IPs from the DHCP server.
+03:12
+Not only can you see who's getting IPs, but you can see
+03:16
+the DHCP acknowledgement, the DHCP requests, and down here
+03:21
+you can see that DHCP renewed an IP for one of the clients.
+03:24
+All of this is useful information if you're
+03:26
+troubleshooting DHCP or need to see what
+03:29
+devices are connecting to your network.
+5. Captive Portal Authorization
+03:31
+I had this device set up as a captive portal at one time
+03:34
+so that we could see all the events that are related to it.
+03:37
+As a quick review, a captive portal is a web page
+03:40
+you're taken to, such as in a hotel or other public
+03:42
+place, before you're given access to the internet.
+03:45
+You typically must agree to the terms and
+03:47
+conditions before being allowed to proceed.
+03:50
+You might have to enter a password as well.
+6. Other Logs
+03:52
+The next four tabs—IPSec, PPP, VPN, and Load
+03:57
+Balancer—have no log files because I don't have
+03:59
+any of those services running on this device.
+04:02
+But I do have OpenVPN configured.
+04:04
+Down here you can see all of those log files.
+04:07
+I do have some NTP logs, or
+04:08
+Network Time Protocol logs, here.
+7. Log Settings
+04:12
+The last thing I want to look at is log settings.
+04:15
+If you noticed as we were viewing
+04:16
+logs, there were only fifty shown.
+04:19
+Here is where we can change that if needs be.
+04:21
+As I scroll down, you can see other
+04:23
+settings that you can configure.
+04:25
+You can even reset your logs.
+04:26
+Here at the bottom is where you can configure
+04:29
+pfSense to send these logs to a syslog server.
+04:31
+I'll check this box to enable it.
+04:34
+When I do, I'm presented with some more
+04:36
+settings specific to remote logging.
+04:39
+I can be specific about which interface I want to log.
+04:41
+I can log all of them, or just one.
+04:44
+I could just log my WAN events if
+04:45
+that's all I'm concerned about.
+04:47
+I can choose to only have IPv4
+04:49
+logs or only have IPv6 logs sent.
+04:53
+Here I would put the IP and port of the remote syslog
+04:56
+server that's configured to receive those logs.
+04:59
+I don't have a server set up for this demo, but if I did,
+05:01
+this is where I would tell pfSense to send the logs to.
+05:05
+The format would be something like
+05:06
+10.10.10.100, and it would be port 514.
+05:10
+Port 514 is the port that pfSense uses by
+05:14
+default to send logs to the syslog server.
+05:17
+Now I would need to tell pfSense what I want to send.
+05:20
+I don't like information overload.
+05:21
+I only want to send the logs that I actually need.
+05:24
+So I might only want firewall events,
+05:26
+DNS events, DHCP events, and VPN.
+05:30
+In my case, that's OpenVPN.
+05:32
+I would then click on Save and, if my syslog
+05:35
+server is configured, it'll start to receive
+05:37
+log files from my pfSense security appliance.
+8. Summary
+05:40
+That's it for this demo.
+05:41
+In this demo, we examined the logs
+05:43
+on our pfSense security appliance.
+05:45
+We viewed many of the different logs that can be collected.
+05:48
+We then looked at settings and
+05:50
+some things that we can configure.
+05:52
+We ended by explaining how to
+05:53
+send our logs to a syslog server.

@@ -1,0 +1,101 @@
+{
+  "metadata": {
+    "chapter_num": "9",
+    "section_num": "9.3.8",
+    "title": "Forensic Data Integrity and Preservation",
+    "content_type": "video",
+    "filename": "9.3.8_Forensic_Data_Integrity_and_Preservation_[video].txt",
+    "file_path": "data_raw/09_Incident_Response/9.3.8_Forensic_Data_Integrity_and_Preservation_[video].txt",
+    "word_count": 753,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script Data integrity and preservation are fundamental aspects of digital forensics, ensuring the reliability and usefulness of the data. They serve to maintain and protect the original state of digital evidence from the moment of collection to its presentation in court. Any intentional or unintentional alteration can compromise the accuracy of the evidence, thereby undermining the entire forensic investigation. This means that evidence acquisition, imaging, and storage all need to be done using well-defined processes. Evidence should be captured in the order of volatility, from more volatile to less volatile. The ISOC best practice guide to evidence collection and archiving recommends the following order: First, CPU registers and cache memory—including cache on disk controllers, graphics cards, etc. The contents of nonpersistent system memory, or RAM, including routing table, ARP cache, process table, and kernel statistics. Then, data is stored on persistent mass storage devices like HDDs, SSDs, and flash memory devices, followed by partition and file system blocks, slack space, and free space. Next would be system memory caches, such as swap space, virtual memory, and hibernation files. And finally, user, application, and OS files and directories. Other sources could include remote logging and monitoring data, physical configuration and network topology, and archival media or printed documents. Data acquisition is complicated by the fact that it's more difficult to capture evidence from a digital crime scene than it is from a physical one. For example, some evidence could be lost if a computer system is powered off; on the other hand, other evidence may be unobtainable until after the system has been powered off. Because of this, it's important to know the three states for persistent storage acquisition. Live acquisition means copying the data while the host is still running. This may capture more evidence or more data for analysis and reduce the impact on overall services. Still, the data on the actual disks will have changed, so this method may not produce legally acceptable evidence. It may also alert the threat actor and allow time for them to perform anti-forensics. With static acquisition, the host is shut down normally. If malware is a concern, this method runs the risk that the malware will detect the shutdown process and perform anti-forensics to try to remove traces of itself. If this is the case, static acquisition by pulling the plug instead of powering down may be a solution. This means disconnecting the power at the wall socket (not the hardware power-off button). This is most likely to preserve the storage devices in a forensically clean state, but there's the risk of corrupting data. Once the target disk has been safely attached to the forensics workstation, data acquisition proceeds as follows: A cryptographic hash of the source disk media is made using either the MD5 or SHA hashing function. A bit-by-bit copy of the source media is made using an imaging utility. A second hash is then made of the image, which should match the original hash of the media. A copy is made of the reference image, validated again by the checksum. All analysis is performed on the copy. This proof of integrity ensures non-repudiation. If the provenance of the evidence is certain, the threat actor identified by analysis of the evidence can't deny their actions. The hashes prove that no modification has been made to the image. That's it for this lesson. In this lesson, we discussed data integrity and preservation. We reviewed the order of volatility that requires that evidence be captured in order of volatility from more volatile to less volatile. We also talked about ensuring acquisition integrity by leveraging the different states of persistent storage acquisition: live acquisition, static acquisition, powered down, and static acquisition, unplugged. Lastly, we discussed how proof of evidence integrity helps to ensure non-repudiation.",
+  "chunks": [
+    {
+      "chunk_id": "9.3.8_chunk_1",
+      "content": "Data integrity and preservation are fundamental aspects of digital forensics, ensuring the reliability and usefulness of the data. They serve to maintain and protect the original state of digital evidence from the moment of collection to its presentation in court. Any intentional or unintentional alteration can compromise the accuracy of the evidence, thereby undermining the entire forensic investigation. This means that evidence acquisition, imaging, and storage all need to be done using well-defined processes.",
+      "summary": "Forensic data integrity and preservation are critical in digital forensics, as they ensure that digital evidence remains reliable and unaltered from collection to court presentation. Proper procedures for evidence acquisition, imaging, and storage are essential to prevent any modifications that could compromise the investigation's accuracy. Maintaining the original state of evidence is vital for upholding its validity in legal contexts.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.8",
+        "title": "Forensic Data Integrity and Preservation",
+        "content_type": "video",
+        "filename": "9.3.8_Forensic_Data_Integrity_and_Preservation_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.8_Forensic_Data_Integrity_and_Preservation_[video].txt",
+        "word_count": 753,
+        "has_content": true
+      },
+      "section_header": "Forensic Data Integrity and Preservation",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.8_chunk_2",
+      "content": "Evidence should be captured in the order of volatility, from more volatile to less volatile. The ISOC best practice guide to evidence collection and archiving recommends the following order: First, CPU registers and cache memory—including cache on disk controllers, graphics cards, etc. The contents of nonpersistent system memory, or RAM, including routing table, ARP cache, process table, and kernel statistics. Then, data is stored on persistent mass storage devices like HDDs, SSDs, and flash memory devices, followed by partition and file system blocks, slack space, and free space. Next would be system memory caches, such as swap space, virtual memory, and hibernation files. And finally, user, application, and OS files and directories. Other sources could include remote logging and monitoring data, physical configuration and network topology, and archival media or printed documents.",
+      "summary": "The Order of Volatility emphasizes the importance of collecting digital evidence in a specific sequence, starting with the most volatile data such as CPU registers and RAM, and progressing to less volatile sources like persistent storage devices and user files. This approach ensures that critical information is preserved before it is lost or altered. Key considerations include capturing data from system caches and remote logs, as well as documenting physical configurations and network topologies for comprehensive analysis.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.8",
+        "title": "Forensic Data Integrity and Preservation",
+        "content_type": "video",
+        "filename": "9.3.8_Forensic_Data_Integrity_and_Preservation_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.8_Forensic_Data_Integrity_and_Preservation_[video].txt",
+        "word_count": 753,
+        "has_content": true
+      },
+      "section_header": "Order of Volatility",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.8_chunk_3",
+      "content": "Data acquisition is complicated by the fact that it's more difficult to capture evidence from a digital crime scene than it is from a physical one. For example, some evidence could be lost if a computer system is powered off; on the other hand, other evidence may be unobtainable until after the system has been powered off. Because of this, it's important to know the three states for persistent storage acquisition. Live acquisition means copying the data while the host is still running. This may capture more evidence or more data for analysis and reduce the impact on overall services. Still, the data on the actual disks will have changed, so this method may not produce legally acceptable evidence. It may also alert the threat actor and allow time for them to perform anti-forensics. With static acquisition, the host is shut down normally. If malware is a concern, this method runs the risk that the malware will detect the shutdown process and perform anti-forensics to try to remove traces of itself. If this is the case, static acquisition by pulling the plug instead of powering down may be a solution. This means disconnecting the power at the wall socket (not the hardware power-off button). This is most likely to preserve the storage devices in a forensically clean state, but there's the risk of corrupting data.",
+      "summary": "The Acquisition Integrity section of the CompTIA Security+ course emphasizes the complexities of data acquisition from digital crime scenes, highlighting the importance of understanding the three states of persistent storage acquisition: live, static, and pulling the plug. Live acquisition allows for real-time data capture but risks altering evidence and alerting threat actors, while static acquisition, performed after normal shutdown, may be compromised by malware. Pulling the plug can preserve data integrity but poses a risk of corruption, underscoring the need for careful consideration of methods to ensure legally acceptable evidence collection.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.8",
+        "title": "Forensic Data Integrity and Preservation",
+        "content_type": "video",
+        "filename": "9.3.8_Forensic_Data_Integrity_and_Preservation_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.8_Forensic_Data_Integrity_and_Preservation_[video].txt",
+        "word_count": 753,
+        "has_content": true
+      },
+      "section_header": "Acquisition Integrity",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.8_chunk_4",
+      "content": "Once the target disk has been safely attached to the forensics workstation, data acquisition proceeds as follows: A cryptographic hash of the source disk media is made using either the MD5 or SHA hashing function. A bit-by-bit copy of the source media is made using an imaging utility. A second hash is then made of the image, which should match the original hash of the media. A copy is made of the reference image, validated again by the checksum. All analysis is performed on the copy. This proof of integrity ensures non-repudiation. If the provenance of the evidence is certain, the threat actor identified by analysis of the evidence can't deny their actions. The hashes prove that no modification has been made to the image.",
+      "summary": "In the Proof of Integrity section, the process of data acquisition in digital forensics is outlined, emphasizing the creation of cryptographic hashes (MD5 or SHA) to ensure the integrity of the source disk and its bit-by-bit copy. By validating the hashes before and after imaging, analysts can confirm that the evidence remains unaltered, thus supporting non-repudiation and the reliability of findings against threat actors. This method is crucial for maintaining the provenance of digital evidence in cybersecurity investigations.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.8",
+        "title": "Forensic Data Integrity and Preservation",
+        "content_type": "video",
+        "filename": "9.3.8_Forensic_Data_Integrity_and_Preservation_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.8_Forensic_Data_Integrity_and_Preservation_[video].txt",
+        "word_count": 753,
+        "has_content": true
+      },
+      "section_header": "Proof of Integrity",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.3.8_chunk_5",
+      "content": "That's it for this lesson. In this lesson, we discussed data integrity and preservation. We reviewed the order of volatility that requires that evidence be captured in order of volatility from more volatile to less volatile. We also talked about ensuring acquisition integrity by leveraging the different states of persistent storage acquisition: live acquisition, static acquisition, powered down, and static acquisition, unplugged. Lastly, we discussed how proof of evidence integrity helps to ensure non-repudiation.",
+      "summary": "This lesson covered the critical concepts of data integrity and preservation, emphasizing the importance of capturing evidence in order of volatility. It explored various methods of acquisition integrity, including live and static acquisition in different states, and highlighted the role of proof of evidence integrity in ensuring non-repudiation. These principles are essential for maintaining the reliability and authenticity of digital evidence in cybersecurity investigations.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.3.8",
+        "title": "Forensic Data Integrity and Preservation",
+        "content_type": "video",
+        "filename": "9.3.8_Forensic_Data_Integrity_and_Preservation_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.3.8_Forensic_Data_Integrity_and_Preservation_[video].txt",
+        "word_count": 753,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 5
+}

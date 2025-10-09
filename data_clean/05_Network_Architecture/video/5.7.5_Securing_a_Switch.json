@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "chapter_num": "5",
+    "section_num": "5.7.5",
+    "title": "Securing a Switch",
+    "content_type": "video",
+    "filename": "5.7.5_Securing_a_Switch_[video].txt",
+    "file_path": "data_raw/05_Network_Architecture/5.7.5_Securing_a_Switch_[video].txt",
+    "word_count": 569,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script In this demonstration, we're going to secure access to our network switch. We're using a Cisco Small Business Switch, which has a web interface for access and configuration. We access the switch by typing its IP address, 192.168.254.8, into a web browser. And here's the login page. This is a new switch, so it still has the default user name and password configured of cisco and cisco, which we'll enter and then click Log In. Now, the default user name and password for this device can be found very easily, so you can tell that this switch is not very secure right now. Normally, the first thing you should do with a new network device is change the default user name and password. On this device, we can use the Change Device Password link under Quick Access to do this. This takes us directly to the User Accounts page under Administration. And here's the default user, cisco. Let's first create another user. Click Add. Enter ciscoAdmin for the user name. Enter a strong, complex password. And we want Read/Write Management Access. And click Apply. And we can see the new ciscoAdmin user here. We also want to change the password for the default user. So we'll select the cisco user and click Edit. And again we want to use a complex password. And for this user, let's also change the user level. We'll select Read-Only CLI Access. This way, if someone is able to get into the switch using the default account, they won't be able to change anything. And we'll click Apply. So, the first thing we've done to secure access to our switch is add another admin account with a custom user name and a complex password. We then changed the default user's password and set the user level to read-only. Doing this makes it harder for people to get into our switch here and change the configuration. And this should be the first step you do with any new network device. Now, there's one more important step to take here. And that's to save the changes we've to the startup config. If we don't, as soon as the switch is rebooted, the changes will be lost; we don't want this. So we'll click Save to go to the Copy/Save Configuration page. And here we want to save the contents of the Running configuration to the Startup configuration. And click Apply. Now when the device reboots, it will load our custom configuration. That's it for this demonstration. In this demo, we secured access to our network switch. First we added a new management user with full access. We changed the default user's password. And then we saved our changes to the startup configuration file.",
+  "chunks": [
+    {
+      "chunk_id": "5.7.5_chunk_1",
+      "content": "In this demonstration, we're going to secure access to our network switch. We're using a Cisco Small Business Switch, which has a web interface for access and configuration. We access the switch by typing its IP address, 192.168.254.8, into a web browser. And here's the login page. This is a new switch, so it still has the default user name and password configured of cisco and cisco, which we'll enter and then click Log In.",
+      "summary": "This section focuses on securing a network switch, specifically a Cisco Small Business Switch, by accessing its web interface for configuration. The demonstration highlights the importance of changing default credentials, as the switch initially uses the default username and password of \"cisco.\" Properly securing a switch is crucial for protecting network access and preventing unauthorized use.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.7.5",
+        "title": "Securing a Switch",
+        "content_type": "video",
+        "filename": "5.7.5_Securing_a_Switch_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.7.5_Securing_a_Switch_[video].txt",
+        "word_count": 569,
+        "has_content": true
+      },
+      "section_header": "Securing a Switch",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "5.7.5_chunk_2",
+      "content": "Now, the default user name and password for this device can be found very easily, so you can tell that this switch is not very secure right now. Normally, the first thing you should do with a new network device is change the default user name and password.",
+      "summary": "In the \"Login as the Default User\" section, the importance of changing default usernames and passwords on network devices is emphasized, as these credentials are often easily accessible and pose a significant security risk. This practice is a fundamental step in securing network equipment and preventing unauthorized access. Properly configuring device security settings is crucial for maintaining a robust cybersecurity posture.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.7.5",
+        "title": "Securing a Switch",
+        "content_type": "video",
+        "filename": "5.7.5_Securing_a_Switch_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.7.5_Securing_a_Switch_[video].txt",
+        "word_count": 569,
+        "has_content": true
+      },
+      "section_header": "Login as the Default User",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "5.7.5_chunk_3",
+      "content": "On this device, we can use the Change Device Password link under Quick Access to do this. This takes us directly to the User Accounts page under Administration. And here's the default user, cisco. Let's first create another user. Click Add. Enter ciscoAdmin for the user name. Enter a strong, complex password. And we want Read/Write Management Access. And click Apply. And we can see the new ciscoAdmin user here. We also want to change the password for the default user. So we'll select the cisco user and click Edit. And again we want to use a complex password. And for this user, let's also change the user level. We'll select Read-Only CLI Access.",
+      "summary": "In this section, users learn how to create and manage user accounts on a device, emphasizing the importance of strong, complex passwords for security. The process includes adding a new user with specific access levels, such as Read/Write Management Access, and modifying the default user's password and access level to Read-Only CLI Access. This practical application reinforces key security concepts related to user account management and access control.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.7.5",
+        "title": "Securing a Switch",
+        "content_type": "video",
+        "filename": "5.7.5_Securing_a_Switch_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.7.5_Securing_a_Switch_[video].txt",
+        "word_count": 569,
+        "has_content": true
+      },
+      "section_header": "Create a New User",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "5.7.5_chunk_4",
+      "content": "This way, if someone is able to get into the switch using the default account, they won't be able to change anything. And we'll click Apply. So, the first thing we've done to secure access to our switch is add another admin account with a custom user name and a complex password. We then changed the default user's password and set the user level to read-only. Doing this makes it harder for people to get into our switch here and change the configuration. And this should be the first step you do with any new network device.",
+      "summary": "To enhance security on a network switch, it's crucial to change the default user's password and create a new admin account with a complex username and password. Setting the default account to read-only access prevents unauthorized configuration changes, making it a fundamental step in securing any new network device. This practice helps mitigate risks associated with default credentials and unauthorized access.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.7.5",
+        "title": "Securing a Switch",
+        "content_type": "video",
+        "filename": "5.7.5_Securing_a_Switch_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.7.5_Securing_a_Switch_[video].txt",
+        "word_count": 569,
+        "has_content": true
+      },
+      "section_header": "Change the Default User's Password and User Level",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "5.7.5_chunk_5",
+      "content": "Now, there's one more important step to take here. And that's to save the changes we've to the startup config. If we don't, as soon as the switch is rebooted, the changes will be lost; we don't want this. So we'll click Save to go to the Copy/Save Configuration page. And here we want to save the contents of the Running configuration to the Startup configuration. And click Apply. Now when the device reboots, it will load our custom configuration.",
+      "summary": "In this section, the importance of saving changes to the startup configuration files on a network switch is emphasized to prevent loss of custom settings upon reboot. The process involves navigating to the Copy/Save Configuration page, where the running configuration is saved to the startup configuration. This ensures that the device retains the desired settings after a restart, enhancing network stability and security.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.7.5",
+        "title": "Securing a Switch",
+        "content_type": "video",
+        "filename": "5.7.5_Securing_a_Switch_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.7.5_Securing_a_Switch_[video].txt",
+        "word_count": 569,
+        "has_content": true
+      },
+      "section_header": "Save Changes to the Startup Configuration Files",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "5.7.5_chunk_6",
+      "content": "That's it for this demonstration. In this demo, we secured access to our network switch. First we added a new management user with full access. We changed the default user's password. And then we saved our changes to the startup configuration file.",
+      "summary": "In this demonstration, key security concepts were applied to secure a network switch by creating a new management user with full access privileges and changing the default user's password to enhance security. Additionally, the changes were saved to the startup configuration file to ensure they persist after a reboot. This practical application emphasizes the importance of user management and configuration security in network administration.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.7.5",
+        "title": "Securing a Switch",
+        "content_type": "video",
+        "filename": "5.7.5_Securing_a_Switch_[video].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.7.5_Securing_a_Switch_[video].txt",
+        "word_count": 569,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 6
+}

@@ -1,0 +1,333 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Operating System Hardening
+00:04
+The main purpose of hardening an operating system
+00:07
+is to eliminate as many security risks as possible.
+2. Password Security
+00:10
+If they're not implemented correctly, passwords
+00:13
+can be an operating system vulnerability.
+00:15
+To mitigate this issue, passwords should be complex.
+00:19
+This means that they should be at least 12 characters
+00:21
+long and include capital letters, numbers, and symbols.
+00:24
+In a high-security environment, passwords alone are just
+00:28
+too vulnerable; multi-factor authentication is a must.
+00:32
+Multi-Factor authentication uses two or more
+00:35
+authentication factors, such as something you know,
+00:38
+like a password or a pin; something you have, like a
+00:41
+smart card; or something you are, like a retina scan.
+3. Limit Privilege
+00:45
+Another hardening technique is to
+00:47
+limit operating system exposure.
+00:49
+To do this, you should first ensure that administrative
+00:52
+privileges are only provided to system administrators.
+00:56
+Next, system management should ensure that
+00:58
+users are only given the rights and permissions
+01:01
+required to do their jobs – nothing more.
+01:04
+This concept is called the principle of least privilege.
+4. Limit Software and Services
+01:08
+You should also ensure that only the software used by
+01:10
+administrators and users is installed on your systems.
+01:14
+Removing unnecessary software reduces the attack surface,
+01:18
+giving hackers fewer chances to exploit a system.
+01:21
+For that reason, you should disable
+01:23
+unnecessary or non-essential services.
+01:26
+Unused services often aren't configured
+01:28
+securely or configured at all.
+01:30
+They're attractive to hackers, and
+01:32
+sustained attacks can go unnoticed.
+01:35
+Examples of non-essential services
+01:37
+are TFTP, Telnet, and SNMP.
+01:40
+These are all clear text services.
+01:43
+DNS, ICMP, and NTP are essential protocols and services.
+01:48
+If your system isn't a DNS server,
+01:50
+you'll want to disable the DNS service.
+01:53
+It's good to note that in Windows 10, some of these
+01:56
+services are disabled by default, such as Telnet and TFTP.
+02:00
+Systems should also be protected with security
+02:03
+software, such as antivirus, anti-spyware,
+02:04
+anti-rootkit, and personal or client firewall software.
+02:10
+When you use this type of security software,
+02:12
+ensure that it comes from a trusted publisher
+02:15
+and doesn't conflict with other programs in use.
+5. Baselines
+02:19
+Another aspect of hardening an operating
+02:21
+system is to develop system baselines.
+02:24
+A baseline is a standard applied to systems.
+02:27
+It defines standards for configuration
+02:29
+management, security policies, software and
+02:32
+backup policies, and several other topics.
+02:35
+Developing standard baselines helps ensure that an
+02:37
+organization is working at peak efficiency and security base.
+02:42
+If baselines are appropriately configured and applied, it
+02:45
+becomes fairly easy to detect systems that may be vulnerable
+02:49
+since they're operating outside established standards.
+02:52
+There are several types of baselines to consider.
+02:56
+A configuration baseline establishes the
+02:58
+standard configuration for all systems.
+03:01
+This baseline defines the default system
+03:03
+configuration, including loaded software,
+03:06
+enabled services, and domain connectivity.
+03:09
+Further configuration and changes to the
+03:11
+configuration can be achieved via Group Policies.
+03:15
+A security baseline defines the secure computing
+03:18
+components, such as the security software used to
+03:21
+protect individual systems, that are installed
+03:23
+and configured on your workstations.
+03:26
+Definition updates and changes are all configured
+03:29
+and ready to go as part of the baseline.
+03:31
+In addition, any enterprise hardware such as
+03:35
+firewalls, gateways, and SPAM filters (and their
+03:37
+configurations) are specified as part of this baseline.
+03:41
+A software & use baseline defines acceptable
+03:44
+system use and supported software.
+03:47
+Software managers can control a
+03:49
+user's ability to employ software.
+03:51
+This can also help administrators by keeping track of
+03:54
+use licenses and, potentially, reduce expenditures by
+03:57
+limiting the number of purchased software use licenses.
+04:01
+It also helps define appropriate use policies by defining
+04:05
+how to implement Group Policies to provide allowed services
+04:08
+while preventing unauthorized use of disallowed services.
+04:12
+As a whole, baselines should be reviewed and modified
+04:16
+to reflect the changes organizations make constantly.
+04:19
+When new software or new versions of existing
+04:22
+software are introduced, the baseline must be
+04:24
+changed to reflect the update.
+04:26
+If security policies change, such as the frequency
+04:29
+of password changes or password complexity
+04:32
+requirements, the baseline must be updated again.
+04:35
+Baselines are not static.
+04:37
+They should be thought of as a guideline or practice to
+04:40
+ensure the efficient and safe use of computer systems.
+04:43
+Further, they should reduce the attack surface that
+04:46
+threat actors can exploit to gain access to your system.
+6. Patch Management
+04:50
+The last topic for this lesson is patch management.
+04:53
+Patch management is the process of
+04:55
+managing patches for all of your systems.
+04:59
+A patch management system can provide centralized control.
+05:02
+A common system is Microsoft's patch management product
+05:06
+Windows Software Update Service, or WSUS for short.
+05:10
+Patch management activities include determining
+05:13
+which patches are needed on your systems,
+05:15
+applying the patches, and then auditing for the
+05:18
+successful application of those patches.
+05:20
+Before patches are applied, a small group of deployments
+05:23
+is usually tested, especially for service packs.
+05:27
+If a problem exists with the patch process,
+05:29
+it's much easier to handle a small deployment
+05:32
+than to face a system-wide crisis.
+05:35
+This group is generally comprised of
+05:37
+power users who know how to fix issues.
+05:39
+They're given additional permissions and rights so they can
+05:42
+continue working if something goes wrong with deployment.
+05:46
+Larger organizations may have a lab that represents the
+05:48
+types of systems in use by users throughout the enterprise.
+05:53
+Tests are conducted within the lab and verified
+05:56
+before they're released to the general user community.
+05:59
+A best practice is to create a system restore point before
+06:03
+you patch systems just in case something goes wrong.
+06:06
+Now, sometimes, a patch is overkill, so
+06:09
+we also have hot fixes to choose from.
+06:12
+Hot fixes are quick fixes for problems.
+06:15
+Usually, you don't install the hot fix unless
+06:18
+you have the specific problem it's intended for.
+06:21
+Hot fixes sometimes address a specific customer
+06:23
+situation and may be distributed only to that customer.
+06:28
+Hot fixes are also commonly used to
+06:30
+address freshly discovered security holes.
+06:33
+A patch could also be a temporary quick fix.
+06:36
+Generally, a manufacturer tests patches more than a
+06:39
+hot fix, and patches are designed for wider deployment.
+06:43
+Patches can include hot fixes that the manufacturers
+06:46
+have thoroughly tested for mass deployment.
+06:49
+Patches typically contain fixes for
+06:51
+security holes and discovered system bugs.
+06:54
+As an example, Microsoft releases
+06:56
+security patches once per month.
+06:59
+Service packs are installable packages that include several
+07:03
+patches from the same vendor for various applications.
+07:06
+Service packs usually include patches and hot fixes that
+07:09
+have been tested by the manufacturer for wide deployment.
+07:13
+Before fully deploying the service pack, you'll
+07:16
+usually let a small designated group test it to
+07:19
+make sure it's fully compatible with your system.
+07:21
+But if you have a specific issue, you may want
+07:24
+to install a patch or a hot fix immediately.
+7. Summary
+07:28
+That's it for this lesson.
+07:29
+In this video, we talked about operating system hardening.
+07:32
+First, we discussed the importance of using
+07:34
+secure passwords, limiting administrative
+07:37
+privileges, installing only needed, secure
+07:39
+software, and removing non-essential services.
+07:43
+Next, we discussed the role baselines
+07:45
+play in keeping our systems secure.
+07:47
+We ended this lesson by discussing the
+07:49
+importance of applying the latest patches
+07:51
+and service packs to your systems.

@@ -1,0 +1,141 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Analyze Risks
+00:04
+In this lesson, we're going to discuss risk analysis.
+00:06
+Risk analysis is the practice of determining
+00:09
+which identified threats are most pressing to an
+00:11
+organization and then attaching a potential cost
+00:14
+that can be expected if that threat occurs.
+2. Calculate Risk
+00:16
+There are two general methods for
+00:18
+analyzing and calculating risk.
+00:20
+Quantitative analysis assigns real numbers
+00:22
+to the costs of damages and countermeasures.
+00:25
+It also assigns concrete probability
+00:27
+percentages to risk occurrence.
+00:29
+Qualitative analysis uses scenarios
+00:31
+to identify risks and responses.
+00:34
+Qualitative analysis is the more subjective of the two.
+00:37
+When calculating quantitatively, you want
+00:39
+to consider a risk's impact and likelihood.
+00:41
+What kind of damage can be done, and
+00:43
+what's the chance of it actually happening?
+00:45
+To determine the likelihood of a loss, you might
+00:47
+want to use an annualized rate of occurrence, or ARO.
+00:51
+An ARO is a collection of data gathered from historical
+00:54
+records such as crime statistics, natural disasters,
+00:57
+insurance payouts, and cyber incidence records.
+01:00
+To determine a loss's impact, you want to consider all
+01:03
+associated costs if an unfortunate scenario were to occur.
+01:06
+What would it cost to pay employees during the downtime?
+01:09
+What would it cost to replace the
+01:10
+impacted hardware or software?
+01:12
+Would there be refunds or other
+01:13
+costs associated with user retention?
+01:16
+Single loss expectancy, or SLE, is the amount of
+01:19
+loss expected for any single successful asset attack.
+01:23
+This is a monetary value that describes how much
+01:25
+the incident will cost in terms of lost asset value.
+01:29
+Annual loss expectancy, or ALE, estimates
+01:32
+the annual loss resulting from an incident.
+01:34
+You calculate ALE by multiplying your SLE by your ARO.
+01:39
+This tells you how much potential threats cost each year.
+01:43
+For example, if your asset loses $1,000 for each
+01:46
+incident, and you expect an incident every four years,
+01:49
+the annual cost for that asset would be $250.00.
+3. Risk Illustration
+01:54
+Having a visual representation of risks can
+01:55
+help stakeholders make better assessments.
+01:58
+A risk register provides details of each known
+02:01
+risk, including a risk's category, description,
+02:04
+unique identification number, projected impact,
+02:06
+likelihood of occurrence, and risk response plan.
+02:10
+For better visualization, you could use this information
+02:13
+to create a scatter plot that represents each risk's
+02:16
+possible impact in relation to its overall probability.
+02:19
+A risk matrix, which is also known as a heat
+02:22
+map, illustrates a loss's likelihood and impact.
+02:25
+Notice that the colors in this
+02:26
+example range from cool to hot.
+02:29
+If an occurrence's possibility is rare and
+02:31
+its impact moderate, it gets a low rating.
+02:34
+If its likelihood is high, but the impact is
+02:36
+insignificant, it might end up with a medium rating.
+02:39
+And if the impact is severe and the likelihood
+02:41
+almost certain, it might receive an extreme rating.
+4. Summary
+02:45
+That's it for this lesson.
+02:47
+In this lesson, we discussed risk analysis.
+02:49
+We looked at calculating risks quantitatively
+02:52
+and qualitatively, and we discussed a few ways
+02:54
+to illustrate our findings.

@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "chapter_num": "10",
+    "section_num": "10.7.5",
+    "title": "Creating a Guest Network for BYOD",
+    "content_type": "video",
+    "filename": "10.7.5_Creating_a_Guest_Network_for_BYOD_[video].txt",
+    "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.7.5_Creating_a_Guest_Network_for_BYOD_[video].txt",
+    "word_count": 1489,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script In this demonstration, we're going to look at creating a bring your own device (BYOD) guest wireless network for employees. This can be a very useful if you're an enterprise wireless network administrator. When employees work for an organization, they expect to be able to have internet access for their personal wireless devices so they can check social media, email, and so on. We don't want them to use our standard wireless network because that would be insecure. Instead, we can create an isolated wireless network that has access to the internet but not our internal network. We're going to use this particular vendor's wireless networking equipment. The way you do it with each vendor's wireless equipment will be different, but the same general principals apply. Also keep in mind that your organization should have a policy in place on how they want to create their wireless networks. Before we go too far, we could start configuring some of the things on a different device. For example, we could use our network security device to create a VLAN and handle DHCP for us. It all depends on how your organization wants to configure things and have them managed. Let's continue. For this vendor's equipment, what we need to do is define a guest access service for our BYOD. Then, we need to create a guest wireless LAN. The first thing we need to do is click Networks. We want to choose Create New Network. On this page we decide on a name. I'll call it BYOD, which stands for bring your own device. Now we're going to choose Guest for our network type. When we pick Guest, that network will be preconfigured with certain rules and policies to help protect our other networks. Next, we're going to specify that this network will be VLAN 50. This tags the traffic so that our other network equipment knows how to handle it. Now we need to specify the IP for the BYOD network. I'm going to give it an IP of 192.168.50.1 with a /24 subnet. This can be anything you want, but I like to name things to correlate with the VLAN. So, in this case I made the third octet 50 to match the VLAN. You don't have to, it's just something I do to help me remember that when I see addresses with 50 dot something, it's VLAN 50. This is a Class C private IP range and it'll give us 254 IP addresses that we can use. When I hit Enter, it populated some other settings automatically for me. I have the gateway, the broadcast IP, total IP count, the range, and my subnet mask. I'll scroll down a bit and then come over here and click on Update DHCP Range. This populates a suggested range of addresses that I can use for my DHCP and hand out to the guest. It put in 50.6 to 50.254, which is fine with me. By the way, I do like to leave a few addresses at the beginning of my networks for potential static assignments. So this worked out well. I'll scroll down a bit more and now let's look at our DHCP lease time. By default, it's set to 86,400 seconds. For those of you who don't like math, that's 24 hours. Now, I might want to shorten that. If this is an office setting, perhaps 10 hours is plenty. Just do the math and change the number of seconds to satisfy your lease time preference. My DHCP Gateway is set to automatic. If my Gateway were something different, I could change it, but I'm using the default here. I also have some various Advanced DHCP Options but there's nothing here that we need to configure. Just be aware that you do have some additional options if your organization happens to need them. I'll click on Save here and go to the next step. Now that we have our network, we now need to create a wireless network. To do that, I go to Wireless Networks. I have a regular wireless network called CorpNet but I don't want this being used for personal devices. So I'll create a new one for that. I click on Create Wireless Network. The first thing is to give it a Name or SSID. For that I just name it BYOD to stay consistent. I'll leave it Enabled. By default it's set to be an Open network This is probably not a good idea since the traffic won't be encrypted and others on that network could easily have their traffic captured. I'll change this to WPA Personal and put in a security key here that my BYOD guest will use. I'll check Guest Policy. This will enable extra security options such as dropping broadcast traffic from users' wireless connections. It's recommended that you check this. Down here I said that we were using VLAN 50. This is where we put that in. I'm not going to change any of the other settings. We have Rate and Beacon Controls, MAC Filtering, and we can configure RADIUS MAC Authentication. Once again, we won't configure any of this. I'll click on Save. So here you can see I have my BYOD wireless network in addition to my other wireless network. Now let's look at Guest Control. I'll click on it and here I can see our settings. First thing is to check the box to Enable Guest Portal. Here I can decide what sort of authentication I might want to use. It's set to No authentication. I'll leave it set to the default. I can choose how long someone has access before it times out. 8 hours is set by default but I can change that if I want to. We can use the default landing page our BYOD guest will go to or have it redirected for them. We have other settings such as creating a welcome message or displaying Terms of Service for those using our network. We can customize the portal. This is what the BYOD guest sees when they connect. I can preview what the mobile users see as well, such as what they see on a notebook or desktop system. I can create a custom background image or custom logo and upload them instead of the default ones provided. I have all sorts of things I can change, like text, color, and so on. For Access Control, I can decide what users have access to as soon as they connect as well as after they connect. I currently have three default networks that they're not able to access from the Guest network. I can add other networks if needed, or actually allow them access. I won't make any changes to this. I'll click on Apply Changes. The last thing I want to look at is User Groups. I'll start by clicking on Create New User Group. For name I'll put in BYOD. Now what we're doing here is limiting our users to the amount of bandwidth they're allowed to use. I'm sure you've been to public places and done a speed test only to find that the speed is horrible. Well, this is where the person responsible does this to you. Being greedy with my bandwidth, I'm only going to give my BYOD guests 5 Mbps for download. For upload I'm only going to give them 2 Mbps. I'll click save and you can see the results. By the way, the default is unlimited bandwidth. That's whatever the max is. That's it for this demonstration. In this demo, we created a guest wireless network where users who bring their own devices can connect to the internet.",
+  "chunks": [
+    {
+      "chunk_id": "10.7.5_chunk_1",
+      "content": "In this demonstration, we're going to look at creating a bring your own device (BYOD) guest wireless network for employees. This can be a very useful if you're an enterprise wireless network administrator. When employees work for an organization, they expect to be able to have internet access for their personal wireless devices so they can check social media, email, and so on. We don't want them to use our standard wireless network because that would be insecure. Instead, we can create an isolated wireless network that has access to the internet but not our internal network. We're going to use this particular vendor's wireless networking equipment. The way you do it with each vendor's wireless equipment will be different, but the same general principals apply. Also keep in mind that your organization should have a policy in place on how they want to create their wireless networks.",
+      "summary": "This section focuses on establishing a secure guest wireless network for employees' personal devices in a BYOD environment, emphasizing the importance of isolating this network from the organization's internal systems to maintain security. The demonstration highlights that while the specific setup may vary by vendor, the fundamental principles of creating an isolated network with internet access remain consistent. Additionally, it underscores the necessity of having organizational policies in place to guide the creation and management of wireless networks.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.7.5",
+        "title": "Creating a Guest Network for BYOD",
+        "content_type": "video",
+        "filename": "10.7.5_Creating_a_Guest_Network_for_BYOD_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.7.5_Creating_a_Guest_Network_for_BYOD_[video].txt",
+        "word_count": 1489,
+        "has_content": true
+      },
+      "section_header": "Create a Guest Network for BYOD",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.7.5_chunk_2",
+      "content": "Before we go too far, we could start configuring some of the things on a different device. For example, we could use our network security device to create a VLAN and handle DHCP for us. It all depends on how your organization wants to configure things and have them managed. Let's continue. For this vendor's equipment, what we need to do is define a guest access service for our BYOD. Then, we need to create a guest wireless LAN. The first thing we need to do is click Networks. We want to choose Create New Network. On this page we decide on a name. I'll call it BYOD, which stands for bring your own device. Now we're going to choose Guest for our network type. When we pick Guest, that network will be preconfigured with certain rules and policies to help protect our other networks. Next, we're going to specify that this network will be VLAN 50. This tags the traffic so that our other network equipment knows how to handle it. Now we need to specify the IP for the BYOD network. I'm going to give it an IP of 192.168.50.1 with a /24 subnet. This can be anything you want, but I like to name things to correlate with the VLAN. So, in this case I made the third octet 50 to match the VLAN. You don't have to, it's just something I do to help me remember that when I see addresses with 50 dot something, it's VLAN 50. This is a Class C private IP range and it'll give us 254 IP addresses that we can use. When I hit Enter, it populated some other settings automatically for me. I have the gateway, the broadcast IP, total IP count, the range, and my subnet mask. I'll scroll down a bit and then come over here and click on Update DHCP Range. This populates a suggested range of addresses that I can use for my DHCP and hand out to the guest. It put in 50.6 to 50.254, which is fine with me. By the way, I do like to leave a few addresses at the beginning of my networks for potential static assignments. So this worked out well. I'll scroll down a bit more and now let's look at our DHCP lease time. By default, it's set to 86,400 seconds. For those of you who don't like math, that's 24 hours. Now, I might want to shorten that. If this is an office setting, perhaps 10 hours is plenty. Just do the math and change the number of seconds to satisfy your lease time preference. My DHCP Gateway is set to automatic. If my Gateway were something different, I could change it, but I'm using the default here. I also have some various Advanced DHCP Options but there's nothing here that we need to configure. Just be aware that you do have some additional options if your organization happens to need them. I'll click on Save here and go to the next step.",
+      "summary": "This section covers the configuration of a guest network for Bring Your Own Device (BYOD) environments, emphasizing the creation of a VLAN and DHCP settings to ensure network security. It details the steps to set up a guest wireless LAN, including naming the network, assigning it to VLAN 50, and configuring the IP address range and DHCP lease time. The practical application focuses on establishing a secure guest access service that protects the organization's primary networks while accommodating personal devices.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.7.5",
+        "title": "Creating a Guest Network for BYOD",
+        "content_type": "video",
+        "filename": "10.7.5_Creating_a_Guest_Network_for_BYOD_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.7.5_Creating_a_Guest_Network_for_BYOD_[video].txt",
+        "word_count": 1489,
+        "has_content": true
+      },
+      "section_header": "Define a Guest Network for BYOD",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.7.5_chunk_3",
+      "content": "Now that we have our network, we now need to create a wireless network. To do that, I go to Wireless Networks. I have a regular wireless network called CorpNet but I don't want this being used for personal devices. So I'll create a new one for that. I click on Create Wireless Network. The first thing is to give it a Name or SSID. For that I just name it BYOD to stay consistent. I'll leave it Enabled. By default it's set to be an Open network This is probably not a good idea since the traffic won't be encrypted and others on that network could easily have their traffic captured. I'll change this to WPA Personal and put in a security key here that my BYOD guest will use. I'll check Guest Policy. This will enable extra security options such as dropping broadcast traffic from users' wireless connections. It's recommended that you check this. Down here I said that we were using VLAN 50. This is where we put that in. I'm not going to change any of the other settings. We have Rate and Beacon Controls, MAC Filtering, and we can configure RADIUS MAC Authentication. Once again, we won't configure any of this. I'll click on Save. So here you can see I have my BYOD wireless network in addition to my other wireless network.",
+      "summary": "In this section, the course outlines the process of creating a secure guest wireless network specifically for Bring Your Own Device (BYOD) usage, distinct from the corporate network. It emphasizes the importance of using WPA Personal encryption to protect traffic and recommends enabling guest policies to enhance security by limiting broadcast traffic. Additionally, the configuration involves assigning the network to a specific VLAN and highlights the option for further security measures like MAC filtering and RADIUS authentication.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.7.5",
+        "title": "Creating a Guest Network for BYOD",
+        "content_type": "video",
+        "filename": "10.7.5_Creating_a_Guest_Network_for_BYOD_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.7.5_Creating_a_Guest_Network_for_BYOD_[video].txt",
+        "word_count": 1489,
+        "has_content": true
+      },
+      "section_header": "Create a Guest Wireless for BYOD",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.7.5_chunk_4",
+      "content": "Now let's look at Guest Control. I'll click on it and here I can see our settings. First thing is to check the box to Enable Guest Portal. Here I can decide what sort of authentication I might want to use. It's set to No authentication. I'll leave it set to the default. I can choose how long someone has access before it times out. 8 hours is set by default but I can change that if I want to. We can use the default landing page our BYOD guest will go to or have it redirected for them. We have other settings such as creating a welcome message or displaying Terms of Service for those using our network. We can customize the portal. This is what the BYOD guest sees when they connect. I can preview what the mobile users see as well, such as what they see on a notebook or desktop system. I can create a custom background image or custom logo and upload them instead of the default ones provided. I have all sorts of things I can change, like text, color, and so on. For Access Control, I can decide what users have access to as soon as they connect as well as after they connect. I currently have three default networks that they're not able to access from the Guest network. I can add other networks if needed, or actually allow them access. I won't make any changes to this. I'll click on Apply Changes.",
+      "summary": "The Guest Control section of the CompTIA Security+ course focuses on configuring guest network access, including enabling a guest portal and setting authentication methods. Users can customize the guest experience by adjusting timeout settings, creating welcome messages, and modifying the landing page with personalized branding elements. Additionally, access control options allow administrators to define which networks guests can access, enhancing security while accommodating BYOD (Bring Your Own Device) policies.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.7.5",
+        "title": "Creating a Guest Network for BYOD",
+        "content_type": "video",
+        "filename": "10.7.5_Creating_a_Guest_Network_for_BYOD_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.7.5_Creating_a_Guest_Network_for_BYOD_[video].txt",
+        "word_count": 1489,
+        "has_content": true
+      },
+      "section_header": "Guest Control",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.7.5_chunk_5",
+      "content": "The last thing I want to look at is User Groups. I'll start by clicking on Create New User Group. For name I'll put in BYOD. Now what we're doing here is limiting our users to the amount of bandwidth they're allowed to use. I'm sure you've been to public places and done a speed test only to find that the speed is horrible. Well, this is where the person responsible does this to you. Being greedy with my bandwidth, I'm only going to give my BYOD guests 5 Mbps for download. For upload I'm only going to give them 2 Mbps. I'll click save and you can see the results. By the way, the default is unlimited bandwidth. That's whatever the max is.",
+      "summary": "The User Groups section of the CompTIA Security+ course focuses on managing user access and bandwidth allocation within a network. By creating specific user groups, such as BYOD (Bring Your Own Device), administrators can impose limits on bandwidth usage, ensuring fair distribution of network resources and preventing congestion. This practical application highlights the importance of network management in maintaining performance and security in shared environments.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.7.5",
+        "title": "Creating a Guest Network for BYOD",
+        "content_type": "video",
+        "filename": "10.7.5_Creating_a_Guest_Network_for_BYOD_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.7.5_Creating_a_Guest_Network_for_BYOD_[video].txt",
+        "word_count": 1489,
+        "has_content": true
+      },
+      "section_header": "User Groups",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.7.5_chunk_6",
+      "content": "That's it for this demonstration. In this demo, we created a guest wireless network where users who bring their own devices can connect to the internet.",
+      "summary": "In this demonstration, a guest wireless network was established to allow users with their own devices to securely connect to the internet. This practical application highlights key security concepts such as network segmentation and access control, ensuring that guest users can access the internet without compromising the security of the main network.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.7.5",
+        "title": "Creating a Guest Network for BYOD",
+        "content_type": "video",
+        "filename": "10.7.5_Creating_a_Guest_Network_for_BYOD_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.7.5_Creating_a_Guest_Network_for_BYOD_[video].txt",
+        "word_count": 1489,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 6
+}

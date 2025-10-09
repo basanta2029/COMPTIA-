@@ -1,0 +1,169 @@
+{
+  "metadata": {
+    "chapter_num": "9",
+    "section_num": "9.4.3",
+    "title": "Hardware Clustering",
+    "content_type": "video",
+    "filename": "9.4.3_Hardware_Clustering_[video].txt",
+    "file_path": "data_raw/09_Incident_Response/9.4.3_Hardware_Clustering_[video].txt",
+    "word_count": 1611,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script I'll spend a few minutes talking about clustering. Clustering can be an effective way to implement a disaster-recovery plan as well as a way to improve your productivity. A cluster is a group of interconnected servers, also known as nodes, that appear to be a single system to the operating environment. Although clustering can be done on virtual machines, I'll focus this lesson on the unique characteristics of clustering on physical computers. Hardware clustering provides several benefits. For example, when you use clustering, the throughput and response time are dramatically improved. Since the cluster's nodes appear to be one system, if one node fails, the others in the cluster still provide the services you need and redistribute the workload among the remaining servers. To provide additional performance, more nodes can be added. Theoretically, there's no limit to the number of nodes you can have in your cluster. But you must have software that supports clustering. This software could be built into the operating system itself, such as with Windows Server 2019. In other cases, you may have to purchase a program to help you set up and manage your clusters. With that introduction, I'll show you how clustering works. In a typical clustering implementation, there are at least two nodes. They can be connected in multiple ways in order to act seamlessly with each other. First, since the nodes provide services to the workstations that reside on the production network, the clustered nodes are directly connected to the production network. For example, a user at this workstation can access the services on the clustered nodes through the production network. To increase performance, clustered nodes often have a second network card, allowing them to also be connected to each other through a dedicated network. As you can see here, this network is isolated from the production network. This means that the clustered nodes connected to this dedicated network don't have to compete for bandwidth with the production traffic. When you work with high-availability clusters, this network is also referred to as a heartbeat network. I'll talk more about that in a bit. But, keep in mind that although this is the ideal setup, you don't have to use this second dedicated network. Instead, you could choose to do your clustering over the production network. Depending on the cluster type you choose and the cluster's purpose, the nodes in your cluster could also share a common storage that's accessible through a storage area network, or SAN. When used, a SAN is often connected to the cluster using fiber-channel connections, which are fiber optic. These connections allow the devices to communicate very quickly with the shared storage. In this setup, the shared storage appears to the operating system as if it were storage installed within the server itself. But in reality, both servers share the same disk storage. This has important implications. It means that whenever Server A writes information to the SAN, it's immediately available to Server B and vice versa. When planning your cluster, keep in mind that there are a few different types of clusters you can implement. One commonly used cluster is called a high-availability cluster, or HA cluster. This type of cluster is also known as a failover cluster. The idea behind this specific cluster type is to eliminate downtime when a computer system in the cluster fails. Although the most common size of an HA cluster is two nodes, an HA cluster can have many more. A high-availability cluster typically uses what's known as an active/passive configuration. With this type of configuration, the active server, or primary server, provides the services to the production network while the passive server, or standby server, waits in the background. If the primary server fails, the passive server becomes the new active server and provides the services to the production network. In this type of configuration, the passive node must be a fully redundant instance of the active node and use the same shared storage. This way, any node in the cluster has access to the same data. To monitor when the passive server should take over, HA clusters make sure that the other servers in the cluster are alive by sending what are called heartbeats over a dedicated heartbeat network. For example, Server A, our primary server, continually lets Server B know that it's up and running by sending these heartbeats. If Server A fails, Server B no longer hears a heartbeat coming from Server A and assumes that Server A has gone down. It immediately takes over and becomes the new active server. This is possible because both servers use the same shared storage. Depending on how close together your heartbeat intervals are set, it may take only a few seconds for a passive server to start providing the services that the active server was providing. As such, the user usually notices little to no downtime. But, keep in mind that whatever was in RAM on the failed server is lost. If the server that failed is fixed and brought back online, it becomes the passive server and listens for heartbeats from the current active server. Another type of cluster you can use is called a load-balancing cluster, which works differently from a high-availability cluster. In a load-balancing cluster, all nodes are always active participants. This is known as an active/active configuration. In this type of cluster, all computers share in the processing workload. In a way, you can think of a load-balancing cluster as a type of supercomputer system. In other words, the processing tasks are distributed among all the nodes within the cluster. Companies that provide web server access to a large clientele typically implement load-balancing clusters to assign the many different queries to different nodes. This optimizes the responses to these requests. Let's look at an example. First, notice that instead of using a SAN to provide a common disk storage, each computer has its own disk storage. This isn't a requirement of a load-balancing cluster, but since a SAN can be expensive, some companies might not choose to use them. Still, using a SAN is probably the fastest and most effective way to implement a cluster when feasible. In some cases, load-balancing clusters might also have a separate device known as a load balancer, which is used to determine which cluster node gets the current request. Load balancing uses an algorithm to determine which server in the cluster should service the request. Similar to the example, some implementations use a round-robin approach where Server A gets the first request, Server B gets the second, and Server A gets the third. The systems in a load-balancing cluster can be loosely linked or tightly linked. The tighter the link, the more they act as one computer system. In a loosely linked cluster, each system operates autonomously, but also in conjunction with the other systems at the same time. In a tightly linked system, the systems function as one system called a supercomputing cluster. These systems pool their CPU and storage resources, and they might even pool their memory together so that various processing tasks are distributed between the cluster members. A key thing to remember when you implement clustering is that the more tightly integrated the systems, the more identical the hardware needs to be. If you're using a loosely linked cluster, you can use hardware that's slightly more disparate. For example, you can use servers from different manufacturers. But, to implement a tightly linked cluster, the systems need to be identical. So, they should be from the same manufacturer, the same make and model, same processor, same amount of storage, same amount of RAM, and so on. I don't have time to go into specific clustering implementations on various operating systems. Just be aware that most of your commonly used network operating systems do have some type of clustering solution available, whether it's built into the product itself or whether it's available from a third party. That's it for this lesson. In this lesson, we gave you an overview of how clustering works. We talked about the role of a cluster and several clustering implementations. Then we looked at high-availability and load-balancing cluster types, and we talked about how you create a supercomputing cluster, or tightly linked cluster, from a load-balancing cluster.",
+  "chunks": [
+    {
+      "chunk_id": "9.4.3_chunk_1",
+      "content": "I'll spend a few minutes talking about clustering. Clustering can be an effective way to implement a disaster-recovery plan as well as a way to improve your productivity. A cluster is a group of interconnected servers, also known as nodes, that appear to be a single system to the operating environment. Although clustering can be done on virtual machines, I'll focus this lesson on the unique characteristics of clustering on physical computers.",
+      "summary": "Clustering involves connecting multiple servers, or nodes, to function as a single system, enhancing both disaster recovery and productivity. While applicable to virtual machines, this section emphasizes the distinct features and advantages of clustering in physical computer environments. Understanding clustering is essential for implementing effective security measures and ensuring system resilience.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.4.3",
+        "title": "Hardware Clustering",
+        "content_type": "video",
+        "filename": "9.4.3_Hardware_Clustering_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.4.3_Hardware_Clustering_[video].txt",
+        "word_count": 1611,
+        "has_content": true
+      },
+      "section_header": "Clustering",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.4.3_chunk_2",
+      "content": "Hardware clustering provides several benefits. For example, when you use clustering, the throughput and response time are dramatically improved. Since the cluster's nodes appear to be one system, if one node fails, the others in the cluster still provide the services you need and redistribute the workload among the remaining servers. To provide additional performance, more nodes can be added. Theoretically, there's no limit to the number of nodes you can have in your cluster. But you must have software that supports clustering. This software could be built into the operating system itself, such as with Windows Server 2019. In other cases, you may have to purchase a program to help you set up and manage your clusters. With that introduction, I'll show you how clustering works.",
+      "summary": "Hardware clustering enhances system performance by improving throughput and response times, allowing for seamless service continuity even if one node fails. The remaining nodes redistribute the workload, and additional nodes can be added to scale performance, provided the necessary clustering software is available. This software may be integrated into the operating system, like Windows Server 2019, or require separate purchase for setup and management.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.4.3",
+        "title": "Hardware Clustering",
+        "content_type": "video",
+        "filename": "9.4.3_Hardware_Clustering_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.4.3_Hardware_Clustering_[video].txt",
+        "word_count": 1611,
+        "has_content": true
+      },
+      "section_header": "Clustering Benefits",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.4.3_chunk_3",
+      "content": "In a typical clustering implementation, there are at least two nodes. They can be connected in multiple ways in order to act seamlessly with each other. First, since the nodes provide services to the workstations that reside on the production network, the clustered nodes are directly connected to the production network. For example, a user at this workstation can access the services on the clustered nodes through the production network. To increase performance, clustered nodes often have a second network card, allowing them to also be connected to each other through a dedicated network. As you can see here, this network is isolated from the production network. This means that the clustered nodes connected to this dedicated network don't have to compete for bandwidth with the production traffic. When you work with high-availability clusters, this network is also referred to as a heartbeat network. I'll talk more about that in a bit. But, keep in mind that although this is the ideal setup, you don't have to use this second dedicated network. Instead, you could choose to do your clustering over the production network.",
+      "summary": "Clustering implementation involves at least two nodes that work together to provide seamless services to workstations on a production network. To enhance performance and ensure high availability, these nodes can be connected via a dedicated network, often referred to as a heartbeat network, which isolates cluster communication from production traffic. While this setup is ideal for reducing bandwidth competition, clustering can also be conducted over the production network if necessary.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.4.3",
+        "title": "Hardware Clustering",
+        "content_type": "video",
+        "filename": "9.4.3_Hardware_Clustering_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.4.3_Hardware_Clustering_[video].txt",
+        "word_count": 1611,
+        "has_content": true
+      },
+      "section_header": "Clustering Implementation",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.4.3_chunk_4",
+      "content": "Depending on the cluster type you choose and the cluster's purpose, the nodes in your cluster could also share a common storage that's accessible through a storage area network, or SAN. When used, a SAN is often connected to the cluster using fiber-channel connections, which are fiber optic. These connections allow the devices to communicate very quickly with the shared storage. In this setup, the shared storage appears to the operating system as if it were storage installed within the server itself. But in reality, both servers share the same disk storage. This has important implications. It means that whenever Server A writes information to the SAN, it's immediately available to Server B and vice versa.",
+      "summary": "In the Common Storage section of the CompTIA Security+ course, the focus is on the use of Storage Area Networks (SAN) in clustered environments, where multiple servers share a common storage system. Utilizing fiber-channel connections, SANs enable rapid communication between servers and shared storage, allowing data written by one server to be instantly accessible by others. This setup enhances data availability and collaboration but also necessitates careful security measures to protect shared resources.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.4.3",
+        "title": "Hardware Clustering",
+        "content_type": "video",
+        "filename": "9.4.3_Hardware_Clustering_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.4.3_Hardware_Clustering_[video].txt",
+        "word_count": 1611,
+        "has_content": true
+      },
+      "section_header": "Common Storage",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.4.3_chunk_5",
+      "content": "When planning your cluster, keep in mind that there are a few different types of clusters you can implement. One commonly used cluster is called a high-availability cluster, or HA cluster. This type of cluster is also known as a failover cluster. The idea behind this specific cluster type is to eliminate downtime when a computer system in the cluster fails. Although the most common size of an HA cluster is two nodes, an HA cluster can have many more. A high-availability cluster typically uses what's known as an active/passive configuration. With this type of configuration, the active server, or primary server, provides the services to the production network while the passive server, or standby server, waits in the background. If the primary server fails, the passive server becomes the new active server and provides the services to the production network. In this type of configuration, the passive node must be a fully redundant instance of the active node and use the same shared storage. This way, any node in the cluster has access to the same data. To monitor when the passive server should take over, HA clusters make sure that the other servers in the cluster are alive by sending what are called heartbeats over a dedicated heartbeat network. For example, Server A, our primary server, continually lets Server B know that it's up and running by sending these heartbeats. If Server A fails, Server B no longer hears a heartbeat coming from Server A and assumes that Server A has gone down. It immediately takes over and becomes the new active server. This is possible because both servers use the same shared storage. Depending on how close together your heartbeat intervals are set, it may take only a few seconds for a passive server to start providing the services that the active server was providing. As such, the user usually notices little to no downtime. But, keep in mind that whatever was in RAM on the failed server is lost. If the server that failed is fixed and brought back online, it becomes the passive server and listens for heartbeats from the current active server.",
+      "summary": "High-availability (HA) clusters, also known as failover clusters, are designed to minimize downtime by allowing a standby server to take over services if the primary server fails. Typically configured in an active/passive setup, the active server continuously sends heartbeats to the passive server, which remains ready to assume control using shared storage. This configuration ensures rapid recovery with minimal disruption, although any data in the RAM of the failed server will be lost.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.4.3",
+        "title": "Hardware Clustering",
+        "content_type": "video",
+        "filename": "9.4.3_Hardware_Clustering_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.4.3_Hardware_Clustering_[video].txt",
+        "word_count": 1611,
+        "has_content": true
+      },
+      "section_header": "High-Availability Clusters",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.4.3_chunk_6",
+      "content": "Another type of cluster you can use is called a load-balancing cluster, which works differently from a high-availability cluster. In a load-balancing cluster, all nodes are always active participants. This is known as an active/active configuration. In this type of cluster, all computers share in the processing workload. In a way, you can think of a load-balancing cluster as a type of supercomputer system. In other words, the processing tasks are distributed among all the nodes within the cluster. Companies that provide web server access to a large clientele typically implement load-balancing clusters to assign the many different queries to different nodes. This optimizes the responses to these requests. Let's look at an example. First, notice that instead of using a SAN to provide a common disk storage, each computer has its own disk storage. This isn't a requirement of a load-balancing cluster, but since a SAN can be expensive, some companies might not choose to use them. Still, using a SAN is probably the fastest and most effective way to implement a cluster when feasible. In some cases, load-balancing clusters might also have a separate device known as a load balancer, which is used to determine which cluster node gets the current request. Load balancing uses an algorithm to determine which server in the cluster should service the request. Similar to the example, some implementations use a round-robin approach where Server A gets the first request, Server B gets the second, and Server A gets the third.",
+      "summary": "Load-balancing clusters utilize an active/active configuration where all nodes actively share processing workloads, optimizing response times for multiple client requests, particularly in web server environments. Unlike high-availability clusters, each node can have its own disk storage, although a Storage Area Network (SAN) may enhance performance. Load balancers, often employing algorithms like round-robin, manage the distribution of requests among the nodes to ensure efficient processing.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.4.3",
+        "title": "Hardware Clustering",
+        "content_type": "video",
+        "filename": "9.4.3_Hardware_Clustering_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.4.3_Hardware_Clustering_[video].txt",
+        "word_count": 1611,
+        "has_content": true
+      },
+      "section_header": "Load-Balancing Clusters",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.4.3_chunk_7",
+      "content": "The systems in a load-balancing cluster can be loosely linked or tightly linked. The tighter the link, the more they act as one computer system. In a loosely linked cluster, each system operates autonomously, but also in conjunction with the other systems at the same time. In a tightly linked system, the systems function as one system called a supercomputing cluster. These systems pool their CPU and storage resources, and they might even pool their memory together so that various processing tasks are distributed between the cluster members.",
+      "summary": "Cluster linking in load-balancing systems can be categorized as loosely or tightly linked. Loosely linked clusters operate independently while collaborating, whereas tightly linked clusters function as a single supercomputing entity, pooling CPU, storage, and potentially memory resources to distribute processing tasks efficiently. This distinction is crucial for optimizing performance and resource management in high-demand computing environments.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.4.3",
+        "title": "Hardware Clustering",
+        "content_type": "video",
+        "filename": "9.4.3_Hardware_Clustering_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.4.3_Hardware_Clustering_[video].txt",
+        "word_count": 1611,
+        "has_content": true
+      },
+      "section_header": "Cluster Linking",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.4.3_chunk_8",
+      "content": "A key thing to remember when you implement clustering is that the more tightly integrated the systems, the more identical the hardware needs to be. If you're using a loosely linked cluster, you can use hardware that's slightly more disparate. For example, you can use servers from different manufacturers. But, to implement a tightly linked cluster, the systems need to be identical. So, they should be from the same manufacturer, the same make and model, same processor, same amount of storage, same amount of RAM, and so on. I don't have time to go into specific clustering implementations on various operating systems. Just be aware that most of your commonly used network operating systems do have some type of clustering solution available, whether it's built into the product itself or whether it's available from a third party.",
+      "summary": "In implementing clustering, hardware compatibility is crucial; tightly integrated clusters require identical systems from the same manufacturer, including matching make, model, processor, storage, and RAM. Conversely, loosely linked clusters allow for more diverse hardware configurations, enabling the use of servers from different manufacturers. Most network operating systems offer clustering solutions, either natively or through third-party options, to enhance system reliability and performance.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.4.3",
+        "title": "Hardware Clustering",
+        "content_type": "video",
+        "filename": "9.4.3_Hardware_Clustering_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.4.3_Hardware_Clustering_[video].txt",
+        "word_count": 1611,
+        "has_content": true
+      },
+      "section_header": "Hardware Compatibility",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "9.4.3_chunk_9",
+      "content": "That's it for this lesson. In this lesson, we gave you an overview of how clustering works. We talked about the role of a cluster and several clustering implementations. Then we looked at high-availability and load-balancing cluster types, and we talked about how you create a supercomputing cluster, or tightly linked cluster, from a load-balancing cluster.",
+      "summary": "This lesson provided an overview of clustering, highlighting its role in enhancing system performance and reliability. Key topics included high-availability and load-balancing cluster types, along with practical applications for creating supercomputing clusters from load-balancing configurations. Understanding these concepts is essential for optimizing resource management and ensuring system resilience in cybersecurity environments.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.4.3",
+        "title": "Hardware Clustering",
+        "content_type": "video",
+        "filename": "9.4.3_Hardware_Clustering_[video].txt",
+        "file_path": "data_raw/09_Incident_Response/9.4.3_Hardware_Clustering_[video].txt",
+        "word_count": 1611,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 9
+}

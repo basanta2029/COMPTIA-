@@ -1,0 +1,86 @@
+Security Pro 8.0
+
+8.7.6 IPsec Facts
+
+This lesson covers the following topics:
+
+Remote access architecture
+Internet Protocol Security tunneling
+Transport layer security tunneling
+Remote Access Architecture
+
+Remote access networking means that the user's device does not make a direct cable or wireless connection to the network. The connection occurs over or through an intermediate network.
+
+Historically, remote access used analog modems connecting over the telephone system. These days, most remote access is implemented as a virtual private network (VPN), running over Internet Service Provider (ISP) networks.
+
+With a remote access VPN, clients connect to a VPN gateway on the edge of the private network. This client-to-site VPN topology is the "telecommuter" model, allowing homeworkers and employees working in the field to connect to the corporate network. The VPN protocol establishes a secure tunnel to keep the contents private, even when the packets pass over ISPs' routers.
+
+Remote access VPN
+
+Images © 123RF.com
+Description
+A VPN can also be deployed in a site-to-site model to connect two or more private networks. Whereas remote access VPN connections are typically initiated by the client, a site-to-site VPN is configured to operate automatically. The gateways exchange security information using whichever protocol the VPN is based on. This establishes a trust relationship between the gateways and sets up a secure connection through which to tunnel data. Hosts at each site do not need to be configured with any information about the VPN. The routing infrastructure at each site determines whether to deliver traffic locally or send it over the VPN tunnel.
+
+Site-to-site VPN
+
+Images © 123RF.com
+Description
+A third topology is a host-to-host tunnel. This is a means of securing traffic between two computers where the private network is not trusted.
+
+Several VPN protocols have been used over the years. Legacy protocols, such as the Point-to-Point Tunneling Protocol (PPTP), have been deprecated because they do not offer adequate security. Transport Layer Security (TLS) and Internet Protocol Security (IPsec) are now the preferred options for configuring VPN access.
+Transport Layer Security Tunneling
+
+A transport layer security (TLS) VPN means the client connects to the remote access server using digital certificates. The server certificate identifies the VPN gateway to the client. Optionally, the client can also be configured with its own certificate. This allows for mutual authentication, where both server and client prove their identity to one another. TLS creates an encrypted tunnel for the user to submit authentication credentials. These would normally be processed by a RADIUS server. Once the user is authenticated and the connection is fully established, the VPN gateway tunnels all communications for the local network over the secure socket.
+
+Configuring an OpenVPN server in the OPNsense security appliance
+
+Screenshot courtesy of OPNsense
+Description
+Configuring a server certificate for OpenVPN in the OPNsense security appliance
+
+Screenshot courtesy of OPNsense
+Description
+A TLS VPN can use either TCP or UDP. UDP might be chosen for marginally superior performance, especially when tunneling latency-sensitive traffic such as voice or video. TCP might be easier to use with a default firewall policy. TLS over UDP is also referred to as Datagram TLS (DTLS).
+
+It is important to use a secure version of TLS. The latest version at the time of writing is TLS 1.3. TLS 1.2 is also still supported. Versions earlier than this are deprecated.
+Internet Protocol Security Tunneling
+
+Transport Layer Security is applied at the application level. Internet Protocol Security (IPsec) operates at the network layer of the OSI model (layer 3). This means that it can be implemented without having to configure specific application support and that it incurs less packet overhead.
+
+There are two core protocols in IPsec, which can be applied singly or together, depending on the policy:
+
+Authentication Header (AH) - performs a cryptographic hash on the whole packet, including the IP header, plus a shared secret key (known only to the communicating hosts), and adds this value in its header as an Integrity Check Value (ICV). The recipient performs the same function on the packet and key and should derive the same value to confirm that the packet has not been modified. The payload is not encrypted, so this protocol does not provide confidentiality.
+Encapsulating Security Payload (ESP) can be used to encrypt the packet rather than simply calculating an ICV. ESP attaches three fields to the packet: a header, a trailer (providing padding for the cryptographic function), and an Integrity Check Value. Unlike AH, ESP excludes the IP header when calculating the ICV.
+IPsec can be used in two modes:
+
+Transport mode - is used to secure communications between hosts on a private network. When ESP is applied in transport mode, the IP header for each packet is not encrypted, just the payload data. If AH is used in transport mode, it can provide integrity for the IP header.
+IPsec datagram using AH and ESP in transport mode
+
+Description
+Tunnel mode - is used for communications between VPN sites across an unsecured network. With ESP, the whole IP packet (header and payload) is encrypted and encapsulated as a datagram with a new IP header. AH has no use case in tunnel mode, as confidentiality is usually required.
+IPsec datagram using ESP in tunnel mode
+
+Description
+Configuring a site-to-site VPN using IPsec tunneling with ESP encryption in the OPNsense security appliance
+
+Screenshot courtesy of OPNsense
+Description
+Each host or router that uses IPsec must be assigned a policy. An IPsec policy sets the authentication mechanism and the use of AH/ESP and transport or tunnel mode for a connection between two peers.
+
+IPsec's encryption and hashing functions depend on a shared secret. The secret must be communicated to both peers, who must perform mutual authentication to confirm one another's identity. The Internet Key Exchange (IKE) protocol implements an authentication method, selects which cryptographic ciphers are mutually supported by both peers and performs key exchange. The set of properties is referred to as a security association (SA).
+
+Configuring IKE for certificate-based authentication in the OPNsense security appliance
+
+Screenshot courtesy of OPNsense
+Description
+IKE negotiations take place over two phases:
+
+Phase I establishes the identity of the two peers and performs key agreement using the Diffie-Hellman algorithm to create a secure channel. Two methods of authenticating peers are commonly used:
+Digital certificates - are issued to each peer by a mutually trusted certificate authority to identify one another.
+Pre-shared key (group authentication) - is when the same passphrase is configured on both peers.
+Phase II uses the secure channel created in Phase I to establish which ciphers and key sizes will be used with AH and ESP in the IPsec session.
+There are two versions of IKE. Version 1 was designed for site-to-site and host-to-host topologies and required a supporting protocol to implement remote access VPNs. IKEv2 has some additional features that have made the protocol popular for use as a stand-alone remote access client-to-site VPN solution. The main changes are the following:
+
+Supports EAP authentication methods, allowing, for example, user authentication against a RADIUS server.
+Provides a simple setup mode that reduces bandwidth without compromising security.
+Allows network address translation (NAT) traversal and MOBIKE multihoming. NAT traversal makes it easier to configure a tunnel allowed by a home router/firewall. Multihoming means that a smartphone client with Wi-Fi and cellular interfaces can keep the IPsec connection alive when switching between them.

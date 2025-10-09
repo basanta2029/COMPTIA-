@@ -1,0 +1,28 @@
+Security Pro 8.0
+
+9.4.2 Redundancy Facts
+
+This lesson covers the following topics:
+
+Implement secure network designs
+Manage redundant power options
+Implement Secure Network Designs
+
+The following table describes secure network designs.
+
+Secure Network Designs	Description
+Load balancing	A process that distributes processing among multiple nodes.
+Active/active	Two load balancers working in tandem to distribute network traffic.
+Active/passive	Two load balancers with one actively working and the second in listening mode to take over if the first one becomes unavailable.
+Power scheduling	Power scheduling is used to configure an active redundancy. This sends power to networks when a power facility goes down. Power scheduling prevents total loss of power during catastrophic events.
+Virtual IP (VIP)	An IP address that is not assigned to an endpoint. VIP is used for load balancing. It typically uses NAT IP address assignment.
+Geographic dispersal	The use of multiple locations to store data to mitigate downtime due to location.
+Multipath	A fault-tolerance technique that gives multiple physical paths between a CPU and a mass-storage appliance.
+Manage Redundant Power Options
+
+Redundant power options are vital. A network without power is useless. Common power options found in datacenters include:
+
+Uninterrupted power supply (UPS). A UPS is a stand-alone bank of batteries that allows for the graceful shutdown of network appliances when power goes out.
+Generator. A generator is a large scale device that provides power for an extended period of time. Normally between 24 and 48 hours.
+Dual supply. A dual power supply is common in network appliances like servers and firewalls. It allows for one failure and hot-swapping.
+Managed power distribution unit (PDU). A managed power distribution unit is a rack-mounted unit that distributes power on a large scale such as a data center.

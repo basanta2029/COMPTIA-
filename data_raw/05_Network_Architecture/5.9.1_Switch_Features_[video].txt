@@ -1,0 +1,476 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Switch Features
+00:04
+In this lesson, I'm going to discuss
+00:05
+switches and some of their features.
+00:07
+This isn't meant to be an exhaustive
+00:09
+discussion of switch configurations.
+00:11
+Instead, I'll cover topics that
+00:12
+can affect your network security.
+00:14
+As you probably already know, a switch is a
+00:16
+connectivity device that provides communication
+00:19
+between different network devices.
+00:21
+Switches often use a wired communication medium
+00:24
+such as twisted pair and fiber optic to carry the
+00:26
+signaling to and from their connected devices.
+00:29
+Switches are full-duplex discretionary interconnects
+00:33
+that send information only to the intended recipient.
+00:35
+I'll explain all of this further in this lesson.<br>
+2. How a Switch Works
+00:38
+First, let's talk about how a switch works.
+00:41
+Every device that connects to a network, whether
+00:43
+wired or wireless, has a unique identifier called
+00:46
+a Media Access Control address, or MAC address.
+00:49
+The MAC address is a 48-bit number
+00:51
+separated into six 2-byte numbers.
+00:54
+The first 24 bits represent the device manufacturer.
+00:57
+In this example, 18-66-DA represents Dell, Inc.
+01:02
+The last 24 bits are a random sequential
+01:05
+number assigned by the manufacturer to ensure
+01:07
+that each device has a unique MAC address.
+01:10
+When referencing the OSI model, a MAC
+01:13
+address is a layer 2 address and the data
+01:15
+that traverses the wire is called a frame.
+01:18
+The switch keeps track of the MAC
+01:19
+address to which it's connected.
+01:21
+Inside every switch is a table of MAC addresses
+01:23
+and the port the device is plugged into.
+01:26
+This is called the MAC address table.
+01:28
+As data traverses the switch, it builds this
+01:30
+table based on the frames passing through it.
+01:33
+This process continues until all devices
+01:35
+connected to the switch are accounted for
+01:37
+and the MAC address table is complete.
+01:40
+When the MAC address table is complete, the switch can
+01:42
+send data directly to the appropriate end device since
+01:45
+the table defines which port each device is connected to.<br>
+01:48
+It's also important to know that
+01:50
+switches are full-duplex devices.
+01:52
+This means they can send and receive data simultaneously.
+01:55
+This, along with the data separation by port, means that
+01:58
+the chance of an Ethernet collision happening is reduced
+02:01
+significantly and speed and efficiency are increased.<br>
+3. Unmanaged vs. Managed Switches
+02:05
+Switches are classified as being
+02:07
+either unmanaged or managed.
+02:09
+An unmanaged switch is often found in homes
+02:11
+and small office networks and provides the
+02:13
+ability to connect all your devices.
+02:15
+Unmanaged switches, on the other hand, aren't configurable.
+02:18
+This is just fine for smaller networks that
+02:21
+really don't have a need for much sophistication.
+02:22
+But larger networks do need additional capabilities.
+02:26
+This is where you'll require a managed switch.
+02:28
+Managed switches usually have a web-based or command line
+02:32
+interface that lets you configure how the switch functions.<br>
+02:36
+For example, a switch's configuration tools let
+02:38
+you create and manage virtual LANs, or VLANs.
+02:40
+VLANs segment data into different zones.
+02:44
+This segmentation might be required for such
+02:46
+things as voice, surveillance, and storage.
+02:49
+Or it could simply separate zone data
+02:51
+for additional resiliency and privacy.
+02:54
+Managed switches also support link aggregation, which
+02:57
+provides the ability to combine multiple switch ports
+02:59
+in parallel to increase total available bandwidth.
+03:03
+This is often used when connecting to devices with multiple
+03:06
+NICs that provide things like file and storage services.
+03:09
+You can also configure a switch for port security.
+03:12
+This lets you define things like which devices
+03:14
+and how many can be attached to a single port.
+03:17
+A managed switch has many additional benefits
+03:19
+that go beyond the scope of this course.
+03:22
+But the<br>
+03:22
+basic takeaway here is most organizations
+03:24
+use managed switches since they can be
+03:27
+configured and provide better security.<br>
+4. Switch Aggregation
+03:29
+Another related topic is switch aggregation.
+03:32
+Let's look at that a little closer.
+03:34
+Often, when you create a switching solution, it's necessary
+03:36
+to employ multiple switches throughout a building.
+03:38
+There are several reasons for this.
+03:41
+The most prevalent is the need to
+03:42
+have close proximity to end devices.
+03:45
+Ethernet specifications provide for a maximum
+03:47
+length of 100 meters between a switch and an
+03:49
+endpoint, assuming there are no breaks in the
+03:52
+connection such as a wall plate or patch panel.
+03:55
+Often, we place wiring closets throughout a
+03:57
+building so the 100-meter limit isn't violated.<br>
+04:00
+Normally, an access level switch is placed in the
+04:02
+wiring closet to connect a system that's configured
+04:05
+for VLANs, port security, and voice over IP.
+04:08
+Depending on the number of connections you're dealing
+04:10
+with, you might deploy multiple switches for this purpose.
+04:14
+These switches are then connected to an upstream switch.
+04:17
+The upstream switch is usually
+04:18
+much faster and more efficient.
+04:20
+Often, the connections between the upstream switch and the
+04:23
+access switches are fiber optic, which doesn't have the same
+04:26
+distance limitations as a twisted pair of Ethernet cables.
+04:29
+In addition, fiber-optic connections are much
+04:32
+faster than twisted-pair Ethernet connections.<br>
+5. Layer 2 vs. Layer 3
+04:35
+When you make your decision on the type of
+04:36
+switch to purchase, you'll have to choose
+04:38
+between a layer 2 and layer 3 switch.
+04:40
+While you use both switches to connect end devices
+04:43
+to a network, they each have different features.<br>
+04:46
+For example, as the name implies, a layer 2
+04:48
+switch operates at the second layer of the
+04:50
+OSI model, which is the Data Link layer.
+04:53
+This means the switch understands the connected
+04:55
+end devices' physical or MAC addresses.
+04:57
+At this level, data passing through
+04:59
+switches are known as frames.
+05:01
+The port used to send data to an end device
+05:03
+is determined by that device's MAC address.<br>
+05:06
+A layer 3 switch operates at the third layer
+05:08
+of the OSI model, which is the Network layer.
+05:11
+These types of switches can perform
+05:13
+the same functions as layer 2 switches.
+05:15
+But in addition, a layer 3 switch is
+05:17
+aware of the end device's IP address.
+05:19
+At the Network layer, the data passing
+05:21
+through the switch is known as a packet.
+05:23
+A layer 3 switch is also capable of limited IP
+05:26
+routing, meaning that layer 3 routers are often
+05:29
+used to route packets to and from different VLANs.
+05:33
+In practice, Layer 3 switches aren't
+05:35
+intended for connecting end devices.
+05:37
+Instead, we typically use them for upstream switches.<br>
+6. Switch Security Issues
+05:40
+Now that you understand the basic functions
+05:42
+of a switch, let's discuss switch security.
+05:45
+Just like any network device, threat actors
+05:47
+try to exploit any weakness they can.
+05:49
+Switches are no exception.
+05:51
+Attackers can use a variety of techniques to
+05:53
+compromise switches to gain access to a system.<br>
+05:56
+As such, it's important for system administrators
+05:58
+to take precautions and disable switch functions
+06:01
+that aren't in use and to monitor switch activity.
+06:04
+Three security issues to look out for are MAC
+06:06
+flooding, switch spoofing, and ARP poisoning.
+06:09
+Let's look at each.<br>
+7. MAC Flooding
+06:10
+We went over how a switch maintains a table of MAC
+06:13
+addresses and the ports to which they're connected.
+06:16
+A switch maintains enough memory to
+06:17
+store that data and not much more.
+06:20
+Knowing this, an attacker might try to
+06:22
+flood the switch with bogus MAC addresses.
+06:24
+This pushes the legitimate MAC address
+06:26
+out and fills up the switch's memory.
+06:28
+In effect, this breaks the switch.
+06:30
+When the memory is full, the switch reverts to an open
+06:33
+state where data is sent to all connected devices.
+06:36
+This means that any device connected to the switch
+06:38
+is able to capture all data coming out of it.
+06:40
+After launching a successful MAC flooding attack, a
+06:43
+malicious user can use a packet analyzer to capture
+06:46
+sensitive data being transmitted between computers.
+06:49
+This wouldn't be possible were
+06:50
+the switch operating normally.<br>
+8. Switch Spoofing
+06:52
+Now, let's look at switch spoofing.
+06:54
+As we've already discussed, VLANs are used
+06:56
+in most organizations to segregate data.
+06:58
+Basically, a single network can be broken
+07:00
+into smaller chucks using VLAN segmentation.
+07:03
+While this is a good practice, it can potentially
+07:06
+lead to problems if not done correctly.
+07:08
+An attacker could use a less secure
+07:10
+segment to access a more secure one.
+07:12
+We often configure switches to host multiple VLANs so that
+07:15
+end devices that are connected to the right VLAN can
+07:18
+communicate with other devices on their individual segment.<br>
+07:21
+Switches eventually do need to
+07:23
+communicate with other switches, though.
+07:25
+To do this, the switches must be able to
+07:26
+transfer information across all VLANs.
+07:29
+Someone needs to configure a port as a trunk port, which
+07:32
+is then connected to the receiving switch's trunk port.
+07:35
+By default, trunk ports have access to all VLANs and pass
+07:38
+traffic for multiple VLANs across the same physical link.
+07:42
+The attacker takes advantage of this by
+07:44
+using Dynamic Trunking Protocol messages, or
+07:46
+DTP messages, to spoof itself as a switch.
+07:50
+After they accomplish this, the attacker is able
+07:53
+to capture all data for all the attached VLANs.
+07:56
+One way to prevent a switch spoofing
+07:57
+attack is for you to turn off trunking on
+08:00
+all ports except the ones that require it.
+08:02
+In addition, you should disable DTP on ports that do
+08:05
+require trunking, and manually enable the trunking yourself.<br>
+9. ARP Poisoning
+08:09
+The last switch security issue we'll
+08:10
+discuss is known as ARP poisoning.
+08:13
+Address Resolution Protocol, or ARP, associates a
+08:16
+device's MAC address with the IP address assigned to it.
+08:19
+To aid in this process, an ARP table is created
+08:22
+and stored in a switch's memory for easy lookup.
+08:25
+Knowing this, attackers send commands to the
+08:27
+switch to overwrite the switch's ARP table
+08:29
+contents by replacing a good, known MAC address
+08:32
+with the attacker's device's MAC address.
+08:35
+As a result, data that was intended for the legitimate
+08:37
+device is now sent to the attacker's device.
+08:40
+In many cases, the attacker captures the
+08:42
+data and sends it on to its rightful owner.
+08:44
+This is known as an on-path attack.<br>
+08:47
+ARP poisoning attacks are difficult to mitigate.
+08:49
+If an attacker has access to the internal
+08:51
+network, there's little an administrator can do.
+08:54
+Specialized training might be a good idea
+08:56
+to help you avoid this type of attack.
+08:58
+When you work over the internet, you should
+09:00
+try to use virtual private networks, or VPNs.
+09:02
+VPNs use an encrypted tunnel that largely
+09:05
+blocks your activity from ARP spoofing.<br>
+10. Summary
+09:08
+That's it for this lesson.
+09:09
+This lesson introduced many features
+09:11
+we have available on modern switches.
+09:13
+We discussed how a switch works, how you
+09:15
+can aggregate switches, and the differences
+09:17
+between a layer 2 and a layer 3 switch.
+09:19
+We ended this lesson by discussing three
+09:21
+potential security concerns, which are MAC
+09:23
+flooding, switch spoofing, and ARP poisoning.<br>

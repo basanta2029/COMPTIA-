@@ -1,0 +1,380 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Clustering
+00:04
+I'll spend a few minutes talking about clustering.
+00:06
+Clustering can be an effective way to
+00:08
+implement a disaster-recovery plan as well
+00:10
+as a way to improve your productivity.
+00:12
+A cluster is a group of interconnected
+00:14
+servers, also known as nodes, that appear to be
+00:16
+a single system to the operating environment.
+00:19
+Although clustering can be done on virtual
+00:21
+machines, I'll focus this lesson on the unique
+00:24
+characteristics of clustering on physical computers.
+2. Clustering Benefits
+00:27
+Hardware clustering provides several benefits.
+00:29
+For example, when you use clustering, the throughput
+00:32
+and response time are dramatically improved.
+00:35
+Since the cluster's nodes appear to be one system,
+00:37
+if one node fails, the others in the cluster still
+00:40
+provide the services you need and redistribute the
+00:43
+workload among the remaining servers.
+00:45
+To provide additional performance, more nodes can be added.
+00:49
+Theoretically, there's no limit to the
+00:51
+number of nodes you can have in your cluster.
+00:53
+But you must have software that supports clustering.
+00:56
+This software could be built into the operating
+00:58
+system itself, such as with Windows Server 2019.
+01:01
+In other cases, you may have to purchase a program
+01:04
+to help you set up and manage your clusters.
+01:06
+With that introduction, I'll show you how clustering works.
+3. Clustering Implementation
+01:10
+In a typical clustering implementation,
+01:12
+there are at least two nodes.
+01:14
+They can be connected in multiple ways in
+01:15
+order to act seamlessly with each other.
+01:18
+First, since the nodes provide services to the workstations
+01:21
+that reside on the production network, the clustered nodes
+01:24
+are directly connected to the production network.
+01:26
+For example, a user at this workstation
+01:28
+can access the services on the clustered
+01:30
+nodes through the production network.
+01:33
+To increase performance, clustered nodes often have
+01:35
+a second network card, allowing them to also be
+01:38
+connected to each other through a dedicated network.
+01:41
+As you can see here, this network is
+01:42
+isolated from the production network.
+01:45
+This means that the clustered nodes connected
+01:47
+to this dedicated network don't have to compete
+01:49
+for bandwidth with the production traffic.
+01:52
+When you work with high-availability clusters, this
+01:55
+network is also referred to as a heartbeat network.
+01:57
+I'll talk more about that in a bit.
+01:59
+But, keep in mind that although this is the ideal setup,
+02:02
+you don't have to use this second dedicated network.
+02:05
+Instead, you could choose to do your
+02:06
+clustering over the production network.
+4. Common Storage
+02:09
+Depending on the cluster type you choose and the
+02:11
+cluster's purpose, the nodes in your cluster could
+02:14
+also share a common storage that's accessible
+02:17
+through a storage area network, or SAN.
+02:19
+When used, a SAN is often connected to the cluster
+02:22
+using fiber-channel connections, which are fiber optic.
+02:26
+These connections allow the devices to
+02:27
+communicate very quickly with the shared storage.
+02:30
+In this setup, the shared storage appears
+02:32
+to the operating system as if it were
+02:34
+storage installed within the server itself.
+02:36
+But in reality, both servers share the same disk storage.
+02:40
+This has important implications.
+02:42
+It means that whenever Server A writes information to the
+02:45
+SAN, it's immediately available to Server B and vice versa.
+5. High-Availability Clusters
+02:49
+When planning your cluster, keep in mind that there are
+02:52
+a few different types of clusters you can implement.
+02:55
+One commonly used cluster is called a
+02:57
+high-availability cluster, or HA cluster.
+03:00
+This type of cluster is also known as a failover cluster.
+03:03
+The idea behind this specific cluster type is to eliminate
+03:06
+downtime when a computer system in the cluster fails.
+03:09
+Although the most common size of an HA cluster
+03:11
+is two nodes, an HA cluster can have many more.
+03:15
+A high-availability cluster typically uses
+03:17
+what's known as an active/passive configuration.
+03:20
+With this type of configuration, the active
+03:23
+server, or primary server, provides the services to
+03:26
+the production network while the passive server, or
+03:28
+standby server, waits in the background.
+03:31
+If the primary server fails, the passive server
+03:34
+becomes the new active server and provides the
+03:36
+services to the production network.
+03:39
+In this type of configuration, the passive
+03:41
+node must be a fully redundant instance of the
+03:44
+active node and use the same shared storage.
+03:47
+This way, any node in the cluster
+03:49
+has access to the same data.
+03:51
+To monitor when the passive server should take
+03:53
+over, HA clusters make sure that the other servers
+03:56
+in the cluster are alive by sending what are called
+03:59
+heartbeats over a dedicated heartbeat network.
+04:02
+For example, Server A, our primary server,
+04:05
+continually lets Server B know that it's up
+04:07
+and running by sending these heartbeats.
+04:10
+If Server A fails, Server B no longer hears a heartbeat
+04:13
+coming from Server A and assumes that Server A has gone down.
+04:17
+It immediately takes over and becomes the new active server.
+04:20
+This is possible because both
+04:22
+servers use the same shared storage.
+04:25
+Depending on how close together your heartbeat
+04:26
+intervals are set, it may take only a few seconds
+04:29
+for a passive server to start providing the
+04:31
+services that the active server was providing.
+04:34
+As such, the user usually notices little to no downtime.
+04:38
+But, keep in mind that whatever was
+04:39
+in RAM on the failed server is lost.
+04:41
+If the server that failed is fixed and brought back
+04:44
+online, it becomes the passive server and listens
+04:47
+for heartbeats from the current active server.
+6. Load-Balancing Clusters
+04:50
+Another type of cluster you can use is
+04:52
+called a load-balancing cluster, which works
+04:54
+differently from a high-availability cluster.
+04:57
+In a load-balancing cluster, all
+04:58
+nodes are always active participants.
+05:01
+This is known as an active/active configuration.
+05:04
+In this type of cluster, all computers
+05:06
+share in the processing workload.
+05:08
+In a way, you can think of a load-balancing
+05:10
+cluster as a type of supercomputer system.
+05:12
+In other words, the processing tasks are
+05:14
+distributed among all the nodes within the cluster.
+05:18
+Companies that provide web server access to a large
+05:20
+clientele typically implement load-balancing clusters to
+05:23
+assign the many different queries to different nodes.
+05:26
+This optimizes the responses to these requests.
+05:29
+Let's look at an example.
+05:31
+First, notice that instead of using a SAN to provide a
+05:34
+common disk storage, each computer has its own disk storage.
+05:38
+This isn't a requirement of a load-balancing
+05:39
+cluster, but since a SAN can be expensive,
+05:42
+some companies might not choose to use them.
+05:45
+Still, using a SAN is probably the fastest and most
+05:47
+effective way to implement a cluster when feasible.
+05:50
+In some cases, load-balancing clusters might also have a
+05:54
+separate device known as a load balancer, which is used
+05:56
+to determine which cluster node gets the current request.
+06:00
+Load balancing uses an algorithm to determine which
+06:02
+server in the cluster should service the request.
+06:05
+Similar to the example, some implementations use a
+06:08
+round-robin approach where Server A gets the first request,
+06:12
+Server B gets the second, and Server A gets the third.
+7. Cluster Linking
+06:14
+The systems in a load-balancing cluster
+06:17
+can be loosely linked or tightly linked.
+06:20
+The tighter the link, the more
+06:21
+they act as one computer system.
+06:23
+In a loosely linked cluster, each system
+06:25
+operates autonomously, but also in conjunction
+06:28
+with the other systems at the same time.
+06:30
+In a tightly linked system, the systems function
+06:33
+as one system called a supercomputing cluster.
+06:36
+These systems pool their CPU and storage resources, and they
+06:39
+might even pool their memory together so that various
+06:41
+processing tasks are distributed between the cluster members.
+8. Hardware Compatibility
+06:46
+A key thing to remember when you implement
+06:48
+clustering is that the more tightly integrated the
+06:50
+systems, the more identical the hardware needs to be.
+06:53
+If you're using a loosely linked cluster, you
+06:55
+can use hardware that's slightly more disparate.
+06:57
+For example, you can use servers
+06:59
+from different manufacturers.
+07:01
+But, to implement a tightly linked
+07:02
+cluster, the systems need to be identical.
+07:05
+So, they should be from the same manufacturer,
+07:06
+the same make and model, same processor, same
+07:09
+amount of storage, same amount of RAM, and so on.
+07:12
+I don't have time to go into specific clustering
+07:14
+implementations on various operating systems.
+07:17
+Just be aware that most of your commonly used network
+07:19
+operating systems do have some type of clustering
+07:22
+solution available, whether it's built into the product
+07:25
+itself or whether it's available from a third party.
+9. Summary
+07:29
+That's it for this lesson.
+07:30
+In this lesson, we gave you an
+07:31
+overview of how clustering works.
+07:33
+We talked about the role of a cluster
+07:35
+and several clustering implementations.
+07:38
+Then we looked at high-availability and
+07:38
+load-balancing cluster types, and we talked about
+07:42
+how you create a supercomputing cluster, or tightly
+07:45
+linked cluster, from a load-balancing cluster.

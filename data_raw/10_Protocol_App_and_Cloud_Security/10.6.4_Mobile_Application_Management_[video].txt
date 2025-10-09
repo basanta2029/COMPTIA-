@@ -1,0 +1,193 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Intune Mobile Application Management
+00:04
+All organizations have mobile apps that they like to use.
+00:06
+Due to the different types of device platforms as
+00:09
+well at data security and ownership these apps can
+00:12
+be a challenge to manage.<br>
+00:14
+Mobile Application Management, or MAM, allows
+00:17
+the organization to overcome these issues.
+00:19
+Intune is Microsoft's MAM solution.
+00:22
+MAM in Intune refers to the assortment of management
+00:25
+features that lets the system administrator publish,
+00:28
+push, configure, secure, monitor, and update mobile apps.<br>
+00:32
+Each app in Intune goes through a life cycle.
+00:35
+This cycle is Add, Deploy, Configure, Protect, and Retire.
+00:40
+Intune provides a full range of tools to
+00:42
+help you manage apps during the life cycle.<br>
+00:45
+Intune allows the organization to develop its
+00:47
+own app catalog, create its own self-service
+00:49
+portal, and remotely manage apps.<br>
+2. Creating an App Catalog
+00:52
+There are a lot of apps available
+00:54
+to perform different tasks.
+00:55
+But it's important that you only use approved
+00:58
+apps that your organization has licenses for
+01:00
+and has tested to work with their systems.<br>
+01:03
+An app catalog allows the organization to
+01:05
+define which apps a user can and can't use.
+01:08
+To put together the catalog, the system administrator often
+01:11
+shortened to system admin adds the apps to Intune.
+01:15
+Once added, security policies are
+01:17
+applied to the apps themselves.
+01:18
+But security isn't ensured if you use unapproved
+01:22
+apps to access organizational data and resources.<br>
+01:26
+When adding apps to the catalog, the system admin
+01:28
+can assign them to specific users or groups.
+01:31
+For example, tech support usually doesn't need to use
+01:34
+the finance app that the accounting department uses.
+01:37
+So that app wouldn't show up in their catalog.<br>
+01:40
+One cool feature that was added to Intune
+01:42
+is the ability to blacklist an app.
+01:44
+These are apps that absolutely shouldn't be installed
+01:47
+on a device that's accessing organizational resources.
+01:50
+If the user has one of these apps installed,
+01:52
+they'll receive an error message that they're
+01:54
+unable to access company resources.<br>
+3. Self-Service Portal
+01:57
+In a large organization, it's just not feasible
+01:59
+for the network administrator often shortened to
+02:02
+network admin to manually push apps out to all
+02:05
+the different groups of devices.
+02:07
+But a company can create a self-service portal using Intune
+02:10
+that makes the distribution of apps easier for everyone.<br>
+02:14
+Users can access the portal by using a web link.
+02:17
+The most efficient way, though, is to have
+02:18
+them install the Intune company portal app.
+02:21
+When the user installs the app, they
+02:23
+log in using their work credentials.
+02:25
+The app then allows the user to
+02:26
+access their company's portal.<br>
+02:29
+When an organization adds an app to Intune, the system
+02:31
+admin decides if it's mandatory to install or not.
+02:35
+Intune pushes out mandatory app
+02:36
+installs to devices within 24 hours.<br>
+02:39
+Using the portal makes managing apps
+02:41
+much easier for the system admins.<br>
+4. Remotely Manage Apps
+02:43
+So, there's a lot that goes into
+02:45
+managing the apps for an organization.
+02:47
+That's why Intune is so valuable for
+02:50
+its ease and simplicity.
+02:52
+With users spread all over the world, knowing that you can
+02:55
+remotely manage app installs and usage is a great benefit.<br>
+02:59
+All app types except for the line-of-business
+03:01
+apps automatically update as needed.
+03:04
+Remember that line-of-business apps are
+03:06
+those that someone created internally.
+03:08
+So, those updates are pushed out
+03:10
+manually through the company portal.
+03:12
+Once you load updates to Intune, they
+03:14
+should update themselves within 24 hours.<br>
+03:17
+When an employee leaves the organization, the
+03:20
+system admin needs to ensure that he or she
+03:22
+takes away all access to company resources and
+03:24
+removes any company data on the user's devices.
+03:27
+Intune allows the admin to remotely remove apps and clear
+03:31
+all data from the device without affecting the device itself.<br>
+5. Summary
+03:35
+That's it for now.
+03:36
+In this lesson, we covered the basics of Mobile Application
+03:39
+Management and how you can use Intune to facilitate this.
+03:42
+We looked at how you can create a
+03:44
+catalog of the apps that users need.
+03:46
+Then we covered what a self-service portal is and how
+03:49
+you can use it to make the management of apps easier.
+03:52
+Finally, we reviewed how you can use Intune to remotely
+03:55
+manage apps and even remove apps from user's devices.<br>

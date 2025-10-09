@@ -1,0 +1,329 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Adding SSL to a Website
+00:04
+In this demonstration, we'll
+00:05
+look at using SSL for a website.
+00:07
+We're going to use Windows Server
+00:08
+2022 to configure a website.
+00:10
+We're on this client machine in
+00:12
+Windows 11 with a browser open.<br>
+00:14
+As you can see, we're using HTTP for this website, so
+00:17
+traffic sent between the client and the website is unsecured.
+00:20
+To secure communication between the client and
+00:22
+the website, we can add SSL to the website.
+00:25
+We do this by editing the bindings.
+00:27
+The bindings identify the protocols
+00:29
+that are used on the website.
+00:31
+Currently, we support the HTTP protocol, which uses port 80.
+00:34
+To use SSL, we need to add bindings for HTTPS.<br>
+2. Clarification of Terminology
+00:39
+Before we get into this demo, we need to talk
+00:41
+about the terminology used for SSL and TLS.
+00:45
+For the last few years, there's been a large
+00:47
+push in the IT industry to deprecate TLS versions
+00:49
+1.0 and 1.1 and require all encrypted internet
+00:53
+traffic to use TLS version 1.2 or later.
+00:57
+SSL is the predecessor to TLS.
+01:00
+The last version of SSL, version
+01:01
+3.0, was found to be insecure.
+01:03
+SSL 3.0 was deprecated in 2015 by the IETF in RFC 7568.<br>
+01:10
+If SSL was deprecated in 2015, why do
+01:14
+we still see the SSL acronym everywhere?
+01:17
+You still see websites selling SSL certificates, and
+01:19
+many of Microsoft's own tools still reference SSL
+01:22
+certificates—including tools you'll see in this demo.<br>
+01:25
+The answer is that because the SSL term was
+01:27
+so prevalent at the time it was deprecated,
+01:30
+people are still adjusting to using TLS.
+01:32
+When you hear someone talk about or see documentation
+01:35
+referencing SSL, they are usually talking about TLS.
+01:37
+The SSL protocol hasn't been used on the internet
+01:41
+for years and isn't supported in modern web browsers.
+01:44
+Up-to-date versions of Chrome, Edge, and Firefox
+01:47
+require TLS connections for encryption and won't allow
+01:50
+you to connect to a web server that's trying to use SSL.<br>
+01:53
+Please make a note of this as we go through
+01:55
+this demo and as you get into your IT career.
+01:57
+While the term SSL is still commonly used in
+02:00
+both speech and documentation, the protocol SSL
+02:03
+has been fully replaced by TLS for many years.<br>
+3. Changing from HTTP to HTTPS
+02:06
+We're going to go to the Internet Information
+02:08
+Service Manager, so let's switch over to our server.
+02:11
+Let's go to Start and Server Manager.
+02:13
+In the tools, we'll select IIS Manager.
+02:20
+First, we're going to go down to our default website.
+02:27
+We can right-click the Default Web Site we've created.
+02:30
+Go to edit Bindings.
+02:34
+We can see our HTTP port 80 here.
+02:36
+We'll click Add.<br>
+02:38
+We can switch this to HTTPS.
+02:40
+You can see that it automatically switches to port 443.
+02:44
+Notice that secure communications with this
+02:46
+website use port 443 instead of port 80.
+02:49
+When using SSL, you must also have a
+02:51
+server certificate, or SSL certificate.
+02:54
+The certificate identifies the
+02:56
+server and validates its identity.
+02:58
+In this case, we don't currently have a certificate
+03:00
+set up, so we're going to click Cancel and Close.
+03:03
+We'll go to our server and go to Server Certificates.<br>
+03:10
+Now, if our website were available on the
+03:11
+internet, we'd create a certificate request here
+03:14
+and send that request to a well-known public key
+03:16
+infrastructure, or PKI, such as DigiCert.
+03:19
+When that request was returned, we'd use this
+03:22
+complete certificate request option to import
+03:24
+the completed certificate onto our server.
+03:27
+In this demonstration, we're going to
+03:28
+use Create Self-Signed Certificate.
+03:29
+The self-signed certificate gives
+03:32
+us a certificate that we can use.
+03:34
+However, clients won't automatically
+03:36
+trust the certificate that we use.
+03:38
+We'll see how this works later.
+03:39
+We'll enter a name for the certificate.
+03:44
+And we'll call it Cert 2022 and click OK.<br>
+03:50
+You can see our certificate here.
+03:51
+With this certificate created, we'll go back to our
+03:53
+Default Web Site, right-click, Edit Bindings &gt; Add &gt; HTTPS.
+04:10
+It switches to the 443.
+04:11
+HTTP/2 is how semantics flow over TCP connections.
+04:16
+Most browsers support HTTP/2, so
+04:18
+disabling this may not be needed.
+04:20
+OCSP Stapling checks to see if a certificate
+04:23
+is revoked and has been an alternative to the
+04:26
+Certificate Revocation List (CRL) Protocol.
+04:29
+We'll leave both of those unchecked for now.
+04:31
+We're going to go down, and we
+04:32
+can see our Cert 2022 right here.
+04:35
+Select it and click OK and Close.<br>
+4. Test HTTPS
+04:39
+That certificate's created.
+04:41
+Now, we can go over to our client machine and test this out.
+04:44
+We're back on our Windows 11 client machine.
+04:47
+We need to put https:// in front
+04:50
+of the address and hit enter.
+04:52
+The first message we get is that there's a
+04:54
+problem with the website's security certificate.
+04:57
+We started to use HTTPS, but our computer
+04:59
+recognized that the certificate wasn't
+05:01
+issued by a trusted certificate authority.
+05:04
+In other words, the server has no proof, other
+05:06
+than its own words, to verify its identity.<br>
+05:09
+In this case, we know who the server is, so we can
+05:11
+continue to the website and accept the certificate.
+05:14
+Notice that we're accessing the website.
+05:16
+The URL is HTTPS.
+05:17
+Let's go ahead and click Continue.
+05:20
+The message told us there was a problem
+05:22
+with the certificate, but we're still
+05:23
+using HTTPS to connect to the website.
+05:26
+In this case, we're giving the user the option of
+05:29
+using HTTPS or HTTP when communicating with our server.
+05:33
+A more likely example is to require
+05:35
+SSL for certain communications.<br>
+05:37
+In this case, we're going to require SSL for the
+05:39
+entire website, so a connection won't be granted
+05:42
+unless the client and the server are both using SSL.
+05:45
+To do this, we're going to go back to our web
+05:47
+server, to Internet Information Services Manager.<br>
+5. Require SSL for Entire Website
+05:50
+We're going to click the Default Web Site.
+05:52
+Go to SSL Settings.
+05:54
+We're going to tell it to Require SSL.
+05:56
+We'll check the box and hit Apply to save those changes.
+06:02
+Now, we can go back to the client.<br>
+06:04
+First, let's try to access the website using just HTTP.
+06:07
+We'll just go ahead and take out the S.
+06:09
+That's all we have to do.
+06:11
+Hit Enter.
+06:12
+We get this error that says access is denied.
+06:15
+Now, let's go ahead and put the S back.
+06:18
+It's basically denying us unless we're using
+06:20
+an SSL certificate with a secure connection.
+06:23
+You can see it went ahead and let us back in.
+06:25
+The website requires SSL.<br>
+06:27
+We were trying to use HTTP, but it won't let us.
+06:30
+Now that we're using HTTPS, we can access the website
+06:33
+because the client and the server are both using SSL.
+06:37
+In this example, we've required SSL on the
+06:39
+entire website, meaning that any communication
+06:42
+to the website must use SSL or be denied.
+06:45
+It's unlikely that you may require SSL
+06:47
+only for specific parts of the website.<br>
+06:50
+Today, it's recommended always to use HTTPS with a
+06:53
+public-facing website, regardless of whether it's a
+06:56
+basic website or one used for credit card purchases.
+06:59
+By only using HTTP, hackers have easy
+07:02
+access to view traffic in plain text.<br>
+6. Summary
+07:05
+That's it for this demo.
+07:06
+We've gone over how to configure SSL
+07:07
+on a website using Windows Server 2022.
+07:11
+We've also clarified that SSL as a protocol is no longer
+07:14
+used and has been fully replaced by TLS, even though the term
+07:17
+SSL is still widely used in common speech and documentation.<br>

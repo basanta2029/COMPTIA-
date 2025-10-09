@@ -1,0 +1,250 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Automation Overview
+00:06
+Think about the chores you do every day, like
+00:08
+washing your clothes or doing the dishes.
+00:10
+You could do these things by hand if you
+00:12
+wanted, but it would take longer and probably be
+00:14
+less effective than doing them with a machine.
+00:16
+The process of having machines assist human
+00:19
+labor is called automation, and a similar
+00:21
+mindset is used in many kinds of computing.
+00:23
+In this lesson, I'm going to cover a variety of facts about
+00:26
+automation so you can have a better idea of how this works.<br>
+2. DevSecOps
+00:30
+The term Development, Security, and Operations
+00:33
+is more commonly referred to as DevSecOps.
+00:36
+This is the philosophy in which everyone in an
+00:38
+organization is responsible for their system's security.
+00:41
+This means that everyone should implement
+00:43
+security decisions in the same way that
+00:46
+development and operation decisions are made.
+00:48
+If everyone in a company becomes better at
+00:51
+security, the entire organization benefits,
+00:53
+and customers have greater software assurance.<br>
+00:56
+While this might take a while to set up initially,
+00:59
+it eventually streamlines the process for everyone
+01:02
+and leads to lower costs and development times.
+01:05
+During the software development process,
+01:07
+engineers constantly check each other's work and
+01:09
+test the software for bugs and vulnerabilities.
+01:12
+In this way, fewer vulnerabilities make their way into
+01:15
+the final product, which means that we end up investing
+01:17
+less time and money into fixing things post-release.<br>
+3. Workflow Orchestration
+01:21
+In a musical orchestra, there are many different instruments
+01:24
+that are brought together to create something wonderful.
+01:27
+Members follow what's written on their music sheets and
+01:29
+the real-time directions given to them by the conductor.
+01:32
+Just like a musical orchestra, workflows can
+01:35
+be orchestrated to make them as efficient as
+01:37
+possible so that they produce the best results.<br>
+01:41
+A workflow refers to a collection of tasks
+01:43
+that are performed in a logical sequence.
+01:45
+Orchestration means that you plan these tasks in
+01:48
+such a way that they're as efficient as possible.<br>
+01:51
+For example, you can orchestrate different
+01:52
+parts of your workflow, including the
+01:54
+development, quality assurance, and security.
+01:57
+Orchestration often incorporates the use of tools that
+02:00
+automatically complete certain tasks in a sequence.<br>
+4. SOAR
+02:03
+To help with workflow orchestration, many companies
+02:06
+are using automated cybersecurity solutions that are
+02:09
+able to quickly identify and resolve potential attacks.
+02:12
+One of these solutions is Security Orchestration,
+02:15
+Automation, and Response, which is known by the acronym SOAR.<br>
+02:19
+SOAR refers to a collection of software
+02:22
+programs that allow an organization's security
+02:24
+team to collect various inputs they can monitor.
+02:27
+The point of SOAR is to replace tasks that are
+02:30
+repetitive and done manually with automated workflows.
+02:34
+These systems automatically flag security incidents
+02:37
+and respond to them in a predetermined way.<br>
+02:39
+This means that these incidents are caught earlier.
+02:42
+This also frees up security analysts to spend their time
+02:45
+and attention on only the most advanced security threats.
+02:48
+For example, using a firewall application, SOAR
+02:51
+can automatically detect a brute-force login
+02:54
+attack and block the attacker's IP address.<br>
+5. Continuous Integration
+02:57
+Another orchestration technique we see is
+02:59
+known as continuous integration, or CI.
+03:02
+When you work on a software development team, you often
+03:04
+have multiple people contributing to the same project.
+03:07
+The practice of continuous integration means
+03:10
+that you automate all integration changes made by
+03:13
+these contributors back into a shared mainline.<br>
+03:16
+In general, there's a central repository where all
+03:19
+code changes are merged into a single file that's
+03:21
+used to test the current build's effectiveness.
+03:24
+Under this strategy, developers try to merge their
+03:27
+changes back to the main branch as often as possible.
+03:30
+The new changes are then automatically tested to make sure
+03:33
+they don't break the application when they're integrated.
+03:35
+This can greatly streamline the development process
+03:38
+because developers don't need to manually discuss
+03:41
+the changes they make with the rest of the team.
+03:44
+This also cuts down on overhead costs and lets developers
+03:47
+focus on the code and not on a complex web of communication.<br>
+6. Continuous Delivery and Deployment
+03:51
+Continuous delivery is like an
+03:53
+extension of continuous integration.
+03:55
+It automatically deploys all the changes
+03:58
+coders make into a production environment.
+04:00
+You have both an automated testing process and
+04:02
+an automated release process that you can set to
+04:05
+occur at whichever interval you feel is best.<br>
+04:08
+Continuous deployment goes a step
+04:10
+further than continuous delivery.
+04:13
+Continuous deployment means that any change
+04:15
+that goes through all the production pipeline
+04:17
+stages is automatically released to customers.
+04:20
+There's no human intervention in this process, and
+04:22
+only if the change fails one of the tests along the
+04:25
+way is it prevented from being pushed out.
+04:27
+This has the potential to create an extremely streamlined
+04:30
+process and quicker responses to customer feedback.<br>
+7. Summary
+04:34
+That's it for this lesson.
+04:35
+In this lesson, we first discussed DevSecOps and
+04:38
+explained how this philosophy adds security
+04:40
+measures to every step of the development process.
+04:43
+Next, we discussed workflow orchestration and showed how it
+04:46
+can help the development process run more smoothly with all
+04:49
+the different elements aligned in the most efficient way.
+04:52
+A big part of this is automating whichever
+04:54
+elements can possibly be automated.<br>
+04:57
+We also introduced you to some tools to help
+04:59
+in your orchestration, including SOARS, which
+05:01
+lets the security team automatically collect
+05:03
+data to help them identify security threats.
+05:06
+And finally, we discussed how continuous integration
+05:09
+lets you automate the integration of changes from
+05:11
+multiple developers into a central staging area.
+05:14
+Lastly, we showed that you can use continuous
+05:17
+deployment to ensure changes are automatically deployed
+05:20
+to a production environment and pushed out to end users.<br>

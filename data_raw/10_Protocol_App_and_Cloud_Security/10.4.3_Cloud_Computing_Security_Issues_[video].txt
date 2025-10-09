@@ -1,0 +1,270 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Cloud Computing Security Issues
+00:04
+Let's talk about cloud computing security issues.
+00:07
+The benefits offered by cloud computing—"the ability
+00:09
+to use applications, platforms, and infrastructure as
+00:12
+needed, and not use them when you don't—"is attractive.
+00:15
+However, security is a key issue.
+2. Cloud Security Considerations
+00:18
+In a traditional system, you secure data behind
+00:20
+layer after layer of security
+00:22
+mechanisms—"firewalls, ACLs, encryption, et cetera.
+00:26
+And even after all that, it's still a
+00:28
+challenge to keep your network safe.
+00:30
+Add in the cloud component, and now all that data is being
+00:33
+sent across the internet to a third-party organization who
+00:36
+also needs to maintain their own system security.
+00:40
+Ultimately, the decision to utilize a cloud
+00:42
+provider comes down to a partnership of trust.
+00:45
+The cloud computing service provider has to ensure
+00:48
+the security and privacy of your information.
+00:51
+Security is part of the service they provide.
+00:53
+However, you, as a security administrator, are still
+00:57
+responsible for protecting your company's data.
+01:00
+One of the key things you need to remember is that
+01:02
+industry and government regulations created to protect
+01:05
+personal and business information still apply.
+01:08
+Even though the data is being stored by the cloud
+01:11
+computing provider, you're still responsible.
+01:14
+Whenever an organization is evaluating a move to the
+01:16
+cloud, I always tell them that they need to approach the
+01:19
+process of picking a cloud service provider in the same
+01:22
+way they would buying a used car from a dealership.
+01:25
+A used car may look great on the surface, but what you
+01:28
+really need to be concerned with is what's under the hood.
+01:31
+Take the same approach when
+01:32
+selecting a cloud service provider.
+01:34
+Let's go over some of the key security considerations you
+01:37
+need to keep in mind if you use a cloud service provider.
+3. Trust the Provider
+01:40
+First, there's an issue of trust.
+01:42
+You have to trust that your cloud service
+01:44
+provider is good at information security.
+01:47
+If your provider hasn't done a good job securing
+01:49
+their environment, you could be in trouble.
+01:52
+You can insist that the cloud services
+01:53
+provider implement specific security
+01:56
+measures, but you can't physically make them.
+4. Security Monitoring
+01:59
+In addition, there's a monitoring issue.
+02:01
+It's difficult to monitor security issues when your
+02:04
+environment is provided by a cloud service provider.
+02:07
+You're not on site, so you don't know
+02:09
+what security issues they're facing.
+02:11
+You don't see the midnight attack
+02:12
+that they had to fight off last night.
+02:14
+The cloud service provider probably doesn't
+02:16
+want to let you know about it because they're
+02:18
+afraid you might terminate their services.
+02:21
+Likewise, it's difficult to measure a cloud
+02:23
+provider's degree of competence with information
+02:26
+security because they probably don't want to
+02:28
+expose their infrastructure to customers.
+02:31
+Therefore, as we talked about with monitoring,
+02:33
+it's hard to know how things are really going
+02:35
+with your cloud computing environment.
+02:37
+All you see really is the user interface.
+5. Authentication, Partitioning, and Updates
+02:40
+Another thing to consider is authentication.
+02:43
+Make sure that the cloud service provider
+02:45
+authenticates everyone who's going to use the service.
+02:48
+Don't choose the cloud service
+02:49
+provider if they allow free access.
+02:52
+The next key thing to look for is partitioning.
+02:54
+In other words, they make sure that your
+02:56
+information and your data is kept completely
+02:59
+separate from other customers' information and data.
+03:02
+You don't want a fellow cloud computing
+03:04
+customer gaining access to your data.
+03:07
+Within your organization, make sure that your individual
+03:10
+users only have access to the applications that they need.
+03:14
+Do not allow them to choose whatever they want to use.
+03:17
+One way to do this is to use a
+03:19
+Cloud Access Security Broker (CASB).
+03:21
+A CASB is a software tool or a service that sits
+03:26
+between an organization and a cloud service provider.
+03:29
+Its job is to make sure that all communication and
+03:32
+access to the cloud service provider complies with
+03:35
+the organization's security policies and procedures.
+03:39
+For example, it might make sure devices connecting to the
+03:42
+cloud meet certain security standards, such as full-device
+03:45
+encryption, up-to-date malware protection, et cetera.
+03:49
+The next key thing to look for is updating.
+03:51
+Make sure that the cloud service provider
+03:53
+maintains a rigorous patch management program
+03:56
+to ensure that the systems are updated.
+03:59
+This will help protect your
+04:00
+information from potential exploits.
+6. Processes, Policies, and Procedures
+04:03
+After that, check out their processes.
+04:05
+A good cloud computing service provider
+04:07
+should have processes, policies, and
+04:09
+procedures in place to handle various events.
+04:13
+These processes, policies, and procedures should
+04:15
+include everything, from something as simple as
+04:18
+requesting access to a new application or something
+04:20
+as critical as dealing with a major security breach.
+04:24
+When you're evaluating a company, ask the company for
+04:27
+a copy of these policies and procedures so you can see
+04:29
+what they are going to do if a certain event happens.
+04:33
+In addition, verify that the cloud service provider has
+04:36
+policies and procedures in place for monitoring security
+04:39
+logs, monitoring unusual behavior, and performing the
+04:42
+various tasks required to keep their system safe.
+7. Encryption and Probing
+04:46
+Next, make sure that they use some form of encryption to
+04:49
+ensure that the data passing between your organization
+04:51
+and their service is encrypted and can't be sniffed.
+04:55
+Most likely, the data will pass through the
+04:57
+untrusted network connection that is the internet.
+05:00
+Secure data transmission is critical.
+05:03
+Last, the cloud computing service provider
+05:05
+should probe their system on a regular basis.
+05:08
+They should contract with a third party
+05:10
+whose expertise is breaking into systems.
+05:13
+The third party should probe the cloud computing service
+05:15
+to see if there are any weaknesses that can be exploited.
+8. Summary
+05:19
+Cloud services are here to stay.
+05:21
+No matter the organization you work for, they are
+05:23
+probably going to use some type of cloud service.
+05:26
+This is because cloud services are
+05:28
+very cost-effective and convenient.
+05:30
+However, with convenience comes risk.
+05:32
+And it's your job as a security professional
+05:34
+to identify those risk, account for them, and
+05:37
+minimize them as much as possible.

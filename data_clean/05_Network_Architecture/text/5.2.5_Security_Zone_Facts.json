@@ -1,0 +1,84 @@
+{
+  "metadata": {
+    "chapter_num": "5",
+    "section_num": "5.2.5",
+    "title": "Security Zone Facts",
+    "content_type": "text",
+    "filename": "5.2.5_Security_Zone_Facts_[text].txt",
+    "file_path": "data_raw/05_Network_Architecture/5.2.5_Security_Zone_Facts_[text].txt",
+    "word_count": 600,
+    "has_content": true
+  },
+  "full_content": "Security Pro 8.0 This lesson covers the following topics: Security zones Security zone networks Common security zones Security Zones Security zones are portions of the network or system that have specific security concerns or requirements. All devices with the same zone have the same security access and security protection needs. These zones are often separated by a traffic control device, such as a firewall or a router, that filters incoming and outbound traffic. For example, you can define a zone that includes all hosts on your private network protected from the internet. You can also define a zone within your network for controlled access to specific servers that hold sensitive information. Security Zone Networks Network Type Description Wireless\tA wirelessly broadcasted network is used on most internal networks so that internal users do not require a physical connection to a router or switch. Guest\tA guest network at an organization often grants internet access only to guest users, but it also has some type of firewall to regulate that access. There could be limited internal resources made available on a guest network. Normally, it is just a way for guests to access the internet without being allowed on the intranet or internal network. Honeynet\tA honeynet is a special network created to trap potential attackers. Honeynets have vulnerabilities that lure attacks so that you can track their actions and protect your real network. Honeynets can generate extremely useful security information. Ad hoc\tAn ad hoc network is a decentralized network that allows connections without a traditional base station or router. It allows users to connect two or more devices directly to each other for a specific purpose. Common Security Zones Zone Description Screened subnets A screened subnet is used as a public-facing accessible network. It acts as a buffer and a barrier to your internal production network, which is accessible from the internet. A screened subnet can be configured using either one or two firewalls and acts as the middleman between the internet and your internal network. For example, a screened subnet is often used to allow employees access to critical network components, such as email servers, VPN connections, and internal web servers, from outside the company. Screened subnets are also used to provide customer access to a company’s products, such as software. To do this, the firewall allows traffic from the internet into the screened subnet and enables those resources to access resources on the production network. The servers placed in the screened subnet are typically configured as a bastion host. A bastion host is a server that’s specifically designed and configured to withstand attacks. In general, they are specific-purpose systems that host a single application and are hardened to resist attacks. Intranet\tAn intranet is a private network (LAN) that employs internet information services for internal use only. For example, your company network might include web servers and email servers that are used by company employees. Extranet\tAn extranet is a privately controlled network distinct from the intranet but located between the internet and a private LAN. An extranet is often used to grant resource access to business partners, suppliers, and even customers outside of the organization. Wireless\tA wireless zone is a broadcasted network connection used within an organization. Users do not need a physical connection to a network port to connect to the intranet or internal resources. Instead, they use a wireless connection on their device to connect to a wireless access point.",
+  "chunks": [
+    {
+      "chunk_id": "5.2.5_chunk_1",
+      "content": "Security Pro 8.0",
+      "summary": "The CompTIA Security+ course, Security Pro 8.0, introduces foundational cybersecurity concepts, emphasizing the importance of protecting networks, devices, and data from threats. Key topics include risk management, threat detection, incident response, and compliance with security policies. Practical applications involve implementing security measures, conducting vulnerability assessments, and understanding the role of security frameworks in organizational defense strategies.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.2.5",
+        "title": "Security Zone Facts",
+        "content_type": "text",
+        "filename": "5.2.5_Security_Zone_Facts_[text].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.2.5_Security_Zone_Facts_[text].txt",
+        "word_count": 600,
+        "has_content": true
+      },
+      "section_header": "Introduction",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "5.2.5_chunk_2",
+      "content": "This lesson covers the following topics: Security zones Security zone networks Common security zones Security Zones Security zones are portions of the network or system that have specific security concerns or requirements. All devices with the same zone have the same security access and security protection needs. These zones are often separated by a traffic control device, such as a firewall or a router, that filters incoming and outbound traffic. For example, you can define a zone that includes all hosts on your private network protected from the internet. You can also define a zone within your network for controlled access to specific servers that hold sensitive information. Security Zone Networks",
+      "summary": "This lesson introduces the concept of security zones, which are designated areas within a network or system that share similar security requirements and access controls. It emphasizes the importance of traffic control devices, like firewalls and routers, in separating these zones to manage and filter traffic effectively. Practical applications include creating zones for private networks and controlled access to sensitive servers, enhancing overall network security.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.2.5",
+        "title": "Security Zone Facts",
+        "content_type": "text",
+        "filename": "5.2.5_Security_Zone_Facts_[text].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.2.5_Security_Zone_Facts_[text].txt",
+        "word_count": 600,
+        "has_content": true
+      },
+      "section_header": "5.2.5 Security Zone Facts",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "5.2.5_chunk_3",
+      "content": "Network Type Description Wireless\tA wirelessly broadcasted network is used on most internal networks so that internal users do not require a physical connection to a router or switch. Guest\tA guest network at an organization often grants internet access only to guest users, but it also has some type of firewall to regulate that access. There could be limited internal resources made available on a guest network. Normally, it is just a way for guests to access the internet without being allowed on the intranet or internal network. Honeynet\tA honeynet is a special network created to trap potential attackers. Honeynets have vulnerabilities that lure attacks so that you can track their actions and protect your real network. Honeynets can generate extremely useful security information. Ad hoc\tAn ad hoc network is a decentralized network that allows connections without a traditional base station or router. It allows users to connect two or more devices directly to each other for a specific purpose. Common Security Zones",
+      "summary": "The CompTIA Security+ course outlines various network types within security zones, including wireless networks for internal users, guest networks that provide limited internet access while maintaining firewall protections, and honeynets designed to attract and analyze potential attackers. Additionally, ad hoc networks enable direct device connections without a central router, facilitating specific temporary communications. Understanding these network types is crucial for implementing effective security measures and managing access within an organization's infrastructure.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.2.5",
+        "title": "Security Zone Facts",
+        "content_type": "text",
+        "filename": "5.2.5_Security_Zone_Facts_[text].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.2.5_Security_Zone_Facts_[text].txt",
+        "word_count": 600,
+        "has_content": true
+      },
+      "section_header": "The following table lists the types of networks found in your security zones:",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "5.2.5_chunk_4",
+      "content": "Zone Description Screened subnets A screened subnet is used as a public-facing accessible network. It acts as a buffer and a barrier to your internal production network, which is accessible from the internet. A screened subnet can be configured using either one or two firewalls and acts as the middleman between the internet and your internal network. For example, a screened subnet is often used to allow employees access to critical network components, such as email servers, VPN connections, and internal web servers, from outside the company. Screened subnets are also used to provide customer access to a company’s products, such as software. To do this, the firewall allows traffic from the internet into the screened subnet and enables those resources to access resources on the production network. The servers placed in the screened subnet are typically configured as a bastion host. A bastion host is a server that’s specifically designed and configured to withstand attacks. In general, they are specific-purpose systems that host a single application and are hardened to resist attacks. Intranet\tAn intranet is a private network (LAN) that employs internet information services for internal use only. For example, your company network might include web servers and email servers that are used by company employees. Extranet\tAn extranet is a privately controlled network distinct from the intranet but located between the internet and a private LAN. An extranet is often used to grant resource access to business partners, suppliers, and even customers outside of the organization. Wireless\tA wireless zone is a broadcasted network connection used within an organization. Users do not need a physical connection to a network port to connect to the intranet or internal resources. Instead, they use a wireless connection on their device to connect to a wireless access point.",
+      "summary": "The CompTIA Security+ course highlights key network zones, including screened subnets, intranets, extranets, and wireless zones, each serving distinct security and access purposes. Screened subnets act as a buffer between the internet and internal networks, facilitating secure access to critical resources while bastion hosts are hardened servers designed to withstand attacks. Intranets provide private network services for internal use, while extranets extend access to external partners, and wireless zones enable connectivity without physical connections, emphasizing the importance of securing each zone to protect organizational assets.",
+      "metadata": {
+        "chapter_num": "5",
+        "section_num": "5.2.5",
+        "title": "Security Zone Facts",
+        "content_type": "text",
+        "filename": "5.2.5_Security_Zone_Facts_[text].txt",
+        "file_path": "data_raw/05_Network_Architecture/5.2.5_Security_Zone_Facts_[text].txt",
+        "word_count": 600,
+        "has_content": true
+      },
+      "section_header": "The following table lists common zones:",
+      "timestamp_range": null
+    }
+  ],
+  "num_chunks": 4
+}

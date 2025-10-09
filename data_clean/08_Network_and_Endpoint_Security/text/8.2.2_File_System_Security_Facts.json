@@ -1,0 +1,186 @@
+{
+  "metadata": {
+    "chapter_num": "8",
+    "section_num": "8.2.2",
+    "title": "File System Security Facts",
+    "content_type": "text",
+    "filename": "8.2.2_File_System_Security_Facts_[text].txt",
+    "file_path": "data_raw/08_Network_and_Endpoint_Security/8.2.2_File_System_Security_Facts_[text].txt",
+    "word_count": 1287,
+    "has_content": true
+  },
+  "full_content": "Security Pro 8.0 Managing the file system is a primary concern of IT professionals. The file system is responsible for storing and securing data. An organization depends on data and requires that it be secure and easily accessible. This lesson covers the following topics. File system security Least privilege permission assignments Data transfer security protocols File System Security Prevent physical access. Implement the principle of least privilege. Use full-disk encryption on backups. Implement strong authentication. Remove unnecessary software and disable unused services. Use implicit deny access control lists (ACLs). Use hidden folders and files. Audit the file system. The transfer of files between a client and a server is often unsecured. Use IPSec or a VPN between the server and the client to secure data as it travels through the network. File and print resources are primarily vulnerable to denial-of-service (DoS) and access attacks. Attacks on file servers are often directed against the NetBIOS protocol. To protect the server, verify that NetBIOS is not required on the server, disable the NetBIOS protocol on the server, and use a host-based firewall to close NetBIOS ports 135 and 137 - 139. A shared folder is a folder whose contents are available over the network. An administrative share is a shared folder that is available only to an administrative user. Administrative shares are hidden. This means that the share will not display when a user browses a network computer. By default, the root of every drive is an administrative share. In Windows, you can create hidden shares by appending a $ sign to the end of the share name (for example, DataFiles$). Users must know the name of the share to access it and have the appropriate access permissions. Do not share the root directory with regular users. With Windows Server 2008 and later, you can use File Server Resource Manager (FSRM) to control files saved on a file server. Quotas limit the amount of data that can be saved within a folder. A hard limit prevents exceeding the quota limit, while a soft limit sends a message when the limit is exceeded. File screens restrict the type of files that can be saved in a folder. For example, you can prevent media files (audio and video) or files with specific file extensions from being saved. An active file screen prevents saving the specified file types, while a passive screen monitors when the specified file types are added to the folder. Least Privilege Permission Assignments Least privilege means that a principal is granted the minimum possible sufficient rights to complete a task they are authorized to perform. This mitigates risk if an account should be compromised and fall under the control of a threat actor. Least privilege involves a design phase, where analysis of business workflows determines what roles and permissions are required. While least privilege is a strong design principle, implementing it successfully can be challenging. Where many users, groups, roles, and resources are involved, managing permission assignments and implications is complex and time-consuming. Improperly configured accounts can have two different impacts. On the one hand, setting privileges that are too restrictive creates a large volume of support calls and reduces productivity. On the other hand, granting too many privileges to users weakens the system's security and increases the risk of malware infection and a data breach. Ensuring least privilege also involves continual monitoring to prevent authorization creep. Authorization creep refers to a situation where a user acquires more and more rights, either directly or by being added to security groups or roles. For example, a user may be granted elevated privileges temporarily. In this case, a system is needed to ensure that the privileges are revoked at the end of the agreed period. A system of auditing should regularly review privileges, monitor group membership, review access control lists for each resource, and identify and disable unnecessary accounts. Determining effective permissions for a shared folder. (Screenshot used with permission from Microsoft.) Provisioning is the process of setting up a service according to a standard procedure or best practice checklist. The IT department must keep track of all assets under management, and user accounts are a type of asset. User accounts are provisioned for new employees and temporary access, such as by consultants and contractors. Some businesses may also need to set up customer accounts. Identity Proofing - verifies that the person is who they say they are by checking official documents and records. Circumstances might also demand a background check, which verifies current and previous addresses, education, or previous employment and whether the person has a criminal record or credit issues. Issuing Credentials - allows the user to select a password known only to them and/or enroll them with biometric or token-based authenticators. Issuing Hardware and Software Assets - the user will typically need a computer or smartphone and possibly local copies of licensed software apps. Employees need sufficient resources to do their job. If their resources are inadequate, they might try to obtain hardware and software directly (shadow IT). Teaching Policy Awareness - by scheduling training and providing access to learning resources so that the employee or contractor is aware of security policies and risks. They must also be aware of policies for the personal use of any IT assets issued to them. Creating Permissions Assignment - by identifying the work roles that the account must support and configuring the appropriate rights using a role-based, mandatory, or attribute-based access control model. If the account is granted privileged access, it should be tagged for close monitoring. Deprovisioning is the process of removing the access rights and permissions allocated to an employee when they leave the company or from a contractor when a project finishes. This involves removing the account from any roles or security groups. The account might be disabled for a period and then deleted or deleted immediately. Data Transfer Security Protocols The following table describes considerations for securing file transfer using TCP/IP protocols: Protocol Description File Transfer Protocol Be aware of the following when using FTP: Anonymous login (also known as blind or anonymous FTP) allows unrestricted access to the FTP server. Disable anonymous login to control access based on username. The username and password are transferred in cleartext and can be captured in transit by a sniffer. To protect logon credentials, implement a secure protocol, such as Secure Socket Layer (SSL). Use IPSec or a VPN tunnel to protect data transfers. The write permission allows users to upload files to the FTP server. Carefully restrict which users have the write permission. FTP uses port 21 for control information (such as logon) and port 20 for data transfer. Trivial File Transfer Protocol TFTP provides no authentication, encryption, or error detection. In addition, TFTP uses UDP instead of TCP. TFTP might be faster than FTP, but it does not perform error detection which could result in file errors. Secure Copy Protocol SCP uses Secure Shell version 1 (SSH1) to secure file transfers and login credentials. Secure Shell File Transfer Protocol SFTP is a file transfer protocol that uses Secure Shell version 2 (SSH2) to secure data transfers. SFTP is not an FTP that uses SSH but rather a secure transfer protocol that is different from FTP. Secure FTP\tSecure FTP (also known as FTP over SSH) tunnels FTP traffic through an SSH tunnel. FTP Secure FTPS adds SSL or Transport Layer Security (TLS) to FTP in order to secure logon credentials and encrypt data transfers. FTPS requires a server certificate.",
+  "chunks": [
+    {
+      "chunk_id": "8.2.2_chunk_1",
+      "content": "Security Pro 8.0",
+      "summary": "The CompTIA Security+ course, Security Pro 8.0, introduces foundational security concepts essential for protecting information systems. Key topics include risk management, threat analysis, network security, and incident response, emphasizing practical applications through real-world scenarios and hands-on labs. This course equips learners with the skills needed to identify vulnerabilities and implement effective security measures in various environments.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.2.2",
+        "title": "File System Security Facts",
+        "content_type": "text",
+        "filename": "8.2.2_File_System_Security_Facts_[text].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.2.2_File_System_Security_Facts_[text].txt",
+        "word_count": 1287,
+        "has_content": true
+      },
+      "section_header": "Introduction",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "8.2.2_chunk_2",
+      "content": "Managing the file system is a primary concern of IT professionals. The file system is responsible for storing and securing data. An organization depends on data and requires that it be secure and easily accessible. This lesson covers the following topics. File system security Least privilege permission assignments Data transfer security protocols File System Security",
+      "summary": "File system security is crucial for IT professionals as it involves the management and protection of data storage. Key concepts include implementing least privilege permission assignments to restrict access, as well as utilizing secure data transfer protocols to ensure data integrity and confidentiality. Understanding these principles is essential for maintaining organizational data security and accessibility.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.2.2",
+        "title": "File System Security Facts",
+        "content_type": "text",
+        "filename": "8.2.2_File_System_Security_Facts_[text].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.2.2_File_System_Security_Facts_[text].txt",
+        "word_count": 1287,
+        "has_content": true
+      },
+      "section_header": "8.2.2 File System Security Facts",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "8.2.2_chunk_3",
+      "content": "Prevent physical access. Implement the principle of least privilege. Use full-disk encryption on backups. Implement strong authentication. Remove unnecessary software and disable unused services. Use implicit deny access control lists (ACLs). Use hidden folders and files. Audit the file system.",
+      "summary": "To secure file servers, it is essential to prevent physical access and enforce the principle of least privilege for user permissions. Implementing full-disk encryption for backups, strong authentication methods, and maintaining a minimal software footprint by removing unnecessary applications and disabling unused services are crucial. Additionally, utilizing implicit deny access control lists (ACLs), hiding sensitive folders and files, and regularly auditing the file system further enhance security measures.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.2.2",
+        "title": "File System Security Facts",
+        "content_type": "text",
+        "filename": "8.2.2_File_System_Security_Facts_[text].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.2.2_File_System_Security_Facts_[text].txt",
+        "word_count": 1287,
+        "has_content": true
+      },
+      "section_header": "Tasks to secure file servers include:",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "8.2.2_chunk_4",
+      "content": "The transfer of files between a client and a server is often unsecured. Use IPSec or a VPN between the server and the client to secure data as it travels through the network. File and print resources are primarily vulnerable to denial-of-service (DoS) and access attacks. Attacks on file servers are often directed against the NetBIOS protocol. To protect the server, verify that NetBIOS is not required on the server, disable the NetBIOS protocol on the server, and use a host-based firewall to close NetBIOS ports 135 and 137 - 139. A shared folder is a folder whose contents are available over the network. An administrative share is a shared folder that is available only to an administrative user. Administrative shares are hidden. This means that the share will not display when a user browses a network computer. By default, the root of every drive is an administrative share. In Windows, you can create hidden shares by appending a $ sign to the end of the share name (for example, DataFiles$). Users must know the name of the share to access it and have the appropriate access permissions. Do not share the root directory with regular users. With Windows Server 2008 and later, you can use File Server Resource Manager (FSRM) to control files saved on a file server. Quotas limit the amount of data that can be saved within a folder. A hard limit prevents exceeding the quota limit, while a soft limit sends a message when the limit is exceeded. File screens restrict the type of files that can be saved in a folder. For example, you can prevent media files (audio and video) or files with specific file extensions from being saved. An active file screen prevents saving the specified file types, while a passive screen monitors when the specified file types are added to the folder. Least Privilege Permission Assignments Least privilege means that a principal is granted the minimum possible sufficient rights to complete a task they are authorized to perform. This mitigates risk if an account should be compromised and fall under the control of a threat actor. Least privilege involves a design phase, where analysis of business workflows determines what roles and permissions are required. While least privilege is a strong design principle, implementing it successfully can be challenging. Where many users, groups, roles, and resources are involved, managing permission assignments and implications is complex and time-consuming. Improperly configured accounts can have two different impacts. On the one hand, setting privileges that are too restrictive creates a large volume of support calls and reduces productivity. On the other hand, granting too many privileges to users weakens the system's security and increases the risk of malware infection and a data breach. Ensuring least privilege also involves continual monitoring to prevent authorization creep. Authorization creep refers to a situation where a user acquires more and more rights, either directly or by being added to security groups or roles. For example, a user may be granted elevated privileges temporarily. In this case, a system is needed to ensure that the privileges are revoked at the end of the agreed period. A system of auditing should regularly review privileges, monitor group membership, review access control lists for each resource, and identify and disable unnecessary accounts. Determining effective permissions for a shared folder. (Screenshot used with permission from Microsoft.) Provisioning is the process of setting up a service according to a standard procedure or best practice checklist. The IT department must keep track of all assets under management, and user accounts are a type of asset. User accounts are provisioned for new employees and temporary access, such as by consultants and contractors. Some businesses may also need to set up customer accounts.",
+      "summary": "Effective file system security management involves securing file transfers using IPSec or VPNs, protecting against denial-of-service and access attacks, and properly configuring shared folders and administrative shares. Implementing the principle of least privilege is crucial to minimize risks associated with user permissions, requiring ongoing monitoring to prevent authorization creep and ensure appropriate access levels. Additionally, tools like File Server Resource Manager (FSRM) can help manage file quotas and screens, enhancing overall security and compliance within the file system.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.2.2",
+        "title": "File System Security Facts",
+        "content_type": "text",
+        "filename": "8.2.2_File_System_Security_Facts_[text].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.2.2_File_System_Security_Facts_[text].txt",
+        "word_count": 1287,
+        "has_content": true
+      },
+      "section_header": "When managing the security of the file system, be aware of the following:",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "8.2.2_chunk_5",
+      "content": "Identity Proofing - verifies that the person is who they say they are by checking official documents and records. Circumstances might also demand a background check, which verifies current and previous addresses, education, or previous employment and whether the person has a criminal record or credit issues. Issuing Credentials - allows the user to select a password known only to them and/or enroll them with biometric or token-based authenticators. Issuing Hardware and Software Assets - the user will typically need a computer or smartphone and possibly local copies of licensed software apps. Employees need sufficient resources to do their job. If their resources are inadequate, they might try to obtain hardware and software directly (shadow IT). Teaching Policy Awareness - by scheduling training and providing access to learning resources so that the employee or contractor is aware of security policies and risks. They must also be aware of policies for the personal use of any IT assets issued to them. Creating Permissions Assignment - by identifying the work roles that the account must support and configuring the appropriate rights using a role-based, mandatory, or attribute-based access control model. If the account is granted privileged access, it should be tagged for close monitoring. Deprovisioning is the process of removing the access rights and permissions allocated to an employee when they leave the company or from a contractor when a project finishes. This involves removing the account from any roles or security groups. The account might be disabled for a period and then deleted or deleted immediately. Data Transfer Security Protocols The following table describes considerations for securing file transfer using TCP/IP protocols: Protocol Description File Transfer Protocol",
+      "summary": "Provisioning a user account involves several critical steps, including identity proofing to verify the user's identity, issuing credentials for secure access, and providing necessary hardware and software resources. Additionally, it emphasizes the importance of policy awareness training and the assignment of permissions based on user roles, ensuring proper access control. Deprovisioning is equally vital, as it entails removing access rights when an employee or contractor leaves, thereby maintaining security integrity.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.2.2",
+        "title": "File System Security Facts",
+        "content_type": "text",
+        "filename": "8.2.2_File_System_Security_Facts_[text].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.2.2_File_System_Security_Facts_[text].txt",
+        "word_count": 1287,
+        "has_content": true
+      },
+      "section_header": "Provisioning a user account involves the following general steps:",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "8.2.2_chunk_6",
+      "content": "Be aware of the following when using FTP: Anonymous login (also known as blind or anonymous FTP) allows unrestricted access to the FTP server. Disable anonymous login to control access based on username. The username and password are transferred in cleartext and can be captured in transit by a sniffer. To protect logon credentials, implement a secure protocol, such as Secure Socket Layer (SSL). Use IPSec or a VPN tunnel to protect data transfers. The write permission allows users to upload files to the FTP server. Carefully restrict which users have the write permission. FTP uses port 21 for control information (such as logon) and port 20 for data transfer. Trivial File Transfer Protocol",
+      "summary": "FTP (File Transfer Protocol) allows file transfers but poses security risks, such as the transmission of usernames and passwords in cleartext. To enhance security, it is recommended to disable anonymous logins, restrict write permissions, and implement secure protocols like SSL or use IPSec/VPN tunnels for data protection. Additionally, FTP operates on port 21 for control and port 20 for data transfer, highlighting the importance of managing these ports effectively.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.2.2",
+        "title": "File System Security Facts",
+        "content_type": "text",
+        "filename": "8.2.2_File_System_Security_Facts_[text].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.2.2_File_System_Security_Facts_[text].txt",
+        "word_count": 1287,
+        "has_content": true
+      },
+      "section_header": "(FTP)",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "8.2.2_chunk_7",
+      "content": "TFTP provides no authentication, encryption, or error detection. In addition, TFTP uses UDP instead of TCP. TFTP might be faster than FTP, but it does not perform error detection which could result in file errors. Secure Copy Protocol",
+      "summary": "TFTP (Trivial File Transfer Protocol) is a simple file transfer protocol that operates over UDP, offering faster transfers than FTP but lacking essential features such as authentication, encryption, and error detection. This absence of error detection can lead to potential file integrity issues, making TFTP less secure for sensitive data transfers. For secure file transfers, alternatives like Secure Copy Protocol (SCP) should be considered.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.2.2",
+        "title": "File System Security Facts",
+        "content_type": "text",
+        "filename": "8.2.2_File_System_Security_Facts_[text].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.2.2_File_System_Security_Facts_[text].txt",
+        "word_count": 1287,
+        "has_content": true
+      },
+      "section_header": "(TFTP)",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "8.2.2_chunk_8",
+      "content": "SCP uses Secure Shell version 1 (SSH1) to secure file transfers and login credentials. Secure Shell File Transfer Protocol",
+      "summary": "The Secure Copy Protocol (SCP) leverages Secure Shell version 1 (SSH1) to ensure secure file transfers and protect login credentials during transmission. It is primarily used for transferring files between hosts securely over a network, emphasizing confidentiality and integrity. Understanding SCP is crucial for implementing secure data transfer practices in various cybersecurity applications.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.2.2",
+        "title": "File System Security Facts",
+        "content_type": "text",
+        "filename": "8.2.2_File_System_Security_Facts_[text].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.2.2_File_System_Security_Facts_[text].txt",
+        "word_count": 1287,
+        "has_content": true
+      },
+      "section_header": "(SCP)",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "8.2.2_chunk_9",
+      "content": "SFTP is a file transfer protocol that uses Secure Shell version 2 (SSH2) to secure data transfers. SFTP is not an FTP that uses SSH but rather a secure transfer protocol that is different from FTP. Secure FTP\tSecure FTP (also known as FTP over SSH) tunnels FTP traffic through an SSH tunnel. FTP Secure",
+      "summary": "SFTP (Secure File Transfer Protocol) is a secure file transfer method that operates over Secure Shell version 2 (SSH2), providing encryption and secure authentication for data transfers. Unlike traditional FTP, SFTP is a distinct protocol that ensures data integrity and confidentiality, while Secure FTP (FTP over SSH) encapsulates FTP traffic within an SSH tunnel for added security. Both protocols are essential for secure data transmission in cybersecurity practices.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.2.2",
+        "title": "File System Security Facts",
+        "content_type": "text",
+        "filename": "8.2.2_File_System_Security_Facts_[text].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.2.2_File_System_Security_Facts_[text].txt",
+        "word_count": 1287,
+        "has_content": true
+      },
+      "section_header": "(SFTP)",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "8.2.2_chunk_10",
+      "content": "FTPS adds SSL or Transport Layer Security (TLS) to FTP in order to secure logon credentials and encrypt data transfers. FTPS requires a server certificate.",
+      "summary": "FTPS enhances the standard File Transfer Protocol (FTP) by incorporating SSL or TLS to secure user credentials and encrypt data during transfers. This protocol necessitates the use of a server certificate to establish a secure connection, ensuring the integrity and confidentiality of the data exchanged. FTPS is commonly applied in environments where secure file transfer is critical, such as in financial or healthcare sectors.",
+      "metadata": {
+        "chapter_num": "8",
+        "section_num": "8.2.2",
+        "title": "File System Security Facts",
+        "content_type": "text",
+        "filename": "8.2.2_File_System_Security_Facts_[text].txt",
+        "file_path": "data_raw/08_Network_and_Endpoint_Security/8.2.2_File_System_Security_Facts_[text].txt",
+        "word_count": 1287,
+        "has_content": true
+      },
+      "section_header": "(FTPS)",
+      "timestamp_range": null
+    }
+  ],
+  "num_chunks": 10
+}

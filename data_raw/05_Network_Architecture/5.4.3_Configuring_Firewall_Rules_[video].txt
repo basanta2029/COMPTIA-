@@ -1,0 +1,269 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Configuring Firewall Rules
+00:04
+In this demonstration, we're going to configure
+00:06
+firewall rules on a pfSense security appliance.
+00:09
+First, we're going to configure a firewall
+00:11
+rule to allow both HTTP and HTTPS traffic from
+00:16
+the internet, or WAN, through the firewall and
+00:18
+to our web server on our screened subnet.
+00:21
+The second thing we're going to do is configure a
+00:23
+rule to allow all traffic coming from our LAN to
+00:26
+get to our screened subnet through the firewall.
+00:29
+Be aware that when we are talking about
+00:31
+a screened subnet, some vendors may refer
+00:34
+to this as a demilitarized zone, or DMZ.<br>
+2. Allow HTTP and HTTPS
+00:37
+I want to verify that I have my screened subnet ready to go.
+00:40
+I'll scroll down, and you can see I have my three
+00:43
+interfaces here, and they have assigned IPs.<br>
+00:47
+Let's create our rules.
+00:48
+I'll go to Firewall &gt; Rules, and the first rules I'll
+00:52
+configure are the ones from our WAN to our screened
+00:55
+subnet to allow HTTP and HTTPS to our web server.
+01:00
+I want to go to the DMZ tab here,
+01:02
+and down here, I have a few buttons.
+01:05
+You'll notice there are two buttons that say Add.
+01:08
+This one has the arrow pointing up, and if I pick
+01:10
+that one, it'll add the rule to the top of my list.
+01:14
+If I click on the one with the arrow pointing down, it'll
+01:16
+add the rule to the bottom, so I'll click on that one.<br>
+01:20
+For our rule, we want to choose to
+01:22
+pass the traffic through the firewall.
+01:24
+My other choices are to block it or reject it.
+01:27
+If we choose Block, it will just drop the packets as if they
+01:31
+never arrived If we choose Reject, the packets are returned
+01:34
+to the sender, and the sender can see they were blocked.
+01:37
+For security reasons, sometimes you don't want
+01:40
+senders to know that your device is even there,
+01:42
+and it's better to just block the packets.
+01:45
+But if you're troubleshooting
+01:46
+issues, reject can be more helpful.
+01:49
+Either way, with block or reject, the
+01:51
+packets won't reach the destination.<br>
+01:53
+The interface that I want to configure is the DMZ.
+01:56
+You can see that I have my LAN and WAN here as well.
+02:00
+For Address Family, I'll leave it as IPv4.
+02:04
+The other choices are IPv6 or both.
+02:07
+For Protocol, we're allowing HTTP, which runs on TCP.
+02:11
+If I click the dropdown list, you can see all
+02:14
+the other protocols that we could choose if we
+02:16
+were going to allow some other type of traffic.<br>
+02:19
+Our source is going to be from our WAN network.
+02:21
+I need to see more options, so I'll
+02:23
+click on the Display Advanced button.
+02:25
+The Source Port Range is going to be HTTP.
+02:29
+I could put in a single port or a
+02:30
+range, but we just want HTTP port 80.
+02:34
+Since this is going to be my web server,
+02:36
+I need to put in the IP address here.
+02:38
+First, I'll pick Single host or alias,
+02:41
+and now let's pop our diagram back up.
+02:44
+Our web server's IP is right here,
+02:46
+so let's go back and enter that in.
+02:48
+Destination Address will be '172.16.1.5'.
+02:54
+We're using HTTP, and the rest of this looks good.<br>
+02:58
+Down here, we could log packets handled by this rule.
+03:01
+Since this is a web server, we probably don't want
+03:03
+to do that since our log would be overwhelmed.
+03:06
+If it was FTP, SSH, or other traffic like that, we probably
+03:11
+would want to log traffic, but not for normal web requests.
+03:15
+We do want to put a description in here because as you
+03:17
+create more and more rules, you'll forget what they all do.
+03:21
+For this, I'll type in 'HTTP to
+03:24
+DMZ from WAN' and click Save.
+03:27
+On our next page here, we have to click on Apply
+03:30
+Changes for the changes to my firewall to take effect.<br>
+03:34
+So, here are my rules so far.
+03:36
+I have one that allows my screened subnet out,
+03:38
+and this second one is our HTTP rule from the WAN
+03:41
+on port 80 the web server on our screened subnet.<br>
+03:45
+Now, you might be saying to yourself, "Doesn't most
+03:48
+web traffic use HTTPS these days?" Well, that answer
+03:52
+is certainly yes, so now we need an HTTPS rule.<br>
+03:56
+Here's some good news: to save a bit of time and
+03:59
+keep from making any errors, we can just copy this
+04:02
+rule and change the HTTP port 80 to HTTPS port 443.
+04:08
+I'll click here, which is the Copy icon.
+04:11
+What this does creates a new rule with the exact settings.
+04:15
+I'll scroll down and change my source
+04:17
+from HTTP port 80 to HTTPS port 443.
+04:23
+For the destination, I'll do the same.
+04:29
+Scroll down change the description
+04:31
+by just adding the letter 'S'.
+04:32
+Click Save.
+04:34
+On this page, Click Apply Changes.
+04:37
+Down here, you now see our rules for both HTTP and HTTPS.<br>
+3. Allow LAN Traffic to WAN
+04:43
+Now let's look at our diagram again.
+04:45
+This time, I want to create a rule that allows any
+04:48
+traffic from my LAN to get to the screened subnet.
+04:51
+Let's go back to our firewall and configure that now.
+04:54
+These rules are read from the top down.
+04:56
+So, for example, if the first rule says block
+04:59
+everything, none of the other rules would ever
+05:02
+be seen because that's the very first rule.
+05:04
+However, if we made a rule right now that said to block
+05:07
+everything and put it at the bottom, our first three rules
+05:10
+would still be fine, but everything else would be blocked.
+05:14
+By default, everything is blocked with pfSense
+05:17
+anyway unless you open it, so we wouldn't really need
+05:20
+that sort of rule, but it doesn't hurt anything.
+05:23
+So far, our rules don't affect one another, so
+05:26
+it really doesn't matter where we put them, but
+05:28
+keep all of this in mind when creating rules.
+05:31
+We'll just click on Add and use the one
+05:33
+that puts it at the bottom of the list.<br>
+05:36
+Our Action will be to pass traffic.
+05:38
+We'll leave the interface and address family alone.
+05:41
+But for protocol, we're going
+05:43
+to change this from TCP to Any.
+05:44
+This might not be the best practice, but we're allowing any
+05:49
+and all traffic from our LAN to reach our screened subnet.
+05:53
+Under Source, we'll choose our LAN network from the list.
+05:57
+Our destination will be the screened subnet from this list.
+06:03
+We don't want to forget a description for this rule.
+06:05
+I'll type 'LAN to DMZ Any'.
+06:10
+Click Save.
+06:11
+As always, Apply Changes.<br>
+06:13
+Here's my latest rule.
+06:15
+My source is from the LAN on any port to my DMZ on any port.
+06:21
+By the way, the asterisk is wildcard, which means any.
+06:24
+Over here, the green check mark means it's enabled.<br>
+4. Summary
+06:28
+That's it for this demo.
+06:30
+In this demo, we created firewall rules on our firewall.<br>

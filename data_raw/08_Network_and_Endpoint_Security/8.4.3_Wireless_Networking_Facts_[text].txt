@@ -1,0 +1,126 @@
+Security Pro 8.0
+
+8.4.3 Wireless Networking Facts
+
+Wireless networking is commonplace, both in home and business environments.
+
+This lesson covers the following topics:
+
+Wireless network hardware
+Wireless access point (WAP) placement
+Site surveys and heat maps
+Wi-Fi authentication methods
+Advanced authentication
+Wireless Network Hardware
+
+The following table describes hardware used in wireless networks:
+
+Wireless Network Hardware
+Description
+Wireless access point (WAP)	
+A wireless access point broadcasts information and data over radio waves.
+
+A wireless access point functions as a wireless hub.
+The wireless access point may provide a connection to a physical wired network.
+The two classes of wireless access points are fat and thin.
+Fat access points have everything necessary to manage wireless clients and broadcast the network. Fat access points are standalone devices.
+Thin access points are basically a radio and antenna. Thin access points can broadcast the network, but require another system to manage clients and the network. Thin access points are referred to as controller-based devices.
+A WAP uses an service set identifier (SSID) that associates a name with a wireless network. This makes it easier for users to connect wirelessly.
+Wireless interface	The wireless interface in a device, such as a laptop or smart phone, connects to the wireless access point.
+Wireless bridge	
+A wireless bridge connects two wireless networks together.
+
+The bridge is typically created using a wired connection between the two access points.
+A bridge can be implemented wirelessly using a wireless distribution system (WDS).
+Wireless LAN controller
+
+(WLC)
+A Wireless LAN controller is used in a enterprise environment to manage multiple access points. The WLC is placed in the networking closet and connected to a switch. The controller is able to communicate with and manage the wireless access points.
+
+The WLC is also able to manage client connects and access point loads. This allows the WAPs to operate and work together as a single system instead of each device working in isolation.
+Lightweight access point
+
+(LWAP)
+Lightweight access points are used in conjunction with the wireless controller.
+
+LWAPs contain very little technology and rely on the WLC to handle everything including client connections, authentication, updating configurations, etc.
+LWAP forwards frames to the WLC to make the decision to either drop the packet or forward it. If the packet is to be forwarded, the WLC sends it to the applicable LWAP to which the destination device is connected and then that WLC sends the packet to the destination.
+Wireless Access Point (WAP) Placement
+
+Wireless network installation considerations refer to the factors that ensure good availability of authorized Wi-Fi access points. A network with patchy coverage is vulnerable to rogue and evil twin attacks.
+
+The 5 GHz band has more space to configure non-overlapping channels. Also note that a WAP can use bonded channels to improve bandwidth, but this increases risks from interference.
+
+An infrastructure-based wireless network comprises one or more wireless access points, each connected to a wired network. The access points forward traffic to and from the wired switched network. Each WAP is identified by its MAC address, also referred to as its basic service set identifier (BSSID). Each wireless network is identified by its name or service set identifier (SSID).
+
+Wireless networks can operate in either the 2.4 GHz or 5 GHz radio band. Each radio band is divided into a number of channels, and each WAP must be configured to use a specific channel. For performance reasons, the channels chosen should be as widely spaced as possible to reduce interference.
+Site Surveys and Heat Maps
+
+The coverage and interference factors mean that WAPs must be positioned and configured to cover the whole area with the least overlap as possible. A site survey is used to measure signal strength and channel usage throughout the area to cover. A site survey starts with an architectural map of the site, with features that can cause background interference marked. These features include solid walls, reflective surfaces, motors, microwave ovens, and so on. A Wi-Fi-enabled laptop or mobile device with Wi-Fi analyzer software installed performs the survey. The Wi-Fi analyzer records information about the signal obtained at regularly spaced points as the surveyor moves around the area.
+
+Example output from Lizard System's Wi-Fi Scanner too
+
+Screenshot courtesy of Lizard Systems
+Description
+These readings are combined and analyzed to produce a heat map, showing where a signal is strong (green/blue) or weak (red), and which channel is being used and how they overlap. This data is then used to optimize the design by adjusting transmit power to reduce a WAP's range, changing the channel on a WAP, adding a new WAP, or physically moving a WAP to a new location.
+
+
+Description
+As well as the site design, a wireless network must be configured with security settings. Without encryption, anyone within range can intercept and read packets passing over the wireless network. Security choices are determined by device support for the various Wi-Fi security standards, by the type of authentication infrastructure, and by the purpose of the WLAN. Security standard determine which cryptographic protocols are supported, the means of generating the encryption key, and the available methods for authenticating wireless stations when they try to join (or associate with) the network.
+
+The first version of Wi-Fi Protected Access (WPA) was designed to fix critical vulnerabilities in the earlier wired equivalent privacy (WEP) standard. Like WEP, version 1 of WPA uses the RC4 stream cipher but adds a mechanism called the Temporal Key Integrity Protocol (TKIP) to make it stronger.
+
+Configuring a TP-LINK SOHO access point with wireless encryption and authentication settings. In this example, the 2.4 GHz band allows legacy connections with WPA2-Personal security, while the 5 GHz network is for 802.11ax (Wi-Fi 6) capable devices using WPA3-SAE authentication.
+
+Screenshot used with permission from TP-Link Technologies.
+Description
+As setting up an access point securely is relatively complex for residential consumers, vendors have developed a system to automate the process called Wi-Fi Protected Setup (WPS). To use WPS, both the access point and wireless station (client device) must be WPS-capable. Typically, the devices will have a push button. Activating this on the access point and the adapter simultaneously will associate the devices using a PIN, then associate the adapter with the access point using WPA2. The system generates a random SSID and PSK. If the devices do not support the push button method, the PIN (printed on the WAP) can be entered manually.
+
+Unfortunately, WPS is vulnerable to a brute force attack. While the PIN is eight characters, one digit is a checksum and the rest are verified as two separate PINs of four and three characters. These separate PINs are many orders of magnitude simpler to brute force, typically requiring just hours to crack. On some models, disabling WPS through the admin interface does not actually disable the protocol, or there is no option to disable it. Some APs can lock out an intruder if a brute force attack is detected, but in some cases, the attack can just be resumed when the lockout period expires.
+
+To counter this, the lockout period can be increased. However, this can leave APs vulnerable to a denial of service (DoS) attack. When provisioning a WAP, it is essential to verify what steps the manufacturer has taken to make their WPS implementation secure and to use the required device firmware level identified as secure.
+
+The Easy Connect method, announced alongside WPA3, is intended to replace WPS as a method of securely configuring client devices with the information required to access a Wi-Fi network. Easy Connect is a brand name for the Device Provisioning Protocol (DPP).
+
+Each participating device must be configured with a public/private key pair. Easy Connect uses quick response (QR) codes or near-field communication (NFC) tags to communicate each device's public key. A smartphone is registered as an Easy Connect configurator app and associated with the WAP using its QR code. Each client device can then be associated by scanning its QR code or NFC tag in the configurator app. As well as fixing the security problems associated with WPS, this is a straightforward means of configuring headless Internet of Things (IoT) devices with Wi-Fi connectivity.
+Wi-Fi Authentication Methods
+
+In order to secure a network, you must confirm that only valid users are connecting to it. Wi-Fi authentication comes in three types: personal, open, and enterprise. Within the personal category, there are two methods: pre-shared key authentication (PSK) and simultaneous authentication of equals (SAE).
+WPA2 Pre-Shared Key Authentication
+
+In WPA2,  pre-shared key (PSK) authentication uses a passphrase to generate the key used to encrypt communications. It is also referred to as group authentication because a group of users shares the same secret. When the access point is set to WPA2-PSK mode, the administrator configures a passphrase of between 8 and 63 ASCII characters. This is converted to a 256-bit HMAC (expressed as a 64-character hex value) using the PBKDF2 key stretching algorithm. This HMAC is referred to as the pairwise master key (PMK). The same secret must be configured on the access point and on each node that joins the network. The PMK is used as part of WPA2's 4-way handshake to derive various session keys.
+
+All types of Wi-Fi personal authentication have been shown to be vulnerable to attacks that allow dictionary or brute force attacks against the passphrase. At a minimum, the passphrase must be at least 14 characters long to try to mitigate risks from cracking.
+Wi-Fi Protected Access 3 (WPA3)
+
+Neither WEP nor the original WPA version is considered secure enough for continued use. WPA2 uses the Advanced Encryption Standard (AES) cipher with 128-bit keys, deployed within the Counter Mode with Cipher Block Chaining Message Authentication Code Protocol (CCMP). AES replaces RC4 and CCMP replaces TKIP. CCMP provides authenticated encryption, which is designed to make replay attacks harder.
+
+Weaknesses found in WPA2 led to its intended replacement by WPA3. The main features of WPA3 are as follows:
+
+Simultaneous Authentication of Equals (SAE) - replaces the Pre-Shared Key (PSK) exchange protocol in WPA2, ensuring an attacker cannot intercept the Wi-Fi password even when capturing data from a successful login.
+Enhanced Open - encrypts traffic between devices and the access point, even without a password, which increases privacy and security on open networks.
+Updated Cryptographic Protocols - replaces AES CCMP with the AES Galois Counter Mode Protocol (GCMP) mode of operation. Enterprise authentication methods must use 192-bit AES, while personal authentication can use either 128-bit or 192-bit.
+Wi-Fi Easy Connect - allows connecting devices by scanning a QR code, reducing the need for complicated configurations while maintaining secure connections.
+Wi-Fi performance also depends on device support for the latest 802.11 standards. The most recent generation (802.11ax) is being marketed as Wi-Fi 6. The earlier standards are retroactively named Wi-Fi 5 (802.11ac) and Wi-Fi 4 (802.11n). The performance standards are developed in parallel with the WPA security specifications. Most Wi-Fi 6 devices and some Wi-Fi 5 and Wi-Fi 4 products should support WPA3 either natively or with a firmware/driver update.
+
+While WPA3 still uses a passphrase to authenticate stations in personal mode, it changes the method this secret is uses to agree session keys. The scheme used is called a Password-Authenticated Key Exchange (PAKE). In WPA3, the Simultaneous Authentication of Equals (SAE) protocol replaces the 4-way handshake, which has been found vulnerable to various attacks. SAE uses the Dragonfly handshake, which is basically Diffie-Hellman over elliptic curves key agreement, combined with a hash value derived from the password and device MAC address to authenticate the nodes. With SAE, there should be no way for an attacker to sniff out the handshake to obtain the hash value and try to use an offline brute force or dictionary attack to recover the password. Dragonfly also implements ephemeral session keys providing forward secrecy.
+
+The configuration interfaces for access points can use different labels for these methods. You might see WPA2-Personal and WPA3-SAE rather than WPA2-PSK and WPA3-Personal, for example. Additionally, an access point can be configured for WPA3 only or with support for legacy WPA2 (WPA3-Personal Transition mode). Researchers already found flaws in WPA3-Personal, one of which relies on a downgrade attack to use WPA2 (wi-fi.org/security-update-april-2019).
+Advanced Authentication
+
+Wireless  enterprise authentication modes, such as WPA2/WPA3-Enterprise, include several essential components designed to improve security for corporate wireless networks. One important element is 802.1x authentication, which provides a port-based network access control framework, ensuring that only authenticated devices are granted network access. Typically, 802.1x requires an authentication server such as RADIUS (Remote Authentication Dial-In User Service), which verifies the credentials of users or devices trying to connect to the network.
+
+In enterprise mode authentication schemes, users have a unique set of credentials rather than a shared passphrase as used in WPA2/WPA3 personal mode. Requiring each user or device to authenticate using unique credentials allows network administrators to track network usage at a granular level. The protocol also supports multiple Extensible Authentication Protocol (EAP) types, such as EAP-TLS, EAP-TTLS, or PEAP, which define specific authentication methods. EAP-TLS, for instance, uses client-server certificates for mutual authentication, while EAP-TTLS and PEAP utilize a server-side certificate. The server-side certificate is used to establish a secure tunnel for transmitting user credentials and helps devices validate the legitimacy of the access point. Enterprise mode authentication includes dynamic encryption key management, automatically changing the encryption keys used during a user's session.
+Remote Authentication Dial-In User Service (RADIUS)
+
+The Remote Authentication Dial-In User Service (RADIUS) standard is published as an Internet standard. There are several RADIUS server and client products.
+
+The NAS device (RADIUS client) is configured with the IP address of the RADIUS server and with a shared secret. This allows the client to authenticate to the server. Remember that the client is the access device (switch, access point, or VPN gateway), not the user's PC or laptop. A generic RADIUS authentication workflow proceeds as follows:
+
+The user's device (the supplicant) makes a connection to the NAS appliance, such as an access point, switch, or remote access server.
+The NAS prompts the user for their authentication credentials. RADIUS supports PAP, CHAP, and EAP. Most implementations now use EAP, as PAP and CHAP are not secure. If EAP credentials are required, the NAS enables the supplicant to transmit  EAP over LAN (EAPoL) data, but not any other type of network traffic.
+The supplicant submits the credentials as EAPoL data. The RADIUS client uses this information to create an Access-Request RADIUS packet, encrypted using the shared secret. It sends the Access-Request to the AAA server using UDP on port 1812 (by default).
+The AAA server decrypts the Access-Request using the shared secret. If the Access-Request cannot be decrypted (because the shared secret is not correctly configured, for instance), the server does not respond.
+With EAP, there will be an exchange of Access-Challenge and Access-Request packets as the authentication method is set up and the credentials verified. The NAS acts as a pass-thru, taking RADIUS messages from the server, and encapsulating them as EAPoL to transmit to the supplicant.
+At the end of this exchange, if the supplicant is authenticated, the AAA server responds with an Access-Accept packet; otherwise, an Access-Reject packet is returned.
+Optionally, the NAS can use RADIUS for accounting (logging). Accounting uses port 1813. The accounting server can be different from the authentication server.

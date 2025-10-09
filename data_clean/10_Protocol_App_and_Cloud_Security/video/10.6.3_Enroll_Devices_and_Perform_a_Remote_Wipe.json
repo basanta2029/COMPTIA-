@@ -1,0 +1,135 @@
+{
+  "metadata": {
+    "chapter_num": "10",
+    "section_num": "10.6.3",
+    "title": "Enroll Devices and Perform a Remote Wipe",
+    "content_type": "video",
+    "filename": "10.6.3_Enroll_Devices_and_Perform_a_Remote_Wipe_[video].txt",
+    "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.6.3_Enroll_Devices_and_Perform_a_Remote_Wipe_[video].txt",
+    "word_count": 802,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script There are times when it may be necessary to remove company data from a device that is assigned to one of your users. Now, you could jump in a cab and go to the person's house, knock on the door, and demand to see the device, or you could use some of the cool features that Microsoft has created for us. In this demo, we're going to look at how to restart, retire, or wipe devices on a device remotely. I'm already logged into Endpoint Manager. I'll come up to Devices and go over to the All Devices blade. Then, in my list of devices, select the Windows11-3 device. There is no particular reason why I picked this device for this demo. In your environment, you would obviously pick the one that you want to work with. So, now we're seeing some of the basic properties for this device. I can do several things from here. Up here, we have Retire. I'll click on it. If you choose this option, it will remove company data from the device that is managed by Intune. It won't delete the user's personal data. There are some exceptions to what is removed, so make sure you read the documentation and understand what's happening before proceeding. I don't want to do this, so I'll click No. Now we'll look at how to wipe a device. I'll click on Wipe. Now a wipe is going to set the device back to a factory reset. You might do this if the person using the device has had an awkward dismissal from a company or the device is lost or stolen. You have two choices. You can wipe the device, but keep the enrollment state and associated account. The other option is to wipe even if the device loses power. It also says that the device might not run Windows 10 or later. This is the more extreme of the two. It's probably the right option if the device is lost or stolen. In fact, it's making me a little nervous. I'm going to click Cancel before I accidentally wipe my demo system! Next, we have Delete a device. This one deletes the device, and you will no longer see it here in Intune. The device will no longer be able to reach company resources, and the company data may be wiped from the device. We're going to look at the Restart feature, but first, let's talk about a few others. Here, we have Sync. Use this when you want to sync your device. Fresh Start will remove all preloaded Win32 apps. You can choose whether to retain user data or not. And finally, there are several more things you can do remotely. Now let's go back and look at how to restart a device remotely. Now I'll click on Restart. I get a message here that basically asks if I'm sure about wanting to restart the device. It goes on to say that the users will not be automatically notified of the restart, and they might lose work. To prevent this, make sure your users are informed before you select this option. I know that there is no one using this device, so I'll go ahead and click on Yes here. You can see a message in the upper right-hand corner of the screen that says Initializing Restart. Now I'll jump over this this other device and see what happens. Okay. I'm on the Windows client here, and I've been waiting for a few minutes. It did not reboot instantly. I do have this message that says it's going to sign me out and Windows will shut down in two minutes. So, I'll pause the recording, wait for a few minutes, and see what happens. Oay., That took about two minutes, and now my device is restarting. That's it for this demo. In this demonstration, we covered the steps on how to restart, retire, or wipe devices on a device remotely in Intune.",
+  "chunks": [
+    {
+      "chunk_id": "10.6.3_chunk_1",
+      "content": "There are times when it may be necessary to remove company data from a device that is assigned to one of your users. Now, you could jump in a cab and go to the person's house, knock on the door, and demand to see the device, or you could use some of the cool features that Microsoft has created for us. In this demo, we're going to look at how to restart, retire, or wipe devices on a device remotely.",
+      "summary": "The \"Restart, Retire, or Wipe Devices\" section of the CompTIA Security+ course emphasizes the importance of securely managing company data on user devices. It covers practical applications of remote management features provided by Microsoft, allowing administrators to efficiently restart, retire, or wipe devices without physical access. This approach enhances data security and streamlines the process of handling devices that may contain sensitive information.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.6.3",
+        "title": "Enroll Devices and Perform a Remote Wipe",
+        "content_type": "video",
+        "filename": "10.6.3_Enroll_Devices_and_Perform_a_Remote_Wipe_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.6.3_Enroll_Devices_and_Perform_a_Remote_Wipe_[video].txt",
+        "word_count": 802,
+        "has_content": true
+      },
+      "section_header": "Restart, Retire, or Wipe Devices",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.6.3_chunk_2",
+      "content": "I'm already logged into Endpoint Manager. I'll come up to Devices and go over to the All Devices blade. Then, in my list of devices, select the Windows11-3 device. There is no particular reason why I picked this device for this demo. In your environment, you would obviously pick the one that you want to work with. So, now we're seeing some of the basic properties for this device. I can do several things from here. Up here, we have Retire. I'll click on it. If you choose this option, it will remove company data from the device that is managed by Intune. It won't delete the user's personal data. There are some exceptions to what is removed, so make sure you read the documentation and understand what's happening before proceeding. I don't want to do this, so I'll click No.",
+      "summary": "In the \"Retire a Device\" section of the CompTIA Security+ course, users learn how to manage devices through Endpoint Manager, specifically focusing on the process of retiring a device using Intune. This action removes company data from the selected device while preserving the user's personal data, although users are advised to review documentation for exceptions. Understanding this process is crucial for maintaining data security and compliance in an organizational environment.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.6.3",
+        "title": "Enroll Devices and Perform a Remote Wipe",
+        "content_type": "video",
+        "filename": "10.6.3_Enroll_Devices_and_Perform_a_Remote_Wipe_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.6.3_Enroll_Devices_and_Perform_a_Remote_Wipe_[video].txt",
+        "word_count": 802,
+        "has_content": true
+      },
+      "section_header": "Retire a Device",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.6.3_chunk_3",
+      "content": "Now we'll look at how to wipe a device. I'll click on Wipe. Now a wipe is going to set the device back to a factory reset. You might do this if the person using the device has had an awkward dismissal from a company or the device is lost or stolen. You have two choices. You can wipe the device, but keep the enrollment state and associated account. The other option is to wipe even if the device loses power. It also says that the device might not run Windows 10 or later. This is the more extreme of the two. It's probably the right option if the device is lost or stolen. In fact, it's making me a little nervous. I'm going to click Cancel before I accidentally wipe my demo system!",
+      "summary": "The \"Wipe a Device\" section of the CompTIA Security+ course covers the process of resetting a device to factory settings, which is crucial for protecting sensitive information in cases of loss, theft, or employee dismissal. Users have the option to either retain the enrollment state and associated accounts or perform a complete wipe, even if the device loses power, which is recommended for lost or stolen devices. This section emphasizes the importance of data security and the appropriate measures to take in various scenarios.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.6.3",
+        "title": "Enroll Devices and Perform a Remote Wipe",
+        "content_type": "video",
+        "filename": "10.6.3_Enroll_Devices_and_Perform_a_Remote_Wipe_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.6.3_Enroll_Devices_and_Perform_a_Remote_Wipe_[video].txt",
+        "word_count": 802,
+        "has_content": true
+      },
+      "section_header": "Wipe a Device",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.6.3_chunk_4",
+      "content": "Next, we have Delete a device. This one deletes the device, and you will no longer see it here in Intune. The device will no longer be able to reach company resources, and the company data may be wiped from the device.",
+      "summary": "The \"Delete a Device\" section of the CompTIA Security+ course covers the process of removing a device from Intune, ensuring it can no longer access company resources. This action also triggers the potential wiping of company data from the device, enhancing security by preventing unauthorized access to sensitive information. Understanding this process is crucial for maintaining organizational data integrity and security.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.6.3",
+        "title": "Enroll Devices and Perform a Remote Wipe",
+        "content_type": "video",
+        "filename": "10.6.3_Enroll_Devices_and_Perform_a_Remote_Wipe_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.6.3_Enroll_Devices_and_Perform_a_Remote_Wipe_[video].txt",
+        "word_count": 802,
+        "has_content": true
+      },
+      "section_header": "Delete a Device",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.6.3_chunk_5",
+      "content": "We're going to look at the Restart feature, but first, let's talk about a few others. Here, we have Sync. Use this when you want to sync your device. Fresh Start will remove all preloaded Win32 apps. You can choose whether to retain user data or not. And finally, there are several more things you can do remotely. Now let's go back and look at how to restart a device remotely.",
+      "summary": "This section covers various device management options, including the Restart feature, Sync for device synchronization, and Fresh Start, which removes preloaded Win32 apps while allowing users to retain their data. Additionally, it highlights the ability to perform remote actions on devices, emphasizing practical applications for maintaining and managing system integrity and performance.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.6.3",
+        "title": "Enroll Devices and Perform a Remote Wipe",
+        "content_type": "video",
+        "filename": "10.6.3_Enroll_Devices_and_Perform_a_Remote_Wipe_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.6.3_Enroll_Devices_and_Perform_a_Remote_Wipe_[video].txt",
+        "word_count": 802,
+        "has_content": true
+      },
+      "section_header": "Other Options",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.6.3_chunk_6",
+      "content": "Now I'll click on Restart. I get a message here that basically asks if I'm sure about wanting to restart the device. It goes on to say that the users will not be automatically notified of the restart, and they might lose work. To prevent this, make sure your users are informed before you select this option. I know that there is no one using this device, so I'll go ahead and click on Yes here. You can see a message in the upper right-hand corner of the screen that says Initializing Restart. Now I'll jump over this this other device and see what happens. Okay. I'm on the Windows client here, and I've been waiting for a few minutes. It did not reboot instantly. I do have this message that says it's going to sign me out and Windows will shut down in two minutes. So, I'll pause the recording, wait for a few minutes, and see what happens. Oay., That took about two minutes, and now my device is restarting.",
+      "summary": "The section on remotely restarting a device with Intune emphasizes the importance of user communication prior to executing the restart to prevent data loss. The process involves confirming the restart, after which the device will notify the user of the impending shutdown and sign-out, typically occurring within a couple of minutes. This practical application highlights the need for careful management of remote device operations in a corporate environment.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.6.3",
+        "title": "Enroll Devices and Perform a Remote Wipe",
+        "content_type": "video",
+        "filename": "10.6.3_Enroll_Devices_and_Perform_a_Remote_Wipe_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.6.3_Enroll_Devices_and_Perform_a_Remote_Wipe_[video].txt",
+        "word_count": 802,
+        "has_content": true
+      },
+      "section_header": "Restart Device Remotely with Intune",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "10.6.3_chunk_7",
+      "content": "That's it for this demo. In this demonstration, we covered the steps on how to restart, retire, or wipe devices on a device remotely in Intune.",
+      "summary": "This demonstration focused on the remote management of devices using Microsoft Intune, highlighting the processes for restarting, retiring, or wiping devices. Key security concepts include maintaining device integrity and ensuring data protection through remote actions. Practical applications emphasize the importance of effective device management in safeguarding organizational assets and responding to potential security threats.",
+      "metadata": {
+        "chapter_num": "10",
+        "section_num": "10.6.3",
+        "title": "Enroll Devices and Perform a Remote Wipe",
+        "content_type": "video",
+        "filename": "10.6.3_Enroll_Devices_and_Perform_a_Remote_Wipe_[video].txt",
+        "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.6.3_Enroll_Devices_and_Perform_a_Remote_Wipe_[video].txt",
+        "word_count": 802,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 7
+}

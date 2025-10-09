@@ -1,0 +1,167 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Incident Response
+00:04
+Incident response is a systematic approach to
+00:06
+handling and managing the aftermath of a security
+00:09
+breach or cyberattack, also known as an IT
+00:12
+incident, computer incident, or security incident.
+00:16
+The goal is to handle the situation in a way that
+00:18
+limits damage and reduces recovery time and costs.<br>
+2. Incident Response Lifecycle
+00:22
+The incident response lifecycle provides a
+00:24
+structured approach to addressing and managing the
+00:27
+aftermath of a security breach or cyberattack to
+00:30
+limit damage and reduce recovery time and costs.
+00:33
+The incident response lifecycle includes seven
+00:36
+steps: preparation, detection, analysis, containment,
+00:41
+eradication, recovery, and lessons learned.<br>
+3. Preparation
+00:45
+Part of the preparation step is to ensure
+00:47
+that systems are resilient to attack.
+00:50
+This includes hardening systems, writing
+00:52
+policies and procedures, and setting up
+00:54
+confidential lines of communication.<br>
+00:57
+The preparation step also includes creating
+00:59
+incident response resources and procedures.
+01:02
+An Incident Response Plan is like
+01:04
+a fire drill for cyber threats.
+01:06
+Just as a fire drill outlines steps to evacuate a
+01:09
+building safely, an Incident Response Plan contains
+01:12
+instructions on how to react when a cyber-attack occurs.<br>
+4. Detection
+01:17
+The detection step discovers
+01:19
+indicators of threat actor activity.
+01:21
+Indicators that an incident may have occurred
+01:24
+could be generated from an automated intrusion
+01:26
+system or other monitoring and alerting systems.
+01:30
+Incidents can also be detected using threat hunting
+01:33
+methods or by reports made by employees or customers.<br>
+5. Containment
+01:37
+The containment phase is where immediate action is taken
+01:41
+to prevent further damage or compromise of the system.
+01:44
+This could involve disconnecting affected systems or devices
+01:47
+from the network to prevent the spread of the breach.
+01:50
+It's the equivalent of stopping the
+01:52
+bleeding in a medical emergency, a quick and
+01:54
+temporary fix to halt the immediate threat.
+01:57
+Containment strategies can vary based on
+01:59
+the severity and nature of the incident.
+02:02
+After containment, an in-depth investigation
+02:04
+leads to the next phase—eradication.<br>
+6. Recovery
+02:08
+Next is the recovery phase.
+02:10
+During this phase, systems and networks
+02:12
+are returned to their normal function.
+02:14
+All systems affected by the cyberattack are
+02:16
+cleaned, restored, and put back into operation.
+02:20
+Recovery may involve reinstalling system components,
+02:23
+changing passwords, and patching software.
+02:26
+System administrators should carefully monitor
+02:28
+systems during recovery for any signs of abnormal
+02:31
+activity, as this could indicate that not all
+02:34
+threat elements have been successfully eradicated.
+02:37
+Regular operations can resume once the systems
+02:39
+are deemed secure and functioning normally.
+02:42
+The recovery phase isn't considered complete until all
+02:45
+systems are back operational and all data has been recovered.<br>
+7. Lessons Learned
+02:49
+The last phase in the incident response
+02:51
+lifecycle is the "lessons learned" stage.
+02:54
+During this phase, the incident response
+02:56
+team conducts a post-incident review.
+02:59
+This review aims to identify what went well during the
+03:02
+response, what could've been done better, and what
+03:04
+improvements can be made to the incident response process.
+03:08
+It provides an opportunity to learn from the
+03:10
+incident and improve future response efforts.
+03:13
+The lessons learned may include changes to
+03:15
+policies, procedures, or infrastructure.
+03:18
+They may lead to further security
+03:20
+and awareness training for employees.<br>
+8. Summary
+03:23
+That's it for this lesson.
+03:24
+In this lesson, we've discussed incident response.
+03:27
+We looked at the seven steps of the incident response
+03:30
+lifecycle: preparation, detection, analysis,
+03:34
+containment, eradication, recovery, and lessons learned.<br>

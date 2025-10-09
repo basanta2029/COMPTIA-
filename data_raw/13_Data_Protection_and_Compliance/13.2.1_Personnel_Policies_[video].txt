@@ -1,0 +1,313 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Summary
+00:04
+In this lesson, we're going to discuss personnel policies.
+00:07
+Employees are a critical part of any successful
+00:09
+business, but they also represent one of the
+00:12
+greatest risks to your organization's security.
+00:15
+Using proper employment practices helps mitigate this risk.
+00:19
+They should encompass all aspects of employment,
+00:21
+from pre-employment screenings to offboarding.
+2. Pre-Employment
+00:24
+Employee security should start even
+00:26
+before an employee starts work.
+00:28
+To ensure that a potential employee is a low security
+00:31
+risk, an organization should perform a background check.
+00:34
+This check may include checking into a person's criminal
+00:36
+history, credit history, and employment history.
+00:40
+It could also involve drug testing, identity
+00:42
+verification, or a review of their social media presence.
+3. Onboarding
+00:47
+Once you've decided to hire an individual, you'll
+00:49
+need to set up a work environment for them.
+00:52
+This process is called onboarding.
+00:54
+It primarily involves a lot of HR paperwork,
+00:56
+but there are a few onboarding procedures
+00:58
+that involve security professionals.
+01:00
+When you're setting up the new employee's user
+01:02
+accounts, security credentials, and building access,
+01:05
+make sure to assign the appropriate access rights.
+01:08
+To do this, you'll need to know the new employee's job
+01:11
+title, duties, and place in the organizational hierarchy.
+01:15
+It's also important that new employees
+01:17
+sign necessary forms and documents.
+01:19
+A non-disclosure agreement stipulates that
+01:21
+employees can't reveal confidential or
+01:24
+proprietary information to any non-employee.
+01:27
+A non-compete agreement prevents former
+01:29
+employees from working for competitors.
+01:31
+And an acceptable use policy specifies how
+01:34
+employees are allowed to use the information
+01:35
+organization's network resources.
+4. Training
+01:38
+As we've discussed, employees are a serious security risk.
+01:41
+Sometimes they're intentionally trying to cause
+01:43
+harm, but more often, they're simply uninformed.
+01:46
+One way to help secure your data and your network is
+01:49
+to hold regular security trainings for your employees.
+01:52
+These trainings should include topics like how to
+01:54
+recognize security breaches and exploits when they
+01:57
+occur, what to do in the event of a security breach,
+02:00
+and sample scenarios with recommended responses.
+02:03
+Training should be ongoing and train employees on
+02:06
+new security issues and refresh them on older topics.
+02:09
+Ideally, you should use a combination of teaching
+02:11
+techniques so you have a better chance of engaging
+02:13
+everyone and helping them retain information.
+02:17
+In addition to classroom training, security methods
+02:19
+can be taught through games, simulations, role-based
+02:23
+hands-on training, or computer-based training.
+5. Daily Operations
+02:25
+Onboarding and training provide a great starting
+02:28
+point, but you still need ongoing policies to ensure
+02:31
+that employee performance and duties are secure.
+6. Separation of Duties
+02:35
+So, how can we better secure our daily operations?
+02:38
+First, let's look at separation of duties.
+02:40
+Separation of duties restricts the amount of access
+02:43
+or influence individuals control, which removes
+02:45
+single points of failure within the organization.
+02:49
+For example, let's say an employee in
+02:51
+accounting approves business expenses, verifies
+02:54
+expenditures, signs checks, and withdraws funds.
+02:57
+The risk of this employee embezzling company
+02:59
+money is significantly multiplied because
+03:02
+this one person performs all of these duties.
+03:05
+In this situation, this person could
+03:07
+easily become a single point of failure.
+03:09
+With separation of duties, expenditures and withdrawals
+03:12
+should be verified by at least two sets of people.
+03:15
+And maybe the CFO should sign the
+03:17
+checks instead of the accountant.
+03:19
+This way, we can eliminate this single point of failure.
+7. Job Rotation
+03:23
+You can also enhance security
+03:24
+by implementing duty rotations.
+03:26
+For example, after a couple of months, each person's
+03:28
+responsibility shifts to another person, like a chore chart.
+03:33
+So, using our previous example, instead of signing
+03:35
+checks, the CFO verifies and approves expenditures,
+03:39
+while others handle withdrawals and signing checks.
+03:42
+Duty rotations also heighten security by continually
+03:45
+monitoring accountability during the rotation process.
+8. Least Privilege
+03:49
+Now let's move on to the principle of least privilege.
+03:51
+The idea behind this principle is that
+03:53
+employees only have access to information
+03:55
+they absolutely need for their job function.
+03:58
+Employees with too much access could either
+04:00
+intentionally or unintentionally compromise security.
+04:04
+For example, administrative accounts should only be given to
+04:07
+people who need them, and this access should only be used by
+04:10
+employees who are actively performing administrative duties.
+04:14
+A best practice is to log in with a standard user
+04:16
+account and then only change to an administrative
+04:19
+account to perform a task that requires it.
+04:22
+When you're done with that task, you
+04:23
+switch back to the standard user account.
+04:26
+It's never a good idea to be logged in as
+04:28
+an administrator while browsing the web,
+04:30
+reading emails, or using social media.
+04:33
+An exploit coming through that internet connection could
+04:35
+easily obtain elevated privileges on that workstation,
+04:38
+which hugely increases the potential for damages.
+9. Mandatory Vacations
+04:42
+Another practice to increase security
+04:44
+is a mandatory vacation policy.
+04:47
+The best way to implement mandatory vacations
+04:49
+is to require employees to request vacation days
+04:51
+in advance, like at the beginning of the year.
+04:54
+The benefits of mandatory vacations are twofold.
+04:57
+First, they allow employees to take a
+04:59
+break from work, rest, and recharge.
+05:01
+Second, they provide the security administrator the ability
+05:04
+to detect fraudulent activities while employees are away.
+05:08
+For example, if you notice that a reoccurring security
+05:10
+breach stops while a particular employee is away on
+05:13
+vacation, that could help you identify its cause.
+10. Offboarding
+05:16
+The last step in employment is offboarding.
+05:19
+Whether an employee resigns, retires, or is terminated,
+05:22
+offboarding procedures keep the company safe as they depart.
+05:26
+First, you should disable or delete
+05:28
+that employee's user account.
+05:30
+An active, unused account allows
+05:31
+easy access to your network.
+05:33
+When you delete a user account, be sure not
+05:35
+to delete that user's data in the process.
+05:39
+Make sure their files are preserved.
+05:40
+You want that data available for future use.
+05:43
+So you may want to disable former
+05:44
+employees' accounts rather than delete them.
+05:47
+You should also change security keys and require
+05:49
+the return of access tokens, devices, and phones.
+05:53
+And when an employee leaves the organization, Human
+05:55
+Resources should always conduct an exit interview.
+05:59
+During this interview, it's important to address any
+06:01
+concerns, dissatisfactions, or feedback from the employee.
+06:05
+With this information, you'll have a better
+06:06
+idea of why the employee is leaving and be
+06:08
+able to address any remaining concerns.
+06:11
+This is also a good time to remind the employee of
+06:13
+any non-disclosure or non-compete agreements they
+06:15
+may have signed during their onboarding process.
+11. Summary
+06:18
+That's it for this lesson.
+06:20
+In this lesson, we discussed the importance of
+06:22
+personnel policies during the pre-employment
+06:25
+process, onboarding, training, and daily operations,
+06:28
+and we finished by discussing offboarding policies
+06:31
+that protect the company and mitigate risks.

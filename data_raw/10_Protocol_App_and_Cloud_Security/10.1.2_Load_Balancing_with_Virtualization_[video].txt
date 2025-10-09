@@ -1,0 +1,228 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Load Balancing with Virtualization
+00:04
+Virtualization provides many advantages above simply
+00:08
+installing an operating system on a physical computer system.
+00:12
+One powerful benefit and feature is load balancing.
+00:16
+Let's look at how load balancing
+00:17
+works with virtual machines, or VMs.<br>
+2. Clustering and Load Balancing
+00:20
+VMs run on top of a hypervisor which is
+00:25
+installed on physical hardware called a host.
+00:28
+The hypervisor decouples the
+00:30
+hardware from the VMs, or workloads.<br>
+00:33
+If we have two or more hosts, we can create a cluster.
+00:37
+Clusters usually require shared storage like a SAN where the
+00:42
+actual VM files reside and can be managed as a single entity.
+00:47
+While workloads are running in memory, they still
+00:51
+use real resources – real physical memory, real
+00:54
+storage, and really CPUs, and the cluster manages
+00:58
+that linking in an effective, optimized way.<br>
+3. Aggregate Cluster Power
+01:02
+For example, if the cluster contains eight host servers
+01:06
+with four quad-core CPUs each running at 4GHz and 64GB
+01:12
+of memory, the cluster has an aggregate of 512GHz of CPU
+01:17
+power and 512GB of memory available for running VMs.
+01:24
+Having a cluster provides a number of benefits, including
+01:27
+high-availability, load balancing, and high performance.
+01:32
+Let's look at load balancing.<br>
+4. Cluster Load Balancing
+01:34
+A cluster can sense which hosts are busy
+01:37
+and offload workloads to a less busy host.
+01:40
+It does this by monitoring hardware resources like
+01:44
+CPU and RAM on each host of the cluster to
+01:48
+determine the best placement for all the workloads.
+01:51
+The load is evaluated frequently, and workloads can
+01:55
+be adjusted dynamically to reallocate when needed.<br>
+01:59
+This means a VM or workload could move from one
+02:03
+host to another in a cluster for better performance.
+02:07
+And what's cool is this is seamless to the user—they
+02:10
+don't even notice all this is happening on the back end.<br>
+02:14
+This dynamic allocation load balances the
+02:17
+workloads across hosts in the cluster based
+02:20
+on host resource load and availability.
+02:24
+When a host gets busy, workloads will
+02:27
+be moved to another host on the fly.
+02:30
+That's powerful, and ensures each workload
+02:33
+gets the very best performance possible.<br>
+02:36
+Not all your hosts will have the same
+02:38
+hardware with CPU and RAM resources.
+02:41
+Some hosts will be beefier than others.
+02:44
+Some will have newer processors.
+02:47
+This means that some hosts can handle
+02:49
+more dense workloads than others.
+02:51
+The cluster can sense how busy each host is and adjust,
+02:56
+or load-balance, the workloads for best performance and to
+02:59
+best utilize CPU and memory resources across the cluster.<br>
+5. Resource Pooling
+03:05
+Within a cluster, we can usually
+03:06
+create what's called a resource pool.
+03:10
+This helps us allocate CPU and RAM
+03:12
+resources to prioritize our workloads.<br>
+03:15
+Some workloads may have applications that are
+03:18
+mission critical and require specific resources
+03:21
+to always be up and running properly.
+03:25
+Other workloads may not be as important,
+03:28
+but still need adequate resources.
+03:30
+Resource pooling allows us to establish performance
+03:33
+boundaries within the cluster, so resources aren't
+03:36
+consumed by low-level workloads and keep important
+03:40
+workloads from starving for resources.<br>
+03:43
+So, a resource pool works within the cluster,
+03:46
+and may span two or more host servers.
+03:49
+Let's create Resource Pool A with a
+03:52
+certain amount of RAM and CPU shares.
+03:55
+After creating the pool, we can then
+03:57
+assign or create VMs to run in the pool.
+04:01
+We can create as many pools as we like in our cluster,
+04:06
+but we must always assign them CPU and memory performance.
+04:10
+Here's another pool – Resource Pool B.
+04:14
+We'll assign it a certain amount of CPU
+04:17
+and RAM, and then we'll assign VMs to it.<br>
+04:21
+In essence, the workloads end up being
+04:23
+load balanced, and they are throttled to
+04:26
+only use the established resource limits.
+04:29
+This allows admins to aggregate computing
+04:32
+capacity and delegate it for use rather
+04:35
+than focus on individual host servers.
+04:38
+And, as a bonus, if one host server goes
+04:41
+down, the other servers in the cluster will
+04:43
+pick up the workloads and continue on.<br>
+04:47
+You can create a resource pool on an individual host.
+04:51
+However, if you have a cluster, resource pooling will
+04:54
+provide more resources across the hosts in a cluster,
+04:58
+allowing you to better manage the use of those hardware
+05:01
+resources, including reservations for CPU and RAM usage.
+05:06
+The VMs will be load balanced within
+05:09
+the resource pool within the cluster.
+05:12
+This provides for rapid elasticity which leverages
+05:15
+virtualized server and storage technologies to rapidly
+05:20
+meet the rise and fall of user load and service demand.<br>
+05:24
+Hypervisor software that supports resource
+05:27
+pooling is downloadable from the internet.
+05:30
+You can download an evaluation copy to set up and
+05:33
+experiment with load balancing on virtual machines.<br>
+6. Summary
+05:38
+That's it for this lesson.
+05:40
+Within the context of virtualization,
+05:43
+that's how load balancing works.
+05:45
+Clustering allows VMs to be load balanced
+05:48
+and highly available while providing the
+05:51
+best performance possible for each workload.
+05:54
+And resource pooling allows us to aggregate
+05:56
+hardware resources across multiple hosts ensuring
+06:01
+that the workloads get the resources they need
+06:03
+without sacrificing the performance of others.<br>

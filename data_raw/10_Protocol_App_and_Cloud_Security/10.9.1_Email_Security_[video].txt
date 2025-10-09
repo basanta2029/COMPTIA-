@@ -1,0 +1,285 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Email Security
+00:04
+Email security is a big issue for IT professionals.
+00:07
+Spam, viruses, malware, social engineering all
+00:10
+use email as the vehicle to carry out an attack.
+00:13
+In addition, a lot of sensitive
+00:15
+information is sent via email.
+2. Email Security Gateway
+00:17
+In this lesson, we're going to talk about the steps
+00:19
+you should take to properly secure email
+00:21
+communications and reduce the risk of email exploits.
+00:25
+Let's start by looking at a comprehensive email
+00:27
+security solution called an email security gateway.
+00:30
+An email security gateway is a security
+00:32
+solution that monitors emails that are
+00:34
+sent to or originate from an organization.
+00:38
+An email security gateway can be
+00:39
+software-, hardware-, or cloud-based.
+00:42
+There are even some virtualized email security
+00:44
+gateways that function on a hypervisor.
+00:46
+Hardware-based gateways are typically installed
+00:50
+in a server room and are configured to have all
+00:52
+email messages routed through the device.
+00:54
+Software- or cloud-based gateways function in the same
+00:57
+way by routing email messages through the service.
+01:01
+Depending on the solution, an email security gateway can
+01:04
+offer things like spam protection, malware and virus
+01:06
+scanning, email encryption, and even data loss prevention.
+01:10
+Let's take a look at some of the features
+01:12
+that most email security gateways offer.
+3. Spam Filtering
+01:15
+Spam filtering is offered by a lot of gateways.
+01:17
+As its name suggests, spam filtering is
+01:20
+to filter out certain types of email.
+01:23
+The filter will try to filter out unwanted or unsolicited
+01:26
+emails and prevent them from arriving to the end users.
+01:29
+Spam filters use various methods in order to identify spam.
+01:32
+Some services even use lists that are continually
+01:35
+updated with known spammers and automatically
+01:38
+block anything from those emails or domains.
+01:41
+One thing to know about spam filters is that they
+01:43
+are far from perfect—"they are not a silver bullet.
+01:46
+In fact, fine-tuning a spam
+01:48
+filter is a never-ending process.
+01:50
+Spammers are constantly finding ways to trick spam filters
+01:54
+in order to get emails through and sometimes legitimate
+01:57
+emails will be flagged and blocked by the filtering device.
+02:00
+However, the benefits of using a spam filter
+02:03
+far outweigh the time it takes to configure one.
+4. DLP
+02:07
+Another feature provided by a lot of email security
+02:09
+gateways is that of data loss prevention, or DLP.
+02:13
+Gateways that employ DLP scan all
+02:15
+outgoing emails for sensitive information.
+02:18
+Both the message body and attachments are scanned and if
+02:21
+sensitive information is found, the email will be blocked.
+02:24
+If desired, a notification can also be
+02:26
+sent to the sender or system administrator.
+02:30
+For example, let's say an employee—"either accidently
+02:33
+or purposely—"sends an email that contains a customer's
+02:36
+credit card information to a personal email address.
+02:40
+When the email is sent, it is filtered through the
+02:42
+email gateway where it is scanned by the DLP feature.
+02:45
+Because the email contains sensitive information, the
+02:48
+gateway blocks the email from being sent outside the network.
+02:52
+The gateway then notifies the employee that their email was
+02:54
+blocked and that the system administrator has been notified.
+02:58
+Just like a spam filter, a DLP solution isn't prefect.
+03:02
+Its success depends entirely on how advanced the scanning
+03:05
+algorithm is and how well the gateway was configured.
+03:08
+Because of this, it's important you understand
+03:10
+how to properly configure DLP on a gateway.
+5. Email Encryption
+03:13
+The next email security gateway
+03:15
+feature we'll look at is encryption.
+03:17
+Remember, email sent over the internet isn't very secure.
+03:21
+Emails can be intercepted by
+03:22
+someone with the right know how.
+03:23
+And because email messages aren't encrypted
+03:26
+by default, they can be easily read.
+03:28
+To protect against this, you can use email encryption
+03:31
+as a standalone or as part of an email security gateway.
+03:35
+As its name suggests, email encryption encrypts
+03:38
+the entire contents of an email and, in some cases,
+03:41
+will digitally sign the email with a certificate.
+03:44
+This certificate is similar to SSL certificates in
+03:47
+that they provide a form of identity verification.
+03:50
+Email encryption can be configured in a few different ways.
+03:54
+One way is to encrypt all email
+03:56
+communications, regardless of destination.
+03:59
+Doing this does provide the most protection; however,
+04:01
+encrypting and decrypting emails requires a lot of resources.
+04:05
+And if hundreds or even thousands of emails are
+04:08
+being sent a day, this might not be feasible.
+04:11
+Another option is to only encrypt emails that
+04:13
+are being sent outside the internal network.
+04:16
+With this method, that funny cat video you email
+04:18
+to Rick in accounting won't be encrypted, but the
+04:21
+contract document you send to your client will be.
+04:24
+Now, even if you only encrypt outgoing
+04:27
+emails, this encryption and decryption
+04:29
+can still become a resource bottleneck.
+04:32
+Luckily, some security gateways offer selective encryption.
+04:35
+With this option, outgoing emails are scanned in
+04:38
+a similar way that a DLP solution scans emails.
+04:42
+If sensitive information is found, then
+04:43
+the email is encrypted before its sent.
+04:46
+If no sensitive information is found,
+04:48
+then the email is sent unencrypted.
+04:50
+Now, this encryption and digital signing can
+04:52
+be done using several different encryption
+04:54
+protocols, such as PGP, GPG, or TLS.
+04:59
+However, the most common and widely accepted protocol
+05:02
+for email encryption is the S/MIME protocol, which
+05:05
+stands for Secure/Multipurpose Internet Mail Extensions.
+05:09
+The important thing to understand about S/MIME is
+05:11
+that it requires the use of a public key certificate
+05:14
+in order to encrypt and decrypt email messages.
+05:18
+This certificate can either be self-signed or
+05:20
+purchased from a public CA, but it is required.
+05:24
+Typically, two certificates are used: one for encrypting
+05:27
+the email and another for digitally signing the email.
+05:30
+Digitally signing the email ensures that only the intended
+05:33
+recipient is able to decrypt the email message and also
+05:37
+verifies that the email originated from a trusted source.
+6. Secure POP/IMAP
+05:41
+In addition to using an email security gateway,
+05:43
+you can also further secure email communications by
+05:46
+ensuring you are using the latest email protocols.
+05:49
+Whether you are using POP or IMAP, make sure
+05:51
+to use the latest version of the protocol.
+05:54
+In addition, both of these protocols support
+05:56
+the use of SSL/TLS in order to create a secure
+05:59
+tunnel when connecting to an email server.
+06:02
+One way to do this is to use a Microsoft Exchange server
+06:05
+and enable secure POP or secure IMAP communication.
+7. Summary
+06:08
+Proper email security is an extremely
+06:11
+important aspect of network security.
+06:13
+Emails can be a vehicle for countless attacks and exploits.
+06:17
+As such, you need to make sure you take the appropriate
+06:19
+steps in order to properly secure your organizations
+06:22
+email communications and prevent email-driven attacks.

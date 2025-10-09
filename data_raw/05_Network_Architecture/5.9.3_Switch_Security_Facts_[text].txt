@@ -1,0 +1,95 @@
+Security Pro 8.0
+
+5.9.3 Switch Security Facts
+
+This lesson covers the following topics:
+
+Security switch features
+Implement switch security
+Spanning Tree Protocol
+Security Switch Features
+
+The following table lists switch features that can be implemented to increase network security:
+
+Feature
+Description
+Virtual LAN
+
+(VLAN)
+A virtual LAN (VLAN) is a logical grouping of computers based on switch ports.
+
+VLAN membership is configured by assigning a switch port to a VLAN.
+A switch can have multiple VLANs configured on it, but each switch port can only be a member of a single VLAN (see exception described below).
+VLANs can be defined on a single switch or configured on multiple interconnected switches. With multiple switches, each switch can be configured with the same VLANs, and devices on one switch can communicate with devices on other switches as long as they are members of the same VLAN.
+A trunk port is used to connect two switches together.
+Typically, gigabit ethernet ports are used for trunk ports, although any port can be a trunk port.
+A trunk port is a member of all VLANs defined on a switch and carries traffic between the switches.
+When trunking is used, frames that are sent over a trunk port are tagged by the first switch with the VLAN ID so that the receiving switch knows to which VLAN the frame belongs.
+The Trunking Protocol describes the format that switches use for frame tagging with the VLAN ID.
+Because end devices do not understand the VLAN tags, the tag is removed from the frame by the switch before the frame is forwarded to the destination device.
+VLAN tagging is only used for frames that travel between switches on the trunk ports.
+Using VLANs, the switch can be used to create multiple IP broadcast domains. Each VLAN is in its own broadcast domain, and broadcast traffic is sent only to members of the same VLAN.
+In a typical configuration with multiple VLANs, workstations in one VLAN can not communicate with workstations in other VLANs. To enable inter-VLAN communication, you need to use a router (or an OSI Layer 3 switch).
+MAC filtering/port security	
+With switch port security, the devices that can connect to a switch through the port are restricted.
+
+Port security uses the MAC address to identify allowed and denied devices.
+On the switch, MAC addresses are stored in RAM in a table and are associated with the port. The table can be manually configured, or learning devices can automatically build the table.
+You can specify that only a single MAC address is allowed per port, or you can configure each port to allow multiple addresses.
+With automatic configuration, the next device or specified number of devices can connect to the port and additional devices are denied.
+A port violation occurs when an unauthorized device tries to connect. The switch configuration determines how the switch handles frames from an unauthorized device. The switch can either drop all frames from the unauthorized device or shut down the port, disabling all communications through that port.
+Port authentication (802.1x)	Port authentication is provided by the 802.1x protocol and allows only authenticated devices to connect to the LAN through the switch. Authentication uses user names and passwords, smart cards, or other authentication methods.
+Implement Switch Security
+
+Be aware of the following when implementing switch security:
+
+Creating VLANs with switches offers many administrative benefits. For example, you can:
+Create virtual LANs based on criteria such as workgroup, protocol, or service.
+Simplify device moves (devices are moved to new VLANs by modifying the port assignment).
+Control broadcast traffic based on logical criteria (only devices in the same VLAN receive broadcast traffic).
+Control security (isolate traffic within a VLAN).
+When you use switches to create VLANs, you still need routers to:
+Route data between VLANs.
+Provide port filtering. Port filtering filters network packets in and out of devices based on their application type or port number.
+Route data into and out of the local area network.
+VLANs are commonly used with voice over IP (VoIP) to distinguish voice traffic from data traffic. Traffic on the voice VLAN can be given a higher priority to ensure timely delivery.
+MAC filtering uses the MAC address of a device to drop or forward frames through the switch. Port authentication requires that the user or device authenticates before frames are forwarded through the switch.
+In general, all switch ports are enabled by default. To increase the security of the switch and network, you should disable individual ports that are not in use.
+Restricting access by MAC address is difficult to manage and still prone to spoofing. Better security is obtained by forcing computers and/or users to authenticate before full network access is granted. The IEEE 802.1X Port-based Network Access Control (PNAC) standard allows a switch to require authentication when a host connects to one of its ports. 802.1X uses authentication, authorization, and accounting (AAA) architecture:
+Supplicant — the device requesting access such as a user's PC or laptop.
+Authenticator — the switching device (or any type of network access appliance). This does not validate authentication request s directly but acts as a conduit for authentication data.
+Authentication server —the server that holds or can contact a directory of network objects and that can validate authentication requests, issue authorizations, and perform accounting of security events.
+The 802.1X standard is implemented by two protocols:
+Extensible Authentication Protocol (EAP) — provides a framework for deploying multiple types of authentication methods. It is often used with digital certificates to establish a trust relationship and create a secure tunnel to transmit the user credential or to perform smart-card authentication without a password.
+Remote Authentication Dial-In User Service (RADIUS) — allows the authenticator and authentication server to communicate authentication and authorization decisions. The authenticator is a RADIUS client; the authentication server is a RADIUS server.
+When a host connects to an 802.1X-enabled switch port, the switch opens the port for the EAP over LAN (EAPoL) protocol only. The switch port only allows full data access when the host has been authenticated. The switch receives an EAP packet with the supplicant's credentials. These are encrypted and cannot be read by the switch. The switch uses the RADIUS protocol to send the EAP packet to the authentication server. The authentication server can access the directory of user accounts and can validate the credential. If authentication is successful, it informs the switch that full network access can be granted.
+
+
+Description
+Some hosts are so security-critical that it is unsafe to connect them to any type of network. One example is the root certification authority in PKI. Another example is a host used to analyze malware execution. A host that is not physically connected to any network is said to be air-gapped.
+
+It is also possible to configure an air-gapped network. This means that hosts within the air-gapped network can communicate, but there is no cabled or wireless connection to any other network. Military bases, government sites, and industrial facilities use air-gapped networks.
+
+Physically isolating a host or group of hosts improves security but also incurs significant management challenges. Device administration has to be performed at a local terminal. Any updates or installs have to be performed using USB or optical media. This media is a potential attack vector and must be scanned before allowing its use on an air-gapped host.
+Spanning Tree Protocol
+
+To provide fault tolerance, many networks implement redundant paths between devices using multiple switches. However, providing redundant paths between segments causes packets to be passed between the redundant paths endlessly. This condition is known as a switching loop. Switching loops lead to incorrect entries in a MAC address table, making a device appear to be connected to the wrong port and causing unicast traffic to be circulated in a loop between switches. The Spanning Tree Protocol runs on switches to prevent switching loops by making only a single path between switches active at a single time.
+
+The Spanning Tree Protocol also:
+
+Provides redundant paths between devices.
+Recovers automatically from a topology change or device failure by unblocking redundant paths.
+Identifies the optimal path between any two network devices.
+Calculates the best loop-free path through a network by assigning a role to each bridge or switch and by assigning roles to the ports of each bridge or switch.
+The type of ports used by the Spanning Tree Protocol are:
+
+Root ports, which are configured to communicate directly to the root switch.
+Designated ports, which forward frames to and from attached hosts.
+Blocked ports, which form a loop and are used for redundancy.
+Ports in the Spanning Tree Protocol exist in one of five states:
+
+Blocking
+Listening
+Learning
+Forwarding
+Disabled

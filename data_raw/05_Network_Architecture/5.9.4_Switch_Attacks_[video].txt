@@ -1,0 +1,512 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Switch Attacks
+00:04
+Threat actors look for any opening they can
+00:06
+find, and network switches are no exception.
+00:09
+Inside attacks take advantage of anything accessible, and
+00:12
+attackers can exploit switches to gain valuable information.
+00:15
+It's important for you to know that all network
+00:17
+information flows through switches and routers, including
+00:20
+such things as authentication information and data.
+00:23
+Attackers can use a variety of switch attacks
+00:25
+methods to gather valuable information that
+00:28
+they can use later to exploit the network.<br>
+2. Common Switch Attacks
+00:31
+In this lesson, we'll go over the following
+00:32
+attack methods: MAC flooding, ARP spoofing,
+00:35
+VLAN hopping, STP manipulation, double tagging,
+00:39
+and MAC spoofing in regard to Layer 2 switches.
+00:42
+Remember, Layer 2 switches understand
+00:44
+Ethernet frames at the OSI Data Link layer.<br>
+3. MAC Flooding
+00:47
+The first attack to examine is MAC flooding.
+00:51
+Switches maintain MAC address tables, sometimes
+00:53
+called Content Access Memory tables, or CAM tables,
+00:57
+to track workstations' and ports' associations.
+01:00
+Switches learn which workstation is connected to each
+01:03
+port, and that information is stored in the MAC address
+01:05
+table and used when switches forward information.<br>
+01:08
+For example, let's say that Workstation A
+01:11
+wants to send information to Workstation D.
+01:14
+The frame has a source address ending in As, and the
+01:17
+destination address is the address ending with Ds.
+01:20
+When A sends the information, the switch
+01:22
+examines the destination address and sends
+01:25
+the data out port 1 to its destination.
+01:26
+Workstations B and C aren't involved,
+01:28
+so they never see the information.<br>
+01:30
+Suppose an attacker wants to see all
+01:33
+data passing through this switch.
+01:35
+Considering that a switch's normal operation
+01:35
+only sends data to the intended recipient, the
+01:40
+attacker would only be able see data destined for
+01:43
+his or her workstation, which is very unlikely.
+01:46
+But the attacker can flood the switch with fake MAC
+01:48
+address information and fill up the MAC address table.
+01:51
+Once the switch can no longer store any more MAC
+01:53
+addresses, the switch enters a fail-open mode and
+01:56
+behaves the same as a network hub or Layer 1 device.
+01:58
+This means that any packet coming
+02:00
+in now go out to all switch ports.<br>
+02:03
+The next switch attack is called ARP
+02:04
+spoofing, also known as ARP poisoning.
+4. ARP Spoofing
+02:07
+But let's first talk about Address Resolution
+02:09
+Protocol, or ARP, which works similarly to DNS.
+02:13
+DNS resolves a fully qualified domain name into an IP
+02:17
+address, while ARP associates a device's MAC address
+02:20
+with the IP address assigned to that same device.
+02:24
+To aid in this process, a switch creates and
+02:26
+stores an ARP table in memory for easy lookup.<br>
+02:30
+Knowing this, an attacker sends commands to the
+02:34
+switch to overwrite the contents of its ARP table
+02:37
+by replacing a good, known MAC address in the table
+02:40
+with the MAC address of the attacker's device.
+02:41
+This is the ARP spoofing or ARP poisoning.
+02:44
+As a result, data that was intended for the legitimate
+02:47
+device is now sent to the attacker's device.
+02:50
+In many cases, the attacker captures the
+02:53
+data and sends it on to its rightful owner.
+02:56
+Another attack method you should know about is VLAN hopping.
+02:59
+VLANs are used to separate traffic into
+03:02
+sections that function like networks.
+5. VLAN Hopping
+03:04
+This is often done to all the different VLANS
+03:07
+that carry different types of traffic, such as
+03:09
+data, voice, or surveillance information.
+03:11
+Since each VLAN is its own network, a
+03:13
+device on one VLAN can't communicate with
+03:15
+a device on another VLAN without a router.
+03:18
+There are a couple of techniques attackers can
+03:20
+use to take advantage of this VLAN separation.<br>
+03:23
+The first is VLAN spoofing.
+03:24
+VLAN spoofing takes advantage of a switch that's using its
+03:28
+default settings, which allows for dynamic trunk negotiation.
+6. VLAN Spoofing
+03:32
+Depending on the switch, this default setting
+03:34
+is known as dynamic auto or dynamic desirable.
+03:38
+This means that if you have a switch connected to
+03:40
+the original switch, the ports connecting the two
+03:42
+are automatically configured as a trunk connection.<br>
+03:46
+A trunk connection allows data
+03:47
+from one switch to pass to another.
+03:49
+A spoofing attach takes advantage of this
+03:51
+by fooling the switch into thinking the
+03:53
+attacker is connected using a trunk line.
+03:56
+Although there are several ways to carry out a
+03:58
+spoofing attach, such as adding a new switch,
+04:00
+we'll look at how someone could accomplish a
+04:02
+spoofing attach with just one switch.<br>
+04:04
+Our switch here is configured with two VLANs VLAN 10 and
+04:08
+VLAN 20 with both having several computers connected to it.
+04:12
+Our attacker, a disgruntled employee, is connected
+04:15
+to VLAN 10 and wants to steal sensitive information
+04:18
+from the company's chief executive officer.
+04:20
+But as mentioned, VLAN 10 is a
+04:23
+separate network from VLAN 20.
+04:24
+So as-is, the attacker can't access the CEO's computer.<br>
+04:27
+By using a tool like Yersinia, our disgruntled employee can
+04:31
+send the switch a packet that tells the switch the port he or
+04:33
+she is using is really connected to another network switch.
+04:38
+This is done using a Dynamic Trunking
+04:40
+Protocol frame, or DTP frame.
+04:41
+Since the switch is configured to auto-negotiate
+04:45
+for a trunk line, it assumes the attacker really is
+04:47
+a switch and opens his or her port as a trunk line.
+04:51
+With the attacker's port now configured this way, he or
+04:54
+she can easily capture packets from the CEO's computer.
+04:57
+Keep in mind that the best way to protect your
+04:59
+network from this type of attack is to disable the
+05:03
+switch's auto-negotiation setting for all ports except
+05:05
+those to which an authorized switch is attached.<br>
+05:07
+Another method attackers use is called double tagging.
+05:10
+This VLAN hopping technique is used when the attacker's
+05:13
+computer is on one VLAN switch, and the target computer
+05:16
+is on a VLAN attached to a separate switch.
+7. Double Tagging
+05:20
+In addition, the switches must be configured
+05:22
+to use what's called native VLANs.<br>
+05:24
+When a packet is sent to a switch, it
+05:26
+includes what's known as a VLAN tag.
+05:28
+This tag's purpose is to indicate
+05:31
+which switch should process the frame.
+05:33
+For example, you'll notice that both users are on VLAN 10.
+05:37
+If User A wants to send data to User B, the
+05:40
+frame would include the VLAN tag indicating
+05:42
+that the frame was intended for VLAN 10.
+05:45
+When the data reaches the switch, the VLAN tag is removed
+05:48
+and the packet is sent to its rightful destination.<br>
+05:51
+Double tagging is accomplished by manipulating
+05:53
+the frame being sent to include two VLAN tags.
+05:55
+So one for VLAN 10 and one for Switch 2, or VLAN 20.
+06:00
+When this type of frame is received by VLAN
+06:03
+10's switch, the first VLAN tag is removed.
+06:05
+But seeing that the second VLAN tag is referencing
+06:08
+VLAN 20, the frame is forwarded to that switch.<br>
+06:10
+Then, as it normally would, this switch strips off the
+06:14
+second VLAN tag and sends the frame to the victim's
+06:17
+VLAN, successfully hopping from one VLAN to another.
+06:21
+To prevent double tagging, it's important to make sure
+06:23
+that your switches aren't configured to use native VLANs.
+06:26
+This is because trunk ports configured with a
+06:28
+native VLAN won't apply their own VLAN tag when
+06:31
+sending these frames, which lets the attacker's
+06:34
+tagged frames to continue as I just described.<br>
+06:37
+Another common switch attack is known as a Spanning
+06:40
+Tree Protocol, or STP, manipulation attack.
+8. STP Manipulation
+06:41
+STP is normally configured on a
+06:45
+network with several switches.
+06:47
+The primary purpose is to prevent switching loops.
+06:50
+Often, whether intentional or not, there are several paths
+06:53
+data can take to get from its source to its destination.
+06:56
+STP dynamically turns off certain switch ports to
+07:00
+ensure that data can't get stuck hopping from switch
+07:02
+to switch without ever reaching its intended target.<br>
+07:06
+While STP configuration is beyond the scope of
+07:08
+this lesson, it's important to understand that a
+07:11
+single switch is designated as the root bridge.
+07:14
+The root bridge is an optimized data path's primary source.
+07:18
+This is necessary because some switches often connect to
+07:20
+other switches to form redundant connections to ensure
+07:23
+communications continue even if a switch or port fails.
+07:27
+The root bridge is used to pass data from switch
+07:29
+to switch since all switches that participate in
+07:31
+the tree know where the root bridge is located.<br>
+07:34
+So the root bridge is responsible for
+07:36
+calculating the spanning tree from topology
+07:38
+changes advertised by non-root bridges.
+07:40
+If an attacker can become the root bridge,
+07:44
+he or she is then able to see a variety of
+07:46
+frames that they normally wouldn't see.
+07:48
+To perpetrate this attack, the attacker inserts
+07:51
+their switch into the tree and manipulates it to
+07:53
+appoint his or her switch as the root bridge.
+07:56
+By doing this, he or she can use a sniffer
+07:59
+to collect data traversing the network.
+08:01
+An attacker accomplishes this manipulation by sending
+08:04
+bridge ID frames, or BID frames, with a lower ID than
+08:07
+that currently being used by the legitimate root bridge.<br>
+08:10
+There are several step you can take
+08:12
+to mitigate this type of attack.
+08:14
+First, make sure that attackers can't easily guess which
+08:16
+bridge ID number is being used by the legitimate root bridge.
+08:20
+Most switches have a default root bridge ID, ensuring that
+08:22
+your bridge ID is considerably lower than the default one.
+08:26
+If your switch supports it, a second option is to set
+08:29
+up Bridge Protocol Data Units Guard, or BPDU Guard.
+08:33
+This feature allows an interface to put itself
+08:35
+into blocking state when it receives a BPDU
+08:38
+packet meant to change the root bridge switch.
+08:41
+Your third option is to enable Root Guard
+08:43
+on the ports not being used as trunk lines.
+08:46
+This keeps ports in their assigned roles.
+08:48
+If one of these ports receives a BPDU frame, a sys
+08:51
+error is logged and that port is blocked, thwarting
+08:54
+the attacker's attempt to change the root bridge.<br>
+08:56
+The last common switch attack to
+08:58
+discuss is known as MAC spoofing.
+9. MAC Spoofing
+09:01
+MAC spoofing is the process of sending out data
+09:03
+from a computer using a MAC address that's
+09:05
+different from the MAC address physically
+09:07
+hard-coded on a network interface card, or NIC.
+09:10
+Although you can't physically change your MAC
+09:12
+address, there are tools like Windows Network and
+09:14
+Sharing Center in Control Panel, SMAC for Windows,
+09:17
+and others that can make an operating system
+09:19
+believe that the NIC has a different MAC address.
+09:23
+There are several reasons attackers may use this method to
+09:25
+attack a network, such as to defeat switch port security.<br>
+09:29
+For example, in some networks, part of a switch's
+09:32
+security is the creation of a whitelist of MAC addresses.
+09:36
+Only devices with a MAC address in the
+09:38
+whitelist can be processed through that switch.
+09:40
+If an attacker can use a network sniffer to find
+09:43
+a MAC address that's being used by a legitimate
+09:45
+host attached to the switch, he or she can change
+09:48
+their MAC address to a valid one on the whitelist.
+09:51
+Then they've successfully gained access to the
+09:54
+switch and any data being transmitted through it.<br>
+09:57
+An attacker could use MAC spoofing to change their
+10:00
+MAC address to mimic a targeted system as well.
+10:03
+For example, once an attacker has assumed a valid
+10:06
+computer's MAC address, he or she could send the switch
+10:08
+a MAC update command, changing the MAC address table.
+10:12
+Now, the switch sends any data that was destined
+10:14
+for the target system to the attacker's system.
+10:17
+The important thing to know here is that since
+10:19
+it's controlled on the attacker's computer, there
+10:21
+really isn't a way to prevent MAC spoofing.
+10:24
+If this becomes an issue, you'll need to use
+10:26
+techniques at the Application level of the OSI model.<br>
+10:30
+As we end this lesson, you've probably noticed
+10:32
+that for any of these attacks to work, the
+10:34
+attacker must have physical network access.
+10:37
+So physical security is a must!
+10:40
+One thing to keep in mind is that
+10:41
+for every offense, there's a defense.
+10:44
+Administrators can make configuration settings
+10:46
+that help to avoid some of these attacks or, at
+10:48
+least, notify them something strange is going on.<br>
+10:52
+That's it for this lesson.
+10:53
+In this lesson, we examined several methods
+10:55
+attackers utilize to exploit switch configuration
+10:58
+weaknesses, such as the ones shown here.
+10. Summary
+11:01
+With each of these attacks, one of the primary
+11:03
+goals is to collect information that can be used
+11:05
+to exploit vulnerabilities at a later time.<br>

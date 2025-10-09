@@ -1,0 +1,288 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Reconnaissance
+00:04
+Reconnaissance, which is also known as Footprinting,
+00:06
+is the process of gathering information about a
+00:09
+target before you begin an attack.
+00:11
+There are two types of reconnaissance, passive and active.
+00:15
+Passive reconnaissance is gathering information without
+00:18
+directly interacting with users, and active reconnaissance is
+00:21
+gathering information through direct interaction with users.
+00:25
+In this lesson, we'll look at the
+00:27
+tools associated with both types.<br>
+2. Passive Reconnaissance
+00:29
+Before interacting with a target, a hacker should
+00:32
+perform passive reconnaissance to gather as much
+00:35
+information as possible without alerting the anyone.
+00:38
+Gathering information through packet sniffing,
+00:40
+eavesdropping, and Open-source intelligence, or
+00:43
+OSINT, are the more common passive methods.<br>
+3. Packet sniffing
+00:47
+Packet sniffing is capturing data packets
+00:49
+and analyzing them for useful information.
+00:52
+If you're in a public place, you can gather
+00:54
+these data packets and use a tool like Wireshark
+00:56
+to see if you can find anything useful.
+01:00
+Because you're not sending any data, you're essentially
+01:03
+a bystander, so this is a passive reconnaissance method.<br>
+01:07
+You need to scan for open wireless networks
+01:09
+before you can start sniffing packets.
+01:12
+Two common scanning methods are war driving and war flying.<br>
+4. War Driving and War Flying
+01:16
+War driving is driving or walking around with a wireless
+01:19
+device to look for open vulnerable wireless networks.
+01:23
+War flying is the doing the same thing using
+01:26
+a drone or another unmanned aerial vehicle.<br>
+5. Eavesdropping
+01:29
+Eavesdropping is another way you
+01:31
+can passively gather information.
+01:33
+It can include listening to employee conversations,
+01:36
+shoulder surfing, and dumpster diving.
+01:39
+People often throw out documents with
+01:41
+sensitive information and don't realize it.
+01:43
+Holding your nose and sifting through dirty garbage
+01:46
+doesn't require any special skills or tools.
+01:48
+It's a really easy way for any hacker
+01:50
+to get get really valuable information.<br>
+6. Open-source intelligence (OSINT)
+01:54
+Open-source intelligence, or OSINT, is any
+01:56
+data collected from publicly available sources.
+02:00
+This includes doing web searches on search engines like
+02:03
+Google, social media sites such as LinkedIn, and other
+02:07
+sources to gather personal identifiable information, or PII.<br>
+02:12
+After a hacker has gained as much information
+02:14
+as possible using passive reconnaissance,
+02:17
+they'll move on to active reconnaissance.<br>
+7. Active Reconnaissance
+02:20
+Active reconnaissance is the process of gathering
+02:22
+information by interacting with the target.
+02:25
+Because you are directly interacting
+02:27
+with the target, you can be discovered.<br>
+02:30
+During this phase, hackers gather additional information
+02:33
+that they couldn't get with passive reconnaissance.
+02:36
+This includes network information such as IP
+02:40
+addresses, sub-domains, and DNS information.
+02:43
+They'll also gather system information such as
+02:45
+operating systems, users and passwords, locations
+02:49
+of servers, and organizational information that
+02:51
+wasn't gathered during passive reconnaissance.<br>
+02:55
+Doing all of this reconnaissance provides
+02:57
+a wealth of knowledge on the target.
+02:59
+The goal is to understand the target's security,
+03:02
+narrow focus for potential attacks, identify
+03:05
+vulnerabilities, and create a network map.<br>
+03:09
+Sometimes the line between passive and
+03:11
+active reconnaissance can get blurry.
+03:13
+Just always remember that and any amount of direct
+03:16
+interaction means you're using an active method.<br>
+8. Reconnaissance Tools
+03:20
+There's a wealth of tools and resources hackers and
+03:22
+penetration tester can use to gather all of this information.<br>
+9. OSINT Framework
+03:27
+One of the first tools a security professional
+03:30
+should use in reconnaissance is the OSINT framework.
+03:34
+This framework is a collection of resources and
+03:36
+tools that are separated by common categories to
+03:39
+easily gather all sorts of online information, making
+03:42
+the initial reconnaissance process much easier.<br>
+10. theHarvester
+03:46
+theHarvester is a great passive reconnaissance tool
+03:48
+that can gather lots of information from public sources,
+03:51
+such as search engines, social media sites, and Shodan.
+03:56
+There are some options in the program to brute force
+03:59
+DNS information, which is active reconnaissance.<br>
+11. Shodan
+04:03
+Shodan is a very popular search
+04:05
+engine for internet-connected devices.
+04:08
+Users can search for specific
+04:10
+types of devices and locations.
+04:12
+You can use this information to see if a target
+04:14
+has any online devices without proper security
+04:17
+and gather more information about them.<br>
+12. dnsenum
+04:19
+Dnsenum is a program that finds all DNS
+04:23
+servers and entries for an organization.
+04:26
+This helps you find information such as
+04:28
+usernames, computer names, IP addresses, and more.
+04:33
+Depending on the settings used, dnsenum
+04:36
+can be either passive or active.<br>
+13. Curl and wget
+04:39
+Curl and wget are two programs that
+04:42
+let you download and upload files.
+04:44
+You can use them in the active reconnaissance
+04:46
+phase to download an entire website and view
+04:49
+its code and resources offline.
+04:52
+Because you're actively interacting with the
+04:54
+target, these are active reconnaissance tools.<br>
+14. Scanless
+04:57
+Scanless is a really cool tool for port scanning.
+05:01
+It uses exploitation websites to
+05:03
+perform port scans on your behalf.
+05:06
+This means that you can scan your target anonymously.
+05:09
+Even though you're not directly interacting with the
+05:11
+target, this's still considered active reconnaissance.<br>
+15. Sn1per
+05:15
+Sn1per is a scanning tool that
+05:18
+combines many tools into one program.
+05:20
+You can use Sn1per to find all sorts of information,
+05:23
+such as DNS, open ports, services, and vulnerabilities.
+05:28
+This is definitely an active reconnaissance program.<br>
+16. Nessus
+05:31
+Finally, we have Nessus.
+05:32
+Nessus is a proprietary vulnerability
+05:36
+scanner developed by Tenable.
+05:38
+You can use Nessus to scan your target
+05:40
+for known vulnerabilities that you can
+05:42
+exploit to gain access to the target.
+05:46
+Nessus has many different options available for
+05:48
+scanning, which allows you to narrow your focus.<br>
+05:52
+Using these tools allows you to gather all the
+05:54
+information you could want about a person or organization.
+05:57
+Network defenders can also use these same tools to discover
+06:01
+what information is available to others and take necessary
+06:04
+steps to remove or hide anything that shouldn't be accessed.<br>
+17. Summary
+06:09
+And that wraps up this lesson.
+06:11
+In this video, we compared passive
+06:13
+and active reconnaissance techniques.
+06:16
+Passive means there is no direct interaction with
+06:18
+users, and active means there is direct interaction.
+06:22
+We also reviewed some the common tools
+06:25
+used in the reconnaissance phase.<br>

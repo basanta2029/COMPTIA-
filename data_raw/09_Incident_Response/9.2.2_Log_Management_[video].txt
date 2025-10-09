@@ -1,0 +1,303 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Log Management
+00:04
+In this video, we'll explore log categories,
+00:06
+specific logs you should know, and open-source
+00:09
+tools that are used to aid IT security teams.<br>
+2. Network Logs
+00:12
+Every network generates dozens and dozens of logs.
+00:15
+Network logs tell us what's coming
+00:17
+into and leaving our network.
+00:19
+Every network appliance and almost every application
+00:22
+produces logs which can be used for a variety of reasons.
+00:25
+But more often than not, we use logs for network security.<br>
+3. System Logs
+00:29
+System logs are produced by an operating system.
+00:32
+These logs contain all the information that
+00:34
+pertains to that OS like updates, errors,
+00:37
+failures, and other system occurrences.
+00:40
+This includes information for client computers
+00:42
+and servers, which gives IT admins a way to
+00:45
+investigate events on individual machines that may
+00:48
+interconnect with other machines on the network.<br>
+4. Application Logs
+00:51
+Most applications produce some type of event logging.
+00:55
+These logs show application access, crashes,
+00:57
+updates, and any other relevant information which
+01:00
+could be valuable in determining root-cause analysis.
+01:04
+The application may be crashing or not performing
+01:06
+correctly, and this could be tied to suspicious
+01:09
+activity that may indicate malicious intent.<br>
+5. Security Logs
+01:12
+There are several logs that would
+01:13
+fall under the security category.
+01:15
+There are application-security logs, event-security
+01:18
+logs, and security logs for specialty applications like
+01:21
+IDS/IPS, endpoints, firewalls, routers, and switches.
+01:26
+Also, logs for security cameras and wireless or physical
+01:29
+access points are included under the security log umbrella.<br>
+6. Web Server Logs
+01:34
+There's no doubt that web server logs are
+01:36
+one of the most tedious of all logs to parse.
+01:38
+But web servers can be prime targets for hackers,
+01:42
+so it's important to know who's interacting with
+01:44
+your server and what they're attempting to do.
+01:47
+Most web engines like IIS, Tomcat, Web Sphere,
+01:51
+and NGINX have some level of server logging.
+01:54
+These logs can tell you exactly when users
+01:56
+log onto your site and what their location is.
+01:59
+They also give you some information on attempted attacks.<br>
+7. DNS
+02:03
+Domain Name System, or DNS, has been around for a long time.
+02:07
+When DNS was designed, network security wasn't a priority.
+02:11
+Over time, malicious actors
+02:12
+started using DNS-targeted attacks.
+02:15
+These attacks have the potential to
+02:16
+be disruptive and quite expensive.
+02:19
+With DNS logging, you can track updates
+02:21
+and choose to approve or deny them.
+02:23
+DNS also produces query logs that detail which
+02:26
+requests are being handled by which instance.
+02:29
+Rate limiting is another valuable
+02:30
+tool that limits response rate.
+02:33
+Analyze these logs to see when rate
+02:35
+limiting was used and for what purpose.
+02:37
+Client IP, record requests, flags, and other
+02:40
+metadata can be included in these logs.<br>
+8. Dump Files
+02:43
+Dump files are created when an application,
+02:45
+OS, or other computer function stops abruptly.
+02:49
+The information that's stored in memory at the
+02:51
+time is dropped into a file for later analysis.
+02:54
+These files help IT admins perform root-cause analysis
+02:58
+because they provide the state that the application was
+03:00
+in when it crashed, error codes, and other clues as to
+03:04
+what happened previous to the application failure.
+03:07
+They can also give clues as to the crash's origin.
+03:10
+This could be something as commonplace as a bad
+03:12
+driver or hardware component, or it may prove,
+03:15
+unfortunately, to be the result of a malicious act.<br>
+9. Authentication Logs
+03:19
+Authentication logs are vital to a network's security.
+03:22
+Authentication servers may be Active Directory-based
+03:25
+or OpenLDAP depending on your network structure.
+03:29
+It's critical to know who may be poking around your
+03:32
+network, so token requests, authentication failures,
+03:35
+or failed logins on expired accounts are all stored
+03:38
+on these authentication logs for you to view.<br>
+10. VoIP
+03:41
+Voice over Internet Protocol, or VoIP,
+03:44
+has become a common network application.
+03:46
+With a high implementation rate comes
+03:48
+attention from malicious actors.
+03:50
+As with any network application, there are
+03:52
+vulnerabilities that can be leveraged, so in order to
+03:55
+defend it there needs to be a way to access
+03:57
+information about what's happening at any given time.<br>
+11. SIP Traffic
+04:01
+Session Initial Protocol, or SIP,
+04:03
+is the standard in VoIP calls.
+04:05
+The key to tracking attacks against a VoIP system is
+04:08
+understanding SIP and being able to parse its logs.
+04:11
+These logs contain key information about where a call
+04:14
+was initiated and what the communication's intent was.
+04:18
+These facts help the IT security team
+04:20
+create a stronger SIP security posture.<br>
+12. Syslog/Rsyslog/Syslog-ng
+04:22
+Syslog is short for System Logging Protocol.
+04:26
+This protocol sends system logs and event messages
+04:29
+to a server designated by the system administrator.
+04:32
+It collects logs from various appliances and sends them to
+04:35
+the syslog server where they can be reviewed and analyzed.<br>
+04:40
+Rsyslog is an open-source tool
+04:41
+created for use in Linux networks.
+04:43
+It stands for rocket-fast system-log processing.
+04:47
+It gets its name because of its ability to send
+04:48
+a million messages per second to a local server.
+04:52
+This tool's benefit is its diversity.
+04:55
+It's capable of multi-threading by leveraging
+04:57
+multiple security protocols like TCP, TLS, and others.
+05:01
+It also allows for output-format customization.<br>
+05:04
+Syslog-ng is a robust log-aggregating software
+05:09
+for multiple platforms, including Windows.
+05:12
+This tool increases the quality of
+05:14
+the log data that's sent to your SIEM.
+05:16
+It also facilitates lightning-fast log searches
+05:19
+by using full-text queries and collects logs
+05:22
+without the installation of server agents.<br>
+13. Journalctl
+05:25
+Journactl is a Linux tool that gathers the logs produced by
+05:29
+systemd, a system that's the basis for many Linux components.
+05:33
+This command is used in Bash to parse
+05:36
+logs that've been collected by systemd.
+05:38
+The results are presented in the syslog format
+05:41
+and are ordered oldest to newest by default.
+05:44
+This can be changed by using the –r flag.
+05:46
+Each line shows the date, server
+05:48
+hostname, process name, and any messages.
+05:52
+If you're more comfortable using a
+05:54
+command line tool, this is for you.
+05:56
+Because it's a CLI tool, there are many key commands
+05:59
+at your disposal to get you your logs quickly.<br>
+14. Nxlog
+06:03
+Nxlog is an open-source log-collector application.
+06:06
+It uses log-collector agents to gather and send log data
+06:09
+to a log server, which can itself be set up using nxlog.
+06:13
+This application is available for both Windows and Linux.
+06:16
+The Community edition supports multiple SIEM applications
+06:20
+and works with Windows Event Viewer and syslog.<br>
+15. Summary
+06:23
+That's it for this lesson.
+06:25
+In this lesson, we learned about different log categories
+06:28
+like network logs, security logs, and application logs.
+06:31
+We also learned about specific logs and
+06:33
+how you can use them for better security.
+06:36
+Finally, we learned about open-source tools that assist
+06:39
+you in collecting and organizing log data and metadata.
+06:43
+Understanding logs is truly the key to better security.<br>

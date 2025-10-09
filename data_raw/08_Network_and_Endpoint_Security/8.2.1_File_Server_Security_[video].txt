@@ -1,0 +1,289 @@
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. File Server Security
+00:04
+File servers are an attractive target because they
+00:07
+almost always store some type of valuable data, such as
+00:09
+client contacts, credit card information, employee files,
+00:13
+company performance records--the list goes on and on.
+00:16
+In this lesson, we'll look at some steps you should take
+00:19
+to properly secure your organization's file servers.
+00:22
+Let's start by looking at some of the best practices
+00:24
+you should follow when it comes to file server security.
+00:27
+Keep in mind that these are generic best practices that can
+00:30
+be applied to any type of file server, whether it's a
+00:33
+dedicated NAS, a SAN, a Microsoft server, or a Linux server.
+2. Best Practices
+00:37
+The first best practice is to keep
+00:39
+all file servers physically secure.
+00:41
+Remember, it's very easy for someone to gain access to
+00:44
+data if they have physical access to a system, so employ
+00:47
+the appropriate physical controls with your file servers
+00:50
+as you would with any other networking hardware device.
+00:53
+Next, is the principle of least privilege.
+00:55
+This is the concept that users should only have access
+00:58
+to the information and resources that are necessary for
+01:01
+them to perform their job, and that's it.
+01:03
+They shouldn't have any more privileges than they need.
+01:06
+This helps prevent privilege creep, where a
+01:08
+user slowly accumulates more and more
+01:11
+privilege than they need to perform their job.
+01:14
+Another best practice is to use full-disk
+01:17
+encryption on all storage mediums.
+01:19
+This may or may not be possible for your
+01:21
+organization depending on its policies.
+01:23
+Encrypting an entire drive and keeping it encrypted as
+01:26
+people work requires a significant amount of resources.
+01:30
+Due to this resource overhead, it might not
+01:32
+be feasible to use full-disk encryption.
+01:34
+Instead, you might want to
+01:36
+consider only encrypting backups.
+01:38
+Another option is to fully decrypt drives when they're
+01:41
+powered on and encrypt them when the system shuts down.
+01:44
+This may not prevent someone from transferring
+01:46
+files to a USB drive, but does prevent someone
+01:49
+physically stealing the entire drive or server.
+01:53
+Another security best practice that applies to almost
+01:55
+every system, not just files servers, is to remove
+01:59
+unnecessary software and disable unused services.
+02:02
+You can think of this as a principle
+02:04
+of least privilege with applications.
+02:06
+In other words, you should only have the
+02:08
+applications and services that are necessary for
+02:10
+the file server to function, and nothing more.
+02:13
+Having unused applications or services
+02:15
+increases the attack surface area of a system
+02:18
+and makes securing it that much harder.
+02:21
+In addition, the system is more
+02:22
+susceptible to zero-day attacks.
+02:26
+The next practice you should employ is auditing.
+02:28
+Make sure that your file server has proper auditing
+02:31
+enabled that can track user behavior, such as when
+02:34
+files are accessed, modified, deleted, and moved.
+02:37
+This helps you identify abnormal behavior
+02:39
+on the system and can even help you detect
+02:41
+that your system has been compromised.
+02:43
+The last security best practice is to use
+02:46
+implicit deny access control lists, or ACLs.
+02:48
+ACLs control the system's permission.
+02:52
+A good security practice is to prevent
+02:54
+access to everything that isn't explicitly
+02:56
+granted.
+02:57
+In other words, deny access to everyone except
+03:00
+people with explicitly granted permissions.
+03:03
+This control is a part of the concept
+03:04
+of least privilege mentioned earlier.
+03:07
+The opposite of implicit deny is explicit deny, meaning that
+03:11
+you're only looking for people you want to deny access to.
+03:14
+The problem with this approach is that you have to do a
+03:16
+bit of guesswork and research to deny access to files.
+03:19
+And if you happen to forget about a particular
+03:21
+group or file tree, you could inadvertently
+03:24
+give everyone access to sensitive files.
+03:27
+As a result, your system will be
+03:28
+more secure if you use implicit deny.
+3. Secure Protocols vs. Unsecure Protocols
+03:31
+At some point, we all need to download or transmit
+03:34
+files using the internet, which is inherently unsecure.
+03:37
+Let's talk about different ways files
+03:39
+can be transmitted across a network.
+03:41
+Some of these protocols are secure, and some aren't.
+03:44
+As a security administrator, you need to know the difference
+03:47
+and decide which of these protocols to use on your systems.
+03:51
+File Transfer Protocol, or FTP, is an older TCP/IP
+03:55
+protocol that's used for transferring files across systems.
+03:58
+It was adopted as a TCP/IP standard through RFC 959 in 1985.
+04:05
+FTP is inherently unsecure since it doesn't
+04:07
+encrypt data, including usernames and passwords.
+04:10
+As such, FTP shouldn't be used for transferring sensitive
+04:13
+data over an unsecure network such as the internet.
+04:17
+Another problem with FTP is that
+04:19
+it allows anonymous user access.
+04:21
+This option can be disabled, but it's still a security risk.
+04:25
+If you must use FTP, there are ways to use it more
+04:28
+securely by pairing it with an encryption protocol.
+04:31
+There are a couple of ways to do this.
+04:34
+The first way is to use a VPN connection
+04:36
+that wraps all communications, FTP packets
+04:39
+included, in an encrypted data packet.
+04:42
+This would encrypt all traffic between
+04:44
+the host and the FTP file server.
+04:46
+IPsec or SSH can be used to create secure
+04:49
+tunneling with FTP to secure the transmission.
+04:53
+When use with an SSH tunnel, FTP is
+04:55
+called FTP over SSH, or Secure FTP.
+05:00
+Another way is to use FTPS.
+05:01
+FTPS uses SSL and TLS encryption
+05:05
+to secure data transmissions.
+05:07
+FTPS is similar to HTTPS in that it uses the SSL and TLS
+05:09
+cryptographic protocols to secure communications and also
+05:16
+requires the use of SSL certificates to encrypt traffic.
+05:21
+Another protocol that you can use
+05:22
+is the Secure Copy Protocol, or SCP.
+05:24
+SCP is similar to the Linux copy command cp.
+05:27
+SCP uses the Secure Shell Protocol,
+05:31
+or SSH, which is a secure tunnel.
+05:33
+SCP is an older protocol that's entirely text-based—that
+05:36
+is, you need to type the command, including the
+05:40
+directories to transmit, into a command line interface.
+05:44
+While it's secure, it doesn't offer
+05:46
+any type of directory traversing.
+05:49
+As a replacement for SCP, you can use SFTP.
+05:52
+SFTP stands for Secure Shell File Transfer Protocol.
+05:57
+Files are transferred through an SSH tunnel.
+05:59
+SFTP isn't related to FTP at all.
+06:03
+They're two completely different, incompatible protocols.
+06:06
+SFTP typically uses SSH v2, the more
+06:10
+secure version of Secure Shell Protocol.
+06:13
+It uses a graphical interface, and it's more user-friendly.
+4. Summary
+06:17
+That's it for this lesson.
+06:19
+In this video, we discussed several best
+06:20
+practices that can be used to secure your file
+06:23
+servers and your organization's resources.
+06:25
+We also discussed how to use an encrypted protocol to
+06:28
+reduce the opportunity for an attacker to see sensitive
+06:30
+information as you copy files across a network.

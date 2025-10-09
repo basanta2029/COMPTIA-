@@ -1,0 +1,50 @@
+{
+  "metadata": {
+    "chapter_num": "9",
+    "section_num": "9.2.3",
+    "title": "SIEM and Log Management Facts",
+    "content_type": "text",
+    "filename": "9.2.3_SIEM_and_Log_Management_Facts_[text].txt",
+    "file_path": "data_raw/09_Incident_Response/9.2.3_SIEM_and_Log_Management_Facts_[text].txt",
+    "word_count": 453,
+    "has_content": true
+  },
+  "full_content": "Security Pro 8.0 This lesson covers the following topics: Security information and event management Security Information and Event Management A security information and event management (SIEM) system combines security information management (SIM) and security event management (SEM) functions into one security management system. Security information and event management tools compile and examine multiple data points gathered across a network. The following table describes SIEM components. Component\tDescription Vulnerability scan output\tMonitoring a network requires experience and solid tools. One tool standard to network security is a scanner that can identify vulnerabilities and recommend remediation steps. This tool scans servers, firewalls, switches, software programs, security cameras, and wireless access points. The scan delivers the output to IT admins via the SIEM dashboard. The interval between scans is set by the IT department. SIEM dashboards\tThe dashboard is a common component of all SIEM systems. The dashboard consists of customizable screens showing real-time security and network information. The information in real-time allows the IT security team to monitor and respond to events on the network effectively. Sensors\tSensors are a vital part of monitoring and securing a network. Sensors are set up at critical endpoints, services, and other vulnerable locations. These sensors are programmed to send customized alerts to the SEIM if specific parameters are not within the acceptable range. Sensitivity\tThe IT security team sets the sensitivity level when the sensors are deployed. The benefit of variable sensitivity settings is the ability to customize the data sent to the SIEM. Not every organization will have the same needs in network monitoring. Trends\tTrends are patterns of activity discovered and reported to the SIEM. This is how baselines are established. Trends help security analysts decide whether reported activity is normal or outside the baseline. The security group can investigate trends that do not fit previously recorded information. As the IT security team investigates and documents these trends, it becomes easier for the team to spot a trend that may signal a security event quickly. Alerts\tAlerts are the SIEM’s way of informing the IT team that a pre-established parameter is not within the acceptable range. The alert is intended to get the attention of the IT person or persons monitoring the network. A best practice in this area is 24-hour monitoring. Correlation\tEvent correlation is a critical SIEM component. The software gathers data from log files, system applications, network appliances, etc., and analyzes it. This work is tedious; people are inefficient at it. That’s why the event correlation feature is valuable. Not only does it gather the data, but it analyzes and compares known malicious behavior against the aggregated data, increasing the chances of the discovery of security events.",
+  "chunks": [
+    {
+      "chunk_id": "9.2.3_chunk_1",
+      "content": "Security Pro 8.0",
+      "summary": "The CompTIA Security+ course introduces foundational cybersecurity concepts, emphasizing the importance of protecting networks, systems, and data from threats. Key topics include risk management, cryptography, identity and access management, and incident response. Practical applications involve implementing security measures, conducting vulnerability assessments, and understanding compliance frameworks to safeguard organizational assets.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.3",
+        "title": "SIEM and Log Management Facts",
+        "content_type": "text",
+        "filename": "9.2.3_SIEM_and_Log_Management_Facts_[text].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.3_SIEM_and_Log_Management_Facts_[text].txt",
+        "word_count": 453,
+        "has_content": true
+      },
+      "section_header": "Introduction",
+      "timestamp_range": null
+    },
+    {
+      "chunk_id": "9.2.3_chunk_2",
+      "content": "This lesson covers the following topics: Security information and event management Security Information and Event Management A security information and event management (SIEM) system combines security information management (SIM) and security event management (SEM) functions into one security management system. Security information and event management tools compile and examine multiple data points gathered across a network. The following table describes SIEM components. Component\tDescription Vulnerability scan output\tMonitoring a network requires experience and solid tools. One tool standard to network security is a scanner that can identify vulnerabilities and recommend remediation steps. This tool scans servers, firewalls, switches, software programs, security cameras, and wireless access points. The scan delivers the output to IT admins via the SIEM dashboard. The interval between scans is set by the IT department. SIEM dashboards\tThe dashboard is a common component of all SIEM systems. The dashboard consists of customizable screens showing real-time security and network information. The information in real-time allows the IT security team to monitor and respond to events on the network effectively. Sensors\tSensors are a vital part of monitoring and securing a network. Sensors are set up at critical endpoints, services, and other vulnerable locations. These sensors are programmed to send customized alerts to the SEIM if specific parameters are not within the acceptable range. Sensitivity\tThe IT security team sets the sensitivity level when the sensors are deployed. The benefit of variable sensitivity settings is the ability to customize the data sent to the SIEM. Not every organization will have the same needs in network monitoring. Trends\tTrends are patterns of activity discovered and reported to the SIEM. This is how baselines are established. Trends help security analysts decide whether reported activity is normal or outside the baseline. The security group can investigate trends that do not fit previously recorded information. As the IT security team investigates and documents these trends, it becomes easier for the team to spot a trend that may signal a security event quickly. Alerts\tAlerts are the SIEM’s way of informing the IT team that a pre-established parameter is not within the acceptable range. The alert is intended to get the attention of the IT person or persons monitoring the network. A best practice in this area is 24-hour monitoring. Correlation\tEvent correlation is a critical SIEM component. The software gathers data from log files, system applications, network appliances, etc., and analyzes it. This work is tedious; people are inefficient at it. That’s why the event correlation feature is valuable. Not only does it gather the data, but it analyzes and compares known malicious behavior against the aggregated data, increasing the chances of the discovery of security events.",
+      "summary": "This lesson focuses on Security Information and Event Management (SIEM) systems, which integrate security information management and event management to enhance network security. Key components include vulnerability scans, customizable dashboards for real-time monitoring, sensors for critical endpoints, and event correlation to analyze data and identify potential security threats. Practical applications involve setting sensitivity levels for alerts and monitoring trends to distinguish normal activity from anomalies, thereby enabling proactive incident response.",
+      "metadata": {
+        "chapter_num": "9",
+        "section_num": "9.2.3",
+        "title": "SIEM and Log Management Facts",
+        "content_type": "text",
+        "filename": "9.2.3_SIEM_and_Log_Management_Facts_[text].txt",
+        "file_path": "data_raw/09_Incident_Response/9.2.3_SIEM_and_Log_Management_Facts_[text].txt",
+        "word_count": 453,
+        "has_content": true
+      },
+      "section_header": "9.2.3 SIEM and Log Management Facts",
+      "timestamp_range": null
+    }
+  ],
+  "num_chunks": 2
+}

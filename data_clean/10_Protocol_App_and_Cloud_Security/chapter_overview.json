@@ -1,0 +1,476 @@
+{
+  "chapter": "10_Protocol_App_and_Cloud_Security",
+  "total_documents": 47,
+  "documents": [
+    {
+      "chapter_num": "10",
+      "section_num": "10.1.1",
+      "title": "Host Virtualization Overview",
+      "content_type": "video",
+      "filename": "10.1.1_Host_Virtualization_Overview_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.1_Host_Virtualization_Overview_[video].txt",
+      "word_count": 1815,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.1.2",
+      "title": "Load Balancing with Virtualization",
+      "content_type": "video",
+      "filename": "10.1.2_Load_Balancing_with_Virtualization_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.2_Load_Balancing_with_Virtualization_[video].txt",
+      "word_count": 953,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.1.3",
+      "title": "Virtualization Facts",
+      "content_type": "text",
+      "filename": "10.1.3_Virtualization_Facts_[text].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.3_Virtualization_Facts_[text].txt",
+      "word_count": 1516,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.1.4",
+      "title": "Use VMWare Player",
+      "content_type": "video",
+      "filename": "10.1.4_Use_VMWare_Player_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.4_Use_VMWare_Player_[video].txt",
+      "word_count": 903,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.1.5",
+      "title": "Use Hyper-V",
+      "content_type": "video",
+      "filename": "10.1.5_Use_Hyper-V_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.5_Use_Hyper-V_[video].txt",
+      "word_count": 1004,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.1.7",
+      "title": "Use Windows Sandbox",
+      "content_type": "video",
+      "filename": "10.1.7_Use_Windows_Sandbox_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.7_Use_Windows_Sandbox_[video].txt",
+      "word_count": 639,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.1.8",
+      "title": "Create Containers",
+      "content_type": "video",
+      "filename": "10.1.8_Create_Containers_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.8_Create_Containers_[video].txt",
+      "word_count": 661,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.1.9",
+      "title": "Secure Containers",
+      "content_type": "video",
+      "filename": "10.1.9_Secure_Containers_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.1.9_Secure_Containers_[video].txt",
+      "word_count": 960,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.2.1",
+      "title": "Virtual Networking Overview",
+      "content_type": "video",
+      "filename": "10.2.1_Virtual_Networking_Overview_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.2.1_Virtual_Networking_Overview_[video].txt",
+      "word_count": 1208,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.2.2",
+      "title": "Virtual Network Devices",
+      "content_type": "video",
+      "filename": "10.2.2_Virtual_Network_Devices_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.2.2_Virtual_Network_Devices_[video].txt",
+      "word_count": 723,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.2.3",
+      "title": "Configuring Virtual Network Devices",
+      "content_type": "video",
+      "filename": "10.2.3_Configuring_Virtual_Network_Devices_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.2.3_Configuring_Virtual_Network_Devices_[video].txt",
+      "word_count": 713,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.2.4",
+      "title": "Virtualization Implementation Facts",
+      "content_type": "text",
+      "filename": "10.2.4_Virtualization_Implementation_Facts_[text].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.2.4_Virtualization_Implementation_Facts_[text].txt",
+      "word_count": 602,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.2.5",
+      "title": "Virtual Networking Facts",
+      "content_type": "text",
+      "filename": "10.2.5_Virtual_Networking_Facts_[text].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.2.5_Virtual_Networking_Facts_[text].txt",
+      "word_count": 486,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.3.1",
+      "title": "Software-Defined Networking Basics",
+      "content_type": "video",
+      "filename": "10.3.1_Software-Defined_Networking_Basics_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.3.1_Software-Defined_Networking_Basics_[video].txt",
+      "word_count": 667,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.3.2",
+      "title": "SDN Infrastructure and Architecture",
+      "content_type": "video",
+      "filename": "10.3.2_SDN_Infrastructure_and_Architecture_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.3.2_SDN_Infrastructure_and_Architecture_[video].txt",
+      "word_count": 496,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.3.3",
+      "title": "SDN Facts",
+      "content_type": "text",
+      "filename": "10.3.3_SDN_Facts_[text].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.3.3_SDN_Facts_[text].txt",
+      "word_count": 342,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.4.1",
+      "title": "Cloud Services Introduction",
+      "content_type": "video",
+      "filename": "10.4.1_Cloud_Services_Introduction_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.4.1_Cloud_Services_Introduction_[video].txt",
+      "word_count": 1806,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.4.2",
+      "title": "Enhancing Cloud Performance",
+      "content_type": "video",
+      "filename": "10.4.2_Enhancing_Cloud_Performance_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.4.2_Enhancing_Cloud_Performance_[video].txt",
+      "word_count": 1784,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.4.3",
+      "title": "Cloud Computing Security Issues",
+      "content_type": "video",
+      "filename": "10.4.3_Cloud_Computing_Security_Issues_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.4.3_Cloud_Computing_Security_Issues_[video].txt",
+      "word_count": 1135,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.4.4",
+      "title": "Cloud Computing Facts",
+      "content_type": "text",
+      "filename": "10.4.4_Cloud_Computing_Facts_[text].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.4.4_Cloud_Computing_Facts_[text].txt",
+      "word_count": 1540,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.4.5",
+      "title": "Cloud Storage Security Facts",
+      "content_type": "text",
+      "filename": "10.4.5_Cloud_Storage_Security_Facts_[text].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.4.5_Cloud_Storage_Security_Facts_[text].txt",
+      "word_count": 477,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.5.1",
+      "title": "Mobile Device Connection Methods",
+      "content_type": "video",
+      "filename": "10.5.1_Mobile_Device_Connection_Methods_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.5.1_Mobile_Device_Connection_Methods_[video].txt",
+      "word_count": 952,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.5.2",
+      "title": "Mobile Device Connection Facts",
+      "content_type": "text",
+      "filename": "10.5.2_Mobile_Device_Connection_Facts_[text].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.5.2_Mobile_Device_Connection_Facts_[text].txt",
+      "word_count": 962,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.5.3",
+      "title": "Enforcing Mobile Device Security",
+      "content_type": "video",
+      "filename": "10.5.3_Enforcing_Mobile_Device_Security_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.5.3_Enforcing_Mobile_Device_Security_[video].txt",
+      "word_count": 1307,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.5.4",
+      "title": "Enforcing Mobile Device Security Facts",
+      "content_type": "text",
+      "filename": "10.5.4_Enforcing_Mobile_Device_Security_Facts_[text].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.5.4_Enforcing_Mobile_Device_Security_Facts_[text].txt",
+      "word_count": 1188,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.5.5",
+      "title": "Enforcing Security Policies on Mobile Devices",
+      "content_type": "video",
+      "filename": "10.5.5_Enforcing_Security_Policies_on_Mobile_Devices_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.5.5_Enforcing_Security_Policies_on_Mobile_Devices_[video].txt",
+      "word_count": 585,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.5.6",
+      "title": "Sideload an App",
+      "content_type": "video",
+      "filename": "10.5.6_Sideload_an_App_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.5.6_Sideload_an_App_[video].txt",
+      "word_count": 1366,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.6.1",
+      "title": "Mobile Device Management",
+      "content_type": "video",
+      "filename": "10.6.1_Mobile_Device_Management_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.6.1_Mobile_Device_Management_[video].txt",
+      "word_count": 797,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.6.2",
+      "title": "Mobile Device Management Facts",
+      "content_type": "text",
+      "filename": "10.6.2_Mobile_Device_Management_Facts_[text].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.6.2_Mobile_Device_Management_Facts_[text].txt",
+      "word_count": 481,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.6.3",
+      "title": "Enroll Devices and Perform a Remote Wipe",
+      "content_type": "video",
+      "filename": "10.6.3_Enroll_Devices_and_Perform_a_Remote_Wipe_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.6.3_Enroll_Devices_and_Perform_a_Remote_Wipe_[video].txt",
+      "word_count": 802,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.6.4",
+      "title": "Mobile Application Management",
+      "content_type": "video",
+      "filename": "10.6.4_Mobile_Application_Management_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.6.4_Mobile_Application_Management_[video].txt",
+      "word_count": 802,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.6.5",
+      "title": "Mobile Application Management Facts",
+      "content_type": "text",
+      "filename": "10.6.5_Mobile_Application_Management_Facts_[text].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.6.5_Mobile_Application_Management_Facts_[text].txt",
+      "word_count": 628,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.7.1",
+      "title": "BYOD Security Issues",
+      "content_type": "video",
+      "filename": "10.7.1_BYOD_Security_Issues_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.7.1_BYOD_Security_Issues_[video].txt",
+      "word_count": 2129,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.7.2",
+      "title": "BYOD Security Facts",
+      "content_type": "text",
+      "filename": "10.7.2_BYOD_Security_Facts_[text].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.7.2_BYOD_Security_Facts_[text].txt",
+      "word_count": 882,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.7.3",
+      "title": "Securing Mobile Devices",
+      "content_type": "video",
+      "filename": "10.7.3_Securing_Mobile_Devices_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.7.3_Securing_Mobile_Devices_[video].txt",
+      "word_count": 1270,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.7.5",
+      "title": "Creating a Guest Network for BYOD",
+      "content_type": "video",
+      "filename": "10.7.5_Creating_a_Guest_Network_for_BYOD_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.7.5_Creating_a_Guest_Network_for_BYOD_[video].txt",
+      "word_count": 1489,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.8.1",
+      "title": "Embedded and Specialized Systems",
+      "content_type": "video",
+      "filename": "10.8.1_Embedded_and_Specialized_Systems_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.8.1_Embedded_and_Specialized_Systems_[video].txt",
+      "word_count": 1410,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.8.2",
+      "title": "Smart Home",
+      "content_type": "video",
+      "filename": "10.8.2_Smart_Home_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.8.2_Smart_Home_[video].txt",
+      "word_count": 1697,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.8.3",
+      "title": "Constraints and Security of Embedded Devices",
+      "content_type": "video",
+      "filename": "10.8.3_Constraints_and_Security_of_Embedded_Devices_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.8.3_Constraints_and_Security_of_Embedded_Devices_[video].txt",
+      "word_count": 919,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.8.4",
+      "title": "Communication of Embedded Systems",
+      "content_type": "video",
+      "filename": "10.8.4_Communication_of_Embedded_Systems_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.8.4_Communication_of_Embedded_Systems_[video].txt",
+      "word_count": 1122,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.8.5",
+      "title": "Embedded and Specialized Systems Facts",
+      "content_type": "text",
+      "filename": "10.8.5_Embedded_and_Specialized_Systems_Facts_[text].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.8.5_Embedded_and_Specialized_Systems_Facts_[text].txt",
+      "word_count": 1076,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.9.1",
+      "title": "Email Security",
+      "content_type": "video",
+      "filename": "10.9.1_Email_Security_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.9.1_Email_Security_[video].txt",
+      "word_count": 1231,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.9.2",
+      "title": "Email Security Facts",
+      "content_type": "text",
+      "filename": "10.9.2_Email_Security_Facts_[text].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.9.2_Email_Security_Facts_[text].txt",
+      "word_count": 1181,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.9.3",
+      "title": "Protecting a Client from Spam",
+      "content_type": "video",
+      "filename": "10.9.3_Protecting_a_Client_from_Spam_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.9.3_Protecting_a_Client_from_Spam_[video].txt",
+      "word_count": 918,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.9.4",
+      "title": "Securing an Email Server",
+      "content_type": "video",
+      "filename": "10.9.4_Securing_an_Email_Server_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.9.4_Securing_an_Email_Server_[video].txt",
+      "word_count": 509,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.9.6",
+      "title": "Securing Accounts on an iPad",
+      "content_type": "video",
+      "filename": "10.9.6_Securing_Accounts_on_an_iPad_[video].txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/10.9.6_Securing_Accounts_on_an_iPad_[video].txt",
+      "word_count": 1083,
+      "has_content": true
+    },
+    {
+      "chapter_num": "10",
+      "section_num": "10.0",
+      "title": "Introduction",
+      "content_type": "chapter_intro",
+      "filename": "Chapter_10.0_Introduction.txt",
+      "file_path": "data_raw/10_Protocol_App_and_Cloud_Security/Chapter_10.0_Introduction.txt",
+      "word_count": 217,
+      "has_content": true
+    }
+  ]
+}

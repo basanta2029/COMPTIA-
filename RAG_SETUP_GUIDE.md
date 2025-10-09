@@ -302,7 +302,5 @@ After completing the setup:
 4. ✅ Deploy `app.py` Streamlit UI
 
 ## Resources
-
-- [Voyage AI Documentation](https://docs.voyageai.com/)
 - [Qdrant Documentation](https://qdrant.tech/documentation/)
 - [Anthropic Claude API](https://docs.anthropic.com/)

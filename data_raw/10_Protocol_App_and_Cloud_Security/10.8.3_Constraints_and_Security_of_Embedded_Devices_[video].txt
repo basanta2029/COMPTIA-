@@ -1,0 +1,233 @@
+
+Transcript
+
+
+
+
+close interactive script
+Click one of the buttons to take you to that part of the video.
+1. Embedded Device Security Constraints
+00:04
+Embedded systems are usually dedicated
+00:06
+to performing a precise function.
+00:08
+They can vary in size, complexity, and function
+00:11
+and can range from tiny, portable devices like
+00:13
+smart watches to large traffic controllers.
+00:17
+Some have low complexity, like a single
+00:19
+micro-controller chip that opens and closes a
+00:21
+gate, and some have very high complexity, like
+00:24
+the embedded systems in an automated aircraft.<br>
+00:27
+Nowadays, devices are becoming more
+00:28
+intelligent and capable than ever.
+00:31
+Manufacturers are always competing to be the
+00:33
+first to release the latest and greatest device.
+00:35
+But in the process of beating their
+00:37
+competitors to market, many end up neglecting
+00:39
+some of the most important security issues.
+00:42
+These circumstances make it so devices are
+00:44
+often sent out unchecked and undertested,
+00:47
+making them easy for hackers to exploit.<br>
+00:49
+In this lesson, I'll go over some of the security
+00:51
+constraints that affect modern embedded devices.<br>
+2. Security Issues
+00:55
+Smart devices collect data for many reasons, such as
+00:58
+improving efficiency, experience, and decision-making.
+01:01
+Again, the problem is that some devices lack the
+01:03
+most basic security and data-protection policies.
+01:06
+Because you're dealing with sensitive
+01:08
+information, you absolutely have to store and
+01:09
+process data securely across your network.
+01:13
+This means that you should redact
+01:14
+sensitive data before you store it.
+01:15
+An alternative is to use data separation to decouple
+01:19
+personally identifiable information from data payloads.
+01:23
+Data that isn't useful anymore should
+01:25
+be disposed of in a safe manner.
+01:27
+No measure is ever fail-proof, and every device needs
+01:30
+regular patches to address attacks that uncover new flaws.<br>
+3. Security Issues
+01:33
+Patching has its downsides as well, and
+01:35
+many times a patch ends up causing just as
+01:38
+many problems as it was intended to solve.
+01:40
+First of all, the patch might
+01:42
+break the device's functionality.
+01:44
+Second, most manufacturers are more concerned
+01:46
+with producing and releasing products faster than
+01:48
+their competition than mitigating security risks.
+01:52
+Third, manufacturers often stop releasing
+01:54
+patches and support for devices once they
+01:57
+start working on a different product.
+01:58
+Fourth, many devices use unsupported legacy Linux kernels.<br>
+02:03
+Ideally, each device should undergo proper
+02:05
+testing before it's released to the market,
+02:07
+and patches should happen on a regular basis.
+02:10
+But, sometimes the cost to go through all the testing
+02:12
+is more than manufacturers are willing to spend.
+02:15
+Many times, they simply accept the risks,
+02:17
+even though skipping these important steps
+02:19
+is bad for customers and manufacturers.
+02:22
+After all, it only takes one large-scale data
+02:24
+breach for a company to lose sensitive information,
+02:27
+the public's trust, and maybe their entire fortune.<br>
+4. Authentication
+02:31
+For this reason, you should always implement
+02:33
+secure authentication for users and apps.
+02:36
+Authentication is an area that's often
+02:38
+overlooked in embedded-technology development.
+02:41
+The Mirai botnet was one of the biggest and
+02:43
+most troublesome DDoS attacks in recent history.
+02:46
+This attack was so successful because it found
+02:48
+vulnerable IoT devices and used default usernames
+02:51
+and passwords to log in and infect them.<br>
+02:54
+Although almost all devices have to authenticate before they
+02:57
+access a network, many allow easy-to-guess default passwords.
+03:01
+The main problem is that there's no set regulation for
+03:04
+smart devices that companies are legally forced to abide by.
+03:07
+With this in mind, some ways to strengthen
+03:09
+your own authentication practices are to
+03:12
+use two-factor authentication, enforce
+03:14
+strong passwords, and use certificates.<br>
+5. Encryption
+03:17
+Even if you secure your devices with authentication,
+03:19
+there's another vulnerability called lack of encryption.
+03:23
+Data encryption and decryption is an ongoing process.
+03:26
+Most network sensors aren't capable of
+03:28
+supporting this process, which means that most
+03:30
+data is transferred and received as cleartext.
+03:33
+In addition, ports listening to the internet
+03:36
+are many times left open continuously.
+03:39
+Both factors make data extremely vulnerable
+03:41
+to theft, breaches, and other malicious acts.<br>
+6. Trust and Security
+03:44
+In order to try to standardize platforms and create trust
+03:47
+in the embedded world, a group of experts got together in
+03:50
+2003 and created the Trusted Computing Group, or TCG.
+03:55
+Together, they released a standard
+03:56
+called Trusted Platform Module, or TPM.
+03:59
+Although trust and security are often spoken of as
+04:02
+one and the same, they're actually quite different.<br>
+04:05
+Consider the fact that a secure system that can
+04:07
+be bypassed without detection isn't trustworthy.
+04:10
+At the same time, a trusted system with
+04:12
+undiscovered vulnerabilities isn't secure.<br>
+04:14
+To be trusted, a system must behave as expected
+04:18
+and be able to detect that something is wrong.
+04:20
+That's why TPM is so valuable to trusted computing.
+04:23
+It provides essential services such as strong
+04:26
+identity, secure storage, and integrity measurement.<br>
+7. Summary
+04:29
+That's it for this video.
+04:31
+As embedded devices grow and develop, they
+04:33
+become more susceptible to exploitation
+04:35
+from hackers and other bad actors.
+04:37
+Understanding the present challenges in the world
+04:40
+of embedded devices can help you protect your data
+04:42
+and stand out in your technological career.<br>

@@ -1,0 +1,118 @@
+{
+  "metadata": {
+    "chapter_num": "13",
+    "section_num": "13.1.1",
+    "title": "Consequences of Breaches",
+    "content_type": "video",
+    "filename": "13.1.1_Consequences_of_Breaches_[video].txt",
+    "file_path": "data_raw/13_Data_Protection_and_Compliance/13.1.1_Consequences_of_Breaches_[video].txt",
+    "word_count": 825,
+    "has_content": true
+  },
+  "full_content": "Transcript close interactive script All too frequently, we read about a data breach. Large companies with security budgets in the millions of dollars are not exempt. Most of us have, at onetime or another, been notified that our information has been compromised. It could be bank accounts, credit cards, government records, or even health records. All these data breaches come with serious consequences. Let's talk about what they are. A company's reputation determines if people will invest, if consumers will buy, and if foreign governments will allow a company to do business internationally. A company lives or dies by its revenues and investments. A breach that exposes private client data directly affects the way consumers and investors spend money. A data breach can cause stock prices to fall. Falling stock prices lead to sell offs and can permanently damage a company. When trust is broken and consumer confidence is damaged, revenues drop because consumers stop using the company. Also, the loss of government contracts because of breach can prove fatal for a company. Twenty years ago, the term identity theft didn't have any real meaning to the everyday person. Fast forward to today, and it is difficult to find someone who hasn't experienced identity theft on some level. When a breach occurs and personal information is stolen, the affected person is forced to do hours, days, and even weeks of work to correct someone else's mistake. The effects of identity theft can last years and cause fear and paranoia among those affected. Lives have been turned upside down leaving victims frustrated because it is almost impossible to catch the perpetrator. A data breach can also be financially costly. With the introduction of GDPR and the California Consumer Privacy Act the number of companies that can be fined has grown significantly. In the United States, HIPAA has always carried fines for companies found in non-compliance. Companies that profit from the use of consumer personal information can also have heavy fines levied by the Federal Trade Commission and possibly the Security and Exchange Commission. To give you an idea of the magnitude of these fines, in 2019 three data breaches at three separate companies cost the companies over 1 billion dollars. It is estimated that fines for a single data breach now averages $6.45 million dollars. Intellectual Property is the lifeblood of companies. When IP is stolen ,companies lose competitive advantage. The internet has made the world smaller. Companies are now competing with others from around the globe. IP stolen through a data breach is often sold to competing companies. Many of the overseas companies are not subject to laws in the United States. This makes it difficult to enforce IP laws. The reverse engineering or the direct copy of IP gives thieves an undeserved revenue source. IP theft also floods the market with counterfeit goods. Let's look at an IP theft scenario. The XYZ company has worked tirelessly on a new product that's cutting-edge. As the company is going into production, they experience a data breach. They are not sure what data may have been lost. A few months later, counterfeit versions of their cutting-edge product start flooding the market. They now discover that their intellectual property was stolen during the breach. The fakes are selling for less money and destroying XYZ's profits. Escalation can be separated into two categories, internal escalation and external escalation. Internal escalation is part of a company's incident response plan. This usually means a tiered approach to informing management of a breach. As a breach is investigated, the findings and severity will determine how far the escalation will go. The external escalation involves experts brought in from the outside to investigate, provide legal counsel, or even prosecute, which involves law enforcement. The key is to know when a situation has surpassed your abilities to resolve it. That's it for this lesson. In this lesson, we showed you how data breaches can have serious consequences including loss of trust, fines, and theft of intellectual property. Fines are averaging $6.45 million per event. All 50 states have laws outlining the data breach notification requirements. We also looked at a scenario of IP theft and its consequences.",
+  "chunks": [
+    {
+      "chunk_id": "13.1.1_chunk_1",
+      "content": "All too frequently, we read about a data breach. Large companies with security budgets in the millions of dollars are not exempt. Most of us have, at onetime or another, been notified that our information has been compromised. It could be bank accounts, credit cards, government records, or even health records. All these data breaches come with serious consequences. Let's talk about what they are.",
+      "summary": "Data breaches can occur even in organizations with substantial security budgets, affecting sensitive information such as bank accounts, credit cards, government records, and health data. The consequences of these breaches are severe, including financial loss, reputational damage, legal repercussions, and loss of customer trust. Understanding these impacts is crucial for implementing effective cybersecurity measures and protecting sensitive information.",
+      "metadata": {
+        "chapter_num": "13",
+        "section_num": "13.1.1",
+        "title": "Consequences of Breaches",
+        "content_type": "video",
+        "filename": "13.1.1_Consequences_of_Breaches_[video].txt",
+        "file_path": "data_raw/13_Data_Protection_and_Compliance/13.1.1_Consequences_of_Breaches_[video].txt",
+        "word_count": 825,
+        "has_content": true
+      },
+      "section_header": "Consequences of Data Breach",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "13.1.1_chunk_2",
+      "content": "A company's reputation determines if people will invest, if consumers will buy, and if foreign governments will allow a company to do business internationally. A company lives or dies by its revenues and investments. A breach that exposes private client data directly affects the way consumers and investors spend money. A data breach can cause stock prices to fall. Falling stock prices lead to sell offs and can permanently damage a company. When trust is broken and consumer confidence is damaged, revenues drop because consumers stop using the company. Also, the loss of government contracts because of breach can prove fatal for a company.",
+      "summary": "Reputation damage is a critical concern for companies, as it significantly impacts consumer trust, investment, and international business opportunities. A data breach that exposes private client information can lead to falling stock prices, reduced revenues, and the loss of government contracts, ultimately jeopardizing the company's survival. Maintaining a strong reputation is essential for sustaining consumer confidence and financial stability.",
+      "metadata": {
+        "chapter_num": "13",
+        "section_num": "13.1.1",
+        "title": "Consequences of Breaches",
+        "content_type": "video",
+        "filename": "13.1.1_Consequences_of_Breaches_[video].txt",
+        "file_path": "data_raw/13_Data_Protection_and_Compliance/13.1.1_Consequences_of_Breaches_[video].txt",
+        "word_count": 825,
+        "has_content": true
+      },
+      "section_header": "Reputation Damage",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "13.1.1_chunk_3",
+      "content": "Twenty years ago, the term identity theft didn't have any real meaning to the everyday person. Fast forward to today, and it is difficult to find someone who hasn't experienced identity theft on some level. When a breach occurs and personal information is stolen, the affected person is forced to do hours, days, and even weeks of work to correct someone else's mistake. The effects of identity theft can last years and cause fear and paranoia among those affected. Lives have been turned upside down leaving victims frustrated because it is almost impossible to catch the perpetrator.",
+      "summary": "Identity theft has evolved into a pervasive issue affecting nearly everyone, often resulting from data breaches that compromise personal information. Victims face significant emotional and logistical challenges, spending extensive time and effort to rectify the damage caused by the theft. The long-lasting effects of identity theft can lead to ongoing fear and frustration, highlighting the critical need for robust cybersecurity measures to protect personal data.",
+      "metadata": {
+        "chapter_num": "13",
+        "section_num": "13.1.1",
+        "title": "Consequences of Breaches",
+        "content_type": "video",
+        "filename": "13.1.1_Consequences_of_Breaches_[video].txt",
+        "file_path": "data_raw/13_Data_Protection_and_Compliance/13.1.1_Consequences_of_Breaches_[video].txt",
+        "word_count": 825,
+        "has_content": true
+      },
+      "section_header": "Identity Theft",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "13.1.1_chunk_4",
+      "content": "A data breach can also be financially costly. With the introduction of GDPR and the California Consumer Privacy Act the number of companies that can be fined has grown significantly. In the United States, HIPAA has always carried fines for companies found in non-compliance. Companies that profit from the use of consumer personal information can also have heavy fines levied by the Federal Trade Commission and possibly the Security and Exchange Commission. To give you an idea of the magnitude of these fines, in 2019 three data breaches at three separate companies cost the companies over 1 billion dollars. It is estimated that fines for a single data breach now averages $6.45 million dollars. Intellectual Property is the lifeblood of companies. When IP is stolen ,companies lose competitive advantage. The internet has made the world smaller. Companies are now competing with others from around the globe. IP stolen through a data breach is often sold to competing companies. Many of the overseas companies are not subject to laws in the United States. This makes it difficult to enforce IP laws. The reverse engineering or the direct copy of IP gives thieves an undeserved revenue source. IP theft also floods the market with counterfeit goods. Let's look at an IP theft scenario. The XYZ company has worked tirelessly on a new product that's cutting-edge. As the company is going into production, they experience a data breach. They are not sure what data may have been lost. A few months later, counterfeit versions of their cutting-edge product start flooding the market. They now discover that their intellectual property was stolen during the breach. The fakes are selling for less money and destroying XYZ's profits.",
+      "summary": "Data breaches can lead to substantial financial penalties for companies, particularly under regulations like GDPR and the California Consumer Privacy Act, with average fines now estimated at $6.45 million per incident. Additionally, the theft of intellectual property (IP) through breaches not only undermines a company's competitive edge but also facilitates the proliferation of counterfeit goods, further harming profits. The global nature of these threats complicates enforcement of IP laws, making it crucial for companies to prioritize cybersecurity measures.",
+      "metadata": {
+        "chapter_num": "13",
+        "section_num": "13.1.1",
+        "title": "Consequences of Breaches",
+        "content_type": "video",
+        "filename": "13.1.1_Consequences_of_Breaches_[video].txt",
+        "file_path": "data_raw/13_Data_Protection_and_Compliance/13.1.1_Consequences_of_Breaches_[video].txt",
+        "word_count": 825,
+        "has_content": true
+      },
+      "section_header": "Fines",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "13.1.1_chunk_5",
+      "content": "Escalation can be separated into two categories, internal escalation and external escalation. Internal escalation is part of a company's incident response plan. This usually means a tiered approach to informing management of a breach. As a breach is investigated, the findings and severity will determine how far the escalation will go. The external escalation involves experts brought in from the outside to investigate, provide legal counsel, or even prosecute, which involves law enforcement. The key is to know when a situation has surpassed your abilities to resolve it.",
+      "summary": "Escalation in cybersecurity is divided into internal and external categories. Internal escalation involves a structured approach within an organization to inform management about a breach based on its severity, while external escalation entails engaging outside experts, legal counsel, or law enforcement when the situation exceeds internal capabilities. Understanding when to escalate is crucial for effective incident response and management.",
+      "metadata": {
+        "chapter_num": "13",
+        "section_num": "13.1.1",
+        "title": "Consequences of Breaches",
+        "content_type": "video",
+        "filename": "13.1.1_Consequences_of_Breaches_[video].txt",
+        "file_path": "data_raw/13_Data_Protection_and_Compliance/13.1.1_Consequences_of_Breaches_[video].txt",
+        "word_count": 825,
+        "has_content": true
+      },
+      "section_header": "Escalation",
+      "timestamp_range": ""
+    },
+    {
+      "chunk_id": "13.1.1_chunk_6",
+      "content": "That's it for this lesson. In this lesson, we showed you how data breaches can have serious consequences including loss of trust, fines, and theft of intellectual property. Fines are averaging $6.45 million per event. All 50 states have laws outlining the data breach notification requirements. We also looked at a scenario of IP theft and its consequences.",
+      "summary": "This lesson highlights the severe repercussions of data breaches, including significant financial penalties averaging $6.45 million, loss of trust, and the theft of intellectual property. It emphasizes the importance of understanding state-specific data breach notification laws and illustrates the potential consequences through a scenario involving IP theft. Overall, it underscores the critical need for robust cybersecurity measures to protect sensitive data.",
+      "metadata": {
+        "chapter_num": "13",
+        "section_num": "13.1.1",
+        "title": "Consequences of Breaches",
+        "content_type": "video",
+        "filename": "13.1.1_Consequences_of_Breaches_[video].txt",
+        "file_path": "data_raw/13_Data_Protection_and_Compliance/13.1.1_Consequences_of_Breaches_[video].txt",
+        "word_count": 825,
+        "has_content": true
+      },
+      "section_header": "Summary",
+      "timestamp_range": ""
+    }
+  ],
+  "num_chunks": 6
+}

@@ -14,7 +14,7 @@
     {
       "chunk_id": "3.3.2_chunk_1",
       "content": "Hashing is the process of generating a fixed-length hexadecimal string value from any file type or data. That output is often referred to as the hash or message digest. Hashing can be used to verify file integrity, create digital signatures, provide password verification, and more. There are different hashing algorithms or functions for different uses. The most common algorithms are MD5 and SHA, and two alternative hash functions are HMAC and RIPEMD. In this lesson, we'll look at these algorithms and discuss how they work.",
-      "summary": "Hashing algorithms generate fixed-length hexadecimal strings (message digests) from any data type to verify file integrity, create digital signatures, and authenticate passwords. Common hashing functions include MD5, SHA, HMAC, and RIPEMD, each serving different security verification and cryptographic purposes. These algorithms are fundamental to data integrity validation and secure authentication processes in cybersecurity implementations.",
+      "summary": "Hashing is a technique that produces a fixed-length hexadecimal string from any data, known as a hash or message digest, which is essential for verifying file integrity, creating digital signatures, and password verification. Key hashing algorithms include MD5 and SHA, with alternatives like HMAC and RIPEMD, each serving specific purposes. This section explores the functionality and applications of these algorithms in cybersecurity practices.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.3.2",
@@ -31,7 +31,7 @@
     {
       "chunk_id": "3.3.2_chunk_2",
       "content": "Message-Digest Algorithm version 5, commonly called MD5, was developed by Ron Rivest in 1991. This hash function generates a 128-bit message digest, but it can't be used for security purposes any longer. One of the key features of a proper hash function is that it's resistant to hash collisions, but the MD5 algorithm is extremely susceptible to collisions. Today, MD5 is mainly used to verify file integrity.",
-      "summary": "MD5 is a deprecated 128-bit hashing algorithm developed by Ron Rivest in 1991 that is no longer suitable for security applications due to its extreme vulnerability to hash collisions. While MD5 fails as a cryptographic hash function, it remains useful only for basic file integrity verification in non-security contexts.",
+      "summary": "MD5, developed by Ron Rivest in 1991, is a hash function that produces a 128-bit message digest but is no longer considered secure due to its vulnerability to hash collisions. While it is unsuitable for security applications, MD5 is still utilized for verifying file integrity in various contexts. Understanding its limitations is crucial for cybersecurity professionals when selecting appropriate hashing algorithms.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.3.2",
@@ -48,7 +48,7 @@
     {
       "chunk_id": "3.3.2_chunk_3",
       "content": "The Secure Hash Algorithm, or SHA, is a family of hashes that are government-standard algorithms and were published by NIST starting in 1993. SHA-2 was published in 2001 and has become one of the standard hash functions in use today. We see it implemented frequently in security communications protocols such as TLS and SSL, PGP, SSH, and IPSec. This algorithm can generate message digests that are 224, 256, 384, or 512 bits in size. SHA-3 was released in 2015, but it's not meant to replace SHA-2, as it's still a secure hashing method. Because SHA-2 is so heavily integrated in our standard online transactions and communications, it doesn't make sense to switch over yet. SHA-3 uses a completely different process than SHA-2, but the message digests are compatible with SHA-2. What this means for us is that when SHA-2 is inevitably compromised, SHA-3 will be available to take over immediately.",
-      "summary": "The Secure Hash Algorithm (SHA) family includes SHA-2 (2001) which generates 224, 256, 384, or 512-bit message digests and is widely implemented in TLS, SSL, PGP, SSH, and IPSec security protocols. SHA-3 (2015) uses a different process but maintains compatibility with SHA-2, serving as a ready replacement when SHA-2 is eventually compromised. SHA-2 remains the current standard for secure hashing in online transactions and communications due to its extensive integration.",
+      "summary": "The Secure Hash Algorithm (SHA) is a family of cryptographic hash functions established by NIST, with SHA-2 being widely used in security protocols like TLS, SSL, and SSH since its release in 2001. SHA-2 generates message digests of varying sizes (224, 256, 384, or 512 bits) and remains integral to online security, while SHA-3, introduced in 2015, offers an alternative hashing method that is compatible with SHA-2 but employs a different process. As SHA-2's vulnerabilities emerge, SHA-3 is positioned to seamlessly take over as a secure hashing solution.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.3.2",
@@ -65,7 +65,7 @@
     {
       "chunk_id": "3.3.2_chunk_4",
       "content": "Hash-Based Message Authentication Code, or HMAC, is a type of message authentication code. Like a digital signature, HMAC allows a user to verify that a file or message is legitimate. When using HMAC, the message sender provides a secret key that's used with a hash function, such as MD5 or SHA, to create a message authentication code. The recipient then uses the key to verify both the integrity and authenticity of the message.",
-      "summary": "HMAC (Hash-Based Message Authentication Code) is a cryptographic mechanism that combines a secret key with hash functions like MD5 or SHA to create message authentication codes, enabling verification of both message integrity and authenticity. The sender uses the secret key to generate the HMAC, while the recipient uses the same key to verify the message hasn't been tampered with and confirms the sender's identity. HMAC provides stronger security than basic hashing by requiring possession of the shared secret key for both creation and verification of the authentication code.",
+      "summary": "Hash-Based Message Authentication Code (HMAC) is a cryptographic mechanism that ensures the integrity and authenticity of messages by combining a secret key with a hash function, such as MD5 or SHA. This allows the sender to generate a message authentication code that the recipient can verify using the same key, confirming that the message has not been altered and is from a legitimate source. HMAC is widely used in secure communications and data integrity verification.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.3.2",
@@ -82,7 +82,7 @@
     {
       "chunk_id": "3.3.2_chunk_5",
       "content": "In 1992, a new hash function called RIPE Message Digest, or RIPEMD, was developed based on the MD4 algorithm. In 1996, due to security issues discovered in RIPEMD, a group of Belgian researchers published four updated algorithms. While it's not as popular as SHA-2, the 160-bit function is used frequently with Bitcoin and other cryptocurrencies.",
-      "summary": "RIPEMD (RIPE Message Digest) is a cryptographic hash function developed in 1992 based on MD4, with updated secure variants published in 1996 by Belgian researchers to address discovered vulnerabilities. The 160-bit RIPEMD variant is commonly implemented in Bitcoin and cryptocurrency applications as an alternative to SHA-2 algorithms. RIPEMD provides message integrity verification and digital signature support in blockchain and financial security systems.",
+      "summary": "RIPE Message Digest (RIPEMD) is a cryptographic hash function developed in 1992, initially based on the MD4 algorithm. Following security vulnerabilities identified in the original version, Belgian researchers released four updated algorithms in 1996. Although it is less widely used than SHA-2, the 160-bit variant remains relevant, particularly in applications like Bitcoin and other cryptocurrencies.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.3.2",
@@ -99,7 +99,7 @@
     {
       "chunk_id": "3.3.2_chunk_6",
       "content": "That's it for this lesson. In this lesson, we discussed MD5 and SHA, the most popular hashing functions. MD5 is mostly used for file verification, while SHA-2 is widely used in many security communications protocols. We also discussed two alternative hashing functions, HMAC and RIPEMD. HMAC is used for message or file verification, and RIPEMD is mostly used with Bitcoin and other cryptocurrencies.",
-      "summary": "This lesson covered four essential hashing algorithms for cybersecurity applications: MD5 for file verification, SHA-2 for secure communications protocols, HMAC for message and file authentication, and RIPEMD for cryptocurrency implementations like Bitcoin. These cryptographic hash functions serve distinct purposes in data integrity verification, secure communications, and digital currency systems within modern security frameworks.",
+      "summary": "This lesson covered key hashing functions, focusing on MD5 and SHA-2, with MD5 primarily used for file verification and SHA-2 for secure communications. Additionally, alternative hashing methods such as HMAC, used for message verification, and RIPEMD, commonly associated with cryptocurrencies like Bitcoin, were discussed. Understanding these hashing functions is essential for ensuring data integrity and security in various applications.",
       "metadata": {
         "chapter_num": "3",
         "section_num": "3.3.2",
@@ -114,6 +114,5 @@
       "timestamp_range": "03:06-03:33"
     }
   ],
-  "num_chunks": 6,
-  "document_summary": "Hashing Algorithms (video): Hashing is the process of generating a fixed-length hexadecimal string value from any file type or data. This hash function generates a 128-bit message digest, but it can't be used for security purposes any longer. We see it implemented frequently in security communications protocols such as TLS and SSL, PGP, SSH, and IPSec."
+  "num_chunks": 6
 }
