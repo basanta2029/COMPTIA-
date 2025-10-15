@@ -1,9 +1,0 @@
-Welcome to a journey into the foundations and security of modern networks. As a learner, you will explore how enterprise networks are structured to support both operational needs and robust security. Throughout this module, you will gain an understanding of how organizations design interconnected systems that must balance access, efficiency, and protection from evolving threats. By systematically breaking down architectural components and security measures, you will be prepared to identify and analyze real-world networking scenarios.
-
-You will dive into the critical tools and strategies professionals use to safeguard network traffic, manage risks, and ensure reliable communication. You will also examine specialized devices and configurations, such as firewalls and VPNs, which protect information flow, and learn about the vulnerabilities unique to various network components. This module provides insight into the essential controls that limit access and prevent unauthorized use, empowering you with the knowledge to make networks more resilient in any environment.
-In this module, you will:
-Explore core components and structure of enterprise-level networks.
-Identify various security appliances and their roles in network defense.
-Examine the implementation and benefits of screened subnets, firewalls, and VPNs.
-Analyze access control mechanisms and network device vulnerabilities.
-Assess threats associated with switch and router security, as well as network applications.

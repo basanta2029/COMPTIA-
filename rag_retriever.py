@@ -41,10 +41,16 @@ class RAGRetriever:
         self.client = OpenAI(api_key=api_key)
         self.model = model
 
-        # Initialize Qdrant vector database
+        # Get Qdrant Cloud credentials from environment
+        qdrant_url = os.getenv("QDRANT_CLOUD_URL")
+        qdrant_api_key = os.getenv("QDRANT_API_KEY")
+
+        # Initialize Qdrant vector database (cloud-first, then local)
         self.vector_db = VectorDBManager(
             collection_name=collection_name,
-            embedding_dim=embedding_dim
+            embedding_dim=embedding_dim,
+            url=qdrant_url,
+            api_key=qdrant_api_key
         )
 
         # Check if collection exists, if not and auto_load is enabled, load embeddings

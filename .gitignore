@@ -25,4 +25,10 @@ Thumbs.db
 # Environment variables (contains API keys)
 .env
 .env.local
+
+# Large data files (now in Qdrant Cloud)
 embeddings.json
+embeddings_old_*.json
+data_clean/
+data_raw/
+data_clean_backup/

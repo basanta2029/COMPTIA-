@@ -40,26 +40,44 @@ class VectorDBManager:
         host: str = "localhost",
         port: int = 6333,
         embedding_dim: int = 1536,
-        use_memory: bool = False
+        use_memory: bool = False,
+        url: Optional[str] = None,
+        api_key: Optional[str] = None
     ):
         """
         Initialize vector database manager
 
         Args:
             collection_name: Name of the Qdrant collection
-            host: Qdrant server host
-            port: Qdrant server port
+            host: Qdrant server host (for local Docker)
+            port: Qdrant server port (for local Docker)
             embedding_dim: Dimension of embedding vectors
             use_memory: If True, use in-memory mode (no Docker required)
+            url: Qdrant Cloud URL (takes priority over host/port)
+            api_key: Qdrant Cloud API key (required if url is provided)
         """
         self.collection_name = collection_name
         self.embedding_dim = embedding_dim
 
-        # Connect to Qdrant
-        if use_memory:
+        # Connect to Qdrant - Priority: Cloud > Local > In-Memory
+        if url and api_key:
+            # Qdrant Cloud (Production)
+            try:
+                print(f"☁️  Connecting to Qdrant Cloud...")
+                self.client = QdrantClient(url=url, api_key=api_key, timeout=10)
+                # Test connection
+                self.client.get_collections()
+                print(f"✅ Connected to Qdrant Cloud")
+            except Exception as e:
+                print(f"❌ Cannot connect to Qdrant Cloud: {e}")
+                print(f"🧠 Falling back to in-memory mode...")
+                self.client = QdrantClient(":memory:")
+        elif use_memory:
+            # In-memory mode (Development/Testing)
             print(f"🧠 Using Qdrant in-memory mode (no Docker required)...")
             self.client = QdrantClient(":memory:")
         else:
+            # Local Docker (Development)
             try:
                 print(f"🔌 Connecting to Qdrant at {host}:{port}...")
                 self.client = QdrantClient(host=host, port=port, timeout=5)
