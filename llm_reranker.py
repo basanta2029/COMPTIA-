@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
 LLM-Based Reranker for RAG System
-Uses Claude to intelligently rerank retrieved documents
+Uses Gemini to intelligently rerank retrieved documents
 """
 
 import os
 from typing import List
-from anthropic import Anthropic
+import google.generativeai as genai
 from dotenv import load_dotenv
 from vector_db_manager import SearchResult
 
@@ -14,21 +14,22 @@ load_dotenv()
 
 
 class LLMReranker:
-    """Claude-powered document reranker"""
+    """Gemini-powered document reranker"""
 
-    def __init__(self, model: str = "claude-3-5-sonnet-20241022"):
+    def __init__(self, model: str = "gemini-2.5-flash-8b"):
         """
         Initialize reranker
 
         Args:
-            model: Claude model (upgraded to Sonnet 3.5 for better accuracy)
+            model: Gemini model (flash-8b recommended for cost/speed)
         """
-        api_key = os.getenv("ANTHROPIC_API_KEY")
+        api_key = os.getenv("GOOGLE_API_KEY")
         if not api_key:
-            raise ValueError("ANTHROPIC_API_KEY not found!")
+            raise ValueError("GOOGLE_API_KEY not found!")
 
-        self.client = Anthropic(api_key=api_key)
-        self.model = model
+        genai.configure(api_key=api_key)
+        self.model = genai.GenerativeModel(model)
+        self.model_name = model
 
         # Usage tracking
         self.total_input_tokens = 0
@@ -41,7 +42,7 @@ class LLMReranker:
         k: int = 3
     ) -> List[SearchResult]:
         """
-        Rerank documents using Claude's contextual understanding
+        Rerank documents using Gemini's contextual understanding
 
         Args:
             query: User's question
@@ -90,23 +91,25 @@ Format: comma-separated numbers, no spaces, inside XML tags.
 <relevant_indices>"""
 
         try:
-            response = self.client.messages.create(
-                model=self.model,
-                max_tokens=50,
-                messages=[
-                    {"role": "user", "content": prompt},
-                    {"role": "assistant", "content": "<relevant_indices>"}
-                ],
-                temperature=0,
-                stop_sequences=["</relevant_indices>"]
+            response = self.model.generate_content(
+                prompt,
+                generation_config=genai.types.GenerationConfig(
+                    max_output_tokens=50,
+                    temperature=0,
+                    stop_sequences=["</relevant_indices>"]
+                )
             )
 
-            # Track usage
-            self.total_input_tokens += response.usage.input_tokens
-            self.total_output_tokens += response.usage.output_tokens
+            # Track usage (if available)
+            try:
+                if hasattr(response, 'usage_metadata'):
+                    self.total_input_tokens += response.usage_metadata.prompt_token_count
+                    self.total_output_tokens += response.usage_metadata.candidates_token_count
+            except:
+                pass
 
             # Parse indices
-            response_text = response.content[0].text.strip()
+            response_text = response.text.strip()
             relevant_indices = []
 
             for idx_str in response_text.split(','):
@@ -148,7 +151,7 @@ Format: comma-separated numbers, no spaces, inside XML tags.
     def get_usage_stats(self) -> dict:
         """Get reranking usage statistics"""
         return {
-            "model": self.model,
+            "model": self.model_name,
             "total_input_tokens": self.total_input_tokens,
             "total_output_tokens": self.total_output_tokens
         }
@@ -160,8 +163,8 @@ def main():
     print("LLM RERANKER TEST")
     print("=" * 60)
     print("\n✅ LLM Reranker module loaded successfully")
-    print(f"   Default model: claude-3-haiku-20240307")
-    print(f"   Cost per rerank: ~$0.0003 (20 docs → 3)")
+    print(f"   Default model: gemini-2.5-flash-8b")
+    print(f"   Cost per rerank: ~$0.000002 (20 docs → 3)")
     print("\nNote: Full testing requires actual SearchResult objects")
     print("      Use with rag_retriever.py for end-to-end testing")
     print("=" * 60)

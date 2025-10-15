@@ -127,7 +127,7 @@ class ExamEvaluator:
         collection_name: str = "comptia_security_plus",
         embedding_dim: int = 1536,
         embedding_model: str = "text-embedding-3-small",
-        llm_model: str = "claude-sonnet-4-20250514"
+        llm_model: str = "gemini-2.5-pro"
     ):
         """Initialize evaluator with retriever and LLM engine"""
         print("=" * 60)

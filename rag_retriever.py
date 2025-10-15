@@ -256,13 +256,13 @@ class RAGRetriever:
         initial_k: int = 40,  # Increased from 20 for better coverage with 2321 chunks
         chapter_filter: Optional[str] = None,
         content_type_filter: Optional[str] = None,
-        reranker_model: str = "claude-3-5-sonnet-20241022"  # Upgraded from Haiku for better accuracy
+        reranker_model: str = "gemini-2.5-flash-8b"  # Cost-effective reranking with Gemini
     ) -> Tuple[List[SearchResult], str]:
         """
         Two-stage retrieval with LLM-based reranking
 
-        Stage 1: Retrieve initial_k candidates from vector DB (e.g., 20)
-        Stage 2: Use Claude LLM to rerank and select top-k most relevant (e.g., 3)
+        Stage 1: Retrieve initial_k candidates from vector DB (e.g., 40)
+        Stage 2: Use Gemini LLM to rerank and select top-k most relevant (e.g., 3)
 
         Args:
             query: User's question
@@ -270,7 +270,7 @@ class RAGRetriever:
             initial_k: Number of initial candidates to retrieve
             chapter_filter: Optional chapter number (e.g., "1", "2")
             content_type_filter: Optional content type ("video" or "text")
-            reranker_model: Claude model for reranking (default: Haiku for cost)
+            reranker_model: Gemini model for reranking (default: Flash-8B for cost)
 
         Returns:
             Tuple of (reranked_results, formatted_context)

@@ -34,7 +34,7 @@ class RAGPipeline:
         collection_name: str = "comptia_security_plus",
         embedding_dim: int = 1536,
         embedding_model: str = "text-embedding-3-small",
-        llm_model: str = "claude-sonnet-4-20250514"
+        llm_model: str = "gemini-2.5-pro"
     ):
         """
         Initialize complete RAG pipeline
@@ -43,7 +43,7 @@ class RAGPipeline:
             collection_name: Qdrant collection name
             embedding_dim: Embedding dimension
             embedding_model: OpenAI embedding model
-            llm_model: Claude model for answer generation
+            llm_model: Gemini model for answer generation
         """
         print("=" * 60)
         print("INITIALIZING RAG PIPELINE")
@@ -147,7 +147,7 @@ class RAGPipeline:
         initial_k: int = 20,
         chapter_filter: Optional[str] = None,
         content_type_filter: Optional[str] = None,
-        reranker_model: str = "claude-3-haiku-20240307",
+        reranker_model: str = "gemini-2.5-flash-8b",
         max_tokens: int = 2500,
         temperature: float = 0
     ) -> RAGResponse:
@@ -156,7 +156,7 @@ class RAGPipeline:
 
         Two-stage retrieval:
         1. Retrieve initial_k candidates from vector DB (e.g., 20)
-        2. Use Claude to rerank and select top-k most relevant (e.g., 3)
+        2. Use Gemini to rerank and select top-k most relevant (e.g., 3)
         3. Generate answer from reranked documents
 
         Args:
@@ -165,7 +165,7 @@ class RAGPipeline:
             initial_k: Number of initial candidates to retrieve
             chapter_filter: Optional chapter filter (e.g., "1", "2")
             content_type_filter: Optional content type filter ("video" or "text")
-            reranker_model: Claude model for reranking (default: Haiku)
+            reranker_model: Gemini model for reranking (default: Flash-8B)
             max_tokens: Max tokens in answer
             temperature: LLM sampling temperature
 

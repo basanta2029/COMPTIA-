@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """
 LLM Engine for CompTIA Security+ RAG System
-Handles answer generation using Claude with enriched context
+Handles answer generation using Gemini with enriched context
 """
 
 import os
 import re
-from anthropic import Anthropic
+import google.generativeai as genai
 from dotenv import load_dotenv
 
 # Load environment variables
@@ -14,34 +14,34 @@ load_dotenv()
 
 
 class LLMEngine:
-    """Claude-powered answer generation engine"""
+    """Gemini-powered answer generation engine"""
 
-    def __init__(self, model: str = "claude-sonnet-4-20250514"):
+    def __init__(self, model: str = "gemini-2.5-pro"):
         """
         Initialize LLM engine
 
         Args:
-            model: Claude model to use (default: claude-sonnet-4-20250514)
+            model: Gemini model to use (default: gemini-2.5-pro)
         """
-        # Initialize Anthropic client
-        api_key = os.getenv("ANTHROPIC_API_KEY")
+        # Initialize Google Generative AI client
+        api_key = os.getenv("GOOGLE_API_KEY")
         if not api_key:
-            raise ValueError("ANTHROPIC_API_KEY not found in environment variables!")
+            raise ValueError("GOOGLE_API_KEY not found in environment variables!")
 
-        self.client = Anthropic(api_key=api_key)
-        self.model = model
+        genai.configure(api_key=api_key)
+        self.model = genai.GenerativeModel(model)
+        self.model_name = model
 
         # Usage tracking
         self.total_input_tokens = 0
         self.total_output_tokens = 0
         self.total_cost = 0.0
 
-        # Pricing (per million tokens)
-        # Claude Sonnet 4: $3 input / $15 output per million tokens
+        # Pricing (per million tokens) - Gemini 2.5 pricing
         self.pricing = {
-            "claude-sonnet-4-20250514": {"input": 3.0, "output": 15.0},
-            "claude-3-5-sonnet-20241022": {"input": 3.0, "output": 15.0},
-            "claude-3-haiku-20240307": {"input": 0.25, "output": 1.25}
+            "gemini-2.5-pro": {"input": 1.25, "output": 10.0},
+            "gemini-2.5-flash": {"input": 0.075, "output": 0.30},
+            "gemini-2.5-flash-8b": {"input": 0.01, "output": 0.04}
         }
 
         print(f"✅ LLM Engine initialized")
@@ -81,27 +81,27 @@ Please remain faithful to the underlying context, and only deviate from it if yo
 Answer the question now, and avoid providing preamble such as 'Here is the answer', etc"""
 
         try:
-            response = self.client.messages.create(
-                model=self.model,
-                max_tokens=max_tokens,
-                messages=[
-                    {"role": "user", "content": prompt}
-                ],
-                temperature=temperature
+            response = self.model.generate_content(
+                prompt,
+                generation_config=genai.types.GenerationConfig(
+                    max_output_tokens=max_tokens,
+                    temperature=temperature
+                )
             )
 
             # Track usage
-            self.total_input_tokens += response.usage.input_tokens
-            self.total_output_tokens += response.usage.output_tokens
+            if hasattr(response, 'usage_metadata'):
+                self.total_input_tokens += response.usage_metadata.prompt_token_count
+                self.total_output_tokens += response.usage_metadata.candidates_token_count
 
-            # Calculate cost
-            if self.model in self.pricing:
-                input_cost = (response.usage.input_tokens / 1_000_000) * self.pricing[self.model]["input"]
-                output_cost = (response.usage.output_tokens / 1_000_000) * self.pricing[self.model]["output"]
-                self.total_cost += input_cost + output_cost
+                # Calculate cost
+                if self.model_name in self.pricing:
+                    input_cost = (response.usage_metadata.prompt_token_count / 1_000_000) * self.pricing[self.model_name]["input"]
+                    output_cost = (response.usage_metadata.candidates_token_count / 1_000_000) * self.pricing[self.model_name]["output"]
+                    self.total_cost += input_cost + output_cost
 
             # Extract answer text
-            answer = response.content[0].text
+            answer = response.text
 
             return answer
 
@@ -212,27 +212,27 @@ Option 2: [Option text]
 [Final justification for why this is the MOST effective option]"""
 
         try:
-            response = self.client.messages.create(
-                model=self.model,
-                max_tokens=max_tokens,
-                messages=[
-                    {"role": "user", "content": prompt}
-                ],
-                temperature=temperature
+            response = self.model.generate_content(
+                prompt,
+                generation_config=genai.types.GenerationConfig(
+                    max_output_tokens=max_tokens,
+                    temperature=temperature
+                )
             )
 
             # Track usage
-            self.total_input_tokens += response.usage.input_tokens
-            self.total_output_tokens += response.usage.output_tokens
+            if hasattr(response, 'usage_metadata'):
+                self.total_input_tokens += response.usage_metadata.prompt_token_count
+                self.total_output_tokens += response.usage_metadata.candidates_token_count
 
-            # Calculate cost
-            if self.model in self.pricing:
-                input_cost = (response.usage.input_tokens / 1_000_000) * self.pricing[self.model]["input"]
-                output_cost = (response.usage.output_tokens / 1_000_000) * self.pricing[self.model]["output"]
-                self.total_cost += input_cost + output_cost
+                # Calculate cost
+                if self.model_name in self.pricing:
+                    input_cost = (response.usage_metadata.prompt_token_count / 1_000_000) * self.pricing[self.model_name]["input"]
+                    output_cost = (response.usage_metadata.candidates_token_count / 1_000_000) * self.pricing[self.model_name]["output"]
+                    self.total_cost += input_cost + output_cost
 
             # Extract answer text
-            full_reasoning = response.content[0].text
+            full_reasoning = response.text
 
             # Parse out the selected answer (full option text)
             selected_answer = None
@@ -272,7 +272,7 @@ Option 2: [Option text]
     def get_usage_stats(self) -> dict:
         """Get usage statistics"""
         return {
-            "model": self.model,
+            "model": self.model_name,
             "total_input_tokens": self.total_input_tokens,
             "total_output_tokens": self.total_output_tokens,
             "total_cost": round(self.total_cost, 4)
