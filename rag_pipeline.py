@@ -34,7 +34,7 @@ class RAGPipeline:
         collection_name: str = "comptia_security_plus",
         embedding_dim: int = 1536,
         embedding_model: str = "text-embedding-3-small",
-        llm_model: str = "gemini-2.5-pro"
+        llm_model: str = "gemini-2.5-flash"
     ):
         """
         Initialize complete RAG pipeline
@@ -43,7 +43,7 @@ class RAGPipeline:
             collection_name: Qdrant collection name
             embedding_dim: Embedding dimension
             embedding_model: OpenAI embedding model
-            llm_model: Gemini model for answer generation
+            llm_model: Gemini model for answer generation (Flash for better rate limits)
         """
         print("=" * 60)
         print("INITIALIZING RAG PIPELINE")

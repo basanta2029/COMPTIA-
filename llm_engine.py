@@ -16,12 +16,12 @@ load_dotenv()
 class LLMEngine:
     """Gemini-powered answer generation engine"""
 
-    def __init__(self, model: str = "gemini-2.5-pro"):
+    def __init__(self, model: str = "gemini-2.5-flash"):
         """
         Initialize LLM engine
 
         Args:
-            model: Gemini model to use (default: gemini-2.5-pro)
+            model: Gemini model to use (default: gemini-2.5-flash for better rate limits)
         """
         # Initialize Google Generative AI client
         api_key = os.getenv("GOOGLE_API_KEY")
